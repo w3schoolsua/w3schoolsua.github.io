@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<title>HTML Підручник. Уроки для початківців. W3Schools українською</title>
+<title>HTML Елементи. Уроки для початківців. W3Schools українською</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="HTML,CSS,w3c,w3schools,українською,уроки,для початківців,курс,основи,мова,програмування,довідник,приклади,вправи,код">
-<meta name="description" content="Уроки по HTML для початківців та новачків, школярів та студентів. Безкоштовні курси онлайн. Приклади коду. Довідник з HTML5. Як створити сайт?">
+<meta name="keywords" content="HTML,CSS,елементи,w3c,w3schools,українською,уроки,для початківців,курс,основи,мова,програмування,довідник,приклади,вправи,код">
+<meta name="description" content="HTML елементи веб-сторінки. Вкладені html елементи. Чи потрібен кінцевий тег? Пусті html елементи. Уроки по HTML для початківців та новачків, школярів та студентів. Безкоштовні курси онлайн. Приклади коду. Довідник з HTML5. Як створити сайт?">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../styles/w3.css">
 <link rel="stylesheet" href="../styles/external.css">
@@ -30,8 +30,8 @@
 <div class='w3-card-2 topnav notranslate' id='topnav'>
   <div style="overflow:auto;">
     <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
-      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Menu'></a>
-      <a href='../index.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Home'></a>
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' onclick='open_menu()' title='Меню'></a>
+      <a href='../index.html' class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' title='Головна'></a>
       <a class="w3-bar-item w3-button" href='../html/default.html' title='HTML Підручник'>HTML</a>
       <a class="w3-bar-item w3-button" href='../css/default.html' title='CSS Підручник'>CSS</a>
       <a class="w3-bar-item w3-button" href='../js/default.html' title='JavaScript Підручник'>JAVASCRIPT</a>
@@ -342,165 +342,166 @@
 <a href="default.html"><img src="../svg/HTML5_icon.svg" alt="HTML5. Уроки для початківців" class="w3-left" title="HTML5 для початківців" width="90"></a>
 <article>
 
-<h1>HTML <span class="color_h1">Вступ</span></h1>
+<h1>HTML <span class="color_h1">Элементы</span></h1>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="default.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_editors.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="html_basic.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="html_attributes.html">Next &#10095;</a>
 </div>
 <hr>
 
 <div class="sum">
-<h4>В цій темі:</h4>
-<ul>
-  <li><a href="#c1"><em>Що таке HTML?</em></a></li>
-  <li><a href="#c2"><em>HTML теги</em></a></li>
-  <li><a href="#c3"><em>Веб-браузери</em></a></li>
-  <li><a href="#c4"><em>Структура html-сторінки</em></a></li>
-  <li><a href="#c5"><em>Оголошення &lt;!DOCTYPE&gt;</em></a></li>
-  <li><a href="#c6"><em>HTML Версії</em></a></li>
-</ul>
+  <h4>В цій темі:</h4>
+  <ul>
+    <li><a href="#c1"><em>HTML елементи веб-сторінки</em></a></li>
+    <li><a href="#c2"><em>Вкладені HTML елементи</em></a></li>
+    <li><a href="#c3"><em>Чи потрібен кінцевий тег?</em></a></li>
+    <li><a href="#c4"><em>Порожні HTML елементи</em></a></li>
+    <li><a href="#c5"><em>HTML теги не чутливі до регістру</em></a></li>
+  </ul>
 </div>
 <hr>
 
-<h2 id="c1">Що таке HTML?</h2>
-<p><strong>HTML</strong> є стандартною мовою розмітки для створення веб-сторінок.</p>
-<ul>
-  <li><strong>HTML</strong> означає <em>Hyper Text Markup Language</em> (мова гіпертекстової розмітки)
-    <li><strong>HTML</strong> описує структуру веб-сторінок за допомогою розмітки
-    <li><strong>HTML-елементи</strong> є будівельними блоками сторінок <strong>HTML</strong>
-    <li>Елементи <strong>HTML</strong> представлені <em>тегами</em>
-    <li><em>Теги</em> <strong>HTML</strong> позначають фрагменти змісту, такі як <strong>header</strong> (заголовок), <strong>paragraph</strong> (параграф), <strong>table</strong> (таблиця) та ін.
-    <li>Браузери не відображають <strong>HTML</strong> теги, але використовують їх для відображення змісту web-сторінки
-</ul>
+<h2 id="c1">HTML Елементи веб-сторінки</h2>
+<p><strong>HTML елемент</strong> зазвичай складається із тегу <strong>початкового</strong> і тегу <strong>кінцевого</strong>, а зміст вставляється поміж ними:</p>
+<div class="htmlHigh" style="font-size:20px;padding:10px;margin-bottom:10px;">
+&lt;tagname&gt;Зміст розміщується тут...&lt;/tagname&gt;
+</div>
+
+<p><strong>HTML елемент</strong> - це все від початкового тегу до кінцевого тегу:</p>
+<div class="htmlHigh" style="font-size:20px;padding:10px;margin-bottom:10px;">
+&lt;p&gt;Мій перший параграф.&lt;/p&gt;
+</div>
+
+<table class="w3-table-all notranslate">
+<tr>
+<th>Початковий тег</th>
+<th>Зміст елементу</th>
+<th>Кінцевий тег</th>
+</tr>
+<tr>
+<td>&lt;h1&gt;</td>
+<td>Мій перший заголовок</td>
+<td>&lt;/h1&gt;</td>
+</tr>
+<tr>
+<td>&lt;p&gt;</td>
+<td>Мій перший параграф.</td>
+<td>&lt;/p&gt;</td>
+</tr>
+<tr>
+<td>&lt;br&gt;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+<div class="w3-panel w3-note">
+<p>HTML елементи без змісту називаються <strong>порожніми елементами</strong>. Порожні елементи не мають кінцевого тегу, наприклад, як елемент <code class="w3-codespan">&lt;br&gt;</code> (який вказує на розрив рядка).</p>
+</div>
 <hr>
 
-<h2>Простий HTML документ</h2>
+<h2 id="c2">Вкладені HTML елементи</h2>
+<p>HTML елементи можуть бути вкладеними (елементи можуть містити елементи).</p>
+<p>Всі документи HTML складаються з вкладених елементів HTML.</p>
+<p>Цей приклад містить чотири елементи HTML:</p>
 <div class="w3-example">
 <h3>Приклад</h3>
 <div class="w3-code notranslate htmlHigh">
- &lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Назва сторінки&lt;/title&gt;<br>
- &lt;/head&gt;<br>
-&lt;body&gt;<br><br>&lt;h1&gt;Мій перший заголовок&lt;/h1&gt;<br>&lt;p&gt;Мій перший параграф.&lt;/p&gt;<br><br>
-    &lt;/body&gt;<br>&lt;/html&gt;
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>&lt;body&gt;<br><br>
+ &lt;h1&gt;Мій перший заголовок&lt;/h1&gt;<br>&lt;p&gt;Мій перший параграф.&lt;/p&gt;<br><br>
+&lt;/body&gt;<br>&lt;/html&gt;
 </div>
-<a target="_blank" href="tryit6a1d.html?filename=tryhtml_intro" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+<a class="w3-btn w3-margin-bottom" href="tryit3b68.html?filename=tryhtml_elements" target="_blank">Спробуйте самі &raquo;</a>
 </div>
 <h3>Пояснення прикладу</h3>
-<ul>
-  <li>Оголошення <code class="w3-codespan">&lt;!DOCTYPE html&gt;</code> визначає цей документ як <strong>HTML5</strong>
-  <li>Елемент <code class="w3-codespan">&lt;html&gt;</code> є кореневим елементом <strong>HTML</strong> сторінки
-  <li>Елемент <code class="w3-codespan">&lt;head&gt;</code> містить мета-інформацію про <strong>HTML</strong> документ
-  <li>Елемент <code class="w3-codespan">&lt;title&gt;</code> визначає назву <strong>HTML</strong> документу
-  <li>Елемент <code class="w3-codespan">&lt;body&gt;</code> відображає видимий зміст <strong>HTML</strong> сторінки
-  <li>Елемент <code class="w3-codespan">&lt;h1&gt;</code> визначає великий заголовок на <strong>HTML</strong> сторінці
-  <li>Елемент <code class="w3-codespan">&lt;p&gt;</code> визначає абзац (параграф) в <strong>HTML</strong> документі
-</ul>
-<hr>
-
-<h2 id="c2">HTML Теги</h2>
-<p><strong>HTML-теги</strong> - це назви елементів, оточені кутовими дужками:</p>
-<div class="w3-panel w3-light-grey w3-border">
-<p class="w3-xlarge">&lt;назва тегу&gt;Тут йде зміст...&lt;/назва тегу&gt;</p>
-</div>
-<ul>
-<li>Теги <strong>HTML</strong> зазвичай ідуть <b>парами</b>, наприклад, <code class="w3-codespan">&lt;p&gt;</code> і <code class="w3-codespan">&lt;/p&gt;</code>
-<li>Першим тегом в парі є <b>початковий тег</b>, інший - <b>кінцевий тег</b>
-<li>Кінцевий тег записується як початковий тег, але перед назвою тега вставляється коса риска ( / слеш)
-</ul>
-<div class="w3-panel w3-note">
-<p><strong>Примітка:</strong> Початковий тег також називається - <strong>відкриваючим тегом</strong>, а кінцевий тег - <strong>закриваючим тегом</strong>.</p>
-</div>
-<hr>
-
-<h2 id="c3">Web Браузери</h2>
-<p>Метою веб-браузера (Chrome, Firefox, Opera, Internet Explorer, Safari) є читання <em>HTML</em> документів та їх відображення. Браузер не відображає самі теги <em>HTML</em>, але використовує їх, щоб визначити, як відобразити веб-сторінку:</p>
-<p><img alt="Вигляд HTML-сторінки в браузері" src="../images/img_chrome.png" class="w3-image" title="Вигляд HTML-сторінки в браузері"></p>
-<hr>
-
-<h2 id="c4">Структура HTML сторінки</h2>
-<p>Нижче наведена візуалізація структури <em>HTML-сторінки</em>:</p>
-<div style="width:99%;border:1px solid grey;padding:3px;margin:0;background-color:#FFCC66">&lt;html&gt;
-<div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#CCCC66">&lt;head&gt;
-<div style="width:90%;border:1px solid grey;padding:5px;margin:20px;background-color:#99FF99">&lt;title&gt;Назва сторінки&lt;/title&gt;
-</div>
-&lt;/head&gt;
-</div>
-<div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#CCCC66">&lt;body&gt;
-<div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#33CC66">
-<div style="width:90%;border:1px solid grey;padding:5px;margin:20px;background-color:#99FF99">&lt;h1&gt;Це заголовок&lt;/h1&gt;</div>
-<div style="width:90%;border:1px solid grey;padding:5px;margin:20px;background-color:#99FF99">&lt;p&gt;Це параграф.&lt;/p&gt;</div>
-<div style="width:90%;border:1px solid grey;padding:5px;margin:20px;background-color:#99FF99">&lt;p&gt;Це інший параграф.&lt;/p&gt;</div>
-</div>
-&lt;/body&gt;
-</div>
-&lt;/html&gt;
-</div>
-<div class="w3-panel w3-note">
-<p><strong>Примітка:</strong> В браузері відображається тільки зміст розділу <code class="w3-codespan">&lt;body&gt;</code> (тіло веб-сторінки).</p>
-</div>
-<hr>
-
-<h2 id="c5">Оголошення &lt;!DOCTYPE&gt;</h2>
-<p>Оголошення <code class="w3-codespan">&lt;!DOCTYPE&gt;</code> - є визначення типу документа, яке допомагає браузерам правильно відображати веб-сторінки. Воно повинно з'являтися тільки один раз у верхній частині веб-сторінки (перед будь-якими тегами <em>HTML</em>).</p>
-<p>Оголошення <code class="w3-codespan">&lt;!DOCTYPE&gt;</code> не чутливе до регістру. Можна писати як великими літерами, так і маленькими.</p>
-<p>Оголошення <code class="w3-codespan">&lt;!DOCTYPE&gt;</code> для <strong>HTML5</strong> має такий вигляд:</p>
+<p>Елемент <code class="w3-codespan">&lt;html&gt;</code> визначає <strong>весь документ</strong>.</p>
+<p>У нього є <strong>початковий</strong> тег &lt;html&gt; і <strong>кінцевий</strong> тег &lt;/html&gt;.</p>
+<p>Всередині &lt;html&gt; елементу знаходиться елемент <code class="w3-codespan">&lt;body&gt;</code>.</p>
 <div class="w3-example">
- <div class="w3-code notranslate htmlHigh">
-&lt;!DOCTYPE html&gt;</div>
+<div class="w3-code notranslate htmlHigh">
+&lt;html&gt;<br>
+&lt;body&gt;<br><br>
+ &lt;h1&gt;Мій перший заголовок&lt;/h1&gt;<br>&lt;p&gt;Мій перший параграф.&lt;/p&gt;<br><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</div></div>
+
+<p>Елемент <code class="w3-codespan">&lt;body&gt;</code> визначає <strong>тіло документа</strong>.</p>
+<p>У нього є <strong>початковий</strong> тег &lt;body&gt; і <strong>кінцевий</strong> тег &lt;/body&gt;.</p>
+<p>Всередині елемента &lt;body&gt; є два інших HTML елемента:
+<code class="w3-codespan">&lt;h1&gt;</code> та <code class="w3-codespan">
+&lt;p&gt;</code>.</p>
+<div class="w3-example">
+<div class="w3-code notranslate htmlHigh">
+&lt;body&gt;<br><br>
+ &lt;h1&gt;Мій перший заголовок&lt;/h1&gt;<br>&lt;p&gt;Мій перший параграф.&lt;/p&gt;<br><br>
+&lt;/body&gt;
+</div></div>
+
+<p>Елемент <code class="w3-codespan">&lt;h1&gt;</code> визначає <strong>заголовок</strong>.</p>
+<p>У нього є <strong>початковий</strong> тег &lt;h1&gt; і <strong>кінцевий</strong> тег &lt;/h1&gt;.</p>
+<p>Елемент <strong>зміст</strong> це: Мій перший заголовок.</p>
+
+<div class="w3-example">
+<div class="w3-code notranslate htmlHigh">
+&lt;h1&gt;Мій перший заголовок&lt;/h1&gt;
+</div>
+</div>
+
+<p>Елемент <code class="w3-codespan">&lt;p&gt;</code> визначає <strong>параграф</strong>.</p>
+<p>У нього є <strong>початковий</strong> тег &lt;p&gt; і <strong>кінцевий</strong> тег &lt;/p&gt;.</p>
+<p>Елемент <strong>зміст</strong> це: Мій перший параграф.</p>
+
+<div class="w3-example">
+<div class="w3-code notranslate htmlHigh">
+&lt;p&gt;Мій перший параграф.&lt;/p&gt;
+</div>
 </div>
 <hr>
 
-<h2 id="c6">HTML Версії</h2>
-<p>З перших днів існування Інтернету було багато версій <em>HTML</em>:</p>
-<table class="w3-table-all notranslate">
-  <tr>
-    <th>Версія</th>
-    <th>Рік</th>
-  </tr>
-  <tr>
-    <td>HTML</td>
-    <td>1991</td>
-  </tr>
-  <tr>
-    <td>HTML 2.0</td>
-    <td>1995</td>
-  </tr>
-  <tr>
-    <td>HTML 3.2</td>
-    <td>1997</td>
-  </tr>
-  <tr>
-    <td>HTML 4.01</td>
-    <td>1999</td>
-  </tr>
-  <tr>
-    <td>XHTML</td>
-    <td>2000</td>
-  </tr>
-  <tr>
-    <td>HTML5</td>
-    <td>2014</td>
-  </tr>
-  <tr>
-    <td>HTML5.1</td>
-    <td>2015</td>
-  </tr>
-  <tr>
-    <td>HTML5.2</td>
-    <td>2016</td>
-  </tr>
-  <tr>
-    <td>HTML5.3</td>
-    <td>2017</td>
-  </tr>
-</table>
+<h2 id="c3">Не забувайте про кінцевий тег</h2>
+<p>Деякі елементы HTML будуть відображатись правильно, навіть якщо ви забудете кінцевий тег:</p>
+<div class="w3-example">
+<h3>Приклад</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;html&gt;<br>&lt;body&gt;<br><br>
+ &lt;p&gt;Це параграф<br>
+ &lt;p&gt;Це параграф<br>
+<br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+<a target="_blank" href="tryit0fab.html?filename=tryhtml_no_endtag" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+</div>
+
+<p>Наведений вище приклад працює в усіх браузерах, оскільки закриваючий тег вважається необов'язковим.</p>
+<p><strong>Ніколи не покладайтеся на це. Це може призвести до несподіваних результатів і / або помилок, якщо ви забудете кінцевий тег.</strong></p>
+<hr>
+
+<h2 id="c4">Порожні HTML елементи</h2>
+<p>HTML елементи без вмісту називаються <strong>порожніми елементами</strong>.</p>
+<p>Елемент <code class="w3-codespan">&lt;br&gt;</code> - це порожній елемент без закриваючого тегу (тег <code class="w3-codespan">&lt;br&gt;</code> визначає обрив рядка):</p>
+<div class="w3-example">
+<h3>Приклад</h3>
+<div class="w3-code notranslate htmlHigh">
+  &lt;p&gt;Це параграф&lt;br&gt; з обривом рядка.&lt;/p&gt;</div>
+<a target="_blank" href="tryit070a.html?filename=tryhtml_elements_br" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+</div>
+<p>Порожні елементи можуть бути &quot;закриті&quot; у відкриваючому тезі наступним чином: &lt;br /&gt;.</p>
+<p>HTML5 не вимагає закриття порожніх елементів. Але якщо вам потрібна більш сувора перевірка або якщо ви хочете, щоб ваш документ читався XML-аналізаторами, ви повинні правильно закрити всі HTML елементи.</p>
+<hr>
+
+<h2 id="c5">HTML не чутливий до регістру</h2>
+<p>HTML-теги не чутливі до регістру: &lt;P&gt; означає те ж саме, що і &lt;p&gt;.</p>
+<p><strong>Стандарт HTML5</strong> не вимагає написання тегів в нижньому регістрі, але W3C <b>рекомендує використовувати</b> літери в нижньому регістрі при написанні HTML тегів, і <b>вимагає</b> літери в нижньому регістрі для більш суворих типів документів, таких як XHTML.</p>
+
+<div class="w3-panel w3-note">
+  <p>В W3Schools завжди використовують написання тегів в нижньому регістрі.</p>
+</div>
 </article>
 
 <hr>
 <div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="default.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_editors.html">Next &#10095;</a>
+<a class="w3-left w3-btn" href="html_basic.html">&#10094; Prev</a>
+<a class="w3-right w3-btn" href="html_attributes.html">Next &#10095;</a>
 </div>
 
 <hr>
@@ -510,7 +511,7 @@
 <script>
 var disqus_config = function () {
 this.page.url = w3schoolsua.github.io; // канонічний URL сторінки
-this.page.identifier = w3schoolsua.github.io / html / html_intro.html; // унікальний ідентифікатор сторінки
+this.page.identifier = w3schoolsua.github.io / html / html_elements.html; // унікальний ідентифікатор сторінки
 };
 (function() { // Не редагувати нижче цього рядка
 var d = document, s = d.createElement('script');
