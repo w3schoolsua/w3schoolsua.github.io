@@ -9,7 +9,7 @@
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../styles/w3.css">
 <link rel="stylesheet" href="../styles/external.css">
-<link rel="stylesheet" href="../cdn/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="../styles/fa.css">
 </head>
 
 <body>
@@ -45,6 +45,7 @@
       <a class="w3-bar-item w3-button" href='../xml/default.html' title='XML Підручник'>XML</a>
       <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Tutorials'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
       <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+      <a href='javascript:void(0);' class='topnav-icons fa w3-right w3-bar-item w3-button' onclick='changecodetheme(this)' title='Переключити на темний код'>&#9681;</a>
       <a class="w3-bar-item w3-button w3-right" target="_blank" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title="Скачати книги безкоштовно з Google-диску">КНИГИ</a>
       <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
       <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
@@ -91,6 +92,7 @@
           <a class="w3-bar-item w3-button" href='../python/default.html'>Вивчити Python</a>
           <a class="w3-bar-item w3-button" href='../java/default.html'>Вивчити Java</a>
           <a class="w3-bar-item w3-button" href='../cpp/default.html'>Вивчити C++</a>
+          <a class="w3-bar-item w3-button" href='../cs/default.html'>Вивчити C#</a>
           <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br class="w3-hide-medium w3_hide-small"></div>
         </div>
         <div class='w3-col l3 m6'>
@@ -194,6 +196,7 @@
           <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Вправи</a>
           <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Вправи</a>
           <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Вправи</a>
+          <a class="w3-bar-item w3-button" href="../cs/cs_exercises.html">C# Вправи</a>
         </div>
         <div class='w3-col l4 m6'>
           <h3>Вікторини</h3>
@@ -249,10 +252,10 @@
 <a target="_top" href="html_links.html">HTML Посилання</a>
 <a target="_top" href="html_images.html">HTML Зображення</a>
 <div class="tut_overview">
-  <a target="_top" href="html_images.html">Зображення</a>
-  <a target="_top" href="html_images_imagemap.html">Карта зображень</a>
-  <a target="_top" href="html_images_background.html">Фонове зображення</a>
-  <a target="_top" href="html_images_picture.html">Елемент Picture</a>
+<a target="_top" href="html_images.html">Зображення</a>
+<a target="_top" href="html_images_imagemap.html">Карта зображень</a>
+<a target="_top" href="html_images_background.html">Фонове зображення</a>
+<a target="_top" href="html_images_picture.html">Елемент Picture</a>
 </div>
 <a target="_top" href="html_tables.html">HTML Таблиці</a>
 <a target="_top" href="html_lists.html">HTML Списки</a>
@@ -289,7 +292,6 @@
 <h2 class="left"><span class="left_h2">HTML</span> Графіка</h2>
 <a target="_top" href="html5_canvas.html">HTML Canvas</a>
 <a target="_top" href="html5_svg.html">HTML SVG</a>
-<!--<a target="_top" href="html_googlemaps.asp">HTML Google Maps</a>-->
 <br>
 <h2 class="left"><span class="left_h2">HTML</span> Медіа</h2>
 <a target="_top" href="html_media.html">HTML Медіа</a>
@@ -340,8 +342,8 @@
   <div class='w3-row w3-white'>
     <div class='w3-col l10 m12' id='main'>
 <a href="default.html"><img src="../svg/HTML5_icon.svg" alt="HTML5. Уроки для початківців" class="w3-left" title="HTML5 для початківців" width="90"></a>
-<article>
 
+<article>
 <h1>HTML <span class="color_h1">Форматування тексту</span></h1>
 <div class="w3-clear nextprev">
 <a class="w3-left w3-btn" href="html_styles.html">&#10094; Prev</a>
@@ -585,7 +587,6 @@
 <div class="w3-note w3-panel">
   <p>Для отримання повного списку всіх доступних тегів HTML, відвідайте <a href="../tags/default.html">HTML Довідник тегів</a>.</p>
 </div>
-</article>
 
 <hr>
 <div class="w3-clear nextprev">
@@ -593,6 +594,7 @@
 <a class="w3-right w3-btn" href="html_quotation_elements.html">Next &#10095;</a>
 </div>
 
+</article>
 <hr>
 <!--Коментарі від Disqus-->
 <iframe class="predisqus" src="../pages/predisqus.html"></iframe>
