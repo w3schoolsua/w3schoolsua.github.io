@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Приклад фіксованого сайдбара на сайті. HTML5 / CSS3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;height: 500px;}
+.sidenav {height: 100%;width: 110px;position: fixed;z-index: 1;top: 0;left: 0;background-color: #111;overflow-x:hidden;padding-top: 20px;}
+.sidenav a {padding: 6px 8px 6px 16px;text-decoration: none;font-size: 25px;color: #818181;display: block;}
+.sidenav a:hover {color: #f1f1f1;}
+.main {margin-left: 117px; /* То же, что ширина sidenav */}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+@media screen and (max-width: 450px) {
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+  <a href="javascript:void(0)">About</a>
+  <a href="javascript:void(0)">Services</a>
+  <a href="javascript:void(0)">Clients</a>
+  <a href="javascript:void(0)">Contact</a>
+</div>
+<div class="main">
+  <h2>Сайдбар на всю висоту сторінки</h2>
+  <p>Цей сайдбар займає всю висоту сторінки (100%) і завжди відображається.</p>
+  <p>Прокрутіть це вікно, щоб побачити ефект фіксації.</p>
+  <p>Текст для включення скролінгу. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Текст для включення скролінгу.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
+</body>
+</html>
