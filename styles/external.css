@@ -3,28 +3,29 @@ a:hover,a:active{color:#4CAF50}
 table.w3-table-all{margin:20px 0}
 /*НАЛАШТУВАННЯ TOP, TOPNAV, SIDENAV, MAIN, RIGHT и FOOTER:*/
 .top {
-position:relative;
-background-color:#F5F5DC;
-height:68px;
-padding-top:15px;
-line-height:50px;
-overflow:hidden;
-z-index:2;
+ position:relative;
+ background-color:#F5F5DC; /* колір фону з Лого */
+ height:68px;
+ padding-top:18px;
+ line-height:50px;
+ overflow:hidden;
+ z-index:2;
 }
 .w3schools-logo {
-font-family:impact, sans-serif;
-text-decoration:none;
-line-height: 1;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-font-size:36px;
-letter-spacing:3px;
-color:green;
-display:block;
-position:absolute;
-top:15px;
-text-shadow: 1px 1px .5px #000
+ font-family:Impact;
+ text-decoration:none;
+ line-height:1;
+ -webkit-font-smoothing:antialiased;
+ -moz-osx-font-smoothing:grayscale;
+ font-size:37px;
+ letter-spacing:3px;
+ color:green;
+ display:block;
+ position:absolute;
+ text-shadow: 1px 1px 1px #000
 }
+.w3schools-logo .dotcom {color:#3A7DF1}
+.toptext {margin-right:20px;}
 
 .w3schools-logo:hover {color:#32CD32; text-shadow: 1.2px 1.2px .5px #000}
 .dotcom {color:#0048ff;font-size:.8em;text-shadow: 1.1px 1.1px .5px #000}
@@ -32,15 +33,15 @@ text-shadow: 1px 1px .5px #000
 
 /*Верхня навігація*/
 .topnav {
-position:relative;
-z-index:2;
-font-size:17px;
-background-color:#008B8B;
-color:#f1f1f1;
-width:100%;
-padding:0;
-letter-spacing:1px;
-font-family:"Segoe UI",Arial,sans-serif;
+ position:relative;
+ z-index:2;
+ font-size:17px;
+ background-color:#008B8B; /*фон верхнього навбару*/
+ color:#f1f1f1;
+ width:100%;
+ padding:0;
+ letter-spacing:1px;
+ font-family:"Segoe UI",Arial,sans-serif;
 }
 .topnav a{
  padding:10px 15px 9px 15px !important;
@@ -50,7 +51,7 @@ font-family:"Segoe UI",Arial,sans-serif;
  color:#ffffff !important;
 }
 .topnav .w3-bar a.active {
- background-color:#008B8B;
+ background-color:#008B8B; /*фон верхнього навбару*/
  color:#ffffff;
 }
 a.topnav-icons {
@@ -106,23 +107,23 @@ i.fa-caret-down,i.fa-caret-up{width:10px}
 .bottomad {padding:0 16px 16px 0;float:left;width:auto;}
 .footer a {text-decoration:none;}
 .footer a:hover{text-decoration:underline;}
-#nav_tutorials,#nav_references,#nav_exercises{-webkit-overflow-scrolling:touch;overflow:auto;}
+#nav_tutorials,#nav_references,#nav_exercises,#nav_login{-webkit-overflow-scrolling:touch;overflow:auto;}
 #nav_tutorials::-webkit-scrollbar,#nav_references::-webkit-scrollbar,#nav_exercises::-webkit-scrollbar {width: 12px;}
 #nav_tutorials::-webkit-scrollbar-track,#nav_references::-webkit-scrollbar-track,#nav_exercises::-webkit-scrollbar-track {background:#555555;}
 #nav_tutorials::-webkit-scrollbar-thumb,#nav_references::-webkit-scrollbar-thumb,#nav_exercises::-webkit-scrollbar-thumb {background: #999999;}
-#nav_tutorials,#nav_references,#nav_exercises {
+#nav_tutorials,#nav_references,#nav_exercises,#nav_login {
  display:none;
  letter-spacing:0;
  margin-top:44px;
 }
-#nav_tutorials a,#nav_references a,#nav_exercises a{
+#nav_tutorials a,#nav_references a,#nav_exercises a,#nav_examples a{
  padding:2px 0 2px 6px!important;
 }
-#nav_tutorials a:focus,#nav_references a:focus,#nav_exercises a:focus{
- color: #000;
- background-color: #ccc;
-}
-#nav_tutorials h3,#nav_references h3,#nav_exercises h3{
+#nav_tutorials a:focus,#nav_references a:focus,#nav_exercises a:focus,#nav_examples a:focus{
+                                                                        color: #000;
+                                                                        background-color: #ccc;
+                                                                       }
+#nav_tutorials h3,#nav_references h3,#nav_exercises h3,#nav_examples h3{
  padding-left:6px;
 }
 .ref_overview{display:none}
@@ -140,20 +141,26 @@ i.fa-caret-down,i.fa-caret-up{width:10px}
 .nextprev a:link,.nextprev a:visited {background-color:#ffffff;color:#000000;}
 .w3-example a:focus,.nextprev a:focus{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);}
 .nextprev a.w3-right,.nextprev a.w3-left {background-color:#4CAF50;color:#ffffff;border-color:#4CAF50}
+.pagemenu{margin-left:-20px;margin-right:-20px;padding:20px;background-color:#d4edda;line-height:2.8em;color:#555;}
+.pagemenu hr {border-top: 1px solid #fff;margin:20px 0;}
+.pagemenu a {display:block;text-decoration:none!important;}
+.pagemenu a:hover,.learnmore a:active {color:#000;}
 #w3-exerciseform {background-color:#555555;padding:16px;color:#ffffff;}
 #w3-exerciseform .exercisewindow {background-color:#ffffff;padding:16px;color:#000000;}
 #w3-exerciseform .exerciseprecontainer {background-color:#f1f1f1;padding:16px;font-size:120%;font-family:Consolas,"Courier New", Courier, monospace;}
 #w3-exerciseform .exerciseprecontainer pre[class*="language-"] {padding:1px;}
 #w3-exerciseform .exerciseprecontainer pre {display: block;}
+#w3-exerciseform .exerciseprecontainer textarea {width:100%;border:none;overflow:hidden}
 #w3-exerciseform .exerciseprecontainer input {padding:1px;border: 1px solid transparent;height:1.3em;}
 .w3-theme {color:#fff !important;background-color:#73AD21 !important;background-color:#4CAF50 !important}
 .w3-theme-border {border-color:#4CAF50 !important}
 .sharethis a:hover {color:inherit;}
-.fa-facebook-square,.fa-twitter-square,.fa-google-plus-square {padding:0 8px;}
+.fa-facebook-square,.fa-instagram,.fa-linkedin-square {padding:0 2px;}
 .fa-facebook-square:hover, .fa-thumbs-o-up:hover {color:#3B5998;}
+.fa-instagram:hover {color:#8a3ab9;}
+.fa-linkedin-square:hover {color:#2867B2;}
 .fa-twitter-square:hover {color:#55acee;}
-.fa-google-plus-square:hover {color:#dd4b39;}
-#google_translate_element img {margin-bottom:-1px;}
+/*#google_translate_element img {margin-bottom:-1px;}*/
 #googleSearch {color:#000000;}
 #googleSearch a {padding:0 !important;}
 .searchdiv {max-width:400px;margin:auto;text-align:left;font-size:16px}
@@ -170,54 +177,48 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gs
  #main {width:79%}
  #right {width:21%}
 }
-@media (max-width:992px) {
- .top {height:100px}
+@media (max-width:600px) {
  .top img {display:block;margin:auto;}
- .top .w3schools-logo {position:relative;top:0;width:100%;text-align:center;margin:auto}
- .toptext {width:100%;text-align:center}
- #sidenav {width:260px;
-  box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
- }
+ /*#mypagediv {position:absolute;width:auto;right:0;top:16px;}*/
+}
+@media (max-width:400px) {
+ .top .w3schools-logo {font-size:30px;top:24px;}
+}
+@media (max-width:992px) {
+ .toptext {display:none;}
+ .login {top:2px;}
+ #sidenav {width:260px;box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
  #sidenav h2 {font-size:26px;width:100%;}
  #sidenav a {padding:3px 2px 3px 24px;font-size:17px}
- #leftmenuinner {
-  overflow:auto;
-  -webkit-overflow-scrolling:touch;
-  height:100%;
-  position:relative;
-  width:auto;
-  padding-top:0;
-  background-color:#f1f1f1;
- }
+ #leftmenuinner {overflow:auto;-webkit-overflow-scrolling:touch;height:100%;position:relative;width:auto;padding-top:0;background-color:#f1f1f1;}
  #leftmenuinnerinner {overflow-y:scroll}
  .bottomad {float:none;text-align:center}
  #skyscraper {min-height:60px}
 }
 @media screen and (max-width:600px) {
  .w3-example, .w3-note, #w3-exerciseform {margin-left:-16px;margin-right:-16px;}
- .top {height:68px}
- .toptext {display:none}
 }
 
 @font-face {
-font-family:'fontawesome';
-src: url('../../lib/fonts/fontawesome8deb.eot?14663396');
-src:url('../../lib/fonts/fontawesome8deb.eot?14663396#iefix') format('embedded-opentype'),
-url('../../lib/fonts/fontawesome8deb.woff?14663396') format('woff'),
-url('../../lib/fonts/fontawesome8deb.ttf?14663396') format('truetype'),
-url('../../lib/fonts/fontawesome8deb.svg?14663396#fontawesome') format('svg');
-font-weight:normal;
-font-style:normal;
+ font-family:'fontawesome';
+ src: url('../lib/fonts/fontawesome8deb.eot?14663396');
+ src:url('../lib/fonts/fontawesome8deb.eot?14663396#iefix') format('embedded-opentype'),
+ url('../lib/fonts/fontawesome8deb.woff?14663396') format('woff'),
+ url('../lib/fonts/fontawesome8deb.ttf?14663396') format('truetype'),
+ url('../lib/fonts/fontawesome8deb.svg?14663396#fontawesome') format('svg');
+ font-weight:normal;
+ font-style:normal;
+  font-display: swap;
 }
 
 .fa {
-display:inline-block;
-font:normal normal normal 14px/1 FontAwesome;
-font-size:inherit;
-text-rendering:auto;
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-transform:translate(0, 0);
+ display:inline-block;
+ font:normal normal normal 14px/1 FontAwesome;
+ font-size:inherit;
+ text-rendering:auto;
+ -webkit-font-smoothing:antialiased;
+ -moz-osx-font-smoothing:grayscale;
+ transform:translate(0, 0);
 }
 .fa-2x {
  font-size:2em;
@@ -227,20 +228,56 @@ transform:translate(0, 0);
 .fa-globe:before {content:'\e801';}
 .fa-search:before {content:'\e802'; }
 .fa-thumbs-o-up:before {content:'\e803';}
-.fa-left-open:before {content:'\e804';}
-.fa-right-open:before {content:'\e805';}
 .fa-facebook-square:before {content:'\e806';}
-.fa-google-plus-square:before {content:'\e807';}
 .fa-twitter-square:before {content:'\e808';}
+.fa-instagram:before {content:'\f16d';}
+.fa-linkedin-square:before {content:'\f30c';}
 .fa-caret-down:before {content:'\e809';}
 .fa-caret-up:before {content:'\e80a';}
-.fa.fa-adjust:before { content: '\e80b'; }
-span.marked, span.deprecated {color:#e80000; background-color:transparent;}
-.w3-code span.marked {color:#e80000;background-color:transparent;}
-.darktheme .w3-code span.marked {color:#ff9999;background-color:transparent;}
-.darktheme .w3-example.w3-light-grey {background-color:rgb(40,44,52)!important;color:white;}
-.intro {font-size:16px}
-.w3-btn, .w3-btn:link, .w3-btn:visited {color:#FFFFFF;background-color:#4CAF50; margin:0 5px 0 0}
+.fa-adjust:before { content: '\e80b'; }
+.fa-user:before { content: '\e816'; }
+.fa-js:before { content: '\e819'; }
+.fa-python:before { content: '\e81a'; }
+.fa-php:before { content: '\e81b'; }
+.fa-bootstrap:before { content: '\e81c'; }
+.fa-html5:before { content: '\f13b'; }
+.fa-css3:before { content: '\f13c'; }
+.fa-code:before { content: '\f121'; }
+.fa-graduation-cap:before { content: '\f19d'; }
+.fa-envelope:before { content: '\e805'; }
+span.marked, span.deprecated {
+ color:#e80000;
+ background-color:transparent;
+}
+.w3-code span.marked {
+ color:#e80000;
+ background-color:transparent;
+}
+.w3-codeline{background-color:#f1f1f1;color:#000;font-family: Consolas,"courier new";padding:15px;}
+#nav_login {background-color:#f1f1f1;color:#000;}
+.loginmodalform {margin:auto;width:100%;max-width:700px;text-align:left;padding:20px 40px;}
+.loginmodaldiv input {width:100%;border:1px solid #ccc;padding:8px 12px;}
+.loginmodaldiv .login_submit_container {text-align:right;}
+.loginmodaldiv button {width:30%;min-width:120px;border:none;border-radius:5px;padding:6px 10px;background-color:#4CAF50;color:#fff;cursor:pointer;}
+.loginmodaldiv button:hover {background-color:#46a049;color:#fff;}
+.loginmodaldiv button:focus {outline:none}
+.loginmodaldiv a {padding:0 !important;color:#000;}
+.login_newusertext {width:auto;float:right;text-align:right;}
+.login_forgotpasswordtext {width:auto;float:left;}
+@media screen and (max-width:700px) {
+ .loginmodaldiv .login_submit_container {text-align:center;}
+ .login_newusertext {width:100%;text-align:center;margin-top:20px;}
+ .login_forgotpasswordtext {width:100%;text-align:center;margin-top:30px;}
+}
+.darktheme .w3-code span.marked {
+ color:#ff9999;
+ background-color:transparent;
+}
+.darktheme .w3-example.w3-light-grey {
+ background-color:rgb(40,44,52)!important;color:white;
+}
+.intro {font-size:1.1em;background-color:#eee;padding: 15px 15px;box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);}
+.w3-btn, .w3-btn:link, .w3-btn:visited {color:#FFFFFF;background-color:#4CAF50}
 a.w3-btn[href*="exercise.asp"],a.w3-btn[href*="exercise_js.asp"] {margin:10px 5px 0 0}
 a.btnplayit,a.btnplayit:link,a.btnplayit:visited {background-color:#FFAD33;padding:1px 10px 2px 10px}
 a.btnplayit:hover,a.btnplayit:active {background-color:#ffffff;color:#FFAD33}
@@ -288,8 +325,9 @@ a.btnsmall:active,a.btnsmall:hover {color:#4CAF50;background-color:#ffffff}
 .sqlcolor{color:black}
 .sqlkeywordcolor{color:mediumblue}
 .sqlstringcolor{color:brown}
-
+.sqlnumbercolor{color:}
 .darktheme .w3-code{background-color:rgb(40,44,52);color:white;border-left-color:rgb(40,44,52)}
+.darktheme .w3-codeline{background-color:rgb(40,44,52);color:white;border-left-color:rgb(40,44,52)}
 .darktheme .w3-example pre{background-color:rgb(40,44,52)!important;border-left-color:rgb(40,44,52)}
 .darktheme .tagcolor{color:#88ccbb/*green2*/!important}
 .darktheme .tagnamecolor{color:#ff9999/*red*/!important}
@@ -330,10 +368,10 @@ a.btnsmall:active,a.btnsmall:hover {color:#4CAF50;background-color:#ffffff}
 .darktheme .sqlcolor{color:white!important}
 .darktheme .sqlkeywordcolor{color:#80b6ff/*blue*/!important}
 .darktheme .sqlstringcolor{color:#88c999/*green*/!important}
-
+.darktheme .sqlnumbercolor{color:}
 @media only screen and (max-device-width: 480px) {
- .w3-code, .w3-codespan,#w3-exerciseform .exerciseprecontainer {font-family: 'Source Code Pro',Menlo,Consolas,monospace;}
- .w3-code {font-size:14px;}
+ .w3-code,w3-codeline,.w3-codespan,#w3-exerciseform .exerciseprecontainer {font-family: 'Source Code Pro',Menlo,Consolas,monospace;}
+ .w3-code,w3-codeline {font-size:14px;}
  .w3-codespan {font-size:15px;}
  #w3-exerciseform .exerciseprecontainer {font-size:15px;}
  #w3-exerciseform .exerciseprecontainer input {padding:0;height:1.5em}
@@ -402,11 +440,11 @@ hr[id^="ez-insert-after-placeholder"] {margin-top: 0;}
  border-left: none;
 }
 .w3-panel {
- margin-top: 14px;
- margin-bottom: 14px;
+ margin-top: 24px;
+ margin-bottom: 24px;
  margin-left:-32px;
  margin-right:-32px;
- padding:6px 32px;
+ padding:16px 32px;
 }
 h1 {
  font-size: 42px;
@@ -415,7 +453,7 @@ h2 {
  font-size: 32px;
 }
 .w3-btn:hover,.w3-btn:active,.w3-example a:focus,.nextprev a:focus {
- box-shadow: 1px 1px 1px #000;
+ box-shadow: none;
  background-color: #46a049!important;
 }
 .w3-btn:hover.w3-blue,.w3-btn:active.w3-blue,.w3-button:hover.w3-blue,.w3-button:active.w3-blue {
@@ -436,8 +474,8 @@ a.btnplayit:hover {box-shadow:none;}
  margin:32px -20px;
 }
 p {
- margin-top: .9em;
- margin-bottom: .9em;
+ margin-top: 1.2em;
+ margin-bottom: 1.2em;
  font-size: 15px;
 }
 hr {
@@ -450,7 +488,7 @@ hr {
  margin-top: 1em;
  margin-bottom: 1em;
 }
-.w3-code{
+.w3-code,w3-codeline{
  font-size:15px;
 }
 #midcontentadcontainer,#mainLeaderboard {
@@ -458,20 +496,44 @@ hr {
  margin-left:-20px;
  margin-right:-20px;
 }
+
+.adtext {
+ font-family: "Segoe UI",Arial,sans-serif;
+ font-size: 12px;
+ color: #777;
+ margin-top:0;
+ margin-bottom:0;
+ padding-top:0;
+ padding-bottom:0;
+}
+
 @media screen and (max-width:600px) {
  .w3-example, #w3-exerciseform {margin-left:-32px;margin-right:-32px;}
 }
 
 @media only screen and (max-device-width: 480px) {
  #main {padding:24px}
- h1 {font-size: 30px;}
- h2 {font-size: 25px;}
- .w3-example {padding: 8px 16px;margin: 24px -24px;}
- #w3-exerciseform {padding: 8px 16px 16px 16px;margin: 24px -24px;}
- .w3-panel,.w3-info {margin-left:-24px;margin-right:-24px;}
+ h1 {
+  font-size: 30px;
+ }
+ h2 {
+  font-size: 25px;
+ }
+ .w3-example {
+  padding: 8px 16px;
+  margin: 24px -24px;
+ }
+ #w3-exerciseform {
+  padding: 8px 16px 16px 16px;
+  margin: 24px -24px;
+ }
+ .w3-panel,.w3-info {
+  margin-left:-24px;
+  margin-right:-24px;
+  padding-left:24px;
+  padding-right:24px;
+ }
 }
-/*end style external*/
-
 
 /* Style Plus */
 .shadow-black-01 {text-shadow: .1px .1px .1px #000}
