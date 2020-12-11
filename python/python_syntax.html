@@ -6,9 +6,48 @@
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../styles/w3.css">
 <link rel="stylesheet" href="../styles/external.css">
-<title>Python Підручник. Уроки для початківців. W3Schools українською</title>
+<title>Python Синтаксис. Уроки для початківців. W3Schools українською</title>
 <meta name="description"
-      content="Уроки W3Schools українською мовою. Python для початківців та новачків, школярів та студентів. Безкоштовні курси онлайн. Приклади коду. Довідник Python. Повний курс">
+      content="Python Синтаксис можна виконати, ввівши безпосередньо в командний рядок. Уроки W3Schools українською мовою. Python для початківців. Безкоштовні уроки онлайн. Приклади коду. Довідник Python">
+    <style>
+        #main a[id] {
+            position:relative;
+            top:-50px;
+        }
+        .w3-example {
+            overflow:hidden;
+        }
+        .pagemenu{
+            float:right;
+            margin-left:20px;
+            padding:20px;
+            background-color:#f1f1f1;
+            font-size:90%;
+            line-height:2.8em;
+            color:#555;
+        }
+        .pagemenu a {
+            display:block;
+            text-decoration:none!important;
+        }
+        .pagemenu a:hover {
+            color:#000;
+        }
+        .pagemenu h2 {
+            margin-top:1px;
+            color:#999;
+            font-size:20px;
+        }
+        .pagemenu hr {
+            border-top: 1px solid #ccc;
+            margin: 8px 0;
+        }
+        @media only screen and (max-width: 700px) {
+            .pagemenu{
+                float:none;
+                margin-right:20px;
+            }
+    </style>
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
@@ -548,51 +587,132 @@
             <a href="index.html"><img src="../svg/python.svg" alt="Python. Уроки для початківців" class="w3-left w3-padding" title="Python для початківців" width="100"></a>
 
 <article>
-    <h1>Python <span class="color_h1">Підручник</span></h1>
+    <h1>Python <span class="color_h1">Синтаксис</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="../index.html">&#10094; Home</a>
-        <a class="w3-right w3-btn" href="python_intro.html">Next &#10095;</a>
-    </div>
-
-    <div class="w3-panel w3-info intro">
-        <div class="w3-row-padding">
-            <div class="w3-col w3-hide-small" style="width:140px">
-                <p style="margin-top:25px"><i class="fa fa-python" style="font-size:100px;color:#555"></i></p>
-            </div>
-            <div class="w3-rest">
-                <p><strong>Python</strong> - це мова програмування.</p>
-                <p><strong>Python</strong> можна використовувати на сервері для створення веб-додатків.</p>
-                <a class="w3-btn w3-margin-bottom" href="python_intro.html">Почати вивчення Python негайно &raquo;</a>
-            </div>
-        </div>
+        <a class="w3-left w3-btn" href="python_getstarted.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="python_comments.html">Next &#10095;</a>
     </div>
     <hr>
 
-    <h2>Навчання на прикладах</h2>
-    <p>З нашим онлайн редактором &quot;Спробуйте самі&quot; ви можете редагувати Python код та переглядати результат.</p>
+    <div style="position:relative">
+
+        <div class="pagemenu">
+            <h2>На цій сторінці</h2>
+            <hr>
+            <a href="#execute_python_syntax">Виконайте синтаксис Python</a>
+            <a href="#python_indentation">Відступ Python</a>
+            <a href="#python_variables">Змінні Python</a>
+            <a href="#python_comments">Коментарі Python</a>
+            <a href="#exercises">Вправи</a>
+        </div>
+
+        <a id="execute_python_syntax"></a>
+        <h2>Виконайте синтаксис Python</h2>
+
+        <p>Як ми дізналися в попередній темі, синтаксис Python можна виконати, ввівши безпосередньо в командний рядок:</p>
+
+        <div class="w3-example">
+            <div class="w3-code notranslate w3-black">
+                &gt;&gt;&gt; print("Hello, World!")<br>
+                Hello, World!
+            </div>
+        </div>
+
+        <p>Або створивши файл python на сервері, використовуючи розширення .py і запустивши його в командному рядку:</p>
+
+        <div class="w3-example">
+            <div class="w3-code notranslate w3-black">
+                C:\Users\<em>Your Name</em>&gt;python myfile.py
+            </div>
+        </div>
+
+    </div>
+    <hr>
+
+    <a id="python_indentation"></a>
+    <h2>Відступ Python</h2>
+    <p>Відступ відноситься до пробілів на початку рядка коду.</p>
+    <p>Якщо в інших мовах програмування відступ у коді призначений лише для читабельності, відступ у Python дуже важливий.</p>
+    <p>Python використовує відступ для позначення блоку коду.</p>
+
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate pythonHigh">
-            print("Hello, World!")
+            if 5 &gt; 2:<br>&nbsp;
+            print("П'ять більше ніж два!")
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython99ba.html?filename=demo_default">Спробуйте самі &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypythone165.html?filename=demo_indentation">Спробуйте самі &raquo;</a>
     </div>
 
-    <p><b>Клікніть на кнопку &quot;Спробуйте самі&quot;, щоб побачити, як вона працює.</b></p>
+    <p>Якщо пропустити відступ, Python видасть вам помилку:</p>
+
+    <div class="w3-example w3-pale-red">
+        <h3>Приклад</h3>
+        <p>Синтаксична помилка:</p>
+        <div class="w3-code notranslate pythonHigh w3-border-red">
+            if 5 &gt; 2:<br>
+            print("П'ять більше ніж два!")
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython0e99.html?filename=demo_indentation_test">Спробуйте самі &raquo;</a>
+    </div>
+
+    <p>Кількість пробілів залежить від вас як програміста, але вона повинна бути принаймні однією.</p>
+
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate pythonHigh">
+            if 5 &gt; 2:<br>&nbsp;print("П'ять більше ніж два!")&nbsp;
+            <br>if 5 &gt; 2:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("П'ять більше ніж два!")&nbsp;
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypythona805.html?filename=demo_indentation2">Спробуйте самі &raquo;</a>
+    </div>
+
+    <p>Ви повинні використовувати однакову кількість пробілів в одному блоці коду, інакше Python видасть вам помилку:</p>
+
+    <div class="w3-example w3-pale-red">
+        <h3>Приклад</h3>
+        <p>Синтаксична помилка:</p>
+        <div class="w3-code notranslate pythonHigh w3-border-red">
+            if 5 &gt; 2:<br>
+            &nbsp;print("П'ять більше ніж два!")
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(&quot;П'ять більше ніж два!&quot;)</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython6b91.html?filename=demo_indentation2_error">Спробуйте самі &raquo;</a>
+    </div>
     <hr>
 
-    <h2>Обробка файлів Python</h2>
-    <p>У нашому розділі Обробка файлів ви дізнаєтесь, як відкривати, читати, писати та видаляти файли.</p>
-    <p><a href="python_file_handling.html">Python Обробка файлів</a></p>
-    <hr>
+    <a id="python_variables"></a>
+    <h2>Змінні Python</h2>
 
-    <h2>Обробка бази даних Python</h2>
-    <p>У нашому розділі бази даних ви дізнаєтесь, як отримати доступ до баз даних MySQL та MongoDB та працювати з ними:</p>
-    <p><a href="python_mysql_getstarted.html">Python MySQL Підручник</a></p>
-    <p><a href="python_mongodb_getstarted.html">Python MongoDB Підручник</a></p>
-    <hr>
+    <p>У Python змінні створюються, коли ви їм присвоюєте значення:
+        <div class="w3-example">
+            <h3>Приклад</h3>
+    <p>Змінні в Python:</p>
+    <div class="w3-code notranslate pythonHigh">
+        x = 5<br>y = &quot;Hello, World!&quot;
+    </div>
+    <a target="_blank" class="w3-btn w3-margin-bottom" href="trypythondbf2.html?filename=demo_syntax_variables">Спробуйте самі &raquo;</a>
+    </div>
 
-    <h2>Python Вправи</h2>
+    <p>Python не має команди для оголошення змінної.</p>
+    <p>Ви дізнаєтесь більше про змінні в розділі <a href="python_variables.html">Python Змінні</a>.</p>
+    <hr>
+    <a id="python_comments"></a>
+    <h2>Коментарі</h2>
+
+    <p>Python має можливість коментування для цілей документації в коді.</p>
+    <p>Коментарі починаються з #, а Python рендерить решту рядка як коментар:
+        <div class="w3-example">
+            <h3>Приклад</h3>
+    <p>Коментарі в Python:</p>
+    <div class="w3-code notranslate pythonHigh">
+        #Це коментар.<br>
+        print("Hello, World!")
+    </div>
+    <a target="_blank" class="w3-btn w3-margin-bottom" href="trypythoncab7.html?filename=demo_comment">Спробуйте самі &raquo;</a>
+    </div>
+
+    <a id="exercises"></a>
+    <hr>
     <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/python/exercise.asp?filename=exercise_syntax1" method="post" target="_blank">
         <h2>Перевірте себе за допомогою вправ</h2>
         <div class="exercisewindow">
@@ -608,77 +728,16 @@
             <p><a target="_blank" href="exercisef5ec.html?filename=exercise_syntax1">Почати вправу</a></p>
         </div>
     </form>
-    <hr>
-
-    <h2>Python Приклади</h2>
-    <p>Вчіться на прикладах! Цей підручник доповнює всі пояснення уточнюючими прикладами.</p>
-    <p><a href="python_examples.html" class="w3-button w3-light-grey">Переглянути всі Python приклади</a></p>
-    <hr>
-
-    <h2>Python Вікторина</h2>
-    <p>Перевірте свої навички Python за допомогою вікторини.</p>
-    <p><a href="python_quiz.html" class="w3-button w3-blue">Python Вікторина</a></p>
-    <hr>
-
-    <h2>Python Довідник</h2>
-    <p>Ви також знайдете повні посилання на функції та методи:</p>
-    <p><a href="python_reference.html">Огляд Довідників</a></p>
-    <p><a href="python_ref_functions.html">Вбудовані Функції</a></p>
-    <p><a href="python_ref_string.html">String Методи</a></p>
-    <p><a href="python_ref_list.html">List/Array Методи</a></p>
-    <p><a href="python_ref_dictionary.html">Dictionary Методи</a></p>
-    <p><a href="python_ref_tuple.html">Tuple Методи</a></p>
-    <p><a href="python_ref_set.html">Set Методи</a></p>
-    <p><a href="python_ref_file.html">File Методи</a></p>
-    <p><a href="python_ref_keywords.html">Python Ключові слова</a></p>
-    <p><a href="python_ref_exceptions.html">Python Винятки</a></p>
-    <p><a href="python_ref_glossary.html">Python Глосарій</a></p>
-    <p><a href="module_random.html">Random Модуль</a></p>
-    <p><a href="module_requests.html">Requests Модуль</a></p>
-    <p><a href="module_math.html">Math Модуль</a></p>
-    <p><a href="module_cmath.html">CMath Модуль</a></p>
-
-    <hr>
-    <h2>Скачати Python</h2>
-    <p>Скачати свіжу версію Python можна з офіційного веб-сайту Python:
-        <a target="_blank" href="https://python.org/" rel="nofollow">https://python.org</a></p>
-    <hr>
-
-    <h2>Пройдіть Python іспит - отримайте свій Диплом!</h2>
-    <div class="w3-row">
-    <div class="w3-third w3-container w3-padding-24"><a href="../cert/index.html"><img
-                    src="../images/w3certified_logo_250.png" style="max-width:100%;" alt="Онлайн W3Schools Сертифікація"/></a>
-    </div>
-    <div class="w3-twothird w3-container"><h2>Онлайн Сертифікація W3Schools</h2>
-        <p>Ідеальне рішення для професіоналів, яким необхідно збалансувати роботу, сім'ю та кар'єру.</p>
-        <p>Більше 25 000 сертифікатів уже видано!</p>
-    </div>
-</div>
-<p><a class="w3-btn" href="../cert/index.html">Отримайте Ваш Сертифікат! &raquo;</a></p>
-<p style="clear:both;"><a href="../cert/cert_html_new.html">HTML Сертифікат</a> документує ваші знання HTML.</p>
-<p><a href="../cert/cert_css.html">CSS Сертифікат</a> документує ваші знання CSS.</p>
-<p><a href="../cert/cert_javascript.html">JavaScript Сертифікат</a> документує ваші знання JavaScript та HTML DOM.</p>
-<p><a href="../cert/cert_frontend.html">Front End Сертифікат</a> документує ваші знання Front End.</p>
-<p><a href="../cert/cert_python.html">Python Сертифікат</a> документує ваші знання Python.</p>
-<p><a href="../cert/cert_jquery.html">jQuery Сертифікат</a> документує ваші знання jQuery.</p>
-<p><a href="../cert/cert_sql.html">SQL Сертифікат</a> документує ваші знання SQL.</p>
-<p><a href="../cert/cert_php.html">PHP Сертифікат</a> документує ваші знання PHP та MySQL.</p>
-<p><a href="../cert/cert_xml.html">XML Сертифікат</a> документує ваші знання XML, XML DOM та XSLT.</p>
-<p><a href="../cert/cert_bootstrap.html">Bootstrap Сертифікат</a> документує ваші знання Bootstrap framework.</p>
-<hr>
-<h4>І ще...</h4>
-<p><a href="../cert/career_tips.html">Поради для кар'єри</a> - поради по плануванню кар'єри веб-розробника.</p>
-<p><a href="../cert/career_cv.html">Складання резюме</a> - як правильно скласти резюме для працевлаштування IT-спеціалістом.</p>
 
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="../index.html">&#10094; Home</a>
-        <a class="w3-right w3-btn" href="python_intro.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="python_getstarted.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="python_comments.html">Next &#10095;</a>
     </div>
+
 </article>
 
 </div>
-
 <!--Right sidebar Python-->
 <div class="w3-col l2 m12" id="right">
 
