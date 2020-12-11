@@ -15,6 +15,7 @@
 
 .sncmp-overlay {
     position:fixed;
+    overflow:auto;
     top:0;
     left:0;
     bottom:0;    
@@ -27,13 +28,11 @@
 }
 
 .sncmp-popup {    
-    z-index: 65000;
-    margin:0 auto; 
-    position: relative;        
-    min-width: 250px;
-    height: 100%;
-    padding: 2em;
-    max-width:650px;
+    position: relative;
+    max-width: 650px;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
 }
 
 .sncmp-clearfix {
@@ -49,7 +48,9 @@
 }
 
 .sncmp-popup-content {
-    padding: 1.5em;    
+    padding: 1em;
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
 }
 
 .sncmp-intro-title {
@@ -100,13 +101,13 @@
 }
 
 .sncmp-button {              
-     width:50%;
-     max-height: 100%;
-     min-height: 100%;
-     text-align: center;   
-     padding: 1em;
-     display:table-cell;
-     vertical-align:middle;
+    width:50%;
+    max-height: 100%;
+    min-height: 100%;
+    text-align: center;   
+    padding: 1em;
+    display:table-cell;
+    vertical-align:middle;
  }
 
 .sncmp-learnmore-info, .sncmp-learnmore-pubpurposesinfo, .sncmp-learnmore-vendorconsentinfo, .sncmp-learnmore-reconsiderinfo {
@@ -226,6 +227,7 @@
 .sncmp-banner-buttons { 
     padding-left: 2em;
     padding-right: 2em;
+    padding-bottom: 1em;
     display:block;
 }
 
@@ -251,6 +253,12 @@
     color: white;
     font-weight: bold;
 }
+
+.sncmp-banner-btn-manage {
+    background: rgb(76,175,80);
+    color:white;
+    font-weight:bold;
+}  
 
 @media (min-width: 660px) {
     
@@ -513,4 +521,15 @@ input:checked + .sncmp-slider.sncmp-switch-pubpurpose:before {
 .sncmp-closepopup-button:hover {
     cursor:pointer;
 }
-
+.sncmp-overlay {
+    display:table;
+}
+.sncmp-inner-overlay {
+    position: relative;
+    min-width: 250px;
+    height: 100%;
+    padding: 0 1em;
+    display: table-cell;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
