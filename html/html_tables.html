@@ -5,9 +5,63 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../styles/w3.css">
-<link rel="stylesheet" href="../styles/external.css"><title>HTML Елементи цитати і цитування. Уроки для початківців. W3Schools українською</title>
-<meta name="description" content="Елементи цитати і цитування. Теги &lt;q&gt;, &lt;blockquote&gt; &lt;abbr&gt;. Уроки по HTML для початківців та новачків. Безкоштовні курси онлайн. Довідник з HTML5. Як створити сайт? W3Schools українською">
-
+<link rel="stylesheet" href="../styles/external.css"><title>HTML Таблиці. Уроки для початківців. W3Schools українською</title>
+<meta name="description" content="HTML Таблиці. Як зробити таблицю? Рядки, стовпці, заголовки, чарунки з даними. Стилізація таблиці. Уроки по HTML для початківців. W3Schools українською">
+<style>
+    table#customers {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    #customers td, #customers th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    #customers tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    .tryiticon {
+        background-color: #4CAF50;
+        color: #fff!important;
+        text-decoration: none;
+        padding: 0 8px 4px 8px;
+        border-radius: 50px;
+        font-size: 15px;
+        position: absolute;
+        margin-left: 6px;
+        transition: padding 0.2s;
+    }
+    .tryiticon span{
+        color:#fff!important;
+        font-size:14px;
+        font-weight:normal;
+        position:absolute;
+        width:0px;
+        overflow:hidden;
+        transition: width 0.2s;
+    }
+    .tryiticon:hover {
+        padding:0 12px 4px 116px;
+    }
+    .tryiticon:hover span{
+        width:116px;
+        padding-top:2px;
+        left:10px;
+    }
+    .htmltut_table, .htmltut_table th, .htmltut_table td
+    {
+        border:1px solid black;
+    }
+    .htmltut_table1, .htmltut_table1 th, .htmltut_table1 td
+    {
+        border:1px solid black;
+    }
+    .htmltut_table1 th, .htmltut_table1 td
+    {
+        padding:5px;
+    }
+</style>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ
@@ -288,9 +342,9 @@
             <a target="_top" href="html_links_colors.html">Кольори посилань</a>
             <a target="_top" href="html_links_bookmarks.html">Посилання на закладки</a>
         </div>
-      <a target="_top" href="html_images.html">HTML Зображення</a>
+      <a target="_top" href="../html/html_images.html">HTML Зображення</a>
       <div class="tut_overview">
-        <a target="_top" href="html_images.html">Зображення</a>
+        <a target="_top" href="../html/html_images.html">Зображення</a>
         <a target="_top" href="html_images_imagemap.html">Карта зображень</a>
         <a target="_top" href="html_images_background.html">Фонове зображення</a>
         <a target="_top" href="html_images_picture.html">Елемент Picture</a>
@@ -388,170 +442,347 @@
 <div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
     <div class='w3-row w3-white'>
         <div class='w3-col l10 m12' id='main'>
-            <a href="index.html"><img src="../svg/HTML5_icon.svg" alt="HTML5. Уроки для початківців" class="w3-left" title="HTML5 для початківців" width="90"></a>
+            <a href="index.html"><img src="../svg/HTML5_icon.svg" alt="HTML5. Уроки для початківців" class="w3-left" title="HTML5 для початківців. W3Schools українською" width="90"></a>
 <article>
-<h1>HTML <span class="color_h1">Елементи цитати і цитування</span></h1>
-<div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="html_formatting.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_comments.html">Next &#10095;</a>
-</div>
-<hr>
+    <h1>HTML <span class="color_h1">Таблиці</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="html_images_picture.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="html_lists.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro">Таблиці HTML дозволяють веб-розробникам упорядковувати дані у рядки та стовпці.</p>
+    <hr>
 
-<div class="sum">
-  <h4>В цій темі:</h4>
-  <ul>
-    <li><a href="#c1"><em>HTML елемент <code class="w3-codespan">&lt;q&gt;</code> для коротких цитат</em></a></li>
-    <li><a href="#c2"><em>HTML елемент <code class="w3-codespan">&lt;blockquote&gt;</code> для цитування</em></a></li>
-    <li><a href="#c3"><em>HTML елемент <code class="w3-codespan">&lt;abbr&gt;</code> для абревіатур</em></a></li>
-    <li><a href="#c4"><em>HTML елемент <code class="w3-codespan">&lt;address&gt;</code> для контактної інформації</em></a></li>
-    <li><a href="#c5"><em>HTML елемент <code class="w3-codespan">&lt;cite&gt;</code> для назви роботи</em></a></li>
-    <li><a href="#c6"><em>HTML елемент <code class="w3-codespan">&lt;bdo&gt;</code> для двонаправленого перевизначення</em></a></li>
-    <li><a href="#c7"><em>HTML вправи</em></a></li>
-    <li><a href="#c8"><em>HTML елементи цитати і цитування</em></a></li>
-  </ul>
-</div>
-<hr>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-white w3-padding notranslate w3-padding-16">
+            <table id="customers">
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                </tr>
+                <tr>
+                    <td>Island Trading</td>
+                    <td>Helen Bennett</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Laughing Bacchus Winecellars</td>
+                    <td>Yoshi Tannamuri</td>
+                    <td>Canada</td>
+                </tr>
+                <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Giovanni Rovelli</td>
+                    <td>Italy</td>
+                </tr>
+            </table>
+        </div>
+        <a class="w3-btn w3-margin-top w3-margin-bottom" href="tryit.html?filename=tryhtml_table_intro" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<div class="w3-example">
-<h3>Цитата</h3>
-<div class="w3-white w3-padding notranslate">
-<p>Цитата колишнього чемпіона світу з боксу і мера Києва Віталія Кличка:</p>
-<blockquote cite="https://ru.wikipedia.org/wiki/Кличко,_Виталий_Владимирович">А сегодня в завтрашний день не все могут смотреть. Вернее смотреть могут не только лишь все, мало кто может это делать...</blockquote>
-</div>
-<a class="w3-btn w3-margin-top w3-margin-bottom" href="tryit81b5.html?filename=tryhtml_formatting_intro2" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <h2>Визначення HTML Таблиці</h2>
+    <p>Тег <code class="w3-codespan">&lt;table&gt;</code> визначає HTML таблицю.</p>
+    <p>Кожен рядок таблиці визначається тегом <code class="w3-codespan">&lt;tr&gt;</code>. Кожен заголовок таблиці визначається тегом <code class="w3-codespan">&lt;th&gt;</code>. Кожна чарунка з даними таблиці визначається тегом <code class="w3-codespan">&lt;td&gt;</code>.</p>
+    <p>За замовчуванням текст в елементах <code class="w3-codespan">&lt;th&gt;</code> виділений жирним шрифтом і відцентрований.</p>
+    <p>За замовчуванням текст в елементах <code class="w3-codespan">&lt;td&gt;</code> є звичайним і вирівняним за лівим краєм.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>Проста HTML таблиця:</p>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;table style=&quot;width:100%&quot;&gt;<br>&nbsp;
+            &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Firstname&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp; &lt;th&gt;Lastname&lt;/th&gt; <br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Age&lt;/th&gt;<br>
+            &nbsp;
+            &lt;/tr&gt;<br>&nbsp;
+            &lt;tr&gt;<br>&nbsp; &nbsp; &lt;td&gt;Jill&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp; &lt;td&gt;Smith&lt;/td&gt; <br>&nbsp;&nbsp;&nbsp; &lt;td&gt;50&lt;/td&gt;<br>
+            &nbsp;
+            &lt;/tr&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;Eve&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp; &lt;td&gt;Jackson&lt;/td&gt; <br>&nbsp;&nbsp;&nbsp; &lt;td&gt;94&lt;/td&gt;<br>
+            &nbsp; &lt;/tr&gt;<br>&lt;/table&gt;
+        </div>
+        <a target="_blank" href="tryit.html?filename=tryhtml_table" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
 
-<h2 id="c1">HTML елемент &lt;q&gt; для коротких цитат</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;q&gt;</code> визначає короткі цитати.</p>
-<p>Браузери зазвичай вставляють лапки навколо елемента <code class="w3-codespan">&lt;q&gt;</code>.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;Мета WWF полягає в тому, щоб: &lt;q&gt;Побудувати майбутнє, де люди живуть в гармонії з природою.&lt;/q&gt;&lt;/p&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryitd9a6.html?filename=tryhtml_formatting_q" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <div class="w3-panel w3-note">
+        <p><strong>Примітка:</strong> Елементи <code class="w3-codespan">&lt;td&gt;</code> - це контейнери даних таблиці.<br>Вони можуть містити всілякі елементи HTML; текст, зображення, списки, інші таблиці тощо.</p>
+    </div>
+    <hr>
+    
+    <h2>HTML таблиця. Як додати межу - border</h2>
+    <p>Щоб додати межу до таблиці, використовуйте CSS властивість <code class="w3-codespan">border</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            table, th, td
+            {<br>
+            &nbsp;&nbsp;border: 1px solid black;<br>
+            }</div>
+        <a class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryhtml_table_border" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-panel w3-note">
+        <p>Не забудьте визначити межі як для таблиці, так і для чарунок таблиці.</p>
+    </div>
+    <hr>
 
-<h2 id="c2">HTML елемент &lt;blockquote&gt; для цитування</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;blockquote&gt;</code> визначає розділ, який цитується з іншого джерела.</p>
-<p>Браузери зазвичай відображають елементи <code class="w3-codespan">&lt;blockquote&gt;</code> з відступом.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;Ось цитата з сайту WWF:&lt;/p&gt;<br>&lt;blockquote cite=&quot;http://www.worldwildlife.org/who/index.html&quot;&gt;<br>
- Протягом 50 років WWF захищає майбутнє природи. <br> Всесвітня організація WWF, ведуча природоохоронна організація, працює в 100 країнах світу, її підтримують 1,2 мільйона чоловік в Сполучених Штатах і близькі до неї 5 мільйонів по всьому світу.<br>&lt;/blockquote&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryitcb56.html?filename=tryhtml_formatting_blockquote" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <h2>HTML Таблиця. Як згорнути межі - border-collapse</h2>
+    <p>Щоб дозволити межам таблиці згортатися в одну межу, додайте CSS властивість <code class="w3-codespan">border-collapse</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            table, th, td {<br>&nbsp;&nbsp;border: 1px solid black;<br>
+            &nbsp;
+            border-collapse: collapse;<br>}</div>
+        <a class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryhtml_table_collapse" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<h2 id="c3">HTML елемент &lt;abbr&gt; для абревіатур</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;abbr&gt;</code> визначає абревіатуру або акронім.</p>
-<p>Маркування скорочень може дати корисну інформацію для браузерів, систем перекладу і пошукових систем.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;&lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; була створена в
- 1948.&lt;/p&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit1a23.html?filename=tryhtml_formatting_abbr" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <h2>HTML Таблиця. Як додати внутрішній відступ в чарунках - padding</h2>
+    <p>Внутрішній відступ чарунки визначає простір між вмістом чарунки та її межами.</p>
+    <p>Якщо ви не вказали внутрішній відступ, чарунки таблиці відображатимуться без відступу.</p>
+    <p>Щоб встановити внутрішній відступ, використовуйте CSS властивість <code class="w3-codespan">padding</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            th, td {<br>&nbsp; padding: 15px;<br>}</div>
+        <a class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryhtml_table_cellpadding" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<h2 id="c4">HTML елемент &lt;address&gt; для контактної інформації</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;address&gt;</code> визначає контактну інформацію (автор/власник) документа або статті.</p>
-<p>Елемент <code class="w3-codespan">&lt;address&gt;</code> зазвичай відображається курсивом. Більшість браузерів додають розрив рядка до і після елементу.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;address&gt;<br>Автор Саша Грэй.&lt;br&gt; <br>Відвідайте нас на:&lt;br&gt;<br>Example.com&lt;br&gt;<br>
- Box 564, Lalaland&lt;br&gt;<br>USA<br>&lt;/address&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit4e4b.html?filename=tryhtml_formatting_address" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <h2>HTML Таблиця. Як вирівняти заголовки за лівим краєм - text-align</h2>
+    <p>За замовчуванням заголовки таблиць виділені напівжирним шрифтом і відцентровані.</p>
+    <p>Щоб вирівняти заголовки таблиць за лівим краєм, використовуйте CSS властивість <code class="w3-codespan">text-align</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            th {<br>&nbsp;&nbsp;text-align: left;<br>}
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryhtml_table_headings_left" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<h2 id="c5">HTML елемент &lt;cite&gt; для назви роботи</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;cite&gt;</code> визначає назву роботи.</p>
-<p>Браузери зазвичай відображають елемент <code class="w3-codespan">&lt;cite&gt;</code> курсивом.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edvard Munch. Написано в 1893.&lt;/p&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit0e3d.html?filename=tryhtml_formatting_cite" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <h2>HTML Таблиця. Як додати інтервал між межами - spacing</h2>
+    <p>Інтервал між межами визначає простір між чарунками.</p>
+    <p>Щоб встановити інтервал між межами таблиці, використовуйте CSS властивість <code class="w3-codespan">border-spacing</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            table {<br>&nbsp; border-spacing: 5px;<br>}</div>
+        <a class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryhtml_table_cellspacing" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
 
-<h2 id="c6">HTML елемент &lt;bdo&gt; для двонаправленого перевизначення</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;bdo&gt;</code> визначає двунаправленное перевизначення.</p>
-<p>Елемент <code class="w3-codespan">&lt;bdo&gt;</code> використовується для перевизначення поточного напрямку тексту:</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;bdo dir=&quot;rtl&quot;&gt;Цей текст буде написаний справа наліво&lt;/bdo&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit8e4a.html?filename=tryhtml_formatting_bdo" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <div class="w3-panel w3-note">
+        <p><strong>Примітка:</strong> Якщо таблиця має згорнуті межі (border-collapse), то <code class="w3-codespan">border-spacing</code> не має ефекту.</p>
+    </div>
+    <hr>
 
-<h2 id="c7">HTML Вправи</h2>
-<form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_quotation_elements1" method="post" target="_blank">
-<h2 class="shadow-black-1">Перевірте себе за допомогою вправ</h2>
-<div class="exercisewindow">
-<h2>Вправа:</h2>
-<p>Використовуйте елемент HTML, щоб додати лапки навколо букв "cool".</p>
-<div class="exerciseprecontainer">
-&lt;p&gt;
-<br>
-I am so <input name="ex1" maxlength="3" style="width: 37px;">cool<input name="ex2" maxlength="4" style="width: 46px;">.
-<br>
-&lt;/p&gt;
-</div>
-<br>
-<button type="submit" class="w3-btn w3-margin-bottom">Відправити відповідь &raquo;</button>
-<p><a target="_blank" href="exercise35ad.html?filename=exercise_html_quotation_elements1">Почати вправу</a></p>
-</div>
-</form>
-<hr>
+    <h2>HTML Таблиця - Чарунка, що охоплює кілька стовпців</h2>
+    <p>Щоб зробити чарунку, що охоплює більше одного стовпця, використовуйте атрибут <code class="w3-codespan">colspan</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;table style=&quot;width:100%&quot;&gt;<br>&nbsp; &lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp; &lt;th&gt;Name&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;
+            &lt;th colspan=&quot;2&quot;&gt;Telephone&lt;/th&gt;<br>&nbsp; &lt;/tr&gt;<br>
+            &nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;
+            &lt;td&gt;Bill Gates&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;55577854&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp;
+            &lt;td&gt;55577855&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>&lt;/table&gt;</div>
+        <a class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryhtml_table_colspan" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<h2 id="c8">HTML елементи цитати і цитування</h2>
-<table class="w3-table-all notranslate">
-<tr>
-<th style="width:20%">Тег</th>
-<th>Опис</th>
-</tr>
-<tr>
-<td><a href="../tags/tag_abbr.html">&lt;abbr&gt;</a></td>
-<td>Визначає абревіатуру або акронім</td>
-</tr>
-<tr>
-<td><a href="../tags/tag_address.html">&lt;address&gt;</a></td>
-<td>Визначає контактну інформацію для автора / власника документа</td>
-</tr>
-<tr>
-<td><a href="../tags/tag_bdo.html">&lt;bdo&gt;</a></td>
-<td>Визначає напрямок тексту</td>
-</tr>
-<tr>
-<td><a href="../tags/tag_blockquote.html">&lt;blockquote&gt;</a></td>
-<td>Визначає розділ, який цитується з іншого джерела</td>
-</tr>
-  <tr>
-<td><a href="../tags/tag_cite.html">&lt;cite&gt;</a></td>
-<td>Визначає назву твору</td>
-  </tr>
-<tr>
-<td><a href="../tags/tag_q.html">&lt;q&gt;</a></td>
-<td>Визначає коротку вбудовану цитату</td>
-</tr>
-</table>
-<div class="w3-note w3-panel">
-  <p>Для отримання повного списку всіх доступних тегів HTML, відвідайте <a href="../tags/index.html">HTML Довідник тегів</a>.</p>
-</div>
+    <h2>HTML Таблиця - Чарунка, яка охоплює багато рядків</h2>
+    <p>Щоб зробити чарунку, яка охоплює більше одного рядка, використовуйте атрибут <code class="w3-codespan">rowspan</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;table style=&quot;width:100%&quot;&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Name:&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;Bill Gates&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>&nbsp;
+            &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th rowspan=&quot;2&quot;&gt;Telephone:&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;
+            &lt;td&gt;55577854&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;
+            &lt;td&gt;55577855&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>&lt;/table&gt;</div>
+        <a class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryhtml_table_rowspan" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<hr>
-<div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="html_formatting.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_comments.html">Next &#10095;</a>
-</div>
+    <h2>HTML Таблиця - Додати підпис</h2>
+    <p>Щоб додати підпис до таблиці, використовуйте тег <code class="w3-codespan">&lt;caption&gt;</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;table style=&quot;width:100%&quot;&gt;<br>&nbsp; &lt;caption&gt;Monthly savings&lt;/caption&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Month&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Savings&lt;/th&gt;<br>&nbsp; &lt;/tr&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;January&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;$100&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;February&lt;/td&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;$50&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>
+            &lt;/table&gt;</div>
+        <a class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryhtml_tables2" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
 
+    <div class="w3-panel w3-note">
+        <p><strong>Примітка:</strong> Тег <code class="w3-codespan">&lt;caption&gt;</code> потрібно вставити відразу після тегу <code class="w3-codespan">&lt;table&gt;</code>.</p>
+    </div>
+    <hr>
+
+    <h2>Спеціальний стиль для однієї таблиці</h2>
+    <p>Щоб визначити спеціальний стиль для однієї конкретної таблиці, додайте до таблиці атрибут <code class="w3-codespan">id</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;table id=&quot;t01&quot;&gt;<br>
+            &nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Firstname&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp; &lt;th&gt;Lastname&lt;/th&gt; <br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Age&lt;/th&gt;<br>
+            &nbsp; &lt;/tr&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;Eve&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp; &lt;td&gt;Jackson&lt;/td&gt; <br>&nbsp;&nbsp;&nbsp; &lt;td&gt;94&lt;/td&gt;<br>
+            &nbsp; &lt;/tr&gt;<br>&lt;/table&gt;
+        </div>
+    </div>
+
+    <div class="w3-example">
+        <h3>Тепер ви можете визначити спеціальний стиль для цієї таблиці:</h3>
+        <div class="w3-code notranslate cssHigh">
+            #t01 {<br>&nbsp;&nbsp;width: 100%; <br>
+            &nbsp;&nbsp;background-color: #f1f1c1;<br>}
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryhtml_table_id1" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+
+    <div class="w3-example">
+        <h3>І додати більше стилів:</h3>
+        <div class="w3-code notranslate cssHigh">
+            #t01 tr:nth-child(even) {<br>
+            &nbsp;&nbsp;background-color: #eee;<br>}<br>
+            #t01 tr:nth-child(odd) {<br>
+            &nbsp;&nbsp;background-color: #fff;<br>}<br>
+            #t01 th {<br>&nbsp;&nbsp;color: white;<br>&nbsp;&nbsp;background-color: black;<br>}
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="tryit.html?filename=tryhtml_table_id2" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+
+    <h2>Підсумок</h2>
+    <ul>
+        <li>Використовуйте HTML елемент <code class="w3-codespan">&lt;table&gt;</code> для визначення таблиці</li>
+        <li>Використовуйте HTML елемент <code class="w3-codespan">&lt;tr&gt;</code> для визначення рядка таблиці</li>
+        <li>Використовуйте HTML елемент <code class="w3-codespan">&lt;td&gt;</code> для визначення чарунки таблиці</li>
+        <li>Використовуйте HTML елемент <code class="w3-codespan">&lt;th&gt;</code> для визначення заголовка таблиці</li>
+        <li>Використовуйте HTML елемент <code class="w3-codespan">&lt;caption&gt;</code> для визначення підпису таблиці</li>
+        <li>Використовуйте CSS властивість <code class="w3-codespan">border</code> для визначення межі</li>
+        <li>Використовуйте CSS властивість <code class="w3-codespan">border-collapse</code> для згортання меж чарунок</li>
+        <li>Використовуйте CSS властивість <code class="w3-codespan">padding</code> для додавання внутрішнього відступу в чарунках</li>
+        <li>Використовуйте CSS властивість <code class="w3-codespan">text-align</code> для вирівнювання тексту в чарунках</li>
+        <li>Використовуйте CSS властивість <code class="w3-codespan">border-spacing</code> для встановлення інтервалу між чарунками</li>
+        <li>Використовуйте атрибут <code class="w3-codespan">colspan</code>, щоб чарунка охоплювала багато стовпців</li>
+        <li>Використовуйте атрибут <code class="w3-codespan">rowspan</code>, щоб чарунка охоплювала багато рядків</li>
+        <li>Використовуйте атрибут <code class="w3-codespan">id</code> для однозначного визначення однієї таблиці</li>
+    </ul>
+    <hr>
+
+    <h2>HTML Вправи</h2>
+    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_tables1" method="post" target="_blank">
+        <h2>Перевірте себе за допомогою вправ</h2>
+        <div class="exercisewindow">
+            <h2>Вправа:</h2>
+            <p>Додайте рядок таблиці з двома заголовками таблиць.</p>
+            <p>Два заголовки таблиць повинні мати значення "Name" (ім'я) та "Age" (вік).</p>
+            <div class="exerciseprecontainer">
+                &lt;table&gt;
+                <br>
+                &nbsp;&nbsp;<input name="ex1" spellcheck="false" maxlength="4" style="width: 46px;">
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<input name="ex2" spellcheck="false" maxlength="13" style="width: 135px;">
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<input name="ex3" spellcheck="false" maxlength="12" style="width: 125px;">
+                <br>
+                &nbsp;&nbsp;<input name="ex4" spellcheck="false" maxlength="5" style="width: 56px;">
+                <br>
+                &nbsp;&nbsp;&lt;tr&gt;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Jill Smith&lt;/td&gt;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;50&lt;/td&gt;
+                <br>
+                &nbsp;&nbsp;&lt;/tr&gt;
+                <br>
+                &lt;/table&gt;
+            </div>
+            <br>
+            <button type="submit" class="w3-btn w3-margin-bottom">Надіслати відповідь &raquo;</button>
+            <p><a target="_blank" href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_tables1">Почати вправу</a></p>
+        </div>
+    </form>
+    <hr>
+
+    <h2>HTML Теги таблиці</h2>
+    <table class="w3-table-all notranslate">
+        <tr>
+            <th>Тег</th>
+            <th>Опис</th>
+        </tr>
+        <tr>
+            <td><a href="../tags/tag_table.html">&lt;table&gt;</a></td>
+            <td>Визначає таблицю</td>
+        </tr>
+        <tr>
+            <td><a href="../tags/tag_th.html">&lt;th&gt;</a></td>
+            <td>Визначає чарунку заголовка в таблиці</td>
+        </tr>
+        <tr>
+            <td><a href="../tags/tag_tr.html">&lt;tr&gt;</a></td>
+            <td>Визначає рядок у таблиці</td>
+        </tr>
+        <tr>
+            <td><a href="../tags/tag_td.html">&lt;td&gt;</a></td>
+            <td>Визначає чарунку в таблиці</td>
+        </tr>
+        <tr>
+            <td><a href="../tags/tag_caption.html">&lt;caption&gt;</a></td>
+            <td>Визначає підпис таблиці</td>
+        </tr>
+        <tr>
+            <td><a href="../tags/tag_colgroup.html">&lt;colgroup&gt;</a></td>
+            <td>Визначає групу одного або декількох стовпців у таблиці для форматування</td>
+        </tr>
+        <tr>
+            <td><a href="../tags/tag_col.html">&lt;col&gt;</a></td>
+            <td>Вказує властивості стовпців для кожного стовпця в межах елемента &lt;colgroup&gt;</td>
+        </tr>
+        <tr>
+            <td><a href="../tags/tag_thead.html">&lt;thead&gt;</a></td>
+            <td>Групує вміст заголовка в таблиці</td>
+        </tr>
+        <tr>
+            <td><a href="../tags/tag_tbody.html">&lt;tbody&gt;</a></td>
+            <td>Групуйте вміст body в таблиці</td>
+        </tr>
+        <tr>
+            <td><a href="../tags/tag_tfoot.html">&lt;tfoot&gt;</a></td>
+            <td>Групує вміст нижнього колонтитула в таблиці</td>
+        </tr>
+    </table>
+    <div class="w3-note w3-panel">
+        <p>Для ознайомлення з повним списком усіх доступних HTML тегів відвідайте <a href="../tags/index.html">HTML Довідник тегів</a> на нашому сайті.</p>
+    </div>
+
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="html_images_picture.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="html_lists.html">Next &#10095;</a>
+    </div>
 </article>
 
 </div>
@@ -623,7 +854,7 @@ I am so <input name="ex1" maxlength="3" style="width: 37px;">cool<input name="ex
 
     <div class="sidesection" style="margin-left:auto;margin-right:auto;max-width:230px">
         <div class="w3-container w3-dark-grey">
-            <h5><a href="../cert/default.html" class="w3-hover-text-white">СЕРТИФІКАТИ</a></h5>
+            <h5><a href="../cert/index.html" class="w3-hover-text-white">СЕРТИФІКАТИ</a></h5>
         </div>
         <div class="w3-border">
             <a href="../cert/cert_html.html" class="w3-button w3-light-grey w3-block w3-border-bottom" style="text-decoration:none">HTML</a>
@@ -777,6 +1008,5 @@ I am so <input name="ex1" maxlength="3" style="width: 37px;">cool<input name="ex
 <script src="../cdn/html5shiv/3.7.3/html5shiv.js"></script>
 <script src="../cdn/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
 <!--FOOTER-->
 </html>

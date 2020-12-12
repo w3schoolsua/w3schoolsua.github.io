@@ -5,9 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../styles/w3.css">
-<link rel="stylesheet" href="../styles/external.css"><title>HTML Елементи цитати і цитування. Уроки для початківців. W3Schools українською</title>
-<meta name="description" content="Елементи цитати і цитування. Теги &lt;q&gt;, &lt;blockquote&gt; &lt;abbr&gt;. Уроки по HTML для початківців та новачків. Безкоштовні курси онлайн. Довідник з HTML5. Як створити сайт? W3Schools українською">
-
+<link rel="stylesheet" href="../styles/external.css">
+<title>HTML Кольори - RGB. Уроки для початківців. W3Schools українською</title>
+<meta name="description" content="HTML Кольори - RGB. Уроки по HTML для початківців. W3Schools українською">
+<script src="../lib/w3color.js"></script>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ
@@ -390,168 +391,250 @@
         <div class='w3-col l10 m12' id='main'>
             <a href="index.html"><img src="../svg/HTML5_icon.svg" alt="HTML5. Уроки для початківців" class="w3-left" title="HTML5 для початківців" width="90"></a>
 <article>
-<h1>HTML <span class="color_h1">Елементи цитати і цитування</span></h1>
-<div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="html_formatting.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_comments.html">Next &#10095;</a>
-</div>
-<hr>
+    <h1>HTML <span class="color_h1">RGB та RGBA кольори</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="html_colors.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="html_colors_hex.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro">Значення кольору RGB відображає <span style="color:red">ЧЕРВОНИЙ (RED)</span>, <span style="color:green">ЗЕЛЕНИЙ (GREEN)</span> і <span style="color:blue">СИНИЙ (BLUE)</span> джерела світла.</p>
+    <p class="intro">Значення кольору RGBA - це розширення RGB з альфа-каналом (opacity/непрозорість).</p>
+    <hr>
 
-<div class="sum">
-  <h4>В цій темі:</h4>
-  <ul>
-    <li><a href="#c1"><em>HTML елемент <code class="w3-codespan">&lt;q&gt;</code> для коротких цитат</em></a></li>
-    <li><a href="#c2"><em>HTML елемент <code class="w3-codespan">&lt;blockquote&gt;</code> для цитування</em></a></li>
-    <li><a href="#c3"><em>HTML елемент <code class="w3-codespan">&lt;abbr&gt;</code> для абревіатур</em></a></li>
-    <li><a href="#c4"><em>HTML елемент <code class="w3-codespan">&lt;address&gt;</code> для контактної інформації</em></a></li>
-    <li><a href="#c5"><em>HTML елемент <code class="w3-codespan">&lt;cite&gt;</code> для назви роботи</em></a></li>
-    <li><a href="#c6"><em>HTML елемент <code class="w3-codespan">&lt;bdo&gt;</code> для двонаправленого перевизначення</em></a></li>
-    <li><a href="#c7"><em>HTML вправи</em></a></li>
-    <li><a href="#c8"><em>HTML елементи цитати і цитування</em></a></li>
-  </ul>
-</div>
-<hr>
+    <h2>RGB Значення кольору</h2>
+    <p>У HTML колір може бути вказаний як значення RGB, використовуючи цю формулу:</p>
+    <p style="font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">rgb(<em>red,</em> <em>green</em>, <em>blue</em>)</p>
+    <p>Кожен параметр (червоний, зелений та синій) визначає інтенсивність кольору зі значенням від 0 до 255.</p>
+    <p>Це означає, що існує 256 x 256 x 256 = 16777216 можливих кольорів!</p>
+    <p>Наприклад, rgb (255, 0, 0) відображається червоним, оскільки для червоного встановлено найвище значення (255), а для двох інших (зелений та синій) - 0.</p>
+    <p>Інший приклад, rgb (0, 255, 0) відображається зеленим, оскільки зеленому встановлено найвище значення (255), а іншим двом (червоному та синьому) встановлено 0.</p>
+    <p>Для відображення чорного кольору встановіть для всіх параметрів кольору значення 0, наприклад: rgb(0, 0, 0).</p>
+    <p>Щоб відобразити білий, встановіть для всіх кольорових параметрів значення 255, наприклад: rgb(255, 255, 255).</p>
+    <p>Експериментуйте, змішуючи значення RGB нижче:</p>
 
-<div class="w3-example">
-<h3>Цитата</h3>
-<div class="w3-white w3-padding notranslate">
-<p>Цитата колишнього чемпіона світу з боксу і мера Києва Віталія Кличка:</p>
-<blockquote cite="https://ru.wikipedia.org/wiki/Кличко,_Виталий_Владимирович">А сегодня в завтрашний день не все могут смотреть. Вернее смотреть могут не только лишь все, мало кто может это делать...</blockquote>
-</div>
-<a class="w3-btn w3-margin-top w3-margin-bottom" href="tryit81b5.html?filename=tryhtml_formatting_intro2" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <div class="w3-container xw3-light-grey">
+        <div class="w3-row w3-container">
+            <div class="w3-col m2 w3-container w3-center">
+            </div>
+            <div class="w3-col m8 w3-container w3-center">
+                <div id="rgbresult" style="line-height:80px;"><p id="rgbresulttext" style="font-size:120%;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace;">&nbsp;</p></div>
+            </div>
+            <div class="w3-col m2 w3-container w3-center">
+            </div>
+        </div>
+        <div class="w3-row w3-container">
+            <div class="w3-col m4 w3-container w3-center">
+                <p>RED</p>
+                <input onchange="changeRGB()" oninput="changeRGB()" type="range" id="slideRed" name="slideRed" value="255" min="0" max="255">
+                <div id="valRed2" style="background-color:red;border-radius:5px;color:white;opacity:0.8">255</div>
+            </div>
+            <div class="w3-col m4 w3-container w3-center">
+                <p>GREEN</p>
+                <input onchange="changeRGB()" oninput="changeRGB()" type="range" id="slideGreen" name="slideGreen" value="99" min="0" max="255">
+                <div id="valGreen2" style="background-color:#00ff00;border-radius:5px;opacity:0.8">0</div>
+            </div>
+            <div class="w3-col m4 w3-container w3-center">
+                <p>BLUE</p>
+                <input onchange="changeRGB()" oninput="changeRGB()" type="range" id="slideBlue" name="slideBlue" value="71" min="0" max="255">
+                <div id="valBlue2" style="background-color:blue;border-radius:5px;color:white;opacity:0.8">0</div>
+            </div>
+        </div>
+    </div>
 
-<h2 id="c1">HTML елемент &lt;q&gt; для коротких цитат</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;q&gt;</code> визначає короткі цитати.</p>
-<p>Браузери зазвичай вставляють лапки навколо елемента <code class="w3-codespan">&lt;q&gt;</code>.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;Мета WWF полягає в тому, щоб: &lt;q&gt;Побудувати майбутнє, де люди живуть в гармонії з природою.&lt;/q&gt;&lt;/p&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryitd9a6.html?filename=tryhtml_formatting_q" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="notranslate w3-white w3-container">
+            <div class="w3-row w3-center" style="line-height:80px;color:white;font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(0, 0, 255);">rgb(0, 0, 255)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(238, 130, 238);">rgb(238, 130, 238)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(106, 90, 205);">rgb(106, 90, 205)</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <a target="_blank" href="tryit.html?filename=tryhtml_color_rgb" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<h2 id="c2">HTML елемент &lt;blockquote&gt; для цитування</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;blockquote&gt;</code> визначає розділ, який цитується з іншого джерела.</p>
-<p>Браузери зазвичай відображають елементи <code class="w3-codespan">&lt;blockquote&gt;</code> з відступом.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;Ось цитата з сайту WWF:&lt;/p&gt;<br>&lt;blockquote cite=&quot;http://www.worldwildlife.org/who/index.html&quot;&gt;<br>
- Протягом 50 років WWF захищає майбутнє природи. <br> Всесвітня організація WWF, ведуча природоохоронна організація, працює в 100 країнах світу, її підтримують 1,2 мільйона чоловік в Сполучених Штатах і близькі до неї 5 мільйонів по всьому світу.<br>&lt;/blockquote&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryitcb56.html?filename=tryhtml_formatting_blockquote" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <h2>Відтінки сірого</h2>
+    <p>Відтінки сірого часто визначають, використовуючи рівні значення для всіх трьох параметрів:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="notranslate w3-white w3-container">
+            <div class="w3-row w3-center" style="line-height:80px;color:white;font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(60, 60, 60);">rgb(60, 60, 60)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(100, 100, 100);">rgb(100, 100, 100)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(140, 140, 140);">rgb(140, 140, 140)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(180, 180, 180);">rgb(180, 180, 180)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(200, 200, 200);color:#555555">rgb(200, 200, 200)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgb(240, 240, 240);color:#555555">rgb(240, 240, 240)</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <a target="_blank" href="tryit.html?filename=tryhtml_color_rgb_gray" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<h2 id="c3">HTML елемент &lt;abbr&gt; для абревіатур</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;abbr&gt;</code> визначає абревіатуру або акронім.</p>
-<p>Маркування скорочень може дати корисну інформацію для браузерів, систем перекладу і пошукових систем.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;&lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; була створена в
- 1948.&lt;/p&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit1a23.html?filename=tryhtml_formatting_abbr" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <h2>RGBA Значення кольору</h2>
+    <p>Значення кольору RGBA - це розширення значень кольору RGB за допомогою альфа-каналу, що визначає непрозорість кольору.</p>
+    <p>Значення кольору RGBA вказано з:</p>
+    <p style="font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">rgba(<em>red,</em> <em>green</em>, <em>blue, alpha</em>)</p>
+    <p>Параметр альфа - це число від 0,0 (повністю прозоре) до 1,0 (зовсім не прозоре):</p>
+    <p>Експериментуйте, змішуючи значення RGBA нижче:</p>
 
-<h2 id="c4">HTML елемент &lt;address&gt; для контактної інформації</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;address&gt;</code> визначає контактну інформацію (автор/власник) документа або статті.</p>
-<p>Елемент <code class="w3-codespan">&lt;address&gt;</code> зазвичай відображається курсивом. Більшість браузерів додають розрив рядка до і після елементу.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;address&gt;<br>Автор Саша Грэй.&lt;br&gt; <br>Відвідайте нас на:&lt;br&gt;<br>Example.com&lt;br&gt;<br>
- Box 564, Lalaland&lt;br&gt;<br>USA<br>&lt;/address&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit4e4b.html?filename=tryhtml_formatting_address" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <div class="w3-container xw3-light-grey">
+        <div class="w3-row w3-container">
+            <div class="w3-col m2 w3-container w3-center">
+            </div>
+            <div class="w3-col m8 w3-container w3-center">
+                <div id="rgbaresult" style="line-height:80px;"><p id="rgbaresulttext" style="font-size:120%;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace;">&nbsp;</p></div>
+            </div>
+            <div class="w3-col m2 w3-container w3-center">
+            </div>
+        </div>
+        <div class="w3-row w3-container">
+            <div class="w3-col m3 w3-container w3-center">
+                <p>RED</p>
+                <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideRedA" name="slideRedA" value="255" min="0" max="255">
+                <div id="valRed2A" style="background-color:red;border-radius:5px;color:white;opacity:0.8">255</div>
+            </div>
+            <div class="w3-col m3 w3-container w3-center">
+                <p>GREEN</p>
+                <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideGreenA" name="slideGreenA" value="99" min="0" max="255">
+                <div id="valGreen2A" style="background-color:#00ff00;border-radius:5px;opacity:0.8">0</div>
+            </div>
+            <div class="w3-col m3 w3-container w3-center">
+                <p>BLUE</p>
+                <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideBlueA" name="slideBlueA" value="71" min="0" max="255">
+                <div id="valBlue2A" style="background-color:blue;border-radius:5px;color:white;opacity:0.8">0</div>
+            </div>
+            <div class="w3-col m3 w3-container w3-center">
+                <p>ALPHA</p>
+                <input onchange="changeRGBA()" oninput="changeRGBA()" type="range" id="slideAlphaA" name="slideAlphaA" value="5" min="0" max="10">
+                <div id="valAlpha2A" style="background-color:blue;border-radius:5px;color:white;opacity:0.8">0</div>
+            </div>
+        </div>
+    </div>
 
-<h2 id="c5">HTML елемент &lt;cite&gt; для назви роботи</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;cite&gt;</code> визначає назву роботи.</p>
-<p>Браузери зазвичай відображають елемент <code class="w3-codespan">&lt;cite&gt;</code> курсивом.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edvard Munch. Написано в 1893.&lt;/p&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit0e3d.html?filename=tryhtml_formatting_cite" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="notranslate w3-white">
+            <div class="w3-row w3-center"
+                 style="
+    line-height:80px;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    font-family:Consolas, 'Courier New', Courier, monospace;
+    background-image:url(img_bg_eyeicon.png), url(img_bg_transparent.gif);
+    background-repeat:no-repeat, repeat;
+    background-position:center, top left;
+    background-color:#ffffff;">
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgba(255, 99, 71, 0);color:#555555;">rgba(255, 99, 71, 0)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgba(255, 99, 71, 0.2);color:#555555;">rgba(255, 99, 71, 0.2)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgba(255, 99, 71, 0.4);">rgba(255, 99, 71, 0.4)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgba(255, 99, 71, 0.6);">rgba(255, 99, 71, 0.6)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgba(255, 99, 71, 0.8);">rgba(255, 99, 71, 0.8)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:rgba(255, 99, 71, 1);">rgba(255, 99, 71, 1)</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <a target="_blank" href="tryit.html?filename=tryhtml_color_rgba" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
 
-<h2 id="c6">HTML елемент &lt;bdo&gt; для двонаправленого перевизначення</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;bdo&gt;</code> визначає двунаправленное перевизначення.</p>
-<p>Елемент <code class="w3-codespan">&lt;bdo&gt;</code> використовується для перевизначення поточного напрямку тексту:</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;bdo dir=&quot;rtl&quot;&gt;Цей текст буде написаний справа наліво&lt;/bdo&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit8e4a.html?filename=tryhtml_formatting_bdo" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <script>
+        //changeRed(255)
+        //changeGreen(0)
+        //changeBlue(0)
+        changeRGB("r");
+        function changeRGB(x) {
+            var col, r, g, b;
+            r = document.getElementById("slideRed").value;
+            g = document.getElementById("slideGreen").value;
+            b = document.getElementById("slideBlue").value;
+            col = w3color("rgb(" + r + "," + g + "," + b + ")");
+            document.getElementById('valRed2').innerHTML = r;
+            document.getElementById('valGreen2').innerHTML = g;
+            document.getElementById('valBlue2').innerHTML = b;
+            document.getElementById('rgbresult').style.backgroundColor = col.toRgbString();
+            document.getElementById('rgbresulttext').innerHTML = col.toRgbString();
+            if (col.isDark(150)) {
+                document.getElementById('rgbresulttext').style.color = "#ffffff";
+            } else {
+                document.getElementById('rgbresulttext').style.color = "#1f2d3d";
+            }
+        }
+        //function changeGreen(value) {
+        //    document.getElementById('valGreen').innerHTML = value;
+        //}
+        //function changeBlue(value) {
+        //    document.getElementById('valBlue').innerHTML = value;
+        //}
+        changeRGBA("r");
+        function changeRGBA(x) {
+            var col, r, g, b, a;
+            r = document.getElementById("slideRedA").value;
+            g = document.getElementById("slideGreenA").value;
+            b = document.getElementById("slideBlueA").value;
+            a = document.getElementById("slideAlphaA").value/10;
+            col = w3color("rgba(" + r + "," + g + "," + b + "," + a + ")");
+            document.getElementById('valRed2A').innerHTML = r;
+            document.getElementById('valGreen2A').innerHTML = g;
+            document.getElementById('valBlue2A').innerHTML = b;
+            document.getElementById('valAlpha2A').innerHTML = a;
+            document.getElementById('rgbaresult').style.backgroundColor = col.toRgbaString();
+            document.getElementById('rgbaresulttext').innerHTML = col.toRgbaString();
+            if (col.isDark(150) && a > 0.2) {
+                document.getElementById('rgbaresulttext').style.color = "#ffffff";
+            } else {
+                document.getElementById('rgbaresulttext').style.color = "#1f2d3d";
+            }
+        }
+    </script>
 
-<h2 id="c7">HTML Вправи</h2>
-<form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_quotation_elements1" method="post" target="_blank">
-<h2 class="shadow-black-1">Перевірте себе за допомогою вправ</h2>
-<div class="exercisewindow">
-<h2>Вправа:</h2>
-<p>Використовуйте елемент HTML, щоб додати лапки навколо букв "cool".</p>
-<div class="exerciseprecontainer">
-&lt;p&gt;
-<br>
-I am so <input name="ex1" maxlength="3" style="width: 37px;">cool<input name="ex2" maxlength="4" style="width: 46px;">.
-<br>
-&lt;/p&gt;
-</div>
-<br>
-<button type="submit" class="w3-btn w3-margin-bottom">Відправити відповідь &raquo;</button>
-<p><a target="_blank" href="exercise35ad.html?filename=exercise_html_quotation_elements1">Почати вправу</a></p>
-</div>
-</form>
-<hr>
-
-<h2 id="c8">HTML елементи цитати і цитування</h2>
-<table class="w3-table-all notranslate">
-<tr>
-<th style="width:20%">Тег</th>
-<th>Опис</th>
-</tr>
-<tr>
-<td><a href="../tags/tag_abbr.html">&lt;abbr&gt;</a></td>
-<td>Визначає абревіатуру або акронім</td>
-</tr>
-<tr>
-<td><a href="../tags/tag_address.html">&lt;address&gt;</a></td>
-<td>Визначає контактну інформацію для автора / власника документа</td>
-</tr>
-<tr>
-<td><a href="../tags/tag_bdo.html">&lt;bdo&gt;</a></td>
-<td>Визначає напрямок тексту</td>
-</tr>
-<tr>
-<td><a href="../tags/tag_blockquote.html">&lt;blockquote&gt;</a></td>
-<td>Визначає розділ, який цитується з іншого джерела</td>
-</tr>
-  <tr>
-<td><a href="../tags/tag_cite.html">&lt;cite&gt;</a></td>
-<td>Визначає назву твору</td>
-  </tr>
-<tr>
-<td><a href="../tags/tag_q.html">&lt;q&gt;</a></td>
-<td>Визначає коротку вбудовану цитату</td>
-</tr>
-</table>
-<div class="w3-note w3-panel">
-  <p>Для отримання повного списку всіх доступних тегів HTML, відвідайте <a href="../tags/index.html">HTML Довідник тегів</a>.</p>
-</div>
-
-<hr>
-<div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="html_formatting.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_comments.html">Next &#10095;</a>
-</div>
-
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="html_colors.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="html_colors_hex.html">Next &#10095;</a>
+    </div>
 </article>
 
 </div>

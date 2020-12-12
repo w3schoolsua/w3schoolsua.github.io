@@ -5,9 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../styles/w3.css">
-<link rel="stylesheet" href="../styles/external.css"><title>HTML Елементи цитати і цитування. Уроки для початківців. W3Schools українською</title>
-<meta name="description" content="Елементи цитати і цитування. Теги &lt;q&gt;, &lt;blockquote&gt; &lt;abbr&gt;. Уроки по HTML для початківців та новачків. Безкоштовні курси онлайн. Довідник з HTML5. Як створити сайт? W3Schools українською">
-
+<link rel="stylesheet" href="../styles/external.css">
+<title>HTML HSL та HSLA Кольори. Уроки для початківців. W3Schools українською</title>
+<meta name="description" content="HTML - Що таке HSL та HSLA Кольори? Як правильно вказати кольори для веб-сторінок? Уроки по HTML для початківців. W3Schools українською">
+<script src="../lib/w3color.js"></script>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ
@@ -390,168 +391,308 @@
         <div class='w3-col l10 m12' id='main'>
             <a href="index.html"><img src="../svg/HTML5_icon.svg" alt="HTML5. Уроки для початківців" class="w3-left" title="HTML5 для початківців" width="90"></a>
 <article>
-<h1>HTML <span class="color_h1">Елементи цитати і цитування</span></h1>
-<div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="html_formatting.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_comments.html">Next &#10095;</a>
-</div>
-<hr>
+    <h1>HTML <span class="color_h1">HSL та HSLA Кольори</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="html_colors_hex.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="html_css.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro">HSL означає hue, saturation, lightness (відтінок, насиченість і легкість).</p>
+    <p class="intro">Значення кольору HSLA є розширенням HSL з альфа-каналом (непрозорість).</p>
+    <hr>
 
-<div class="sum">
-  <h4>В цій темі:</h4>
-  <ul>
-    <li><a href="#c1"><em>HTML елемент <code class="w3-codespan">&lt;q&gt;</code> для коротких цитат</em></a></li>
-    <li><a href="#c2"><em>HTML елемент <code class="w3-codespan">&lt;blockquote&gt;</code> для цитування</em></a></li>
-    <li><a href="#c3"><em>HTML елемент <code class="w3-codespan">&lt;abbr&gt;</code> для абревіатур</em></a></li>
-    <li><a href="#c4"><em>HTML елемент <code class="w3-codespan">&lt;address&gt;</code> для контактної інформації</em></a></li>
-    <li><a href="#c5"><em>HTML елемент <code class="w3-codespan">&lt;cite&gt;</code> для назви роботи</em></a></li>
-    <li><a href="#c6"><em>HTML елемент <code class="w3-codespan">&lt;bdo&gt;</code> для двонаправленого перевизначення</em></a></li>
-    <li><a href="#c7"><em>HTML вправи</em></a></li>
-    <li><a href="#c8"><em>HTML елементи цитати і цитування</em></a></li>
-  </ul>
-</div>
-<hr>
+    <h2>HSL Значення кольору</h2>
+    <p>У HTML колір можна вказати, використовуючи відтінок, насиченість та легкість (HSL) у формі:</p>
+    <p style="font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">hsl(<em>hue</em>, <em>saturation</em>, <em>lightness</em>)</p>
+    <p>Hue (відтінок) - це градус на колірному колі від 0 до 360. 0 - червоний, 120 - зелений і 240 - синій.</p>
+    <p>Saturation (насиченість) - це відсоткове значення, 0% означає відтінок сірого, а 100% - повний колір.</p>
+    <p>Lightness (легкість) - це також відсоткове значення, 0% - чорний, а 100% - білий.</p>
+    <p>Експериментуйте, змішуючи значення HSL нижче:</p>
 
-<div class="w3-example">
-<h3>Цитата</h3>
-<div class="w3-white w3-padding notranslate">
-<p>Цитата колишнього чемпіона світу з боксу і мера Києва Віталія Кличка:</p>
-<blockquote cite="https://ru.wikipedia.org/wiki/Кличко,_Виталий_Владимирович">А сегодня в завтрашний день не все могут смотреть. Вернее смотреть могут не только лишь все, мало кто может это делать...</blockquote>
-</div>
-<a class="w3-btn w3-margin-top w3-margin-bottom" href="tryit81b5.html?filename=tryhtml_formatting_intro2" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <div class="w3-container xw3-light-grey">
+        <div class="w3-row w3-container">
+            <div class="w3-col m2 w3-container w3-center">
+            </div>
+            <div class="w3-col m8 w3-container w3-center">
+                <div id="hslresult" style="line-height:80px;"><p id="hslresulttext" style="font-size:120%;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace;">&nbsp;</p></div>
+            </div>
+            <div class="w3-col m2 w3-container w3-center">
+            </div>
+        </div>
+        <div class="w3-row w3-container">
+            <div class="w3-col m4 w3-container w3-center">
+                <p>HUE</p>
+                <input onchange="changeHsl()" oninput="changeHsl()" type="range" id="slideHue" name="slideHue" value="0" min="0" max="360">
+                <div id="valHue" style="font-size:120%;font-family:Consolas, 'Courier New', Courier, monospace;">0</div>
+            </div>
+            <div class="w3-col m4 w3-container w3-center">
+                <p>SATURATION</p>
+                <input onchange="changeHsl()" oninput="changeHsl()" type="range" id="slideSat" name="slideSat" value="100" min="0" max="100">
+                <div id="valSat" style="font-size:120%;font-family:Consolas, 'Courier New', Courier, monospace;">100%</div>
+            </div>
+            <div class="w3-col m4 w3-container w3-center">
+                <p>LIGHTNESS</p>
+                <input onchange="changeHsl()" oninput="changeHsl()" type="range" id="slideLight" name="slideLight" value="50" min="0" max="100">
+                <div id="valLight" style="font-size:120%;font-family:Consolas, 'Courier New', Courier, monospace;">50%</div>
+            </div>
+        </div>
+    </div>
 
-<h2 id="c1">HTML елемент &lt;q&gt; для коротких цитат</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;q&gt;</code> визначає короткі цитати.</p>
-<p>Браузери зазвичай вставляють лапки навколо елемента <code class="w3-codespan">&lt;q&gt;</code>.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;Мета WWF полягає в тому, щоб: &lt;q&gt;Побудувати майбутнє, де люди живуть в гармонії з природою.&lt;/q&gt;&lt;/p&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryitd9a6.html?filename=tryhtml_formatting_q" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="notranslate w3-white w3-container">
+            <div class="w3-row w3-center" style="line-height:80px;color:white;font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(240, 100%, 50%)">hsl(240, 100%, 50%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(300, 76%, 72%);">hsl(300, 76%, 72%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(39, 100%, 50%);">hsl(39, 100%, 50%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <a target="_blank" href="tryit.html?filename=tryhtml_color_hsl" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<h2 id="c2">HTML елемент &lt;blockquote&gt; для цитування</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;blockquote&gt;</code> визначає розділ, який цитується з іншого джерела.</p>
-<p>Браузери зазвичай відображають елементи <code class="w3-codespan">&lt;blockquote&gt;</code> з відступом.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;Ось цитата з сайту WWF:&lt;/p&gt;<br>&lt;blockquote cite=&quot;http://www.worldwildlife.org/who/index.html&quot;&gt;<br>
- Протягом 50 років WWF захищає майбутнє природи. <br> Всесвітня організація WWF, ведуча природоохоронна організація, працює в 100 країнах світу, її підтримують 1,2 мільйона чоловік в Сполучених Штатах і близькі до неї 5 мільйонів по всьому світу.<br>&lt;/blockquote&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryitcb56.html?filename=tryhtml_formatting_blockquote" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <h3>Saturation / Насиченість</h3>
+    <p>Насиченість можна описати як інтенсивність кольору.</p>
+    <p>100% - це чистий колір, без відтінків сірого.</p>
+    <p>50% - це 50% сірого, але ви все одно можете бачити колір.</p>
+    <p>0% - повністю сірий, колір ви більше не бачите.</p>
 
-<h2 id="c3">HTML елемент &lt;abbr&gt; для абревіатур</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;abbr&gt;</code> визначає абревіатуру або акронім.</p>
-<p>Маркування скорочень може дати корисну інформацію для браузерів, систем перекладу і пошукових систем.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;&lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; була створена в
- 1948.&lt;/p&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit1a23.html?filename=tryhtml_formatting_abbr" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="notranslate w3-white w3-container">
+            <div class="w3-row w3-center" style="line-height:80px;color:white;font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 80%, 50%)">hsl(0, 80%, 50%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 60%, 50%);">hsl(0, 60%, 50%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 40%, 50%);">hsl(0, 40%, 50%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 20%, 50%);">hsl(0, 20%, 50%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 0%, 50%);">hsl(0, 0%, 50%)</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <a target="_blank" href="tryit.html?filename=tryhtml_color_hsl_saturation" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<h2 id="c4">HTML елемент &lt;address&gt; для контактної інформації</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;address&gt;</code> визначає контактну інформацію (автор/власник) документа або статті.</p>
-<p>Елемент <code class="w3-codespan">&lt;address&gt;</code> зазвичай відображається курсивом. Більшість браузерів додають розрив рядка до і після елементу.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;address&gt;<br>Автор Саша Грэй.&lt;br&gt; <br>Відвідайте нас на:&lt;br&gt;<br>Example.com&lt;br&gt;<br>
- Box 564, Lalaland&lt;br&gt;<br>USA<br>&lt;/address&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit4e4b.html?filename=tryhtml_formatting_address" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <h3>Lightness / Легкість</h3>
+    <p>Легкість кольору можна описати як кількість світла, яке ви хочете надати кольору, де 0% означає відсутність світла (чорний), 50% означає 50% світла (ні темний, ні світлий), 100% означає повну світлоту (білий колір).</p>
 
-<h2 id="c5">HTML елемент &lt;cite&gt; для назви роботи</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;cite&gt;</code> визначає назву роботи.</p>
-<p>Браузери зазвичай відображають елемент <code class="w3-codespan">&lt;cite&gt;</code> курсивом.</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edvard Munch. Написано в 1893.&lt;/p&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit0e3d.html?filename=tryhtml_formatting_cite" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="notranslate w3-white w3-container">
+            <div class="w3-row w3-center" style="line-height:80px;color:white;font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 100%, 0%);">hsl(0, 100%, 0%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 100%, 25%)">hsl(0, 100%, 25%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 100%, 75%);">hsl(0, 100%, 75%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 100%, 90%);color:#555555">hsl(0, 100%, 90%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 100%, 100%);color:#555555;">hsl(0, 100%, 100%)</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <a target="_blank" href="tryit.html?filename=tryhtml_color_hsl_lightness" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<h2 id="c6">HTML елемент &lt;bdo&gt; для двонаправленого перевизначення</h2>
-<p>HTML елемент <code class="w3-codespan">&lt;bdo&gt;</code> визначає двунаправленное перевизначення.</p>
-<p>Елемент <code class="w3-codespan">&lt;bdo&gt;</code> використовується для перевизначення поточного напрямку тексту:</p>
-<div class="w3-example">
-<h3>Приклад</h3>
-<div class="w3-code notranslate htmlHigh">
- &lt;bdo dir=&quot;rtl&quot;&gt;Цей текст буде написаний справа наліво&lt;/bdo&gt;</div>
-<a class="w3-btn w3-margin-bottom" href="tryit8e4a.html?filename=tryhtml_formatting_bdo" target="_blank">Спробуйте самі &raquo;</a>
-</div>
-<hr>
+    <h2>Відтінки сірого</h2>
+    <p>Відтінки сірого часто визначають, встановлюючи для відтінку та насиченості значення 0, і регулюйте яскравість від 0% до 100%, щоб отримати темні / світлі відтінки:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="notranslate w3-white w3-container">
+            <div class="w3-row w3-center" style="line-height:80px;color:white;font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 0%, 20%);">hsl(0, 0%, 20%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 0%, 30%)">hsl(0, 0%, 30%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 0%, 40%);">hsl(0, 0%, 40%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 0%, 60%);">hsl(0, 0%, 60%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 0%, 70%);color:#555555">hsl(0, 0%, 70%)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsl(0, 0%, 90%);color:#555555;">hsl(0, 0%, 90%)</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <a target="_blank" href="tryit.html?filename=tryhtml_color_hsl_gray" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
 
-<h2 id="c7">HTML Вправи</h2>
-<form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_quotation_elements1" method="post" target="_blank">
-<h2 class="shadow-black-1">Перевірте себе за допомогою вправ</h2>
-<div class="exercisewindow">
-<h2>Вправа:</h2>
-<p>Використовуйте елемент HTML, щоб додати лапки навколо букв "cool".</p>
-<div class="exerciseprecontainer">
-&lt;p&gt;
-<br>
-I am so <input name="ex1" maxlength="3" style="width: 37px;">cool<input name="ex2" maxlength="4" style="width: 46px;">.
-<br>
-&lt;/p&gt;
-</div>
-<br>
-<button type="submit" class="w3-btn w3-margin-bottom">Відправити відповідь &raquo;</button>
-<p><a target="_blank" href="exercise35ad.html?filename=exercise_html_quotation_elements1">Почати вправу</a></p>
-</div>
-</form>
-<hr>
+    <h2>HSLA Значення кольору</h2>
+    <p>Значення кольору HSLA - це розширення значень кольору HSL за допомогою альфа-каналу, що визначає непрозорість кольору.</p>
+    <p>Значення кольору HSLA вказано з:</p>
+    <p style="font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">hsla(<em>hue,</em> <em>saturation</em>, <em>lightness, alpha</em>)</p>
+    <p>Параметр alpha - це число від 0,0 (повністю прозоре) до 1,0 (зовсім не прозоре):</p>
+    <p>Експериментуйте, змішуючи наведені нижче значення HSLA:</p>
 
-<h2 id="c8">HTML елементи цитати і цитування</h2>
-<table class="w3-table-all notranslate">
-<tr>
-<th style="width:20%">Тег</th>
-<th>Опис</th>
-</tr>
-<tr>
-<td><a href="../tags/tag_abbr.html">&lt;abbr&gt;</a></td>
-<td>Визначає абревіатуру або акронім</td>
-</tr>
-<tr>
-<td><a href="../tags/tag_address.html">&lt;address&gt;</a></td>
-<td>Визначає контактну інформацію для автора / власника документа</td>
-</tr>
-<tr>
-<td><a href="../tags/tag_bdo.html">&lt;bdo&gt;</a></td>
-<td>Визначає напрямок тексту</td>
-</tr>
-<tr>
-<td><a href="../tags/tag_blockquote.html">&lt;blockquote&gt;</a></td>
-<td>Визначає розділ, який цитується з іншого джерела</td>
-</tr>
-  <tr>
-<td><a href="../tags/tag_cite.html">&lt;cite&gt;</a></td>
-<td>Визначає назву твору</td>
-  </tr>
-<tr>
-<td><a href="../tags/tag_q.html">&lt;q&gt;</a></td>
-<td>Визначає коротку вбудовану цитату</td>
-</tr>
-</table>
-<div class="w3-note w3-panel">
-  <p>Для отримання повного списку всіх доступних тегів HTML, відвідайте <a href="../tags/index.html">HTML Довідник тегів</a>.</p>
-</div>
+    <div class="w3-container xw3-light-grey">
+        <div class="w3-row w3-container">
+            <div class="w3-col m2 w3-container w3-center">
+            </div>
+            <div class="w3-col m8 w3-container w3-center">
+                <div id="hslaresult" style="line-height:80px;"><p id="hslaresulttext" style="font-size:120%;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace;">&nbsp;</p></div>
+            </div>
+            <div class="w3-col m2 w3-container w3-center">
+            </div>
+        </div>
+        <div class="w3-row w3-container">
+            <div class="w3-col m3 w3-container w3-center">
+                <p>HUE</p>
+                <input onchange="changeHsla()" oninput="changeHsla()" type="range" id="slideHueA" name="slideHueA" value="0" min="0" max="360">
+                <div id="valHueA" style="font-size:120%;font-family:Consolas, 'Courier New', Courier, monospace;">0</div>
+            </div>
+            <div class="w3-col m3 w3-container w3-center">
+                <p>SATURATION</p>
+                <input onchange="changeHsla()" oninput="changeHsla()" type="range" id="slideSatA" name="slideSatA" value="100" min="0" max="100">
+                <div id="valSatA" style="font-size:120%;font-family:Consolas, 'Courier New', Courier, monospace;">100%</div>
+            </div>
+            <div class="w3-col m3 w3-container w3-center">
+                <p>LIGHTNESS</p>
+                <input onchange="changeHsla()" oninput="changeHsla()" type="range" id="slideLightA" name="slideLightA" value="50" min="0" max="100">
+                <div id="valLightA" style="font-size:120%;font-family:Consolas, 'Courier New', Courier, monospace;">50%</div>
+            </div>
+            <div class="w3-col m3 w3-container w3-center">
+                <p>ALPHA</p>
+                <input onchange="changeHsla()" oninput="changeHsla()" type="range" id="slideHslAlpha" name="slideHslAlpha" value="5" min="0" max="10">
+                <div id="valHslAlpha" style="font-size:120%;font-family:Consolas, 'Courier New', Courier, monospace;">0.5</div>
+            </div>
+        </div>
+    </div>
 
-<hr>
-<div class="w3-clear nextprev">
-<a class="w3-left w3-btn" href="html_formatting.html">&#10094; Prev</a>
-<a class="w3-right w3-btn" href="html_comments.html">Next &#10095;</a>
-</div>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="notranslate w3-white">
+            <div class="w3-row w3-center"
+                 style="
+    line-height:80px;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    font-family:Consolas, 'Courier New', Courier, monospace;
+    background-image:url(img_bg_eyeicon.png), url(img_bg_transparent.gif);
+    background-repeat:no-repeat, repeat;
+    background-position:center, top left;
+    background-color:#ffffff;">
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsla(9, 100%, 64%, 0);color:#555555;">hsla(9, 100%, 64%, 0)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsla(9, 100%, 64%, 0.2);color:#555555;">hsla(9, 100%, 64%, 0.2)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsla(9, 100%, 64%, 0.4);">hsla(9, 100%, 64%, 0.4)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsla(9, 100%, 64%, 0.6);">hsla(9, 100%, 64%, 0.6)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsla(9, 100%, 64%, 0.8);">hsla(9, 100%, 64%, 0.8)</div>
+                </div>
+                <div class="w3-col m6 w3-padding">
+                    <div style="background-color:hsla(9, 100%, 64%, 1);">hsla(9, 100%, 64%, 1)</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <a target="_blank" href="tryit.html?filename=tryhtml_color_hsla" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
 
+    <script>
+        //changeRed(255)
+        //changeGreen(0)
+        //changeBlue(0)
+        changeHsl("h");
+        function changeHsl(x) {
+            var col, h, s, l;
+            h = document.getElementById("slideHue").value;
+            s = document.getElementById("slideSat").value;
+            l = document.getElementById("slideLight").value;
+            col = w3color("hsl(" + h + "," + s/100 + "," + l/100 + ")");
+            document.getElementById('valHue').innerHTML = col.toHsl().h;
+            document.getElementById('valSat').innerHTML = Math.round(col.toHsl().s * 100) + "%";
+            document.getElementById('valLight').innerHTML = Math.round(col.toHsl().l * 100) + "%";
+            document.getElementById('hslresult').style.backgroundColor = col.toHslString();
+            document.getElementById('hslresulttext').innerHTML = col.toHslString();
+            if (col.isDark(150)) {
+                document.getElementById('hslresulttext').style.color = "#ffffff";
+            } else {
+                document.getElementById('hslresulttext').style.color = "#1f2d3d";
+            }
+        }
+        changeHsla("h");
+        function changeHsla(x) {
+            var col, h, s, l, a;
+            h = document.getElementById("slideHueA").value;
+            s = document.getElementById("slideSatA").value;
+            l = document.getElementById("slideLightA").value;
+            a = document.getElementById("slideHslAlpha").value/10;
+            col = w3color("hsla(" + h + "," + s/100 + "," + l/100 + "," + a + ")");
+            document.getElementById('valHueA').innerHTML = col.toHsl().h;
+            document.getElementById('valSatA').innerHTML = Math.round(col.toHsl().s * 100) + "%";
+            document.getElementById('valLightA').innerHTML = Math.round(col.toHsl().l * 100) + "%";
+            document.getElementById('valHslAlpha').innerHTML = col.toHsl().a;
+            document.getElementById('hslaresult').style.backgroundColor = col.toHslaString();
+            document.getElementById('hslaresulttext').innerHTML = col.toHslaString();
+            if (col.isDark(150) && a > 0.2) {
+                document.getElementById('hslaresulttext').style.color = "#ffffff";
+            } else {
+                document.getElementById('hslaresulttext').style.color = "#1f2d3d";
+            }
+        }
+    </script>
+
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="html_colors_hex.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="html_css.html">Next &#10095;</a>
+    </div>
 </article>
 
 </div>
