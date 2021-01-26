@@ -1,0 +1,113 @@
+/*Exercise Style #2 - Html Tutorial*/
+#assignmentNotCorrect, #assignmentCorrect {
+  display:none;
+  width:100%;
+  height:100%;
+  position:absolute;
+  background-color:rgba(242, 222, 222, 0.99);
+  padding:50px;
+  z-index:1;
+  color: #b94a48;
+  border: 1px solid #eed3d7;
+  cursor:pointer;
+}
+
+#assignmentCorrect {
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+}
+
+#assignmentcontainer, #showcorrectanswercontainer {
+  background-color:#f1f1f1;
+  padding:30px;
+  padding-top:0;
+  padding-bottom:90px;
+  min-height:250px;
+  font-family:Consolas,"Courier New", Courier, monospace;
+  font-size:120%;
+  line-height:1.7em;
+}
+
+#showcorrectanswercontainer {
+  display:none;
+}
+.editablesection {
+  background-color:#ffffff;
+  display:inline-block;
+  border:none;
+  padding:0;
+  outline-offset:0;
+  height:1.2em;
+}
+.editablesection:focus {
+  outline:2px solid #ffffff;
+}
+
+.meassureInputWidth {
+  display:inline-block;
+  position:absolute;
+}
+
+#answerbutton:focus {
+  box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+}
+
+.w3-codespan {
+  color:#000000;
+}
+
+[id^="correctcode"] {
+  display:none;
+}
+
+#showcorrectanswercontainer input {
+  color:mediumblue;
+}
+
+.phonebr {
+  display:none;
+}
+
+.showanswerbutton, .hideanswerbutton {
+  background-color:#2196F3!important;
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  padding:20px;
+}
+
+@media screen and (max-width: 899px) {
+  #answerbuttoncontainer {
+    position:fixed;
+    bottom:0;
+    background-color:rgba(85,85,85,0.9);
+    padding:20px;
+    width:100%;
+    left:0;
+  }
+  #assignmentcontainer, #showcorrectanswercontainer {
+    min-height:150px;
+    padding-bottom:60px;
+    margin-left:-20px;
+    margin-right:-20px;
+  }
+  #assignmentNotCorrect, #assignmentCorrect {
+    padding:20px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .phonebr {
+    display:initial;
+  }
+}
+
+@media (max-width:899px){.hide-from-small{display:none!important}}
+@media (min-width:900px) {.hide-from-large{display:none!important}}
+@media only screen and (max-device-width: 480px) {
+  #assignmentcontainer, #showcorrectanswercontainer {
+    font-family:'Source Code Pro',Menlo,Consolas,"Courier New", Courier, monospace;
+  }
+  #assignmentcontainer input, #showcorrectanswercontainer input {padding:0;height:1.5em}
+}
