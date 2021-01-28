@@ -1,0 +1,1715 @@
+﻿<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<link rel='stylesheet' href='../cdn/font-awesome/4.6.3/css/font-awesome.min.css'>
+<link href='../styles/howto.css' rel='stylesheet'>
+<script src='../scripts/howto.js'></script>
+<style>
+    .searchinput {
+        background-image: url('../images/searchicon.png');
+        background-position: 8px 6px;
+        background-repeat: no-repeat;
+        width: 91%;
+        font-size: 14px;
+        padding: 6px 6px 6px 40px;
+        border: 1px solid #ddd;
+        margin: 0 0 20px 10px;
+    }
+</style>
+<script>
+    function filterContent(elmnt) {
+        var x, i, val, show, showh2, showbr;
+        val = elmnt.value;
+        x = document.getElementById("leftmenuinnerinner").getElementsByTagName("*");
+        for (i = 1; i < x.length; i++) {
+            if (x[i].tagName == "H2") {
+                if (showh2) {
+                    if (show == false) {
+                        showh2.style.display = "none";
+                    } else {
+                        showh2.style.display = "block";
+                    }
+                }
+                show = false;
+                showh2 = x[i];
+            }
+            if (x[i].tagName == "BR") {
+                if (showbr) {
+                    if (show == false) {
+                        showbr.style.display = "none";
+                    } else {
+                        showbr.style.display = "block";
+                    }
+                }
+                showbr = x[i];
+            }
+            if (x[i].tagName == "A") {
+                if (x[i].innerHTML.toUpperCase().indexOf(val.toUpperCase()) == -1) {
+                    x[i].style.display = "none";
+                } else {
+                    x[i].style.display = "block";
+                    show = true;
+                }
+            }
+            if (showh2) {
+                if (show == false) {
+                    showh2.style.display = "none";
+                } else {
+                    showh2.style.display = "block";
+                }
+            }
+        }
+    }
+</script>
+<title>Підручник - Як зробити? HTML, CSS, JavaScript. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Готові рішення для сайта. Сніпети. Приклади коду. Як зробити ефекти за допомогою HTML, CSS, JavaScript? Уроки для новачків. W3Schools українською'>
+
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ
+        ДЛЯ ВЕБ-РОЗРОБНИКІВ
+    </div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;'
+     id='googleSearch'>
+    <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:ykn8f9viuuv"></script>
+    <div class="gcse-search"></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style="overflow:auto;">
+        <div class="w3-bar w3-left" style="width:100%;overflow:hidden;height:44px">
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);'
+               onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class="w3-bar-item w3-button" href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class="w3-bar-item w3-button" href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class="w3-bar-item w3-button" href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class="w3-bar-item w3-button" href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class="w3-bar-item w3-button" href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class="w3-bar-item w3-button" href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'
+               title='Bootstrap Підручник'>BOOTSTRAP</a>
+            <a class="w3-bar-item w3-button" href='../howto/index.html' title='How To'>ЯК ЗРОБИТИ</a>
+            <a class="w3-bar-item w3-button" href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class="w3-bar-item w3-button" href='../jquery/index.html' title='jQuery Підручник'>JQUERY</a>
+            <a class="w3-bar-item w3-button" href='../xml/index.html' title='XML Підручник'>XML</a>
+            <a class="w3-bar-item w3-button" href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class="w3-bar-item w3-button" id='topnavbtn_tutorials' href='javascript:void(0);'
+               onclick='w3_open_nav("tutorials")' title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i
+                        class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);'
+               onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);'
+               onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
+            <a class="w3-bar-item w3-button w3-right" target="_blank"
+               href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp'
+               title="Скачати книги безкоштовно з Google-диску">КНИГИ</a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);'
+               onclick='w3_open_nav("references")' title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i
+                        class='fa fa-caret-up' style='display:none'></i></a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);'
+               onclick='w3_open_nav("exercises")' title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i
+                        class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right'
+                  style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class="w3-bar-item w3-button" href='../html/index.html'>Вивчити HTML</a>
+                    <a class="w3-bar-item w3-button" href='../css/index.html'>Вивчити CSS</a>
+                    <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class="w3-bar-item w3-button" href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class="w3-bar-item w3-button" href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class="w3-bar-item w3-button" href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class="w3-bar-item w3-button" href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class="w3-bar-item w3-button" href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class="w3-bar-item w3-button" href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class="w3-bar-item w3-button" href='index.html'>Вивчити Як зробити</a>
+                    <a class="w3-bar-item w3-button" href='../sass/index.html'>Вивчити Sass</a>
+                    <div class="w3-hide-large w3-hide-small">
+                        <h3>XML</h3>
+                        <a class="w3-bar-item w3-button" href='../xml/index.html'>Вивчити XML</a>
+                        <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Вивчити XML DOM</a>
+                        <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class="w3-bar-item w3-button" href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class="w3-bar-item w3-button" href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class="w3-bar-item w3-button" href='../react/index.html'>Вивчити React</a>
+                    <a class="w3-bar-item w3-button" href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class="w3-bar-item w3-button" href="../js/js_json_intro.html">Вивчити JSON</a>
+                    <a class="w3-bar-item w3-button" href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Выучить AppML</a>
+                    <a class="w3-bar-item w3-button" href="../w3js/index.html">Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class="w3-bar-item w3-button" href='../python/index.html'>Вивчити Python</a>
+                    <a class="w3-bar-item w3-button" href='../java/index.html'>Вивчити Java</a>
+                    <a class="w3-bar-item w3-button" href='../cpp/index.html'>Вивчити C++</a>
+                    <a class="w3-bar-item w3-button" href='../cs/index.html'>Вивчити C#</a>
+                    <a class="w3-bar-item w3-button" href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне
+                        навчання</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Наука про дані</a>
+                    <div class="w3-hide-small"><br class="w3-hide-medium w3_hide-small"><br
+                                class="w3-hide-medium w3_hide-small"></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class="w3-bar-item w3-button" href='../sql/index.html'>Вивчити SQL</a>
+                    <a class="w3-bar-item w3-button" href='../php/index.html'>Вивчити PHP</a>
+                    <a class="w3-bar-item w3-button" href='../asp/index.html'>Вивчити ASP</a>
+                    <a class="w3-bar-item w3-button" href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class="w3-bar-item w3-button" href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class="w3-bar-item w3-button" href="../w3css/w3css_templates.html">Веб-шаблони</a>
+                    <a class="w3-bar-item w3-button" href='../browsers/index.html'>Веб-статистика</a>
+                    <a class="w3-bar-item w3-button" href='../cert/index.html'>Веб-сертифікати</a>
+                    <a class="w3-bar-item w3-button" href='../tryit/index.html'>Веб-редактор</a>
+                    <a class="w3-bar-item w3-button" href="../whatis/index.html">Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href="https://www.w3schools.com/typingspeed/default.html"
+                       target="_blank" rel="nofollow">Перевірити швидкість друку</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>XML</h3>
+                    <a class="w3-bar-item w3-button" href='../xml/index.html'>Вивчити XML</a>
+                    <a class="w3-bar-item w3-button" href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class="w3-bar-item w3-button" href="../xml/dom_intro.html">Вивчити XML DOM</a>
+                    <a class="w3-bar-item w3-button" href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class="w3-bar-item w3-button" href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class="w3-bar-item w3-button" href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class="w3-bar-item w3-button" href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class="w3-bar-item w3-button" href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right'
+                  style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class="w3-bar-item w3-button" href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка
+                        браузерами</a>
+                    <a class="w3-bar-item w3-button" href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class="w3-bar-item w3-button" href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class="w3-bar-item w3-button" href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class="w3-bar-item w3-button" href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class="w3-bar-item w3-button" href='../graphics/google_maps_reference.html'>Google-карти
+                        Довідник</a>
+                    <h3>CSS</h3>
+                    <a class="w3-bar-item w3-button" href='../cssref/index.html'>CSS Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../cssref/css3_browsersupport.html'>CSS Підтримка
+                        браузерами</a>
+                    <a class="w3-bar-item w3-button" href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3
+                        Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4
+                        Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class="w3-bar-item w3-button" href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class="w3-bar-item w3-button" href="../w3js/w3js_references.html">W3.JS Довідник</a>
+                    <h3>Програмування</h3>
+                    <a class="w3-bar-item w3-button" href='../python/python_reference.html'>Python Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class="w3-bar-item w3-button" href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class="w3-bar-item w3-button" href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class="w3-bar-item w3-button" href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class="w3-bar-item w3-button" href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class="w3-bar-item w3-button" href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+                    <a class="w3-bar-item w3-button" href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class="w3-bar-item w3-button" href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class="w3-bar-item w3-button" href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class="w3-bar-item w3-button" href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right'
+                  style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class="w3-bar-item w3-button" href="../html/html_exercises.html">HTML Вправи</a>
+                    <a class="w3-bar-item w3-button" href="../css/css_exercises.html">CSS Вправи</a>
+                    <a class="w3-bar-item w3-button" href="../js/js_exercises.html">JavaScript Вправи</a>
+                    <a class="w3-bar-item w3-button" href="../sql/sql_exercises.html">SQL Вправи</a>
+                    <a class="w3-bar-item w3-button" href="../php/php_exercises.html">PHP Вправи</a>
+                    <a class="w3-bar-item w3-button" href="../python/python_exercises.html">Python Вправи</a>
+                    <a class="w3-bar-item w3-button" href="../jquery/jquery_exercises.html">jQuery Вправи</a>
+                    <a class="w3-bar-item w3-button" href="../bootstrap/bootstrap_exercises.html">Bootstrap Вправи</a>
+                    <a class="w3-bar-item w3-button" href="../java/java_exercises.html">Java Вправи</a>
+                    <a class="w3-bar-item w3-button" href="../cpp/cpp_exercises.html">C++ Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class="w3-bar-item w3-button" href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class="w3-bar-item w3-button" href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class="w3-bar-item w3-button" href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class="w3-bar-item w3-button" href="../sql/sql_quiz.html" target="_top">SQL Вікторина</a>
+                    <a class="w3-bar-item w3-button" href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class="w3-bar-item w3-button" href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class="w3-bar-item w3-button" href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class="w3-bar-item w3-button" href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap
+                        Вікторина</a>
+                    <a class="w3-bar-item w3-button" href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class="w3-bar-item w3-button" href="../cert/cert_html_new.html" target="_top">HTML Сертифікат</a>
+                    <a class="w3-bar-item w3-button" href="../cert/cert_css.html" target="_top">CSS Сертифікат</a>
+                    <a class="w3-bar-item w3-button" href="../cert/cert_javascript.html" target="_top">JavaScript
+                        Сертифікат</a>
+                    <a class="w3-bar-item w3-button" href="../cert/cert_sql.html" target="_top">SQL Сертифікат</a>
+                    <a class="w3-bar-item w3-button" href="../cert/cert_php.html" target="_top">PHP Сертифікат</a>
+                    <a class="w3-bar-item w3-button" href="../cert/cert_python.html" target="_top">Python Сертифікат</a>
+                    <a class="w3-bar-item w3-button" href="../cert/cert_jquery.html" target="_top">jQuery Сертифікат</a>
+                    <a class="w3-bar-item w3-button" href="../cert/cert_bootstrap.html" target="_top">Bootstrap
+                        Сертифікат</a>
+                    <a class="w3-bar-item w3-button" href="../cert/cert_xml.html" target="_top">XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu-->
+<!--Left menu howto-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <nav>
+      <!--<a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+            <br class="w3-hide-large">
+            <input class="searchinput" placeholder="Поиск..." oninput="filterContent(this)">
+            <h2 class="left">КАК СДЕЛАТЬ?..</h2>
+            <a target="_top" href="index.html">Главная</a>
+            <br>
+            <h2>Меню</h2>
+            <a target="_top" href="howto_css_icon_bar.html">Навбар с иконками</a>
+            <a target="_top" href="howto_css_menu_icon.html">Меню с иконками</a>
+            <a target="_top" href="howto_js_accordion.html">Меню аккордеон</a>
+            <a target="_top" href="howto_js_tabs.html">Вкладки</a>
+            <a target="_top" href="howto_js_vertical_tabs.html">Вертикальные вкладки</a>
+            <a target="_top" href="howto_js_tab_header.html">Заголовки вкладок</a>
+            <a target="_top" href="howto_js_full_page_tabs.html">Вкладки полной страницы</a>
+            <a target="_top" href="howto_js_hover_tabs.html">Вкладки при наведении</a>
+            <a target="_top" href="howto_js_topnav.html">Верхний навбар</a>
+            <a target="_top" href="howto_js_topnav_responsive.html">Адаптивный верхний навбар</a>
+            <a target="_top" href="howto_css_navbar_icon.html">Навбар с иконками</a>
+            <a target="_top" href="howto_js_search_menu.html">Меню поиска</a>
+            <a target="_top" href="howto_css_searchbar.html">Панель поиска</a>
+            <a target="_top" href="howto_css_fixed_sidebar.html">Фиксированный сайдбар</a>
+            <a target="_top" href="howto_js_sidenav.html">Боковая навигация</a>
+            <a target="_top" href="howto_css_sidebar_responsive.html">Адаптивный сайдбар</a>
+            <a target="_top" href="howto_js_fullscreen_overlay.html">Полноэкранный навбар</a>
+            <a target="_top" href="howto_js_off-canvas.html">Off-Canvas меню</a>
+            <a target="_top" href="howto_css_sidenav_buttons.html">Кнопки навбара при наведении</a>
+            <a target="_top" href="howto_css_sidebar_icons.html">Сайдбар с иконками</a>
+            <a target="_top" href="howto_css_menu_horizontal_scroll.html">Горизонтальное скролл-меню</a>
+            <a target="_top" href="howto_css_vertical_menu.html">Вертикальное меню</a>
+            <a target="_top" href="howto_css_bottom_nav.html">Нижняя навигация</a>
+            <a target="_top" href="howto_js_bottom_nav_responsive.html">Адаптивная нижняя навигация</a>
+            <a target="_top" href="howto_css_navbar_border.html">Нижняя граница навигац. ссылок</a>
+            <a target="_top" href="howto_css_topnav_right.html">Выровненные справа ссылки меню</a>
+            <a target="_top" href="howto_css_topnav_centered.html">Ссылки меню по центру</a>
+            <a target="_top" href="howto_css_topnav_equal_width.html">Ссылки меню равной ширины</a>
+            <a target="_top" href="howto_css_fixed_menu.html">Фиксированное меню</a>
+            <a target="_top" href="howto_js_navbar_slide.html">Скользящий навбар на прокрутке</a>
+            <a target="_top" href="howto_js_navbar_hide_scroll.html">Скрыть навбар на прокрутке</a>
+            <a target="_top" href="howto_js_navbar_shrink_scroll.html">Сжать навбар на прокрутке</a>
+            <a target="_top" href="howto_js_navbar_sticky.html">Липкий навбар</a>
+            <a target="_top" href="howto_css_navbar_image.html">Навбар на изображении</a>
+            <a target="_top" href="howto_css_dropdown.html">Выпадающее меню при наведении</a>
+            <a target="_top" href="howto_js_dropdown.html">Выпадающее меню при клике</a>
+            <a target="_top" href="howto_js_cascading_dropdown.html">Каскадный выпадающий список</a>
+            <a target="_top" href="howto_css_dropdown_navbar.html">Выпадающее меню в верхнем навбаре</a>
+            <a target="_top" href="howto_js_dropdown_sidenav.html">Выпадающее меню в боковом навбаре</a>
+            <a target="_top" href="howto_js_responsive_navbar_dropdown.html">Адаптивный выпадающий навбар</a>
+            <a target="_top" href="howto_css_subnav.html">Меню субнавигации</a>
+            <a target="_top" href="howto_css_dropup.html">Выпадающее меню вверх</a>
+            <a target="_top" href="howto_css_mega_menu.html">Мега меню</a>
+            <a target="_top" href="howto_js_mobile_navbar.html">Мобильное меню</a>
+            <a target="_top" href="howto_js_curtain_menu.html">Меню занавес</a>
+            <a target="_top" href="howto_js_collapse_sidebar.html">Свёрнутый сайдбар</a>
+            <a target="_top" href="howto_js_collapse_sidepanel.html">Свёрнутый боковой сайдбар</a>
+            <a target="_top" href="howto_css_pagination.html">Пагинация</a>
+            <a target="_top" href="howto_css_breadcrumbs.html">Хлебные крошки</a>
+            <a target="_top" href="howto_css_button_group.html">Группа кнопок</a>
+            <a target="_top" href="howto_css_button_group_vertical.html">Вертикальная группа кнопок</a>
+            <a target="_top" href="howto_css_sticky_social_bar.html">Липкая соц.панель</a>
+            <a target="_top" href="howto_css_pill_nav.html">Таблетки навигации</a>
+            <a target="_top" href="howto_css_responsive_header.html">Адаптивный заголовок</a>
+            <br>
+
+            <h2>Изображения</h2>
+            <a target="_top" href="howto_js_slideshow.html">Слайдшоу</a>
+            <a target="_top" href="howto_js_slideshow_gallery.html">Галерея слайдшоу</a>
+            <a target="_top" href="howto_css_modal_images.html">Модальные изображения</a>
+            <a target="_top" href="howto_js_lightbox.html">Лайтбокс</a>
+            <a target="_top" href="howto_css_image_grid_responsive.html">Адаптивная сетка изображения</a>
+            <a target="_top" href="howto_js_image_grid.html">Сетка изображения</a>
+            <a target="_top" href="howto_js_tab_img_gallery.html">Галерея изображений с вкладками</a>
+            <a target="_top" href="howto_css_image_overlay.html">Оверлей при наведении курсора</a>
+            <a target="_top" href="howto_css_image_overlay_slide.html">Слайд наложенного изображения</a>
+            <a target="_top" href="howto_css_image_overlay_zoom.html">Zoom наложенного изображения</a>
+            <a target="_top" href="howto_css_image_overlay_title.html">Title наложенного изображения</a>
+            <a target="_top" href="howto_css_image_overlay_icon.html">Иконка наложенного изображения</a>
+            <a target="_top" href="howto_css_image_effects.html">Эффекты изображения</a>
+            <a target="_top" href="howto_css_image_bw.html">Черно-белое изображение</a>
+            <a target="_top" href="howto_css_image_text.html">Позиция текста над изображением</a>
+            <a target="_top" href="howto_css_image_text_blocks.html">Текстовые блоки над изображением</a>
+            <a target="_top" href="howto_css_image_transparent.html">Изображение с прозрачным текстом</a>
+            <a target="_top" href="howto_css_full_page.html">Фоновое изображение на всю страницу</a>
+            <a target="_top" href="howto_css_form_on_image.html">Форма на изображении</a>
+            <a target="_top" href="howto_css_hero_image.html">Имидж героя</a>
+            <a target="_top" href="howto_css_blurred_background.html">Размытое фоновое изображение</a>
+            <a target="_top" href="howto_css_bg_change_scroll.html">Изменение фона при прокрутке</a>
+            <a target="_top" href="howto_css_images_side_by_side.html">Изображения друг за другом</a>
+            <a target="_top" href="howto_css_rounded_images.html">Округлые изображения</a>
+            <a target="_top" href="howto_css_image_avatar.html">Изображения аватары</a>
+            <a target="_top" href="howto_css_image_responsive.html">Адаптивные изображения</a>
+            <a target="_top" href="howto_css_image_center.html">Центрирование изображений</a>
+            <a target="_top" href="howto_css_thumbnail.html">Эскизы изображений</a>
+            <a target="_top" href="howto_css_border_image.html">Граница на изображении</a>
+            <a target="_top" href="howto_css_team.html">Представление команды на странице</a>
+            <a target="_top" href="howto_css_image_sticky.html">Липкое изображение</a>
+            <a target="_top" href="howto_css_flip_image.html">Отразить изображение</a>
+            <a target="_top" href="howto_css_shake_image.html">Встряхнуть изображение</a>
+            <a target="_top" href="howto_css_portfolio_gallery.html">Галерея портфолио</a>
+            <a target="_top" href="howto_js_portfolio_filter.html">Портфолио с фильтрацией</a>
+            <a target="_top" href="howto_js_image_zoom.html">Zoom изображения</a>
+            <a target="_top" href="howto_js_image_magnifier_glass.html">Увеличительное стекло на изображении</a>
+            <a target="_top" href="howto_js_image_comparison.html">Слайдер сравнения изображений</a>
+            <br>
+
+            <h2>Кнопки</h2>
+            <a target="_top" href="howto_css_alert_buttons.html">Кнопки оповещения</a>
+            <a target="_top" href="howto_css_outline_buttons.html">Контурные кнопки</a>
+            <a target="_top" href="howto_css_button_split.html">Сплит кнопки</a>
+            <a target="_top" href="howto_css_animate_buttons.html">Анимированные кнопки</a>
+            <a target="_top" href="howto_css_fading_buttons.html">Затухающие кнопки</a>
+            <a target="_top" href="howto_css_button_on_image.html">Кнопка на изображении</a>
+            <a target="_top" href="howto_css_social_media_buttons.html">Социальные медиа кнопки</a>
+            <a target="_top" href="howto_js_read_more.html">Читать больше - Читать меньше</a>
+            <a target="_top" href="howto_css_loading_buttons.html">Кнопки загрузки</a>
+            <a target="_top" href="howto_css_download_button.html">Кнопки скачивания</a>
+            <a target="_top" href="howto_css_pill_button.html">Кнопки таблетки</a>
+            <a target="_top" href="howto_css_notification_button.html">Кнопка уведомления</a>
+            <a target="_top" href="howto_css_icon_buttons.html">Кнопки с иконками</a>
+            <a target="_top" href="howto_css_next_prev.html">Кнопки next/prev</a>
+            <a target="_top" href="howto_css_more_button.html">Кнопка 'больше' в навбаре</a>
+            <a target="_top" href="howto_css_block_buttons.html">Кнопки блока</a>
+            <a target="_top" href="howto_css_text_buttons.html">Кнопки текста</a>
+            <a target="_top" href="howto_css_round_buttons.html">Округлые кнопки</a>
+            <a target="_top" href="howto_js_scroll_to_top.html">Кнопка быстрой прокрутки вверх</a>
+            <br>
+
+            <h2>Формы</h2>
+            <a target="_top" href="howto_css_login_form.html">Форма входа</a>
+            <a target="_top" href="howto_css_signup_form.html">Форма регистрации</a>
+            <a target="_top" href="howto_css_checkout_form.html">Форма оформления заказа</a>
+            <a target="_top" href="howto_css_contact_form.html">Контактная форма</a>
+            <a target="_top" href="howto_css_social_login.html">Форма входа в соцсеть</a>
+            <a target="_top" href="howto_css_register_form.html">Форма регистрации</a>
+            <a target="_top" href="howto_css_form_icon.html">Форма с иконками</a>
+            <a target="_top" href="howto_css_newsletter.html">Новостная рассылка</a>
+            <a target="_top" href="howto_css_stacked_form.html">Сложенная форма</a>
+            <a target="_top" href="howto_css_responsive_form.html">Адаптивная форма</a>
+            <a target="_top" href="howto_js_popup_form.html">Popup форма</a>
+            <a target="_top" href="howto_css_inline_form.html">Встроенная форма</a>
+            <a target="_top" href="howto_html_clear_input.html">Очистить поле ввода</a>
+            <a target="_top" href="howto_css_hide_arrow_number.html">Скрыть числовые стрелки</a>
+            <a target="_top" href="howto_js_copy_clipboard.html">Копировать текст в буфер обмена</a>
+            <a target="_top" href="howto_css_animated_search.html">Анимированный поиск</a>
+            <a target="_top" href="howto_css_search_button.html">Кнопка поиска</a>
+            <a target="_top" href="howto_css_fullscreen_search.html">Полноэкранный поиск</a>
+            <a target="_top" href="howto_css_input_navbar.html">Поле ввода в навбаре</a>
+            <a target="_top" href="howto_css_login_form_navbar.html">Форма входа в навбаре</a>
+            <a target="_top" href="howto_css_custom_checkbox.html">Пользовательский Checkbox/Radio</a>
+            <a target="_top" href="howto_custom_select.html">Пользовательский выбор</a>
+            <a target="_top" href="howto_css_switch.html">Кнопка-переключатель</a>
+            <a target="_top" href="howto_js_display_checkbox_text.html">Выбрать Checkbox</a>
+            <a target="_top" href="howto_js_detect_capslock.html">Обнаружение Caps Lock</a>
+            <a target="_top" href="howto_js_trigger_button_enter.html">Триггер-кнопка на Вводе</a>
+            <a target="_top" href="howto_js_password_validation.html">Проверка пароля</a>
+            <a target="_top" href="howto_js_toggle_password.html">Переключить видимость пароля</a>
+            <a target="_top" href="howto_js_form_steps.html">Многошаговая форма</a>
+            <a target="_top" href="howto_js_autocomplete.html">Автозаполнение</a>
+            <a target="_top" href="howto_html_autocomplete_off.html">Отключить автозаполнение</a>
+            <a target="_top" href="howto_html_spellcheck_disable.html">Отключить проверку орфографии</a>
+            <a target="_top" href="howto_html_file_upload_button.html">Кнопка загрузки файла</a>
+            <a target="_top" href="howto_js_validation_empty_input.html">Проверка пустого ввода</a>
+            <br>
+
+            <h2>Фильтры</h2>
+            <a target="_top" href="howto_js_filter_lists.html">Список фильтров</a>
+            <a target="_top" href="howto_js_filter_table.html">Таблица фильтров</a>
+            <a target="_top" href="howto_js_filter_elements.html">Элементы фильтров</a>
+            <a target="_top" href="howto_js_filter_dropdown.html">Выпадающий фильтр</a>
+            <a target="_top" href="howto_js_sort_list.html">Сортировать список</a>
+            <a target="_top" href="howto_js_sort_table.html">Сортировать таблицу</a>
+            <br>
+
+            <h2>Таблицы</h2>
+            <a target="_top" href="howto_css_table_zebra.html">Таблица в полоску зебры</a>
+            <a target="_top" href="howto_css_table_center.html">Таблица по центру</a>
+            <a target="_top" href="howto_css_table_full_width.html">Таблица во всю ширину</a>
+            <a target="_top" href="howto_css_table_side_by_side.html">Таблицы рядом</a>
+            <a target="_top" href="howto_css_table_responsive.html">Адаптивный таблицы</a>
+            <a target="_top" href="howto_css_comparison_table.html">Сравнительная таблица</a>
+            <br>
+
+            <h2>Разное</h2>
+            <a target="_top" href="howto_css_fullscreen_video.html">Полноэкранное видео</a>
+            <a target="_top" href="howto_css_modals.html">Модальные боксы</a>
+            <a target="_top" href="howto_css_delete_modal.html">Модал удаления</a>
+            <a target="_top" href="howto_css_timeline.html">Временная шкала</a>
+            <a target="_top" href="howto_js_scroll_indicator.html">Индикатор прокрутки</a>
+            <a target="_top" href="howto_js_progressbar.html">Прогресс бары</a>
+            <a target="_top" href="howto_css_skill_bar.html">Скилл бары</a>
+            <a target="_top" href="howto_js_rangeslider.html">Ползунки диапазона</a>
+            <a target="_top" href="howto_css_tooltip.html">Всплывающие подсказки</a>
+            <a target="_top" href="howto_css_display_element_hover.html">Отображение элемента при наведении</a>
+            <a target="_top" href="howto_js_popup.html">Pop-апы</a>
+            <a target="_top" href="howto_js_collapsible.html">Складывающийся бар</a>
+            <a target="_top" href="howto_css_calendar.html">Календарь</a>
+            <a target="_top" href="howto_html_include.html">HTML вставки</a>
+            <a target="_top" href="howto_js_todolist.html">Список дел</a>
+            <a target="_top" href="howto_css_loader.html">Загрузки</a>
+            <a target="_top" href="howto_css_star_rating.html">Звёздный рейтинг</a>
+            <a target="_top" href="howto_css_user_rating.html">Рейтинг пользователя</a>
+            <a target="_top" href="howto_css_overlay.html">Эффект наложения</a>
+            <a target="_top" href="howto_css_contact_chips.html">Контактные фишки</a>
+            <a target="_top" href="howto_css_cards.html">Карточки</a>
+            <a target="_top" href="howto_css_flip_card.html">Flip-карточки</a>
+            <a target="_top" href="howto_css_profile_card.html">Карточки профиля</a>
+            <a target="_top" href="howto_css_product_card.html">Карточки продукта</a>
+            <a target="_top" href="howto_js_alert.html">Оповещения</a>
+            <a target="_top" href="howto_js_callout.html">Вызов</a>
+            <a target="_top" href="howto_css_notes.html">Примечания</a>
+            <a target="_top" href="howto_css_labels.html">Лейблы</a>
+            <a target="_top" href="howto_css_circles.html">Круги</a>
+            <a target="_top" href="howto_css_style_hr.html">Стиль HR</a>
+            <a target="_top" href="howto_css_coupon.html">Купон</a>
+            <a target="_top" href="howto_css_list_group.html">Список группы</a>
+            <a target="_top" href="howto_css_list_without_bullets.html">Список без маркеров</a>
+            <a target="_top" href="howto_css_responsive_text.html">адаптивный текст</a>
+            <a target="_top" href="howto_css_cutout_text.html">Вырезанный текст</a>
+            <a target="_top" href="howto_css_glowing_text.html">Светящийся текст</a>
+            <a target="_top" href="howto_css_fixed_footer.html">Фиксированный футер</a>
+            <a target="_top" href="howto_css_sticky_element.html">Липкий элемент</a>
+            <a target="_top" href="howto_css_equal_height.html">Равная высота</a>
+            <a target="_top" href="howto_css_clearfix.html">Clearfix (очистка float)</a>
+            <a target="_top" href="howto_css_responsive_floats.html">Адаптивный float</a>
+            <a target="_top" href="howto_js_snackbar.html">Снэк-бар</a>
+            <a target="_top" href="howto_js_fullscreen.html">Полноэкранное окно</a>
+            <a target="_top" href="howto_js_scrolldrawing.html">Рисование при прокрутке</a>
+            <a target="_top" href="howto_css_smooth_scroll.html">Гладкая прокрутка</a>
+            <a target="_top" href="howto_css_bg_gradient_scroll.html">Фоновый градиент при прокрутке</a>
+            <a target="_top" href="howto_js_sticky_header.html">Липкий заголовок</a>
+            <a target="_top" href="howto_js_shrink_header_scroll.html">Сжатие заголовка при прокрутке</a>
+            <a target="_top" href="howto_css_pricing_table.html">Таблица цен</a>
+            <a target="_top" href="howto_css_parallax.html">Паралакс</a>
+            <a target="_top" href="howto_css_aspect_ratio.html">Соотношение сторон</a>
+            <a target="_top" href="howto_css_responsive_iframes.html">Адаптивный фреймы</a>
+            <a target="_top" href="howto_js_toggle_like.html">Переключатель лайк/дизлайк</a>
+            <a target="_top" href="howto_js_toggle_hide_show.html">Переключатель скрыть/показать</a>
+            <a target="_top" href="howto_js_toggle_dark_mode.html">Переключатель в тёмный режим</a>
+            <a target="_top" href="howto_js_toggle_text.html">Переключатель текста</a>
+            <a target="_top" href="howto_js_toggle_class.html">Переключатель класса</a>
+            <a target="_top" href="howto_js_add_class.html">Добавить класс</a>
+            <a target="_top" href="howto_js_remove_class.html">Удалить класс</a>
+            <a target="_top" href="howto_js_active_element.html">Активный класс</a>
+            <a target="_top" href="howto_js_treeview.html">В виде дерева</a>
+            <a target="_top" href="howto_js_remove_property_object.html">Удалить свойство</a>
+            <a target="_top" href="howto_js_offline_detection.html">Оффлайн обнаружение</a>
+            <a target="_top" href="howto_js_check_hidden.html">Найти скрытый элемент</a>
+            <a target="_top" href="howto_js_redirect_webpage.html">Перенаправить веб-страницу</a>
+            <a target="_top" href="howto_css_zoom_hover.html">Zoom при наведении</a>
+            <a target="_top" href="howto_css_flip_box.html">Флип-бокс</a>
+            <a target="_top" href="howto_css_center-vertical.html">Центрировать по вертикали</a>
+            <a target="_top" href="howto_css_center_button.html">Центрировать кнопку в DIV</a>
+            <a target="_top" href="howto_css_transition_hover.html">Переход при наведении</a>
+            <a target="_top" href="howto_css_arrows.html">Стрелки</a>
+            <a target="_top" href="howto_css_shapes.html">Формы (фигуры)</a>
+            <a target="_top" href="howto_html_download_link.html">Ссылка для скачивания</a>
+            <a target="_top" href="howto_css_div_full_height.html">Элемент на всю высоту</a>
+            <a target="_top" href="howto_css_browser_window.html">Окно браузера</a>
+            <a target="_top" href="howto_css_custom_scrollbar.html">Пользовательский скроллбар</a>
+            <a target="_top" href="howto_css_hide_scrollbars.html">Скрыть скроллбар</a>
+            <a target="_top" href="howto_css_force_scrollbars.html">Показать/принудительно установить скроллбар</a>
+            <a target="_top" href="howto_css_devices.html">Внешний вид устройства</a>
+            <a target="_top" href="howto_css_contenteditable_border.html">Граница редактируемого элемента</a>
+            <a target="_top" href="howto_css_placeholder.html">Цвет заполнителя</a>
+            <a target="_top" href="howto_css_text_selection.html">Цвет выделения текста</a>
+            <a target="_top" href="howto_css_bullet_color.html">Цвет маркера</a>
+            <a target="_top" href="howto_css_vertical_line.html">Вертикальная линия</a>
+            <a target="_top" href="howto_css_dividers.html">Разделители</a>
+            <a target="_top" href="howto_js_animate_icons.html">Анимированные иконки</a>
+            <a target="_top" href="howto_js_countdown.html">Таймер обратного отсчета</a>
+            <a target="_top" href="howto_js_typewriter.html">Печатная машинка</a>
+            <a target="_top" href="howto_css_coming_soon.html">Осталось времени до определенной даты</a>
+            <a target="_top" href="howto_css_chat.html">Сообщения чата</a>
+            <a target="_top" href="howto_js_popup_chat.html">Popup-окно чата</a>
+            <a target="_top" href="howto_css_split_screen.html">Разделенный экран</a>
+            <a target="_top" href="howto_css_testimonials.html">Отзывы</a>
+            <a target="_top" href="howto_css_section_counter.html">Раздел счетчиков</a>
+            <a target="_top" href="howto_js_quotes_slideshow.html">Слайдшоу цитат</a>
+            <a target="_top" href="howto_js_close_list_items.html">Закрываемые элементы списка</a>
+            <a target="_top" href="howto_css_media_query_breakpoints.html">Типичные точки останова</a>
+            <a target="_top" href="howto_js_draggable.html">Перетаскиваемый HTML элемент</a>
+            <a target="_top" href="howto_js_media_queries.html">JS Медиа запросы</a>
+            <a target="_top" href="howto_syntax_highlight.html">Подсветка синтаксиса</a>
+            <a target="_top" href="howto_js_animate.html">JS Анимация</a>
+            <a target="_top" href="howto_js_string_length.html">JS Длина строки</a>
+            <a target="_top" href="howto_js_default_parameters.html">JS Параметры по умолчанию</a>
+            <a target="_top" href="howto_js_get_url.html">Получить текущий URL</a>
+            <a target="_top" href="howto_js_get_current_window.html">Получить текущий размер экрана</a>
+            <a target="_top" href="howto_js_element_iframe.html">Получить элементы iframe</a>
+            <br>
+
+            <h2>Веб-сайт</h2>
+            <a target="_top" href="howto_make_a_website.html">Сделать веб-сайт</a>
+            <a target="_top" href="howto_website.html">Сделать веб-сайт (W3.CSS)</a>
+            <a target="_top" href="howto_website_bootstrap.html">Сделать веб-сайт (BS3)</a>
+            <a target="_top" href="howto_website_bootstrap4.html">Сделать веб-сайт (BS4)</a>
+            <a target="_top" href="howto_make_a_webbook.html">Сделать WebBook</a>
+            <a target="_top" href="howto_css_center_website.html">Центрировать веб-сайт</a>
+            <a target="_top" href="howto_css_contact_section.html">Раздел контактов</a>
+            <a target="_top" href="howto_css_about_page.html">Про страницу</a>
+            <a target="_top" href="howto_css_style_header.html">Большой заголовок</a>
+            <a target="_top" href="howto_css_example_website.html">Пример веб-сайта</a>
+            <br>
+
+            <h2>Grid / Сетка</h2>
+            <a target="_top" href="howto_css_two_columns.html">Макет 2 колонки</a>
+            <a target="_top" href="howto_css_three_columns.html">Макет 3 колонки</a>
+            <a target="_top" href="howto_css_four_columns.html">Макет 4 колонки</a>
+            <a target="_top" href="howto_js_expanding_grid.html">Расширяющаяся сетка</a>
+            <a target="_top" href="howto_js_list_grid_view.html">Список в виде сетки</a>
+            <a target="_top" href="howto_css_mixed_columns.html">Макет смешанных колонок</a>
+            <a target="_top" href="howto_css_column_cards.html">Колонки карт</a>
+            <a target="_top" href="howto_css_zig_zag_layout.html">Зигзаг макет</a>
+            <a target="_top" href="howto_css_blog_layout.html">Макет блога</a>
+            <br>
+
+            <h2>Google</h2>
+            <!--<a target="_top" href="howto_google_maps.asp">Google Maps</a>
+            <a target="_top" href="howto_google_maps_bw.asp">Google Maps BW</a>-->
+            <a target="_top" href="howto_google_charts.html">Google диаграммы</a>
+            <a target="_top" href="howto_google_fonts.html">Google шрифты</a>
+            <a target="_top" href="howto_google_fonts_pairings.html">Google Подборки шрифтов</a>
+            <br>
+
+            <h2>Конвертеры</h2>
+            <a target="_top" href="howto_js_weight_converter.html">Конвертировать вес</a>
+            <a target="_top" href="howto_js_temperature_converter.html">Конвертировать температуру</a>
+            <a target="_top" href="howto_js_length_converter.html">Конвертировать длину</a>
+            <a target="_top" href="howto_js_speed_converter.html">Конвертировать скорость</a>
+            <br><br><br>
+            </nav>
+    </div>
+  </div>
+</div>
+<!--/Left menu Howto--><!--CONTENT HowTo-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+            <script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+            <!-- media_horizontally_header -->
+            <ins class='adsbygoogle'
+                 style='display:block'
+                 data-ad-client='ca-pub-6358227327561384'
+                 data-ad-slot='5801943678'
+                 data-ad-format='auto'
+                 data-full-width-responsive='true'></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <a href='index.html'><img src='../images/html_css_js.jpg' class='w3-left' style='width:180px;height:80px;padding:10px' alt='Как сделать? Готовые сниппеты для сайта' title='Готовые решения для сайта. W3Schools на русском'></a>
+<article>
+    <h1>W3Schools <span class="color_h1">Як зробити? Готові рішення (сніпети) для сайтів</span></h1>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
+        <a class='w3-right w3-btn' href='index_page2.html'>Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro"><strong>Сніпети. Готові рішення для сайтів. Фрагменти кода HTML, CSS та JavaScript.</strong></p>
+    <p>Ви можете використовувати дані готові рішення (сніпети) на своїх сайтах. Це прискорить і полегшить вам написання коду веб-сторінок. В даних прикладах використовуються лише три технології: <strong>HTML + CSS + JavaScript</strong>. Ви можете змінювати даний готовий код (наприклад, стилізацію сторінок за допомогою CSS), пристосовуючи його для своїх веб-проєктів.</p>
+    <div id="testtest">
+        <hr>
+        <div class="howtocontainer">
+            <div style="max-width:1000px;margin:auto;">
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_slideshow.html" class="h2-anchor">Слайдшоу</a></h2>
+                    <div style="position:relative">
+                        <div class="mySlides slfade">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="../images/img_nature_wide.jpg" style="width:100%;min-height:100px;" alt="Слайдшоу">
+                            <div class="sltext">Текст заголовка</div>
+                        </div>
+
+                        <div class="mySlides slfade">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="../images/img_snow_wide.jpg" style="width:100%;min-height:100px;" alt="Слайдшоу">
+                            <div class="sltext">Другий заголовок</div>
+                        </div>
+
+                        <div class="mySlides slfade">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="../images/img_mountains_wide.jpg" style="width:100%;min-height:100px;" alt="Слайдшоу">
+                            <div class="sltext">Третій заголовок</div>
+                        </div>
+
+                        <div class="mySlides slfade">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="../images/img_lights_wide.jpg" style="width:100%;min-height:100px;" alt="Слайдшоу">
+                            <div class="sltext">Четвертий заголовок</div>
+                        </div>
+                        <a class="slprev" onclick="plusSlides(-1)" style="z-index:0">&#10094;</a>
+                        <a class="slnext" onclick="plusSlides(1)" style="z-index:0">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                        <a href="javascript:void(0)" class="sldot" onclick="currentSlide(1)" title="slide 1"></a>
+                        <a href="javascript:void(0)" class="sldot" onclick="currentSlide(2)" title="slide 2"></a>
+                        <a href="javascript:void(0)" class="sldot" onclick="currentSlide(3)" title="slide 3"></a>
+                        <a href="javascript:void(0)" class="sldot" onclick="currentSlide(4)" title="slide 4"></a>
+                    </div>
+                    <script>
+                        var slideIndex = 1;
+                        showSlides(slideIndex);
+
+                        function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                        }
+
+                        function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                        }
+                        function showSlides(n) {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            var dots = document.getElementsByClassName("sldot");
+                            if (n > slides.length) {slideIndex = 1}
+                            if (n < 1) {slideIndex = slides.length} ;
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].classList.remove("slideractive");
+                            }
+                            slides[slideIndex-1].style.display = "block";
+                            dots[slideIndex-1].classList.add("slideractive");
+                        }
+                    </script>
+                    <div class="howto-container">
+                        <p><a href="howto_js_slideshow.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_login_form.html" class="h2-anchor">Форма входу</a></h2>
+                    <button onclick="document.getElementById('loginModal').style.display='block'" class="w3-button w3-blue" style="font-size:17px;width:150px">Увійти</button>
+                    <div id="loginModal" class="w3-modal" style="cursor:pointer;">
+                        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px;cursor:auto">
+                            <div class="w3-center"><br>
+                                <span onclick="document.getElementById('loginModal').style.display='none'" title="Закрити модал"
+                                      class="w3-button w3-hover-text-grey w3-container w3-display-topright w3-xxlarge">&times;</span>
+                                <img src="img_avatar2.png" alt="Аватар" style="width:40%" class="w3-circle w3-margin-top">
+                            </div>
+                            <div class="w3-container">
+                                <div class="w3-section">
+                                    <label><b>Ім'я користувача</b></label>
+                                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Введіть ім'я">
+                                    <label><b>Пароль</b></label>
+                                    <input class="w3-input w3-border" type="password" placeholder="Введіть пароль">
+                                    <button class="w3-button w3-block w3-green w3-section w3-padding" onclick="document.getElementById('loginModal').style.display='none'">Увійти</button>
+                                    <input type="checkbox" checked="checked"> Запам'ятати мене
+                                </div>
+                            </div>
+                            <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                                <button onclick="document.getElementById('loginModal').style.display='none'" type="button" class="w3-btn w3-red">Відмінити</button>
+                                <span class="w3-right w3-padding w3-hide-small">Забули <a href="javascript:void(0)" onclick="document.getElementById('loginModal').style.display='none'">пароль?</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_login_form.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                    <script>
+                        // Get the modal
+                        var loginMod = document.getElementById('loginModal');
+
+                        // Когда пользователь кликает где-нибудь за пределами модального окна, закройте его.
+                        window.onclick = function(event) {
+                            if (event.target == loginMod) {
+                                loginMod.style.display = "none";
+                            }
+                        }
+                    </script>
+                </div>
+                <br>
+
+                <div class="w3-card-4">
+                    <div class="w3-container">
+                        <h2><a href="howto_js_accordion.html" class="h2-anchor">Акордеон</a></h2>
+                        <button class="accordion" id="myfirstAcc">Розділ 1</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <button class="accordion">Розділ 2</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <button class="accordion">Розділ 3</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="howto-container">
+                            <p><a href="howto_js_accordion.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                        </div>
+                        <script>
+                            var acc = document.getElementsByClassName("accordion");
+                            var i;
+
+                            for (i = 0; i < acc.length; i++) {
+                                acc[i].onclick = function(){
+                                    this.classList.toggle("activeacc");
+                                    this.nextElementSibling.classList.toggle("showpanel");
+                                }
+                            }
+                        </script>
+                        <script>
+                            var myaccbtn = document.getElementById("myfirstAcc");
+                            myaccbtn.click();
+                        </script>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_dropdown.html" class="h2-anchor">Випадаючи списки при наведенні</a></h2>
+                    <div class="dropdown dropdown2">
+                        <button class="dropbtn" style="background-color:#f4511e;">Навести</button>
+                        <div class="dropdown-content">
+                            <a href="javascript:void(0)">Посилання 1</a>
+                            <a href="javascript:void(0)">Посилання 2</a>
+                            <a href="javascript:void(0)">Посилання 3</a>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_dropdown.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_dropdown.html" class="h2-anchor">Випадають списки при кліку</a></h2>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn" style="cursor:pointer">Клікнути</button>
+                        <div id="myDropdown" class="dropdown-content" >
+                            <a href="javascript:void(0)">Посилання 1</a>
+                            <a href="javascript:void(0)">Посилання 2</a>
+                            <a href="javascript:void(0)">Посилання 3</a>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_js_dropdown.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                    <script>
+                        /* Когда пользователь нажимает кнопку, переключаться между скрытием и отображением раскрывающегося содержимого */
+                        function myFunction() {
+                            document.getElementById("myDropdown").classList.toggle("show");
+                        }
+                        function myFunction2() {
+                            document.getElementById("myDropdown2").style.right = "0";
+                            document.getElementById("myDropdown2").classList.toggle("show");
+                        }
+                        // Закройте раскрывающийся список, если пользователь кликнет за его пределами
+                        window.onclick = function(e) {
+                            if (!e.target.matches('.dropbtn')) {
+
+                                var dropdowns = document.getElementsByClassName("dropdown-content");
+                                for (var d = 0; d < dropdowns.length; d++) {
+                                    var openDropdown = dropdowns[d];
+                                    if (openDropdown.classList.contains('show')) {
+                                        openDropdown.classList.remove('show');
+                                    }
+                                }
+                            }
+                        }
+                    </script>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_sidenav.html" class="h2-anchor">Бокова навігація</a></h2>
+                    <div id="myCanvasNav" class="overlay3" onclick="closeOffcanvas()"></div>
+                    <div id="myOffcanvas" class="offcanvas">
+                        <a href="javascript:void(0)" class="closeOffcanvas" onclick="closeOffcanvas()">&times;</a>
+                        <a href="javascript:void(0)">Про сайт</a>
+                        <a href="javascript:void(0)">Сервіси</a>
+                        <a href="javascript:void(0)">Клієнти</a>
+                        <a href="javascript:void(0)">Контакти</a>
+                    </div>
+                    <button class="w3-button w3-black w3-padding w3-margin-bottom" onclick="openOffcanvas1()">Накладення бокового навбара</button><br>
+                    <button class="w3-button w3-black w3-padding w3-margin-bottom" onclick="openOffcanvas();">Виштовхування бокового навбара</button><br>
+                    <button class="w3-button w3-black w3-padding" onclick="openNav3();openOffcanvas();">Виштовхування бокового навбара з непрозорістю</button>
+                    <div class="howto-container">
+                        <p><a href="howto_js_sidenav.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                    <script>
+                        // Бокова навігація
+                        function openNav() {
+                            document.getElementById("myNav").style.width = "100%";
+                        }
+                        function closeNav() {
+                            document.getElementById("myNav").style.width = "0%";
+                        }
+                        function openNav2() {
+                            document.getElementById("myNav2").style.height = "100%";
+                        }
+                        function closeNav2() {
+                            document.getElementById("myNav2").style.height = "0%";
+                        }
+                        function openNav3() {
+                            document.getElementById("myCanvasNav").style.width = "100%";
+                            document.getElementById("myCanvasNav").style.opacity = "0.8";
+                        }
+                        function openOffcanvas1() {
+                            document.getElementById("myOffcanvas").style.width = "250px";
+                        }
+                        function openOffcanvas() {
+                            document.getElementById("myOffcanvas").style.width = "250px";
+                            document.getElementById("testtest").style.marginLeft = "50px";
+                        }
+                        function closeOffcanvas() {
+                            document.getElementsByClassName("overlay3")[0].style.opacity = "0";
+                            document.getElementById("myOffcanvas").style.width = "0%";
+                            document.getElementById("testtest").style.marginLeft= "0%";
+                            document.getElementById("myCanvasNav").style.width = "0%";
+                        }
+                    </script>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_fixed_sidebar.html" class="h2-anchor">Фіксований сайдбар</a></h2>
+                    <div class="w3-row-padding" style="margin:0 -16px 16px -16px">
+                        <div class="w3-col m6 s12">
+                            <iframe src="tryhow_css_sidenav_ifr.html" style="width:100%;border:5px solid #ddd;height:300px"></iframe>
+                        </div>
+                        <div class="w3-col m6 w3-hide-small">
+                            <iframe src="tryhow_css_sidenav_ifr2.html" style="width:100%;border:5px solid #ddd;height:300px"></iframe>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_fixed_sidebar.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_modals.html" class="h2-anchor">Модал бокс</a></h2>
+                    <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-teal w3-large w3-padding-large">Відкрити модал</button></p>
+
+                    <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content w3-animate-top w3-card-4">
+                            <header class="w3-container w3-teal w3-display-container">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright" style="font-size:33px !important">&times;</span>
+                                <h2>Модал header</h2>
+                            </header>
+                            <div class="w3-container">
+                                <p>Hello World!</p>
+                                <p>Модали - класна штука!</p>
+                                <p>Повернутися до <a href="index_page1.html" class="w3-button w3-teal">W3 Як зробити</a> Прикладам</p>
+                            </div>
+                            <footer class="w3-container w3-teal">
+                                <p>Модал footer</p>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_modals.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_modal_images.html" class="h2-anchor">Модал зображення</a></h2>
+                    <div class="imgmod">
+                        <img id="eh" src="../images/img_snow_modal.jpg" alt="Модальное изображение" width="300" height="200">
+                    </div>
+
+                    <div id="myModal2" class="modal2">
+                        <span class="closeimg" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
+                        <img alt="Модальное изображение" id="img02" class="modal-content2">
+                        <div id="caption"></div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_modal_images.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                    <script>
+                        // Получить модал
+                        var modal = document.getElementById('myModal2');
+                        var images = document.getElementById('eh');
+                        var modalImg = document.getElementById("img02");
+                        var captionText = document.getElementById("caption");
+                        images.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = images.src;
+                            modalImg.alt = images.alt;
+                            captionText.innerHTML = images.alt;
+                        }
+                    </script>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_lightbox.html" class="h2-anchor">Лайтбокс</a></h2>
+                    <div class="w3-row-padding" style="margin:0 -16px">
+                        <div class="w3-col s4">
+                            <img src="../images/img_nature.jpg" style="width:100%;cursor:pointer"
+                                 onclick="openLightboxModal();currentDivLightbox(1)" class="w3-hover-shadow cursor" alt="Лайтбокс">
+                        </div>
+                        <div class="w3-col s4">
+                            <img src="../images/img_snow_modal.jpg" style="width:100%;cursor:pointer"
+                                 onclick="openLightboxModal();currentDivLightbox(2)" class="w3-hover-shadow cursor" alt="Лайтбокс">
+                        </div>
+                        <div class="w3-col s4">
+                            <img src="../images/img_mountains.jpg" style="width:100%;cursor:pointer"
+                                 onclick="openLightboxModal();currentDivLightbox(3)" class="w3-hover-shadow cursor" alt="Лайтбокс">
+                        </div>
+                    </div>
+
+                    <div id="myModalLightbox" class="w3-modal w3-black">
+                        <span class="w3-text-white w3-xxxlarge w3-hover-text-grey w3-container w3-display-topright cursor" style="top:-12px" onclick="closeLightboxModal()">&times;</span>
+                        <div class="w3-modal-content">
+                            <div class="w3-content" style="max-width:1200px">
+                                <img class="myLightbox" src="../images/img_nature_wide.jpg" style="width:100%" alt="Лайтбокс">
+                                <img class="myLightbox" src="../images/img_snow_wide.jpg" style="width:100%" alt="Лайтбокс">
+                                <img class="myLightbox" src="../images/img_mountains_wide.jpg" style="width:100%" alt="Лайтбокс">
+                                <div class="w3-row w3-black w3-center">
+                                    <div class="w3-container w3-display-container">
+                                        <p id="lightboxCaption"></p>
+                                        <span class="w3-display-middle w3-hover-text-grey w3-large cursor" style="left:2%" onclick="plusDivsLightbox(-1)">&#10094;</span>
+                                        <span class="w3-display-middle w3-hover-text-grey w3-large cursor" style="left:98%" onclick="plusDivsLightbox(1)">&#10095;</span>
+                                    </div>
+                                    <div class="w3-col s4">
+                                        <img class="demolightbox w3-opacity w3-hover-opacity-off cursor" src="../images/img_nature_wide.jpg" style="width:100%" onclick="currentDivLightbox(1)" alt="Модали на веб-сторінках">
+                                    </div>
+                                    <div class="w3-col s4">
+                                        <img class="demolightbox w3-opacity w3-hover-opacity-off cursor" src="../images/img_snow_wide.jpg" style="width:100%" onclick="currentDivLightbox(2)" alt="Модальне зображення">
+                                    </div>
+                                    <div class="w3-col s4">
+                                        <img class="demolightbox w3-opacity w3-hover-opacity-off cursor" src="../images/img_mountains_wide.jpg" style="width:100%" onclick="currentDivLightbox(3)" alt="Модальне вікно на веб-сторінці">
+                                    </div>
+                                </div> <!-- Конец row -->
+                            </div> <!-- Конец w3-content -->
+                        </div> <!-- Конец modal content -->
+                    </div> <!-- Конец modal -->
+
+                    <script>
+                        function openLightboxModal() {
+                            document.getElementById('myModalLightbox').style.display = "block";
+                        }
+                        function closeLightboxModal() {
+                            document.getElementById('myModalLightbox').style.display = "none";
+                        }
+                        var slideIndexLightbox = 1;
+                        showDivsLightbox(slideIndexLightbox);
+                        function plusDivsLightbox(n) {
+                            showDivsLightbox(slideIndexLightbox += n);
+                        }
+                        function currentDivLightbox(n) {
+                            showDivsLightbox(slideIndexLightbox = n);
+                        }
+                        function showDivsLightbox(n) {
+                            var i;
+                            var x = document.getElementsByClassName("myLightbox");
+                            var dots = document.getElementsByClassName("demolightbox");
+                            var captionText = document.getElementById("lightboxCaption");
+                            if (n > x.length) {slideIndexLightbox = 1}
+                            if (n < 1) {slideIndexLightbox = x.length}
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+                            }
+                            x[slideIndexLightbox -1].style.display = "block";
+                            dots[slideIndexLightbox -1].className += " w3-opacity-off";
+                            captionText.innerHTML = dots[slideIndexLightbox -1].alt;
+                        }
+                    </script>
+                    <div class="howto-container">
+                        <p><a href="howto_js_lightbox.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_slideshow_gallery.html" class="h2-anchor">Галерея слайдшоу</a></h2>
+                    <div style="max-width:1000px;min-width:200px;position:relative;margin:auto;">
+                        <div class="slgcontainer">
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">1 / 6</div>
+                                <img src="../images/img_woods_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Галерея слайдшоу">
+                            </div>
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">2 / 6</div>
+                                <img src="../images/img_5terre_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Галерея слайдшоу">
+                            </div>
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">3 / 6</div>
+                                <img src="../images/img_mountains_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Галерея слайдшоу">
+                            </div>
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">4 / 6</div>
+                                <img src="../images/img_lights_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Галерея слайдшоу">
+                            </div>
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">5 / 6</div>
+                                <img src="../images/img_nature_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Галерея слайдшоу">
+                            </div>
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">6 / 6</div>
+                                <img src="../images/img_snow_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Галерея слайдшоу">
+                            </div>
+                            <a class="slgprev w3-text-white" onclick="slgplusSlides(-1)">&#10094;</a>
+                            <a class="slgnext w3-text-white" onclick="slgplusSlides(1)">&#10095;</a>
+                            <div class="slgcaption-container">
+                                <p id="slgcaption"></p>
+                            </div>
+                            <div class="slgrow">
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_woods_howto.jpg" style="width:100%" onclick="slgcurrentSlide(1)" alt="The Woods">
+                                </div>
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_5terre_howto.jpg" style="width:100%" onclick="slgcurrentSlide(2)" alt="Cinque Terre">
+                                </div>
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_mountains.jpg" style="width:100%" onclick="slgcurrentSlide(3)" alt="Mountains and fjords">
+                                </div>
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_lights.jpg" style="width:100%" onclick="slgcurrentSlide(4)" alt="Northern Lights">
+                                </div>
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_nature.jpg" style="width:100%" onclick="slgcurrentSlide(5)" alt="Nature and sunrise">
+                                </div>
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_snow_howto.jpg" style="width:100%" onclick="slgcurrentSlide(6)" alt="Snowy Mountains">
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            var slgslideIndex = 1;
+                            slgshowSlides(slgslideIndex);
+
+                            function slgplusSlides(slgn) {
+                                slgshowSlides(slgslideIndex += slgn);
+                            }
+                            function slgcurrentSlide(slgn) {
+                                slgshowSlides(slgslideIndex = slgn);
+                            }
+                            function slgshowSlides(slgn) {
+                                var slgi;
+                                var slgslides = document.getElementsByClassName("slgmySlides");
+                                var slgdots = document.getElementsByClassName("slgdemo");
+                                var slgcaptionText = document.getElementById("slgcaption");
+                                if (slgn > slgslides.length) {slgslideIndex = 1}
+                                if (slgn < 1) {slgslideIndex = slgslides.length}
+                                for (slgi = 0; slgi < slgslides.length; slgi++) {
+                                    slgslides[slgi].style.display = "none";
+                                }
+                                for (slgi = 0; slgi < slgdots.length; slgi++) {
+                                    slgdots[slgi].className = slgdots[slgi].className.replace(" slgactive", "");
+                                }
+                                slgslides[slgslideIndex-1].style.display = "block";
+                                slgdots[slgslideIndex-1].className += " slgactive";
+                                slgcaptionText.innerHTML = slgdots[slgslideIndex-1].alt;
+                            }
+                        </script>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_js_slideshow_gallery.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4">
+                    <div class="w3-container">
+                        <h2><a href="howto_css_image_overlay.html" class="h2-anchor">Зображення при наведенні</a></h2>
+                        <div class="w3-light-grey">
+                            <div class="containerslidetop" style="margin:0 auto;max-width:400px">
+                                <img src="../images/img_avatar3.png" alt="Аватар" class="imageslidetop">
+                                <div class="overlayslidetop">
+                                    <div class="textslidetop">Hello World</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="howto-container">
+                            <p><a href="howto_css_image_overlay.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4">
+                    <div class="w3-container">
+                        <h2><a href="howto_js_tabs.html" class="h2-anchor">Вкладки</a></h2>
+                        <ul class="tab">
+                            <li><a href="javascript:void(0)" class="tablinks" onclick="openCity('London', event)">Лондон</a></li>
+                            <li><a href="javascript:void(0)" class="tablinks" onclick="openCity('Paris', event)">Париж</a></li>
+                            <li><a href="javascript:void(0)" class="tablinks tokyotab" onclick="openCity('Tokyo', event)">Токіо</a></li>
+                        </ul>
+                        <div style="border:1px solid #eee;border-top:none;">
+                            <div id="London" class="tabcontent">
+                                <h3>Лондон</h3>
+                                <p>Лондон - це столиця Англії.</p>
+                            </div>
+                            <div id="Paris" class="tabcontent">
+                                <h3>Париж</h3>
+                                <p>Париж - це столиця Франції.</p>
+                            </div>
+                            <div id="Tokyo" class="tabcontent tokyotab">
+                                <h3>Токио</h3>
+                                <p>Токіо - це столиця Японії.</p>
+                            </div>
+                        </div>
+                        <script>
+                            openCity("London")
+                            function openCity(cityName, evt) {
+                                var i, tabcontent, tablinks;
+                                tabcontent = document.getElementsByClassName("tabcontent");
+                                for (i = 0; i < tabcontent.length; i++) {
+                                    tabcontent[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablinks");
+                                for (i = 0; i < tabcontent.length; i++) {
+                                    tablinks[i].classList.remove("tabactive");
+                                }
+                                document.getElementById(cityName).style.display = "block";
+                                if (evt) {evt.currentTarget.classList.add("tabactive");}
+                            }
+                        </script>
+                        <script>
+                            var mybtn = document.getElementsByClassName("tablinks")[0];
+                            mybtn.click();
+                        </script>
+                        <div class="howto-container">
+                            <p><a href="howto_js_tabs.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-hide-small">
+                    <div class="w3-container">
+                        <h2><a href="howto_js_vertical_tabs.html" class="h2-anchor">Вертикальні вкладки</a></h2>
+                        <iframe src="tryhow_js_vertical_tabs_ifr.html" style="width:100%;height:350px;border:none;margin:0 -8px"></iframe>
+                        <div class="howto-container">
+                            <p><a href="howto_js_vertical_tabs.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_tab_img_gallery.html" class="h2-anchor">Вкладка Галереї зображень</a></h2>
+                    <div class="w3-row-padding" style="margin:0 -16px">
+                        <div class="w3-col s4 w3-container">
+                            <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Nature');">
+                                <img src="../images/img_nature.jpg" alt="Вкладка" style="width:100%">
+                            </a>
+                        </div>
+                        <div class="w3-col s4 w3-container">
+                            <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Snow');">
+                                <img src="../images/img_snow_howto.jpg" alt="Галерея изображений" style="width:100%">
+                            </a>
+                        </div>
+                        <div class="w3-col s4 w3-container">
+                            <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Lights');">
+                                <img src="../images/img_lights.jpg" alt="Вкладка" style="width:100%">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Nature" class="picture w3-display-container w3-margin-top">
+                        <img src="../images/img_nature_wide.jpg" alt="Nature" style="width:100%">
+                        <span onclick="this.parentElement.style.display='none'"
+                              class="w3-display-topright w3-button w3-transparent w3-text-white w3-xlarge">&times;</span>
+                        <div class="w3-display-bottomleft w3-container w3-padding w3-text-white w3-large">Горы</div>
+                    </div>
+                    <div id="Snow" class="picture w3-display-container w3-margin-top" style="display:none">
+                        <img src="../images/img_snow_wide.jpg" alt="Галерея изображений" style="width:100%">
+                        <span onclick="this.parentElement.style.display='none'"
+                              class="w3-display-topright w3-button w3-transparent w3-text-white w3-xlarge">&times;</span>
+                        <div class="w3-display-bottomleft w3-container w3-padding w3-text-white w3-large">Снег</div>
+                    </div>
+                    <div id="Lights" class="picture w3-display-container w3-margin-top" style="display:none">
+                        <img src="../images/img_lights_wide.jpg" alt="Lights" style="width:100%">
+                        <span onclick="this.parentElement.style.display='none'"
+                              class="w3-display-topright w3-button w3-transparent w3-text-white w3-xlarge">&times;</span>
+                        <div class="w3-display-bottomleft w3-container w3-padding w3-text-white w3-large">Північне сяйво</div>
+                    </div>
+                    <script>
+                        function openImg(imgName) {
+                            var i, x;
+                            x = document.getElementsByClassName("picture");
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";
+                            }
+                            document.getElementById(imgName).style.display = "block";
+                        }
+                    </script>
+                    <div class="howto-container">
+                        <p><a href="howto_js_tab_img_gallery.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_alert_buttons.html" class="h2-anchor">Кнопки оповіщення</a></h2>
+                    <button class="btnalert success">Успіх</button>
+                    <button class="btnalert info">Інфо</button>
+                    <button class="btnalert warning">Попередження</button>
+                    <button class="btnalert danger">Небезпека</button>
+                    <button class="btnalert default">За умовчанням</button>
+                    <div class="howto-container">
+                        <p><a href="howto_css_alert_buttons.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_outline_buttons.html" class="h2-anchor">Кнопки з контуром</a></h2>
+                    <button class="btnout outsuccess">Успіх</button>
+                    <button class="btnout outinfo">Інфо</button>
+                    <button class="btnout outwarning">Попередження</button>
+                    <button class="btnout outdanger">Небезпека</button>
+                    <button class="btnout outdefault">За умовчанням</button>
+                    <div class="howto-container">
+                        <p><a href="howto_css_outline_buttons.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_topnav.html" class="h2-anchor">Верхня навігація</a></h2>
+                    <div class="w3-bar w3-black">
+                        <a class="w3-bar-item w3-button w3-padding-16 w3-green w3-hover-green" href="javascript:void(0)">Головна</a>
+                        <a class="w3-bar-item w3-button w3-padding-16" href="javascript:void(0)">Новини</a>
+                        <a class="w3-bar-item w3-button w3-padding-16" href="javascript:void(0)">Контакти</a>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_js_topnav.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_topnav_responsive.html" class="h2-anchor">Адаптивна верхня навігація</a></h2>
+                    <p>Змініть розмір вікна браузера, щоб побачити ефект:</p>
+                    <p><iframe src="tryhow_js_topnav_iframe.html" style="width:100%;border:none;height:215px;overflow:hidden;"></iframe></p>
+                    <div class="howto-container">
+                        <p><a href="howto_js_topnav_responsive.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_fullscreen_overlay.html" class="h2-anchor">Повноекранна навігація</a></h2>
+                    <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtnOverlay" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                            <a href="javascript:void(0)">Про сайт</a>
+                            <a href="javascript:void(0)">Сервіси</a>
+                            <a href="javascript:void(0)">Клієнти</a>
+                            <a href="javascript:void(0)">Контакти</a>
+                        </div>
+                    </div>
+                    <div id="myNav2" class="overlay2">
+                        <a href="javascript:void(0)" class="closebtnOverlay" onclick="closeNav2()">&times;</a>
+                        <div class="overlay-content">
+                            <a href="javascript:void(0)">Про сайт</a>
+                            <a href="javascript:void(0)">Сервіси</a>
+                            <a href="javascript:void(0)">Клієнти</a>
+                            <a href="javascript:void(0)">Контакти</a>
+                        </div>
+                    </div>
+                    <button class="w3-button w3-black w3-padding" onclick="openNav()">Зрушити вправо</button>
+                    <button class="w3-button w3-black w3-padding" onclick="openNav2()">Зрушити вниз</button>
+                    <div class="howto-container">
+                        <p><a href="howto_js_fullscreen_overlay.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <style>
+                    .topnav3 {
+                        overflow: hidden;
+                        background-color: #e9e9e9;
+                    }
+                    .topnav3 a {
+                        float: left;
+                        display: block;
+                        color: black;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                        font-size: 17px;
+                    }
+                    .topnav3 a:hover {
+                        background-color: #ddd;
+                        color: black;
+                    }
+                    .topnav3 a.active {
+                        background-color: #2196F3;
+                        color: white;
+                    }
+                    .topnav3 .login-container {
+                        float: right;
+                    }
+                    .topnav3 input[type=text] {
+                        padding: 6px;
+                        margin-top: 8px;
+                        font-size: 17px;
+                        border: none;
+                        width:174px;
+                    }
+                    .topnav3 .login-container button {
+                        float: right;
+                        padding: 6px 10px;
+                        margin-top: 8px;
+                        margin-right: 16px;
+                        background-color: #555;
+                        color: white;
+                        font-size: 17px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    .topnav3 .login-container button:hover {
+                        background-color: green;
+                    }
+                    @media screen and (max-width: 600px) {
+                        .topnav3 .login-container {
+                            float: none;
+                        }
+                        .topnav3 a, .topnav3 input[type=text], .topnav3 .login-container button {
+                            float: none;
+                            display: block;
+                            text-align: left;
+                            width: 100%;
+                            margin: 0;
+                            padding: 14px;
+                        }
+                        .topnav3 input[type=text] {
+                            border: 1px solid #ccc;
+                        }
+                    }
+                </style>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_login_form_navbar.html" class="h2-anchor">Форма входу в навбарі</a></h2>
+                    <div class="topnav3">
+                        <a class="active" href="javascript:void(0)">Головна</a>
+                        <a href="javascript:void(0)">Про сайт</a>
+                        <a href="javascript:void(0)">Контакти</a>
+                        <div class="login-container">
+                            <input type="text" placeholder="Ім'я користувача" name="username">
+                            <input type="text" placeholder="Пароль" name="psw">
+                            <button type="button">Вхід</button>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_login_form_navbar.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_bg_change_scroll.html" class="h2-anchor">Змінити фон при прокрутці</a></h2>
+                    <iframe src="tryhow_css_bg_change_scroll.html" style="width:100%;border:2px solid #f1f1f1;height:500px;"></iframe>
+                    <div class="howto-container">
+                        <p><a href="howto_css_bg_change_scroll.html" class="w3-button w3-green w3-padding">Дізнатися, як зробити &raquo;</a></p>
+                    </div>
+                </div>
+
+                <!-- END INNER -->
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="howtopag"></div>
+    <script>
+        init_pagination();
+    </script>
+</article>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+
+    <div class='sidesection'>
+        <h4>ПРИЄДНУЙТЕСЬ!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook сторінка' title='Перейти на Facebook сторінку' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+
+    <div class='sidesection w3-light-grey' style='margin-left:auto;margin-right:auto;max-width:230px'>
+        <div class='w3-container w3-blue-grey'>
+            <h4><a href='../blog/index.html' class='w3-hover-text-white'>БЛОГ</a></h4>
+        </div>
+        <div class='w3-container w3-left-align w3-padding-16'>
+            <a href='../blog/index.html'>Блог Адміна</a><br>
+            <a href='../blog/whatsites.html'>Які бувають сайти?</a><br>
+            <a href='../blog/seo_optimization.html'>SEO. Пошукова оптимізація</a><br>
+            <a href='../blog/howto_js_sidenav.html'>Бокова навігація</a><br>
+            <a href='../blog/imitation.html'>Наслідування або плагіат</a><br>
+            <a href='../blog/free_img_placeholder_services.html'>Фіктивні зображення</a><br>
+            <a href='../blog/140_web_colors.html'>140 веб-кольорів</a><br>
+            <a href='../blog/adblockplus.html'>Як відключити рекламу?</a><br>
+            <a href='../blog/atom_edit_ua.html'>Як українізувати редактор Atom?</a><br>
+            <a href='../blog/apache_install.html'>Як встановити сервер Apache?</a><br>
+            <a href='../blog/mysql_install.html'>Як встановити сервер MySQL?</a><br>
+            <a href='../blog/youtube_responsive.html'>Як зробити адаптивним відео з YouTube?</a><br>
+            <a href='../blog/top_freelance.html'>ТОП найпопулярніших бірж фрилансу</a><br>
+            <a href='../blog/html6_news.html'>Що нового в HTML6?</a><br>
+            <a href='../blog/wordpress_readme.html'>Початкова установка WordPress</a><br>
+            <a href='../blog/verbit.html'>Словник IT-початківця</a>
+        </div>
+    </div>
+
+    <div class='sidesection' style='border-radius:5px;color:#555;padding-top:1px;padding-bottom:8px;margin-left:auto;margin-right:auto;max-width:230px;background-color:#d4edda'>
+        <p style='color:darkgreen'>Отримайте ваш<br>Сертифікат сьогодні!</p>
+        <a href='../cert/index.html' target='_blank'>
+            <img src='../images/w3certified_logo_250.png' style='margin:0 12px 20px 10px;max-width:80%' alt="Сертифікат від W3Schools">
+        </a>
+        <a class='w3-btn w3-margin-bottom shadow-black-1' style='text-decoration:none;border-radius:5px;' href='../cert/index.html' target='_blank'>Оберіть тему</a>
+    </div>
+
+    <div class='sidesection w3-light-grey' style='margin-left:auto;margin-right:auto;max-width:230px'>
+        <div class='w3-container w3-blue-grey'>
+            <h4><a href='../howto/index.html' class='w3-hover-text-white'>ЯК ЗРОБИТИ?..</a></h4>
+        </div>
+        <div class='w3-container w3-left-align w3-padding-16'>
+            <a href='../howto/howto_js_tabs.html'>Вкладки</a><br>
+            <a href='../howto/howto_css_dropdown.html'>Випадаючи меню</a><br>
+            <a href='../howto/howto_js_accordion.html'>Акордеони</a><br>
+            <a href='../howto/howto_js_sidenav.html'>Бокова навігація</a><br>
+            <a href='../howto/howto_js_topnav.html'>Верхня навігація</a><br>
+            <a href='../howto/howto_css_modals.html'>Модальні блоки</a><br>
+            <a href='../howto/howto_js_progressbar.html'>Прогрес-бари</a><br>
+            <a href='../howto/howto_css_parallax.html'>Паралакс</a><br>
+            <a href='../howto/howto_css_login_form.html'>Форма входу</a><br>
+            <a href='../howto/howto_html_include.html'>HTML включення</a><br>
+            <a href='../howto/howto_google_maps.html'>Google мапи</a><br>
+            <a href='../howto/howto_js_rangeslider.html'>Повзунки діапазону</a><br>
+            <a href='../howto/howto_css_tooltip.html'>Виринаючі підказки</a><br>
+            <a href='../howto/howto_js_slideshow.html'>Слайдшоу</a><br>
+            <a href='../howto/howto_js_filter_lists.html'>Фільтрований список</a><br>
+            <a href='../howto/howto_js_sort_list.html'>Сортований список</a><br>
+        </div>
+    </div>
+
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>
+        <div class='w3-container w3-blue-grey'>
+            <h5><a href='../cert/index.html' class='w3-hover-text-white'>СЕРТИФІКАТИ</a></h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../cert/cert_html.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>HTML</a>
+            <a href='../cert/cert_css.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>CSS</a>
+            <a href='../cert/cert_javascript.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>JavaScript</a>
+            <a href='../cert/cert_frontend.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>Front End</a>
+            <a href='../cert/cert_python.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>Python</a>
+            <a href='../cert/cert_jquery.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>jQuery</a>
+            <a href='../cert/cert_sql.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>SQL</a>
+            <a href='../cert/cert_php.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>PHP</a>
+            <a href='../cert/cert_bootstrap.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>Bootstrap</a>
+            <a href='../cert/cert_xml.html' class='w3-button w3-light-grey w3-block w3-border-bottom' style='text-decoration:none'>XML</a>
+        </div>
+    </div>
+</div>
+<!--/Right sidebar-->
+</div>
+<!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочите повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб-Сертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+      Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також ви можете абсолютно <strong><a href='https://github.com/w3schoolsua/w3schoolsua.github.io/archive/master.zip' target='_blank'>безкоштовно скачати офлайн версію сайту W3Schools українською</a></strong> архівом з GitHub і користуватися локально на своєму комп&rsquo;ютері.<br>
+    Також доступна версія сайту <a href='https://w3schoolsrus.github.io/' target='_blank' title='W3Schools на русском'><strong>W3Schools російською</strong></a> мовою.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2021</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br>
+</div>
+</div>
+
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
