@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title>Заголовки вкладок. Как сделать? W3Schools на русском</title>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <style>
+        body {font-family: "Lato", sans-serif;margin:0}
+        .tablink {background-color: #eee;float: left;border: none;outline: none;cursor: pointer;padding: 14px 16px;font-size: 17px; width: 50%;}
+        /* Изменить цвет фона кнопок при наведении */
+        .tablink:hover {background-color: #ddd;}
+        /* Стиль содержимого вкладки */
+        .tabcontent {color: white;display: none;padding: 70px 50px;text-align: center;}
+        #London {background-color:#f44336;}
+        #Paris {background-color:#4CAF50;}
+        #Tokyo {background-color:#2196F3;}
+        #Oslo {background-color:#ff5722;}
+    </style>
+<body>
+<div id="London" class="tabcontent">
+    <h1>Лондон</h1>
+    <p>Лондон - это столица Англии.</p>
+</div>
+<div id="Paris" class="tabcontent">
+    <h1>Париж</h1>
+    <p>Париж - это столица Франции.</p>
+</div>
+<button class="tablink" onclick="openCity('London', this, '#f44336')">Лондон</button>
+<button class="tablink" onclick="openCity('Paris', this, '#4CAF50')" id="defaultOpen">Париж</button>
+<script>
+    function openCity(cityName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+            tablinks[i].style.color = "";
+        }
+        document.getElementById(cityName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+        elmnt.style.color = "white";
+    }
+    // Получите элемент с id="defaultOpen" и кликните по нему
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

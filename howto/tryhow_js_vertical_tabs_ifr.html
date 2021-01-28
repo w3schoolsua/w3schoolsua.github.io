@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+/* Стиль вкладки */
+div.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 35%;
+    height: 300px;
+}
+/* Стиль ссылок внутри вкладки */
+div.tab a {
+    display: block;
+    color: black;
+    padding: 22px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+/* Изменить цвет фона ссылок при наведении */
+div.tab a:hover {
+    background-color: #ddd;
+}
+/* Создайте активный / текущий класс tablink */
+div.tab a:focus, .active {
+    background-color: #ccc;
+}
+/* Стиль содержимого вкладки */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 65%;
+    border-left: none;
+    height: 300px;
+}
+</style>
+</head>
+<body>
+
+<p>Нажмите на кнопки внутри меню с вкладками:</p>
+
+<div class="tab">
+  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Лондон</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Paris')">Париж</a>
+  <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Tokyo')">Токио</a>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>Лондон</h3>
+  <p>Лондон - это столица Англии.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Париж</h3>
+  <p>Париж - это столица Франции.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Токио</h3>
+  <p>Токио - это столица Японии.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+// Получите элемент с id = "defaultOpen" и кликните по нему.
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 

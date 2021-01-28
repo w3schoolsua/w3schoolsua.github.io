@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title>Галлерея портфолио на сайте. Как сделать? W3Schools на русском</title>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <style>
+        * {box-sizing: border-box;}
+        body {background-color: #f1f1f1;padding: 15px;font-family: Arial, sans-serif;}
+        /* центрирование веб-сайта */
+        .main {max-width: 1000px;margin: auto;}
+        h1 {font-size: 50px;word-break: break-all;}
+        .row {margin: 10px -16px;}
+        /* Добавить padding МЕЖДУ каждым столбцом */
+        .row,.row > .column {padding: 8px;}
+        /* Создайте три равных столбца, которые плавают рядом друг с другом */
+        .column {float: left;width: 50%;display: none; /* Скрыть все элементы по умолчанию */}
+        /* Очистить флоаты после строк */
+        .row:after {content: "";display: table;clear: both;}
+        /* Содержимое */
+        .content {background-color: white;padding: 10px 10px 1px 10px;}
+        /* Класс "show" добавлен к отфильтрованным элементам */
+        .show {display: block;}
+        /* Стиль кнопок */
+        .btn {margin-top: 4px;border: none;outline: none;padding: 12px 16px;background-color: white;cursor: pointer;font-size:14px;}
+        .btn:hover, .active {background-color: #666;color:white;}
+    </style>
+<body>
+<!--Главная (центр веб-сайта)-->
+<div class="main">
+    <h3 style="margin-bottom:14px">Галлерея портфолио</h3>
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Показать все</button>
+        <button class="btn" onclick="filterSelection('nature')"> Природа</button>
+        <button class="btn" onclick="filterSelection('cars')"> Автомобили</button>
+        <button class="btn" onclick="filterSelection('people')"> Люди</button>
+    </div>
+    <!-- Сетка галереи портфолио -->
+    <div class="row">
+        <div class="column nature">
+            <div class="content">
+                <img src="../images/mountains.jpg" alt="Горы" style="width:100%">
+                <h4>Горы</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <div class="column cars">
+            <div class="content">
+                <img src="../images/cars2.jpg" alt="Автомобили" style="width:100%">
+                <h4>Быстрые</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+
+        <div class="column cars">
+            <div class="content">
+                <img src="../images/cars1.jpg" alt="Автомобили" style="width:100%">
+                <h4>Ретро</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <div class="column nature">
+            <div class="content">
+                <img src="../images/lights.jpg" alt="Сияние" style="width:100%">
+                <h4>Сияние</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+
+        <div class="column people">
+            <div class="content">
+                <img src="../images/people1.jpg" alt="Девушка" style="width:100%">
+                <h4>Девушка</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <div class="column people">
+            <div class="content">
+                <img src="../images/people2.jpg" alt="Человек" style="width:100%">
+                <h4>Человек</h4>
+                <p>Lorem ipsum dolor..</p>
+            </div>
+        </div>
+        <!-- END GRID -->
+    </div>
+
+    <!-- END MAIN -->
+</div>
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+    }
+    function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+    }
+    function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+    // Добавить активный класс к текущей кнопке (выделить его)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+</script>
+</body>
+</html>

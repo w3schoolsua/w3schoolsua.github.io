@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title>Форма регистрации на сайте. Как сделать? W3Schools на русском</title>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <style>
+        h1 {text-align: center; margin: 0;}
+        p {text-align: center;font-size: 2.2em;margin: 0;}
+    </style>
+<body>
+<h1>Сколько осталось Путину?</h1>
+<p id="demo"></p>
+<script>
+    // Установите дату, до которой ведётся отсчет
+    var countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
+
+    // Обновляйте обратный отсчет каждую секунду
+    var x = setInterval(function() {
+
+        // Получите сегодняшнюю дату и время
+        var now = new Date().getTime();
+
+        // Найдите расстояние между настоящим моментом и датой обратного отсчета
+        var distance = countDownDate - now;
+
+        // Расчет времени в днях, часах, минутах и секундах
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Выведите результат в элементе с id="demo"
+        document.getElementById("demo").innerHTML = days + " дней " + hours + " часов "
+            + minutes + " минут " + seconds + " секунд ";
+
+        // Если обратный отсчет закончился, напишите текст
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "ВРЕМЯ ВЫШЛО...";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>

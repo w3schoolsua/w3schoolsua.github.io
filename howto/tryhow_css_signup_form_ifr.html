@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title>Форма регистрации на сайте. Как сделать? W3Schools на русском</title>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<style>
+    body {font-family: Arial, Helvetica, sans-serif; background-color: #474e5d;}
+    * {box-sizing: border-box;}
+    /* Поля ввода полной ширины */
+    .modal input[type=text], .modal input[type=password] {
+        width:100%;padding:15px;margin:5px 0 22px 0;display:inline-block;border: none;background: #f1f1f1;}
+    /* Добавить цвет фона, когда входы получают фокус */
+    .modal input[type=text]:focus, .modal input[type=password]:focus {background-color: #ddd;outline: none;}
+    /* Установить стиль для всех кнопок */
+    .modal button {background-color: #4CAF50;color: white;padding: 14px 20px;margin: 8px 0;border: none;cursor: pointer;width: 100%;opacity: 0.9;}
+    .modal button:hover {opacity:1;}
+    .modal {background-color: white;}
+    /* Дополнительные стили для кнопки cancel */
+    .modal .cancelbtn {padding: 14px 20px;background-color: #f44336;}
+    /* Разместите кнопки cancel и регистрации и добавьте одинаковую ширину */
+    .modal .cancelbtn, .modal .signupbtn {float: left;width: 50%;}
+    /* Добавить отступы к элементам контейнера */
+    .modal .container {padding: 16px;}
+    /* Стиль горизонтальной линейки */
+    .modal hr {border: 1px solid #f1f1f1;margin-bottom: 25px;}
+    /* Очистка флоатов */
+    .modal .clearfix::after {content: "";clear: both;display: table;}
+    /* Измените стили для кнопки отмены и кнопки регистрации на очень маленьких экранах */
+    @media screen and (max-width: 300px) {.modal .cancelbtn, .modal .signupbtn {width: 100%;}}
+</style>
+<body>
+
+<div id="id01" class="modal" style="width:90%;margin:30px auto;">
+    <div class="container">
+        <h1>Регистрация</h1>
+        <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+        <hr>
+        <label><b>Email</b></label>
+        <input type="text" placeholder="Ввести Email" name="email" required>
+        <label><b>Password</b></label>
+        <input type="text" placeholder="Ввести пароль" name="psw" required>
+        <label style="user-select:none">
+            <input type="checkbox" checked="checked" style="margin-bottom:15px;user-select:none"> Запомнить меня
+        </label>
+        <p>Создавая учетную запись, вы соглашаетесь с нашими <a href="javascript:void(0)" style="color:dodgerblue">Условия и конфиденциальность</a>.</p>
+        <div class="clearfix">
+            <button type="button" class="cancelbtn">Отмена</button>
+            <button type="button" class="signupbtn">Войти</button>
+        </div>
+    </div>
+</div>
+<script>
+    // Получить модал
+    var modal = document.getElementById('id01');
+    // Когда пользователь кликает где-нибудь за пределами модального окна, оно закрывается.
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
