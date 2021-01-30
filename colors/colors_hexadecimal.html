@@ -24,8 +24,8 @@
             text-align:center;display:none;position:absolute;top:-14px;left:-2px;
         }
         .pointer div{
-            background-color:#fff;
-            border:1px solid #aaa;
+            background-color:#ffffff;
+            border:1px solid #aaaaaa;
             height:24px;
             width:40px;
             padding:2px 4px;
@@ -33,16 +33,16 @@
             text-align:center;
             top:-14px;
             left:-15px;
-            color:#000;
+            color:#000000;
             border-radius:4px;
             font:14px verdana;
         }
         .pointer div::selection {
-            color: #000;
-            background: #fff;
+            color: #000000;
+            background: #ffffff;
         }
         .pointer i{
-            color:#aaa
+            color:#aaaaaa
         }
         @media screen and (max-width:600px) {
             .colorinput {
@@ -365,24 +365,24 @@
         <div class='w3-col l10 m12' id='main'>
             <a href='index.html'><img src='../svg/colors_icon.svg' alt='Кольори в HTML. Уроки для початківців' class='w3-left w3-padding' title='Кольори на веб-сторінках. Підручник для початківців. W3Schools українською' width='90'></a>
 <article>
-    <h1><span class="color_h1">RGB Кольори</span></h1>
+    <h1><span class="color_h1">HEX Кольори</span></h1>
 
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="colors_converter.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="colors_hexadecimal.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="colors_rgb.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="colors_hsl.html">Next &#10095;</a>
     </div>
     <br>
     <div class="w3-container w3-padding-large" style="background-color:#f1f1f1;border:1px solid #d3d3d3;">
-        <h2>RGB Калькулятор</h2>
+        <h2>HEX Калькулятор</h2>
         <br>
         <div class="w3-row">
-            <div class="w3-col m7" id="result01" style="background-color:rgb(255,0,0);height:200px"></div>
+            <div class="w3-col m7" id="result01" style="background-color:#ff0000;height:200px"></div>
             <div class="w3-col m1">&nbsp;</div>
             <div class="w3-col m4">
                 <div class="w3-large" style="font-family:Consolas, 'courier new';bottom:10px;">
-                    <input id="rgb01" type="text" class="w3-input w3-border" onchange="setFullColor()" onkeydown="submitOnEnter(event)">
-                    <div id="hex01" class="w3-margin-top">#ff0000</div>
-                    <div id="hsl01" class="w3-margin-top">hsl(0, 100%, 50%)</div>
+                    <input id="hex01" type="text" class="w3-input w3-border" onchange="setFullColor()" onkeydown="submitOnEnter(event)">
+                    <div id="rgb01" class="w3-margin-top">rgb(255, 0, 0)#000000</div>
+                    <div id="hsl01" class="w3-margin-top">hsl(0, 0%, 0%)</div>
                 </div>
             </div>
         </div>
@@ -391,7 +391,8 @@
         <div class="w3-row">
             <div class="w3-col colorinput">
                 <div style="width:30px;float:left;">R:</div>
-                <input type="number" style="padding-left:6px;width:70px;" id="r01" oninput="setColor(this)" onchange="setColor(this)" value="255">
+                <input type="number" id="r01Num" tabindex="-1" aria-hidden="true" oninput="numberValue(this)" onchange="numberValue(this)" style="padding-left:0;width:30px;margin-left:40px;position:absolute;background-color:transparent;border-color:transparent;color:transparent;" value="255">
+                <input type="text" style="padding-left:6px;width:70px;" id="r01" oninput="setColor()" onchange="setColor()" value="ff">
             </div>
             <div class="w3-rest colorslider">
                 <div id="redtable"></div>
@@ -400,7 +401,8 @@
         <div class="w3-row">
             <div class="w3-col colorinput">
                 <div style="width:30px;float:left;">G:</div>
-                <input type="number" style="padding-left:6px;width:70px;" id="g01" oninput="setColor(this)" onchange="setColor(this)" value="0">
+                <input type="number" id="g01Num" tabindex="-1" aria-hidden="true" oninput="numberValue(this)" onchange="numberValue(this)" style="padding-left:0;width:30px;margin-left:40px;position:absolute;background-color:transparent;border-color:transparent;color:transparent;" value="0">
+                <input type="text" style="padding-left:6px;width:70px;" id="g01" oninput="setColor()" onchange="setColor()" value="00">
             </div>
             <div class="w3-rest colorslider">
                 <div id="greentable"></div>
@@ -409,7 +411,8 @@
         <div class="w3-row">
             <div class="w3-col colorinput">
                 <div style="width:30px;float:left;">B:</div>
-                <input type="number" style="padding-left:6px;width:70px;" id="b01" oninput="setColor(this)" onchange="setColor(this)" value="0">
+                <input type="number" id="b01Num" tabindex="-1" aria-hidden="true" oninput="numberValue(this)" onchange="numberValue(this)" style="padding-left:0;width:30px;margin-left:40px;position:absolute;background-color:transparent;border-color:transparent;color:transparent;" value="0">
+                <input type="text" style="padding-left:6px;width:70px;" id="b01" oninput="setColor()" onchange="setColor()" value="00">
             </div>
             <div class="w3-rest colorslider">
                 <div id="bluetable"></div>
@@ -419,11 +422,12 @@
     </div>
 
     <hr>
-    <h2>RGB Кольори</h2>
-    <p>Значення кольору RGB підтримуються у всіх браузерах.</p>
-    <p>Значення кольору RGB вказано за допомогою: rgb(red, green, blue).</p>
-    <p>Кожен параметр (red - червоний, green - зелений та blue - синій) визначає інтенсивність кольору як ціле число від 0 до 255.</p>
-    <p>Наприклад, rgb(0,0,255) відображається як синій, оскільки для синього параметра встановлено найвище значення (255), а для інших - 0.</p>
+    <h2>Шістнадцяткові кольори</h2>
+    <p>Шістнадцяткові значення кольору також підтримуються у всіх браузерах.</p>
+    <p>Шістнадцятковий колір позначається символом: #RRGGBB.</p>
+    <p>RR (red), GG (green) та BB (blue) є шістнадцятковими цілими числами від 00 до FF, що вказують інтенсивність кольору.</p>
+    <p>Наприклад, #0000FF відображається як синій, оскільки для синього компонента встановлено найвище значення (FF), а для інших - 00.</p>
+
     <script>
         function submitOnEnter(e) {
             keyboardKey = e.which || e.keyCode;
@@ -431,39 +435,53 @@
                 setFullColor();
             }
         }
+        function numberValue(elmnt) {
+            var val, x;
+            val = Number(elmnt.value);
+            if (val < 0) {val = 0;}
+            if (val > 255) {val = 255;}
+            val = toHex(val);
+            x = document.getElementById(elmnt.id.substr(0, 3));
+            x.value = val;
+            setColor();
+        }
+        function toHex(n) {
+            var hex = n.toString(16);
+            while (hex.length < 2) {hex = "0" + hex; }
+            return hex;
+        }
         function clickRed(red) {
             var r = document.getElementById("r01");
             r.value = red;
-            setColor(r);
+            setColor();
         }
         function clickGreen(green) {
             var g = document.getElementById("g01");
             g.value = green;
-            setColor(g);
+            setColor();
         }
         function clickBlue(blue) {
             var b = document.getElementById("b01");
             b.value = blue;
-            setColor(b);
+            setColor();
         }
         function drawRedTable() {
             var x, i, n, g, b;
-            g = 0;
-            b = 0;
+            g = "00";
+            b = "00";
             x = "<table class='tableslider'>"
             x += "<tr>";
             n = 0;
             for (i = 0; i <= 255; i++) {
-                n = i;
-                x += "<td";
-                x += " style='position:relative;padding:0;'><div class='pointer' id='redpointer" + n + "'><div>" + n + "</div><i class='fa fa-caret-down'></i></div></td>";
+                n = toHex(i);
+                x += "<td style='position:relative;padding:0;'><div class='pointer red' id='redpointer" + n + "'><div>" + n + "</div><i class='fa fa-caret-down'></i></div></td>";
             }
             x += "</tr>";
             x += "<tr>";
             n = 0;
             for (i = 0; i <= 255; i++) {
-                n = i;
-                x += "<td style='background-color:rgb(" + n + "," + g + "," + b + ");height:22px;padding:0;' onmousemove='tooltip(0, " + n + ")' onclick='clickRed(" + n + ")'></td>";
+                n = toHex(i);
+                x += "<td style='background-color:#" + n + g + b + ";height:22px;padding:0;' onmousemove='tooltip(0, \"" + n + "\")' onclick='clickRed(\"" + n + "\")'></td>";
             }
             x += "</tr>";
             x += "</table>";
@@ -471,34 +489,38 @@
         }
         function drawGreenTable() {
             var x, i, r, b;
-            r = 0;
-            b = 0;
+            r = "00";
+            b = "00";
             x = "<table class='tableslider'>"
             x += "<tr>";
             for (i = 0; i <= 255; i++) {
-                x += "<td style='position:relative;padding:0;'><div class='pointer' id='greenpointer" + i + "'><div>" + i + "</div><i class='fa fa-caret-down'></i></div></td>";
+                n = toHex(i);
+                x += "<td style='position:relative;padding:0;'><div class='pointer' id='greenpointer" + n + "'><div>" + n + "</div><i class='fa fa-caret-down'></i></div></td>";
             }
             x += "</tr>";
             x += "<tr>";
             for (i = 0; i <= 255; i++) {
-                x += "<td style='background-color: rgb(" + r + ", " + i + "," + b + ");height:22px;padding:0;' onmousemove='tooltip(1, " + i + ")' onclick='clickGreen(" + i + ")'></td>";
+                n = toHex(i);
+                x += "<td onmousemove='tooltip(1, \"" + n + "\")' onclick='clickGreen(\"" + n + "\")' style='padding:0;height:22px;background-color:#" + r + n + b + "'></td>";
             }
             x += "</tr></table>";
             document.getElementById("greentable").innerHTML = x;
         }
         function drawBlueTable() {
             var x, i, r, g;
-            r = 0;
-            g = 0;
+            r = "00";
+            g = "00";
             x = "<table class='tableslider'>"
             x += "<tr>";
             for (i = 0; i <= 255; i++) {
-                x += "<td style='position:relative;padding:0;'><div class='pointer' id='bluepointer" + i + "'><div>" + i + "</div><i class='fa fa-caret-down'></i></div></td>";
+                n = toHex(i);
+                x += "<td style='position:relative;padding:0;'><div class='pointer' id='bluepointer" + n + "'><div>" + n + "</div><i class='fa fa-caret-down'></i></div></td>";
             }
             x += "</tr>";
             x += "<tr>";
             for (i = 0; i <= 255; i++) {
-                x += "<td style='background-color: rgb(" + r + "," + g + "," + i + ");height:22px;padding:0;' onmousemove='tooltip(2, " + i + ")' onclick='clickBlue(" + i + ")'></td>";
+                n = toHex(i);
+                x += "<td onmousemove='tooltip(2, \"" + n + "\")' onclick='clickBlue(\"" + n + "\")' style='padding:0;height:22px;background-color:#" + r + g + n + "'></td>";
             }
             x += "</tr></table>";
             document.getElementById("bluetable").innerHTML = x;
@@ -507,10 +529,10 @@
         drawGreenTable(0);
         drawBlueTable(0);
     </script>
-    <hr>
 
+    <hr>
     <h2>Спробуйте самі</h2>
-    <p>Значення кольору RGB підтримуються у всіх основних браузерах.</p>
+    <p>Шістнадцяткові значення кольору підтримуються у всіх браузерах.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate">
@@ -518,20 +540,21 @@
                 &lt;style&gt;<br>
             </div>
             <div class="cssHigh">
-                div {<br>&nbsp;&nbsp;&nbsp; background-color: rgb(0, 191, 255);<br>&nbsp;&nbsp;&nbsp; color: rgb(255, 255, 255);<br>}<br>
+                div {<br>&nbsp;&nbsp;&nbsp; background-color: #00bfff;<br>&nbsp;&nbsp;&nbsp; color: #ffffff;<br>}<br>
             </div>
             <div class="htmlHigh">
                 &lt;/style&gt;
             </div>
         </div>
         <br>
-        <a class="w3-btn w3-margin-bottom" href="../colorstryit/trycolors_rgb.html" target="_blank">Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../colorstryit/trycolors_hex.html" target="_blank">Спробуйте самі &raquo;</a>
     </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="colors_converter.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="colors_hexadecimal.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="colors_rgb.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="colors_hsl.html">Next &#10095;</a>
     </div>
+
     <script>
         var btnclck = false;
         if (window.addEventListener) {
@@ -551,44 +574,63 @@
                 if (e == 1) { x = document.getElementById("g01"); }
                 if (e == 2) { x = document.getElementById("b01"); }
                 x.value = n;
-                setColor(x);
+                setColor();
             }
         }
-        function setColor(elmnt) {
-            var ele, col, r, g, b, rgb;
+        function setColor() {
+            var ele, col, r, g, b, rgb, rval, gval, bval,n;
             r = document.getElementById("r01");
             g = document.getElementById("g01");
             b = document.getElementById("b01");
-            elmnt.value = Number(elmnt.value);
-            if (parseInt(elmnt.value) < 0) {elmnt.value = "0";}
-            if (parseInt(elmnt.value) > 255) {elmnt.value = "255";}
-            rgb = w3color("rgb(" + r.value + ", " + g.value + ", " + b.value + ")");
+            rval = r.value;
+            gval = g.value;
+            bval = b.value;
+            if (rval == "") rval = "0";
+            if (gval == "") gval = "0";
+            if (bval == "") bval = "0";
+            while (rval.length < 2) {rval = rval + rval;}
+            while (gval.length < 2) {gval = gval + gval;}
+            while (bval.length < 2) {bval = bval + bval;}
+            if (parseInt(rval, 16) < 0) {rval = "0"; r.value = rval;}
+            if (parseInt(rval, 16) > 255) {rval = "ff"; r.value = rval;}
+            if (parseInt(gval, 16) < 0) {gval = "0"; g.value = gval;}
+            if (parseInt(gval, 16) > 255) {gval = "ff"; g.value = gval;}
+            if (parseInt(bval, 16) < 0) {bval = "0"; b.value = bval;}
+            if (parseInt(bval, 16) > 255) {bval = "ff"; b.value = bval;}
+            rgb = w3color("#" + rval + gval + bval);
             document.getElementById("result01").style.backgroundColor = rgb.toRgbString();
-            document.getElementById("rgb01").value = rgb.toRgbString();
+            document.getElementById("rgb01").innerHTML = rgb.toRgbString();
             document.getElementById("hsl01").innerHTML = rgb.toHslString();
-            document.getElementById("hex01").innerHTML = rgb.toHexString();
+            document.getElementById("hex01").value = rgb.toHexString();
+            document.getElementById("r01Num").value = parseInt(rval, 16);
+            document.getElementById("g01Num").value = parseInt(gval, 16);
+            document.getElementById("b01Num").value = parseInt(bval, 16);
             for (i = 0; i <= 255; i++) {
-                document.getElementById("redpointer" + i).style.display = "none";
+                n = toHex(i);
+                document.getElementById("redpointer" + n).style.display = "none";
             }
             for (i = 0; i <= 255; i++) {
-                document.getElementById("greenpointer" + i).style.display = "none";
-                document.getElementById("bluepointer" + i).style.display = "none";
+                n = toHex(i);
+                document.getElementById("greenpointer" + n).style.display = "none";
+                document.getElementById("bluepointer" + n).style.display = "none";
             }
-            document.getElementById("redpointer" + r.value).style.display = "inline";
-            document.getElementById("greenpointer" + g.value).style.display = "inline";
-            document.getElementById("bluepointer" + b.value).style.display = "inline";
+            if (!document.getElementById("redpointer" + rval)) {rval = "00";}
+            if (!document.getElementById("redpointer" + gval)) {gval = "00";}
+            if (!document.getElementById("redpointer" + bval)) {bval = "00";}
+            document.getElementById("redpointer" + rval).style.display = "inline";
+            document.getElementById("greenpointer" + gval).style.display = "inline";
+            document.getElementById("bluepointer" + bval).style.display = "inline";
             document.getElementById("linktocp").innerHTML = "<hr style='border-color:#dfdfdf'><p><a href='colors_picker.html?colorhex=" + rgb.toHexString().substr(1) + "'>Використовуйте цей колір у нашій Палітрі кольорів</a></p>";
         }
         function setFullColor() {
-            var color = w3color(document.getElementById("rgb01").value);
-            var rgb = color.toRgb();
-            document.getElementById("r01").value = rgb.r;
-            document.getElementById("g01").value = rgb.g;
-            document.getElementById("b01").value = rgb.b;
-            setColor(document.getElementById("r01"));
+            color = w3color(document.getElementById("hex01").value);
+            document.getElementById("r01").value = color.toHexString().substr(1,2);
+            document.getElementById("g01").value = color.toHexString().substr(3,2);
+            document.getElementById("b01").value = color.toHexString().substr(5,2);
+            setColor();
         }
         color = w3color("ff0000");
-        document.getElementById("rgb01").value = color.toRgbString();
+        document.getElementById("hex01").value = color.toHexString();
         setFullColor();
     </script>
 </article>
