@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--Exercise_script1-->
+<script src="../scripts/exercise_script1.js"></script>
+<!--/Exercise_script1-->
+<html lang="uk">
+<head>
+  <title>Вправа v3.0</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../cdn/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/w3.css">
+  <link rel="stylesheet" href="../lib/codemirror.css">
+  <script src="../lib/codemirror.js"></script>
+  <!--Exercise_script2-->
+  <script src="../scripts/exercise_script2.js"></script>
+  <!--/Exercise_script2-->
+  <!--Exercise_style1-->
+  <link rel="stylesheet" href="../styles/exercise_style1.css">
+  <!--/Exercise_style1-->
+
+  <!--[if IE]>
+  <style>
+    #textareaCode, #iframeResult, #textareaCode2, #iframeResult2 {height:400px;}
+    td {vertical-align:top;}
+  </style>
+  <![endif]-->
+  <!--Exercise_script3-->
+  <script src="../scripts/exercise_script3.js"></script>
+  <!--/Exercise_script3-->
+
+  <meta property="og:url" content="https://w3schoolsua.github.io/html/exercise.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="W3Schools HTML Вправа" />
+  <meta property="og:description" content="Виконання всіх HTML вправ на W3Schools" />
+</head>
+<body>
+
+<table style="width:100%;height:100%;background-color:#f1f1f1;position:absolute;overflow:auto;min-height:650px;">
+  <tr>
+    <td id="topTD">
+      <div id="menubtn"  class="fa fa-bars" onclick="open_menu()" onmouseover="showtooltip(0)" onmouseout="hidetooltip(0)" ontouchstart="open_menu();return false;"></div>
+      <div class="tooltip" style="top:65px;">Меню</div>
+      <div style="height:90px;">
+        <div style="position:absolute;">
+          <div id='tryitLeaderboard' style="height:90px;text-align:center;background-color:#ffffff">
+            <!-- TryitLeaderboard -->
+            <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+            <div id="snhb-try_it_leaderboard-0"></div>
+            <!--adspace tryit-->
+          </div>
+        </div>
+      </div>
+      <div>
+        <div id="codeCheckWarning">
+          <div id="closeCodeCheckWarning" onclick="codeCheckWarningClose()">&times;</div>
+          <div id="codeCheckWarningText" class="checkText"></div>
+        </div>
+        <div id="codeCheckCorrect">
+          <div id="closeCodeCheckCorrect" onclick="codeCheckCorrectClose()">&times;</div>
+          <div class="checkText">Вірно!</div>
+        </div>
+        <!-----------Exercise start------------->
+        <h1>Вправа:</h1>
+    <div id="assignmenttext" style='display:none'>
+      <p>Перетворіть елемент нижче у посилання, яке спрямовує на "https://www.w3schools.com".</p>
+
+<div id="assignmentcode">
+&lt;a @(5)"https://www.w3schools.com">This is a link&lt;/a>
+</div>
+
+<div id="correctcode">
+&lt;a href="https://www.w3schools.com">This is a link&lt;/a>
+</div>
+
+    </div>
+        <div id="blueprint"></div>
+        <!-----------Exercise end------------->
+        <div style="position:relative;width:100%;">
+          <div id="assignmentNotCorrect" onclick="closeNotCorrect(event)">
+            <h2>Не вірно</h2>
+            <p>Клікніть <u>тут</u> щоб спробувати ще.</p>
+          </div>
+          <div id="assignmentCorrect" onclick="nextexercise()">
+            <h2>Вірно!</h2>
+            <span style="cursor:pointer" id="correctnextbtn">Далі &#10095;</span>
+          </div>
+
+          <div id="assignmentcontainer" style="overflow:auto;padding-top:30px;"></div>
+          <div id="showcorrectanswercontainer" style="overflow:auto;padding-top:30px;"></div>
+
+          <button class="w3-btn showanswerbutton hide-from-small" type="button" onclick="showanswer();snhb.startAuction(['try_it_leaderboard']);">Показати відповідь</button>
+          <button class="w3-btn hideanswerbutton hide-from-small" style="display:none;" type="button" onclick="hideanswer();snhb.startAuction(['try_it_leaderboard']);">Сховати відповідь</button>
+        </div>
+
+        <br>
+        <div id="answerbuttoncontainer">
+          <button id="answerbutton" class="w3-btn" style="padding:20px;" type="button" onclick="checkassignmentcode();snhb.startAuction(['try_it_leaderboard']);">Надіслати відповідь &#10095;</button>
+          <button class="w3-btn showanswerbutton hide-from-large" type="button" onclick="showanswer();snhb.startAuction(['try_it_leaderboard']);">Показати відповідь</button>
+          <button class="w3-btn hideanswerbutton hide-from-large" style="display:none;" type="button" onclick="hideanswer();snhb.startAuction(['try_it_leaderboard']);">Сховати відповідь</button>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <!--Exercise_style2-->
+        <link rel="stylesheet" href="../styles/exercise_style2.css">
+        <!--/Exercise_style2-->
+
+        <!--Exercise_script4-->
+        <script src="../scripts/exercise_script4.js"></script>
+        <!--/Exercise_script4-->
+
+      </div>
+    </td>
+  </tr>
+
+</table>
+<div id="exercisemenu" class="exercisemenu">
+
+  <div style="width:260px;background-color:#f1f1f1;border-right:1px solid #dddddd;overflow:auto;padding:10px 5px;">
+    <div style="float:left;width:75px">
+      <a href="../index.html" target="_blank"><span class="menubtn fa fa-home" onmouseover="showtooltip(1)" onmouseout="hidetooltip(1)" ontouchstart="location='../index.html';return false;"></span></a>
+      <div class="tooltip">Перейти на w3schools</div>
+    </div>
+    <div style="float:left;width:100px;text-align:center;">
+      <span onclick="modalReset()" class="menubtn fa fa fa-trash" onmouseover="showtooltip(2)" onmouseout="hidetooltip(2)" ontouchstart="modalReset();return false;"></span>
+      <div class="tooltip" style="left:80px;">Скинути рахунок</div>
+    </div>
+    <div style="float:left; width:74px;text-align:right;">
+      <span onclick="close_menu()" class="menubtn fa fa-close" onmouseover="showtooltip(3)" onmouseout="hidetooltip(3)" ontouchstart="close_menu();return false;"></span>
+      <div class="tooltip" style="right:10px;">Закрити це меню</div>
+    </div>
+  </div>
+  <div style="padding-left:28px;background-color:#888888;">
+    <p id="completedExercisesNo">&nbsp;</p>
+
+  </div>
+  <div class="exercisemenuinner">
+    <div><div onclick='openmenuitems(0)' class='exmenuitemheader active'>
+      <i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Атрибути </div>
+      <div class='exmenulinks'>
+        <a class='exbtn' href='exercise4b52.html?filename=exercise_html_attributes1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exerciseae16.html?filename=exercise_html_attributes2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn active' href='exercise072d.html?filename=exercise_html_attributes3'><i class='fa fa-check active'></i> Вправа 3</a>
+        <a class='exbtn' href='exercise918a.html?filename=exercise_html_attributes4'><i class='fa fa-check'></i> Вправа 4</a>
+        <a class='exbtn' href='../html/html_attributes.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Атрибути</a>
+      </div></div>
+    <div><div onclick='openmenuitems(1)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Заголовки </div>
+      <div class='exmenulinks'>
+        <a class='exbtn' href='exercise6937.html?filename=exercise_html_headings1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exercisee5dc.html?filename=exercise_html_headings2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn' href='exercise62bf.html?filename=exercise_html_headings3'><i class='fa fa-check'></i> Вправа 3</a>
+        <a class='exbtn' href='exercisea758.html?filename=exercise_html_headings4'><i class='fa fa-check'></i> Вправа 4</a>
+        <a class='exbtn' href='../html/html_headings.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Заголовки</a>
+      </div></div>
+    <div><div onclick='openmenuitems(2)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Параграфи </div>
+      <div class='exmenulinks'>
+        <a class='exbtn' href='exerciseff3a.html?filename=exercise_html_paragraphs1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exercise9bba.html?filename=exercise_html_paragraphs2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn' href='exercisea598.html?filename=exercise_html_paragraphs3'><i class='fa fa-check'></i> Вправа 3</a>
+        <a class='exbtn' href='exercisefee4.html?filename=exercise_html_paragraphs4'><i class='fa fa-check'></i> Вправа 4</a>
+        <a class='exbtn' href='../html/html_paragraphs.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Параграфи</a>
+      </div></div>
+    <div><div onclick='openmenuitems(3)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Стилі </div>
+      <div class='exmenulinks'>
+        <a class='exbtn' href='exercisee6ea.html?filename=exercise_html_styles1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exercise1286.html?filename=exercise_html_styles2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn' href='exercisea76b.html?filename=exercise_html_styles3'><i class='fa fa-check'></i> Вправа 3</a>
+        <a class='exbtn' href='exercise582c.html?filename=exercise_html_styles4'><i class='fa fa-check'></i> Вправа 4</a>
+        <a class='exbtn' href='exercise75c1.html?filename=exercise_html_styles5'><i class='fa fa-check'></i> Вправа 5</a>
+        <a class='exbtn' href='exercise398c.html?filename=exercise_html_styles6'><i class='fa fa-check'></i> Вправа 6</a>
+        <a class='exbtn' href='../html/html_styles.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Стилі</a></div></div>
+    <div><div onclick='openmenuitems(4)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Форматування </div>
+      <div class='exmenulinks'>
+        <a class='exbtn' href='exercisece34.html?filename=exercise_html_formatting1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exercised3e1.html?filename=exercise_html_formatting2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn' href='exercisebd07.html?filename=exercise_html_formatting3'><i class='fa fa-check'></i> Вправа 3</a>
+        <a class='exbtn' href='exercise2d57.html?filename=exercise_html_formatting4'><i class='fa fa-check'></i> Вправа 4</a>
+        <a class='exbtn' href='exercise5eaf.html?filename=exercise_html_formatting5'><i class='fa fa-check'></i> Вправа 5</a>
+        <a class='exbtn' href='../html/html_formatting.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Форматування</a></div></div>
+    <div><div onclick='openmenuitems(5)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Цитати </div>
+      <div class='exmenulinks'>
+        <a class='exbtn' href='exercise35ad.html?filename=exercise_html_quotation_elements1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exercised1ac.html?filename=exercise_html_quotation_elements2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn' href='exercise0b81.html?filename=exercise_html_quotation_elements3'><i class='fa fa-check'></i> Вправа 3</a>
+        <a class='exbtn' href='exercisecbfb.html?filename=exercise_html_quotation_elements4'><i class='fa fa-check'></i> Вправа 4</a>
+        <a class='exbtn' href='../html/html_quotation_elements.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Цитати</a></div></div>
+    <div><div onclick='openmenuitems(6)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Коментарі </div>
+      <div class='exmenulinks'>
+        <a class='exbtn' href='exercisecedc.html?filename=exercise_html_comments1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exercise1281.html?filename=exercise_html_comments2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn' href='../html/html_comments.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Коментарі</a></div></div>
+    <div><div onclick='openmenuitems(7)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML CSS </div>
+      <div class='exmenulinks'><a class='exbtn' href='exercise1132.html?filename=exercise_html_css1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exercise72d2.html?filename=exercise_html_css2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn' href='exercise2dbe.html?filename=exercise_html_css3'><i class='fa fa-check'></i> Вправа 3</a>
+        <a class='exbtn' href='exerciseddc2.html?filename=exercise_html_css4'><i class='fa fa-check'></i> Вправа 4</a>
+        <a class='exbtn' href='exercisebf01.html?filename=exercise_html_css5'><i class='fa fa-check'></i> Вправа 5</a>
+        <a class='exbtn' href='exercise7b3b.html?filename=exercise_html_css6'><i class='fa fa-check'></i> Вправа 6</a>
+        <a class='exbtn' href='../html/html_css.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML CSS</a></div></div>
+    <div><div onclick='openmenuitems(8)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Посилання </div>
+      <div class='exmenulinks'>
+        <a class='exbtn' href='exercisee1fe.html?filename=exercise_html_links1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exercise5b8b.html?filename=exercise_html_links2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn' href='exercisea0e9.html?filename=exercise_html_links3'><i class='fa fa-check'></i> Вправа 3</a>
+        <a class='exbtn' href='exercise55a7.html?filename=exercise_html_links4'><i class='fa fa-check'></i> Вправа 4</a>
+        <a class='exbtn' href='exerciseb9ac.html?filename=exercise_html_links5'><i class='fa fa-check'></i> Вправа 5</a>
+        <a class='exbtn' href='../html/html_links.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Посилання</a></div></div>
+    <div><div onclick='openmenuitems(9)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Зображення </div>
+      <div class='exmenulinks'>
+        <a class='exbtn' href='exercisea5bb.html?filename=exercise_html_images1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exerciseef1d.html?filename=exercise_html_images2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn' href='exercise2a72.html?filename=exercise_html_images3'><i class='fa fa-check'></i> Вправа 3</a>
+        <a class='exbtn' href='exercisef77a.html?filename=exercise_html_images4'><i class='fa fa-check'></i> Вправа 4</a>
+        <a class='exbtn' href='exercise8ec2.html?filename=exercise_html_images5'><i class='fa fa-check'></i> Вправа 5</a>
+        <a class='exbtn' href='exercise9f12.html?filename=exercise_html_images6'><i class='fa fa-check'></i> Вправа 6</a>
+        <a class='exbtn' href='../html/html_images.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Зображення</a></div></div>
+    <div><div onclick='openmenuitems(10)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Таблиці </div>
+      <div class='exmenulinks'>
+        <a class='exbtn' href='exercise5d81.html?filename=exercise_html_tables1'><i class='fa fa-check'></i> Вправа 1</a>
+        <a class='exbtn' href='exercise7f6e.html?filename=exercise_html_tables2'><i class='fa fa-check'></i> Вправа 2</a>
+        <a class='exbtn' href='exerciseed08.html?filename=exercise_html_tables3'><i class='fa fa-check'></i> Вправа 3</a>
+        <a class='exbtn' href='exercisecc51.html?filename=exercise_html_tables4'><i class='fa fa-check'></i> Вправа 4</a>
+        <a class='exbtn' href='exercisebcc1.html?filename=exercise_html_tables5'><i class='fa fa-check'></i> Вправа 5</a>
+        <a class='exbtn' href='exercise1aa7.html?filename=exercise_html_tables6'><i class='fa fa-check'></i> Вправа 6</a>
+        <a class='exbtn' href='../html/html_tables.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Таблиці</a></div></div>
+    <div><div onclick='openmenuitems(11)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Списки </div>
+
+    <div class='exmenulinks'><a class='exbtn' href='exercise7ed4.html?filename=exercise_html_lists1'><i class='fa fa-check'></i> Вправа 1</a><a class='exbtn' href='exercise4a19.html?filename=exercise_html_lists2'><i class='fa fa-check'></i> Вправа 2</a><a class='exbtn' href='exerciseb134.html?filename=exercise_html_lists3'><i class='fa fa-check'></i> Вправа 3</a><a class='exbtn' href='exercise4b82.html?filename=exercise_html_lists4'><i class='fa fa-check'></i> Вправа 4</a><a class='exbtn' href='exerciseba7e.html?filename=exercise_html_lists5'><i class='fa fa-check'></i> Вправа 5</a><a class='exbtn' href='exercisecfa8.html?filename=exercise_html_lists6'><i class='fa fa-check'></i> Вправа 6</a><a class='exbtn' href='../html/html_lists.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на HTML підручник Списки</a></div></div><div><div onclick='openmenuitems(12)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Класи </div><div class='exmenulinks'><a class='exbtn' href='exercise401c.html?filename=exercise_html_classes1'><i class='fa fa-check'></i> Вправа 1</a><a class='exbtn' href='exercise22cf.html?filename=exercise_html_classes2'><i class='fa fa-check'></i> Вправа 2</a><a class='exbtn' href='exercisece3b.html?filename=exercise_html_classes3'><i class='fa fa-check'></i> Вправа 3</a><a class='exbtn' href='../html/html_classes.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Класи</a></div></div><div><div onclick='openmenuitems(13)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Id </div><div class='exmenulinks'><a class='exbtn' href='exercise4d98.html?filename=exercise_html_id1'><i class='fa fa-check'></i> Вправа 1</a><a class='exbtn' href='exercise55c7.html?filename=exercise_html_id2'><i class='fa fa-check'></i> Вправа 2</a><a class='exbtn' href='../html/html_id.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Id</a></div></div><div><div onclick='openmenuitems(14)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Фрейми </div><div class='exmenulinks'><a class='exbtn' href='exercise4b21.html?filename=exercise_html_iframe1'><i class='fa fa-check'></i> Вправа 1</a><a class='exbtn' href='exercise0157.html?filename=exercise_html_iframe2'><i class='fa fa-check'></i> Вправа 2</a><a class='exbtn' href='exercise5cd9.html?filename=exercise_html_iframe3'><i class='fa fa-check'></i> Вправа 3</a><a class='exbtn' href='exercisef2dd.html?filename=exercise_html_iframe4'><i class='fa fa-check'></i> Вправа 4</a><a class='exbtn' href='../html/html_iframe.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Фрейми</a></div></div><div><div onclick='openmenuitems(15)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Скрипти </div><div class='exmenulinks'><a class='exbtn' href='exercisee464.html?filename=exercise_html_scripts1'><i class='fa fa-check'></i> Вправа 1</a><a class='exbtn' href='exercisecf42.html?filename=exercise_html_scripts2'><i class='fa fa-check'></i> Вправа 2</a><a class='exbtn' href='exerciseae8e.html?filename=exercise_html_scripts3'><i class='fa fa-check'></i> Вправа 3</a><a class='exbtn' href='exerciseec74.html?filename=exercise_html_scripts4'><i class='fa fa-check'></i> Вправа 4</a><a class='exbtn' href='../html/html_scripts.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Скрипти</a></div></div><div><div onclick='openmenuitems(16)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Комп'ютерний код </div><div class='exmenulinks'><a class='exbtn' href='exercise2b97.html?filename=exercise_html_computercode_elements1'><i class='fa fa-check'></i> Вправа 1</a><a class='exbtn' href='exercisef221.html?filename=exercise_html_computercode_elements2'><i class='fa fa-check'></i> Вправа 2</a><a class='exbtn' href='exercise3c6e.html?filename=exercise_html_computercode_elements3'><i class='fa fa-check'></i> Вправа 3</a><a class='exbtn' href='../html/html_computercode_elements.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Комп'ютерний код</a></div></div><div><div onclick='openmenuitems(17)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Форми </div><div class='exmenulinks'><a class='exbtn' href='exercise5b43.html?filename=exercise_html_forms1'><i class='fa fa-check'></i> Вправа 1</a><a class='exbtn' href='exerciseda77.html?filename=exercise_html_forms2'><i class='fa fa-check'></i> Вправа 2</a><a class='exbtn' href='exercisedcce.html?filename=exercise_html_forms3'><i class='fa fa-check'></i> Вправа 3</a><a class='exbtn' href='exercisea32d.html?filename=exercise_html_forms4'><i class='fa fa-check'></i> Вправа 4</a><a class='exbtn' href='../html/html_forms.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Форми</a></div></div><div><div onclick='openmenuitems(18)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Елементи форм </div><div class='exmenulinks'><a class='exbtn' href='exercise4c42.html?filename=exercise_html_form_elements1'><i class='fa fa-check'></i> Вправа 1</a><a class='exbtn' href='exerciseee7e.html?filename=exercise_html_form_elements2'><i class='fa fa-check'></i> Вправа 2</a><a class='exbtn' href='exercise3a64.html?filename=exercise_html_form_elements3'><i class='fa fa-check'></i> Вправа 3</a><a class='exbtn' href='../html/html_form_elements.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Елементи форм</a></div></div><div><div onclick='openmenuitems(19)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Типи вводу </div><div class='exmenulinks'><a class='exbtn' href='exercise308e.html?filename=exercise_html_form_input_types1'><i class='fa fa-check'></i> Вправа 1</a><a class='exbtn' href='exercisecab2.html?filename=exercise_html_form_input_types2'><i class='fa fa-check'></i> Вправа 2</a><a class='exbtn' href='exercisef978.html?filename=exercise_html_form_input_types3'><i class='fa fa-check'></i> Вправа 3</a><a class='exbtn' href='exercisefbbe.html?filename=exercise_html_form_input_types4'><i class='fa fa-check'></i> Вправа 4</a><a class='exbtn' href='exerciseb409.html?filename=exercise_html_form_input_types5'><i class='fa fa-check'></i> Вправа 5</a><a class='exbtn' href='../html/html_form_input_types.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Типи вводу</a></div></div><div><div onclick='openmenuitems(20)' class='exmenuitemheader'><i style='position:absolute;left:224px;padding-top:4px;' class='fa fa-check'></i>HTML Атрибути форм </div><div class='exmenulinks'><a class='exbtn' href='exerciseb58d.html?filename=exercise_html_form_attributes1'><i class='fa fa-check'></i> Вправа 1</a><a class='exbtn' href='exercise1e1d.html?filename=exercise_html_form_attributes2'><i class='fa fa-check'></i> Вправа 2</a><a class='exbtn' href='exercise4179.html?filename=exercise_html_form_attributes3'><i class='fa fa-check'></i> Вправа 3</a><a class='exbtn' href='exercise5a7c.html?filename=exercise_html_form_attributes4'><i class='fa fa-check'></i> Вправа 4</a><a class='exbtn' href='../html/html_form_attributes.html' target='_blank' style='font-size:80%;text-decoration:underline;'>Перейти на підручник HTML Атрибути форм</a></div></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+<!--Exercise_script5-->
+<script src="../scripts/exercise_script5.js"></script>
+<!--/Exercise_script5-->
+
+<div id="id01" class="w3-modal" style="z-index:3;">
+  <div class="w3-modal-content w3-card-4 w3-center">
+    <header class="w3-container w3-display-container">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <h2>Скинути результат?</h2>
+    </header>
+    <div class="w3-container w3-padding">
+      <p>Це скине результат ВСІХ 90 вправ.</p>
+      <p>Ви впевнені, що хочете продовжити?</p>
+      <br>
+      <button class="w3-btn" onclick="resetScore()">Скинути</button>
+      <button class="w3-btn" onclick="document.getElementById('id01').style.display='none'">Вийти</button>
+    </div>
+    <br>
+  </div>
+</div>
+
+<div id="id02" class="w3-modal" style="z-index:3;">
+  <div class="w3-modal-content w3-card-4 w3-padding w3-center">
+    <header class="w3-container w3-display-container">
+      <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <h2>Вітаємо!</h2>
+    </header>
+    <div class="w3-container w3-padding">
+      <h3>Ви закінчили всі 90 вправ HTML.</h3>
+      <p>Поділіться своїми балами на Facebook:</p>
+      <a href="https://www.facebook.com/sharer.php?u=https://w3schoolsua.github.io/html/exercise.html" target="_blank" title="Facebook"><span style="color:#3B5998;" class="fa fa-facebook-square fa-2x"></span></a>
+      <br>
+      <hr>
+      <h3>Отримати Сертифікат!</h3>
+      <p>Отримайте ваш сертифікат розробника HTML, щоб довести, що ви володієте основними знаннями веб-розробки за допомогою HTML.</p>
+      <br>
+      <button class="w3-btn" onclick="window.location = '../cert/cert_html_new.html'">Отримати сертифікат негайно!</button>
+      <br>
+      <hr>
+      <br>
+      <br>
+      <br>
+      <button class="w3-btn" onclick="document.getElementById('id02').style.display='none'">Закрити</button>
+    </div>
+    <br>
+  </div>
+</div>
+</body>
+</html>
