@@ -1,0 +1,195 @@
+/* HTML5 ✰ Boilerplate, natch. */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}body{font:13px/1.231 sans-serif;*font-size:small}select,input,textarea,button{font:99% sans-serif}pre,code,kbd,samp{font-family:monospace,sans-serif}body,select,input,textarea{color:#444}h1,h2,h3,h4,h5,h6{font-weight:bold}html{overflow-y:scroll}a:hover,a:active{outline:none}a,a:active,a:visited{color:#607890}a:hover{color:#036}ul,ol{margin-left:0}ol{list-style-type:decimal}nav ul,nav li{margin:0}small{font-size:85%}strong,th{font-weight:bold}td{vertical-align:top}sub,sup{font-size:75%;line-height:0;position:relative}sup{top:-0.5em}sub{bottom:-0.25em}pre{white-space:pre;white-space:pre-line;word-wrap:break-word;padding:15px}textarea{overflow:auto}.ie6 legend,.ie7 legend{margin-left:-7px}input[type="radio"]{vertical-align:text-bottom}input[type="checkbox"]{vertical-align:bottom}.ie7 input[type="checkbox"]{vertical-align:baseline}.ie6 input{vertical-align:text-bottom}label,input[type="button"],input[type="submit"],input[type="image"],button{cursor:pointer}button,input,select,textarea{margin:0}input:invalid,textarea:invalid{border-radius:1px;-moz-box-shadow:0 0 5px red;-webkit-box-shadow:0 0 5px red;box-shadow:0 0 5px red}.no-boxshadow input:invalid,.no-boxshadow textarea:invalid{background-color:#f0dddd}::-moz-selection{background:#ff5e99;color:#fff;text-shadow:none}::selection{background:#ff5e99;color:#fff;text-shadow:none}a:link{-webkit-tap-highlight-color:#ff5e99}button{width:auto;overflow:visible}.ie7 img{-ms-interpolation-mode:bicubic}.ir{display:block;text-indent:-999em;overflow:hidden;background-repeat:no-repeat;text-align:left;direction:ltr}.hidden{display:none;visibility:hidden}.visuallyhidden{border:0!important;clip:rect(0 0 0 0);height:1px!important;margin:-1px!important;overflow:hidden!important;padding:0!important;position:absolute!important;width:1px!important}.invisible{visibility:hidden}.clearfix:before,.clearfix:after{content:"\0020";display:block;height:0;visibility:hidden}.clearfix:after{clear:both}.clearfix{zoom:1}
+
+/* Primary Styles
+   Authors: Divya Manian, Paul Irish, and everyone else keen on getting W3Schools less popular or more correct
+*/
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('../lib/fonts/League_Gothic-webfont.eot');
+    src: local('☺'), url('../lib/fonts/League_Gothic-webfont.woff') format('woff'), url('../lib/fonts/League_Gothic-webfont.ttf') format('truetype'), url('../svg/League_Gothic-webfont.svg#webfontFHzvtkso') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::selection      { background-color: hsl(15, 84%, 30%); }
+::-moz-selection { background-color: hsl(15, 84%, 30%); }
+
+html {
+    background-color: hsl(42, 21%, 85%);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(5%, hsla(40, 29%, 73%, 0.2)), color-stop(5%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: linear-gradient(top, hsla(40, 29%, 73%, 0.2) 5%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 100%);
+    background-size: 100% 24px;
+    background-position: center;
+}
+
+
+body { font: 16px/1.5 Georgia, "Times New Roman", Times, serif; }
+
+a, a:visited, a:active { text-decoration: none; }
+
+ol ul li { list-style: none; }
+
+section li code a {
+    font-weight: bold;
+    font-family: monospace, sans-serif;
+}
+
+header h1 b, h2, .belief, .sucks h3 {
+    font-family: 'LeagueGothicRegular', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header h1 b { display: block; }
+
+header { text-align: center; text-transform: uppercase; }
+
+header h2:before {
+    content: "✪ · ✪ · ✪ · ✪ · ✪";
+    text-shadow: none;
+    display: block;
+    text-align: center;
+}
+
+.content, .intro p, .sucks li, .sucks .intro p, .intro .update, .sucks .intro blockquote { _width: 800px; min-width: 60%; max-width: 800px; margin: 0 auto; }
+
+#contributors {
+    padding-left: 10em;
+    position: relative;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+#contributors h2 { left: 0; }
+#contributors a:after { content: ", "; }
+#contributors a:last-child:after { content: "."; }
+#contributors span.at { font-size: 65%; opacity: 0.65; -webkit-transition: 0.2s; pointer-events: none;}
+#contributors a:hover span.at { opacity: 1; }
+#contributors a {
+    display: inline-block;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+#contributors a:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+footer { text-align: center; }
+
+section li blockquote, section li a { font-family: sans-serif; }
+
+blockquote { border-left: 3px solid; padding-left: 1em; }
+
+* html .heart { display: none; /* Плохо, плохо, IE 6 не люблю! */ }
+
+/*
+COLORS!
+*/
+h1 b, h2, .sucks h3, #toc a.active { color: hsl(15, 84%, 30%); }
+a, a:visited, a:active { color: hsl(41, 88%, 27%); }
+a:hover { color: hsl(20, 80%, 30%); }
+
+header, header h2{ color: hsl(15, 84%, 10%); }
+header h2:before { color: hsl(15, 84%, 30%); }
+
+header h1 b { text-shadow: hsl(15, 84%, 10%) 1px 1px, hsl(15, 84%, 10%) 2px 2px, hsl(15, 84%, 10%) 3px 3px, hsl(15, 84%, 10%) 4px 4px; }
+
+h2, h3 { text-shadow: hsl(15, 84%, 10%) 1px 1px, hsl(15, 84%, 10%) 2px 2px; }
+header, header h2 { text-shadow: hsl(15, 84%, 30%) 1px 1px; }
+
+.intro  {
+    background: hsla(42, 21%, 55%, 0.2);
+    outline: 1px dotted hsla(42, 21%, 55%, 0.5);
+}
+
+.heart {
+    font-size: 60px;
+}
+
+/*
+VERTICAL RHYTHM
+*/
+#container { padding-bottom: 3em; }
+header { margin: 6em 0 4.5em 0; }
+header h1 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 1em 0;
+}
+header h1 b { font-size: 4em; line-height: 1; }
+
+header h2 { font-size: 1em; line-height: 1.5; }
+header h2:before { height: 3em; }
+
+h2 {
+    font-size: 2em;
+    line-height: 1;
+}
+
+#main h2 { margin-top: 1.5em; }
+#contributors h2 { margin-top: 0.5em; _padding-left: -10em; _position: relative; }
+
+h4 {
+    font-size: 1.2em;
+    line-height: 1.25;
+    margin: 1.25em 0;
+}
+
+pre, p, li { padding: 0; }
+pre code { line-height: 1.875em; padding: 0.9375em 0 0.9375em 0.9375em; font-size: 1em; }
+
+p { margin: 1.5em 0; }
+li { margin: 0.5em; }
+p:last-of-type, li:last-of-type { margin-bottom: 0; }
+
+
+.intro {
+    padding: 1.5em 1.5em 0 1.5em;
+    outline-offset: -0.25em;
+    margin-bottom: 1.5em;
+}
+
+.intro p { margin-bottom: 1.5em; }
+
+.belief {
+    padding: 0.75em 0;
+    outline-offset: -0.1em;
+    font-size: 2em;
+}
+
+.belief p { margin: 0; }
+
+footer {
+    font-size: 0.8em;
+    line-height: 1.875;
+    margin: 5.675em 0 1.875em 0;
+}
+
+blockquote,
+.intro small,
+
+.intro p:last-child { padding-bottom: 1.5em; margin-bottom: 0; }
+
+p + blockquote {
+    margin-top: -0.9375em;
+    margin-bottom: 0.9375em;
+    padding-bottom: 0;
+}
+
+/* нет любви к IE6 .. БУКВАЛЬНО */
+.heart { _display: none;}
+
+.no-list-style {
+    list-style:none;
+}
+
+@media screen and (max-device-width: 480px) {
+    #toc { position: relative; top: 0; bottom: auto; }
+}
+@media print {
+    body { content: "какого черта ты пытаешься это напечатать, братан ??"; }
+}
