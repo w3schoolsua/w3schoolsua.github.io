@@ -1,0 +1,4580 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML Підтримка браузерів. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Підтримка браузерами специфікації HTML5. Chrome, Edge/Internet Explorer, Firefox, Safari, Opera. Всі HTML-елементи. Довідник. Уроки для початківців. W3Schools українською'>
+<link rel='stylesheet' href='../styles/browserref.css'>
+
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'><script async src='https://cse.google.com/cse.js?cx=018292901867315999508:ykn8f9viuuv'></script><div class='gcse-search'></div></div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Підручник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>ЯК ЗРОБИТИ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Підручник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Підручник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Штучний інтелект</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../cert/index.html'>Веб-сертифікати</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu-->
+<!--Left menu sidebar -->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+      <!--<a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+        <h2 class='left'><span class='left_h2'>HTML</span> Довідник</h2>
+        <a target='_top' href='index.html'>HTML Теги по алфавіту</a>
+        <a target='_top' href='ref_byfunc.html'>HTML Теги по категорії</a>
+        <a target='_top' href='ref_html_browsersupport.html'>HTML Підтримка браузерів</a>
+        <a target='_top' href='ref_attributes.html'>HTML Атрибути</a>
+        <a target='_top' href='ref_standardattributes.html'>HTML Глобальні атрибути</a>
+        <a target='_top' href='ref_eventattributes.html'>HTML Атрибути подій</a>
+        <a target='_top' href='ref_colornames.html'>HTML Кольори</a>
+        <a target='_top' href='ref_canvas.html'>HTML Canvas</a>
+        <a target='_top' href='ref_av_dom.html'>HTML Аудіо/Відео</a>
+        <a target='_top' href='ref_charactersets.html'>HTML Набори символів</a>
+        <a target='_top' href='ref_html_dtd.html'>HTML Doctype</a>
+        <a target='_top' href='ref_urlencode.html'>HTML URL кодування</a>
+        <a target='_top' href='ref_language_codes.html'>HTML Коди мов</a>
+        <a target='_top' href='ref_country_codes.html'>HTML Коди країн</a>
+        <a target='_top' href='ref_httpmessages.html'>HTTP Повідомлення</a>
+        <a target='_top' href='ref_httpmethods.html'>HTTP Методи</a>
+        <a target='_top' href='ref_pxtoemconversion.html'>PX в EM Конвертер</a>
+        <a target='_top' href='ref_keyboardshortcuts.html'>Гарячі клавіши</a>
+        <br>
+        <div class='notranslate'>
+            <h2 class='left'><span class='left_h2'>HTML</span> Теги</h2>
+            <a target='_top' href='tag_comment.html'>&lt;!--&gt;</a>
+            <a target='_top' href='tag_doctype.html'>&lt;!DOCTYPE&gt;</a>
+            <a target='_top' href='tag_a.html'>&lt;a&gt;</a>
+            <a target='_top' href='tag_abbr.html'>&lt;abbr&gt;</a>
+            <a target='_top' href='tag_acronym.html'>&lt;acronym&gt;</a>
+            <a target='_top' href='tag_address.html'>&lt;address&gt;</a>
+            <a target='_top' href='tag_applet.html'>&lt;applet&gt;</a>
+            <a target='_top' href='tag_area.html'>&lt;area&gt;</a>
+            <a target='_top' href='tag_article.html'>&lt;article&gt;</a>
+            <a target='_top' href='tag_aside.html'>&lt;aside&gt;</a>
+            <a target='_top' href='tag_audio.html'>&lt;audio&gt;</a>
+            <a target='_top' href='tag_b.html'>&lt;b&gt;</a>
+            <a target='_top' href='tag_base.html'>&lt;base&gt;</a>
+            <a target='_top' href='tag_basefont.html'>&lt;basefont&gt;</a>
+            <a target='_top' href='tag_bdi.html'>&lt;bdi&gt;</a>
+            <a target='_top' href='tag_bdo.html'>&lt;bdo&gt;</a>
+            <a target='_top' href='tag_big.html'>&lt;big&gt;</a>
+            <a target='_top' href='tag_blockquote.html'>&lt;blockquote&gt;</a>
+            <a target='_top' href='tag_body.html'>&lt;body&gt;</a>
+            <a target='_top' href='tag_br.html'>&lt;br&gt;</a>
+            <a target='_top' href='tag_button.html'>&lt;button&gt;</a>
+            <a target='_top' href='tag_canvas.html'>&lt;canvas&gt;</a>
+            <a target='_top' href='tag_caption.html'>&lt;caption&gt;</a>
+            <a target='_top' href='tag_center.html'>&lt;center&gt;</a>
+            <a target='_top' href='tag_cite.html'>&lt;cite&gt;</a>
+            <a target='_top' href='tag_code.html'>&lt;code&gt;</a>
+            <a target='_top' href='tag_col.html'>&lt;col&gt;</a>
+            <a target='_top' href='tag_colgroup.html'>&lt;colgroup&gt;</a>
+            <a target='_top' href='tag_data.html'>&lt;data&gt;</a>
+            <a target='_top' href='tag_datalist.html'>&lt;datalist&gt;</a>
+            <a target='_top' href='tag_dd.html'>&lt;dd&gt;</a>
+            <a target='_top' href='tag_del.html'>&lt;del&gt;</a>
+            <a target='_top' href='tag_details.html'>&lt;details&gt;</a>
+            <a target='_top' href='tag_dfn.html'>&lt;dfn&gt;</a>
+            <a target='_top' href='tag_dialog.html'>&lt;dialog&gt;</a>
+            <a target='_top' href='tag_dir.html'>&lt;dir&gt;</a>
+            <a target='_top' href='tag_div.html'>&lt;div&gt;</a>
+            <a target='_top' href='tag_dl.html'>&lt;dl&gt;</a>
+            <a target='_top' href='tag_dt.html'>&lt;dt&gt;</a>
+            <a target='_top' href='tag_em.html'>&lt;em&gt;</a>
+            <a target='_top' href='tag_embed.html'>&lt;embed&gt;</a>
+            <a target='_top' href='tag_fieldset.html'>&lt;fieldset&gt;</a>
+            <a target='_top' href='tag_figcaption.html'>&lt;figcaption&gt;</a>
+            <a target='_top' href='tag_figure.html'>&lt;figure&gt;</a>
+            <a target='_top' href='tag_font.html'>&lt;font&gt;</a>
+            <a target='_top' href='tag_footer.html'>&lt;footer&gt;</a>
+            <a target='_top' href='tag_form.html'>&lt;form&gt;</a>
+            <a target='_top' href='tag_frame.html'>&lt;frame&gt;</a>
+            <a target='_top' href='tag_frameset.html'>&lt;frameset&gt;</a>
+            <a target='_top' href='tag_hn.html'>&lt;h1&gt; - &lt;h6&gt;</a>
+            <a target='_top' href='tag_head.html'>&lt;head&gt;</a>
+            <a target='_top' href='tag_header.html'>&lt;header&gt;</a>
+            <a target='_top' href='tag_hr.html'>&lt;hr&gt;</a>
+            <a target='_top' href='tag_html.html'>&lt;html&gt;</a>
+            <a target='_top' href='tag_i.html'>&lt;i&gt;</a>
+            <a target='_top' href='tag_iframe.html'>&lt;iframe&gt;</a>
+            <a target='_top' href='tag_img.html'>&lt;img&gt;</a>
+            <a target='_top' href='tag_input.html'>&lt;input&gt;</a>
+            <a target='_top' href='tag_ins.html'>&lt;ins&gt;</a>
+            <a target='_top' href='tag_kbd.html'>&lt;kbd&gt;</a>
+            <a target='_top' href='tag_label.html'>&lt;label&gt;</a>
+            <a target='_top' href='tag_legend.html'>&lt;legend&gt;</a>
+            <a target='_top' href='tag_li.html'>&lt;li&gt;</a>
+            <a target='_top' href='tag_link.html'>&lt;link&gt;</a>
+            <a target='_top' href='tag_main.html'>&lt;main&gt;</a>
+            <a target='_top' href='tag_map.html'>&lt;map&gt;</a>
+            <a target='_top' href='tag_mark.html'>&lt;mark&gt;</a>
+            <a target='_top' href='tag_meta.html'>&lt;meta&gt;</a>
+            <a target='_top' href='tag_meter.html'>&lt;meter&gt;</a>
+            <a target='_top' href='tag_nav.html'>&lt;nav&gt;</a>
+            <a target='_top' href='tag_noframes.html'>&lt;noframes&gt;</a>
+            <a target='_top' href='tag_noscript.html'>&lt;noscript&gt;</a>
+            <a target='_top' href='tag_object.html'>&lt;object&gt;</a>
+            <a target='_top' href='tag_ol.html'>&lt;ol&gt;</a>
+            <a target='_top' href='tag_optgroup.html'>&lt;optgroup&gt;</a>
+            <a target='_top' href='tag_option.html'>&lt;option&gt;</a>
+            <a target='_top' href='tag_output.html'>&lt;output&gt;</a>
+            <a target='_top' href='tag_p.html'>&lt;p&gt;</a>
+            <a target='_top' href='tag_param.html'>&lt;param&gt;</a>
+            <a target='_top' href='tag_picture.html'>&lt;picture&gt;</a>
+            <a target='_top' href='tag_pre.html'>&lt;pre&gt;</a>
+            <a target='_top' href='tag_progress.html'>&lt;progress&gt;</a>
+            <a target='_top' href='tag_q.html'>&lt;q&gt;</a>
+            <a target='_top' href='tag_rp.html'>&lt;rp&gt;</a>
+            <a target='_top' href='tag_rt.html'>&lt;rt&gt;</a>
+            <a target='_top' href='tag_ruby.html'>&lt;ruby&gt;</a>
+            <a target='_top' href='tag_s.html'>&lt;s&gt;</a>
+            <a target='_top' href='tag_samp.html'>&lt;samp&gt;</a>
+            <a target='_top' href='tag_script.html'>&lt;script&gt;</a>
+            <a target='_top' href='tag_section.html'>&lt;section&gt;</a>
+            <a target='_top' href='tag_select.html'>&lt;select&gt;</a>
+            <a target='_top' href='tag_small.html'>&lt;small&gt;</a>
+            <a target='_top' href='tag_source.html'>&lt;source&gt;</a>
+            <a target='_top' href='tag_span.html'>&lt;span&gt;</a>
+            <a target='_top' href='tag_strike.html'>&lt;strike&gt;</a>
+            <a target='_top' href='tag_strong.html'>&lt;strong&gt;</a>
+            <a target='_top' href='tag_style.html'>&lt;style&gt;</a>
+            <a target='_top' href='tag_sub.html'>&lt;sub&gt;</a>
+            <a target='_top' href='tag_summary.html'>&lt;summary&gt;</a>
+            <a target='_top' href='tag_sup.html'>&lt;sup&gt;</a>
+            <a target='_top' href='tag_svg.html'>&lt;svg&gt;</a>
+            <a target='_top' href='tag_table.html'>&lt;table&gt;</a>
+            <a target='_top' href='tag_tbody.html'>&lt;tbody&gt;</a>
+            <a target='_top' href='tag_td.html'>&lt;td&gt;</a>
+            <a target='_top' href='tag_template.html'>&lt;template&gt;</a>
+            <a target='_top' href='tag_textarea.html'>&lt;textarea&gt;</a>
+            <a target='_top' href='tag_tfoot.html'>&lt;tfoot&gt;</a>
+            <a target='_top' href='tag_th.html'>&lt;th&gt;</a>
+            <a target='_top' href='tag_thead.html'>&lt;thead&gt;</a>
+            <a target='_top' href='tag_time.html'>&lt;time&gt;</a>
+            <a target='_top' href='tag_title.html'>&lt;title&gt;</a>
+            <a target='_top' href='tag_tr.html'>&lt;tr&gt;</a>
+            <a target='_top' href='tag_track.html'>&lt;track&gt;</a>
+            <a target='_top' href='tag_tt.html'>&lt;tt&gt;</a>
+            <a target='_top' href='tag_u.html'>&lt;u&gt;</a>
+            <a target='_top' href='tag_ul.html'>&lt;ul&gt;</a>
+            <a target='_top' href='tag_var.html'>&lt;var&gt;</a>
+            <a target='_top' href='tag_video.html'>&lt;video&gt;</a>
+            <a target='_top' href='tag_wbr.html'>&lt;wbr&gt;</a>
+        </div>
+      <br><br>
+    </div>
+  </div>
+</div>
+<!--/Left menu sidebar --><!--CONTENT Tags-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver">Place for your advertisement!</div>
+            <a href='index.html'><img src='../svg/html5_icon1.svg' alt='HTML5. W3Schools українською. Повний довідник тегів' class='w3-left w3-padding' title='Всі HTML теги. W3Schools українською' style='width: 90px'></a>
+<p class='w3-right'>
+    <a href="ref_html_browsersupport_en.html" title='Перейти на англійську мову'>En</a>
+</p>
+<article>
+  <h1>HTML <span class="color_h1">Довідник - Підтримка браузерів</span></h1>
+  <div class="w3-clear nextprev">
+    <a class="w3-left w3-btn" href="ref_byfunc.html">&#10094; Prev</a>
+    <a class="w3-right w3-btn" href="ref_attributes.html">Next &#10095;</a>
+  </div>
+  <hr>
+  <h2>HTML Довідник по підтримці браузерів</h2>
+  <p>В таблиці нижче перераховані всі <strong>HTML-елементи та їх атрибути</strong>, а також <strong>підтримка браузерами</strong>:</p>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_a.html"><big><b>&lt;a&gt;</b></big></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_a_download.html">download</a></td>
+      <td>14.0</td>
+      <td>18.0</td>
+      <td>20.0</td>
+      <td>10.1</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_a_href.html">href</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_a_hreflang.html">hreflang</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_a_media.html">media</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_a_ping.html">ping</a></td>
+      <td>Yes</td>
+      <td><span class="deprecated">No</span></td>
+      <td>Yes</td>
+      <td><span class="deprecated">No</span></td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_a_referrepolicy.html">referrerpolicy</a></td>
+      <td>51.0</td>
+      <td>79.0</td>
+      <td>50.0</td>
+      <td>11.1</td>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_a_rel.html">rel</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_a_target.html">target</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_a_type.html">type</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_abbr.html"><b>&lt;abbr&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_address.html"><b>&lt;address&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_area.html"><b>&lt;area&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_alt.html">alt</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_coords.html">coords</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_download.html">download</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_href.html">href</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_hreflang.html">hreflang</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_media.html">media</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_referrepolicy.html">referrerpolicy</a></td>
+      <td>51.0</td>
+      <td>79.0</td>
+      <td>50.0</td>
+      <td>11.1</td>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_rel.html">rel</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_shape.html">shape</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_target.html">target</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_area_type.html">type</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_article.html"><b>&lt;article&gt;</b></a></td>
+      <td>6.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>11.1</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_aside.html"><b>&lt;aside&gt;</b></a></td>
+      <td>6.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>11.1</td>
+    </tr>
+  </table>
+  <br>
+
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_audio.html"><b>&lt;audio&gt;</b></a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>4.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_audio_autoplay.html">autoplay</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>4.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_audio_controls.html">controls</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>4.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_audio_loop.html">loop</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>4.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_audio_muted.html">muted</a></td>
+      <td>4.0</td>
+      <td>10.0</td>
+      <td>11.0</td>
+      <td>7.1</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_audio_preload.html">preload</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_audio_src.html">src</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>4.0</td>
+      <td>11.5</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_b.html"><b>&lt;b&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_base.html"><b>&lt;base&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_base_href.html">href</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_base_target.html">target</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_bdi.html"><b>&lt;bdi&gt;</b></a></td>
+      <td>16.0</td>
+      <td>79.0</td>
+      <td>10.0</td>
+      <td><span class="deprecated">No</span></td>
+      <td>15.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_bdo.html"><b>&lt;bdo&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_bdo_dir.html">dir</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_blockquote.html"><b>&lt;blockquote&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_blockquote_cite.html">cite</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_body.html"><b>&lt;body&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_br.html"><b>&lt;br&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_button.html"><b>&lt;button&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_autofocus.html">autofocus</a></td>
+      <td>5.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>9.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_disabled.html">disabled</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_form.html">form</a></td>
+      <td>10.0</td>
+      <td>16.0</td>
+      <td>4.0</td>
+      <td>5.1</td>
+      <td>9.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_formaction.html">formaction</a></td>
+      <td>9.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>5.1</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_formenctype.html">
+          formenctype</a></td>
+      <td>9.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>5.1</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_formmethod.html">formmethod</a></td>
+      <td>9.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>5.1</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_formnovalidate.html">
+          formnovalidate</a></td>
+      <td>6.0</td>
+      <td>11.0</td>
+      <td>4.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_formtarget.html">formtarget</a></td>
+      <td>9.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>5.1</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_name.html">name</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_type.html">type</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_button_value.html">value</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_canvas.html"><b>&lt;canvas&gt;</b></a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>2.0</td>
+      <td>3.1</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_canvas_height.html">height</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>2.0</td>
+      <td>3.1</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_canvas_width.html">width</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>2.0</td>
+      <td>3.1</td>
+      <td>9.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_caption.html"><b>&lt;caption&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_cite.html"><b>&lt;cite&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_code.html"><b>&lt;code&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_col.html"><b>&lt;col&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_col_span.html">span</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_colgroup.html"><b>&lt;colgroup&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_colgroup_span.html">span</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_data.html"><b>&lt;data&gt;</b></a></td>
+      <td>62.0</td>
+      <td>13.0</td>
+      <td>22.0</td>
+      <td><span class="deprecated">No</span></td>
+      <td>49.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">value</td>
+      <td>62.0</td>
+      <td>13.0</td>
+      <td>22.0</td>
+      <td><span class="deprecated">No</span></td>
+      <td>49.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_datalist.html"><b>&lt;datalist&gt;</b></a></td>
+      <td>20.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>12.1</td>
+      <td>9.5</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_dd.html"><b>&lt;dd&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_del.html"><b>&lt;del&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_del_cite.html">cite</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_del_datetime.html">datetime</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_details.html"><b>&lt;details&gt;</b></a></td>
+      <td>12.0&nbsp;</td>
+      <td>79.0</td>
+      <td>49.0</td>
+      <td>6.0</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_details_open.html">open</a></td>
+      <td>12.0</td>
+      <td>79.0</td>
+      <td>49.0</td>
+      <td>6.0</td>
+      <td>15.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_dfn.html"><b>&lt;dfn&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_dialog.html"><b>&lt;dialog&gt;</b></a></td>
+      <td>37.0</td>
+      <td>79.0</td>
+      <td>53.0*</td>
+      <td><span class="deprecated">No</span></td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_dialog_open.html">open</a></td>
+      <td>37.0</td>
+      <td>79.0</td>
+      <td>53.0*</td>
+      <td><span class="deprecated">No</span></td>
+      <td>24.0</td>
+    </tr>
+  </table>
+  <p>* Not supported by default, but can be enabled in about:config (set dom.dialog_element.enabled to true).</p>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_div.html"><b>&lt;div&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_dl.html"><b>&lt;dl&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_dt.html"><b>&lt;dt&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_em.html"><b>&lt;em&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_embed.html"><b>&lt;embed&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_embed_height.html">height</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_embed_src.html">src</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_embed_type.html">type</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_embed_width.html">width</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_fieldset.html"><b>&lt;fieldset&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_fieldset_disabled.html">disabled</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>6.0</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_fieldset_form.html">form</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_fieldset_name.html">name</a></td>
+      <td>Yes</td>
+      <td>11.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_figcaption.html"><b>&lt;figcaption&gt;</b></a></td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>5.1</td>
+      <td>11.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_figure.html"><b>&lt;figure&gt;</b></a></td>
+      <td>8.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>5.1</td>
+      <td>11.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_footer.html"><b>&lt;footer&gt;</b></a></td>
+      <td>5.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>11.1</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_form.html"><b>&lt;form&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_form_accept_charset.html">
+          accept-charset</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_form_action.html">action</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_form_autocomplete.html">
+          autocomplete</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>4.0</td>
+      <td>5.2</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_form_enctype.html">enctype</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_form_method.html">method</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_form_name.html">name</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_form_novalidate.html">novalidate</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>10.1</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_form_rel.html">rel</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_form_target.html">target</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_hn.html"><b>&lt;h1&gt; - &lt;h6&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_head.html"><b>&lt;head&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_header.html"><b>&lt;header&gt;</b></a></td>
+      <td>5.0&nbsp;</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>11.1</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_hr.html"><b>&lt;hr&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_html.html"><b>&lt;html&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_html_xmlns.html">xmlns</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_i.html"><b>&lt;i&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_iframe.html"><b>&lt;iframe&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">allow</td>
+      <td>60.0</td>
+      <td>79.0</td>
+      <td>74.0</td>
+      <td>11.1</td>
+      <td>47.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">allowfullscreen</td>
+      <td>27.0</td>
+      <td>11.0 -ms-</td>
+      <td>18.0</td>
+      <td>7.0</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">allowpaymentrequest</td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_iframe_height.html">height</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_iframe_name.html">name</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_iframe_referrerpolicy.html">referrerpolicy</a></td>
+      <td>51.0</td>
+      <td>79.0</td>
+      <td>50.0</td>
+      <td>11.1</td>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_iframe_sandbox.html">sandbox</a></td>
+      <td>4.0</td>
+      <td>10.0</td>
+      <td>17.0</td>
+      <td>5.0</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_iframe_src.html">src</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_iframe_srcdoc.html">srcdoc</a></td>
+      <td>20.0</td>
+      <td>79.0</td>
+      <td>25.0</td>
+      <td>6.0</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_iframe_width.html">width</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_img.html"><b>&lt;img&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_img_alt.html">alt</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">crossorigin</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_img_height.html">height</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_img_ismap.html">ismap</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_img_loading.html">loading</a></td>
+      <td>77.0</td>
+      <td>79.0</td>
+      <td>75.0</td>
+      <td><span class="deprecated">No</span></td>
+      <td>64.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_img_longdesc.html">longdesc</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_img_referrepolicy.html">referrerpolicy</a></td>
+      <td>51.0</td>
+      <td>79.0</td>
+      <td>50.0</td>
+      <td>11.1</td>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">sizes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_img_src.html">src</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">srcset</td>
+      <td>34.0</td>
+      <td>?</td>
+      <td>38.0</td>
+      <td>8.0</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_img_usemap.html">usemap</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_img_width.html">width</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_input.html"><b>&lt;input&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_accept.html">accept</a></td>
+      <td>26.0</td>
+      <td>10.0</td>
+      <td>37.0</td>
+      <td>11.1</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_alt.html">alt</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_autocomplete.html">
+          autocomplete</a></td>
+      <td>17.0</td>
+      <td>6.0</td>
+      <td>2.0</td>
+      <td>5.1</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_autofocus.html">autofocus</a></td>
+      <td>5.0</td>
+      <td>11.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>9.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_checked.html">checked</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_dirname.html">dirname</a></td>
+      <td>Yes</td>
+      <td>79.0</td>
+      <td><span class="deprecated">No</span></td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_disabled.html">disabled</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_form.html">form</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>5.1</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_formaction.html">formaction</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>Yes</td>
+      <td>5.1</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_formenctype.html">formenctype</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>Yes</td>
+      <td>5.1</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_formmethod.html">formmethod</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>Yes</td>
+      <td>5.1</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_formnovalidate.html">
+          formnovalidate</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>Yes</td>
+      <td>10.1</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_formtarget.html">formtarget</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>Yes</td>
+      <td>5.1</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_height.html">height</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>16.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_list.html">list</a></td>
+      <td>20.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td><span class="deprecated">No</span></td>
+      <td>9.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_max.html">max</a></td>
+      <td>5.0</td>
+      <td>10.0</td>
+      <td>16.0</td>
+      <td>5.1</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_maxlength.html">maxlength</a></td>
+      <td>4.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>5.1</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_min.html">min</a></td>
+      <td>5.0</td>
+      <td>10.0</td>
+      <td>16.0</td>
+      <td>5.1</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_minlength.html">minlength</a></td>
+      <td>40.0</td>
+      <td>17.0</td>
+      <td>51.0</td>
+      <td>10.1</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_multiple.html">multiple</a></td>
+      <td>6.0</td>
+      <td>10.0</td>
+      <td>3.6</td>
+      <td>5.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_name.html">name</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_pattern.html">pattern</a></td>
+      <td>5.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>10.1</td>
+      <td>9.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_placeholder.html">placeholder</a></td>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_readonly.html">readonly</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_required.html">required</a></td>
+      <td>5.0</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>10.1</td>
+      <td>9.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_size.html">size</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_src.html">src</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_step.html">step</a></td>
+      <td>6.0</td>
+      <td>10.0</td>
+      <td>16.0</td>
+      <td>5.0</td>
+      <td>10.6</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_type.html">type</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_value.html">value</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_input_width.html">width</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>16.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_ins.html"><b>&lt;ins&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_ins_cite.html">cite</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_ins_datetime.html">datetime</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_kbd.html"><b>&lt;kbd&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_label.html"><b>&lt;label&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_label_for.html">for</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_label_form.html">form</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_legend.html"><b>&lt;legend&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_li.html"><b>&lt;li&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_li_value.html">value</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_link.html"><b>&lt;link&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">crossorigin</td>
+      <td>25.0</td>
+      <td>79.0</td>
+      <td>18.0</td>
+      <td>?</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_link_href.html">href</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_link_hreflang.html">hreflang</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_link_media.html">media</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_link_referrerpolicy.html">referrerpolicy</a></td>
+      <td>51.0</td>
+      <td>79.0</td>
+      <td>50.0</td>
+      <td>11.1</td>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_link_rel.html">rel</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_link_sizes.html">sizes</a></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">title</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_link_type.html">type</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_main.html"><b>&lt;main&gt;</b></a></td>
+      <td>26.0</td>
+      <td>12.0</td>
+      <td>21.0</td>
+      <td>7.0</td>
+      <td>16.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_map.html"><b>&lt;map&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_map_name.html">name</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_mark.html"><b>&lt;mark&gt;</b></a></td>
+      <td>6.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>11.1</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_meta.html"><b>&lt;meta&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meta_charset.html">charset</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meta_content.html">content</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meta_http_equiv.html">http_equiv</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meta_name.html">name</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_meter.html"><b>&lt;meter&gt;</b></a></td>
+      <td>8.0</td>
+      <td>13.0</td>
+      <td>16.0</td>
+      <td>6.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meter_form.html">form</a></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meter_high.html">high</a></td>
+      <td>8.0</td>
+      <td>13.0</td>
+      <td>16.0</td>
+      <td>6.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meter_low.html">low</a></td>
+      <td>8.0</td>
+      <td>13.0</td>
+      <td>16.0</td>
+      <td>6.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meter_max.html">max</a></td>
+      <td>8.0</td>
+      <td>13.0</td>
+      <td>16.0</td>
+      <td>6.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meter_min.html">min</a></td>
+      <td>8.0</td>
+      <td>13.0</td>
+      <td>16.0</td>
+      <td>6.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meter_optimum.html">optimum</a></td>
+      <td>8.0</td>
+      <td>13.0</td>
+      <td>16.0</td>
+      <td>6.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_meter_value.html">value</a></td>
+      <td>8.0</td>
+      <td>13.0</td>
+      <td>16.0</td>
+      <td>6.0</td>
+      <td>11.5</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_nav.html"><b>&lt;nav&gt;</b></a></td>
+      <td>5.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>11.1</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_noscript.html"><b>&lt;noscript&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_object.html"><b>&lt;object&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_object_data.html">data</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_object_form.html">form</a></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_object_height.html">height</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_object_name.html">name</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_object_type.html">type</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_object_usemap.html">usemap</a></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td>Yes</td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_object_width.html">width</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_ol.html"><b>&lt;ol&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_ol_reversed.html">reversed</a></td>
+      <td>18.0</td>
+      <td>79.0</td>
+      <td>18.0</td>
+      <td>6.0</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_ol_start.html">start</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_ol_type.html">type</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_optgroup.html"><b>&lt;optgroup&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_optgroup_disabled.html">disabled</a></td>
+      <td>Yes</td>
+      <td>8.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_optgroup_label.html">label</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_option.html"><b>&lt;option&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_option_disabled.html">disabled</a></td>
+      <td>Yes</td>
+      <td>8.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_option_label.html">label</a></td>
+      <td>Yes</td>
+      <td>8.0</td>
+      <td><span class="deprecated">No</span></td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_option_selected.html">selected</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_option_value.html">value</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_output.html"><b>&lt;output&gt;</b></a></td>
+      <td>10.0</td>
+      <td>13.0</td>
+      <td>4.0</td>
+      <td>5.1</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_output_for.html">for</a></td>
+      <td>10.0</td>
+      <td>13.0</td>
+      <td>4.0</td>
+      <td>7.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_output_form.html">form</a></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_output_name.html">name</a></td>
+      <td>10.0</td>
+      <td>13.0</td>
+      <td>4.0</td>
+      <td>7.0</td>
+      <td>11.5</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_p.html"><b>&lt;p&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_param.html"><b>&lt;param&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_param_name.html">name</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_param_value.html">value</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_picture.html"><b>&lt;picture&gt;</b></a></td>
+      <td>38.0</td>
+      <td>13.0</td>
+      <td>38.0</td>
+      <td>9.1</td>
+      <td>25.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_pre.html"><b>&lt;pre&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_progress.html"><b>&lt;progress&gt;</b></a></td>
+      <td>8.0</td>
+      <td>10.0</td>
+      <td>16.0</td>
+      <td>6.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_progress_max.html">max</a></td>
+      <td>8.0</td>
+      <td>10.0</td>
+      <td>16.0</td>
+      <td>6.0</td>
+      <td>11.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_progress_value.html">value</a></td>
+      <td>8.0</td>
+      <td>10.0</td>
+      <td>16.0</td>
+      <td>6.0</td>
+      <td>11.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_q.html"><b>&lt;q&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_q_cite.html">cite</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_rp.html"><b>&lt;rp&gt;</b></a></td>
+      <td>5.0</td>
+      <td>5.5</td>
+      <td>38.0</td>
+      <td>5.0</td>
+      <td>15.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_rt.html"><b>&lt;rt&gt;</b></a></td>
+      <td>5.0</td>
+      <td>5.5</td>
+      <td>38.0</td>
+      <td>5.0</td>
+      <td>15.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_ruby.html"><b>&lt;ruby&gt;</b></a></td>
+      <td>5.0</td>
+      <td>5.5</td>
+      <td>38.0</td>
+      <td>5.0</td>
+      <td>15.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_s.html"><b>&lt;s&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_samp.html"><b>&lt;samp&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_script.html"><b>&lt;script&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_script_async.html">async</a></td>
+      <td>8.0</td>
+      <td>10.0</td>
+      <td>3.6</td>
+      <td>5.1</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_script_crossorigin.html">crossorigin</a></td>
+      <td>30.0</td>
+      <td>18.0</td>
+      <td>13.0</td>
+      <td>13.0</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_script_defer.html">defer</a></td>
+      <td>8.0</td>
+      <td>10.0</td>
+      <td>3.5</td>
+      <td>5.0</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_script_integrity.html">integrity</a></td>
+      <td>45.0</td>
+      <td>17.0</td>
+      <td>43.0</td>
+      <td>13.0</td>
+      <td>66.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">nomodule</td>
+      <td>61.0</td>
+      <td>16.0</td>
+      <td>60.0</td>
+      <td>11.0</td>
+      <td>48.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_script_referrepolicy.html">referrerpolicy</a></td>
+      <td>70.0</td>
+      <td>79.0</td>
+      <td>65.0</td>
+      <td><span class="deprecated">No</span></td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_script_src.html">src</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_script_type.html">type</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_section.html"><b>&lt;section&gt;</b></a></td>
+      <td>5.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>11.5</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_select.html"><b>&lt;select&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_select_autofocus.html">autofocus</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td><span class="deprecated">No</span></td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_select_disabled.html">disabled</a></td>
+      <td>Yes</td>
+      <td>9.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_select_form.html">form</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_select_multiple.html">multiple</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_select_name.html">name</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_select_required.html">required</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_select_size.html">size</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><b>&lt;slot&gt;</b></td>
+      <td>53.0</td>
+      <td>79.0</td>
+      <td>63.0</td>
+      <td>10.0</td>
+      <td>40.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_small.html"><b>&lt;small&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_source.html"><b>&lt;source&gt;</b></a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>4.0</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_source_media.html">media</a></td>
+      <td>38.0</td>
+      <td>9.0</td>
+      <td>15.0</td>
+      <td>9.1</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">sizes</td>
+      <td>38.0</td>
+      <td>13.0</td>
+      <td>3.8</td>
+      <td>9.1</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_source_src.html">src</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>4.0</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_source_srcset.html">srcset</a></td>
+      <td>38.0</td>
+      <td>13.0</td>
+      <td>38.0</td>
+      <td>9.1</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_source_type.html">type</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>4.0</td>
+      <td>10.5</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_span.html"><b>&lt;span&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_strong.html"><b>&lt;strong&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_style.html"><b>&lt;style&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_style_media.html">media</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_style_type.html">type</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_sub.html"><b>&lt;sub&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_summary.html"><b>&lt;summary&gt;</b></a></td>
+      <td>12.0</td>
+      <td>79.0</td>
+      <td>49.0</td>
+      <td>6.0</td>
+      <td>15.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_sup.html"><b>&lt;sup&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_svg.html"><b>&lt;svg&gt;</b></a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.0</td>
+      <td>3.2</td>
+      <td>10.1</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_table.html"><b>&lt;table&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_tbody.html"><b>&lt;tbody&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_td.html"><b>&lt;td&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_td_colspan.html">colspan</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_td_headers.html">headers</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_td_rowspan.html">rowspan</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_template.html"><b>&lt;template&gt;</b></a></td>
+      <td>26.0</td>
+      <td>13.0</td>
+      <td>22.0</td>
+      <td>8.0</td>
+      <td>15.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_textarea.html"><b>&lt;textarea&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">autocomplete</td>
+      <td><span class="deprecated">No</span></td>
+      <td><span class="deprecated">No</span></td>
+      <td>59.0</td>
+      <td>13.0</td>
+      <td><span class="deprecated">No</span></td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_autofocus.html">autofocus</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_cols.html">cols</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_dirname.html">dirname</a></td>
+      <td>Yes</td>
+      <td>79.0</td>
+      <td><span class="deprecated">No</span></td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_disabled.html">disabled</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_form.html">form</a></td>
+      <td>Yes</td>
+      <td>11.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_maxlength.html">maxlength</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">minlength</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_name.html">name</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_placeholder.html">placeholder</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_readonly.html">readonly</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_required.html">required</a></td>
+      <td>Yes</td>
+      <td>10.0</td>
+      <td>4.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_rows.html">rows</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;">spellcheck</td>
+      <td>Yes</td>
+      <td>11.0</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_textarea_wrap.html">wrap</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_tfoot.html"><b>&lt;tfoot&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_th.html"><b>&lt;th&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_th_abbr.html">abbr</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_th_colspan.html">colspan</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_th_headers.html">headers</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_th_rowspan.html">rowspan</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_th_scope.html">scope</a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_thead.html"><b>&lt;thead&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_time.html"><b>&lt;time&gt;</b></a></td>
+      <td>62.0</td>
+      <td>18.0</td>
+      <td>22.0</td>
+      <td>7.0</td>
+      <td>49.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_time_datetime.html">datetime</a></td>
+      <td>62.0</td>
+      <td>18.0</td>
+      <td>22.0</td>
+      <td>7.0</td>
+      <td>49.0</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_title.html"><b>&lt;title&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_tr.html"><b>&lt;tr&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_track.html"><b>&lt;track&gt;</b></a></td>
+      <td>23.0</td>
+      <td>10.0</td>
+      <td>31.0</td>
+      <td>6.0</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_track_default.html">default</a></td>
+      <td>23.0</td>
+      <td>10.0</td>
+      <td>31.0</td>
+      <td>6.0</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_track_kind.html">kind</a></td>
+      <td>23.0</td>
+      <td>10.0</td>
+      <td>31.0</td>
+      <td>6.0</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_track_label.html">label</a></td>
+      <td>23.0</td>
+      <td>10.0</td>
+      <td>31.0</td>
+      <td>6.0</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_track_src.html">src</a></td>
+      <td>23.0</td>
+      <td>10.0</td>
+      <td>31.0</td>
+      <td>6.0</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_track_srclang.html">srclang</a></td>
+      <td>23.0</td>
+      <td>10.0</td>
+      <td>31.0</td>
+      <td>6.0</td>
+      <td>12.1</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_u.html"><b>&lt;u&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_ul.html"><b>&lt;ul&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_var.html"><b>&lt;var&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_video.html"><b>&lt;video&gt;</b></a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>3.1</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_video_autoplay.html">autoplay</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>3.1</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_video_controls.html">controls</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>3.1</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_video_height.html">height</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>3.1</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_video_loop.html">loop</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>11.0</td>
+      <td>3.1</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_video_muted.html">muted</a></td>
+      <td>30.0</td>
+      <td>10.0</td>
+      <td>11.0</td>
+      <td>5.0</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_video_poster.html">poster</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.6</td>
+      <td>3.1</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_video_preload.html">preload</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>4.0</td>
+      <td>3.1</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_video_src.html">src</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>3.1</td>
+      <td>11.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="att_video_width.html">width</a></td>
+      <td>4.0</td>
+      <td>9.0</td>
+      <td>3.5</td>
+      <td>3.1</td>
+      <td>11.5</td>
+    </tr>
+  </table>
+  <br>
+
+  <table class="browserref notranslate">
+    <tr>
+      <th style="width:25%;font-size:16px;text-align:left;">&nbsp;</th>
+      <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:15%;" class="bsEdge" title="Edge/Internet Explorer"></th>
+      <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:15%;" class="bsSafari" title="Safari"></th>
+      <th style="width:15%;" class="bsOpera" title="Opera"></th>
+    </tr>
+    <tr>
+      <td style="text-align:left;"><a href="tag_wbr.html"><b>&lt;wbr&gt;</b></a></td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <hr>
+  <div class="w3-clear nextprev">
+    <a class="w3-left w3-btn" href="ref_byfunc.html">&#10094; Prev</a>
+    <a class="w3-right w3-btn" href="ref_attributes.html">Next &#10095;</a>
+  </div>
+</article>
+<div class="adver">Place for your advertisement!</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection'>
+        <h4>ПРИЄДНУЙТЕСЬ!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook сторінку' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
+</div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб-Сертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+    Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також ви можете абсолютно <strong><a href='https://github.com/w3schoolsua/w3schoolsua.github.io/archive/master.zip' target='_blank'>безкоштовно скачати офлайн версію сайту W3Schools українською</a></strong> архівом з GitHub і користуватися локально на своєму комп&rsquo;ютері.<br>
+    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+    <br><br>
+    <div class="adver">Place for your advertisement!</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>

@@ -12,100 +12,17 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
-<title>HTML Довідник тегів. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Повний довідник HTML тегів. Скільки всього існує тегів в HTML5? Уроки для початківців. W3Schools українською'>
-<link rel="stylesheet" href="../cdn/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--Стиль та скрипт для пошуку по тегам-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML Кодування URL адреси. Довідник. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Кодування URL адреси в HTML. Повний довідник. Як кодуються URL-адреси веб-документів в Інтернеті. Курс по основам HTML5. Уроки для початківців. W3Schools українською'>
 <script>
-    function filterSearch() {
-        var a, l, b, i, j, c, ahref, s, tr, td;
-        c = document.getElementById("searchstring").value.toUpperCase();
-        a = document.getElementById("htmltags").getElementsByClassName("w3-table-all");
-        //h = document.getElementById("htmltags").getElementsByTagName("h2");
-        for (j = 0; j < a.length; j++) {
-            s = 0;
-            tr = a[j].getElementsByTagName("tr");
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                    ahref = td.getElementsByTagName("a")[0];
-                    if (ahref) {
-                        ahref = ahref.innerHTML;
-                        ahref = ahref.replace("&lt;", "");
-                        ahref = ahref.replace("&gt;", "");
-                        if (ahref.toUpperCase().indexOf(c) > -1) {
-                            tr[i].style.display = "";
-                            s = 1;
-                        } else {
-                            tr[i].style.display = "none";
-                        }
-                    }
-                }
-                if (i == (tr.length - 1)) {
-                    if (s == 0) {
-                        a[j].style.display = "none";
-                        //h[j].style.display = "none";
-                    } else {
-                        a[j].style.display = "";
-                        //h[j].style.display = "";
-                        fixStripes(tr);
-                    }
-                }
-            }
-        }
-    }
-    function fixStripes(a) {
-        var i, c = 0, n = 0;
-        for (i = 0; i < a.length; i++) {
-            if (a[i].style.display != "none") {
-                if (c == 0) {
-                    a[i].style.backgroundColor = "#f1f1f1";
-                    c = 1;
-                } else {
-                    a[i].style.backgroundColor = "#fff";
-                    c = 0;
-                }
-            }
-        }
+    function urlencode()
+    {
+        let txt=document.getElementById('txt').value;
+//var encodetxt=encodeURI(txt);
+        let encodetxt=encodeURIComponent(txt);
+        document.getElementById('encodingresult').innerHTML=encodetxt;
     }
 </script>
-
-<style>
-    .notsupported,.notsupported:hover,.notsupported:active,.notsupported:visited,.notsupported:link {
-        color:rgb(197,128,128)
-    }
-    #htmltags .w3-table-all tr:nth-child(odd) {
-        background-color: #f1f1f1;
-    }
-    #htmltags .w3-table-all tr:nth-child(even) {
-        background-color: #fff;
-    }
-    #htmltags .w3-table-all td:first-child {
-        width: 30%!important;
-    }
-    input[type=text] {
-        width: 100%;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        padding: 12px 20px 12px 40px;
-        margin-bottom:5px;
-    }
-    #searchicon:after {
-        content: "\f002";
-        font-family: FontAwesome;
-        position: absolute;
-        font-size: 24px;
-        color: #ccc;
-        top: 6px;
-        left: 12px;
-    }
-    label {font-weight:normal;}
-</style>
-<!--/Стиль та скрипт для пошуку по тегам-->
-
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -539,514 +456,1363 @@
           <div class="adver">Place for your advertisement!</div>
             <a href='index.html'><img src='../svg/html5_icon1.svg' alt='HTML5. W3Schools українською. Повний довідник тегів' class='w3-left w3-padding' title='Всі HTML теги. W3Schools українською' style='width: 90px'></a>
 <p class='w3-right'>
-    <a href="index_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="ref_urlencode_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>HTML <span class='color_h1'>Довідник тегів</span></h1>
-    <div class='w3-clear nextprev'>
-        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
-        <a class='w3-right w3-btn' href='ref_byfunc.html'>Next &#10095;</a>
-    </div>
-    <hr>
+  <h1>HTML <span class='color_h1'>URL Кодування</span>. Довідник</h1>
+  <div class='w3-clear nextprev'>
+    <a class='w3-left w3-btn' href='ref_html_dtd.html'>&#10094; Prev</a>
+    <a class='w3-right w3-btn' href='ref_language_codes.html'>Next &#10095;</a>
+  </div>
+  <hr>
+  <p class='intro'><strong>Кодування URL</strong> перетворює символи в формат, який може бути переданий через Інтернет.</p>
+  <hr>
 
-    <h2>HTML Теги в алфавітному порядку</h2>
+  <h2>URL (Uniform Resource Locator) - Уніфікований вказівник інформаційного ресурсу</h2>
+  <p>Веб-браузери запрошують сторінки з веб-серверів за допомогою URL-адреси.</p>
+  <p>URL-адреса - це адреса веб-сторінки в Інтернет, наприклад: <a href="https://www.w3schools.com" target="_blank" title="W3Schools" rel="nofollow"><b>https://www.w3schools.com</b></a>.</p>
+  <hr>
+  <h2>Кодування URL (кодування з процентами)</h2>
+  <p>URL-адреси можна відправляти лише через Інтернет за допомогою <a href='../charsets/ref_html_ascii.html'>набору символів ASCII</a>.</p>
+  <p>Оскільки URL-адреси часто містять символи поза набором ASCII, URL-адреса має бути перетворена в правильний формат ASCII.</p>
+  <p><strong>Кодування URL</strong> заміняє небезпечні символи ASCII на '%', за якими слідують дві шістнадцяткові цифри.</p>
+  <p>URL-адреси не можуть містити пробіли. Кодування URL зазвичай замінює пробіл знаком плюс (+) або %20.</p>
+  <hr>
 
-    <div style='position:relative'><div id='searchicon'></div></div>
-    <input type='text' id='searchstring' name='search'  placeholder='Пошук..' oninput='filterSearch()'>
-    <div id='htmltags'>
+  <h2>Спробуйте самі</h2>
+  <p>Якщо натиснути кнопку Submit (&quot;Надіслати&quot;) нижче, браузер закодує вхідну URL-адресу перед тим, як він буде відправлений на сервер. Сторінка на сервері відобразить отримані дані.</p>
 
-        <table class='w3-table-all notranslate'>
-            <tr>
-                <th style='width:25%'>Тег</th>
-                <th>Опис</th>
-            </tr>
-            <tr>
-                <td><a href='tag_comment.html'>&lt;!--...--&gt;</a></td>
-                <td>Визначає коментар</td>
-            </tr>
-            <tr>
-                <td><a href='tag_doctype.html'>&lt;!DOCTYPE&gt;</a>&nbsp;</td>
-                <td>Визначає тип документа</td>
-            </tr>
-            <tr>
-                <td><a href='tag_a.html'>&lt;a&gt;</a></td>
-                <td>Визначає гіперпосилання</td>
-            </tr>
-            <tr>
-                <td><a href='tag_abbr.html'>&lt;abbr&gt;</a></td>
-                <td>Визначає абревіатуру або акронім</td>
-            </tr>
-            <tr>
-                <td><a href='tag_acronym.html' class='notsupported'>&lt;acronym&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5. Використовуйте <a href='tag_abbr.html'>&lt;abbr&gt;</a> замість цього.<br></span>Визначає акронім</td>
-            </tr>
-            <tr>
-                <td><a href='tag_address.html'>&lt;address&gt;</a></td>
-                <td>Визначає контактну інформацію автора/власника документу</td>
-            </tr>
-            <tr>
-                <td><a href='tag_applet.html' class='notsupported'>&lt;applet&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5. Використовуйте <a href='tag_embed.html'>&lt;embed&gt;</a> або <a href='tag_object.html'>&lt;object&gt;</a> замість цього.<br></span>Визначає вбудований аплет</td>
-            </tr>
-            <tr>
-                <td><a href='tag_area.html'>&lt;area&gt;</a></td>
-                <td>Визначає область всередині карти зображень</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_article.html'>&lt;article&gt;</a></td>
-                <td>Визначає статтю</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_aside.html'>&lt;aside&gt;</a></td>
-                <td>Визначає зміст крім основного змісту сторінки</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_audio.html'>&lt;audio&gt;</a></td>
-                <td>Визначає звуковий контент</td>
-            </tr>
-            <tr>
-                <td><a href='tag_b.html'>&lt;b&gt;</a></td>
-                <td>Визначає жирний текст</td>
-            </tr>
-            <tr>
-                <td><a href='tag_base.html'>&lt;base&gt;</a></td>
-                <td>Визначає базовий URL/ціль для всіх відносних URL в документі</td>
-            </tr>
-            <tr>
-                <td><a href='tag_basefont.html' class='notsupported'>&lt;basefont&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5. Використовуйте CSS замість цього.<br></span>Визначає колір, розмір і шрифт ща умовчанням для всього тексту в документі</td>
-            </tr>
-            <tr>
-                <td><a href='tag_bdi.html'>&lt;bdi&gt;</a></td>
-                <td>Ізолює частину тексту, яка може бути відформатована в іншому напрямку, аніж інший текст за його межами.</td>
-            </tr>
-            <tr>
-                <td><a href='tag_bdo.html'>&lt;bdo&gt;</a></td>
-                <td>Перевизначає поточний напрямок тексту</td>
-            </tr>
-            <tr>
-                <td><a href='tag_big.html' class='notsupported'>&lt;big&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5. Використовуйте CSS замість цього. <br></span>Визначає великий текст</td>
-            </tr>
-            <tr>
-                <td><a href='tag_blockquote.html'>&lt;blockquote&gt;</a></td>
-                <td>Визначає розділ, який цитується з іншого джерела</td>
-            </tr>
-            <tr>
-                <td><a href='tag_body.html'>&lt;body&gt;</a></td>
-                <td>Визначає тіло документа</td>
-            </tr>
-            <tr>
-                <td><a href='tag_br.html'>&lt;br&gt;</a></td>
-                <td>Визначає разрив рядка</td>
-            </tr>
-            <tr>
-                <td><a href='tag_button.html'>&lt;button&gt;</a></td>
-                <td>Визначає клікабельну кнопку</td>
-            </tr>
-            <tr>
-                <td><a href='tag_canvas.html'>&lt;canvas&gt;</a></td>
-                <td>Використовується для малювання графіки на льоту за допомогою скриптів (зазвичай JavaScript)</td>
-            </tr>
-            <tr>
-                <td><a href='tag_caption.html'>&lt;caption&gt;</a></td>
-                <td>Визначає заголовок таблиці</td>
-            </tr>
-            <tr>
-                <td><a href='tag_center.html' class='notsupported'>&lt;center&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5. Використовуйте CSS замість цього.<br></span>Визначає центрований текст</td>
-            </tr>
-            <tr>
-                <td><a href='tag_cite.html'>&lt;cite&gt;</a></td>
-                <td>Визначає назву твору</td>
-            </tr>
-            <tr>
-                <td><a href='tag_code.html'>&lt;code&gt;</a></td>
-                <td>Визначає ділянку комп&rsquo;ютерного коду</td>
-            </tr>
-            <tr>
-                <td><a href='tag_col.html'>&lt;col&gt;</a></td>
-                <td>Визначає властивості стовпця для кожного стовпця в елементі &lt;colgroup&gt; &nbsp;</td>
-            </tr>
-            <tr>
-                <td><a href='tag_colgroup.html'>&lt;colgroup&gt;</a></td>
-                <td>Визначає групу з одного або декількох стовпців в таблиці для форматування</td>
-            </tr>
-            <tr>
-                <td><a href='tag_data.html'>&lt;data&gt;</a></td>
-                <td>Пов&rsquo;язує цей контент з машинозчитуваним перекладом</td>
-            </tr>
-            <tr>
-                <td><a href='tag_datalist.html'>&lt;datalist&gt;</a></td>
-                <td>Визначає список зумовлених параметрів для елементів управління введенням</td>
-            </tr>
-            <tr>
-                <td><a href='tag_dd.html'>&lt;dd&gt;</a></td>
-                <td>Визначає опис / значення терміна в списку опису</td>
-            </tr>
-            <tr>
-                <td><a href='tag_del.html'>&lt;del&gt;</a></td>
-                <td>Визначає текст, який був видалений з документа</td>
-            </tr>
-            <tr>
-                <td><a href='tag_details.html'>&lt;details&gt;</a></td>
-                <td>Визначає додаткові деталі, які користувач може переглядати або приховувати</td>
-            </tr>
-            <tr>
-                <td><a href='tag_dfn.html'>&lt;dfn&gt;</a></td>
-                <td>Визначає екземпляр терміна</td>
-            </tr>
-            <tr>
-                <td><a href='tag_dialog.html'>&lt;dialog&gt;</a></td>
-                <td>Визначає діалогове вікно</td>
-            </tr>
-            <tr>
-                <td><a href='tag_dir.html' class='notsupported'>&lt;dir&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5. Використовуйте <a href='tag_ul.html'>&lt;ul&gt;</a> замість цього.<br></span>Визначає список каталогів</td>
-            </tr>
-            <tr>
-                <td><a href='tag_div.html'>&lt;div&gt;</a></td>
-                <td>Визначає розділ в документі</td>
-            </tr>
-            <tr>
-                <td><a href='tag_dl.html'>&lt;dl&gt;</a></td>
-                <td>Визначає список опису</td>
-            </tr>
-            <tr>
-                <td><a href='tag_dt.html'>&lt;dt&gt;</a></td>
-                <td>Визначає термін / ім&rsquo;я в списку опису</td>
-            </tr>
-            <tr>
-                <td><a href='tag_em.html'>&lt;em&gt;</a></td>
-                <td>Визначає виділений текст</td>
-            </tr>
-            <tr>
-                <td><a href='tag_embed.html'>&lt;embed&gt;</a></td>
-                <td>Визначає контейнер для зовнішнього (не HTML) додатка</td>
-            </tr>
-            <tr>
-                <td><a href='tag_fieldset.html'>&lt;fieldset&gt;</a></td>
-                <td>Групує пов&rsquo;язані елементи в формі</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_figcaption.html'>&lt;figcaption&gt;</a></td>
-                <td>Визначає заголовок для елементу &lt;figure&gt;</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_figure.html'>&lt;figure&gt;</a></td>
-                <td>Визначає автономний контент</td>
-            </tr>
-            <tr>
-                <td><a href='tag_font.html' class='notsupported'>&lt;font&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5. Використовуйте CSS замість цього.<br></span>Визначає шрифт, колір та розмір тексту</td>
-            </tr>
-            <tr>
-                <td><a href='tag_footer.html'>&lt;footer&gt;</a></td>
-                <td>Визначає нижній колонтитул для документа або розділу</td>
-            </tr>
-            <tr>
-                <td><a href='tag_form.html'>&lt;form&gt;</a></td>
-                <td>Визначає форму HTML для користувацького вводу</td>
-            </tr>
-            <tr>
-                <td><a href='tag_frame.html' class='notsupported'>&lt;frame&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5.<br></span>Визначає вікно (фрейм) в наборі фреймів</td>
-            </tr>
-            <tr>
-                <td><a href='tag_frameset.html' class='notsupported'>&lt;frameset&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5.<br></span>Визначає набір фреймів</td>
-            </tr>
-            <tr>
-                <td><a href='tag_hn.html'>&lt;h1&gt; to &lt;h6&gt;</a></td>
-                <td>Визначає заголовки HTML</td>
-            </tr>
-            <tr>
-                <td><a href='tag_head.html'>&lt;head&gt;</a></td>
-                <td>Визначає інформацію про документ</td>
-            </tr>
-            <tr>
-                <td><a href='tag_header.html'>&lt;header&gt;</a></td>
-                <td>Визначає заголовок для документа або розділу</td>
-            </tr>
-            <tr>
-                <td><a href='tag_hr.html'>&lt;hr&gt;</a></td>
-                <td>Визначає тематичну зміну змісту</td>
-            </tr>
-            <tr>
-                <td><a href='tag_html.html'>&lt;html&gt;</a></td>
-                <td>Визначає корінь HTML документу</td>
-            </tr>
-            <tr>
-                <td><a href='tag_i.html'>&lt;i&gt;</a></td>
-                <td>Визначає частину тексту альтернативним виділенням або настроєм</td>
-            </tr>
-            <tr>
-                <td><a href='tag_iframe.html'>&lt;iframe&gt;</a></td>
-                <td>Визначає вбудований фрейм</td>
-            </tr>
-            <tr>
-                <td><a href='tag_img.html'>&lt;img&gt;</a></td>
-                <td>Визначає зображення</td>
-            </tr>
-            <tr>
-                <td><a href='tag_input.html'>&lt;input&gt;</a></td>
-                <td>Визначає елемент управління вводом</td>
-            </tr>
-            <tr>
-                <td><a href='tag_ins.html'>&lt;ins&gt;</a></td>
-                <td>Визначає текст, який був вставлений в документ</td>
-            </tr>
-            <tr>
-                <td><a href='tag_kbd.html'>&lt;kbd&gt;</a></td>
-                <td>Визначає введення з клавіатури</td>
-            </tr>
-            <tr>
-                <td><a href='tag_label.html'>&lt;label&gt;</a></td>
-                <td>Визначає мітку для елемента &lt;input&gt;</td>
-            </tr>
-            <tr>
-                <td><a href='tag_legend.html'>&lt;legend&gt;</a></td>
-                <td>Визначає заголовок для елемента &lt;fieldset&gt;</td>
-            </tr>
-            <tr>
-                <td><a href='tag_li.html'>&lt;li&gt;</a></td>
-                <td>Визначає елемент (пункт) списку</td>
-            </tr>
-            <tr>
-                <td><a href='tag_link.html'>&lt;link&gt;</a></td>
-                <td>Визначає зв&rsquo;язок між документом і зовнішнім ресурсом (найчастіше використовується для посилання на таблиці стилів) </td>
-            </tr>
-            <tr>
-                <td><a href='tag_main.html'>&lt;main&gt;</a></td>
-                <td>Визначає основний зміст документа</td>
-            </tr>
-            <tr>
-                <td><a href='tag_map.html'>&lt;map&gt;</a></td>
-                <td>Визначає карту зображення на стороні клієнта</td>
-            </tr>
-            <tr>
-                <td><a href='tag_mark.html'>&lt;mark&gt;</a></td>
-                <td>Визначає помічений (маркований)/виділений текст</td>
-            </tr>
-            <tr>
-                <td><a href='tag_meta.html'>&lt;meta&gt;</a></td>
-                <td>Визначає метаданні HTML документа</td>
-            </tr>
-            <tr>
-                <td><a href='tag_meter.html'>&lt;meter&gt;</a></td>
-                <td>Визначає скалярний вимір в межах відомого діапазона (датчик)</td>
-            </tr>
-            <tr>
-                <td><a href='tag_nav.html'>&lt;nav&gt;</a></td>
-                <td>Визначає навігаційні посилання (навігація по сайту)</td>
-            </tr>
-            <tr>
-                <td><a href='tag_noframes.html' class='notsupported'>&lt;noframes&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5.<br></span>Визначає альтернативний зміст для користувачів, які не підтримують фрейми</td>
-            </tr>
-            <tr>
-                <td><a href='tag_noscript.html'>&lt;noscript&gt;</a></td>
-                <td>Визначає альтернативний зміст для користувачів, які не підтримують скрипти на стороні клієнта</td>
-            </tr>
-            <tr>
-                <td><a href='tag_object.html'>&lt;object&gt;</a></td>
-                <td>Визначає вбудований об&rsquo;єкт</td>
-            </tr>
-            <tr>
-                <td><a href='tag_ol.html'>&lt;ol&gt;</a></td>
-                <td>Визначає впорядкований (нумерований) список</td>
-            </tr>
-            <tr>
-                <td><a href='tag_optgroup.html'>&lt;optgroup&gt;</a></td>
-                <td>Визначає группу соответствующих параметров в выпадающем списке (выпадающем меню)</td>
-            </tr>
-            <tr>
-                <td><a href='tag_option.html'>&lt;option&gt;</a></td>
-                <td>Визначає параметр у випадаючому списку</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_output.html'>&lt;output&gt;</a></td>
-                <td>Визначає результат розрахунку (калькуляції)</td>
-            </tr>
-            <tr>
-                <td><a href='tag_p.html'>&lt;p&gt;</a></td>
-                <td>Визначає параграф (абзац)</td>
-            </tr>
-            <tr>
-                <td><a href='tag_param.html'>&lt;param&gt;</a></td>
-                <td>Визначає параметр для об&rsquo;єкта</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_picture.html'>&lt;picture&gt;</a></td>
-                <td>Визначає контейнер для кількох ресурсів зображення</td>
-            </tr>
-            <tr>
-                <td><a href='tag_pre.html'>&lt;pre&gt;</a></td>
-                <td>Визначає попередньо відформатований текст</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_progress.html'>&lt;progress&gt;</a></td>
-                <td>Відображає хід виконання завдання</td>
-            </tr>
-            <tr>
-                <td><a href='tag_q.html'>&lt;q&gt;</a></td>
-                <td>Визначає коротку цитату</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_rp.html'>&lt;rp&gt;</a></td>
-                <td>Визначає, що відображати в браузерах, які не підтримують ruby анотації</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_rt.html'>&lt;rt&gt;</a></td>
-                <td>Визначає пояснення / вимову символів (для східноазійської типографіки)</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_ruby.html'>&lt;ruby&gt;</a></td>
-                <td>Визначає анотацію ruby (для східноазійської типографіки)</td>
-            </tr>
-            <tr>
-                <td><a href='tag_s.html'>&lt;s&gt;</a></td>
-                <td>Визначає текст, який більше не є правильним</td>
-            </tr>
-            <tr>
-                <td><a href='tag_samp.html'>&lt;samp&gt;</a></td>
-                <td>Визначає вихідні дані з комп&rsquo;ютерної програми</td>
-            </tr>
-            <tr>
-                <td><a href='tag_script.html'>&lt;script&gt;</a></td>
-                <td>Визначає скрипт на стороні клієнта</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_section.html'>&lt;section&gt;</a></td>
-                <td>Визначає розділ (секцію) в документі</td>
-            </tr>
-            <tr>
-                <td><a href='tag_select.html'>&lt;select&gt;</a></td>
-                <td>Визначає обраний список</td>
-            </tr>
-            <tr>
-                <td><a href='tag_small.html'>&lt;small&gt;</a></td>
-                <td>Визначає меньший текст</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_source.html'>&lt;source&gt;</a></td>
-                <td>Визначає кілька медіа-ресурсів для медіа-елементів (&lt;video&gt; і &lt;audio&gt;)</td>
-            </tr>
-            <tr>
-                <td><a href='tag_span.html'>&lt;span&gt;</a></td>
-                <td>Визначає розділ (рядковий) в документі</td>
-            </tr>
-            <tr>
-                <td><a href='tag_strike.html' class='notsupported'>&lt;strike&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5. Використовуйте <a href='tag_del.html'>&lt;del&gt;</a> або <a href='tag_s.html'>&lt;s&gt;</a> замість цього.<br></span>Визначає перекреслений текст</td>
-            </tr>
-            <tr>
-                <td><a href='tag_strong.html'>&lt;strong&gt;</a></td>
-                <td>Визначає семантично важливий текст</td>
-            </tr>
-            <tr>
-                <td><a href='tag_style.html'>&lt;style&gt;</a></td>
-                <td>Визначає інформацію про стиль в документі</td>
-            </tr>
-            <tr>
-                <td><a href='tag_sub.html'>&lt;sub&gt;</a></td>
-                <td>Визначає підрядковий текст (нижній індекс)</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_summary.html'>&lt;summary&gt;</a></td>
-                <td>Визначає видимий заголовок для елементу &lt;details&gt;</td>
-            </tr>
-            <tr>
-                <td><a href='tag_sup.html'>&lt;sup&gt;</a></td>
-                <td>Визначає надрядковий текст (верхній індекс)</td>
-            </tr>
-            <tr>
-                <td><a href='tag_svg.html'>&lt;svg&gt;</a></td>
-                <td>Визначає контейнер для графіки SVG</td>
-            </tr>
-            <tr>
-                <td><a href='tag_table.html'>&lt;table&gt;</a></td>
-                <td>Визначає таблицю</td>
-            </tr>
-            <tr>
-                <td><a href='tag_tbody.html'>&lt;tbody&gt;</a></td>
-                <td>Групує вміст тіла в таблиці</td>
-            </tr>
-            <tr>
-                <td><a href='tag_td.html'>&lt;td&gt;</a></td>
-                <td>Визначає клітинку (чарунку) в таблиці</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_template.html'>&lt;template&gt;</a></td>
-                <td>Визначає шаблон</td>
-            </tr>
-            <tr>
-                <td><a href='tag_textarea.html'>&lt;textarea&gt;</a></td>
-                <td>Визначає багаторядковий елемент управління введенням (текстова область)</td>
-            </tr>
-            <tr>
-                <td><a href='tag_tfoot.html'>&lt;tfoot&gt;</a></td>
-                <td>Групує зміст нижнього колонтитула в таблиці</td>
-            </tr>
-            <tr>
-                <td><a href='tag_th.html'>&lt;th&gt;</a></td>
-                <td>Визначає чарунку заголовка в таблиці</td>
-            </tr>
-            <tr>
-                <td><a href='tag_thead.html'>&lt;thead&gt;</a></td>
-                <td>Групує зміст заголовка в таблиці</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_time.html'>&lt;time&gt;</a></td>
-                <td>Визначає дату / час</td>
-            </tr>
-            <tr>
-                <td><a href='tag_title.html'>&lt;title&gt;</a></td>
-                <td>Визначає заголовок документа</td>
-            </tr>
-            <tr>
-                <td><a href='tag_tr.html'>&lt;tr&gt;</a></td>
-                <td>Визначає рядок в таблиці</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_track.html'>&lt;track&gt;</a></td>
-                <td>Визначає текстові доріжки для медіа-елементів (&lt;video&gt; та &lt;audio&gt;)</td>
-            </tr>
-            <tr>
-                <td><a class='notsupported' href='tag_tt.html'>&lt;tt&gt;</a></td>
-                <td><span class='deprecated'>Не підтримується в HTML5. Використовуйте CSS замість цього.<br></span>Визначає текст телетайпу</td>
-            </tr>
-            <tr>
-                <td><a href='tag_u.html'>&lt;u&gt;</a></td>
-                <td>Визначає текст, який повинен бути стилістично відмінним від звичайного тексту</td>
-            </tr>
-            <tr>
-                <td><a href='tag_ul.html'>&lt;ul&gt;</a></td>
-                <td>Визначає невпорядкований (ненумерований) список</td>
-            </tr>
-            <tr>
-                <td><a href='tag_var.html'>&lt;var&gt;</a></td>
-                <td>Визначає змінну</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_video.html'>&lt;video&gt;</a></td>
-                <td>Визначає відео або фільм</td>
-            </tr>
-            <tr>
-                <td class='html5badge'><a href='tag_wbr.html'>&lt;wbr&gt;</a></td>
-                <td>Визначає можливий розрив рядка</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <h2>Скільки всього існує HTML тегів?</h2>
-    <p>Багато хто із початківців, що тільки починають вивчати веб-технології, часто запитують: <em>А скільки всього існує тегів в специфікації HTML5?</em> Як видно з вищенаведеної таблиці, станом на кінець 2021 року в специфікації <strong>HTML5 </strong> офіційно затверджено і підтримується <strong>107 HTML тегів</strong>. 12 тегів, наведених у таблиці, вже не підтримуються в специфікації <strong>HTML5</strong>, але підтримуються в більшості браузерів. Навіть якщо ви раніше використовували ці теги при створенні своїх веб-сайтів, вони ще будуть працювати у всіх сучасних веб-браузерах. Але все-таки застарілі <strong>HTML теги</strong> <span style='color: red'>не рекомендується</span> використовувати в нових веб-проєктах. Краще дотримуватися рекомендацій <strong>W3C</strong> і офіційно затвердженої специфікації <strong>HTML5</strong>. Крім того, стандарти постійно змінюються. Згодом деякі теги можуть зникати, а нові теги з&#8217;являються. Для того, щоб залишатися в курсі всіх змін, які відбуваються в веб-стандартах, необхідно відвідувати офіційні веб-ресурси, де всі ці зміни публікуються, такі як: сайт Консорціуму Всесвітньої мережі <strong>W3C</strong>: <a href='https://www.w3.org/' target='_blank' rel='nofollow'>https://www.w3.org/</a> та <a href='https://whatwg.org/' target='_blank' rel='nofollow' title='Робоча група по вебу, гіпертексту, додаткам і технологіям'>WHATWG</a>.</p>
-    <hr>
-    <div class='w3-clear nextprev'>
-        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
-        <a class='w3-right w3-btn' href='ref_byfunc.html'>Next &#10095;</a>
-    </div>
+  <form name='input' target='_blank' action='https://www.w3schools.com/action_page2.php' method='get'>
+    <input type='text' value='Hello Günter' name='text' size='30' />
+    <input type='submit' value='Надіслати' />
+  </form>
+
+  <p>Спробуйте ввести інші дані і знову натисніть Submit ('Надіслати')</p>
+  <hr>
+
+  <h2>Функції кодування URL-адрес</h2>
+  <p>В JavaScript, PHP та ASP існують функції, які можна використовувати для URL-кодування рядка.</p>
+  <p>PHP має функцію rawurlencode(), а ASP має функцію Server.URLEncode().</p>
+  <p>В JavaScript можна використовувати функцію <b>encodeURIComponent()</b>.</p>
+  <p>Натисніть кнопку 'URL Encode', щоб побачити, як функція JavaScript кодує текст.</p>
+
+  <input type='text' name='txt' id='txt' value='Hello Günter' size='30' />
+  <input type='button' value='URL Encode' onclick='urlencode()' />
+  <div id='encodingresult'></div>
+  <p><b>Примітка: </b>Функція JavaScript кодує пробіл як %20.</p>
+  <hr>
+
+  <h2>ASCII Кодировки. Довідник</h2>
+  <p>Ваш браузер буде кодувати вхідні дані у відповідності набору символів, який використовується на веб-сторінці.</p>
+  <p>Типовий (стандартний) набір символів (кодування) в HTML5 - це UTF-8.</p>
+
+  <table class='w3-table-all notranslate'>
+    <tr>
+      <th style='width:33%'>Символ</th>
+      <th style='width:33%'>Із Windows-1252</th>
+      <th style='width:34%'>Із UTF-8</th>
+    </tr>
+    <tr>
+      <td>space</td>
+      <td>%20</td>
+      <td>%20</td>
+    </tr>
+    <tr>
+      <td>!</td>
+      <td>%21</td>
+      <td>%21</td>
+    </tr>
+    <tr>
+      <td>'</td>
+      <td>%22</td>
+      <td>%22</td>
+    </tr>
+    <tr>
+      <td>#</td>
+      <td>%23</td>
+      <td>%23</td>
+    </tr>
+    <tr>
+      <td>$</td>
+      <td>%24</td>
+      <td>%24</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>%25</td>
+      <td>%25</td>
+    </tr>
+    <tr>
+      <td>&amp;</td>
+      <td>%26</td>
+      <td>%26</td>
+    </tr>
+    <tr>
+      <td>'</td>
+      <td>%27</td>
+      <td>%27</td>
+    </tr>
+    <tr>
+      <td>(</td>
+      <td>%28</td>
+      <td>%28</td>
+    </tr>
+    <tr>
+      <td>)</td>
+      <td>%29</td>
+      <td>%29</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>%2A</td>
+      <td>%2A</td>
+    </tr>
+    <tr>
+      <td>+</td>
+      <td>%2B</td>
+      <td>%2B</td>
+    </tr>
+    <tr>
+      <td>,</td>
+      <td>%2C</td>
+      <td>%2C</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>%2D</td>
+      <td>%2D</td>
+    </tr>
+    <tr>
+      <td>.</td>
+      <td>%2E</td>
+      <td>%2E</td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>%2F</td>
+      <td>%2F</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>%30</td>
+      <td>%30</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>%31</td>
+      <td>%31</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>%32</td>
+      <td>%32</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>%33</td>
+      <td>%33</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>%34</td>
+      <td>%34</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>%35</td>
+      <td>%35</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>%36</td>
+      <td>%36</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>%37</td>
+      <td>%37</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>%38</td>
+      <td>%38</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>%39</td>
+      <td>%39</td>
+    </tr>
+    <tr>
+      <td>:</td>
+      <td>%3A</td>
+      <td>%3A</td>
+    </tr>
+    <tr>
+      <td>;</td>
+      <td>%3B</td>
+      <td>%3B</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>%3C</td>
+      <td>%3C</td>
+    </tr>
+    <tr>
+      <td>=</td>
+      <td>%3D</td>
+      <td>%3D</td>
+    </tr>
+    <tr>
+      <td>&gt;</td>
+      <td>%3E</td>
+      <td>%3E</td>
+    </tr>
+    <tr>
+      <td>?</td>
+      <td>%3F</td>
+      <td>%3F</td>
+    </tr>
+    <tr>
+      <td>@</td>
+      <td>%40</td>
+      <td>%40</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>%41</td>
+      <td>%41</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>%42</td>
+      <td>%42</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>%43</td>
+      <td>%43</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>%44</td>
+      <td>%44</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>%45</td>
+      <td>%45</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>%46</td>
+      <td>%46</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>%47</td>
+      <td>%47</td>
+    </tr>
+    <tr>
+      <td>H</td>
+      <td>%48</td>
+      <td>%48</td>
+    </tr>
+    <tr>
+      <td>I</td>
+      <td>%49</td>
+      <td>%49</td>
+    </tr>
+    <tr>
+      <td>J</td>
+      <td>%4A</td>
+      <td>%4A</td>
+    </tr>
+    <tr>
+      <td>K</td>
+      <td>%4B</td>
+      <td>%4B</td>
+    </tr>
+    <tr>
+      <td>L</td>
+      <td>%4C</td>
+      <td>%4C</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>%4D</td>
+      <td>%4D</td>
+    </tr>
+    <tr>
+      <td>N</td>
+      <td>%4E</td>
+      <td>%4E</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>%4F</td>
+      <td>%4F</td>
+    </tr>
+    <tr>
+      <td>P</td>
+      <td>%50</td>
+      <td>%50</td>
+    </tr>
+    <tr>
+      <td>Q</td>
+      <td>%51</td>
+      <td>%51</td>
+    </tr>
+    <tr>
+      <td>R</td>
+      <td>%52</td>
+      <td>%52</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>%53</td>
+      <td>%53</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>%54</td>
+      <td>%54</td>
+    </tr>
+    <tr>
+      <td>U</td>
+      <td>%55</td>
+      <td>%55</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>%56</td>
+      <td>%56</td>
+    </tr>
+    <tr>
+      <td>W</td>
+      <td>%57</td>
+      <td>%57</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>%58</td>
+      <td>%58</td>
+    </tr>
+    <tr>
+      <td>Y</td>
+      <td>%59</td>
+      <td>%59</td>
+    </tr>
+    <tr>
+      <td>Z</td>
+      <td>%5A</td>
+      <td>%5A</td>
+    </tr>
+    <tr>
+      <td>[</td>
+      <td>%5B</td>
+      <td>%5B</td>
+    </tr>
+    <tr>
+      <td>\</td>
+      <td>%5C</td>
+      <td>%5C</td>
+    </tr>
+    <tr>
+      <td>]</td>
+      <td>%5D</td>
+      <td>%5D</td>
+    </tr>
+    <tr>
+      <td>^</td>
+      <td>%5E</td>
+      <td>%5E</td>
+    </tr>
+    <tr>
+      <td>_</td>
+      <td>%5F</td>
+      <td>%5F</td>
+    </tr>
+    <tr>
+      <td>`</td>
+      <td>%60</td>
+      <td>%60</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>%61</td>
+      <td>%61</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>%62</td>
+      <td>%62</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>%63</td>
+      <td>%63</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>%64</td>
+      <td>%64</td>
+    </tr>
+    <tr>
+      <td>e</td>
+      <td>%65</td>
+      <td>%65</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>%66</td>
+      <td>%66</td>
+    </tr>
+    <tr>
+      <td>g</td>
+      <td>%67</td>
+      <td>%67</td>
+    </tr>
+    <tr>
+      <td>h</td>
+      <td>%68</td>
+      <td>%68</td>
+    </tr>
+    <tr>
+      <td>i</td>
+      <td>%69</td>
+      <td>%69</td>
+    </tr>
+    <tr>
+      <td>j</td>
+      <td>%6A</td>
+      <td>%6A</td>
+    </tr>
+    <tr>
+      <td>k</td>
+      <td>%6B</td>
+      <td>%6B</td>
+    </tr>
+    <tr>
+      <td>l</td>
+      <td>%6C</td>
+      <td>%6C</td>
+    </tr>
+    <tr>
+      <td>m</td>
+      <td>%6D</td>
+      <td>%6D</td>
+    </tr>
+    <tr>
+      <td>n</td>
+      <td>%6E</td>
+      <td>%6E</td>
+    </tr>
+    <tr>
+      <td>o</td>
+      <td>%6F</td>
+      <td>%6F</td>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>%70</td>
+      <td>%70</td>
+    </tr>
+    <tr>
+      <td>q</td>
+      <td>%71</td>
+      <td>%71</td>
+    </tr>
+    <tr>
+      <td>r</td>
+      <td>%72</td>
+      <td>%72</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>%73</td>
+      <td>%73</td>
+    </tr>
+    <tr>
+      <td>t</td>
+      <td>%74</td>
+      <td>%74</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>%75</td>
+      <td>%75</td>
+    </tr>
+    <tr>
+      <td>v</td>
+      <td>%76</td>
+      <td>%76</td>
+    </tr>
+    <tr>
+      <td>w</td>
+      <td>%77</td>
+      <td>%77</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>%78</td>
+      <td>%78</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>%79</td>
+      <td>%79</td>
+    </tr>
+    <tr>
+      <td>z</td>
+      <td>%7A</td>
+      <td>%7A</td>
+    </tr>
+    <tr>
+      <td>{</td>
+      <td>%7B</td>
+      <td>%7B</td>
+    </tr>
+    <tr>
+      <td>|</td>
+      <td>%7C</td>
+      <td>%7C</td>
+    </tr>
+    <tr>
+      <td>}</td>
+      <td>%7D</td>
+      <td>%7D</td>
+    </tr>
+    <tr>
+      <td>~</td>
+      <td>%7E</td>
+      <td>%7E</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%7F</td>
+      <td>%7F</td>
+    </tr>
+    <tr>
+      <td>`</td>
+      <td>%80</td>
+      <td>%E2%82%AC</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%81</td>
+      <td>%81</td>
+    </tr>
+    <tr>
+      <td>‚</td>
+      <td>%82</td>
+      <td>%E2%80%9A</td>
+    </tr>
+    <tr>
+      <td>ƒ</td>
+      <td>%83</td>
+      <td>%C6%92</td>
+    </tr>
+    <tr>
+      <td>„</td>
+      <td>%84</td>
+      <td>%E2%80%9E</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>%85</td>
+      <td>%E2%80%A6</td>
+    </tr>
+    <tr>
+      <td>†</td>
+      <td>%86</td>
+      <td>%E2%80%A0</td>
+    </tr>
+    <tr>
+      <td>‡</td>
+      <td>%87</td>
+      <td>%E2%80%A1</td>
+    </tr>
+    <tr>
+      <td>ˆ</td>
+      <td>%88</td>
+      <td>%CB%86</td>
+    </tr>
+    <tr>
+      <td>‰</td>
+      <td>%89</td>
+      <td>%E2%80%B0</td>
+    </tr>
+    <tr>
+      <td>Š</td>
+      <td>%8A</td>
+      <td>%C5%A0</td>
+    </tr>
+    <tr>
+      <td>‹</td>
+      <td>%8B</td>
+      <td>%E2%80%B9</td>
+    </tr>
+    <tr>
+      <td>Œ</td>
+      <td>%8C</td>
+      <td>%C5%92</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%8D</td>
+      <td>%C5%8D</td>
+    </tr>
+    <tr>
+      <td>Ž</td>
+      <td>%8E</td>
+      <td>%C5%BD</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%8F</td>
+      <td>%8F</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%90</td>
+      <td>%C2%90</td>
+    </tr>
+    <tr>
+      <td>‘</td>
+      <td>%91</td>
+      <td>%E2%80%98</td>
+    </tr>
+    <tr>
+      <td>’</td>
+      <td>%92</td>
+      <td>%E2%80%99</td>
+    </tr>
+    <tr>
+      <td>“</td>
+      <td>%93</td>
+      <td>%E2%80%9C</td>
+    </tr>
+    <tr>
+      <td>”</td>
+      <td>%94</td>
+      <td>%E2%80%9D</td>
+    </tr>
+    <tr>
+      <td>•</td>
+      <td>%95</td>
+      <td>%E2%80%A2</td>
+    </tr>
+    <tr>
+      <td>–</td>
+      <td>%96</td>
+      <td>%E2%80%93</td>
+    </tr>
+    <tr>
+      <td>—</td>
+      <td>%97</td>
+      <td>%E2%80%94</td>
+    </tr>
+    <tr>
+      <td>˜</td>
+      <td>%98</td>
+      <td>%CB%9C</td>
+    </tr>
+    <tr>
+      <td>™</td>
+      <td>%99</td>
+      <td>%E2%84</td>
+    </tr>
+    <tr>
+      <td>š</td>
+      <td>%9A</td>
+      <td>%C5%A1</td>
+    </tr>
+    <tr>
+      <td>›</td>
+      <td>%9B</td>
+      <td>%E2%80</td>
+    </tr>
+    <tr>
+      <td>œ</td>
+      <td>%9C</td>
+      <td>%C5%93</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>%9D</td>
+      <td>%9D</td>
+    </tr>
+    <tr>
+      <td>ž</td>
+      <td>%9E</td>
+      <td>%C5%BE</td>
+    </tr>
+    <tr>
+      <td>Ÿ</td>
+      <td>%9F</td>
+      <td>%C5%B8</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%A0</td>
+      <td>%C2%A0</td>
+    </tr>
+    <tr>
+      <td>¡</td>
+      <td>%A1</td>
+      <td>%C2%A1</td>
+    </tr>
+    <tr>
+      <td>¢</td>
+      <td>%A2</td>
+      <td>%C2%A2</td>
+    </tr>
+    <tr>
+      <td>£</td>
+      <td>%A3</td>
+      <td>%C2%A3</td>
+    </tr>
+    <tr>
+      <td>¤</td>
+      <td>%A4</td>
+      <td>%C2%A4</td>
+    </tr>
+    <tr>
+      <td>¥</td>
+      <td>%A5</td>
+      <td>%C2%A5</td>
+    </tr>
+    <tr>
+      <td>¦</td>
+      <td>%A6</td>
+      <td>%C2%A6</td>
+    </tr>
+    <tr>
+      <td>§</td>
+      <td>%A7</td>
+      <td>%C2%A7</td>
+    </tr>
+    <tr>
+      <td>¨</td>
+      <td>%A8</td>
+      <td>%C2%A8</td>
+    </tr>
+    <tr>
+      <td>©</td>
+      <td>%A9</td>
+      <td>%C2%A9</td>
+    </tr>
+    <tr>
+      <td>ª</td>
+      <td>%AA</td>
+      <td>%C2%AA</td>
+    </tr>
+    <tr>
+      <td>«</td>
+      <td>%AB</td>
+      <td>%C2%AB</td>
+    </tr>
+    <tr>
+      <td>¬</td>
+      <td>%AC</td>
+      <td>%C2%AC</td>
+    </tr>
+    <tr>
+      <td>­</td>
+      <td>%AD</td>
+      <td>%C2%AD</td>
+    </tr>
+    <tr>
+      <td>®</td>
+      <td>%AE</td>
+      <td>%C2%AE</td>
+    </tr>
+    <tr>
+      <td>¯</td>
+      <td>%AF</td>
+      <td>%C2%AF</td>
+    </tr>
+    <tr>
+      <td>°</td>
+      <td>%B0</td>
+      <td>%C2%B0</td>
+    </tr>
+    <tr>
+      <td>±</td>
+      <td>%B1</td>
+      <td>%C2%B1</td>
+    </tr>
+    <tr>
+      <td>²</td>
+      <td>%B2</td>
+      <td>%C2%B2</td>
+    </tr>
+    <tr>
+      <td>³</td>
+      <td>%B3</td>
+      <td>%C2%B3</td>
+    </tr>
+    <tr>
+      <td>´</td>
+      <td>%B4</td>
+      <td>%C2%B4</td>
+    </tr>
+    <tr>
+      <td>µ</td>
+      <td>%B5</td>
+      <td>%C2%B5</td>
+    </tr>
+    <tr>
+      <td>¶</td>
+      <td>%B6</td>
+      <td>%C2%B6</td>
+    </tr>
+    <tr>
+      <td>·</td>
+      <td>%B7</td>
+      <td>%C2%B7</td>
+    </tr>
+    <tr>
+      <td>¸</td>
+      <td>%B8</td>
+      <td>%C2%B8</td>
+    </tr>
+    <tr>
+      <td>¹</td>
+      <td>%B9</td>
+      <td>%C2%B9</td>
+    </tr>
+    <tr>
+      <td>º</td>
+      <td>%BA</td>
+      <td>%C2%BA</td>
+    </tr>
+    <tr>
+      <td>»</td>
+      <td>%BB</td>
+      <td>%C2%BB</td>
+    </tr>
+    <tr>
+      <td>¼</td>
+      <td>%BC</td>
+      <td>%C2%BC</td>
+    </tr>
+    <tr>
+      <td>½</td>
+      <td>%BD</td>
+      <td>%C2%BD</td>
+    </tr>
+    <tr>
+      <td>¾</td>
+      <td>%BE</td>
+      <td>%C2%BE</td>
+    </tr>
+    <tr>
+      <td>¿</td>
+      <td>%BF</td>
+      <td>%C2%BF</td>
+    </tr>
+    <tr>
+      <td>À</td>
+      <td>%C0</td>
+      <td>%C3%80</td>
+    </tr>
+    <tr>
+      <td>Á</td>
+      <td>%C1</td>
+      <td>%C3%81</td>
+    </tr>
+    <tr>
+      <td>Â</td>
+      <td>%C2</td>
+      <td>%C3%82</td>
+    </tr>
+    <tr>
+      <td>Ã</td>
+      <td>%C3</td>
+      <td>%C3%83</td>
+    </tr>
+    <tr>
+      <td>Ä</td>
+      <td>%C4</td>
+      <td>%C3%84</td>
+    </tr>
+    <tr>
+      <td>Å</td>
+      <td>%C5</td>
+      <td>%C3%85</td>
+    </tr>
+    <tr>
+      <td>Æ</td>
+      <td>%C6</td>
+      <td>%C3%86</td>
+    </tr>
+    <tr>
+      <td>Ç</td>
+      <td>%C7</td>
+      <td>%C3%87</td>
+    </tr>
+    <tr>
+      <td>È</td>
+      <td>%C8</td>
+      <td>%C3%88</td>
+    </tr>
+    <tr>
+      <td>É</td>
+      <td>%C9</td>
+      <td>%C3%89</td>
+    </tr>
+    <tr>
+      <td>Ê</td>
+      <td>%CA</td>
+      <td>%C3%8A</td>
+    </tr>
+    <tr>
+      <td>Ë</td>
+      <td>%CB</td>
+      <td>%C3%8B</td>
+    </tr>
+    <tr>
+      <td>Ì</td>
+      <td>%CC</td>
+      <td>%C3%8C</td>
+    </tr>
+    <tr>
+      <td>Í</td>
+      <td>%CD</td>
+      <td>%C3%8D</td>
+    </tr>
+    <tr>
+      <td>Î</td>
+      <td>%CE</td>
+      <td>%C3%8E</td>
+    </tr>
+    <tr>
+      <td>Ï</td>
+      <td>%CF</td>
+      <td>%C3%8F</td>
+    </tr>
+    <tr>
+      <td>Ð</td>
+      <td>%D0</td>
+      <td>%C3%90</td>
+    </tr>
+    <tr>
+      <td>Ñ</td>
+      <td>%D1</td>
+      <td>%C3%91</td>
+    </tr>
+    <tr>
+      <td>Ò</td>
+      <td>%D2</td>
+      <td>%C3%92</td>
+    </tr>
+    <tr>
+      <td>Ó</td>
+      <td>%D3</td>
+      <td>%C3%93</td>
+    </tr>
+    <tr>
+      <td>Ô</td>
+      <td>%D4</td>
+      <td>%C3%94</td>
+    </tr>
+    <tr>
+      <td>Õ</td>
+      <td>%D5</td>
+      <td>%C3%95</td>
+    </tr>
+    <tr>
+      <td>Ö</td>
+      <td>%D6</td>
+      <td>%C3%96</td>
+    </tr>
+    <tr>
+      <td>×</td>
+      <td>%D7</td>
+      <td>%C3%97</td>
+    </tr>
+    <tr>
+      <td>Ø</td>
+      <td>%D8</td>
+      <td>%C3%98</td>
+    </tr>
+    <tr>
+      <td>Ù</td>
+      <td>%D9</td>
+      <td>%C3%99</td>
+    </tr>
+    <tr>
+      <td>Ú</td>
+      <td>%DA</td>
+      <td>%C3%9A</td>
+    </tr>
+    <tr>
+      <td>Û</td>
+      <td>%DB</td>
+      <td>%C3%9B</td>
+    </tr>
+    <tr>
+      <td>Ü</td>
+      <td>%DC</td>
+      <td>%C3%9C</td>
+    </tr>
+    <tr>
+      <td>Ý</td>
+      <td>%DD</td>
+      <td>%C3%9D</td>
+    </tr>
+    <tr>
+      <td>Þ</td>
+      <td>%DE</td>
+      <td>%C3%9E</td>
+    </tr>
+    <tr>
+      <td>ß</td>
+      <td>%DF</td>
+      <td>%C3%9F</td>
+    </tr>
+    <tr>
+      <td>à</td>
+      <td>%E0</td>
+      <td>%C3%A0</td>
+    </tr>
+    <tr>
+      <td>á</td>
+      <td>%E1</td>
+      <td>%C3%A1</td>
+    </tr>
+    <tr>
+      <td>â</td>
+      <td>%E2</td>
+      <td>%C3%A2</td>
+    </tr>
+    <tr>
+      <td>ã</td>
+      <td>%E3</td>
+      <td>%C3%A3</td>
+    </tr>
+    <tr>
+      <td>ä</td>
+      <td>%E4</td>
+      <td>%C3%A4</td>
+    </tr>
+    <tr>
+      <td>å</td>
+      <td>%E5</td>
+      <td>%C3%A5</td>
+    </tr>
+    <tr>
+      <td>æ</td>
+      <td>%E6</td>
+      <td>%C3%A6</td>
+    </tr>
+    <tr>
+      <td>ç</td>
+      <td>%E7</td>
+      <td>%C3%A7</td>
+    </tr>
+    <tr>
+      <td>è</td>
+      <td>%E8</td>
+      <td>%C3%A8</td>
+    </tr>
+    <tr>
+      <td>é</td>
+      <td>%E9</td>
+      <td>%C3%A9</td>
+    </tr>
+    <tr>
+      <td>ê</td>
+      <td>%EA</td>
+      <td>%C3%AA</td>
+    </tr>
+    <tr>
+      <td>ë</td>
+      <td>%EB</td>
+      <td>%C3%AB</td>
+    </tr>
+    <tr>
+      <td>ì</td>
+      <td>%EC</td>
+      <td>%C3%AC</td>
+    </tr>
+    <tr>
+      <td>í</td>
+      <td>%ED</td>
+      <td>%C3%AD</td>
+    </tr>
+    <tr>
+      <td>î</td>
+      <td>%EE</td>
+      <td>%C3%AE</td>
+    </tr>
+    <tr>
+      <td>ï</td>
+      <td>%EF</td>
+      <td>%C3%AF</td>
+    </tr>
+    <tr>
+      <td>ð</td>
+      <td>%F0</td>
+      <td>%C3%B0</td>
+    </tr>
+    <tr>
+      <td>ñ</td>
+      <td>%F1</td>
+      <td>%C3%B1</td>
+    </tr>
+    <tr>
+      <td>ò</td>
+      <td>%F2</td>
+      <td>%C3%B2</td>
+    </tr>
+    <tr>
+      <td>ó</td>
+      <td>%F3</td>
+      <td>%C3%B3</td>
+    </tr>
+    <tr>
+      <td>ô</td>
+      <td>%F4</td>
+      <td>%C3%B4</td>
+    </tr>
+    <tr>
+      <td>õ</td>
+      <td>%F5</td>
+      <td>%C3%B5</td>
+    </tr>
+    <tr>
+      <td>ö</td>
+      <td>%F6</td>
+      <td>%C3%B6</td>
+    </tr>
+    <tr>
+      <td>÷</td>
+      <td>%F7</td>
+      <td>%C3%B7</td>
+    </tr>
+    <tr>
+      <td>ø</td>
+      <td>%F8</td>
+      <td>%C3%B8</td>
+    </tr>
+    <tr>
+      <td>ù</td>
+      <td>%F9</td>
+      <td>%C3%B9</td>
+    </tr>
+    <tr>
+      <td>ú</td>
+      <td>%FA</td>
+      <td>%C3%BA</td>
+    </tr>
+    <tr>
+      <td>û</td>
+      <td>%FB</td>
+      <td>%C3%BB</td>
+    </tr>
+    <tr>
+      <td>ü</td>
+      <td>%FC</td>
+      <td>%C3%BC</td>
+    </tr>
+    <tr>
+      <td>ý</td>
+      <td>%FD</td>
+      <td>%C3%BD</td>
+    </tr>
+    <tr>
+      <td>þ</td>
+      <td>%FE</td>
+      <td>%C3%BE</td>
+    </tr>
+    <tr>
+      <td>ÿ</td>
+      <td>%FF</td>
+      <td>%C3%BF</td>
+    </tr>
+  </table>
+  <hr>
+
+  <h2>Довідник URL кодувань</h2>
+  <p>Набір символів ASCII <strong>%00-%1F</strong> спочатку розроблявся для управління апаратними пристроями.</p>
+  <p>Набори символів не мають ніякого відношення до URL-адрес.</p>
+
+  <table class='w3-table-all notranslate'>
+    <tr>
+      <th>ASCII Символ</th>
+      <th>Опис</th>
+      <th>URL-кодування</th>
+    </tr>
+    <tr>
+      <td>NUL</td>
+      <td>null character</td>
+      <td>%00</td>
+    </tr>
+    <tr>
+      <td>SOH</td>
+      <td>start of header</td>
+      <td>%01</td>
+    </tr>
+    <tr>
+      <td>STX</td>
+      <td>start of text</td>
+      <td>%02</td>
+    </tr>
+    <tr>
+      <td>ETX</td>
+      <td>end of text</td>
+      <td>%03</td>
+    </tr>
+    <tr>
+      <td>EOT</td>
+      <td>end of transmission</td>
+      <td>%04</td>
+    </tr>
+    <tr>
+      <td>ENQ</td>
+      <td>enquiry</td>
+      <td>%05</td>
+    </tr>
+    <tr>
+      <td>ACK</td>
+      <td>acknowledge</td>
+      <td>%06</td>
+    </tr>
+    <tr>
+      <td>BEL</td>
+      <td>bell (ring)</td>
+      <td>%07</td>
+    </tr>
+    <tr>
+      <td>BS</td>
+      <td>backspace</td>
+      <td>%08</td>
+    </tr>
+    <tr>
+      <td>HT</td>
+      <td>horizontal tab</td>
+      <td>%09</td>
+    </tr>
+    <tr>
+      <td>LF</td>
+      <td>line feed</td>
+      <td>%0A</td>
+    </tr>
+    <tr>
+      <td>VT</td>
+      <td>vertical tab</td>
+      <td>%0B</td>
+    </tr>
+    <tr>
+      <td>FF</td>
+      <td>form feed</td>
+      <td>%0C</td>
+    </tr>
+    <tr>
+      <td>CR</td>
+      <td>carriage return</td>
+      <td>%0D</td>
+    </tr>
+    <tr>
+      <td>SO</td>
+      <td>shift out</td>
+      <td>%0E</td>
+    </tr>
+    <tr>
+      <td>SI</td>
+      <td>shift in</td>
+      <td>%0F</td>
+    </tr>
+    <tr>
+      <td>DLE</td>
+      <td>data link escape</td>
+      <td>%10</td>
+    </tr>
+    <tr>
+      <td>DC1</td>
+      <td>device control 1</td>
+      <td>%11</td>
+    </tr>
+    <tr>
+      <td>DC2</td>
+      <td>device control 2</td>
+      <td>%12</td>
+    </tr>
+    <tr>
+      <td>DC3</td>
+      <td>device control 3</td>
+      <td>%13</td>
+    </tr>
+    <tr>
+      <td>DC4</td>
+      <td>device control 4</td>
+      <td>%14</td>
+    </tr>
+    <tr>
+      <td>NAK</td>
+      <td>negative acknowledge</td>
+      <td>%15</td>
+    </tr>
+    <tr>
+      <td>SYN</td>
+      <td>synchronize</td>
+      <td>%16</td>
+    </tr>
+    <tr>
+      <td>ETB</td>
+      <td>end transmission block</td>
+      <td>%17</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>cancel</td>
+      <td>%18</td>
+    </tr>
+    <tr>
+      <td>EM</td>
+      <td>end of medium</td>
+      <td>%19</td>
+    </tr>
+    <tr>
+      <td>SUB</td>
+      <td>substitute</td>
+      <td>%1A</td>
+    </tr>
+    <tr>
+      <td>ESC</td>
+      <td>escape</td>
+      <td>%1B</td>
+    </tr>
+    <tr>
+      <td>FS</td>
+      <td>file separator</td>
+      <td>%1C</td>
+    </tr>
+    <tr>
+      <td>GS</td>
+      <td>group separator</td>
+      <td>%1D</td>
+    </tr>
+    <tr>
+      <td>RS</td>
+      <td>record separator</td>
+      <td>%1E</td>
+    </tr>
+    <tr>
+      <td>US</td>
+      <td>unit separator</td>
+      <td>%1F</td>
+    </tr>
+  </table>
+  <hr>
+  <div class='w3-clear nextprev'>
+    <a class='w3-left w3-btn' href='ref_html_dtd.html'>&#10094; Prev</a>
+    <a class='w3-right w3-btn' href='ref_language_codes.html'>Next &#10095;</a>
+  </div>
 </article>
+<div class="adver">Place for your advertisement!</div>
 </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
