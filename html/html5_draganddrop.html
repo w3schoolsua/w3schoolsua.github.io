@@ -12,11 +12,28 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
-<title>HTML Підручник. Початок. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Уроки W3Schools українською мовою. Повний курс. Мова HTML для початківців та новачків, школярів та студентів. Безкоштовні курси онлайн. Приклади коду. Довідник з HTML5. Як створити сайт? Повний курс. Уроки для початківців. W3Schools українською'>
-<link rel='stylesheet' href='../styles/bigbtn.css'>
-
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML5 Drag and Drop. Перетягнути і кинути. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='HTML5 Drag and Drop. Що таке drag/drop на веб-сайті? Все просто! - Перетягнути і кинути! Як створити елемент для перетягування. Атрибут ondragstart викликає функцію drag(event). Метод dataTransfer.setData() встановлює тип даних і значення перетягуваних даних. Уроки для початківців. W3Schools українською'>
+<link rel='stylesheet' href='../styles/browserref.css'>
+<style>
+  #div1, #div2 {float:left; width:130px; height:50px; margin:10px;padding:10px;border:1px solid #aaa;}
+</style>
+<script>
+  function allowDrop(ev)
+  {
+      ev.preventDefault();
+  }
+  function drag(ev)
+  {
+      ev.dataTransfer.setData('text',ev.target.id);
+  }
+  function drop(ev)
+  {
+      ev.preventDefault();
+      var data=ev.dataTransfer.getData('text');
+      ev.target.appendChild(document.getElementById(data));
+  }
+</script>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -115,6 +132,8 @@
                     <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
                     <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
                     <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
                     <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
                 </div>
                 <div class='w3-col l3 m6'>
@@ -293,7 +312,8 @@
         </div>
     </div>
 </div>
-<!--/Top menu--><!--Left menu sidebar -->
+<!--/Top menu-->
+<!--Left menu sidebar -->
 <div class='w3-sidebar w3-collapse' id='sidenav'>
   <div id='leftmenuinner'>
     <div class='w3-light-grey' id='leftmenuinnerinner'>
@@ -335,6 +355,16 @@
       </div>
       <a target='_top' href='html_favicon.html'>HTML Фавікон</a>
       <a target='_top' href='html_tables.html'>HTML Таблиці</a>
+      <div class='tut_overview'>
+          <a target='_top' href='html_tables.html'>HTML Таблиці</a>
+          <a target='_top' href='html_table_borders.html'>Межі таблиці</a>
+          <a target='_top' href='html_table_sizes.html'>Розмір таблиці</a>
+          <a target='_top' href='html_table_headers.html'>Заголовки таблиці</a>
+          <a target='_top' href='html_table_padding_spacing.html'>Padding &amp; Spacing</a>
+          <a target='_top' href='html_table_colspan_rowspan.html'>Colspan &amp; Rowspan</a>
+          <a target='_top' href='html_table_styling.html'>Стилі таблиці</a>
+          <a target='_top' href='html_table_colgroup.html'>Colgroup</a>
+      </div>
       <a target='_top' href='html_lists.html'>HTML Списки</a>
         <div class='tut_overview'>
             <a target='_top' href='html_lists.html'>Списки</a>
@@ -354,7 +384,7 @@
       <a target='_top' href='html_computercode_elements.html'>HTML Комп&#8217;ютерний код</a>
       <a target='_top' href='html5_semantic_elements.html'>HTML Семантика</a>
       <a target='_top' href='html5_syntax.html'>HTML Гід по стилю</a>
-      <a target='_top' href='html_entities.html'>HTML Символьні об&#8217;єкти</a>
+      <a target='_top' href='html_entities.html'>HTML Сутності</a>
       <a target='_top' href='html_symbols.html'>HTML Символи</a>
       <a target='_top' href='html_emojis.html'>HTML Емодзі/Смайли</a>
       <a target='_top' href='html_charset.html'>HTML Набір символів</a>
@@ -430,151 +460,153 @@
         <div class='w3-col l10 m12' id='main'>
           <div class="adver">Place for your advertisement!</div>
             <a href='index.html'><img src='../svg/HTML5_icon.svg' alt='HTML5. Уроки для початківців. W3Schools українською' class='w3-left' title='Уроки HTML5 для початківців. W3Schools українською' style='width:90px'></a>
-<p class='w3-right'>
-    <a href="index_en.html" title='Перейти на англійську мову'>En</a>
-</p>
-<article>
-    <h1>HTML<span class='color_h1'> Підручник</span></h1>
+            <p class='w3-right'>
+                <a href="html5_draganddrop_en.html" title='Перейти на англійську мову'>En</a>
+            </p>
+            <article>
+    <h1>HTML5 <span class='color_h1'>Drag and Drop</span></h1>
     <div class='w3-clear nextprev'>
-        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
-        <a class='w3-right w3-btn' href='html_intro.html'>Next &#10095;</a>
+      <a class='w3-left w3-btn' href='html5_geolocation.html'>&#10094; Prev</a>
+      <a class='w3-right w3-btn' href='html5_webstorage.html'>Next &#10095;</a>
     </div>
     <hr>
-
-    <div class='w3-card w3-yellow w3-padding'>
-        Перед вами - найкращий і найбільш повний в мережі підручник по <strong>HTML5</strong> українською мовою із найбільшого і найвідомішого в світі Інтернет-ресурсу по вивченню веб-технологій - сайту <a href='https://www.w3schools.com/' target='_blank' rel='nofollow'>W3Schools.com</a>.
-    </div>
+    <div id='div1' ondrop='drop(event)' ondragover='allowDrop(event)'>
+      <img src='../images/img_w3slogo.gif' draggable='true' ondragstart='drag(event)' id='drag1' alt='W3Schools Logo'></div>
+    <div id='div2' ondrop='drop(event)' ondragover='allowDrop(event)'></div>
+    <p style='clear:both'>Перетягніть за допомогою миші зображення W3Schools з одного прямокутника в інший прямокутник.</p>
     <hr>
 
-    <div class='w3-panel w3-info intro'>
-        <p><strong>HTML</strong> - це стандартна мова розмітки для веб-сторінок.</p>
-        <p>За допомогою <strong>HTML</strong> ви можете створити свій власний веб-сайт.</p>
-        <p>Мова <strong>HTML</strong> легка для вивчення - Ви будете насолоджуватись навчанням та власними результатами!</p>
-        <p>Даний підручник містить навчальні матеріали у відповідності з діючою специфікацією <strong>HTML5</strong>.</p>
-    </div>
+    <h2>Drag and Drop - Перетягнути і кинути</h2>
+    <p><strong>Drag and Drop</strong> - дослівний переклад з англійської мови - 'Перетягнути і кинути'</p>
+    <p>Перетягування (Drag and drop) - дуже розповсюджена функція. Це коли ви 'захоплюєте' мишкою об&#8217;єкт і перетягуєте його в інше місце.</p>
+    <p>В <strong>HTML5</strong> перетягування є частиною стандарту: будь-який елемент може бути перетягнутим. Для цього використовується JavaScript.</p>
     <hr>
-    <h2>Що таке HTML? Як створюють веб-сайти?</h2>
-    <p><strong>HTML</strong> (від англ. <em>HyperText Markup Language — 'мова гіпертекстової розмітки'</em>) —
-        стандартизована мова розмітки документів у Всесвітній павутині. Більшість веб-сторінок мають зміст розмітки
-        мовою HTML (або XHTML). Мова <strong>HTML</strong> інтерпретується браузерами; отриманий в результаті
-        інтерпретації форматований текст відображається на екрані монітора комп'ютера або мобільного пристрою.</p>
-    <p>Мова <strong>HTML</strong> до 5-ї версії визначалась як додаток SGML (стандартної узагальненої мови розмітки за
-        стандартом ISO 8879). Специфікації <strong>HTML5</strong> формулюються в термінах DOM (об'єктній моделі
-        документа). </p>
-    <p>Мова <strong>XHTML</strong> є більш суворим варіантом <strong>HTML</strong>, вона слідує синтаксису XML і є
-        додатком мови XML в області розмітки гіпертексту.</p>
-    <p>У всесвітній мережі HTML-сторінки, як правило, передаються браузерам від сервера по протоколам <em>HTTP</em>
-        або <em>HTTPS</em>, у вигляді простого тексту або з використанням шифрування.</p>
-    <p class='w3-right-align'>Інформація із <a href='https://ru.wikipedia.org/wiki/HTML' target='_blank' rel='nofollow'>Вікіпедії</a>
-    </p>
+    <h2>Підтримка браузерами</h2>
+    <p>Цифри в таблиці визначають першу версію браузера, яка повністю підтримує перетягування (Drag and Drop).</p>
+    <table class='browserref notranslate'>
+      <tr>
+        <th style='width:20%;font-size:16px;text-align:left;'>API</th>
+        <th style='width:16%;' class='bsChrome' title='Chrome'></th>
+        <th style='width:16%;' class='bsEdge' title='Internet Explorer / Edge'></th>
+        <th style='width:16%;' class='bsFirefox' title='Firefox'></th>
+        <th style='width:16%;' class='bsSafari' title='Safari'></th>
+        <th style='width:16%;' class='bsOpera' title='Opera'></th>
+      </tr>
+      <tr>
+        <td style='text-align:left;'>Drag and Drop</td>
+        <td>4.0</td>
+        <td>9.0</td>
+        <td>3.5</td>
+        <td>6.0</td>
+        <td>12.0</td>
+      </tr>
+    </table>
     <hr>
 
-    <h2>Приклади в кожному розділі</h2>
-    <p>Цей <strong>HTML підручник</strong> містить сотні HTML прикладів.</p>
-    <p>За допомогою нашого <a href="../tryit/index.html">онлайн-редактора</a> ви можете редагувати <strong>HTML код</strong> і, натиснувши на кнопку, переглянути результат.</p>
+    <h2>HTML Drag and Drop Приклад</h2>
+    <p>Нижче наведений приклад простого перетягування:</p>
     <div class='w3-example'>
-        <h3>Приклад</h3>
-        <div class='w3-code notranslate htmlHigh'>
-            &lt;!DOCTYPE html&gt;<br>
-            &lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Назва сторінки&lt;/title&gt;<br>
-            &lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;Це заголовок&lt;/h1&gt;<br>&lt;p&gt;Це
-            параграф.&lt;/p&gt;<br><br>
-            &lt;/body&gt;<br>&lt;/html&gt;
-        </div>
-        <a class='w3-btn w3-margin-bottom' href='../htmltryit/tryhtml_default.html' target='_blank'>Спробуйте самі
-            &raquo;</a>
+      <h3>Приклад</h3>
+      <div class='w3-code notranslate htmlHigh'>
+        &lt;!DOCTYPE HTML&gt;<br>
+        &lt;html&gt;<br>
+        &lt;head&gt;<br>
+        &lt;script&gt;<br>
+        function allowDrop(ev)
+        {<br>
+        &nbsp;&nbsp;ev.preventDefault();<br>
+        }<br><br>
+        function drag(ev)
+        {<br>
+          &nbsp;ev.dataTransfer.setData(&quot;text&quot;, ev.target.id);<br>
+        }<br><br>
+        function drop(ev)
+        {<br>
+        &nbsp;ev.preventDefault();<br>
+        &nbsp;&nbsp;var data = ev.dataTransfer.getData(&quot;text&quot;);<br>
+        &nbsp;&nbsp;ev.target.appendChild(document.getElementById(data));<br>
+        }<br>
+        &lt;/script&gt;<br>
+        &lt;/head&gt;<br>
+        &lt;body&gt;<br><br>
+        &lt;div id=&quot;div1&quot; ondrop=&quot;drop(event)&quot;
+        ondragover=&quot;allowDrop(event)&quot;&gt;&lt;/div&gt;<br><br>
+        &lt;img id=&quot;drag1&quot; src=&quot;img_logo.gif&quot; draggable=&quot;true&quot;
+        ondragstart=&quot;drag(event)&quot; width=&quot;336&quot; height=&quot;69&quot;&gt;<br><br>
+        &lt;/body&gt;<br>
+        &lt;/html&gt;
+      </div>
+      <a class='w3-btn w3-margin-bottom' href='../htmltryit/tryhtml5_draganddrop.html' target='_blank'>Спробуйте самі &raquo;</a></div>
+    <p>Це може здатися складним, але давайте розглянемо всі різні частини перетягування.</p>
+    <hr>
+
+    <h2>Створити елемент для перетягування</h2>
+    <p>Передусім: щоб зробити елемент перетягуваним, встановіть атрибут <code class='w3-codespan'>draggable</code> на true (істина):</p>
+    <div class='w3-code w3-border notranslate jsHigh'><div>
+        &lt;img draggable=&quot;true&quot;&gt;</div></div>
+    <hr>
+
+    <h2>Щоб перетягнути - ondragstart та setData()</h2>
+    <p>Потім вкажіть, що має відбутись, коли елемент перетягується.</p>
+    <p>В наведеному вище прикладі атрибут <code class='w3-codespan'>ondragstart</code> викликає функцію drag(event), яка вказує, які дані необхідно перетягувати.</p>
+    <p>Метод <code class='w3-codespan'>dataTransfer.setData()</code> встановлює тип даних і значення перетягуваних даних:</p>
+    <div class='w3-code w3-border notranslate jsHigh'>
+      <div>
+        function drag(ev) {<br>&nbsp; ev.dataTransfer.setData(&quot;text&quot;, ev.target.id);<br>}
+      </div>
     </div>
-    <p>Натисніть на кнопку <b>&quot;Спробуйте самі&quot;</b>, щоб побачити, як вона працює.</p>
-    <p><a href='html_intro.html' class='w3-button w3-orange shadow-black-01 w3-hover-amber'>Почати вивчення HTML негайно!</a></p>
+    <p>В цьому випадку тип даних - 'text', а значення - id елемента перетягування ('drag1').</p>
     <hr>
-    <div class="adver">Place for your advertisement!</div>
-    <h2>HTML Приклади</h2>
-    <p>В кінці цього підручника HTML ви знайдете більше 200 прикладів.</p>
-    <p>З нашим <a href="../tryit/index.html">онлайн-редактором</a> ви можете редагувати і тестувати кожен приклад самостійно.</p>
-    <p><a href='html_examples.html' class='w3-button w3-blue shadow-black-1'>Перейти до HTML Прикладів!</a></p>
-    <hr>
-
-    <h2>HTML Вправи</h2>
-    <p>Цей HTML підручник також містить близько 100 HTML вправ.</p>
-    <form autocomplete='off' id='w3-exerciseform'
-          action='https://www.w3schools.com/html/exercise.asp?filename=exercise_html_attributes1' method='post'
-          target='_blank'>
-        <h2 class='shadow-black-1'>Перевірте себе за допомогою вправ</h2>
-        <div class='exercisewindow'>
-            <h2>Вправа:</h2>
-            <p>Додайте 'виринаючу підказку' до параграфу нижче з текстом 'About W3Schools'.</p>
-            <div class='exerciseprecontainer'>
-                &lt;p <input name='ex1' maxlength='5' style='width: 54px;'>='About W3Schools'&gt;W3Schools is a web
-                developer's site.&lt;/p&gt;
-            </div>
-            <br>
-            <button type='submit' class='w3-btn w3-margin-bottom'>Відправити відповідь &raquo;</button>
-        </div>
-    </form>
-    <hr>
-    <h2>HTML Перевірочна Вікторина</h2>
-    <p>Перевірте ваші HTML навички з нашою HTML Вікториною!</p>
-    <p><a href='html_quiz.html' class='w3-button w3-blue shadow-black-1'>Почати HTML Вікторину!</a></p>
-    <hr>
-
-    <h2>HTML Довідники</h2>
-    <p>На нашому сайті ви знайдете повні <strong>довідники</strong> на теги, атрибути, події, назви кольорів, об'єкти, набори символів, кодування URL, коди мов, HTTP-повідомлення і багато іншого.</p>
-
-<div class='w3-row-padding' style='margin-left:-16px;margin-right:-16px'>
-<a class='bigbtn' href='../tags/index.html'>HTML Елементи</a>
-<a class='bigbtn' href='../tags/ref_html_browsersupport.html'>Підтримка браузерами</a>
-<a class='bigbtn' href='../tags/ref_attributes.html'>Атрибути</a>
-<a class='bigbtn' href='../tags/ref_standardattributes.html'>Глобальні атрибути</a>
-<a class='bigbtn' href='../tags/ref_eventattributes.html'>Атрибути подій</a>
-<a class='bigbtn' href='../tags/ref_colornames.html'>Назви кольорів</a>
-<a class='bigbtn' href='../tags/ref_canvas.html'>Canvas</a>
-<a class='bigbtn' href='../tags/ref_av_dom.html'>Аудіо/Відео DOM</a>
-<a class='bigbtn' href='../tags/ref_charactersets.html'>Набори символів</a>
-<a class='bigbtn' href='../tags/ref_urlencode.html'>URL Кодування</a>
-<a class='bigbtn' href='../tags/ref_language_codes.html'>Коди мов</a>
-<a class='bigbtn' href='../tags/ref_country_codes.html'>Коди країн</a>
-<a class='bigbtn' href='../tags/ref_httpmessages.html'>HTTP Повідомлення</a>
-<a class='bigbtn' href='../tags/ref_pxtoemconversion.html'>Px в Em Конвертер</a>
-<a class='bigbtn' href='../tags/ref_keyboardshortcuts.html'>Гарячі клавіши</a>
-</div>
-    <p>Перейти на <strong><a href='../tags/index.html'>Повний довідник HTML тегів</a></strong> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
-    <hr>
-    <h2>Пройдіть HTML Іспит - Отримайте свій Диплом!</h2>
-    <div class='w3-row'>
-    <div class='w3-third w3-container w3-padding-24'><a href='../cert/index.html'><img
-                    src='../images/w3certified_logo_250.png' style='max-width:100%;' alt='Онлайн W3Schools Сертифікація'/></a>
+    <h2>Куди кинути перетягнувши - ondragover</h2>
+    <p>Подія <code class='w3-codespan'>ondragover</code> вказує, куди можна перетягнути та скинути дані.</p>
+    <p>За замовчуванням дані/елементи не можуть бути скинуті в інші елементи. Щоб дозволити скидування, необхідно запобігти обробку елемента за замовчуванням.</p>
+    <p>Це робиться шляхом виклику метода <code class='w3-codespan'>event.preventDefault()</code> для ondragover події:</p>
+    <div class='w3-code w3-border notranslate jsHigh'>
+      <div>
+        <i>event</i>.preventDefault()</div>
     </div>
-    <div class='w3-twothird w3-container'><h2>Онлайн Сертифікація W3Schools</h2>
-        <p>Ідеальне рішення для професіоналів, яким необхідно збалансувати роботу, сім&rsquo;ю та кар&rsquo;єру.</p>
-        <p>Більше 25 000 сертифікатів уже видано!</p>
-    </div>
-</div>
-<p><a class='w3-btn shadow-black-1' href='../cert/index.html'>Отримайте Ваш Сертифікат! &raquo;</a></p>
+    <hr>
 
-<div class='refcont'>
-    <a class='bigbtn' href='../cert/cert_html.html'>HTML Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_css.html'>CSS Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_javascript.html'>JavaScript Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_frontend.html'>Front End Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_python.html'>Python Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_jquery.html'>jQuery Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_sql.html'>SQL Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_php.html'>PHP Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_java.html'>Java Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a>
-    <a class='bigbtn' href='../cert/cert_xml.html'>XML Сертифікат</a>
-    <a class='bigbtn' href='../cert/career_tips.html'>IT-кар&rsquo;єра</a>
-    <a class='bigbtn' href='../cert/career_cv.html'>IT-резюме</a>
-</div>    <hr>
+    <h2>Здійснити скидування - ondrop</h2>
+    <p>Коли витягуються перетягувані дані, відбувається подія скидування.</p>
+    <p>В наведеному вище прикладі атрибут ondrop викликає функцію drop(event):</p>
+    <div class='w3-code w3-border notranslate jsHigh'>
+      <div>
+        function drop(ev)
+        {<br>
+        &nbsp;
+        ev.preventDefault();<br>
+        &nbsp;
+        var data = ev.dataTransfer.getData(&quot;text&quot;);<br>
+        &nbsp;
+        ev.target.appendChild(document.getElementById(data));<br>
+        }</div>
+    </div>
+    <p>Пояснення коду:</p>
+    <ul>
+      <li>Викликати функцфю preventDefault(), щоб заборонити обробку даних за замовчуванням браузером (за замовчуванням відкривається як посилання при скидуванні);</li>
+      <li>Отримати перетягнуті дані за допомогою метода dataTransfer.getData(). Цей метод поверне будь-які дані, які були встановлені в тому ж типі в методі setData();</li>
+      <li>Перетягнуті дані - це id перетягнутого елемента ('drag1');</li>
+      <li>Додайте перетягнутий елемент в елемент drop.</li>
+    </ul>
+    <hr>
+
+    <h2>Більше прикладів</h2>
+    <div class='w3-example'>
+      <h3>Перетягніть за допомогою мишки зображення вперед і назад</h3>
+      <p>Як перетягнути (і скинути) зображення вперед і назад між двома елементами &lt;div&gt; (з одного прямокутника в інший):</p>
+
+      <div class='w3-white w3-padding notranslate'>
+        <iframe src='tryhtml5_draganddrop_ifr.html' style='width:100%;border:none'></iframe></div>
+      <a class='w3-btn w3-margin-bottom w3-margin-top' href='../htmltryit/tryhtml5_draganddrop2.html' target='_blank'>Спробуйте самі &raquo;</a></div>
+    <hr>
     <div class='w3-clear nextprev'>
-        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
-        <a class='w3-right w3-btn' href='html_intro.html'>Next &#10095;</a>
+      <a class='w3-left w3-btn' href='html5_geolocation.html'>&#10094; Prev</a>
+      <a class='w3-right w3-btn' href='html5_webstorage.html'>Next &#10095;</a>
     </div>
-</article>
+  </article>
 <div class="adver">Place for your advertisement!</div>
-</div>
-
+  </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
@@ -702,8 +734,8 @@
   <div class='w3-center w3-small w3-opacity'>
     Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
     Також ви можете абсолютно <strong><a href='https://github.com/w3schoolsua/w3schoolsua.github.io/archive/master.zip' target='_blank'>безкоштовно скачати офлайн версію сайту W3Schools українською</a></strong> архівом з GitHub і користуватися локально на своєму комп&rsquo;ютері.<br>
-    Також доступна версія сайту <a href='https://w3schoolsua.github.io/index_en.html' target='_blank' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
-    <a href='../about/about_copyright.html'>Copyright 1999-2023</a> by Refsnes Data. All Rights Reserved.<br>
+    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
     <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
     <a href='../index.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
   </div>

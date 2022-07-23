@@ -13,7 +13,7 @@
 <meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML5 Geolocation API. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='HTML5 Geolocation API.  Lessons for beginners. W3Schools in English'>
+<meta name='description' content='HTML5 Geolocation API. Locate the Users Position. Using HTML Geolocation. Handling Errors and Rejections. Location-specific Information. The getCurrentPosition() Method - Return Data. Geolocation Object - Other interesting Methods. Lessons for beginners. W3Schools in English'>
 <link rel='stylesheet' href='../styles/browserref.css'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
@@ -437,8 +437,8 @@
 <article>
     <h1>HTML <span class="color_h1">Geolocation API</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="html_youtube.asp">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="html5_draganddrop.asp">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="html_youtube_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="html5_draganddrop_en.html">Next &#10095;</a>
     </div>
     <hr>
     <p class="intro">The HTML Geolocation API is used to locate a user's position.</p>
@@ -460,7 +460,6 @@
             }
             else{x.innerHTML="Geolocation is not supported by this browser.";}
         }
-
         function showPosition(position)
         {
             var lat=position.coords.latitude;
@@ -469,7 +468,6 @@
             var mapholder=document.getElementById('mapholder')
             mapholder.style.height='250px';
             mapholder.style.width='100%';
-
             var myOptions={
                 center:latlon,zoom:14,
                 mapTypeId:google.maps.MapTypeId.ROADMAP,
@@ -479,7 +477,6 @@
             var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
             var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
         }
-
         function showError(error)
         {
             switch(error.code)
@@ -505,8 +502,7 @@
     <hr>
 
     <h2>Browser Support</h2>
-    <p>The numbers in the table specify the first browser version that fully supports
-        Geolocation.</p>
+    <p>The numbers in the table specify the first browser version that fully supports Geolocation.</p>
     <table class="browserref notranslate">
         <tr>
             <th style="width:20%;font-size:16px;text-align:left;">API</th>
@@ -527,9 +523,7 @@
     </table>
 
     <div class="w3-panel w3-note">
-        <p><strong>Note:</strong> As of Chrome 50, the Geolocation API will only work on secure contexts such
-            as HTTPS. If your site is hosted on an non-secure origin (such as HTTP) the
-            requests to get the users location will no longer function.</p>
+        <p><strong>Note:</strong> As of Chrome 50, the Geolocation API will only work on secure contexts such as HTTPS. If your site is hosted on an non-secure origin (such as HTTP) the requests to get the users location will no longer function.</p>
     </div>
     <hr>
 
@@ -539,13 +533,9 @@
     <div class="w3-example">
         <h3>Example</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;script&gt;<br>var x = document.getElementById(&quot;demo&quot;);<br>function getLocation() {<br>&nbsp;&nbsp;if (navigator.geolocation) {<br>
-            &nbsp;&nbsp;&nbsp; navigator.geolocation.getCurrentPosition(showPosition);<br>&nbsp;&nbsp;} else {<br>
-            &nbsp;&nbsp;&nbsp; x.innerHTML = &quot;Geolocation is not supported by this browser.&quot;;<br>
-            &nbsp;&nbsp;}<br>}<br><br>
-            function showPosition(position) {<br>&nbsp; x.innerHTML = &quot;Latitude: &quot; + position.coords.latitude + <br>&nbsp;&nbsp;&quot;&lt;br&gt;Longitude: &quot; + position.coords.longitude; <br>
-            }<br>&lt;/script&gt;</div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryhtml5_geolocation" target="_blank">Try it Yourself &raquo;</a>
+            &lt;script&gt;<br>var x = document.getElementById(&quot;demo&quot;);<br>function getLocation() {<br>&nbsp;&nbsp;if (navigator.geolocation) {<br>&nbsp;&nbsp;&nbsp; navigator.geolocation.getCurrentPosition(showPosition);<br>&nbsp;&nbsp;} else {<br> &nbsp;&nbsp;&nbsp; x.innerHTML = &quot;Geolocation is not supported by this browser.&quot;;<br>&nbsp;&nbsp;}<br>}<br><br>function showPosition(position) {<br>&nbsp; x.innerHTML = &quot;Latitude: &quot; + position.coords.latitude + <br>&nbsp;&nbsp;&quot;&lt;br&gt;Longitude: &quot; + position.coords.longitude; <br>}<br>&lt;/script&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml5_geolocation.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <p>Example explained:</p>
     <ul>
@@ -556,17 +546,9 @@
     </ul>
     <p>The example above is a very basic Geolocation script, with no error handling.</p>
     <hr>
-    <div id="midcontentadcontainer" style="overflow:auto;text-align:center">
-        <!-- MidContent -->
-        <!-- <p class="adtext">Advertisement</p> -->
 
-        <div id="adngin-mid_content-0"></div>
-
-    </div>
-    <hr>
     <h2>Handling Errors and Rejections</h2>
-    <p>The second parameter of the <code class="w3-codespan">getCurrentPosition()</code> method is used to handle
-        errors. It specifies a function to run if it fails to get the user's location:</p>
+    <p>The second parameter of the <code class="w3-codespan">getCurrentPosition()</code> method is used to handle errors. It specifies a function to run if it fails to get the user's location:</p>
     <div class="w3-example">
         <h3>Example</h3>
         <div class="w3-code notranslate jsHigh">
@@ -576,9 +558,9 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x.innerHTML = &quot;Location information is unavailable.&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case error.TIMEOUT:<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x.innerHTML = &quot;The request to get user location timed out.&quot;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;&nbsp; case error.UNKNOWN_ERROR:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x.innerHTML = &quot;An unknown error occurred.&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-            &nbsp;&nbsp;}<br>
-            }</div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryhtml5_geolocation_error" target="_blank">Try it Yourself &raquo;</a>
+            &nbsp;&nbsp;}<br>}
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml5_geolocation_error.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <hr>
 
@@ -593,9 +575,7 @@
     <hr>
 
     <h2>The getCurrentPosition() Method - Return Data</h2>
-    <p>The <code class="w3-codespan">getCurrentPosition()</code> method returns an object on success. The latitude,
-        longitude and accuracy properties are always returned. The other properties are returned
-        if available:</p>
+    <p>The <code class="w3-codespan">getCurrentPosition()</code> method returns an object on success. The latitude, longitude and accuracy properties are always returned. The other properties are returned if available:</p>
 
     <table class="ws-table-all notranslate">
         <tr>
@@ -640,27 +620,22 @@
     <h2>Geolocation Object - Other interesting Methods</h2>
     <p>The Geolocation object also has other interesting methods:</p>
     <ul>
-        <li><code class="w3-codespan">watchPosition()</code> - Returns the current position of the user and continues to
-            return updated position as the user moves (like the GPS in a car).</li>
+        <li><code class="w3-codespan">watchPosition()</code> - Returns the current position of the user and continues to return updated position as the user moves (like the GPS in a car).</li>
         <li><code class="w3-codespan">clearWatch()</code> - Stops the <code class="w3-codespan">watchPosition()</code> method.</li>
     </ul>
     <p>The example below shows the <code class="w3-codespan">watchPosition()</code> method. You need an accurate GPS device to test this (like
-        smartphone): </p>
+        smartphone):</p>
     <div class="w3-example">
         <h3>Example</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;script&gt;<br>var x = document.getElementById(&quot;demo&quot;);<br>function getLocation() {<br>
-            &nbsp; if (navigator.geolocation) {<br>&nbsp;&nbsp;&nbsp; navigator.geolocation.watchPosition(showPosition);<br>&nbsp;&nbsp;} else {<br>
-            &nbsp;&nbsp;&nbsp; x.innerHTML = &quot;Geolocation is not supported by this browser.&quot;;<br>
-            &nbsp;&nbsp;}<br>}<br>
-            function showPosition(position) {<br>&nbsp; x.innerHTML = &quot;Latitude: &quot; + position.coords.latitude + <br>&nbsp;&nbsp;&quot;&lt;br&gt;Longitude: &quot; + position.coords.longitude; <br>
-            }<br>&lt;/script&gt;</div>
-        <a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryhtml5_geolocation_watchposition" target="_blank">Try it Yourself &raquo;</a>
+            &lt;script&gt;<br>var x = document.getElementById(&quot;demo&quot;);<br>function getLocation() {<br>&nbsp; if (navigator.geolocation) {<br>&nbsp;&nbsp;&nbsp; navigator.geolocation.watchPosition(showPosition);<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp; x.innerHTML = &quot;Geolocation is not supported by this browser.&quot;;<br>&nbsp;&nbsp;}<br>}<br>function showPosition(position) {<br>&nbsp; x.innerHTML = &quot;Latitude: &quot; + position.coords.latitude + <br>&nbsp;&nbsp;&quot;&lt;br&gt;Longitude: &quot; + position.coords.longitude;<br>}<br>&lt;/script&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml5_geolocation_watchposition.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
-    <br>
+    <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="html_youtube.asp">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="html5_draganddrop.asp">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="html_youtube_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="html5_draganddrop_en.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver">Place for your advertisement!</div>
