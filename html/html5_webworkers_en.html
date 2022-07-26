@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML5 Web Storage. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='HTML5 Web Storage. What is HTML Web Storage? HTML Web Storage Objects. The localStorage Object. The sessionStorage Object. Lessons for beginners. W3Schools in English'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML5 Web Workers. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='HTML5 Web Workers. What is a Web Worker? HTML Web Workers Example. Check Web Worker Support. Create a Web Worker File. Create a Web Worker Object. Terminate a Web Worker. Reuse the Web Worker. Full Web Worker Example Code. Web Workers and the DOM. Lessons for beginners. W3Schools in English'>
 <link rel='stylesheet' href='../styles/browserref.css'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
@@ -431,25 +431,24 @@
         <div class='w3-col l10 m12' id='main'>
           <div class="adver">Place for your advertisement!</div>
             <a href='index_en.html'><img src='../svg/html5_icon1.svg' alt='HTML5 Lessons for beginners ' class='w3-left' title='HTML5 for beginners. W3Schools in English' style='width: 70px; padding: 10px'></a><p class='w3-right'>
-    <a href='html5_webstorage.html' title='Go to Ukrainian language'>Ua</a>
+    <a href='html5_webworkers.html' title='Go to Ukrainian language'>Ua</a>
 </p>
 <article>
-    <h1>HTML <span class="color_h1">Web Storage API</span></h1>
+    <h1>HTML <span class="color_h1">Web Workers API</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="html5_draganddrop_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="html5_webworkers_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="html5_webstorage_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="html5_serversentevents_en.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">HTML <strong>web storage</strong>; better than cookies.</p>
+    <p class="intro">A <strong>web worker</strong> is a JavaScript running in the background, without affecting the performance of the page.</p>
     <hr>
-    <h2>What is HTML Web Storage?</h2>
-    <p>With web storage, web applications can store data locally within the user's browser.</p>
-    <p>Before HTML5, application data had to be stored in cookies, included in every server request. Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance.</p>
-    <p>Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.</p>
-    <p>Web storage is per origin (per domain and protocol). All pages, from one origin, can store and access the same data.</p>
+
+    <h2>What is a Web Worker?</h2>
+    <p>When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.</p>
+    <p>A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.</p>
     <hr>
     <h2>Browser Support</h2>
-    <p>The numbers in the table specify the first browser version that fully supports Web Storage.</p>
+    <p>The numbers in the table specify the first browser version that fully support Web Workers.</p>
     <table class="browserref notranslate">
         <tr>
             <th style="width:20%;font-size:16px;text-align:left;">API</th>
@@ -460,86 +459,147 @@
             <th style="width:16%;" class="bsOpera" title="Opera"></th>
         </tr>
         <tr>
-            <td style="text-align:left;">Web Storage</td>
+            <td style="text-align:left;">Web Workers</td>
             <td>4.0</td>
-            <td>8.0</td>
+            <td>10.0</td>
             <td>3.5</td>
             <td>4.0</td>
             <td>11.5</td>
         </tr>
     </table>
     <hr>
-    <h2>HTML Web Storage Objects</h2>
-    <p>HTML web storage provides two objects for storing data on the client:</p>
-    <ul>
-        <li><code class="w3-codespan">window.localStorage</code> - stores data with no expiration date</li>
-        <li><code class="w3-codespan">window.sessionStorage</code> - stores data for one session (data is lost when the browser tab is closed)</li>
-    </ul>
-    <p>Before using web storage, check browser support for localStorage and sessionStorage:</p>
+    <h2>HTML Web Workers Example</h2>
+    <p>The example below creates a simple web worker that count numbers in the background:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-padding w3-white notranslate">
+            Count numbers: <output id="result"></output>
+            <button onclick="startWorker()">Start Worker</button>
+            <button onclick="stopWorker()">Stop Worker</button>
+            <script>
+                var w;
+                function startWorker()
+                {
+                    if(typeof(Worker)!=="undefined") {
+                        if(typeof(w)=="undefined") {
+                            w=new Worker("demo_workers.js");
+                        }
+                        w.onmessage = function (event) {
+                            document.getElementById("result").innerHTML=event.data;
+                        };
+                    } else {
+                        document.getElementById("result").innerHTML="Sorry, your browser does not support Web Workers...";
+                    }
+                }
+                function stopWorker()
+                {
+                    w.terminate();
+                    w = undefined;
+                }
+            </script>
+        </div>
+        <a target="_blank" href="../htmltryit/tryhtml5_webworker.html" class="w3-btn w3-margin-bottom w3-margin-top">Try it Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Check Web Worker Support</h2>
+    <p>Before creating a web worker, check whether the user's browser supports it:</p>
     <div class="w3-code w3-border notranslate jsHigh"><div>
-            if (typeof(Storage) !== &quot;undefined&quot;) {<br>
-            &nbsp; // <i>Code for localStorage/sessionStorage.</i><br>}
-            else {<br>
-            &nbsp; // Sorry! No Web Storage support..<br>}
+            if (typeof(Worker) !== &quot;undefined&quot;) {<br>
+            &nbsp;&nbsp;// Yes! Web worker support!<br>
+            &nbsp; // <i>Some code.....</i><br>} else {<br>
+            &nbsp; // Sorry! No Web Worker support..<br>}
         </div>
     </div>
     <hr>
-    <h2>The localStorage Object</h2>
-    <p>The localStorage object stores the data with no expiration date. The data will not be deleted when the browser is closed, and will be available the next day, week, or year.</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            // Store<br>localStorage.setItem(&quot;lastname&quot;, &quot;Smith&quot;);<br><br>// Retrieve<br>
-            document.getElementById(&quot;result&quot;).innerHTML = localStorage.getItem(&quot;lastname&quot;);
-        </div>
-        <a target="_blank" href="../htmltryit/tryhtml5_webstorage_local.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-
-    <p>Example explained:</p>
-    <ul>
-        <li>Create a localStorage name/value pair with name=&quot;lastname&quot; and value=&quot;Smith&quot;</li>
-        <li>Retrieve the value of &quot;lastname&quot; and insert it into the element with id=&quot;result&quot;</li>
-    </ul>
-    <p>The example above could also be written like this:</p>
-    <div class="w3-code w3-border notranslate jsHigh"><div>
-            // Store<br>localStorage.lastname = &quot;Smith&quot;;<br>// Retrieve<br>
-            document.getElementById(&quot;result&quot;).innerHTML = localStorage.lastname;
+    <h2>Create a Web Worker File</h2>
+    <p>Now, let's create our web worker in an external JavaScript.</p>
+    <p>Here, we create a script that counts. The script is stored in the &quot;demo_workers.js&quot; file:</p>
+    <div class="w3-code w3-border notranslate jsHigh">
+        <div>
+            var i = 0;<br><br>
+            function timedCount() {<br>
+            &nbsp; i = i + 1;<br>
+            &nbsp; postMessage(i);<br>
+            &nbsp;&nbsp;setTimeout(&quot;timedCount()&quot;,500);<br>}<br><br>timedCount();
         </div>
     </div>
-    <p>The syntax for removing the &quot;lastname&quot; localStorage item is as follows:</p>
+    <p>The important part of the code above is the <code class="w3-codespan">postMessage()</code> method - which is used to post a message back to the HTML page.</p>
+    <p><b>Note:</b> Normally web workers are not used for such simple scripts, but for more CPU intensive tasks.</p>
+    <hr>
+    <h2>Create a Web Worker Object</h2>
+    <p>Now that we have the web worker file, we need to call it from an HTML page.</p>
+    <p>The following lines checks if the worker already exists, if not - it creates a new web worker object and runs the code in &quot;demo_workers.js&quot;:</p>
     <div class="w3-code w3-border notranslate jsHigh"><div>
-            localStorage.removeItem(&quot;lastname&quot;);</div></div>
-    <p><strong>Note:</strong> Name/value pairs are always stored as strings. Remember to convert them to another format when needed!</p>
-    <p>The following example counts the number of times a user has clicked a button. In this code the value string is converted to a number to be able to increase the counter:</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            if (localStorage.clickcount) {<br>&nbsp; localStorage.clickcount = Number(localStorage.clickcount) + 1;<br>
-            } else {<br>&nbsp; localStorage.clickcount = 1;<br>}<br>
-            document.getElementById(&quot;result&quot;).innerHTML = &quot;You have clicked the button &quot; +<br>
-            localStorage.clickcount + &quot; time(s).&quot;;
+            if (typeof(w) == &quot;undefined&quot;) {<br>&nbsp; w = new Worker(&quot;demo_workers.js&quot;);<br>}
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml5_webstorage_local_clickcount.html" target="_blank">Try it Yourself &raquo;</a>
+    </div>
+    <p>Then we can send and receive messages from the web worker.</p>
+    <p>Add an &quot;onmessage&quot; event listener to the web worker.</p>
+    <div class="w3-code w3-border notranslate jsHigh">
+        <div>
+            w.onmessage = function(event){<br> &nbsp;&nbsp;document.getElementById(&quot;result&quot;).innerHTML = event.data;<br>};
+        </div>
+    </div>
+    <p>When the web worker posts a message, the code within the event listener is executed. The data from the web worker is stored in event.data.</p>
+    <hr>
+    <h2>Terminate a Web Worker</h2>
+    <p>When a web worker object is created, it will continue to listen for messages (even after the external script is finished) until it is terminated.</p>
+    <p>To terminate a web worker, and free browser/computer resources, use the <code class="w3-codespan">terminate()</code> method:</p>
+    <div class="w3-code w3-border notranslate">
+        <div>
+            w.terminate();
+        </div>
     </div>
     <hr>
-    <h2>The sessionStorage Object</h2>
-    <p>The <code class="w3-codespan">sessionStorage</code> object is equal to the localStorage object, <strong>except</strong>
-        that it stores the data for only one session. The data is deleted when the user closes the specific browser tab.</p>
-    <p>The following example counts the number of times a user has clicked a button, in the current session:</p>
+    <h2>Reuse the Web Worker</h2>
+    <p>If you set the worker variable to undefined, after it has been terminated, you can reuse the code:</p>
+    <div class="w3-code w3-border notranslate">
+        <div>
+            w = undefined;
+        </div>
+    </div>
+    <hr>
+    <h2>Full Web Worker Example Code</h2>
+    <p>We have already seen the Worker code in the .js file. Below is the code for the HTML page:</p>
     <div class="w3-example">
         <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            if (sessionStorage.clickcount) {<br>&nbsp; sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;<br>}
-            else {<br>&nbsp; sessionStorage.clickcount = 1;<br>}<br>
-            document.getElementById(&quot;result&quot;).innerHTML = &quot;You have clicked the button &quot; +<br>
-            sessionStorage.clickcount + &quot; time(s) in this session.&quot;;
+        <div class="w3-code notranslate htmlHigh">
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>
+            &lt;p&gt;Count numbers: &lt;output id=&quot;result&quot;&gt;&lt;/output&gt;&lt;/p&gt;<br>
+            &lt;button onclick=&quot;startWorker()&quot;&gt;Start Worker&lt;/button&gt;<br>
+            &lt;button onclick=&quot;stopWorker()&quot;&gt;Stop Worker&lt;/button&gt;<br><br>
+            &lt;script&gt;<br>
+            var w;<br><br>
+            function startWorker() {<br>
+            &nbsp; if (typeof(Worker) !== &quot;undefined&quot;) {<br>
+            &nbsp;&nbsp;&nbsp; if (typeof(w) == &quot;undefined&quot;) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w = new Worker(&quot;demo_workers.js&quot;);<br>
+            &nbsp;&nbsp;&nbsp; }<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;w.onmessage = function(event) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById(&quot;result&quot;).innerHTML = event.data;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;};<br>
+            &nbsp;&nbsp;} else {<br>
+            &nbsp;&nbsp;&nbsp; document.getElementById(&quot;result&quot;).innerHTML = &quot;Sorry! No Web Worker support.&quot;;<br>
+            &nbsp;&nbsp;}<br>}<br><br>
+            function stopWorker() {<br>
+            &nbsp;&nbsp;w.terminate();<br>&nbsp;&nbsp;w = undefined;<br>}<br>
+            &lt;/script&gt;<br><br>
+            &lt;/body&gt;<br>&lt;/html&gt;
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml5_webstorage_session.html" target="_blank">Try it Yourself &raquo;</a>
+        <a target="_blank" href="../htmltryit/tryhtml5_webworker.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
     </div>
+    <hr>
+    <h2>Web Workers and the DOM</h2>
+    <p>Since web workers are in external files, they do not have access to the following JavaScript objects:</p>
+    <ul>
+        <li>The window object</li>
+        <li>The document object</li>
+        <li>The parent object</li>
+    </ul>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="html5_draganddrop_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="html5_webworkers_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="html5_webstorage_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="html5_serversentevents_en.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver">Place for your advertisement!</div>
