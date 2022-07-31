@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="../styles/w3.css">
-<link rel="stylesheet" href="../styles/external.css">    <title>Python Глобальні змінні. Уроки для початківців. W3Schools українською</title>
+<link rel="stylesheet" href="../styles/external.css">    <title>Python Числа. Уроки для початківців. W3Schools українською</title>
     <meta name="description"
-          content="Python Глобальні змінні. Змінні, створені поза функцією (як у всіх прикладах вище), відомі як глобальні змінні. Вони можуть використовуватися всіма, як усередині функцій, так і зовні. Уроки W3Schools українською мовою. Python для початківців. Приклади коду">
+          content="Python Числа - три типи чисел: int (ціле число), float (плаваюче число), complex (складні числа). Конверсія типу. Рандомне (випадкове) число. Уроки W3Schools українською мовою. Python для початківців. Вправи і приклади коду">
 
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
@@ -542,41 +542,149 @@
             <a href="index.html"><img src="../svg/python.svg" alt="Python. Уроки для початківців" class="w3-left w3-padding" title="Python для початківців" width="100"></a>
 
     <article>
-        <h1>Python - <span class="color_h1">Змінні. Вправи</span></h1>
-
+        <h1>Python <span class="color_h1">Числа</span></h1>
         <div class="w3-clear nextprev">
-            <a class="w3-left w3-btn" href="python_variables_global.html" title="Попередня сторінка">&#10094; Prev</a>
-            <a class="w3-right w3-btn" href="python_datatypes.html" title="Наступна сторінка">Next &#10095;</a>
+            <a class="w3-left w3-btn" href="python_datatypes.html" title="Попередня сторінка">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="python_casting.html" title="Наступна сторінка">Next &#10095;</a>
         </div>
         <hr>
 
-        <h2>Перевірте себе за допомогою вправ</h2>
+        <h2>Python Числа</h2>
 
-        <p>Тепер ви дізналися багато нового про змінні та про те, як ними користуватися в Python.</p>
-        <p>Чи готові ви до тесту?</p>
-        <p>Спробуйте вставити відсутню частину, щоб python-код працював належним чином:</p>
+        <p>У Python є три типи чисел:</p>
+        <ul>
+            <li><code class="w3-codespan">int</code> - (integer) - ціле число</li>
+            <li><code class="w3-codespan">float</code> - (floating point number) - плаваюче число (або число з плаваючою комою)</li>
+            <li><code class="w3-codespan">complex</code> - складні (комплексні) числа</li>
+        </ul>
 
-        <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/python/exercise.asp?filename=exercise_variables1" method="post" target="_blank">
+        <p>Змінні числових типів створюються, коли ви присвоюєте їм значення:</p>
+
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate pythonHigh">
+                x = 1&nbsp;&nbsp;&nbsp;
+                # int<br>y = 2.8&nbsp; # float<br>z = 1j&nbsp;&nbsp; # complex<br>
+            </div>
+        </div>
+
+        <p>Щоб перевірити тип будь-якого об'єкта в Python, використовуйте функцію <code class="w3-codespan">type()</code>:</p>
+
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate pythonHigh">
+                print(type(x))<br>print(type(y))<br>print(type(z))<br>
+            </div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython592b.html?filename=demo_numbers">Спробуйте самі &raquo;</a>
+        </div>
+        <hr>
+
+        <h2>Int</h2>
+        <p>Int або integer - це ціле число, додатне чи від’ємне, без десяткових знаків, необмеженої довжини.</p>
+
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Цілі числа:</p>
+            <div class="w3-code notranslate pythonHigh">
+                x = 1<br>y = 35656222554887711<br>z =
+                -3255522<br><br>print(type(x))<br>print(type(y))<br>print(type(z))</div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypythonb028.html?filename=demo_numbers_int">Спробуйте самі &raquo;</a>
+        </div>
+        <hr>
+
+        <h2>Float</h2>
+        <p>Float, або "плаваюче число" ("число з плаваючою комою") - це число, позитивне чи негативне, що містить один або більше десяткових знаків.</p>
+
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Плаваюче число:</p>
+            <div class="w3-code notranslate pythonHigh">
+                x = 1.10<br>y = 1.0<br>z = -35.59<br><br>print(type(x))<br>print(type(y))<br>print(type(z))</div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypythonafcd.html?filename=demo_numbers_float">Спробуйте самі &raquo;</a>
+        </div>
+
+        <p>Float також можуть бути науковими цифрами з "е", що позначає кратність 10.</p>
+
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Плаваючи числа:</p>
+            <div class="w3-code notranslate pythonHigh">
+                x = 35e3<br>y = 12E4<br>z = -87.7e100<br><br>print(type(x))<br>print(type(y))<br>
+                print(type(z))</div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypython8d0c.html?filename=demo_numbers_float2">Спробуйте самі &raquo;</a>
+        </div>
+        <hr>
+
+        <h2>Complex</h2>
+        <p>Складні числа записуються з &quot;j&quot; як уявна частина:</p>
+
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Складні числа:</p>
+            <div class="w3-code notranslate pythonHigh">
+                x = 3+5j<br>y = 5j<br>z = -5j<br><br>print(type(x))<br>print(type(y))<br>
+                print(type(z))</div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypythone110.html?filename=demo_numbers_complex">Спробуйте самі &raquo;</a>
+        </div>
+        <hr>
+
+        <h2>Конверсія типу</h2>
+        <p>Ви можете конвертувати з одного типу в інший за допомогою методів <code class="w3-codespan">int()</code>,
+            <code class="w3-codespan">float()</code> та <code class="w3-codespan">complex()</code>:</p>
+
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Конвертація з одного типу на інший:</p>
+            <div class="w3-code notranslate pythonHigh">
+                x = 1&nbsp;&nbsp;&nbsp; # int<br>y = 2.8&nbsp; # float<br>z = 1j&nbsp;&nbsp; # complex<br><br>#конвертація з int на float:<br>
+                a = float(x)<br><br>#конвертація з float на int:<br>
+                b = int(y)<br><br>#конвертація з int в complex:<br>c = complex(x)<br><br>print(a)<br>print(b)<br>
+                print(c)<br><br>print(type(a))<br>print(type(b))<br>
+                print(type(c))</div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypythond887.html?filename=demo_numbers_convert">Спробуйте самі &raquo;</a>
+        </div>
+
+        <div class="w3-panel w3-note">
+            <p><strong>Примітка:</strong> Ви не можете перетворити складні числа (complex) в інший тип числа.</p>
+        </div>
+        <hr>
+
+        <h2>Random / Рандомне (випадкове) число</h2>
+        <p>Python не має функції <code class="w3-codespan">random()</code> для створення випадкового числа, але Python має вбудований модуль, який називається <code class="w3-codespan">random</code>, який можна використовувати для створення випадкових чисел:</p>
+
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Імпортуйте random модуль і покажіть рандомне (випадкове) число від 1 до 9:</p>
+            <div class="w3-code notranslate pythonHigh">
+                import random<br><br>print(random.randrange(1, 10))</div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="trypythonc489.html?filename=demo_numbers_random">Спробуйте самі &raquo;</a>
+        </div>
+
+        <p>В <a href="module_random.html">Довіднику Random Модуль</a> на нашому сайті ви дізнаєтесь більше про Random модуль.</p>
+
+        <a id="exercises"></a>
+        <hr>
+        <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/python/exercise.asp?filename=exercise_numbers1" method="post" target="_blank">
+            <h2>Перевірте себе за допомогою вправ</h2>
             <div class="exercisewindow">
                 <h2>Вправа:</h2>
-                <p>Створіть змінну з іменем <code class="w3-codespan">carname</code> і призначте їй значення <code class="w3-codespan">Volvo</code>.</p>
+                <p>Вставте правильний синтаксис для перетворення x в число з плаваючою комою.</p>
                 <div class="exerciseprecontainer">
 <pre>
-<input name="ex1" maxlength="7" style="width: 75px;"> = "<input name="ex2" maxlength="5" style="width: 54px;">"
+x = 5
+x = <input name="ex1" maxlength="5" style="width: 54px;">(x)
 </pre>
                 </div>
                 <br>
                 <button type="submit" class="w3-btn w3-margin-bottom">Надіслати відповідь &raquo;</button>
+                <p><a target="_blank" href="exercisec5e4.html?filename=exercise_numbers1">Почати вправу</a></p>
             </div>
         </form>
 
-        <p>Перейдіть до розділу "Вправи" і протестуйте всі наші вправи, що змінюються на Python:</p>
-        <p><a href="exercise4829.html?filename=exercise_variables1" target="_blank" class="w3-button w3-blue">Python Змінні. Вправи</a></p>
-
         <hr>
         <div class="w3-clear nextprev">
-            <a class="w3-left w3-btn" href="python_variables_global.html" title="Попередня сторінка">&#10094; Prev</a>
-            <a class="w3-right w3-btn" href="python_datatypes.html" title="Наступна сторінка">Next &#10095;</a>
+            <a class="w3-left w3-btn" href="python_datatypes.html" title="Попередня сторінка">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="python_casting.html" title="Наступна сторінка">Next &#10095;</a>
         </div>
     </article>
 
