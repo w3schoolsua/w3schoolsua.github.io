@@ -12,15 +12,17 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Git Підручник. СТАРТ. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Git Підручник. СТАРТ. Встановити Git. Використання Git з командним рядком. Налаштувати Git. Створення папки Git. Ініціалізація Git. Вітаємо! Ви щойно створили свій перший репозиторій Git! Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Git Проміжне середовище. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Git Проміжне середовище. Додайте більше ніж один файл. Скороченою командою для git add --all є git add -A. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
 </div>
+
 <!--GoogleSearch-->
 <div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'><script async src='https://cse.google.com/cse.js?cx=018292901867315999508:ykn8f9viuuv'></script><div class='gcse-search'></div></div>
 <!--/GoogleSearch-->
+
 <!--Top menu-->
 <div class='w3-card-2 topnav notranslate' id='topnav'>
     <div style='overflow:auto;'>
@@ -342,79 +344,95 @@
           <div class="adver">Place for your advertisement!</div>
             <a href='index.html'><img src='../svg/git_icon.svg' alt='Git. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='Git для початківців. W3Schools українською мовою' style="width: 90px"></a>
 <p class='w3-right'>
-    <a href="git_getstarted_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="git_staging_environment_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>Git <span class="color_h1">СТАРТ</span></h1>
+    <h1>Git <span class="color_h1">Проміжне середовище</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="git_intro.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="git_new_files.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="git_new_files.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="git_commit.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Git Встановлення</h2>
-    <p>Ви можете завантажити Git безкоштовно з указаного веб-сайту: <a href="https://git-scm.com/" target="_blank" rel="nofollow">https://www.git-scm.com/</a></p>
-    <hr>
-    <h2>Використання Git із командним рядком</h2>
-    <p>Щоб почати використовувати Git, ми спочатку відкриємо командну оболонку.</p>
-    <p>Для Windows ви можете використовувати Git bash, який входить до Git для Windows. Для Mac та Linux ви можете використовувати вбудований термінал.</p>
-    <p>Перше, що нам потрібно зробити, це перевірити, чи правильно встановлено Git:</p>
+    <h2>Git Staging Environment / Проміжне середовище</h2>
+    <p>Однією з основних функцій Git є концепції <strong>проміжного середовища (Staging Environment)</strong> та <strong>коміту (Commit)</strong>.</p>
+    <p>Під час роботи ви можете додавати, редагувати та видаляти файли. Але щоразу, коли ви досягаєте певної віхи або завершуєте частину роботи, ви повинні додати файли до проміжного середовища.</p>
+    <p><strong>Проміжні (поетапні)</strong> файли – це файли, готові до <strong>committed (закріплення)</strong> в репозиторії, над яким ви працюєте. Незабаром ви дізнаєтесь більше про <code class="w3-codespan">commit</code> (закріплення).</p>
+    <p>Наразі ми закінчили працювати з <code class="w3-codespan">index.html</code>. Таким чином, ми можемо додати його до проміжного середовища:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <pre class="command-line" data-output="2" data-user="user" data-host="localhost"><code class="language-shell">git --version
-git version 2.37.1.windows.1</code></pre>
+        <pre class="command-line" data-user="user" data-host="localhost"><code class="language-shell">git add index.html</code></pre>
     </div>
-    <p>Якщо Git встановлено, він повинен показати щось подібне <code class="w3-codespan">git version X.Y</code></p>
-    <hr>
-    <h2>Налаштувати Git</h2>
-    <p>Тепер дайте Git знати, хто ви. Це важливо для систем контролю версій, оскільки кожен коміт Git використовує цю інформацію:</p>
+    <p>Файл має бути <strong>проміжним</strong>. Давайте перевіримо статус:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <pre class="command-line" data-user="user" data-host="localhost"><code class="language-shell">git config --global user.name "w3schools-test"
-git config --global user.email "usermail@gmail.com"</code>
-        </pre>
+        <pre class="command-line" data-output="2-8" data-user="user" data-host="localhost"><code class="language-shell">git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+&nbsp;&nbsp;(use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+&nbsp;&nbsp;&nbsp;&nbsp;new file: index.html</code></pre>
     </div>
-    <p>Змініть ім&#8217;я користувача та адресу електронної пошти на власні. Можливо, ви також захочете використати це під час реєстрації на GitHub пізніше.</p>
-    <div class="w3-panel w3-note">
-        <p><b>Примітка:</b> Використовуйте <code class="w3-codespan">global</code>, щоб установити ім’я користувача та електронну адресу для <strong>кожного репозиторію</strong> на вашому комп&#8217;ютері.</p>
-        <p>Якщо ви хочете встановити ім&#8217;я користувача/електронну адресу лише для поточного репозиторію, ви можете видалити <code class="w3-codespan">global</code></p>
-    </div>
+    <p>Тепер файл додано до проміжного середовища.</p>
     <hr>
-    <h2>Створення папки Git</h2>
-    <p>Тепер створіть нову теку для вашого проєкту:</p>
+    <h2>Git Додати більше ніж один файл</h2>
+    <p>Також можна розміщувати більше одного файлу одночасно. Давайте додамо ще 2 файли в нашу робочу теку. Знову скористайтеся текстовим редактором.</p>
+    <p>Файл <code class="w3-codespan">README.md</code>, який описує репозиторій (рекомендовано для всіх репозиторіїв):</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <pre class="command-line" data-user="user" data-host="localhost"><code class="language-shell">mkdir myproject
-cd myproject</code></pre>
+        <div class="w3-code notranslate htmlHigh">
+            # hello-world<br>Репозиторій Hello World для підручника Git<br>Це приклад репозиторію для підручника Git на https://w3schoolsua.github.io<br><br>Це сховище створено крок за кроком у підручнику.
+        </div>
     </div>
-    <p><code class="w3-codespan">mkdir</code> <strong>створює</strong> <strong>новий каталог</strong>.</p>
-    <p><code class="w3-codespan">cd</code> <strong>змінює</strong> <strong>поточний робочий каталог</strong>.</p>
-    <p>Тепер ви в правильному каталозі. Ви можете почати з ініціалізації Git!</p>
+    <p>Основна зовнішня таблиця стилів (<code class="w3-codespan">bluestyle.css</code>):</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            body {<br>background-color: lightblue;<br>}<br><br>h1 {<br>color: navy;<br>margin-left: 20px;<br>}
+        </div>
+    </div>
+    <p>І оновіть <code class="w3-codespan">index.html</code>, щоб включити таблицю стилів:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Hello World!&lt;/title&gt;<br>&lt;link rel=&quot;stylesheet&quot; href=&quot;bluestyle.css&quot;&gt;<br>
+            &lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;Hello world!&lt;/h1&gt;<br>&lt;p&gt;This is the first file in my new Git Repo.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+        </div>
+    </div>
+    <p>Тепер додайте всі файли в поточному каталозі до проміжного середовища:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-user="user" data-host="localhost"><code class="language-shell">git add --all</code></pre>
+    </div>
+    <p>Використання <code class="w3-codespan">--all</code> замість окремих назв файлів призведе до <code class="w3-codespan">stage</code> всіх змінених файлів (нових, змінених і видалених).</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-output="2-10" data-user="user" data-host="localhost"><code class="language-shell">git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+(use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+new file:   README.md
+new file:   bluestyle.css
+new file:   index.html</code></pre>
+    </div>
+    <p>Тепер усі 3 файли додано до проміжного середовища, і ми готові до першого <code class="w3-codespan">commit</code> (коміту).</p>
     <div class="w3-panel w3-info">
-        <p><b>Примітка:</b> Якщо у вас уже є тека/каталог, який ви хочете використовувати для Git:</p>
-        <p>Перейдіть до нього в командному рядку або відкрийте його у своєму файловому провіднику, клікніть правою кнопкою миші та виберіть &quot;Git Bash here&quot;</p>
+        <p><b>Примітка:</b> Скорочена команда для <code class="w3-codespan">
+                git add --all</code> is <code class="w3-codespan">git add -A</code></p>
     </div>
     <hr>
-    <h2>Ініціалізація Git</h2>
-    <p>Після того, як ви перейшли до потрібної теки, ви можете ініціалізувати Git у цій теці:</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <pre class="command-line" data-output="2" data-user="user" data-host="localhost"><code class="language-shell language-git" >git init
-Initialized empty Git repository in /Users/user/myproject/.git/</code></pre>
-    </div>
-    <p>Ви щойно створили свій перший репозиторій Git!</p>
-    <div class="w3-panel w3-note">
-        <p><b>Примітка:</b> Git тепер знає, що він має спостерігати за текою, у якій ви його запустили.</p>
-        <p>Git створює приховану теку для відстеження змін.</p>
-    </div>
-    <hr>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/git/exercise.asp?filename=exercise_getstarted1" method="post" target="_blank">
+    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/git/exercise.asp?filename=exercise_staging_environment1" method="post" target="_blank">
         <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
         <div class="exercisewindow">
             <h2>Вправа:</h2>
-            <p>Вставте відсутню частину команди, щоб перевірити, яка версія Git (якщо є) встановлена.</p>
+            <p>Додайте index.html до проміжного середовища:</p>
             <div class="exerciseprecontainer">
 <pre>
-git <input name="ex1" maxlength="9" style="width: 100px;">
+git <input name="ex1" maxlength="3" style="width: 75px;"> index.html
 </pre>
             </div>
             <br>
@@ -423,8 +441,8 @@ git <input name="ex1" maxlength="9" style="width: 100px;">
     </form>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="git_intro.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="git_new_files.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="git_new_files.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="git_commit.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver">Place for your advertisement!</div>
@@ -433,15 +451,15 @@ git <input name="ex1" maxlength="9" style="width: 100px;">
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
         <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
-        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
     </div>
     <div class='sidesection'>
         <h4>ПРИЄДНУЙТЕСЬ!</h4>
         <div class='w3-text-grey sharethis'>
-            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook страница' title='Перейти на Facebook сторінку' style='width:35px; height:35px'></a>
+            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook сторінка' title='Перейти на Facebook сторінку' style='width:35px; height:35px'></a>
             <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
             <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
-            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+            <a href='https://www.youtube.com/channel/UCzJZhVkn5O609CaWXupIqpw' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
         </div>
     </div>
   <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
