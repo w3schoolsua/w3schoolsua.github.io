@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Git Staging Environment. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='Git Staging Environment. Git Add More than One File. Lessons for beginners. W3Schools in English'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Git Branch. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='Git Branch. Working with Git Branches. New Git Branch. Switching Between Branches. Emergency Branch. Exercises. Lessons for beginners. W3Schools in English'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS
@@ -345,95 +345,202 @@
           <div class="adver">Place for your advertisement!</div>
             <a href='index.html'><img src='../svg/git_icon.svg' alt='Git. W3Schools in English. Lessons for beginners' class='w3-left w3-padding' title='Git for beginners. W3Schools in English' style="width: 90px"></a>
 <p class='w3-right'>
-    <a href="git_staging_environment.html" title='Switch to Ukrainian'>Ua</a>
+    <a href="git_branch.html" title='Switch to Ukrainian'>Ua</a>
 </p>
 <article>
-    <h1>Git <span class="color_h1">Staging Environment</span></h1>
+    <h1>Git <span class="color_h1">Branch</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="git_new_files_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="git_commit_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="git_help_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="git_branch_merge_en.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Git Staging Environment</h2>
-    <p>One of the core functions of Git is the concepts of the <strong>Staging Environment</strong>, and the <strong>Commit</strong>.</p>
-    <p>As you are working, you may be adding, editing and removing files. But whenever you hit a milestone or finish a part of the work, you should add the files to a Staging Environment.</p>
-    <p><strong>Staged</strong> files are files that are ready to be <strong> committed</strong> to the repository you are working on. You will learn more about <code class="w3-codespan">commit</code> shortly.</p>
-    <p>For now, we are done working with <code class="w3-codespan">index.html</code>. So we can add it to the Staging Environment:</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <pre class="command-line" data-user="user" data-host="localhost"><code class="language-shell">git add index.html</code></pre>
-    </div>
-    <p>The file should be <strong>Staged</strong>. Let's check the status:</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <pre class="command-line" data-output="2-8" data-user="user" data-host="localhost"><code class="language-shell">git status
-On branch master
-
-No commits yet
-
-Changes to be committed:
-&nbsp;&nbsp;(use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
-&nbsp;&nbsp;&nbsp;&nbsp;new file: index.html</code></pre>
-    </div>
-    <p>Now the file has been added to the Staging Environment.</p>
+    <h2>Working with Git Branches</h2>
+    <p>In Git, a <code class="w3-codespan">branch</code> is a new/separate version of the main repository.</p>
+    <p>Let's say you have a large project, and you need to update the design on it.</p>
+    <p>How would that work without and with Git:</p>
+    <p>Without Git:</p>
+    <ul>
+        <li>Make copies of all the relevant files to avoid impacting the live version</li>
+        <li>Start working with the design and find that code depend on code in other files, that also need to be changed!</li>
+        <li>Make copies of the dependant files as well. Making sure that every file dependency references the correct file name</li>
+        <li>EMERGENCY! There is an unrelated error somewhere else in the project that needs to be fixed ASAP!</li>
+        <li>Save all your files, making a note of the names of the copies you were working on</li>
+        <li>Work on the unrelated error and update the code to fix it</li>
+        <li>Go back to the design, and finish the work there</li>
+        <li>Copy the code or rename the files, so the updated design is on the live version</li>
+        <li>(2 weeks later, you realize that the unrelated error was not fixed in the new design version because you copied the files before the fix)</li>
+    </ul>
+    <p>With Git:</p>
+    <ul>
+        <li>With a new branch called new-design, edit the code directly without impacting the main branch</li>
+        <li>EMERGENCY! There is an unrelated error somewhere else in the project that needs to be fixed ASAP!</li>
+        <li>Create a new branch from the main project called small-error-fix</li>
+        <li>Fix the unrelated error and merge the small-error-fix branch with the main branch</li>
+        <li>You go back to the new-design branch, and finish the work there</li>
+        <li>Merge the new-design branch with main (getting alerted to the small error fix that you were missing)</li>
+    </ul>
+    <p>Branches allow you to work on different parts of a project without impacting the main branch.</p>
+    <p>When the work is complete, a branch can be merged with the main project.</p>
+    <p>You can even switch between branches and work on different projects without them interfering with each other.</p>
+    <p>Branching in Git is very lightweight and fast!</p>
     <hr>
-    <h2>Git Add More than One File</h2>
-    <p>You can also stage more than one file at a time. Let's add 2 more files to our working folder. Use the text editor again.</p>
-    <p>A <code class="w3-codespan">README.md</code> file that describes the repository (recommended for all repositories):</p>
+    <h2>New Git Branch</h2>
+    <p>Let add some new features to our <code class="w3-codespan">index.html</code> page.</p>
+    <p>We are working in our local repository, and we do not want to disturb or possibly wreck the main project.</p>
+    <p>So we create a new <code class="w3-codespan">branch</code>:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="command-line" data-user="user" data-host="localhost"><code class="language-shell">git branch hello-world-images</code></pre>
+    </div>
+    <p>Now we created a new <code class="w3-codespan">branch</code> called "<code class="w3-codespan">hello-world-images</code>"</p>
+    <p>Let's confirm that we have created a new <code class="w3-codespan">branch</code>:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="command-line" data-output="2-3" data-user="user" data-host="localhost"><code class="language-shell">git branch
+  hello-world-images
+* master</code></pre>
+    </div>
+    <p>We can see the new branch with the name "hello-world-images", but the <code class="w3-codespan">*</code> beside <code class="w3-codespan">master</code> specifies that we are currently on that <code class="w3-codespan">branch</code>.</p>
+    <p><code class="w3-codespan">checkout</code> is the command used to check out a <code class="w3-codespan">branch</code>. Moving us <strong>from</strong> the current <code class="w3-codespan">branch</code>, <strong>to</strong> the one specified at the end of the command:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="command-line" data-output="2-3" data-user="user" data-host="localhost"><code class="language-shell">git checkout hello-world-images
+Switched to branch 'hello-world-images'</code></pre>
+    </div>
+    <p>Now we have moved our current workspace from the master branch, to the new <code class="w3-codespan">branch</code></p>
+    <p>Open your favourite editor and make some changes.</p>
+    <p>For this example, we added an image (img_hello_world.jpg) to the working folder and a line of code in the <code class="w3-codespan">index.html</code> file:</p>
     <div class="w3-example">
         <h3>Example</h3>
         <div class="w3-code notranslate htmlHigh">
-            # hello-world<br>Hello World repository for Git tutorial<br>This is an example repository for the Git tutoial on https://www.w3schools.com<br><br>This repository is built step by step in the tutorial.
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Hello World!&lt;/title&gt;<br>&lt;link rel=&quot;stylesheet&quot; href=&quot;bluestyle.css&quot;&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;Hello world!&lt;/h1&gt;<br>&lt;div&gt;&lt;img src=&quot;img_hello_world.jpg&quot; alt=&quot;Hello World from Space&quot;<br>style=&quot;width:100%;max-width:960px&quot;&gt;&lt;/div&gt;<br>&lt;p&gt;This is the first file in my new Git Repo.&lt;/p&gt;<br>&lt;p&gt;A new line in our file!&lt;/p&gt;<br><br>&lt;/body&gt;<br>
+            &lt;/html&gt;
         </div>
     </div>
-    <p>A basic external style sheet (<code class="w3-codespan">bluestyle.css</code>):</p>
+    <p>We have made changes to a file and added a new file in the working directory (same directory as the <code class="w3-codespan">main</code>
+        <code class="w3-codespan">branch</code>).</p>
+    <p>Now check the status of the current <code class="w3-codespan">branch</code>:</p>
     <div class="w3-example">
         <h3>Example</h3>
-        <div class="w3-code notranslate htmlHigh">
-            body {<br>background-color: lightblue;<br>}<br><br>h1 {<br>color: navy;<br>margin-left: 20px;<br>}
-        </div>
+        <pre class="command-line" data-output="2-12" data-user="user" data-host="localhost"><code class="language-shell">git status
+On branch hello-world-images
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+        img_hello_world.jpg
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</code></pre>
     </div>
-    <p>And update <code class="w3-codespan">index.html</code> to include the stylesheet:</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate htmlHigh">
-            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Hello World!&lt;/title&gt;<br>&lt;link rel=&quot;stylesheet&quot; href=&quot;bluestyle.css&quot;&gt;<br>
-            &lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;Hello world!&lt;/h1&gt;<br>&lt;p&gt;This is the first file in my new Git Repo.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
-        </div>
-    </div>
-    <p>Now add all files in the current directory to the Staging Environment:</p>
+    <p>So let's go through what happens here:</p>
+    <ul>
+        <li>There are changes to our index.html, but the file is not staged for <code class="w3-codespan">commit</code></li>
+        <li><code class="w3-codespan">img_hello_world.jpg</code> is not <code class="w3-codespan">tracked</code></li>
+    </ul>
+    <p>So we need to add both files to the Staging Environment for this <code class="w3-codespan">branch</code>:</p>
     <div class="w3-example">
         <h3>Example</h3>
         <pre class="command-line" data-user="user" data-host="localhost"><code class="language-shell">git add --all</code></pre>
     </div>
-    <p>Using <code class="w3-codespan">--all</code> instead of individual filenames will <code class="w3-codespan">stage</code> all changes (new, modified, and deleted) files.</p>
+    <p>Using <code class="w3-codespan">--all</code> instead of individual filenames will <strong>Stage</strong> all changed (new, modified, and deleted) files.</p>
+    <p>Check the <code class="w3-codespan">status</code> of the <code class="w3-codespan">branch</code>:</p>
     <div class="w3-example">
         <h3>Example</h3>
-        <pre class="command-line" data-output="2-10" data-user="user" data-host="localhost"><code class="language-shell">git status
-On branch master
-
-No commits yet
-
+        <pre class="command-line" data-output="2-6" data-user="user" data-host="localhost"><code class="language-shell">git status
+On branch hello-world-images
 Changes to be committed:
-(use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
-new file:   README.md
-new file:   bluestyle.css
-new file:   index.html</code></pre>
+&nbsp;&nbsp;(use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+&nbsp;&nbsp;&nbsp;&nbsp;new file: img_hello_world.jpg
+&nbsp;&nbsp;&nbsp;&nbsp;modified: index.html</code></pre>
     </div>
-    <p>Now all 3 files are added to the Staging Environment, and we are ready to do our first <code class="w3-codespan">commit</code>.</p>
-    <div class="w3-panel w3-info">
-        <p><b>Note:</b> The shorthand command for <code class="w3-codespan">
-                git add --all</code> is <code class="w3-codespan">git add -A</code></p>
+    <p>We are happy with our changes. So we will commit them to the <code class="w3-codespan">branch</code>:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="command-line" data-output="2-4" data-user="user" data-host="localhost"><code class="language-shell language-git" >git commit -m &quot;Added image to Hello World&quot;
+[hello-world-images 0312c55] Added image to Hello World
+2 files changed, 1 insertion(+)
+create mode 100644 img_hello_world.jpg</code></pre>
+    </div>
+    <p>Now we have a new <code class="w3-codespan">branch</code>, that is different from the master <code class="w3-codespan">branch</code>.</p>
+    <div class="w3-panel w3-note">
+        <p><b>Note:</b> Using the <code class="w3-codespan">-b</code> option on <code class="w3-codespan">checkout</code> will create a new branch, and move to it, if it does not exist</p>
     </div>
     <hr>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/git/exercise.asp?filename=exercise_staging_environment1" method="post" target="_blank">
+    <h2>Switching Between Branches</h2>
+    <p>Now let's see just how quick and easy it is to work with different branches, and how well it works.</p>
+    <p>We are currently on the branch <code class="w3-codespan">hello-world-images</code>. We added an image to this branch, so let's list the files in the current directory:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="command-line" data-output="2" data-user="user" data-host="localhost"><code class="language-shell">ls
+README.md  bluestyle.css  img_hello_world.jpg  index.html</code></pre>
+    </div>
+    <p>We can see the new file <code class="w3-codespan">img_hello_world.jpg</code>, and if we open the html file, we can see the code has been altered. All is as it should be.</p>
+    <p>Now, let's see what happens when we change branch to <code class="w3-codespan">master</code></p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="command-line" data-output="2-3" data-user="user" data-host="localhost"><code class="language-shell">git checkout master
+Switched to branch 'master'</code></pre>
+    </div>
+    <p>The new image is not a part of this branch. List the files in the current directory again:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="command-line" data-output="2" data-user="user" data-host="localhost"><code class="language-shell">ls
+README.md  bluestyle.css  index.html</code></pre>
+    </div>
+    <p><code class="w3-codespan">img_hello_world.jpg</code> is no longer there! And if we open the html file, we can see the code reverted to what it was before the alteration.</p>
+    <p>See how easy it is to work with branches? And how this allows you to work on different things?</p>
+    <hr>
+    <h2>Emergency Branch</h2>
+    <p>Now imagine that we are not yet done with hello-world-images, but we need to fix an error on master.</p>
+    <p>I don't want to mess with master directly, and I do not want to mess with hello-world-images, since it is not done yet.</p>
+    <p>So we create a new branch to deal with the emergency:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="command-line" data-output="2-3" data-user="user" data-host="localhost"><code class="language-shell">git checkout -b emergency-fix
+Switched to a new branch 'emergency-fix'</code></pre>
+    </div>
+    <p>Now we have created a new branch from master, and changed to it. We can safely fix the error without disturbing the other branches.</p>
+    <p>Let's fix our imaginary error:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Hello World!&lt;/title&gt;<br>&lt;link rel=&quot;stylesheet&quot; href=&quot;bluestyle.css&quot;&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;Hello world!&lt;/h1&gt;<br>&lt;p&gt;This is the first
+            file in my new Git Repo.&lt;/p&gt;<br>&lt;p&gt;This line is here to show how merging works.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+        </div>
+    </div>
+    <p>We have made changes in this file, and we need to get those changes to the master branch.</p>
+    <p>Check the status:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="command-line" data-output="2-8" data-user="user" data-host="localhost"><code class="language-shell">git status
+On branch emergency-fix
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</code></pre>
+    </div>
+    <p>stage the file, and commit:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="command-line" data-output="3-4" data-user="user" data-host="localhost"><code class="language-shell">git add index.html
+git commit -m &quot;updated index.html with emergency fix&quot;
+[emergency-fix dfa79db] updated index.html with emergency fix
+ 1 file changed, 1 insertion(+), 1 deletion(-)</code></pre>
+    </div>
+    <p>Now we have a fix ready for master, and we need to merge the two branches.</p>
+    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/git/exercise.asp?filename=exercise_branch1" method="post" target="_blank">
         <h2 class="shadow-black-1" title="Exercises only work online">Test Yourself With Exercises</h2>
         <div class="exercisewindow">
             <h2>Exercise:</h2>
-            <p>Add index.html to the Stating Environment:</p>
+            <p>Create a new branch called <code class="w3-codespan">hello-world-images</code>:</p>
             <div class="exerciseprecontainer">
 <pre>
-git <input name="ex1" maxlength="3" style="width: 75px;"> index.html
+git <input name="ex1" maxlength="6" style="width: 90px;"> <input name="ex2" maxlength="19" style="width: 200px;">
 </pre>
             </div>
             <br>
@@ -442,8 +549,8 @@ git <input name="ex1" maxlength="3" style="width: 75px;"> index.html
     </form>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="git_new_files_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="git_commit_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="git_help_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="git_branch_merge_en.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver">Place for your advertisement!</div>

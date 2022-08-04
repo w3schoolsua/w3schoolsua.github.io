@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Git Commit / Коміт. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Git Commit / Коміт. Git Commit без Stage. Git Commit лог. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Git Branch / Гілка. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Git Branch / Гілка. Робота з гілками Git. Нова гілка Git. Перемикання між гілками. Аварійна гілка. Вправи по Git. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -344,94 +344,201 @@
           <div class="adver">Place for your advertisement!</div>
             <a href='index.html'><img src='../svg/git_icon.svg' alt='Git. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='Git для початківців. W3Schools українською мовою' style="width: 90px"></a>
 <p class='w3-right'>
-    <a href="git_commit_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="git_branch_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>Git <span class="color_h1">Commit / Коміт</span></h1>
+    <h1>Git <span class="color_h1">Branch / Гілка</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="git_staging_environment.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="git_help.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="git_help.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="git_branch_merge.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Git Commit / Коміт</h2>
-    <p>Оскільки ми закінчили свою роботу, ми готові перейти від <code class="w3-codespan">stage</code> до <code class="w3-codespan">commit</code> для нашого репозиторію.</p>
-    <p>При додаванні комітів відслідковується прогрес та зміни в роботі. Git запам&#8217;ятовує кожну точку зміни <code class="w3-codespan">commit</code> або &quot;збережену точку&quot;. Це момент (точка) у проєкті, до якого ви можете повернутися, якщо знайдете помилку або захочете внести зміни.</p>
-    <p>Коли ми здійснюємо <code class="w3-codespan">commit</code>, ми маємо <strong>завжди</strong> підключати <strong>повідомлення</strong>.</p>
-    <p>Додаючи чіткі повідомлення в кожен <code class="w3-codespan">commit</code>, вам (та іншим користувачам) легко побачити, що і коли змінилось в репозиторії.</p>
+    <h2>Робота з Git гілками</h2>
+    <p>У Git <code class="w3-codespan">branch</code> (гілка) є новою/окремою версією головного репозиторію.</p>
+    <p>Припустімо, у вас є великий проєкт, і вам потрібно оновити його дизайн.</p>
+    <p>Як це буде працювати без і з Git:</p>
+    <p><b>Без Git</b>:</p>
+    <ul>
+        <li>Зробіть копії всіх відповідних файлів, щоб уникнути впливу на поточну версію</li>
+        <li>Почніть працювати з дизайном і побачите, що код залежить від коду в інших файлах, який також потрібно змінити!</li>
+        <li>Також створіть копії залежних файлів. Переконайтеся, що кожна залежність файлу посилається на правильну назву файлу</li>
+        <li>АВАРІЙНА СИТУАЦІЯ! Десь ще в проєкті є непов&#8217;язана помилка, яку потрібно виправити якомога швидше!</li>
+        <li>Збережіть усі свої файли, записавши назви копій, над якими ви працювали</li>
+        <li>Попрацюйте над непов&#8217;язаною помилкою та оновіть код, щоб виправити її</li>
+        <li>Поверніться до дизайну та закінчіть роботу там</li>
+        <li>Скопіюйте код або переназвіть файли, щоб оновлений дизайн був у поточній версії</li>
+        <li>(через 2 тижні ви розумієте, що непов&#8217;язану помилку не було виправлено в новій версії дизайну, оскільки ви скопіювали файли до виправлення)</li>
+    </ul>
+    <p><b>Із Git</b>:</p>
+    <ul>
+        <li>За допомогою нової гілки під назвою new-design редагуйте код безпосередньо, не впливаючи на основну гілку</li>
+        <li>АВАРІЙНА СИТУАЦІЯ! Десь ще в проєкті є непов&#8217;язана помилка, яку потрібно виправити якомога швидше!</li>
+        <li>Створіть нову гілку з основного проєкту під назвою small-error-fix</li>
+        <li>Виправте непов&#8217;язану помилку та об&#8217;єднайте гілку виправлення малих помилок із основною гілкою.</li>
+        <li>Ви повертаєтеся до гілки нового дизайну та закінчуєте роботу там</li>
+        <li>Об&#8217;єднайте гілку нового дизайну з основною (отримайте сповіщення про невелике виправлення помилок, яке ви пропустили)</li>
+    </ul>
+    <p>Гілки дозволяють вам працювати над різними частинами проєкту, не впливаючи на головну гілку.</p>
+    <p>Після завершення роботи гілку можна об&#8217;єднати з основним проєктом.</p>
+    <p>Ви навіть можете перемикатися між гілками та працювати над різними проєктами, не заважаючи один одному.</p>
+    <p>Розгалуження в Git дуже легке та швидке!</p>
+    <hr>
+    <h2>Нова гілка Git</h2>
+    <p>Дозвольте додати деякі нові функції до нашої сторінки <code class="w3-codespan">index.html</code>.</p>
+    <p>Ми працюємо в нашому локальному репозиторію, і ми не хочемо заважати або, можливо, руйнувати основний проєкт.</p>
+    <p>Тож ми створюємо новий <code class="w3-codespan">branch</code> (нову гілку):</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <pre class="command-line" data-output="2-6" data-user="user" data-host="localhost"><code class="language-shell">git commit -m &quot;First release of Hello World!&quot;
-[master (root-commit) 221ec6e] First release of Hello World!
-3 files changed, 26 insertions(+)
-create mode 100644 README.md
-create mode 100644 bluestyle.css
-create mode 100644 index.html</code></pre>
+        <pre class="command-line" data-user="user" data-host="localhost"><code class="language-shell">git branch hello-world-images</code></pre>
     </div>
-    <p>Команда <code class="w3-codespan">commit</code> виконує фіксацію, а <code class="w3-codespan">-m &quot;<em>message</em>&quot;</code> додає повідомлення.</p>
-    <p>Проміжне середовище виконує фіксацію з повідомленням:<br>&quot;First release of Hello World!&quot;</p>
-    <hr>
-    <h2>Git Commit без Stage</h2>
-    <p>Іноді, коли ви вносите невеликі зміни, використання проміжного середовища здається марною тратою часу. Можна зафіксувати зміни безпосередньо, пропускаючи проміжне середовище. Параметр <code class="w3-codespan">-a</code> автоматично створюватиме кожен змінений, уже відстежуваний файл.</p>
-    <p>Давайте додамо невелике оновлення до index.html:</p>
+    <p>Тепер ми створили нову <code class="w3-codespan">branch</code> (гілку) під назвою "<code class="w3-codespan">hello-world-images</code>".</p>
+    <p>Давайте підтвердимо, що ми створили нову <code class="w3-codespan">branch</code> (гілку):</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-output="2-3" data-user="user" data-host="localhost"><code class="language-shell">git branch
+hello-world-images
+* master</code></pre>
+    </div>
+    <p>Ми бачимо нову гілку з назвою "hello-world-images", але <code class="w3-codespan">*</code> біля <code class="w3-codespan">master</code> вказує, що ми зараз перебуваємо на <code class="w3-codespan">branch</code>.</p>
+    <p><code class="w3-codespan">checkout</code> — це команда, яка використовується для перевірки <code class="w3-codespan">branch</code>. Переміщення <strong>із</strong> поточної <code class="w3-codespan">branch</code>, <strong>до</strong> тієї, що вказана в кінці команди:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-output="2-3" data-user="user" data-host="localhost"><code class="language-shell">git checkout hello-world-images
+Switched to branch 'hello-world-images'</code></pre>
+    </div>
+    <p>Тепер ми перемістили наш поточний робочий простір із гілки master до нової <code class="w3-codespan">branch</code></p>
+    <p>Відкрийте свій улюблений редактор і внесіть деякі зміни.</p>
+    <p>У цьому прикладі ми додали зображення (img_hello_world.jpg) до робочої теки та рядок коду у файлі <code class="w3-codespan">index.html</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Hello World!&lt;/title&gt;<br>&lt;link rel=&quot;stylesheet&quot; href=&quot;bluestyle.css&quot;&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;Hello world!&lt;/h1&gt;<br>&lt;p&gt;Це перший файл у моєму новому Git репозиторію.&lt;/p&gt;<br>&lt;p&gt;Новий рядок у нашому файлі!&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Hello World!&lt;/title&gt;<br>&lt;link rel=&quot;stylesheet&quot; href=&quot;bluestyle.css&quot;&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;Hello world!&lt;/h1&gt;<br>&lt;div&gt;&lt;img src=&quot;img_hello_world.jpg&quot; alt=&quot;Hello World from Space&quot;<br>style=&quot;width:100%;max-width:960px&quot;&gt;&lt;/div&gt;<br>&lt;p&gt;Це перший файл у моєму новому Git репозиторію.&lt;/p&gt;<br>&lt;p&gt;Новий рядок у нашому файлі!&lt;/p&gt;<br><br>&lt;/body&gt;<br>
+            &lt;/html&gt;
         </div>
     </div>
-    <p>І перевірити стан нашого сховища. Але цього разу ми використаємо опцію --short, щоб побачити зміни у більш компактному вигляді:</p>
+    <p>Ми внесли зміни до файлу та додали новий файл у робочий каталог (той самий каталог, що й <code class="w3-codespan">main</code>
+        <code class="w3-codespan">branch</code>).</p>
+    <p>Тепер перевірте поточний стан <code class="w3-codespan">branch</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <pre class="command-line" data-output="2" data-user="user" data-host="localhost"><code class="language-shell">git status --short
-M index.html</code></pre>
+        <pre class="command-line" data-output="2-12" data-user="user" data-host="localhost"><code class="language-shell">git status
+On branch hello-world-images
+Changes not staged for commit:
+(use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+(use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+    modified:   index.html
+
+Untracked files:
+(use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+    img_hello_world.jpg
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</code></pre>
     </div>
+    <p>Тож давайте розберемося, що тут відбувається:</p>
+    <ul>
+        <li>Є зміни в нашому index.html, але файл не підготовлений для <code class="w3-codespan">commit</code> (фіксації)</li>
+        <li><code class="w3-codespan">img_hello_world.jpg</code> не є <code class="w3-codespan">tracked</code> (не відстежується)</li>
+    </ul>
+    <p>Отже, для цього нам потрібно додати обидва файли до проміжного середовища <code class="w3-codespan">branch</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-user="user" data-host="localhost"><code class="language-shell">git add --all</code></pre>
+    </div>
+    <p>Використання <code class="w3-codespan">--all</code> замість окремих назв файлів призведе до <strong>Stage</strong> (проміжної стадії) всіх змінених (нових, змінених і видалених) файлів.</p>
+    <p>Перевірте <code class="w3-codespan">status</code> (статус) <code class="w3-codespan">branch</code> (гілки):</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-output="2-6" data-user="user" data-host="localhost"><code class="language-shell">git status
+On branch hello-world-images
+Changes to be committed:
+&nbsp;&nbsp;(use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+&nbsp;&nbsp;&nbsp;&nbsp;new file: img_hello_world.jpg
+&nbsp;&nbsp;&nbsp;&nbsp;modified: index.html</code></pre>
+    </div>
+    <p>Ми задоволені нашим змінам. Тож ми передамо їх <code class="w3-codespan">branch</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-output="2-4" data-user="user" data-host="localhost"><code class="language-shell language-git" >git commit -m &quot;Added image to Hello World&quot;
+[hello-world-images 0312c55] Added image to Hello World
+2 files changed, 1 insertion(+)
+create mode 100644 img_hello_world.jpg</code></pre>
+    </div>
+    <p>Тепер у нас є нова <code class="w3-codespan">branch</code>, яка відрізняється від головної <code class="w3-codespan">branch</code>.</p>
     <div class="w3-panel w3-note">
-        <p><b>Примітка:</b> Короткі статусні прапорці є:</p>
-        <ul>
-            <li>?? - Невідстежувані файли</li>
-            <li>A - Файли додані в середовище</li>
-            <li>M - Змінені файли</li>
-            <li>D - Видалені файли</li>
-        </ul>
-    </div>
-    <p>Ми бачимо, що очікуваний файл змінено. Тож давайте зафіксуємо це безпосередньо:</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <pre class="command-line" data-output="2-3" data-user="user" data-host="localhost"><code class="language-shell">git commit -a -m &quot;Updated index.html with a new line&quot;
-[master 09f4acd] Updated index.html with a new line
-1 file changed, 1 insertion(+)</code></pre>
-    </div>
-    <div class="w3-panel w3-warning">
-        <p><b>Попередження:</b> Пропускати проміжне середовище зазвичай не рекомендується.</p>
-        <p>Пропуск етапу інколи може призвести до включення небажаних змін.</p>
+        <p><b>Примітка:</b> Використання параметра <code class="w3-codespan">-b</code> у <code class="w3-codespan">checkout</code> створить нову гілку та перемістить до неї, якщо вона не існує.</p>
     </div>
     <hr>
-    <h2>Git Commit Log</h2>
-    <p>Щоб переглянути історію комітів для сховища, ви можете скористатися командою <code class="w3-codespan">log</code>:</p>
+    <h2>Перемикання між гілками</h2>
+    <p>Тепер давайте подивимося, наскільки швидко й легко можна працювати з різними гілками, і наскільки добре це працює.</p>
+    <p>Зараз ми перебуваємо на гілці <code class="w3-codespan">hello-world-images</code>. Ми додали зображення до цієї гілки, тому давайте перерахуємо файли в поточному каталозі:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <pre class="command-line" data-output="2-12" data-user="user" data-host="localhost"><code class="language-shell">git log
-commit 09f4acd3f8836b7f6fc44ad9e012f82faf861803 (HEAD -&gt; master)
-Author: w3schools-test &lt;test@w3schools.com&gt;
-Date:   Fri Mar 26 09:35:54 2021 +0100
-
-Updated index.html with a new line
-
-commit 221ec6e10aeedbfd02b85264087cd9adc18e4b26
-Author: w3schools-test &lt;test@w3schools.com&gt;
-Date:   Fri Mar 26 09:13:07 2021 +0100
-
-First release of Hello World!</code></pre>
+        <pre class="command-line" data-output="2" data-user="user" data-host="localhost"><code class="language-shell">ls
+README.md  bluestyle.css  img_hello_world.jpg  index.html</code></pre>
     </div>
+    <p>Ми можемо побачити новий файл <code class="w3-codespan">img_hello_world.jpg</code>, і якщо ми відкриємо файл html, то побачимо, що код було змінено. Все як має бути.</p>
+    <p>Тепер давайте подивимося, що станеться, коли ми змінимо гілку на <code class="w3-codespan">master</code></p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-output="2-3" data-user="user" data-host="localhost"><code class="language-shell">git checkout master
+Switched to branch 'master'</code></pre>
+    </div>
+    <p>Нове зображення не є частиною цієї гілки. Знову вивести список файлів у поточному каталозі:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-output="2" data-user="user" data-host="localhost"><code class="language-shell">ls
+README.md  bluestyle.css  index.html</code></pre>
+    </div>
+    <p><code class="w3-codespan">img_hello_world.jpg</code> більше немає! І якщо ми відкриємо файл html, ми побачимо, що код повернуто до того, яким він був до зміни.</p>
+    <p>Бачите, як легко працювати з гілками? І як це дозволяє вам працювати над різними речами?</p>
     <hr>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/git/exercise.asp?filename=exercise_commit1" method="post" target="_blank">
+    <h2>Відділення екстреної допомоги</h2>
+    <p>Тепер уявіть, що ми ще не закінчили з hello-world-images, але нам потрібно виправити помилку на master.</p>
+    <p>Я не хочу стикатися безпосередньо з master і не хочу стикатися з hello-world-images, оскільки це ще не зроблено.</p>
+    <p>Тож ми створюємо нову гілку для вирішення надзвичайної ситуації:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-output="2-3" data-user="user" data-host="localhost"><code class="language-shell">git checkout -b emergency-fix
+Switched to a new branch 'emergency-fix'</code></pre>
+    </div>
+    <p>Тепер ми створили нову гілку з master і перейшли на неї. Ми можемо безпечно виправити помилку, не заважаючи іншим гілкам.</p>
+    <p>Давайте виправимо нашу уявну помилку:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Hello World!&lt;/title&gt;<br>&lt;link rel=&quot;stylesheet&quot; href=&quot;bluestyle.css&quot;&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;Hello world!&lt;/h1&gt;<br>&lt;p&gt;Це перший файл у моєму новому Git репозиторію.&lt;/p&gt;<br>&lt;p&gt;Цей рядок тут, щоб показати, як працює злиття.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+        </div>
+    </div>
+    <p>Ми внесли зміни в цей файл, і нам потрібно перенести ці зміни до головної гілки.</p>
+    <p>Перевірте статус:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-output="2-8" data-user="user" data-host="localhost"><code class="language-shell">git status
+On branch emergency-fix
+Changes not staged for commit:
+(use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+(use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+    modified:   index.html
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</code></pre>
+    </div>
+    <p>stage the file, and commit:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <pre class="command-line" data-output="3-4" data-user="user" data-host="localhost"><code class="language-shell">git add index.html
+git commit -m &quot;updated index.html with emergency fix&quot;
+[emergency-fix dfa79db] updated index.html with emergency fix
+1 file changed, 1 insertion(+), 1 deletion(-)</code></pre>
+    </div>
+    <p>Тепер у нас є виправлення, готове для master, і нам потрібно об’єднати дві гілки.</p>
+    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/git/exercise.asp?filename=exercise_branch1" method="post" target="_blank">
         <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
         <div class="exercisewindow">
             <h2>Вправа:</h2>
-            <p>Зафіксуйте зміни в поточному репозиторії з повідомленням "First release!"</p>
+            <p>Створіть нову гілку під назвою <code class="w3-codespan">hello-world-images</code>:</p>
             <div class="exerciseprecontainer">
 <pre>
-git <input name="ex1" maxlength="6" style="width: 80px;"> <input name="ex2" maxlength="2" style="width: 30px;"> "First release!"
+git <input name="ex1" maxlength="6" style="width: 90px;"> <input name="ex2" maxlength="19" style="width: 200px;">
 </pre>
             </div>
             <br>
@@ -440,8 +547,8 @@ git <input name="ex1" maxlength="6" style="width: 80px;"> <input name="ex2" maxl
     </form>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="git_staging_environment.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="git_help.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="git_help.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="git_branch_merge.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver">Place for your advertisement!</div>
