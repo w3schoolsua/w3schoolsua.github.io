@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content="How To... Ready-made solutions for the site. Snippets (sections of code) for creating various elements of a web page. W3Schools in English is the best site for learning modern web technologies: HTML, CSS, JavaScript">
+<link rel='stylesheet' href='../cdn/font-awesome/4.6.3/css/font-awesome.min.css'>
+<link href='../styles/howto.css' rel='stylesheet'>
+<script src='../scripts/howto.js'></script>
+<style>
+    .searchinput {
+        background-image: url('../images/searchicon.png');
+        background-position: 8px 6px;
+        background-repeat: no-repeat;
+        width: 91%;
+        font-size: 14px;
+        padding: 6px 6px 6px 40px;
+        border: 1px solid #ddd;
+        margin: 0 0 20px 10px;
+    }
+</style>
+<script>
+    function filterContent(elmnt) {
+        var x, i, val, show, showh2, showbr;
+        val = elmnt.value;
+        x = document.getElementById("leftmenuinnerinner").getElementsByTagName("*");
+        for (i = 1; i < x.length; i++) {
+            if (x[i].tagName == "H2") {
+                if (showh2) {
+                    if (show == false) {
+                        showh2.style.display = "none";
+                    } else {
+                        showh2.style.display = "block";
+                    }
+                }
+                show = false;
+                showh2 = x[i];
+            }
+            if (x[i].tagName == "BR") {
+                if (showbr) {
+                    if (show == false) {
+                        showbr.style.display = "none";
+                    } else {
+                        showbr.style.display = "block";
+                    }
+                }
+                showbr = x[i];
+            }
+            if (x[i].tagName == "A") {
+                if (x[i].innerHTML.toUpperCase().indexOf(val.toUpperCase()) == -1) {
+                    x[i].style.display = "none";
+                } else {
+                    x[i].style.display = "block";
+                    show = true;
+                }
+            }
+            if (showh2) {
+                if (show == false) {
+                    showh2.style.display = "none";
+                } else {
+                    showh2.style.display = "block";
+                }
+            }
+        }
+    }
+</script><title>How To - Tutorial. HTML, CSS, JavaScript. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='How To - Tutorial. How to do with HTML, CSS, JavaScript? Ready-made solutions for the site. Snippets. Code examples. Lessons for beginners. W3Schools in English'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS
+    </div>
+</div>
+
+<!--GoogleSearch-->
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+  <script async src="https://cse.google.com/cse.js?cx=018292901867315999508:nszv7kx6uzc"></script>
+  <div class='gcse-search'></div>
+</div>
+<!--/GoogleSearch-->
+
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_en.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_en.html' title='HTML Tutorial'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_en.html' title='CSS Tutorial'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_en.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_en.html' title='SQL Tutorial'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index_en.html' title='Python Tutorial'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index_en.html' title='PHP Tutorial'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_en.html' title='How To'>HOW TO</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_en.html' title='W3.CSS Tutorial'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index_en.html' title='jQuery Tutorial'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index_en.html' title='XML Tutorial'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index_en.html' title='Java Tutorial'>JAVA</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='More tutorials'>More <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Search'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Dark theme'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Download books for free from Google drive'>Books</a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML и CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_en.html'>Learn HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_en.html'>Learn CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_en.html'>Learn RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html'>Learn Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_en.html'>Learn W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>Learn Colors</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_en.html'>Learn Icons</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_en.html'>Learn Graphics</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_en.html'>Learn SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_en.html'>Learn Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_en.html'>Learn How To</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_en.html'>Learn Sass</a>
+
+                    <div class="w3-hide-large w3-hide-small">
+                        <h3>Data Analytics</h3>
+                        <a class='w3-bar-item w3-button' href="../ai/index_en.html">Learn AI</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_en.html'>Learn JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_en.html'>Learn jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_en.html'>Learn React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_en.html'>Learn AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_en.html'>Learn JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_en.html'>Learn AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_en.html'>Learn AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_en.html'>Learn W3.JS</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index_en.html'>Learn Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_en.html'>Learn Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_en.html'>Learn C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_en.html'>Learn C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_en.html'>Learn C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_en.html'>Learn R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_en.html'>Learn Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_en.html'>Learn Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_en.html'>Learn Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_en.html'>Learn TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_en.html'>Learn SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_en.html'>Learn MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_en.html'>Learn PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_en.html'>Learn ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_en.html'>Learn Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_en.html'>Learn Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_en.html'>Learn Git</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_en.html'>Learn AWS Cloud</a>
+                    <h3>Web Building</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_en.html'>Where To Start</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_en.html'>Web Templates</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_en.html'>Web Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_en.html'>Code Editor</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_en.html'>Web Development</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_en.html'>Cyber Security</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_en.html'>Accessibility</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Typing Speeds Test</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Code Game</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Data Analytics</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_en.html'>Learn AI</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_en.html'>HTML Tag Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_en.html'>HTML Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_en.html'>HTML Event Reference</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>HTML Color Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_en.html'>HTML Attribute Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_en.html'>HTML Canvas Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_en.html'>HTML SVG Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_en.html'>Google Maps Reference</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_en.html'>CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_en.html'>CSS Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_en.html'>CSS Selector Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_en.html'>W3.CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_en.html'>Icons Reference</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_en.html'>Sass Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>JavaScript Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>HTML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_en.html'>AngularJS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_en.html'>AppML Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_en.html'>W3.JS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_en.html'>JS Ready Scripts</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_en.html'>Python Reference</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_en.html'>Java Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_en.html'>SQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_en.html'>MySQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_en.html'>PHP Reference</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_en.html'>ASP Reference</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_en.html'>XML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_en.html'>XML Http Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_en.html'>XSLT Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_en.html'>XML Schema Reference</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Character Sets</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_en.html'>HTML Character Sets</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_en.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_en.html'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_en.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_en.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_en.html'>HTML Symbols</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_en.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Exercises</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_en.html'>HTML Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_en.html'>CSS Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_en.html'>JavaScript Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_en.html'>SQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_en.html'>MySQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_en.html'>PHP Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_en.html'>Python Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_en.html'>NumPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_en.html'>Pandas Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_en.html'>SciPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_en.html'>jQuery Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_en.html'>Java Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_en.html'>Bootstrap Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_en.html'>Bootstrap 4 Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_en.html'>C++ Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_en.html'>C# Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_en.html'>R Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_en.html'>Kotlin Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_en.html'>Go Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_en.html'>Git Exercises</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Quizzes</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_en.html' target='_top'>HTML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_en.html' target='_top'>CSS Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_en.html' target='_top'>JavaScript Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_en.html' target='_top'>SQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_en.html' target='_top'>MySQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_en.html' target='_top'>PHP Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_en.html' target='_top'>Python Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_en.html' target='_top'>NumPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_en.html' target='_top'>Pandas Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_en.html' target='_top'>SciPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_en.html' target='_top'>jQuery Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_en.html' target='_top'>Java Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_en.html' target='_top'>Bootstrap Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_en.html' target='_top'>Bootstrap 4 Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_en.html' target='_top'>C++ Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_en.html' target='_top'>C# Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_en.html' target='_top'>R Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_en.html' target='_top'>XML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_en.html' target='_top'>Cyber Security Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_en.html' target='_top'>Accessibility Quiz</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Certificates</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_en.html' target='_top'>HTML Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_en.html' target='_top'>CSS Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_en.html' target='_top'>JavaScript Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_en.html' target='_top'>SQL Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_en.html' target='_top'>PHP Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_en.html' target='_top'>Python Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_en.html' target='_top'>jQuery Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_en.html' target='_top'>Bootstrap Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_en.html' target='_top'>XML Certificate</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu-->
+<!--Left menu howto-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <nav>
+            <br class="w3-hide-large">
+            <input class="searchinput" placeholder="Search..." oninput="filterContent(this)">
+            <h2 class="left">HOW TO</h2>
+            <a target="_top" href="default.asp">HowTo Home</a>
+            <br>
+            <h2>Menus</h2>
+            <a target="_top" href="howto_css_icon_bar.asp">Icon Bar</a>
+            <a target="_top" href="howto_css_menu_icon.asp">Menu Icon</a>
+            <a target="_top" href="howto_js_accordion.asp">Accordion</a>
+            <a target="_top" href="howto_js_tabs.asp">Tabs</a>
+            <a target="_top" href="howto_js_vertical_tabs.asp">Vertical Tabs</a>
+            <a target="_top" href="howto_js_tab_header.asp">Tab Headers</a>
+            <a target="_top" href="howto_js_full_page_tabs.asp">Full Page Tabs</a>
+            <a target="_top" href="howto_js_hover_tabs.asp">Hover Tabs</a>
+            <a target="_top" href="howto_js_topnav.asp">Top Navigation</a>
+            <a target="_top" href="howto_js_topnav_responsive.asp">Responsive Topnav</a>
+            <a target="_top" href="howto_css_topnav_split.asp">Split Navigation</a>
+            <a target="_top" href="howto_css_navbar_icon.asp">Navbar with Icons</a>
+            <a target="_top" href="howto_js_search_menu.asp">Search Menu</a>
+            <a target="_top" href="howto_css_searchbar.asp">Search Bar</a>
+            <a target="_top" href="howto_css_fixed_sidebar.asp">Fixed Sidebar</a>
+            <a target="_top" href="howto_js_sidenav.asp">Side Navigation</a>
+            <a target="_top" href="howto_css_sidebar_responsive.asp">Responsive Sidebar</a>
+            <a target="_top" href="howto_js_fullscreen_overlay.asp">Fullscreen Navigation</a>
+            <a target="_top" href="howto_js_off-canvas.asp">Off-Canvas Menu</a>
+            <a target="_top" href="howto_css_sidenav_buttons.asp">Hover Sidenav Buttons</a>
+            <a target="_top" href="howto_css_sidebar_icons.asp">Sidebar with Icons</a>
+            <a target="_top" href="howto_css_menu_horizontal_scroll.asp">Horizontal Scroll Menu</a>
+            <a target="_top" href="howto_css_vertical_menu.asp">Vertical Menu</a>
+            <a target="_top" href="howto_css_bottom_nav.asp">Bottom Navigation</a>
+            <a target="_top" href="howto_js_bottom_nav_responsive.asp">Responsive Bottom Nav</a>
+            <a target="_top" href="howto_css_navbar_border.asp">Bottom Border Nav Links</a>
+            <a target="_top" href="howto_css_topnav_right.asp">Right Aligned Menu Links</a>
+            <a target="_top" href="howto_css_topnav_centered.asp">Centered Menu Link</a>
+            <a target="_top" href="howto_css_topnav_equal_width.asp">Equal Width Menu Links</a>
+            <a target="_top" href="howto_css_fixed_menu.asp">Fixed Menu</a>
+            <a target="_top" href="howto_js_navbar_slide.asp">Slide Down Bar on Scroll</a>
+            <a target="_top" href="howto_js_navbar_hide_scroll.asp">Hide Navbar on Scroll</a>
+            <a target="_top" href="howto_js_navbar_shrink_scroll.asp">Shrink Navbar on Scroll</a>
+            <a target="_top" href="howto_js_navbar_sticky.asp">Sticky Navbar</a>
+            <a target="_top" href="howto_css_navbar_image.asp">Navbar on Image</a>
+            <a target="_top" href="howto_css_dropdown.asp">Hover Dropdowns</a>
+            <a target="_top" href="howto_js_dropdown.asp">Click Dropdowns</a>
+            <a target="_top" href="howto_js_cascading_dropdown.asp">Cascading Dropdown</a>
+            <a target="_top" href="howto_css_dropdown_navbar.asp">Dropdown in Topnav</a>
+            <a target="_top" href="howto_js_dropdown_sidenav.asp">Dropdown in Sidenav</a>
+            <a target="_top" href="howto_js_responsive_navbar_dropdown.asp">Resp Navbar Dropdown</a>
+            <a target="_top" href="howto_css_subnav.asp">Subnavigation Menu</a>
+            <a target="_top" href="howto_css_dropup.asp">Dropup</a>
+            <a target="_top" href="howto_css_mega_menu.asp">Mega Menu</a>
+            <a target="_top" href="howto_js_mobile_navbar.asp">Mobile Menu</a>
+            <a target="_top" href="howto_js_curtain_menu.asp">Curtain Menu</a>
+            <a target="_top" href="howto_js_collapse_sidebar.asp">Collapsed Sidebar</a>
+            <a target="_top" href="howto_js_collapse_sidepanel.asp">Collapsed Sidepanel</a>
+            <a target="_top" href="howto_css_pagination.asp">Pagination</a>
+            <a target="_top" href="howto_css_breadcrumbs.asp">Breadcrumbs</a>
+            <a target="_top" href="howto_css_button_group.asp">Button Group</a>
+            <a target="_top" href="howto_css_button_group_vertical.asp">Vertical Button Group</a>
+            <a target="_top" href="howto_css_sticky_social_bar.asp">Sticky Social Bar</a>
+            <a target="_top" href="howto_css_pill_nav.asp">Pill Navigation</a>
+            <a target="_top" href="howto_css_responsive_header.asp">Responsive Header</a>
+            <br>
+
+            <h2>Images</h2>
+            <a target="_top" href="howto_js_slideshow.asp">Slideshow</a>
+            <a target="_top" href="howto_js_slideshow_gallery.asp">Slideshow Gallery</a>
+            <a target="_top" href="howto_css_modal_images.asp">Modal Images</a>
+            <a target="_top" href="howto_js_lightbox.asp">Lightbox</a>
+            <a target="_top" href="howto_css_image_grid_responsive.asp">Responsive Image Grid</a>
+            <a target="_top" href="howto_js_image_grid.asp">Image Grid</a>
+            <a target="_top" href="howto_js_tab_img_gallery.asp">Tab Gallery</a>
+            <a target="_top" href="howto_css_image_overlay.asp">Image Overlay Fade</a>
+            <a target="_top" href="howto_css_image_overlay_slide.asp">Image Overlay Slide</a>
+            <a target="_top" href="howto_css_image_overlay_zoom.asp">Image Overlay Zoom</a>
+            <a target="_top" href="howto_css_image_overlay_title.asp">Image Overlay Title</a>
+            <a target="_top" href="howto_css_image_overlay_icon.asp">Image Overlay Icon</a>
+            <a target="_top" href="howto_css_image_effects.asp">Image Effects</a>
+            <a target="_top" href="howto_css_image_bw.asp">Black and White Image</a>
+            <a target="_top" href="howto_css_image_text.asp">Image Text</a>
+            <a target="_top" href="howto_css_image_text_blocks.asp">Image Text Blocks</a>
+            <a target="_top" href="howto_css_image_transparent.asp">Transparent Image Text</a>
+            <a target="_top" href="howto_css_full_page.asp">Full Page Image</a>
+            <a target="_top" href="howto_css_form_on_image.asp">Form on Image</a>
+            <a target="_top" href="howto_css_hero_image.asp">Hero Image</a>
+            <a target="_top" href="howto_css_blurred_background.asp">Blur Background Image</a>
+            <a target="_top" href="howto_css_bg_change_scroll.asp">Change Bg on Scroll</a>
+            <a target="_top" href="howto_css_images_side_by_side.asp">Side-by-Side Images</a>
+            <a target="_top" href="howto_css_rounded_images.asp">Rounded Images</a>
+            <a target="_top" href="howto_css_image_avatar.asp">Avatar Images</a>
+            <a target="_top" href="howto_css_image_responsive.asp">Responsive Images</a>
+            <a target="_top" href="howto_css_image_center.asp">Center Images</a>
+            <a target="_top" href="howto_css_thumbnail.asp">Thumbnails</a>
+            <a target="_top" href="howto_css_border_image.asp">Border Around Image</a>
+            <a target="_top" href="howto_css_team.asp">Meet the Team</a>
+            <a target="_top" href="howto_css_image_sticky.asp">Sticky Image</a>
+            <a target="_top" href="howto_css_flip_image.asp">Flip an Image</a>
+            <a target="_top" href="howto_css_shake_image.asp">Shake an Image</a>
+            <a target="_top" href="howto_css_portfolio_gallery.asp">Portfolio Gallery</a>
+            <a target="_top" href="howto_js_portfolio_filter.asp">Portfolio with Filtering</a>
+            <a target="_top" href="howto_js_image_zoom.asp">Image Zoom</a>
+            <a target="_top" href="howto_js_image_magnifier_glass.asp">Image Magnifier Glass</a>
+            <a target="_top" href="howto_js_image_comparison.asp">Image Comparison Slider</a>
+            <a target="_top" href="howto_html_favicon.asp">Favicon</a>
+            <br>
+
+            <h2>Buttons</h2>
+            <a target="_top" href="howto_css_alert_buttons.asp">Alert Buttons</a>
+            <a target="_top" href="howto_css_outline_buttons.asp">Outline Buttons</a>
+            <a target="_top" href="howto_css_button_split.asp">Split Buttons</a>
+            <a target="_top" href="howto_css_animate_buttons.asp">Animated Buttons</a>
+            <a target="_top" href="howto_css_fading_buttons.asp">Fading Buttons</a>
+            <a target="_top" href="howto_css_button_on_image.asp">Button on Image</a>
+            <a target="_top" href="howto_css_social_media_buttons.asp">Social Media Buttons</a>
+            <a target="_top" href="howto_js_read_more.asp">Read More Read Less</a>
+            <a target="_top" href="howto_css_loading_buttons.asp">Loading Buttons</a>
+            <a target="_top" href="howto_css_download_button.asp">Download Buttons</a>
+            <a target="_top" href="howto_css_pill_button.asp">Pill Buttons</a>
+            <a target="_top" href="howto_css_notification_button.asp">Notification Button</a>
+            <a target="_top" href="howto_css_icon_buttons.asp">Icon Buttons</a>
+            <a target="_top" href="howto_css_next_prev.asp">Next/prev Buttons</a>
+            <a target="_top" href="howto_css_more_button.asp">More Button in Nav</a>
+            <a target="_top" href="howto_css_block_buttons.asp">Block Buttons</a>
+            <a target="_top" href="howto_css_text_buttons.asp">Text Buttons</a>
+            <a target="_top" href="howto_css_round_buttons.asp">Round Buttons</a>
+            <a target="_top" href="howto_js_scroll_to_top.asp">Scroll To Top Button</a>
+            <br>
+
+            <h2>Forms</h2>
+            <a target="_top" href="howto_css_login_form.asp">Login Form</a>
+            <a target="_top" href="howto_css_signup_form.asp">Signup Form</a>
+            <a target="_top" href="howto_css_checkout_form.asp">Checkout Form</a>
+            <a target="_top" href="howto_css_contact_form.asp">Contact Form</a>
+            <a target="_top" href="howto_css_social_login.asp">Social Login Form</a>
+            <a target="_top" href="howto_css_register_form.asp">Register Form</a>
+            <a target="_top" href="howto_css_form_icon.asp">Form with Icons</a>
+            <a target="_top" href="howto_css_newsletter.asp">Newsletter</a>
+            <a target="_top" href="howto_css_stacked_form.asp">Stacked Form</a>
+            <a target="_top" href="howto_css_responsive_form.asp">Responsive Form</a>
+            <a target="_top" href="howto_js_popup_form.asp">Popup Form</a>
+            <a target="_top" href="howto_css_inline_form.asp">Inline Form</a>
+            <a target="_top" href="howto_html_clear_input.asp">Clear Input Field</a>
+            <a target="_top" href="howto_css_hide_arrow_number.asp">Hide Number Arrows</a>
+            <a target="_top" href="howto_js_copy_clipboard.asp">Copy Text to Clipboard</a>
+            <a target="_top" href="howto_css_animated_search.asp">Animated Search</a>
+            <a target="_top" href="howto_css_search_button.asp">Search Button</a>
+            <a target="_top" href="howto_css_fullscreen_search.asp">Fullscreen Search</a>
+            <a target="_top" href="howto_css_input_navbar.asp">Input Field in Navbar</a>
+            <a target="_top" href="howto_css_login_form_navbar.asp">Login Form in Navbar</a>
+            <a target="_top" href="howto_css_custom_checkbox.asp">Custom Checkbox/Radio</a>
+            <a target="_top" href="howto_custom_select.asp">Custom Select</a>
+            <a target="_top" href="howto_css_switch.asp">Toggle Switch</a>
+            <a target="_top" href="howto_js_display_checkbox_text.asp">Check Checkbox</a>
+            <a target="_top" href="howto_js_detect_capslock.asp">Detect Caps Lock</a>
+            <a target="_top" href="howto_js_trigger_button_enter.asp">Trigger Button on Enter</a>
+            <a target="_top" href="howto_js_password_validation.asp">Password Validation</a>
+            <a target="_top" href="howto_js_toggle_password.asp">Toggle Password Visibility</a>
+            <a target="_top" href="howto_js_form_steps.asp">Multiple Step Form</a>
+            <a target="_top" href="howto_js_autocomplete.asp">Autocomplete</a>
+            <a target="_top" href="howto_html_autocomplete_off.asp">Turn off autocomplete</a>
+            <a target="_top" href="howto_html_spellcheck_disable.asp">Turn off spellcheck</a>
+            <a target="_top" href="howto_html_file_upload_button.asp">File Upload Button</a>
+            <a target="_top" href="howto_js_validation_empty_input.asp">Empty Input Validation</a>
+            <br>
+
+            <h2>Filters</h2>
+            <a target="_top" href="howto_js_filter_lists.asp">Filter List</a>
+            <a target="_top" href="howto_js_filter_table.asp">Filter Table</a>
+            <a target="_top" href="howto_js_filter_elements.asp">Filter Elements</a>
+            <a target="_top" href="howto_js_filter_dropdown.asp">Filter Dropdown</a>
+            <a target="_top" href="howto_js_sort_list.asp">Sort List</a>
+            <a target="_top" href="howto_js_sort_table.asp">Sort Table</a>
+            <br>
+
+            <h2>Tables</h2>
+            <a target="_top" href="howto_css_table_zebra.asp">Zebra Striped Table</a>
+            <a target="_top" href="howto_css_table_center.asp">Center Tables</a>
+            <a target="_top" href="howto_css_table_full_width.asp">Full-width Table</a>
+            <a target="_top" href="howto_css_table_side_by_side.asp">Side-by-side Tables</a>
+            <a target="_top" href="howto_css_table_responsive.asp">Responsive Tables</a>
+            <a target="_top" href="howto_css_comparison_table.asp">Comparison Table</a>
+            <br>
+
+            <h2>More</h2>
+            <a target="_top" href="howto_css_fullscreen_video.asp">Fullscreen Video</a>
+            <a target="_top" href="howto_css_modals.asp">Modal Boxes</a>
+            <a target="_top" href="howto_css_delete_modal.asp">Delete Modal</a>
+            <a target="_top" href="howto_css_timeline.asp">Timeline</a>
+            <a target="_top" href="howto_js_scroll_indicator.asp">Scroll Indicator</a>
+            <a target="_top" href="howto_js_progressbar.asp">Progress Bars</a>
+            <a target="_top" href="howto_css_skill_bar.asp">Skill Bar</a>
+            <a target="_top" href="howto_js_rangeslider.asp">Range Sliders</a>
+            <a target="_top" href="howto_css_tooltip.asp">Tooltips</a>
+            <a target="_top" href="howto_css_display_element_hover.asp">Display Element Hover</a>
+            <a target="_top" href="howto_js_popup.asp">Popups</a>
+            <a target="_top" href="howto_js_collapsible.asp">Collapsible</a>
+            <a target="_top" href="howto_css_calendar.asp">Calendar</a>
+            <a target="_top" href="howto_html_include.asp">HTML Includes</a>
+            <a target="_top" href="howto_js_todolist.asp">To Do List</a>
+            <a target="_top" href="howto_css_loader.asp">Loaders</a>
+            <a target="_top" href="howto_css_badge.asp">Badges</a>
+            <a target="_top" href="howto_css_star_rating.asp">Star Rating</a>
+            <a target="_top" href="howto_css_user_rating.asp">User Rating</a>
+            <a target="_top" href="howto_css_overlay.asp">Overlay Effect</a>
+            <a target="_top" href="howto_css_contact_chips.asp">Contact Chips</a>
+            <a target="_top" href="howto_css_cards.asp">Cards</a>
+            <a target="_top" href="howto_css_flip_card.asp">Flip Card</a>
+            <a target="_top" href="howto_css_profile_card.asp">Profile Card</a>
+            <a target="_top" href="howto_css_product_card.asp">Product Card</a>
+            <a target="_top" href="howto_js_alert.asp">Alerts</a>
+            <a target="_top" href="howto_js_callout.asp">Callout</a>
+            <a target="_top" href="howto_css_notes.asp">Notes</a>
+            <a target="_top" href="howto_css_labels.asp">Labels</a>
+            <a target="_top" href="howto_css_circles.asp">Circles</a>
+            <a target="_top" href="howto_css_style_hr.asp">Style HR</a>
+            <a target="_top" href="howto_css_coupon.asp">Coupon</a>
+            <a target="_top" href="howto_css_list_group.asp">List Group</a>
+            <a target="_top" href="howto_css_list_group_badges.asp">List Group with Badges</a>
+            <a target="_top" href="howto_css_list_without_bullets.asp">List Without Bullets</a>
+            <a target="_top" href="howto_css_responsive_text.asp">Responsive Text</a>
+            <a target="_top" href="howto_css_cutout_text.asp">Cutout Text</a>
+            <a target="_top" href="howto_css_glowing_text.asp">Glowing Text</a>
+            <a target="_top" href="howto_css_fixed_footer.asp">Fixed Footer</a>
+            <a target="_top" href="howto_css_sticky_element.asp">Sticky Element</a>
+            <a target="_top" href="howto_css_equal_height.asp">Equal Height</a>
+            <a target="_top" href="howto_css_clearfix.asp">Clearfix</a>
+            <a target="_top" href="howto_css_responsive_floats.asp">Responsive Floats</a>
+            <a target="_top" href="howto_js_snackbar.asp">Snackbar</a>
+            <a target="_top" href="howto_js_fullscreen.asp">Fullscreen Window</a>
+            <a target="_top" href="howto_js_scrolldrawing.asp">Scroll Drawing</a>
+            <a target="_top" href="howto_css_smooth_scroll.asp">Smooth Scroll</a>
+            <a target="_top" href="howto_css_bg_gradient_scroll.asp">Gradient Bg Scroll</a>
+            <a target="_top" href="howto_js_sticky_header.asp">Sticky Header</a>
+            <a target="_top" href="howto_js_shrink_header_scroll.asp">Shrink Header on Scroll</a>
+            <a target="_top" href="howto_css_pricing_table.asp">Pricing Table</a>
+            <a target="_top" href="howto_css_parallax.asp">Parallax</a>
+            <a target="_top" href="howto_css_aspect_ratio.asp">Aspect Ratio</a>
+            <a target="_top" href="howto_css_responsive_iframes.asp">Responsive Iframes</a>
+            <a target="_top" href="howto_js_toggle_like.asp">Toggle Like/Dislike</a>
+            <a target="_top" href="howto_js_toggle_hide_show.asp">Toggle Hide/Show</a>
+            <a target="_top" href="howto_js_toggle_dark_mode.asp">Toggle Dark Mode</a>
+            <a target="_top" href="howto_js_toggle_text.asp">Toggle Text</a>
+            <a target="_top" href="howto_js_toggle_class.asp">Toggle Class</a>
+            <a target="_top" href="howto_js_add_class.asp">Add Class</a>
+            <a target="_top" href="howto_js_remove_class.asp">Remove Class</a>
+            <a target="_top" href="howto_js_active_element.asp">Active Class</a>
+            <a target="_top" href="howto_js_treeview.asp">Tree View</a>
+            <a target="_top" href="howto_js_remove_property_object.asp">Remove Property</a>
+            <a target="_top" href="howto_js_offline_detection.asp">Offline Detection</a>
+            <a target="_top" href="howto_js_check_hidden.asp">Find Hidden Element</a>
+            <a target="_top" href="howto_js_redirect_webpage.asp">Redirect Webpage</a>
+            <a target="_top" href="howto_css_zoom_hover.asp">Zoom Hover</a>
+            <a target="_top" href="howto_css_flip_box.asp">Flip Box</a>
+            <a target="_top" href="howto_css_center-vertical.asp">Center Vertically</a>
+            <a target="_top" href="howto_css_center_button.asp">Center Button in DIV</a>
+            <a target="_top" href="howto_css_center-list.asp">Center a List</a>
+            <a target="_top" href="howto_css_transition_hover.asp">Transition on Hover</a>
+            <a target="_top" href="howto_css_arrows.asp">Arrows</a>
+            <a target="_top" href="howto_css_shapes.asp">Shapes</a>
+            <a target="_top" href="howto_html_download_link.asp">Download Link</a>
+            <a target="_top" href="howto_css_div_full_height.asp">Full Height Element</a>
+            <a target="_top" href="howto_css_browser_window.asp">Browser Window</a>
+            <a target="_top" href="howto_css_custom_scrollbar.asp">Custom Scrollbar</a>
+            <a target="_top" href="howto_css_hide_scrollbars.asp">Hide Scrollbar</a>
+            <a target="_top" href="howto_css_force_scrollbars.asp">Show/Force Scrollbar</a>
+            <a target="_top" href="howto_css_devices.asp">Device Look</a>
+            <a target="_top" href="howto_css_contenteditable_border.asp">Contenteditable Border</a>
+            <a target="_top" href="howto_css_placeholder.asp">Placeholder Color</a>
+            <a target="_top" href="howto_css_disable_resize_textarea.asp">Disable Resizing of Textarea</a>
+            <a target="_top" href="howto_css_disable_text_selection.asp">Disable Text Selection</a>
+            <a target="_top" href="howto_css_text_selection.asp">Text Selection Color</a>
+            <a target="_top" href="howto_css_bullet_color.asp">Bullet Color</a>
+            <a target="_top" href="howto_css_vertical_line.asp">Vertical Line</a>
+            <a target="_top" href="howto_css_dividers.asp">Dividers</a>
+            <a target="_top" href="howto_js_animate_icons.asp">Animate Icons</a>
+            <a target="_top" href="howto_js_countdown.asp">Countdown Timer</a>
+            <a target="_top" href="howto_js_typewriter.asp">Typewriter</a>
+            <a target="_top" href="howto_css_coming_soon.asp">Coming Soon Page</a>
+            <a target="_top" href="howto_css_chat.asp">Chat Messages</a>
+            <a target="_top" href="howto_js_popup_chat.asp">Popup Chat Window</a>
+            <a target="_top" href="howto_css_split_screen.asp">Split Screen</a>
+            <a target="_top" href="howto_css_testimonials.asp">Testimonials</a>
+            <a target="_top" href="howto_css_section_counter.asp">Section Counter</a>
+            <a target="_top" href="howto_js_quotes_slideshow.asp">Quotes Slideshow</a>
+            <a target="_top" href="howto_js_close_list_items.asp">Closable List Items</a>
+            <a target="_top" href="howto_css_media_query_breakpoints.asp">Typical Device Breakpoints</a>
+            <a target="_top" href="howto_js_draggable.asp">Draggable HTML Element</a>
+            <a target="_top" href="howto_js_media_queries.asp">JS Media Queries</a>
+            <a target="_top" href="howto_syntax_highlight.asp">Syntax Highlighter</a>
+            <a target="_top" href="howto_js_animate.asp">JS Animations</a>
+            <a target="_top" href="howto_js_string_length.asp">JS String Length</a>
+            <a target="_top" href="howto_js_exponentiation.asp">JS Exponentiation</a>
+            <a target="_top" href="howto_js_default_parameters.asp">JS Default Parameters</a>
+            <a target="_top" href="howto_js_get_url.asp">Get Current URL</a>
+            <a target="_top" href="howto_js_get_current_window.asp">Get Current Screen Size</a>
+            <a target="_top" href="howto_js_element_iframe.asp">Get Iframe Elements</a>
+            <br>
+
+            <h2>Website</h2>
+            <a target="_top" href="howto_website_create_free.asp">Create a Free Website</a>
+            <a target="_top" href="howto_make_a_website.asp">Make a Website</a>
+            <a target="_top" href="howto_website_static.asp">Make a Static Website</a>
+            <a target="_top" href="howto_website_host_staticwebsite.asp">Host a Static Website</a>
+            <a target="_top" href="howto_website.asp">Make a Website (W3.CSS)</a>
+            <a target="_top" href="howto_website_bootstrap.asp">Make a Website (BS3)</a>
+            <a target="_top" href="howto_website_bootstrap4.asp">Make a Website (BS4)</a>
+            <a target="_top" href="howto_website_bootstrap5.asp">Make a Website (BS5)</a>
+            <a target="_top" href="howto_create_and_view.asp">Create and View a Website</a>
+            <a target="_top" href="howto_website_create_linktree.asp">Create a Link Tree Website</a>
+            <a target="_top" href="howto_website_create_portfolio.asp">Create a Portfolio</a>
+            <a target="_top" href="howto_website_create_resume.asp">Create a Resume</a>
+            <a target="_top" href="howto_website_restaurant.asp">Make a Restaurant Website</a>
+            <a target="_top" href="howto_website_business.asp">Make a Business Website</a>
+            <a target="_top" href="howto_make_a_webbook.asp">Make a WebBook</a>
+            <a target="_top" href="howto_css_center_website.asp">Center Website</a>
+            <a target="_top" href="howto_css_contact_section.asp">Contact Section</a>
+            <a target="_top" href="howto_css_about_page.asp">About Page</a>
+            <a target="_top" href="howto_css_style_header.asp">Big Header</a>
+            <a target="_top" href="howto_css_example_website.asp">Example Website</a>
+            <br>
+
+            <h2>Grid</h2>
+            <a target="_top" href="howto_css_two_columns.asp">2 Column Layout</a>
+            <a target="_top" href="howto_css_three_columns.asp">3 Column Layout</a>
+            <a target="_top" href="howto_css_four_columns.asp">4 Column Layout</a>
+            <a target="_top" href="howto_js_expanding_grid.asp">Expanding Grid</a>
+            <a target="_top" href="howto_js_list_grid_view.asp">List Grid View</a>
+            <a target="_top" href="howto_css_mixed_columns.asp">Mixed Column Layout</a>
+            <a target="_top" href="howto_css_column_cards.asp">Column Cards</a>
+            <a target="_top" href="howto_css_zig_zag_layout.asp">Zig Zag Layout</a>
+            <a target="_top" href="howto_css_blog_layout.asp">Blog Layout</a>
+            <br>
+
+            <h2>Google</h2>
+            <!--<a target="_top" href="howto_google_maps.asp">Google Maps</a>
+            <a target="_top" href="howto_google_maps_bw.asp">Google Maps BW</a>-->
+            <a target="_top" href="howto_google_charts.asp">Google Charts</a>
+            <a target="_top" href="howto_google_fonts.asp">Google Fonts</a>
+            <a target="_top" href="howto_google_fonts_pairings.asp">Google Font Pairings</a>
+            <a target="_top" href="howto_google_analytics.asp">Google Set up Analytics</a>
+            <br>
+
+            <h2>Converters</h2>
+            <a target="_top" href="howto_js_weight_converter.asp">Convert Weight</a>
+            <a target="_top" href="howto_js_temperature_converter.asp">Convert Temperature</a>
+            <a target="_top" href="howto_js_length_converter.asp">Convert Length</a>
+            <a target="_top" href="howto_js_speed_converter.asp">Convert Speed</a>
+            <br>
+
+            <h2>Blog</h2>
+            <a target="_top" href="howto_blog_developer_job.asp">Get a Developer Job</a>
+            <a target="_top" href="howto_blog_become_frontenddev.asp">Become a Front-End Dev.</a>
+            <br><br>
+            </nav>
+    </div>
+  </div>
+</div>
+<!--/Left menu Howto--><!--CONTENT HowTo-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver">Place for your advertisement!</div>
+            <a href='index_en.html'><img src='../images/html_css_js.jpg' class='w3-left' style='width:180px;height:80px;padding:10px' alt='How to make? Ready-made solutions - snippets for the site. W3Schools in English' title='Ready-made solutions for the site. Snippets. W3Schools in English'></a><p class='w3-right'>
+    <a href='index.html' title='Go to Ukrainian language'>Ua</a>
+</p>
+<article>
+    <h1>W3Schools <span class="color_h1">How to do? Ready-made solutions (snippets) for sites</span></h1>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
+        <a class='w3-right w3-btn' href='index_page2.html'>Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro"><strong>Snippets. Ready-made solutions for websites. HTML, CSS, and JavaScript snippets.</strong></p>
+    <p>You can use these ready-made solutions (snippets) on your sites. This will speed up and make it easier for you to code web pages. These examples use only three technologies: <strong>HTML + CSS + JavaScript</strong>. You can modify this ready-made code (for example, styling pages with CSS), adapting it for your web projects.</p>
+    <div id="testtest">
+        <hr>
+        <div class="howtocontainer">
+            <div style="max-width:1000px;margin:auto;">
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_slideshow_en.html" class="h2-anchor">Slideshow</a></h2>
+                    <div style="position:relative">
+                        <div class="mySlides slfade">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="../images/img_nature_wide.jpg" style="width:100%;min-height:100px;" alt="Caption Text">
+                            <div class="sltext">Caption Text</div>
+                        </div>
+                        <div class="mySlides slfade">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="../images/img_snow_wide.jpg" style="width:100%;min-height:100px;" alt="Caption Text">
+                            <div class="sltext">Caption Two</div>
+                        </div>
+                        <div class="mySlides slfade">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="../images/img_mountains_wide.jpg" style="width:100%;min-height:100px;" alt="Caption Text">
+                            <div class="sltext">Caption Three</div>
+                        </div>
+                        <div class="mySlides slfade">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="../images/img_lights_wide.jpg" style="width:100%;min-height:100px;" alt="Caption Text">
+                            <div class="sltext">Caption Four</div>
+                        </div>
+                        <a class="slprev" onclick="plusSlides(-1)" style="z-index:0">&#10094;</a>
+                        <a class="slnext" onclick="plusSlides(1)" style="z-index:0">&#10095;</a>
+                    </div>
+                    <br>
+                    <div style="text-align:center">
+                        <a href="javascript:void(0)" class="sldot" onclick="currentSlide(1)" title="slide 1"></a>
+                        <a href="javascript:void(0)" class="sldot" onclick="currentSlide(2)" title="slide 2"></a>
+                        <a href="javascript:void(0)" class="sldot" onclick="currentSlide(3)" title="slide 3"></a>
+                        <a href="javascript:void(0)" class="sldot" onclick="currentSlide(4)" title="slide 4"></a>
+                    </div>
+                    <script>
+                        var slideIndex = 1;
+                        showSlides(slideIndex);
+                        function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                        }
+                        function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                        }
+                        function showSlides(n) {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            var dots = document.getElementsByClassName("sldot");
+                            if (n > slides.length) {slideIndex = 1}
+                            if (n < 1) {slideIndex = slides.length} ;
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].classList.remove("slideractive");
+                            }
+                            slides[slideIndex-1].style.display = "block";
+                            dots[slideIndex-1].classList.add("slideractive");
+                        }
+                    </script>
+                    <div class="howto-container">
+                        <p><a href="howto_js_slideshow_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_login_form_en.html" class="h2-anchor">Login Form</a></h2>
+                    <button onclick="document.getElementById('loginModal').style.display='block'" class="w3-button w3-blue" style="font-size:17px;width:150px">Login</button>
+                    <div id="loginModal" class="w3-modal" style="cursor:pointer;">
+                        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px;cursor:auto">
+                            <div class="w3-center"><br>
+                                <span onclick="document.getElementById('loginModal').style.display='none'" title="Close Modal"
+                                      class="w3-button w3-hover-text-grey w3-container w3-display-topright w3-xxlarge">&times;</span>
+                                <img src="../images/img_avatar2.png" alt="Avatar" style="width:40%" class="w3-circle w3-margin-top">
+                            </div>
+                            <div class="w3-container">
+                                <div class="w3-section">
+                                    <label><b>Username</b></label>
+                                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username">
+                                    <label><b>Password</b></label>
+                                    <input class="w3-input w3-border" type="password" placeholder="Enter Password">
+                                    <button class="w3-button w3-block w3-green w3-section w3-padding" onclick="document.getElementById('loginModal').style.display='none'">Login</button>
+                                    <input type="checkbox" checked="checked"> Remember me
+                                </div>
+                            </div>
+                            <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                                <button onclick="document.getElementById('loginModal').style.display='none'" type="button" class="w3-btn w3-red">Cancel</button>
+                                <span class="w3-right w3-padding w3-hide-small">Forgot <a href="javascript:void(0)" onclick="document.getElementById('loginModal').style.display='none'">password?</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_login_form_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                    <script>
+                        // Get the modal
+                        var loginMod = document.getElementById('loginModal');
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == loginMod) {
+                                loginMod.style.display = "none";
+                            }
+                        }
+                    </script>
+                </div>
+                <br>
+                <div class="w3-card-4">
+                    <div class="w3-container">
+                        <h2><a href="howto_js_accordion_en.html" class="h2-anchor">Accordion</a></h2>
+                        <button class="accordion" id="myfirstAcc">Section 1</button>
+                        <div class="panel" style="color:#000;">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <button class="accordion">Section 2</button>
+                        <div class="panel" style="color:#000;">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <button class="accordion">Section 3</button>
+                        <div class="panel" style="color:#000;">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div class="howto-container">
+                            <p><a href="howto_js_accordion_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                        </div>
+                        <script>
+                            var acc = document.getElementsByClassName("accordion");
+                            var i;
+                            for (i = 0; i < acc.length; i++) {
+                                acc[i].onclick = function(){
+                                    this.classList.toggle("activeacc");
+                                    this.nextElementSibling.classList.toggle("showpanel");
+                                }
+                            }
+                        </script>
+                        <script>
+                            var myaccbtn = document.getElementById("myfirstAcc");
+                            myaccbtn.click();
+                        </script>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_dropdown_en.html" class="h2-anchor">Hover Dropdowns</a></h2>
+                    <div class="dropdown dropdown2">
+                        <button class="dropbtn" style="background-color:#f4511e;">Hover</button>
+                        <div class="dropdown-content">
+                            <a href="javascript:void(0)">Link 1</a>
+                            <a href="javascript:void(0)">Link 2</a>
+                            <a href="javascript:void(0)">Link 3</a>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_dropdown_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_dropdown_en.html" class="h2-anchor">Click Dropdowns</a></h2>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn" style="cursor:pointer">Click</button>
+                        <div id="myDropdown" class="dropdown-content" >
+                            <a href="javascript:void(0)">Link 1</a>
+                            <a href="javascript:void(0)">Link 2</a>
+                            <a href="javascript:void(0)">Link 3</a>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_js_dropdown_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                    <script>
+                        /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+                        function myFunction() {
+                            document.getElementById("myDropdown").classList.toggle("show");
+                        }
+                        function myFunction2() {
+                            document.getElementById("myDropdown2").style.right = "0";
+                            document.getElementById("myDropdown2").classList.toggle("show");
+                        }
+                        // Close the dropdown if the user clicks outside of it
+                        window.onclick = function(e) {
+                            if (!e.target.matches('.dropbtn')) {
+                                var dropdowns = document.getElementsByClassName("dropdown-content");
+                                for (var d = 0; d < dropdowns.length; d++) {
+                                    var openDropdown = dropdowns[d];
+                                    if (openDropdown.classList.contains('show')) {
+                                        openDropdown.classList.remove('show');
+                                    }
+                                }
+                            }
+                        }
+                    </script>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_sidenav_en.html" class="h2-anchor">Side Navigation</a></h2>
+                    <div id="myCanvasNav" class="overlay3" onclick="closeOffcanvas()"></div>
+                    <div id="myOffcanvas" class="offcanvas">
+                        <a href="javascript:void(0)" class="closeOffcanvas" onclick="closeOffcanvas()">&times;</a>
+                        <a href="javascript:void(0)">About</a>
+                        <a href="javascript:void(0)">Services</a>
+                        <a href="javascript:void(0)">Clients</a>
+                        <a href="javascript:void(0)">Contact</a>
+                    </div>
+                    <button class="w3-button w3-black w3-padding w3-margin-bottom" onclick="openOffcanvas1()">Sidenav overlay</button><br>
+                    <button class="w3-button w3-black w3-padding w3-margin-bottom" onclick="openOffcanvas();">Sidenav push</button><br>
+                    <button class="w3-button w3-black w3-padding" onclick="openNav3();openOffcanvas();">Sidenav push w/opacity</button>
+                    <div class="howto-container">
+                        <p><a href="howto_js_sidenav_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                    <script>
+                        // Sidenavs
+                        function openNav() {
+                            document.getElementById("myNav").style.width = "100%";
+                        }
+                        function closeNav() {
+                            document.getElementById("myNav").style.width = "0%";
+                        }
+                        function openNav2() {
+                            document.getElementById("myNav2").style.height = "100%";
+                        }
+                        function closeNav2() {
+                            document.getElementById("myNav2").style.height = "0%";
+                        }
+                        function openNav3() {
+                            document.getElementById("myCanvasNav").style.width = "100%";
+                            document.getElementById("myCanvasNav").style.opacity = "0.8";
+                        }
+                        function openOffcanvas1() {
+                            document.getElementById("myOffcanvas").style.width = "250px";
+                        }
+                        function openOffcanvas() {
+                            document.getElementById("myOffcanvas").style.width = "250px";
+                            document.getElementById("testtest").style.marginLeft = "50px";
+                        }
+                        function closeOffcanvas() {
+                            document.getElementsByClassName("overlay3")[0].style.opacity = "0";
+                            document.getElementById("myOffcanvas").style.width = "0%";
+                            document.getElementById("testtest").style.marginLeft= "0%";
+                            document.getElementById("myCanvasNav").style.width = "0%";
+                        }
+                    </script>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_fixed_sidebar_en.html" class="h2-anchor">Fixed Sidebar</a></h2>
+                    <div class="w3-row-padding" style="margin:0 -16px 16px -16px">
+                        <div class="w3-col m6 s12">
+                            <iframe src="tryhow_css_sidenav_ifr.html" style="width:100%;border:5px solid #ddd;height:300px;background-color:#fff;"></iframe>
+                        </div>
+                        <div class="w3-col m6 w3-hide-small">
+                            <iframe src="tryhow_css_sidenav_ifr2.html" style="width:100%;border:5px solid #ddd;height:300px;background-color:#fff;"></iframe>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_fixed_sidebar_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_modals_en.html" class="h2-anchor">Modal Box</a></h2>
+                    <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-teal w3-large w3-padding-large">Open Modal</button></p>
+                    <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content w3-animate-top w3-card-4">
+                            <header class="w3-container w3-teal w3-display-container">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright" style="font-size:33px !important">&times;</span>
+                                <h2>Modal Header</h2>
+                            </header>
+                            <div class="w3-container">
+                                <p>Hello World!</p>
+                                <p>Modals are awesome!</p>
+                                <p>Go Back To <a href="default_page1_en.html" class="w3-button w3-teal">W3 How TO</a> Examples</p>
+                            </div>
+                            <footer class="w3-container w3-teal">
+                                <p>Modal Footer</p>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_modals_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_modal_images_en.html" class="h2-anchor">Modal Image</a></h2>
+                    <div class="imgmod">
+                        <img id="eh" src="../images/img_snow.jpg" alt="Snow" width="300" height="200">
+                    </div>
+                    <div id="myModal2" class="modal2">
+                        <span class="closeimg" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
+                        <img class="modal-content2" id="img02">
+                        <div id="caption"></div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_modal_images_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal2');
+                        var images = document.getElementById('eh');
+                        var modalImg = document.getElementById("img02");
+                        var captionText = document.getElementById("caption");
+                        images.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = images.src;
+                            modalImg.alt = images.alt;
+                            captionText.innerHTML = images.alt;
+                        }
+                    </script>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_lightbox_en.html" class="h2-anchor">Lightbox</a></h2>
+                    <div class="w3-row-padding" style="margin:0 -16px">
+                        <div class="w3-col s4">
+                            <img src="../images/img_nature.jpg" alt="Lightbox" style="width:100%;cursor:pointer"
+                                 onclick="openLightboxModal();currentDivLightbox(1)" class="w3-hover-shadow cursor">
+                        </div>
+                        <div class="w3-col s4">
+                            <img src="../images/img_snow.jpg" alt="Lightbox" style="width:100%;cursor:pointer" onclick="openLightboxModal();currentDivLightbox(2)" class="w3-hover-shadow cursor">
+                        </div>
+                        <div class="w3-col s4">
+                            <img src="../images/img_mountains.jpg" alt="Lightbox" style="width:100%;cursor:pointer" onclick="openLightboxModal();currentDivLightbox(3)" class="w3-hover-shadow cursor">
+                        </div>
+                    </div>
+                    <div id="myModalLightbox" class="w3-modal w3-black">
+                        <span class="w3-text-white w3-xxxlarge w3-hover-text-grey w3-container w3-display-topright cursor" style="top:-12px" onclick="closeLightboxModal()">&times;</span>
+                        <div class="w3-modal-content">
+                            <div class="w3-content" style="max-width:1200px">
+                                <img class="myLightbox" src="../images/img_nature_wide.jpg" style="width:100%" alt="Nature">
+                                <img class="myLightbox" src="../images/img_snow_wide.jpg" style="width:100%" alt="Snow">
+                                <img class="myLightbox" src="../images/img_mountains_wide.jpg" style="width:100%" alt="Mountains">
+                                <div class="w3-row w3-black w3-center">
+                                    <div class="w3-container w3-display-container">
+                                        <p id="lightboxCaption"></p>
+                                        <span class="w3-display-middle w3-hover-text-grey w3-large cursor" style="left:2%" onclick="plusDivsLightbox(-1)">&#10094;</span>
+                                        <span class="w3-display-middle w3-hover-text-grey w3-large cursor" style="left:98%" onclick="plusDivsLightbox(1)">&#10095;</span>
+                                    </div>
+                                    <div class="w3-col s4">
+                                        <img class="demolightbox w3-opacity w3-hover-opacity-off cursor" src="../images/img_nature_wide.jpg" style="width:100%" onclick="currentDivLightbox(1)" alt="Nature and sunrise">
+                                    </div>
+                                    <div class="w3-col s4">
+                                        <img class="demolightbox w3-opacity w3-hover-opacity-off cursor" src="../images/img_snow_wide.jpg" style="width:100%" onclick="currentDivLightbox(2)" alt="Snow">
+                                    </div>
+                                    <div class="w3-col s4">
+                                        <img class="demolightbox w3-opacity w3-hover-opacity-off cursor" src="../images/img_mountains_wide.jpg" style="width:100%" onclick="currentDivLightbox(3)" alt="Mountains and fjords">
+                                    </div>
+                                </div> <!-- End row -->
+                            </div> <!-- End w3-content -->
+                        </div> <!-- End modal content -->
+                    </div> <!-- End modal -->
+                    <script>
+                        function openLightboxModal() {
+                            document.getElementById('myModalLightbox').style.display = "block";
+                        }
+                        function closeLightboxModal() {
+                            document.getElementById('myModalLightbox').style.display = "none";
+                        }
+                        var slideIndexLightbox = 1;
+                        showDivsLightbox(slideIndexLightbox);
+                        function plusDivsLightbox(n) {
+                            showDivsLightbox(slideIndexLightbox += n);
+                        }
+                        function currentDivLightbox(n) {
+                            showDivsLightbox(slideIndexLightbox = n);
+                        }
+                        function showDivsLightbox(n) {
+                            var i;
+                            var x = document.getElementsByClassName("myLightbox");
+                            var dots = document.getElementsByClassName("demolightbox");
+                            var captionText = document.getElementById("lightboxCaption");
+                            if (n > x.length) {slideIndexLightbox = 1}
+                            if (n < 1) {slideIndexLightbox = x.length}
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+                            }
+                            x[slideIndexLightbox -1].style.display = "block";
+                            dots[slideIndexLightbox -1].className += " w3-opacity-off";
+                            captionText.innerHTML = dots[slideIndexLightbox -1].alt;
+                        }
+                    </script>
+                    <div class="howto-container">
+                        <p><a href="howto_js_lightbox_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_slideshow_gallery_en.html" class="h2-anchor">Slideshow Gallery</a></h2>
+                    <div style="max-width:1000px;min-width:200px;position:relative;margin:auto;">
+                        <div class="slgcontainer">
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">1 / 6</div>
+                                <img src="../images/img_woods_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Slideshow Gallery">
+                            </div>
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">2 / 6</div>
+                                <img src="../images/img_5terre_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Slideshow Gallery">
+                            </div>
+
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">3 / 6</div>
+                                <img src="../images/img_mountains_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Slideshow Gallery">
+                            </div>
+
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">4 / 6</div>
+                                <img src="../images/img_lights_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Slideshow Gallery">
+                            </div>
+
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">5 / 6</div>
+                                <img src="../images/img_nature_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Slideshow Gallery">
+                            </div>
+
+                            <div class="slgmySlides">
+                                <div class="slgnumbertext">6 / 6</div>
+                                <img src="../images/img_snow_wide.jpg" style="width:100%;margin-bottom:-6px" alt="Slideshow Gallery">
+                            </div>
+                            <a class="slgprev w3-text-white" onclick="slgplusSlides(-1)">&#10094;</a>
+                            <a class="slgnext w3-text-white" onclick="slgplusSlides(1)">&#10095;</a>
+                            <div class="slgcaption-container">
+                                <p id="slgcaption"></p>
+                            </div>
+                            <div class="slgrow">
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_woods.jpg" style="width:100%" onclick="slgcurrentSlide(1)" alt="The Woods">
+                                </div>
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_5terre.jpg" style="width:100%" onclick="slgcurrentSlide(2)" alt="Cinque Terre">
+                                </div>
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_mountains.jpg" style="width:100%" onclick="slgcurrentSlide(3)" alt="Mountains and fjords">
+                                </div>
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_lights.jpg" style="width:100%" onclick="slgcurrentSlide(4)" alt="Northern Lights">
+                                </div>
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_nature.jpg" style="width:100%" onclick="slgcurrentSlide(5)" alt="Nature and sunrise">
+                                </div>
+                                <div class="slgcolumn">
+                                    <img class="slgdemo cursor" src="../images/img_snow.jpg" style="width:100%" onclick="slgcurrentSlide(6)" alt="Snowy Mountains">
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            var slgslideIndex = 1;
+                            slgshowSlides(slgslideIndex);
+                            function slgplusSlides(slgn) {
+                                slgshowSlides(slgslideIndex += slgn);
+                            }
+                            function slgcurrentSlide(slgn) {
+                                slgshowSlides(slgslideIndex = slgn);
+                            }
+                            function slgshowSlides(slgn) {
+                                var slgi;
+                                var slgslides = document.getElementsByClassName("slgmySlides");
+                                var slgdots = document.getElementsByClassName("slgdemo");
+                                var slgcaptionText = document.getElementById("slgcaption");
+                                if (slgn > slgslides.length) {slgslideIndex = 1}
+                                if (slgn < 1) {slgslideIndex = slgslides.length}
+                                for (slgi = 0; slgi < slgslides.length; slgi++) {
+                                    slgslides[slgi].style.display = "none";
+                                }
+                                for (slgi = 0; slgi < slgdots.length; slgi++) {
+                                    slgdots[slgi].className = slgdots[slgi].className.replace(" slgactive", "");
+                                }
+                                slgslides[slgslideIndex-1].style.display = "block";
+                                slgdots[slgslideIndex-1].className += " slgactive";
+                                slgcaptionText.innerHTML = slgdots[slgslideIndex-1].alt;
+                            }
+                        </script>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_js_slideshow_gallery_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4">
+                    <div class="w3-container">
+                        <h2><a href="howto_css_image_overlay_en.html" class="h2-anchor">Image Hover Overlay</a></h2>
+                        <div class="w3-light-grey">
+                            <div class="containerslidetop" style="margin:0 auto;max-width:400px">
+                                <img src="../images/img_avatar3.png" alt="Avatar" class="imageslidetop">
+                                <div class="overlayslidetop">
+                                    <div class="textslidetop">Hello World</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="howto-container">
+                            <p><a href="howto_css_image_overlay_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4">
+                    <div class="w3-container">
+                        <h2><a href="howto_js_tabs_en.html" class="h2-anchor">Tabs</a></h2>
+                        <ul class="tab">
+                            <li><a href="javascript:void(0)" class="tablinks" onclick="openCity('London', event)">London</a></li>
+                            <li><a href="javascript:void(0)" class="tablinks" onclick="openCity('Paris', event)">Paris</a></li>
+                            <li><a href="javascript:void(0)" class="tablinks tokyotab" onclick="openCity('Tokyo', event)">Tokyo</a></li>
+                        </ul>
+                        <div style="border:1px solid #eee;border-top:none;">
+                            <div id="London" class="tabcontent">
+                                <h3>London</h3>
+                                <p>London is the capital city of England.</p>
+                            </div>
+                            <div id="Paris" class="tabcontent">
+                                <h3>Paris</h3>
+                                <p>Paris is the capital of France.</p>
+                            </div>
+                            <div id="Tokyo" class="tabcontent tokyotab">
+                                <h3>Tokyo</h3>
+                                <p>Tokyo is the capital of Japan.</p>
+                            </div>
+                        </div>
+                        <script>
+                            openCity("London")
+                            function openCity(cityName, evt) {
+                                var i, tabcontent, tablinks;
+                                tabcontent = document.getElementsByClassName("tabcontent");
+                                for (i = 0; i < tabcontent.length; i++) {
+                                    tabcontent[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablinks");
+                                for (i = 0; i < tabcontent.length; i++) {
+                                    tablinks[i].classList.remove("tabactive");
+                                }
+                                document.getElementById(cityName).style.display = "block";
+                                if (evt) {evt.currentTarget.classList.add("tabactive");}
+                            }
+                        </script>
+                        <script>
+                            var mybtn = document.getElementsByClassName("tablinks")[0];
+                            mybtn.click();
+                        </script>
+                        <div class="howto-container">
+                            <p><a href="howto_js_tabs_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-hide-small">
+                    <div class="w3-container">
+                        <h2><a href="howto_js_vertical_tabs_en.html" class="h2-anchor">Vertical Tabs</a></h2>
+                        <iframe src="tryhow_js_vertical_tabs_ifr.html" style="width:100%;height:350px;border:none;margin:0 -8px;background-color:#fff;"></iframe>
+                        <div class="howto-container">
+                            <p><a href="howto_js_vertical_tabs_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_tab_img_gallery_en.html" class="h2-anchor">Tab Image Gallery</a></h2>
+                    <div class="w3-row-padding" style="margin:0 -16px">
+                        <div class="w3-col s4 w3-container">
+                            <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Nature');">
+                                <img src="../images/img_nature.jpg" alt="Nature" style="width:100%">
+                            </a>
+                        </div>
+                        <div class="w3-col s4 w3-container">
+                            <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Snow');">
+                                <img src="../images/img_snow.jpg" alt="Snow" style="width:100%">
+                            </a>
+                        </div>
+                        <div class="w3-col s4 w3-container">
+                            <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('Lights');">
+                                <img src="../images/img_lights.jpg" alt="Lights" style="width:100%">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="Nature" class="picture w3-display-container w3-margin-top">
+                        <img src="../images/img_nature_wide.jpg" alt="Nature" style="width:100%">
+                        <span onclick="this.parentElement.style.display='none'" class="w3-display-topright w3-button w3-transparent w3-text-white w3-xlarge">&times;</span>
+                        <div class="w3-display-bottomleft w3-container w3-padding w3-text-white w3-large">Nature</div>
+                    </div>
+                    <div id="Snow" class="picture w3-display-container w3-margin-top" style="display:none">
+                        <img src="../images/img_snow_wide.jpg" alt="Snow" style="width:100%">
+                        <span onclick="this.parentElement.style.display='none'" class="w3-display-topright w3-button w3-transparent w3-text-white w3-xlarge">&times;</span>
+                        <div class="w3-display-bottomleft w3-container w3-padding w3-text-white w3-large">Snow</div>
+                    </div>
+
+                    <div id="Lights" class="picture w3-display-container w3-margin-top" style="display:none">
+                        <img src="../images/img_lights_wide.jpg" alt="Lights" style="width:100%">
+                        <span onclick="this.parentElement.style.display='none'" class="w3-display-topright w3-button w3-transparent w3-text-white w3-xlarge">&times;</span>
+                        <div class="w3-display-bottomleft w3-container w3-padding w3-text-white w3-large">Northern Lights</div>
+                    </div>
+                    <script>
+                        function openImg(imgName) {
+                            var i, x;
+                            x = document.getElementsByClassName("picture");
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";
+                            }
+                            document.getElementById(imgName).style.display = "block";
+                        }
+                    </script>
+                    <div class="howto-container">
+                        <p><a href="howto_js_tab_img_gallery_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_alert_buttons_en.html" class="h2-anchor">Alert Buttons</a></h2>
+                    <button class="btnalert success">Success</button>
+                    <button class="btnalert info">Info</button>
+                    <button class="btnalert warning">Warning</button>
+                    <button class="btnalert danger">Danger</button>
+                    <button class="btnalert default">Default</button>
+                    <div class="howto-container">
+                        <p><a href="howto_css_alert_buttons_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_outline_buttons_en.html" class="h2-anchor">Outline Buttons</a></h2>
+                    <button class="btnout outsuccess">Success</button>
+                    <button class="btnout outinfo">Info</button>
+                    <button class="btnout outwarning">Warning</button>
+                    <button class="btnout outdanger">Danger</button>
+                    <button class="btnout outdefault">Default</button>
+                    <div class="howto-container">
+                        <p><a href="howto_css_outline_buttons_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_topnav_en.html" class="h2-anchor">Top Navigation</a></h2>
+                    <div class="w3-bar w3-black">
+                        <a class="w3-bar-item w3-button w3-padding-16 ws-green ws-hover-green" href="javascript:void(0)">Home</a>
+                        <a class="w3-bar-item w3-button w3-padding-16" href="javascript:void(0)">News</a>
+                        <a class="w3-bar-item w3-button w3-padding-16" href="javascript:void(0)">Contact</a>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_js_topnav_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_topnav_responsive_en.html" class="h2-anchor">Responsive Top Navigation</a></h2>
+                    <p>Resize the browser window to see the effect:</p>
+                    <p><iframe src="tryhow_js_topnav_iframe.html" style="width:100%;border:none;height:215px;overflow:hidden;"></iframe></p>
+                    <div class="howto-container">
+                        <p><a href="howto_js_topnav_responsive_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_js_fullscreen_overlay_en.html" class="h2-anchor">Fullscreen Navigation</a></h2>
+                    <div id="myNav" class="overlay">
+                        <a href="javascript:void(0)" class="closebtnOverlay" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                            <a href="javascript:void(0)">About</a>
+                            <a href="javascript:void(0)">Services</a>
+                            <a href="javascript:void(0)">Clients</a>
+                            <a href="javascript:void(0)">Contact</a>
+                        </div>
+                    </div>
+                    <div id="myNav2" class="overlay2">
+                        <a href="javascript:void(0)" class="closebtnOverlay" onclick="closeNav2()">&times;</a>
+                        <div class="overlay-content">
+                            <a href="javascript:void(0)">About</a>
+                            <a href="javascript:void(0)">Services</a>
+                            <a href="javascript:void(0)">Clients</a>
+                            <a href="javascript:void(0)">Contact</a>
+                        </div>
+                    </div>
+                    <button class="w3-button w3-black w3-padding" onclick="openNav()">Slide Right</button>
+                    <button class="w3-button w3-black w3-padding" onclick="openNav2()">Slide Down</button>
+                    <div class="howto-container">
+                        <p><a href="howto_js_fullscreen_overlay_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <style>
+                    .topnav3 {
+                        overflow: hidden;
+                        background-color: #e9e9e9;
+                    }
+                    .topnav3 a {
+                        float: left;
+                        display: block;
+                        color: black;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                        font-size: 17px;
+                    }
+                    .topnav3 a:hover {
+                        background-color: #ddd;
+                        color: black;
+                    }
+                    .topnav3 a.active {
+                        background-color: #2196F3;
+                        color: white;
+                    }
+                    .topnav3 .login-container {
+                        float: right;
+                    }
+                    .topnav3 input[type=text] {
+                        padding: 6px;
+                        margin-top: 8px;
+                        font-size: 17px;
+                        border: none;
+                        width:120px;
+                    }
+                    .topnav3 .login-container button {
+                        float: right;
+                        padding: 6px 10px;
+                        margin-top: 8px;
+                        margin-right: 16px;
+                        background-color: #555;
+                        color: white;
+                        font-size: 17px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    .topnav3 .login-container button:hover {
+                        background-color: green;
+                    }
+                    @media screen and (max-width: 600px) {
+                        .topnav3 .login-container {
+                            float: none;
+                        }
+                        .topnav3 a, .topnav3 input[type=text], .topnav3 .login-container button {
+                            float: none;
+                            display: block;
+                            text-align: left;
+                            width: 100%;
+                            margin: 0;
+                            padding: 14px;
+                        }
+                        .topnav3 input[type=text] {
+                            border: 1px solid #ccc;
+                        }
+                    }
+                </style>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_login_form_navbar_en.html" class="h2-anchor">Login Form in Navbar</a></h2>
+                    <div class="topnav3">
+                        <a class="active" href="javascript:void(0)">Home</a>
+                        <a href="javascript:void(0)">About</a>
+                        <a href="javascript:void(0)">Contact</a>
+                        <div class="login-container">
+                            <input type="text" placeholder="Username" name="username">
+                            <input type="text" placeholder="Password" name="psw">
+                            <button type="button">Login</button>
+                        </div>
+                    </div>
+                    <div class="howto-container">
+                        <p><a href="howto_css_login_form_navbar_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <br>
+                <div class="w3-card-4 w3-container">
+                    <h2><a href="howto_css_bg_change_scroll_en.html" class="h2-anchor">Change Background on Scroll</a></h2>
+                    <iframe src="tryhow_css_bg_change_scroll.html" style="width:100%;border:2px solid #f1f1f1;height:500px;"></iframe>
+                    <div class="howto-container">
+                        <p><a href="howto_css_bg_change_scroll_en.html" class="ws-btn">Learn How To &raquo;</a></p>
+                    </div>
+                </div>
+                <!-- END INNER -->
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="howtopag">
+    </div>
+    <script>
+        init_pagination();
+    </script>
+    <hr>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
+        <a class='w3-right w3-btn' href='index_page2.html'>Next &#10095;</a>
+    </div>
+</article>
+<div class="adver">Place for your advertisement!</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker_en.html'>COLOR PICKER</a></h4>
+        <a href='../colors/colors_picker_en.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection'>
+        <h4>SUBSCRIBE!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook W3Schools Rus' title='Facebook page' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='YouTube-channel W3Schools Rus' title='1th YouTube-channel' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram-channel' title='Telegram-channel' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='YouTube-channel W3Schools Rus' title='2th YouTube-channel' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
+</div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>CONTACTS</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>PRINT PAGE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>BLOG</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index_en.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ABOUT</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Contacts</h2>
+      <p>If you want to report a bug, as well as make an offer for the site, add an ad or advertisement on the site, do not hesitate to send an email to the admin:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Tutorial</h4>
+        <a href='../html/index_en.html'>HTML Tutorial</a><br>
+        <a href='../css/index_en.html'>CSS Tutorial</a><br>
+        <a href='../js/index_en.html'>JavaScript Tutorial</a><br>
+        <a href='../sql/index_en.html'>SQL Tutorial</a><br>
+        <a href='../python/index_en.html'>Python Tutorial</a><br>
+        <a href='../php/index_en.html'>PHP Tutorial</a><br>
+        <a href='../bootstrap/bootstrap_ver_en.html'>Bootstrap Tutorial</a><br>
+        <a href='../w3css/index_en.html'>W3.CSS Tutorial</a><br>
+        <a href='../appml/index_en.html'>AppML Tutorial</a><br>
+        <a href='../jquery/index_en.html'>jQuery Tutorial</a><br>
+        <a href='../angular/index_en.html'>Angular Tutorial</a><br>
+        <a href='../sass/index_en.html'>Sass Tutorial</a><br>
+        <a href='../java/index_en.html'>Java Tutorial</a><br>
+        <a href='../cpp/index_en.html'>C++ Tutorial</a><br>
+        <a href='../cs/index_en.html'>C# Tutorial</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top References</h4>
+        <a href='../tags/index_en.html'>HTML Reference</a><br>
+        <a href='../cssref/index_en.html'>CSS Reference</a><br>
+        <a href='../jsref/index_en.html'>JavaScript Reference</a><br>
+        <a href='../sql/sql_ref_keywords_en.html'>SQL Reference</a><br>
+        <a href='../python/python_reference_en.html'>Python Reference</a><br>
+        <a href='../php/php_ref_overview_en.html'>PHP Reference</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a><br>
+        <a href='../w3css/w3css_references_en.html'>W3.CSS Reference</a><br>
+        <a href='../appml/appml_reference_en.html'>Appml Reference</a><br>
+        <a href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a><br>
+        <a href='../angular/angular_ref_directives_en.html'>Angular Reference</a><br>
+        <a href='../sass/sass_functions_string_en.html'>Sass Reference</a><br>
+        <a href='../java/java_ref_keywords_en.html'>Java Reference</a><br>
+        <a href='../colors/colors_names_en.html'>Colors Reference</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Examples</h4>
+        <a href='../html/html_examples_en.html'>HTML Examples</a><br>
+        <a href='../css/css_examples_en.html'>CSS Examples</a><br>
+        <a href='../js/js_examples_en.html'>JavaScript Examples</a><br>
+        <a href='../sql/sql_examples_en.html'>SQL Examples</a><br>
+        <a href='../python/python_examples_en.html'>Python Examples</a><br>
+        <a href='../php/php_examples_en.html'>PHP Examples</a><br>
+        <a href='../bootstrap/bootstrap_examples_en.html'>Bootstrap Examples</a><br>
+        <a href='../w3css/w3css_examples_en.html'>W3.CSS Examples</a><br>
+        <a href='../jquery/jquery_examples_en.html'>jQuery Examples</a><br>
+        <a href='../angular/angular_examples_en.html'>Angular Examples</a><br>
+        <a href='../java/java_examples_en.html'>Java Examples</a><br>
+        <a href='../cpp/cpp_examples_en.html'>C++ Examples</a><br>
+        <a href='../cs/cs_examples_en.html'>C# Examples</a><br>
+        <a href='../xml/xml_examples_en.html'>XML Examples</a><br>
+        <a href='../howto/index_en.html'>How To Examples</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_en.html'>Web Certificates</a></h4>
+        <a href='../cert/cert_html_en.html'>HTML Certificate</a><br>
+        <a href='../cert/cert_css_en.html'>CSS Certificate</a><br>
+        <a href='../cert/cert_javascript_en.html'>JavaScript Certificate</a><br>
+        <a href='../cert/cert_frontend_en.html'>Front End Certificate</a><br>
+        <a href='../cert/cert_python_en.html'>Python Certificate</a><br>
+        <a href='../cert/cert_datascience_en.html'>Data Science Certificate</a><br>
+        <a href='../cert/cert_jquery_en.html'>jQuery Certificate</a><br>
+        <a href='../cert/cert_sql_en.html'>SQL Certificate</a><br>
+        <a href='../cert/cert_php_en.html'>PHP Certificate</a><br>
+        <a href='../cert/cert_java_en.html'>Java Certificate</a><br>
+        <a href='../cert/cert_bootstrap_en.html'>Bootstrap Certificate</a><br>
+        <a href='../cert/cert_xml_en.html'>XML Certificate</a><br>
+        <a href='../cert/career_tips_en.html'>Career planning</a><br>
+        <a href='../cert/career_cv_en.html'>Writing a resume</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>This site is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our <a href='../about/about_copyright_en.html'>terms of use</a>, <a href='../about/about_privacy_en.html'>cookie and privacy policy</a>.<br>
+You can also use the Ukrainian version of the site <a href='../index.html'><strong>W3Schools українською</strong></a>.<br>
+    <a href='../about/about_copyright_en.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index_en.html'>W3Schools is Powered by W3.CSS</a>.<br><br>
+    <a href='../index_en.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br><br>
+    <div class="adver">Place for your advertisement!</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
