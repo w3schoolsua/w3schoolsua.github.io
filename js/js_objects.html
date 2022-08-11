@@ -673,7 +673,7 @@
         </tr>
     </table>
     <div class="w3-panel w3-note">
-        <p>Метод — це функція, яка зберігається як властивість.</p>
+        <p><strong>Метод</strong> — це функція, яка зберігається як властивість.</p>
     </div>
     <hr>
     <div class="w3-example">
@@ -692,8 +692,8 @@
     <p>I.E. <strong>this.firstName</strong> означає властивість <strong>firstName</strong> для <strong>person</strong>.</p>
     <hr>
     <h2>Що таке <b>this</b>?</h2>
-    <p>В JavaScript ключове слово <code class="w3-codespan">this</code> посилається на <b>об&#8217;єкт</b>.</p>
-    <p><b>Який</b> об&#8217;єкт залежить від того, як <code class="w3-codespan">this</code> викликається (використовується або викликається).</p>
+    <p>В JavaScript ключове слово <code class="w3-codespan">this</code> відноситься до <b>об&#8217;єкту</b>.</p>
+    <p><b>Який</b> об&#8217;єкт залежить від того, як <code class="w3-codespan">this</code> викликається (використовується або називається).</p>
     <p>Ключове слово <code class="w3-codespan">this</code> відноситься до різних об&#8217;єктів залежно від способу його використання:</p>
     <table class="ws-table-all">
         <tr><td>У методі об&#8217;єкта <code class="w3-codespan">this</code> відноситься до <b>об&#8217;єкта</b>.</td></tr>
@@ -706,18 +706,16 @@
     <div class="w3-note">
         <h2>Примітка</h2>
         <code class="w3-codespan">this</code> не є змінною. Це ключове слово. Ви не можете змінити значення <code class="w3-codespan">this</code>.
-        <h2>Дивіться також:</h2>
-        <p><a href="js_this.html">JavaScript <b>this</b> Підручник</a></p>
     </div>
     <hr>
     <h2>Ключове слово <strong>this</strong></h2>
     <p>У визначенні функції <code class="w3-codespan">this</code> відноситься до "власника" функції.</p>
-    <p>In the example above, <code class="w3-codespan">this</code> is the <strong>person object</strong> that "owns" the <code class="w3-codespan">fullName</code> function.</p>
-    <p>In other words, <code class="w3-codespan">this.firstName</code> means the <code class="w3-codespan">firstName</code> property of <strong>this object</strong>.</p>
-    <p>Learn more about <code class="w3-codespan">this</code> in <a href="js_this.html">The JavaScript this Tutorial</a>.</p>
+    <p>У наведеному вище прикладі <code class="w3-codespan">this</code> є <strong>person object</strong> який "володіє" <code class="w3-codespan">fullName</code> функцією.</p>
+    <p>Іншими словами, <code class="w3-codespan">this.firstName</code> означає <code class="w3-codespan">firstName</code> властивість об&#8217;єкту <strong>this</strong>.</p>
+    <p>Дізнатись більше про <code class="w3-codespan">this</code> можна в розділі <a href="js_this.html">JavaScript this</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
     <hr>
-    <h2>Accessing Object Methods</h2>
-    <p>You access an object method with the following syntax:</p>
+    <h2>Доступ до методів об&#8217;єктів</h2>
+    <p>Ви отримуєте доступ до методу об&#8217;єкта за допомогою такого синтаксису:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
             <i>objectName.methodName()</i>
@@ -730,7 +728,7 @@
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_objects_method.html" target="_blank">Спробуйте самі &raquo;</a>
     </div>
-    <p>If you access a method <strong>without</strong> the () parentheses, it will return the <strong>function definition</strong>:</p>
+    <p>Якщо отримати доступ до методу <b>без</b> круглих дужок (), він поверне <strong>визначення функції</strong>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate">
@@ -739,25 +737,25 @@
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_objects_function.html" target="_blank">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Do Not Declare Strings, Numbers, and Booleans as Objects!</h2>
-    <p>When a JavaScript variable is declared with the keyword &quot;<code class="w3-codespan">new</code>&quot;, the variable is created as an object:</p>
+    <h2>Не оголошуйте рядки, числа та логічні значення як об&#8217;єкти!</h2>
+    <p>Коли змінну JavaScript оголошено за допомогою ключового слова &quot;<code class="w3-codespan">new</code>&quot;, змінна створюється як об&#8217;єкт:</p>
     <div class="w3-example">
         <div class="w3-code notranslate jsHigh">
-            x = new String();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Declares x as a String object<br>
-            y =&nbsp;new Number();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Declares y as a Number object<br>
-            z =&nbsp;new Boolean();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Declares z as a Boolean object
+            x = new String();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Оголошує x як об&#8217;єкт String<br>
+            y =&nbsp;new Number();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Оголошує y як об&#8217;єкт Number<br>
+            z =&nbsp;new Boolean();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Оголошує z як об&#8217;єкт Boolean
         </div>
     </div>
-    <p>Avoid <code class="w3-codespan">String</code>, <code class="w3-codespan">Number</code>, and <code class="w3-codespan">Boolean</code> objects. They complicate your code and slow down execution speed.</p>
+    <p>Уникайте об&#8217;єктів <code class="w3-codespan">String</code>, <code class="w3-codespan">Number</code> та <code class="w3-codespan">Boolean</code> . Вони ускладнюють ваш код і сповільнюють швидкість виконання.</p>
     <div class="w3-panel w3-note">
-        <p>You will learn more about objects later in this tutorial.</p>
+        <p>Ви дізнаєтеся більше про об&#8217;єкти пізніше в цьому підручнику.</p>
     </div>
     <hr>
     <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_objects1" method="post" target="_blank">
-        <h2 class="shadow-black-1" title="Exercises only work online">Test Yourself With Exercises</h2>
+        <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
         <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Alert <code class="w3-codespan">"John"</code> by extracting information from the <code class="w3-codespan">person</code> object.</p>
+            <h2>Вправа:</h2>
+            <p>Здійсніть сповіщення <code class="w3-codespan">"John"</code> шляхом отримання інформації з об&#8217;єкта <code class="w3-codespan">person</code>.</p>
             <div class="exerciseprecontainer">
 <pre>
 const person = {
@@ -769,7 +767,7 @@ alert(<input name="ex1" maxlength="16" style="width: 165px;">);
 </pre>
             </div>
             <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            <button type="submit" class="w3-btn w3-margin-bottom">Надіслати відповідь &raquo;</button>
         </div>
     </form>
     <hr>
