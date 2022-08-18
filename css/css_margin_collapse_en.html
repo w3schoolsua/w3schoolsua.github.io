@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Margin. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='CSS Margins. Individual Sides. Shorthand Property. The auto Value. The inherit Value. All CSS Margin Properties. Lessons for beginners. W3Schools in English'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Margin Collapse. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='CSS Margin Collapse. All CSS Margin Properties. Lessons for beginners. W3Schools in English'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS
@@ -508,151 +508,56 @@
           <div class="adver">Place for your advertisement!</div>
             <a href='index_en.html'><img src='../svg/css3_icon1.svg' alt='CSS Lessons for beginners' class='w3-left w3-padding' title='CSS3 for beginners. W3Schools in English' style="width: 90px"></a>
 <p class='w3-right'>
-    <a href='css_margin.html' title='Go to Ukrainian language'>Ua</a>
+    <a href='css_margin_collapse.html' title='Go to Ukrainian language'>Ua</a>
 </p>
 <article>
-    <h1>CSS <span class="color_h1">Margins</span></h1>
+    <h1>CSS <span class="color_h1">Margin Collapse</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="css_border_rounded_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn"  href="css_margin_collapse_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="css_margin_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn"  href="css_padding_en.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Margins are used to create space around elements, outside any defined borders.</p>
+    <p class="intro">Sometimes two margins collapse into a single margin.</p>
     <hr>
-    <div class="w3-theme-border" style="border-width:1px;border-style:solid;margin:70px;padding:5px;">This element has a margin of 70px.</div>
-    <a target="_blank" href="../csstryit/trycss_margin_intro.html" class="ws-btn">Try it Yourself &raquo;</a>
-    <hr>
-    <h2>CSS Margins</h2>
-    <p>The CSS <code class="w3-codespan">margin</code> properties are used to create space around elements, outside of any defined borders.</p>
-    <p>With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).</p>
-    <hr>
-    <h2>Margin - Individual Sides</h2>
-    <p>CSS has properties for specifying the margin for each side of an element:</p>
-    <ul>
-        <li><code class="w3-codespan">margin-top</code></li>
-        <li><code class="w3-codespan">margin-right</code></li>
-        <li><code class="w3-codespan">margin-bottom</code></li>
-        <li><code class="w3-codespan">margin-left</code></li>
-    </ul>
-    <p>All the margin properties can have the following values:</p>
-    <ul>
-        <li>auto - the browser calculates the margin</li>
-        <li><em>length</em> - specifies a margin in px, pt, cm, etc.</li>
-        <li><em>%</em> - specifies a margin in % of the width of the containing element</li>
-        <li>inherit - specifies that the margin should be inherited from the parent element</li>
-    </ul>
-    <p><b>Tip:</b> Negative values are allowed.</p>
+    <h2>Margin Collapse</h2>
+    <p>Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.</p>
+    <p>This does not happen on left and right margins! Only top and bottom margins!</p>
+    <p>Look at the following example:</p>
     <div class="w3-example">
         <h3>Example</h3>
-        <p>Set different margins for all four sides of a &lt;p&gt; element:</p>
+        <p>Demonstration of margin collapse: </p>
         <div class="w3-code notranslate cssHigh">
-            p {<br>&nbsp;&nbsp;margin-top: 100px;<br>&nbsp;&nbsp;margin-bottom: 100px;<br>&nbsp;&nbsp;margin-right: 150px;<br>&nbsp;&nbsp;margin-left: 80px;<br>}
+            h1 {<br>&nbsp;&nbsp;margin: 0 0 50px 0;<br>}<br><br>h2 {<br>&nbsp;&nbsp;margin: 20px 0 0 0;<br>}
         </div>
-        <a target="_blank" href="../csstryit/trycss_margin_sides.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../csstryit/trycss_margin_collapse.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
+    <p>In the example above, the &lt;h1&gt; element has a bottom margin of 50px and the &lt;h2&gt; element has a top margin set to 20px.</p>
+    <p>Common sense would seem to suggest that the vertical margin between the &lt;h1&gt; and the &lt;h2&gt; would be a total of 70px (50px + 20px). But due to margin collapse, the actual margin ends up being 50px.</p>
     <hr>
-    <h2>Margin - Shorthand Property</h2>
-    <p>To shorten the code, it is possible to specify all the margin properties in one property.</p>
-    <p>The <code class="w3-codespan">margin</code> property is a shorthand property for the following individual margin properties:</p>
-    <ul>
-        <li><code class="w3-codespan">margin-top</code></li>
-        <li><code class="w3-codespan">margin-right</code></li>
-        <li><code class="w3-codespan">margin-bottom</code></li>
-        <li><code class="w3-codespan">margin-left</code></li>
-    </ul>
-    <p>So, here is how it works:</p>
-    <p>If the <code class="w3-codespan">margin</code> property has four values:</p>
-    <ul>
-        <li><b>margin: 25px 50px 75px 100px;</b>
-            <ul>
-                <li>top margin is 25px</li>
-                <li>right margin is 50px</li>
-                <li>bottom margin is 75px</li>
-                <li>left margin is 100px</li>
-            </ul>
-        </li>
-    </ul>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Use the margin shorthand property with four values:</p>
-        <div class="w3-code notranslate cssHigh">
-            p {<br>&nbsp;&nbsp;margin: 25px 50px 75px 100px;<br>}</div>
-        <a target="_blank" href="../csstryit/trycss_margin_shorthand_4val.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <p>If the <code class="w3-codespan">margin</code> property has three values:</p>
-    <ul>
-        <li><b>margin: 25px 50px 75px;</b>
-            <ul>
-                <li>top margin is 25px</li>
-                <li>right and left margins are 50px</li>
-                <li>bottom margin is 75px</li>
-            </ul>
-        </li>
-    </ul>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Use the margin shorthand property with three values:&nbsp;</p>
-        <div class="w3-code notranslate cssHigh">
-            p {<br>&nbsp; margin: 25px 50px 75px;<br>}
+    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/css/exercise_en.html?filename=exercise_margin1" method="post" target="_blank">
+        <h2 class="shadow-black-1" title="Exercises only work online">Test Yourself With Exercises</h2>
+        <div class="exercisewindow">
+            <h2>Exercise:</h2>
+            <p>Add 20 pixels left margin to the &lt;h1&gt; element.</p>
+            <div class="exerciseprecontainer">
+<pre>
+&lt;style&gt;
+h1 {
+  <input name="ex1" maxlength="11" style="width: 116px;">: 20px;
+}
+&lt;/style&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;This is a heading&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph&lt;/p&gt;
+  &lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;/body&gt;
+</pre>
+            </div>
+            <br>
+            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
         </div>
-        <a target="_blank" href="../csstryit/trycss_margin_shorthand_3val.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <p>If the <code class="w3-codespan">margin</code> property has two values:</p>
-    <ul>
-        <li><b>margin: 25px 50px;</b>
-            <ul>
-                <li>top and bottom margins are 25px</li>
-                <li>right and left margins are 50px</li>
-            </ul>
-        </li>
-    </ul>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Use the margin shorthand property with two values:&nbsp;</p>
-        <div class="w3-code notranslate cssHigh">
-            p {<br>&nbsp; margin: 25px 50px;<br>}
-        </div>
-        <a target="_blank" href="../csstryit/trycss_margin_shorthand_2val.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <p>If the <code class="w3-codespan">margin</code> property has one value:</p>
-    <ul>
-        <li><b>margin: 25px;</b>
-            <ul>
-                <li>all four margins are 25px</li>
-            </ul>
-        </li>
-    </ul>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Use the margin shorthand property with one value:&nbsp;</p>
-        <div class="w3-code notranslate cssHigh">
-            p {<br>&nbsp;&nbsp;margin: 25px;<br>}
-        </div>
-        <a target="_blank" href="../csstryit/trycss_margin_shorthand_1val.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-    <h2>The auto Value</h2>
-    <p>You can set the margin property to <code class="w3-codespan">auto</code> to horizontally center the element within its container.</p>
-    <p>The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Use margin: auto:</p>
-        <div class="w3-code notranslate cssHigh">
-            div {<br>&nbsp; width: 300px;<br>&nbsp; margin: auto;<br>&nbsp;&nbsp;border: 1px solid red;<br>}
-        </div>
-        <a target="_blank" href="../csstryit/trycss_margin_auto.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-    <h2>The inherit Value</h2>
-    <p>This example lets the left margin of the &lt;p class=&quot;ex1&quot;&gt; element be inherited from the parent element (&lt;div&gt;):</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Use of the inherit value:</p>
-        <div class="w3-code notranslate cssHigh">
-            div {<br>&nbsp;&nbsp;border: 1px solid red;<br>&nbsp;&nbsp;margin-left: 100px;<br>}<br><br>p.ex1 {<br>&nbsp; margin-left: inherit;<br>}
-        </div>
-        <a target="_blank" href="../csstryit/trycss_margin-left_inherit.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
+    </form>
     <hr>
     <h2>All CSS Margin Properties</h2>
     <table class="ws-table-all notranslate">
@@ -683,8 +588,8 @@
     </table>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="css_border_rounded_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn"  href="css_margin_collapse_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="css_margin_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn"  href="css_padding_en.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
