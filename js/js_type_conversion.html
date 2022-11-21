@@ -12,8 +12,12 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Інструкції (Заяви). Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='JavaScript Інструкції (Заяви). Програми. Крапка з комою. Використання пробілу. Довжина рядка та розриви рядків. Блоки коду. Ключові слова. Зарезервовані слова не можуть бути використані як імена для змінних. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Перетворення типів. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='JavaScript Перетворення типів. Конвертація рядків в числа. Числові методи. Унарний + оператор. Конвертація чисел в рядки. Конвертація дат в числа. Конвертація дат в рядки. Конвертація булевих значень в числа. Концертація булевих значень в рядки. Автоматичне перетворення типів. Автоматична конвертація рядків. JavaScript Таблиця Перетворення типів. Приклади. Уроки для початківців. W3Schools українською'>
+<style>
+    .important {color:red;font-weight:bold}
+    body.darkpagetheme .important {color:#ff9999;}
+</style>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -501,188 +505,420 @@
 </div>
             <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='JavaScript для початківців. W3Schools українською мовою' style='width:120px'></a>
 <p class='w3-right'>
-    <a href="js_statements_en.html" title='Перейти на англійську мову'>En</a>
+    <a href='js_type_conversion_en.html' title='Перейти на англійську мову'>En</a>
 </p>
-    <article>
-        <h1>JavaScript <span class='color_h1'>Інструкції / Заяви</span></h1>
-        <div class='w3-clear nextprev'>
-            <a class='w3-left w3-btn' href='js_output.html'>&#10094; Prev</a>
-            <a class='w3-right w3-btn' href='js_syntax.html'>Next &#10095;</a>
+<article>
+    <h1>JavaScript <span class="color_h1">Перетворення (конвертація) типів</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_typeof.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_bitwise.html">Next &#10095;</a>
+    </div>
+    <div class="w3-info">
+        <ul>
+            <li><em>Конвертація рядків в числа</em></li>
+            <li><em>Конвертація чисел в рядки</em></li>
+            <li><em>Конвертація дат в числа</em></li>
+            <li><em>Конвертація чисел в дати</em></li>
+            <li><em>Конвертація булевих значень в числа</em></li>
+            <li><em>Конвертація чисел в булеві значення</em></li>
+        </ul>
+    </div>
+    <h2>JavaScript Конвертація типів</h2>
+    <p>JavaScript змінні можуть бути конвертовані в нову змінну або інший тип даних:</p>
+    <ul>
+        <li>Використовуючи JavaScript функцію</li>
+        <li><strong>Автоматично</strong> самим JavaScript</li>
+    </ul>
+    <hr>
+    <h2>Конвертація рядків в числа</h2>
+    <p>Глобальний метод <code class="w3-codespan">Number()</code> може конвертувати рядки в числа.</p>
+    <p>Рядки, що містять числа (наприклад &quot;3.14&quot;) конвертуються в числа (наприклад 3.14).</p>
+    <p>Пусті рядки конвертуються в 0.</p>
+    <p>Будь що інше конвертується в <code class="w3-codespan">NaN</code> (Not a Number - Не Число).</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            Number(&quot;3.14&quot;)&nbsp;&nbsp;&nbsp; // поверне 3.14<br>
+            Number(&quot; &quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // поверне 0 <br>
+            Number(&quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  // поверне 0<br>
+            Number(&quot;99 88&quot;)&nbsp;&nbsp; // поверне NaN
         </div>
-        <p><strong>Інструкція</strong> — це елемент мови, що визначає повний опис дії, яку необхідно виконати. Кожна інструкція є закінченою фразою мови програмування та визначає певний цілком закінчений етап обробки даних.</p>
-        <hr>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                var x, y, z;&nbsp;&nbsp;&nbsp; // Заява 1<br>
-                x = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 2<br>
-                y = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 3<br>
-                z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 4<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements.html' target='_blank'>Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Числові методи</h2>
+    <p>В розділі <a href="js_number_methods_en.html">Числові методи</a> ви знайдете більше методів, що можуть бути використані для конвертації рядків в числа:</p>
+    <table class="ws-table-all notranslate">
+        <tr>
+            <th style="width:25%">Метод</th>
+            <th>Опис</th>
+        </tr>
+        <tr>
+            <td>Number()</td>
+            <td>Поверне число, конвертоване з його аргумента</td>
+        </tr>
+        <tr>
+        <tr>
+            <td>parseFloat()</td>
+            <td>Парсить (аналізує) рядок та повертає число з плаваючою точкою</td>
+        </tr>
+        <tr>
+            <td>parseInt()</td>
+            <td>Парсить (аналізує) рядок та повертає ціле число</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Унарний оператор + </h2>
+    <p><strong>Унарний оператор +</strong> можна використовувати для конвертації змінної в число:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            let y = &quot;5&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // y є рядком<br>let x = + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // x є числом
         </div>
-        <hr>
-        <h2>JavaScript Програми</h2>
-        <p><strong>Комп&rsquo;ютерна програма</strong> - це список &quot;інструкцій&quot;, які мають бути &quot;виконані&quot; комп&rsquo;ютером.</p>
-        <p>На мові програмування ці інструкції з програмування називаються <strong>заявами</strong> (або операторами).</p>
-        <p><strong>Програма на JavaScript</strong> - це список програмних <strong>інструкцій</strong>.</p>
-        <div class='w3-panel w3-note'>
-            <p>В HTML програми JavaScript виконуються безпосередньо веббраузером (на стороні клієнта).</p>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_typeof3.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Якщо змінну неможливо конвертувати, вона все одно стане числом, але зі значенням <code class="w3-codespan">NaN</code> (Not a Number / Не Число):</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            let y = &quot;John&quot;;&nbsp;&nbsp; // y - це рядок<br>let x = + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// x - це число (NaN)
         </div>
-        <hr>
-        <h2>JavaScript Інструкції</h2>
-        <p>JavaScript інструкції складаються із: значень, операторів, виразів, ключових слів та коментарів.</p>
-        <p>Ця інструкція вказує браузеру написати &quot;Hello Dolly.&quot; всередині HTML елемента з id=&quot;demo&quot;:</p>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello Dolly.&quot;;</div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statement.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_typeof4.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Конвертація чисел в рядки</h2>
+    <p>Глобальний метод <code class="w3-codespan">String()</code> може конвертувати числа в рядки.</p>
+    <p>Це може бути використано на будь-якому типу чисел, літералів, змінних або виразів:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            String(x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// поверне рядок із числової змінної x <br>String(123)&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // поверне рядок із числового літерала 123<br>String(100 + 23)&nbsp; // поверне рядок із числа виразу
         </div>
-        <p>Більшість програм JavaScript містять багато різних JavaScript заяв (інструкцій).</p>
-        <p>Інструкції виконуються одна за одною у тому порядку, в якому вони написані в коді.</p>
-        <div class='w3-panel w3-note'>
-            <p>Програми JavaScript (JavaScript заяви / інструкції) часто називають JavaScript кодом.</p>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_number_string.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Числовий метод <code class="w3-codespan">toString()</code> робить те саме.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            x.toString()<br>(123).toString()<br>(100 + 23).toString()
         </div>
-        <hr>
-        <h2>JavaScript Крапка з комою ;</h2>
-        <p>Крапка з комою ділять JavaScript інструкції.</p>
-        <p>Додайте крапку з комою в кінці кожної інструкції, що виконується:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var a, b, c;&nbsp;&nbsp;&nbsp;&nbsp; // Оголосити 3 змінних a, b, c<br>a = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                // Присвоїти значення 5 змінній а<br>
-                b = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Присвоїти значення 6 змінній b<br>
-                c = a + b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Присвоїти суму a і b змінній c<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_semicolon1.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_number_tostring.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Більше методів</h2>
+    <p>В розділі <a href="js_number_methods_en.html">Числові методи</a> ви знайдете більше методів, що можуть бути використані для конвертації чисел в рядки:</p>
+    <table class="ws-table-all notranslate">
+        <tr>
+            <th style="width:25%">Метод</th>
+            <th>Опис</th>
+        </tr>
+        <tr>
+            <td>toExponential()</td>
+            <td>Поверне рядок з округленим числом, записаним з використанням експоненціального запису.</td>
+        </tr>
+        <tr>
+            <td>toFixed()</td>
+            <td>Поверне рядок з округленим числом та записаним зі вказаною кількістю десяткових знаків.</td>
+        </tr>
+        <tr>
+            <td>toPrecision()</td>
+            <td>Поверне рядок з числом, записаним із вказаною довжиною</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Конвертація дат в числа</h2>
+    <p>Глобальний метод <code class="w3-codespan">Number()</code> може бути використано для конвертації дат в числа.</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            d = new Date();<br>Number(d)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // поверне 1404568027739
         </div>
-        <p>Коли вони розділені крапкою з комою, допускається кілька інструкцій в одному рядку:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                a = 5; b = 6; c = a + b;
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_semicolon2.html' target='_blank'>Спробуйте самі &raquo;</a>
+    </div>
+    <p>Метод дати <code class="w3-codespan">getTime()</code> робить те саме.</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            d = new Date();<br>d.getTime()&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; // поверне 1404568027739
         </div>
-        <div class='w3-panel w3-note'>
-            <p>В Інтернеті ви можете побачити приклади без крапок із комою. Завершення інструкцій крапкою з комою не потрібно, але рекомендується.</p>
+    </div>
+    <hr>
+    <h2>Конвертація дат в рядки</h2>
+    <p>Глобальний метод <code class="w3-codespan">String()</code> може конвертувати дати в рядки.</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            String(Date())&nbsp; // поверне &quot;Thu Jul 17 2024 15:38:19 GMT+0200 (W. Europe Daylight Time)&quot;
         </div>
-        <hr>
-        <h2>JavaScript Пробіл</h2>
-        <p>JavaScript ігнорує кілька пробілів. Ви можете додати зайві пробіли у ваш скрипт, щоб зробити його більш читабельним.</p>
-        <p>Наступні рядки еквівалентні:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var person = &quot;Hege&quot;;<br>
-                var person=&quot;Hege&quot;;
-            </div>
+    </div>
+    <p>Метод дати <code class="w3-codespan">toString()</code> робить те саме.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            Date().toString()&nbsp; // поверне &quot;Thu Jul 17 2024 15:38:19 GMT+0200 (W. Europe Daylight Time)&quot;
         </div>
-        <p>Хорошою практикою є розміщення пробілів навколо операторів ( = + - * / ):</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var x = y + z;</div>
+    </div>
+    <p>В розділі <a href="js_date_methods_en.html">Методи отримання дат</a> ви знайдете більше методів, що можуть бути використані для конвертації дат в рядки:</p>
+    <table class="ws-table-all notranslate">
+        <tr>
+            <th>Метод</th>
+            <th>Опис</th>
+        </tr>
+        <tr>
+            <td>getDate()</td>
+            <td>Отримати день у вигляді числа (1-31)</td>
+        </tr>
+        <tr>
+            <td>getDay()</td>
+            <td>Отримати день тижня у вигляді числа (0-6)</td>
+        </tr>
+        <tr>
+            <td>getFullYear()</td>
+            <td>Отримати чотиризначний рік (yyyy)</td>
+        </tr>
+        <tr>
+            <td>getHours()</td>
+            <td>Отримати годину (0-23)</td>
+        </tr>
+        <tr>
+            <td>getMilliseconds()</td>
+            <td>Отримати мілісекунди (0-999)</td>
+        </tr>
+        <tr>
+            <td>getMinutes()</td>
+            <td>Отримати хвилини (0-59)</td>
+        </tr>
+        <tr>
+            <td>getMonth()</td>
+            <td>Отримати місяць (0-11)</td>
+        </tr>
+        <tr>
+            <td>getSeconds()</td>
+            <td>Отримати секунди (0-59)</td>
+        </tr>
+        <tr>
+            <td>getTime()</td>
+            <td>Отримати час (мілісекунди від 1 Січня 1970 року)</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Конвертація булевих значень в числа</h2>
+    <p>Глобальний метод <code class="w3-codespan">Number()</code> може також конвертувати булеві значення в числа.</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            Number(false)&nbsp;&nbsp;&nbsp;&nbsp; // поверне 0<br>Number(true)&nbsp; &nbsp;&nbsp;&nbsp; // поверне 1
         </div>
-        <hr>
-        <h2>JavaScript Довжина рядка та розриви рядків</h2>
-        <p>Для кращої читаності програмісти часто воліють уникати рядків коду довше 80 символів.</p>
-        <p>Якщо JavaScript оголошення не вміщується в один рядок, найкраще його перервати після оператора (перенести на наступний рядок):</p>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Hello Dolly!&quot;;
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_linebreak.html' target='_blank'>Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Конвертація булевих значень в рядки</h2>
+    <p>Глобальний метод <code class="w3-codespan">String()</code> може конвертувати булеві значення в рядки.</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            String(false)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;// поверне &quot;false&quot;<br>String(true)&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; // поверне &quot;true&quot;
         </div>
-        <hr>
-        <h2>JavaScript Блоки коду</h2>
-        <p>Інструкції JavaScript можуть бути згруповані в блоки коду всередині фігурних дужок {...}.</p>
-        <p>Метою блоків коду є визначення інструкцій, які будуть виконуватись разом.</p>
-        <p>В одному місці ви знайдете інструкції, згруповані за блоками, у функціях JavaScript:</p>
-        <div class='w3-example'>
-            <h3>Приклади</h3>
-            <div class='w3-code notranslate jsHigh'>
-                function myFunction() {<br>
-                &nbsp;&nbsp;document.getElementById(&quot;demo1&quot;).innerHTML = &quot;Hello Dolly!&quot;;<br>
-                &nbsp;&nbsp;document.getElementById(&quot;demo2&quot;).innerHTML = &quot;How are you?&quot;;<br>
-                }<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_blocks.html' target='_blank'>Спробуйте самі &raquo;</a>
+    </div>
+    <p>Булевий метод <code class="w3-codespan">toString()</code> робить те саме.</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            false.toString()&nbsp;&nbsp;&nbsp;// поверне &quot;false&quot;<br>true.toString()&nbsp; &nbsp; // поверне &quot;true&quot;
         </div>
-        <div class='w3-panel w3-note'>
-            <p>У цьому підручнику використовується 2 пробіли для блоків коду.<br>Ви дізнаєтеся більше про функції пізніше в цьому підручнику.</p>
+    </div>
+    <hr>
+    <h2>Автоматична конвертація типів</h2>
+    <p>Коли JavaScript намагається оперувати &quot;неправильним&quot; типом даних, він намагається конвертувати значення в &quot;правильний&quot; тип.</p>
+    <p>Результат не завжди буде таким, яким ви очікували:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            5 + null&nbsp;&nbsp;&nbsp; // поверне 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; тому що null конвертується в 0<br>&quot;5&quot; + null&nbsp; // поверне &quot;5null&quot;&nbsp;&nbsp; тому що null конвертується в &quot;null&quot;<br>&quot;5&quot; + 2&nbsp;&nbsp;&nbsp;&nbsp; // поверне &quot;52&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; тому що 2 конвертується в &quot;2&quot;<br>&quot;5&quot; - 2&nbsp;&nbsp;&nbsp;&nbsp; // поверне 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; тому що &quot;5&quot; конвертується в 5<br>&quot;5&quot; * &quot;2&quot;&nbsp;&nbsp; // поверне 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; тому що &quot;5&quot; та &quot;2&quot; конвертуються в 5 та 2
         </div>
-        <hr>
-        <h2>JavaScript Ключові слова</h2>
-        <p>JavaScript інструкції часто починаються з <strong>ключового слова</strong>, щоб визначити дію JavaScript, яку потрібно виконати.</p>
-        <p>Завітайте на наш довідник &quot;Зарезервовані слова&quot;, щоб переглянути повний список <a href='js_reserved.html'>JavaScript ключових слів</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
-        <p>Ось список деяких ключових слів, які ви будете вивчати у цьому підручнику:</p>
-        <table class='w3-table-all' style='width: 100%'>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_type_convert_auto.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Автоматична конвертація рядка</h2>
+    <p>JavaScript автоматично викликає функцію змінної <code class="w3-codespan">toString()</code>, коли ви намагаєтесь &quot;вивести&quot; об&#8217;єкт або змінну:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            document.getElementById(&quot;demo&quot;).innerHTML = myVar;<br><br>// якщо myVar = {name:&quot;Fjohn&quot;}&nbsp; // toString конвертується в &quot;[object Object]&quot;<br>// якщо myVar = [1,2,3,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString конвертується в &quot;1,2,3,4&quot;<br>// якщо myVar = new Date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString конвертується в &quot;Fri Jul 18 2014 09:08:55 GMT+0200&quot;
+        </div>
+    </div>
+    <p>Числа та булеві значення також конвертуються, але це не дуже помітно:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            // якщо myVar = 123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString конвертується в &quot;123&quot;<br>
+            // якщо myVar = true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString конвертується в &quot;true&quot;<br>
+            // якщо myVar = false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString конвертується в &quot;false&quot;
+        </div>
+    </div>
+    <hr>
+    <h2>JavaScript Таблиця конвертації типів</h2>
+    <p>В цій таблиці показано результат конвертації різних значень JavaScript в Число, Рядок та Булеве значення:</p>
+    <div class="w3-responsive" style="margin:-16px 0">
+        <table class="ws-table-all notranslate">
             <tr>
-                <th style='height: 25px'>Ключове слово</th>
-                <th style='height: 25px'>Опис</th>
+                <th>Оригінал<br>Значення</th>
+                <th>Конвертує<br>в число</th>
+                <th>Конвертує<br>в рядок</th>
+                <th>Конвертує<br>в булеве значення</th>
+                <th style="width:10%">Спробуй це</th>
             </tr>
             <tr>
-                <td>break</td>
-                <td>Завершує перемикач (switch) або цикл (loop)</td>
+                <td>false</td>
+                <td>0</td>
+                <td>&quot;false&quot;</td>
+                <td>false</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_false.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td>continue</td>
-                <td>Виходить з циклу і починається зверху</td>
+                <td>true</td>
+                <td>1</td>
+                <td>&quot;true&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_true.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td>debugger</td>
-                <td>Зупиняє виконання JavaScript і викликає (якщо є) функцію налагодження (дебаггінг)</td>
+                <td>0</td>
+                <td>0</td>
+                <td>&quot;0&quot;</td>
+                <td>false</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_number_0.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td>do ... while</td>
-                <td>Виконує блок інструкцій і повторює блок, доки умова істинна (true)</td>
+                <td>1</td>
+                <td>1</td>
+                <td>&quot;1&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_number_1.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td>var</td>
-                <td>Оголошує змінну</td>
+                <td>&quot;0&quot;</td>
+                <td>0</td>
+                <td>&quot;0&quot;</td>
+                <td class="important">true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_string_0.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td class="notranslate">let</td>
-                <td>Оголошує блочну змінну</td>
+                <td>&quot;000&quot;</td>
+                <td>0</td>
+                <td>&quot;000&quot;</td>
+                <td class="important">true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_string_000.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td class="notranslate">const</td>
-                <td>Оголошує блочну константу</td>
+                <td>&quot;1&quot;</td>
+                <td>1</td>
+                <td>&quot;1&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_string_1.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td class="notranslate">if</td>
-                <td>Позначає блок операторів, які потрібно виконати залежно від умови</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>&quot;NaN&quot;</td>
+                <td>false</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_nan.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td class="notranslate">switch</td>
-                <td>Позначає блок операторів, які потрібно виконати в різних випадках (кейсах)</td>
+                <td>Infinity</td>
+                <td>Infinity</td>
+                <td>&quot;Infinity&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_infinity.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td class="notranslate">for</td>
-                <td>Позначає блок операторів для виконання в циклі</td>
+                <td>-Infinity</td>
+                <td>-Infinity</td>
+                <td>&quot;-Infinity&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_infinity_minus.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td class="notranslate">function</td>
-                <td>Оголошує функцію</td>
+                <td>&quot;&quot;</td>
+                <td class="important">0</td>
+                <td>&quot;&quot;</td>
+                <td class="important">false</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_string_empty.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td class="notranslate">return</td>
-                <td>Виходить із функції</td>
+                <td>&quot;20&quot;</td>
+                <td>20</td>
+                <td>&quot;20&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_string_number.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
             <tr>
-                <td class="notranslate">try</td>
-                <td>Реалізує обробку помилок в блоку інструкцій</td>
+                <td>&quot;twenty&quot;</td>
+                <td>NaN</td>
+                <td>&quot;twenty&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_string_text.html" target="_blank">Спробуй це &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>[ ]</td>
+                <td class="important">0</td>
+                <td>&quot;&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_array_empty.html" target="_blank">Спробуй це &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>[20]</td>
+                <td class="important">20</td>
+                <td>&quot;20&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_array_one_number.html" target="_blank">Спробуй це &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>[10,20]</td>
+                <td>NaN</td>
+                <td>&quot;10,20&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_array_two_numbers.html" target="_blank">Спробуй це &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>[&quot;twenty&quot;]</td>
+                <td>NaN</td>
+                <td>&quot;twenty&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_array_one_string.html" target="_blank">Спробуй це &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>[&quot;ten&quot;,&quot;twenty&quot;]</td>
+                <td>NaN</td>
+                <td>&quot;ten,twenty&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_array_two_strings.html" target="_blank">Спробуй це &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>function(){}</td>
+                <td>NaN</td>
+                <td>&quot;function(){}&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_function.html" target="_blank">Спробуй це &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>{ }</td>
+                <td>NaN</td>
+                <td>&quot;[object Object]&quot;</td>
+                <td>true</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_object.html" target="_blank">Спробуй це &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>null</td>
+                <td class="important">0</td>
+                <td>&quot;null&quot;</td>
+                <td>false</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_null.html" target="_blank">Спробуй це &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>undefined</td>
+                <td>NaN</td>
+                <td>&quot;undefined&quot;</td>
+                <td>false</td>
+                <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_type_convert_undefined.html" target="_blank">Спробуй це &raquo;</a></td>
             </tr>
         </table>
-        <div class='w3-panel w3-note'>
-            <p>Ключові слова JavaScript є зарезервованими словами. Зарезервовані слова не можуть бути використані як імена для змінних.</p>
-        </div>
-        <hr>
-        <div class='w3-clear nextprev'>
-            <a class='w3-left w3-btn' href='js_output.html'>&#10094; Prev</a>
-            <a class='w3-right w3-btn' href='js_syntax.html'>Next &#10095;</a>
-        </div>
-    </article>
+    </div>
+    <p>Значення в лапках означають рядкові значення.</p>
+    <p>Виділені &nbsp;<span class="important">червоним</span>&nbsp; значення вказують на значення, які (деякі) програмісти можуть не очікувати.</p>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_typeof.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_bitwise.html">Next &#10095;</a>
+    </div>
+</article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->

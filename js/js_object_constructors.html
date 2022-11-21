@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Інструкції (Заяви). Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='JavaScript Інструкції (Заяви). Програми. Крапка з комою. Використання пробілу. Довжина рядка та розриви рядків. Блоки коду. Ключові слова. Зарезервовані слова не можуть бути використані як імена для змінних. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Конструктори об&#8217;єктів. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='JavaScript Конструктори об&#8217;єктів. Типи об&#8217;єктів (плани) (класи). Ключове слово this. Додавання властивості та методу до об&#8217;єкта. Додавання властивості та методу в конструктор. Вбудовані конструктори JavaScript. Рядкові, числові, булеві об&#8217;єкти. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -501,188 +501,179 @@
 </div>
             <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='JavaScript для початківців. W3Schools українською мовою' style='width:120px'></a>
 <p class='w3-right'>
-    <a href="js_statements_en.html" title='Перейти на англійську мову'>En</a>
+    <a href='js_object_constructors_en.html' title='Перейти на англійську мову'>En</a>
 </p>
-    <article>
-        <h1>JavaScript <span class='color_h1'>Інструкції / Заяви</span></h1>
-        <div class='w3-clear nextprev'>
-            <a class='w3-left w3-btn' href='js_output.html'>&#10094; Prev</a>
-            <a class='w3-right w3-btn' href='js_syntax.html'>Next &#10095;</a>
+<article>
+    <h1>JavaScript <span class="color_h1">Конструктори об&#8217;єктів</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_object_accessors.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_object_prototypes.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            function Person(first, last, age, eye) {<br>&nbsp;&nbsp;this.firstName = first;<br>&nbsp;&nbsp;this.lastName = last;<br>&nbsp;&nbsp;this.age = age;<br>&nbsp;&nbsp;this.eyeColor = eye;<br>}
         </div>
-        <p><strong>Інструкція</strong> — це елемент мови, що визначає повний опис дії, яку необхідно виконати. Кожна інструкція є закінченою фразою мови програмування та визначає певний цілком закінчений етап обробки даних.</p>
-        <hr>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                var x, y, z;&nbsp;&nbsp;&nbsp; // Заява 1<br>
-                x = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 2<br>
-                y = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 3<br>
-                z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 4<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_constructor.html" target="_blank">Спробуйте самі &raquo;</a></div>
+    <div class="w3-panel w3-note">
+        <p>Вважається гарною практикою називати функції-конструктори з першої літери в верхньому регістрі.</p>
+    </div>
+    <hr>
+    <h2>Типи об&#8217;єктів (плани) (класи)</h2>
+    <p>Приклади з попередніх розділів обмежені. Вони створюють лише окремі об&#8217;єкти.</p>
+    <p>Іноді нам потрібен &quot;<strong>план</strong>&quot; для створення великої кількості &quot;однотипних&quot; об&#8217;єктів.</p>
+    <p>Спосіб створення &quot;типу об&#8217;єкту&quot; заключається у використанні <strong>функції конструктора об&#8217;єкту</strong>.</p>
+    <p>В наведеному вище прикладі <code class="w3-codespan">function Person()</code> є функцією конструктора об&#8217;єкту.</p>
+    <p>Об&#8217;єкти одного типу створюються шляхом виклику функції-конструктора з ключовим словом <code class="w3-codespan">new</code>:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            const myFather = new Person(&quot;John&quot;, &quot;Doe&quot;, 50, &quot;blue&quot;);<br>const myMother = new Person(&quot;Sally&quot;, &quot;Rally&quot;, 48, &quot;green&quot;);
         </div>
-        <hr>
-        <h2>JavaScript Програми</h2>
-        <p><strong>Комп&rsquo;ютерна програма</strong> - це список &quot;інструкцій&quot;, які мають бути &quot;виконані&quot; комп&rsquo;ютером.</p>
-        <p>На мові програмування ці інструкції з програмування називаються <strong>заявами</strong> (або операторами).</p>
-        <p><strong>Програма на JavaScript</strong> - це список програмних <strong>інструкцій</strong>.</p>
-        <div class='w3-panel w3-note'>
-            <p>В HTML програми JavaScript виконуються безпосередньо веббраузером (на стороні клієнта).</p>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_constructor1.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Ключове слово <strong>this</strong></h2>
+    <p>В JavaScript об&#8217;єкт, що називається <code class="w3-codespan">this</code>, є об&#8217;єктом, якому &quot;належить&quot; код.</p>
+    <p>Значення <code class="w3-codespan">this</code> при використанні в об&#8217;єкті - це сам об&#8217;єкт.</p>
+    <p>В функції-конструкторі <code class="w3-codespan">this</code> не має значення. Це заміна новому об&#8217;єкту. Значення <code class="w3-codespan">this</code> стане новим об&#8217;єктом при створенні нового об&#8217;єкту.</p>
+    <div class="w3-panel w3-note">
+        <p>Зверніть увагу, що <code class="w3-codespan">this</code> не є змінною. Це ключове слово. Ви не можете змінити значення <code class="w3-codespan">this</code>.</p>
+    </div>
+    <hr>
+    <h2>Додавання властивості до об&#8217;єкту</h2>
+    <p>Додати нову властивість до існуючого об&#8217;єкту дуже просто:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            myFather.nationality = &quot;English&quot;;
         </div>
-        <hr>
-        <h2>JavaScript Інструкції</h2>
-        <p>JavaScript інструкції складаються із: значень, операторів, виразів, ключових слів та коментарів.</p>
-        <p>Ця інструкція вказує браузеру написати &quot;Hello Dolly.&quot; всередині HTML елемента з id=&quot;demo&quot;:</p>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello Dolly.&quot;;</div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statement.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_constructor2.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Властивість буде додано до myFather. Не до myMother. (Жодному іншому об&#8217;єкту person).</p>
+    <hr>
+    <h2>Додавання методу до об&#8217;єкту</h2>
+    <p>Додати новий метод до існуючого об&#8217;єкту дуже просто:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            myFather.name = function () {<br>&nbsp;&nbsp;return this.firstName + &quot; &quot; + this.lastName;<br>};
         </div>
-        <p>Більшість програм JavaScript містять багато різних JavaScript заяв (інструкцій).</p>
-        <p>Інструкції виконуються одна за одною у тому порядку, в якому вони написані в коді.</p>
-        <div class='w3-panel w3-note'>
-            <p>Програми JavaScript (JavaScript заяви / інструкції) часто називають JavaScript кодом.</p>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_constructor3.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Метод буде додано до myFather. Не до myMother. (Жодному іншому об&#8217;єкту person).</p>
+    <hr>
+    <h2>Додавання властивості в конструктор</h2>
+    <p>Ви не можете додати нову властивість в конструктор об&#8217;єкту так само як ви додаєте нову властивість в існуючий об&#8217;єкт:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            Person.nationality = &quot;English&quot;;
         </div>
-        <hr>
-        <h2>JavaScript Крапка з комою ;</h2>
-        <p>Крапка з комою ділять JavaScript інструкції.</p>
-        <p>Додайте крапку з комою в кінці кожної інструкції, що виконується:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var a, b, c;&nbsp;&nbsp;&nbsp;&nbsp; // Оголосити 3 змінних a, b, c<br>a = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                // Присвоїти значення 5 змінній а<br>
-                b = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Присвоїти значення 6 змінній b<br>
-                c = a + b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Присвоїти суму a і b змінній c<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_semicolon1.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_constructor4.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Щоб додати нову властивість в конструктор, ви маєте додати його в функцію конструктора:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            function Person(first, last, age, eyecolor) {<br>&nbsp;this.firstName = first;<br>&nbsp; this.lastName = last;<br>&nbsp;this.age = age;<br>&nbsp;&nbsp;this.eyeColor = eyecolor;<br>&nbsp;&nbsp;this.nationality = &quot;English&quot;;<br>}
         </div>
-        <p>Коли вони розділені крапкою з комою, допускається кілька інструкцій в одному рядку:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                a = 5; b = 6; c = a + b;
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_semicolon2.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_constructor5.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-panel w3-note">
+        <p>Таким чином, властивості об&#8217;єкту можуть мати значення за замовчуванням.</p>
+    </div>
+    <hr>
+    <h2>Додавання методу в конструктор</h2>
+    <p>Функція-конструктор також може визначати методи:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            function Person(first, last, age, eyecolor) {<br>&nbsp;this.firstName = first;<br>&nbsp; this.lastName = last;<br>&nbsp; this.age = age;<br>&nbsp; this.eyeColor = eyecolor;<br>&nbsp;&nbsp;this.name = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + &quot; &quot; + this.lastName;<br>&nbsp;&nbsp;};<br>}
         </div>
-        <div class='w3-panel w3-note'>
-            <p>В Інтернеті ви можете побачити приклади без крапок із комою. Завершення інструкцій крапкою з комою не потрібно, але рекомендується.</p>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_constructor6.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Ви не можете додати новий метод до конструктора об&#8217;єкту так само, як ви додаєте новий метод до існуючого об&#8217;єкту.</p>
+    <p>Додавання методів в конструктор об&#8217;єкту має виконуватись всередині функції конструктора:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            function Person(firstName, lastName, age, eyeColor) {<br>&nbsp;&nbsp;this.firstName = firstName;&nbsp;<br>&nbsp; this.lastName = lastName;<br>&nbsp; this.age = age;<br>&nbsp;&nbsp;this.eyeColor = eyeColor;<br>&nbsp;&nbsp;this.changeName = function (name) {<br>&nbsp;&nbsp;&nbsp;
+            this.lastName = name;<br>&nbsp;&nbsp;};<br>}
         </div>
-        <hr>
-        <h2>JavaScript Пробіл</h2>
-        <p>JavaScript ігнорує кілька пробілів. Ви можете додати зайві пробіли у ваш скрипт, щоб зробити його більш читабельним.</p>
-        <p>Наступні рядки еквівалентні:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var person = &quot;Hege&quot;;<br>
-                var person=&quot;Hege&quot;;
-            </div>
+    </div>
+    <p>Функція changeName() присвоює значення name властивості lastName персони.</p>
+    <div class="w3-example">
+        <h3>Тепер ви можете спробувати:</h3>
+        <div class="w3-code notranslate jsHigh">
+            myMother.changeName(&quot;Doe&quot;);
         </div>
-        <p>Хорошою практикою є розміщення пробілів навколо операторів ( = + - * / ):</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var x = y + z;</div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_constructor7.html">Спробуйте самі &raquo;</a>
+    </div>
+    <p>JavaScript знає, про яку людину ви говорите, шляхом &quot;підстановки&quot; <b>this</b> до <b>myMother</b>.</p>
+    <hr>
+    <h2>Вбудовані конструктори JavaScript</h2>
+    <p>JavaScript має вбудовані конструктори для власних об&#8217;єктів:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            new String()&nbsp;&nbsp;&nbsp; // Новий об&#8217;єкт String<br>
+            new Number()&nbsp;&nbsp;&nbsp; // Новий об&#8217;єкт Number<br>
+            new Boolean()&nbsp;&nbsp; // Новий об&#8217;єкт Boolean<br>
+            new Object()&nbsp;&nbsp;&nbsp; // Новий об&#8217;єкт Object<br>
+            new Array()&nbsp;&nbsp;&nbsp;&nbsp; // Новий об&#8217;єкт Array<br>
+            new RegExp()&nbsp;&nbsp;&nbsp; // Новий об&#8217;єкт RegExp<br>
+            new Function()&nbsp; // Новий об&#8217;єкт Function<br>
+            new Date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Новий об&#8217;єкт Date
         </div>
-        <hr>
-        <h2>JavaScript Довжина рядка та розриви рядків</h2>
-        <p>Для кращої читаності програмісти часто воліють уникати рядків коду довше 80 символів.</p>
-        <p>Якщо JavaScript оголошення не вміщується в один рядок, найкраще його перервати після оператора (перенести на наступний рядок):</p>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Hello Dolly!&quot;;
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_linebreak.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_constructor_builtin.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-note">
+        <p>Об&#8217;єкт <code class="w3-codespan">Math()</code> відсутній в списку. <code class="w3-codespan">Math</code> - глобальний об&#8217;єкт. Ключове слово <code class="w3-codespan">new</code> не можна використовувати в <code class="w3-codespan">Math</code>.</p>
+    </div>
+    <hr>
+    <h2>Ви знаєте?</h2>
+    <p>Як видно вище, в JavaScript є об&#8217;єктні версії примітивних типів даних <code class="w3-codespan">String</code>, <code class="w3-codespan">Number</code> та <code class="w3-codespan">Boolean</code>. Але немає сенсу створювати складні об&#8217;єкти. Примітивні значення набагато швидше:</p>
+    <p>Використовуйте рядкові літерали <code class="w3-codespan">&quot;&quot;</code> замість <code class="w3-codespan">new String()</code>.</p>
+    <p>Використовуйте числовые літерали <code class="w3-codespan">50</code> замість <code class="w3-codespan">new Number()</code>.</p>
+    <p>Використовуйте булеві (логічні) літерали <code class="w3-codespan">true / false</code> замість <code class="w3-codespan">new Boolean()</code>.</p>
+    <p>Використовуйте об&#8217;єктні літерали <code class="w3-codespan">{}</code> замість <code class="w3-codespan">new Object()</code>.</p>
+    <p>Використовуйте літерали масивів <code class="w3-codespan">[]</code> замість <code class="w3-codespan">new Array()</code>.</p>
+    <p>Використовуйте шаблонні літерали <code class="w3-codespan">/()/</code> замість <code class="w3-codespan">new RegExp()</code>.</p>
+    <p>Використовуйте вирази функцій <code class="w3-codespan">() {}</code> замість <code class="w3-codespan">new Function()</code>.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            let x1 = &quot;&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // новий примітивний рядок<br>
+            let x2 = 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // нове примітивне число<br>
+            let x3 = false;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // нове примітивне булеве значення<br><br>
+            const x4 = {};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // новий об&#8217;єкт Object<br>
+            const x5 = [];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // новий об&#8217;єкт масиву<br>
+            const x6 = /()/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // новий об&#8217;єкт RegExp<br>
+            const x7 = function(){};&nbsp;// нова функція
         </div>
-        <hr>
-        <h2>JavaScript Блоки коду</h2>
-        <p>Інструкції JavaScript можуть бути згруповані в блоки коду всередині фігурних дужок {...}.</p>
-        <p>Метою блоків коду є визначення інструкцій, які будуть виконуватись разом.</p>
-        <p>В одному місці ви знайдете інструкції, згруповані за блоками, у функціях JavaScript:</p>
-        <div class='w3-example'>
-            <h3>Приклади</h3>
-            <div class='w3-code notranslate jsHigh'>
-                function myFunction() {<br>
-                &nbsp;&nbsp;document.getElementById(&quot;demo1&quot;).innerHTML = &quot;Hello Dolly!&quot;;<br>
-                &nbsp;&nbsp;document.getElementById(&quot;demo2&quot;).innerHTML = &quot;How are you?&quot;;<br>
-                }<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_blocks.html' target='_blank'>Спробуйте самі &raquo;</a>
-        </div>
-        <div class='w3-panel w3-note'>
-            <p>У цьому підручнику використовується 2 пробіли для блоків коду.<br>Ви дізнаєтеся більше про функції пізніше в цьому підручнику.</p>
-        </div>
-        <hr>
-        <h2>JavaScript Ключові слова</h2>
-        <p>JavaScript інструкції часто починаються з <strong>ключового слова</strong>, щоб визначити дію JavaScript, яку потрібно виконати.</p>
-        <p>Завітайте на наш довідник &quot;Зарезервовані слова&quot;, щоб переглянути повний список <a href='js_reserved.html'>JavaScript ключових слів</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
-        <p>Ось список деяких ключових слів, які ви будете вивчати у цьому підручнику:</p>
-        <table class='w3-table-all' style='width: 100%'>
-            <tr>
-                <th style='height: 25px'>Ключове слово</th>
-                <th style='height: 25px'>Опис</th>
-            </tr>
-            <tr>
-                <td>break</td>
-                <td>Завершує перемикач (switch) або цикл (loop)</td>
-            </tr>
-            <tr>
-                <td>continue</td>
-                <td>Виходить з циклу і починається зверху</td>
-            </tr>
-            <tr>
-                <td>debugger</td>
-                <td>Зупиняє виконання JavaScript і викликає (якщо є) функцію налагодження (дебаггінг)</td>
-            </tr>
-            <tr>
-                <td>do ... while</td>
-                <td>Виконує блок інструкцій і повторює блок, доки умова істинна (true)</td>
-            </tr>
-            <tr>
-                <td>var</td>
-                <td>Оголошує змінну</td>
-            </tr>
-            <tr>
-                <td class="notranslate">let</td>
-                <td>Оголошує блочну змінну</td>
-            </tr>
-            <tr>
-                <td class="notranslate">const</td>
-                <td>Оголошує блочну константу</td>
-            </tr>
-            <tr>
-                <td class="notranslate">if</td>
-                <td>Позначає блок операторів, які потрібно виконати залежно від умови</td>
-            </tr>
-            <tr>
-                <td class="notranslate">switch</td>
-                <td>Позначає блок операторів, які потрібно виконати в різних випадках (кейсах)</td>
-            </tr>
-            <tr>
-                <td class="notranslate">for</td>
-                <td>Позначає блок операторів для виконання в циклі</td>
-            </tr>
-            <tr>
-                <td class="notranslate">function</td>
-                <td>Оголошує функцію</td>
-            </tr>
-            <tr>
-                <td class="notranslate">return</td>
-                <td>Виходить із функції</td>
-            </tr>
-            <tr>
-                <td class="notranslate">try</td>
-                <td>Реалізує обробку помилок в блоку інструкцій</td>
-            </tr>
-        </table>
-        <div class='w3-panel w3-note'>
-            <p>Ключові слова JavaScript є зарезервованими словами. Зарезервовані слова не можуть бути використані як імена для змінних.</p>
-        </div>
-        <hr>
-        <div class='w3-clear nextprev'>
-            <a class='w3-left w3-btn' href='js_output.html'>&#10094; Prev</a>
-            <a class='w3-right w3-btn' href='js_syntax.html'>Next &#10095;</a>
-        </div>
-    </article>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_object_constructor_builtin1.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Рядкові об&#8217;єкти</h2>
+    <p>Зазвичай рядки створюються як примітиви: <code class="w3-codespan">firstName = &quot;John&quot;</code></p>
+    <p>Але рядки також можна створювати як об&#8217;єкти за допомогою ключового слова <code class="w3-codespan">new</code>:<br><code class="w3-codespan">firstName = new String(&quot;John&quot;)</code></p>
+    <p>Дізнайтесь, чому рядки не повинні створюватись як об&#8217;єкт, в розділі <a href="js_strings.html">JS Рядки</a>.</p>
+    <hr>
+    <h2>Числові об&#8217;єкти</h2>
+    <p>Зазвичай числа створюються як примітиви: <code class="w3-codespan">x = 30</code></p>
+    <p>Але числа також можна створювати як об&#8217;єкти за допомогою ключового слова <code class="w3-codespan">new</code>:<br><code class="w3-codespan">x = new Number(30)</code></p>
+    <p>Дізнайтесь, чому числа не повинні створюватись як об&#8217;єкти, в розділі <a href="js_numbers.html">JS Числа</a>.</p>
+    <hr>
+    <h2>Булеві (логічні) об&#8217;єкти</h2>
+    <p>Зазвичай булеві (логічні) значення створюються як примітиви: <code class="w3-codespan">x = false</code></p>
+    <p>Але логічні значення також можна створювати як об&#8217;єкти за допомогою ключового слова <code class="w3-codespan">new</code>:<br><code class="w3-codespan">x = new Boolean(false)</code></p>
+    <p>Дізнайтесь, чому логічні значення не слід створювати як об&#8217;єкти в розділі <a href="js_booleans.html">JS Булеві значення</a>.</p>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_object_accessors.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_object_prototypes.html">Next &#10095;</a>
+    </div>
+</article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->

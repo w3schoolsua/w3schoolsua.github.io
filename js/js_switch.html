@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Інструкції (Заяви). Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='JavaScript Інструкції (Заяви). Програми. Крапка з комою. Використання пробілу. Довжина рядка та розриви рядків. Блоки коду. Ключові слова. Зарезервовані слова не можуть бути використані як імена для змінних. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Інструкція Switch. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='JavaScript Інструкція Switch. Синтаксис. Метод getDay(). Ключове слово break. Ключове слово default. Загальні блоки коду. Деталі перемикання. Строге порівняння. Приклади. Вправи. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -501,188 +501,159 @@
 </div>
             <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='JavaScript для початківців. W3Schools українською мовою' style='width:120px'></a>
 <p class='w3-right'>
-    <a href="js_statements_en.html" title='Перейти на англійську мову'>En</a>
+    <a href='js_switch_en.html' title='Перейти на англійську мову'>En</a>
 </p>
-    <article>
-        <h1>JavaScript <span class='color_h1'>Інструкції / Заяви</span></h1>
-        <div class='w3-clear nextprev'>
-            <a class='w3-left w3-btn' href='js_output.html'>&#10094; Prev</a>
-            <a class='w3-right w3-btn' href='js_syntax.html'>Next &#10095;</a>
+<article>
+    <h1>JavaScript <span class="color_h1">Інструкція Switch</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_if_else.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_loop_for.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro"><strong>Інструкція <code class="w3-codespan">switch</code></strong> використовується для виконання різних дій в залежності від різних умов.</p>
+    <hr>
+    <h2>JavaScript Інструкція Switch</h2>
+    <p>Використовуйте інструкцію <code class="w3-codespan">switch</code>, щоб обрати один із багатьох блоків коду, які потрібно виконати.</p>
+    <h3>Синтаксис</h3>
+    <div class="w3-code w3-border notranslate jsHigh">
+        <div>
+            switch(<em>вираз</em>) {<br>&nbsp;&nbsp;case <em>x</em>:<br><em>&nbsp;&nbsp;&nbsp; // блок коду<br></em>&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;case <em>y</em>:<br><em>&nbsp;&nbsp;&nbsp; // блок коду<br></em>&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;default:<br>&nbsp;&nbsp; &nbsp;// <em>блок коду</em><br>}
         </div>
-        <p><strong>Інструкція</strong> — це елемент мови, що визначає повний опис дії, яку необхідно виконати. Кожна інструкція є закінченою фразою мови програмування та визначає певний цілком закінчений етап обробки даних.</p>
-        <hr>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                var x, y, z;&nbsp;&nbsp;&nbsp; // Заява 1<br>
-                x = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 2<br>
-                y = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 3<br>
-                z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 4<br>
+    </div>
+    <p>Ось як це працює:</p>
+    <ul>
+        <li>Вираз перемикання (switch) обраховується один раз.</li>
+        <li>Значення виразу порівнюється зі значеннями для кожного випадку (кейсу).</li>
+        <li>Якщо є співпадіння, виконується пов&#8217;язаний блок коду.</li>
+        <li>Якщо немає співпадіння, виконується блок коду за замовчуванням (default).</li>
+    </ul>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>Метод <code class="w3-codespan">getDay()</code> повертає день тижня як число між 0 та 6.</p>
+        <p>(Sunday=0, Monday=1, Tuesday=2 ..)</p>
+        <p>В цьому прикладі номер дня тижня використовується для обрахування назви дня тижня:</p>
+        <div class="w3-code notranslate jsHigh">
+            switch (new Date().getDay()) {<br>&nbsp;&nbsp;case 0:<br>&nbsp; &nbsp;&nbsp;day = &quot;Sunday&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;case 1:<br>&nbsp; &nbsp; day = &quot;Monday&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;case 2:<br>&nbsp; &nbsp;&nbsp; day = &quot;Tuesday&quot;;<br>&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;case 3:<br>&nbsp; &nbsp; day = &quot;Wednesday&quot;;<br>
+            &nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;case 4:<br>&nbsp; &nbsp; day = &quot;Thursday&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;case 5:<br>&nbsp; &nbsp; day = &quot;Friday&quot;;<br>&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;case 6:<br>&nbsp; &nbsp;&nbsp;day = &quot;Saturday&quot;;<br>}
+        </div>
+        <p>Результат дня буде:</p>
+        <div class="w3-white w3-padding notranslate">
+            <code>
+                <script>
+                    let d=new Date().getDay();
+                    switch (d) {case 0: x="Sunday"; break;
+                        case 1: x="Monday"; break;
+                        case 2: x="Tuesday"; break;
+                        case 3: x="Wednesday"; break;
+                        case 4: x="Thursday"; break;
+                        case 5: x="Friday"; break;
+                        case 6: x="Saturday"; break;}
+                    document.write(x);
+                </script>
+            </code>
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_switch.html" class="w3-btn w3-margin-bottom w3-margin-top">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Ключове слово break</h2>
+    <p>Коли JavaScript досягає ключового слова <code class="w3-codespan">break</code>, він виходить із блоку switch.</p>
+    <p>Це зупинить виконання в середині блоку switch.</p>
+    <p>Не обов&#8217;язково обривати останній кейс в блоці switch. Блок все одно обривається (закінчується).</p>
+    <div class="w3-panel w3-note">
+        <p><b>Примітка:</b> Якщо ви опустите інструкцію break, наступний кейс буде виконано навіть якщо оцінка не відповідає кейсу.</p>
+    </div>
+    <hr>
+    <h2>Ключове слово default (за замовчуванням)</h2>
+    <p>Ключове слово <code class="w3-codespan">default</code> визначає код для запуску, якщо немає відповідного кейсу:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>Метод <code class="w3-codespan">getDay()</code> поверне день тижня як число між 0 та 6.</p>
+        <p>Якщо сьогодні не Субота (6) і не Неділя (0), написати повідомлення за замовчуванням:</p>
+        <div class="w3-code notranslate jsHigh">
+            switch (new Date().getDay()) {<br>&nbsp;case 6:<br>&nbsp; &nbsp; text = &quot;Сьогодні Субота&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;case 0:<br>&nbsp;&nbsp;&nbsp; text = &quot;Сьогодні Неділя&quot;;<br>&nbsp;&nbsp;&nbsp; break;<br>&nbsp; default:<br>&nbsp;&nbsp;&nbsp; text = &quot;З нетерпінням чекаю вихідних&quot;;<br>}
+        </div>
+        <p>Результат тексту буде:</p>
+        <div class="w3-white w3-padding notranslate">
+            <code>
+                <script>
+                    switch (new Date().getDay()) {
+                        case 6: x= "Сьогодні Субота"; break;
+                        case 0: x = "Сьогодні Неділя"; break;
+                        default: x = "З нетерпінням чекаю вихідних";}
+                    document.write(x);
+                </script>
+            </code>
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_switch2.html" class="w3-btn w3-margin-bottom w3-margin-top">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Кейс <code class="w3-codespan">default</code> не обов&#8217;язково має бути останнім кейсом в блоці switch:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            switch (new Date().getDay()) {<br>&nbsp;&nbsp;default: <br>&nbsp;&nbsp;&nbsp; text = &quot;З нетерпінням чекаю вихідних&quot;;<br>&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;case 6:<br>&nbsp; &nbsp; text = &quot;Сьогодні Субота&quot;;<br>&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;case 0:<br>&nbsp;&nbsp;&nbsp; text = &quot;Сьогодні Неділя&quot;;<br>}
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_switch4.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-panel w3-note">
+        <p>Якщо <code class="w3-codespan">default</code> не останній кейс в блоці switch, не забудьте завершити кейс default обривом (break).</p>
+    </div>
+    <hr>
+    <h2>Загальні блоки коду</h2>
+    <p>Іноді вам може знадобитися, щоб в різних випадках перемикання (кейсах switch) використовувався один і той самий код.</p>
+    <p>В цьому прикладі кейси 4 та 5 сумісно використовують один і той самий блок коду, а 0 та 6 сумісно використовують інший блок коду:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            switch (new Date().getDay()) {<br>&nbsp;&nbsp;case 4:<br>&nbsp;&nbsp;case 5:<br>&nbsp;&nbsp;&nbsp; text = &quot;Скоро вихідні&quot;;<br>&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;case 0:<br>&nbsp;&nbsp;case 6:<br>&nbsp;&nbsp;&nbsp; text = &quot;Це вихідні&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;default:<br>&nbsp;&nbsp;&nbsp;&nbsp;text = &quot;З нетерпінням чекаю вихідних&quot;;<br>}
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_switch3.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Деталі перемикання</h2>
+    <p>Якщо одному кейсу відповідає кілька варіантів, обирається <b>перший</b> кейс.</p>
+    <p>Якщо відповідних варіантів не знайдено, програма переходить до мітки <b>default</b> (за замовчуванням).</p>
+    <p>Якщо мітки default не знайдено, програма переходить до інструкції(ій) <b>після switch</b>.</p>
+    <hr>
+    <h2>Строге порівняння</h2>
+    <p>Switch кейси використовують <strong>строге</strong> порівняння (===).</p>
+    <p>Значення мають бути одного типу, щоб відповідати одне одному.</p>
+    <p>Строге порівняння може бути лише true, тільки якщо операнди одного типу.</p>
+    <p>В цьому прикладі збігу по x не буде:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            let x = &quot;0&quot;;<br>switch (x) {<br>&nbsp;&nbsp;case 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;text = &quot;Off&quot;;<br>&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp;case 1:<br>&nbsp;&nbsp;&nbsp; text = &quot;On&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp; default:<br>&nbsp;&nbsp;&nbsp;text = &quot;Значення не знайдено&quot;;<br>}
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_switch5.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_switch1" method="post" target="_blank">
+        <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
+        <div class="exercisewindow">
+            <h2>Вправа:</h2>
+            <p>Створіть інструкцію <code class="w3-codespan">switch</code>, яка буде виводити "Hello", якщо <code class="w3-codespan">fruits</code> є "banana" та "Welcome", якщо <code class="w3-codespan">fruits</code> є "apple".</p>
+            <div class="exerciseprecontainer">
+<pre>
+<input name="ex1" maxlength="6" style="width: 65px;">(fruits) {
+<input name="ex2" maxlength="4" style="width: 45px;"> "Banana":
+alert("Hello")
+break;
+<input name="ex3" maxlength="4" style="width: 45px;"> "Apple":
+alert("Welcome")
+break;
+}
+</pre>
             </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements.html' target='_blank'>Спробуйте самі &raquo;</a>
+            <br>
+            <button type="submit" class="w3-btn w3-margin-bottom">Надіслати відповідь &raquo;</button>
         </div>
-        <hr>
-        <h2>JavaScript Програми</h2>
-        <p><strong>Комп&rsquo;ютерна програма</strong> - це список &quot;інструкцій&quot;, які мають бути &quot;виконані&quot; комп&rsquo;ютером.</p>
-        <p>На мові програмування ці інструкції з програмування називаються <strong>заявами</strong> (або операторами).</p>
-        <p><strong>Програма на JavaScript</strong> - це список програмних <strong>інструкцій</strong>.</p>
-        <div class='w3-panel w3-note'>
-            <p>В HTML програми JavaScript виконуються безпосередньо веббраузером (на стороні клієнта).</p>
-        </div>
-        <hr>
-        <h2>JavaScript Інструкції</h2>
-        <p>JavaScript інструкції складаються із: значень, операторів, виразів, ключових слів та коментарів.</p>
-        <p>Ця інструкція вказує браузеру написати &quot;Hello Dolly.&quot; всередині HTML елемента з id=&quot;demo&quot;:</p>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello Dolly.&quot;;</div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statement.html' target='_blank'>Спробуйте самі &raquo;</a>
-        </div>
-        <p>Більшість програм JavaScript містять багато різних JavaScript заяв (інструкцій).</p>
-        <p>Інструкції виконуються одна за одною у тому порядку, в якому вони написані в коді.</p>
-        <div class='w3-panel w3-note'>
-            <p>Програми JavaScript (JavaScript заяви / інструкції) часто називають JavaScript кодом.</p>
-        </div>
-        <hr>
-        <h2>JavaScript Крапка з комою ;</h2>
-        <p>Крапка з комою ділять JavaScript інструкції.</p>
-        <p>Додайте крапку з комою в кінці кожної інструкції, що виконується:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var a, b, c;&nbsp;&nbsp;&nbsp;&nbsp; // Оголосити 3 змінних a, b, c<br>a = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                // Присвоїти значення 5 змінній а<br>
-                b = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Присвоїти значення 6 змінній b<br>
-                c = a + b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Присвоїти суму a і b змінній c<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_semicolon1.html' target='_blank'>Спробуйте самі &raquo;</a>
-        </div>
-        <p>Коли вони розділені крапкою з комою, допускається кілька інструкцій в одному рядку:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                a = 5; b = 6; c = a + b;
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_semicolon2.html' target='_blank'>Спробуйте самі &raquo;</a>
-        </div>
-        <div class='w3-panel w3-note'>
-            <p>В Інтернеті ви можете побачити приклади без крапок із комою. Завершення інструкцій крапкою з комою не потрібно, але рекомендується.</p>
-        </div>
-        <hr>
-        <h2>JavaScript Пробіл</h2>
-        <p>JavaScript ігнорує кілька пробілів. Ви можете додати зайві пробіли у ваш скрипт, щоб зробити його більш читабельним.</p>
-        <p>Наступні рядки еквівалентні:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var person = &quot;Hege&quot;;<br>
-                var person=&quot;Hege&quot;;
-            </div>
-        </div>
-        <p>Хорошою практикою є розміщення пробілів навколо операторів ( = + - * / ):</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var x = y + z;</div>
-        </div>
-        <hr>
-        <h2>JavaScript Довжина рядка та розриви рядків</h2>
-        <p>Для кращої читаності програмісти часто воліють уникати рядків коду довше 80 символів.</p>
-        <p>Якщо JavaScript оголошення не вміщується в один рядок, найкраще його перервати після оператора (перенести на наступний рядок):</p>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Hello Dolly!&quot;;
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_linebreak.html' target='_blank'>Спробуйте самі &raquo;</a>
-        </div>
-        <hr>
-        <h2>JavaScript Блоки коду</h2>
-        <p>Інструкції JavaScript можуть бути згруповані в блоки коду всередині фігурних дужок {...}.</p>
-        <p>Метою блоків коду є визначення інструкцій, які будуть виконуватись разом.</p>
-        <p>В одному місці ви знайдете інструкції, згруповані за блоками, у функціях JavaScript:</p>
-        <div class='w3-example'>
-            <h3>Приклади</h3>
-            <div class='w3-code notranslate jsHigh'>
-                function myFunction() {<br>
-                &nbsp;&nbsp;document.getElementById(&quot;demo1&quot;).innerHTML = &quot;Hello Dolly!&quot;;<br>
-                &nbsp;&nbsp;document.getElementById(&quot;demo2&quot;).innerHTML = &quot;How are you?&quot;;<br>
-                }<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_blocks.html' target='_blank'>Спробуйте самі &raquo;</a>
-        </div>
-        <div class='w3-panel w3-note'>
-            <p>У цьому підручнику використовується 2 пробіли для блоків коду.<br>Ви дізнаєтеся більше про функції пізніше в цьому підручнику.</p>
-        </div>
-        <hr>
-        <h2>JavaScript Ключові слова</h2>
-        <p>JavaScript інструкції часто починаються з <strong>ключового слова</strong>, щоб визначити дію JavaScript, яку потрібно виконати.</p>
-        <p>Завітайте на наш довідник &quot;Зарезервовані слова&quot;, щоб переглянути повний список <a href='js_reserved.html'>JavaScript ключових слів</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
-        <p>Ось список деяких ключових слів, які ви будете вивчати у цьому підручнику:</p>
-        <table class='w3-table-all' style='width: 100%'>
-            <tr>
-                <th style='height: 25px'>Ключове слово</th>
-                <th style='height: 25px'>Опис</th>
-            </tr>
-            <tr>
-                <td>break</td>
-                <td>Завершує перемикач (switch) або цикл (loop)</td>
-            </tr>
-            <tr>
-                <td>continue</td>
-                <td>Виходить з циклу і починається зверху</td>
-            </tr>
-            <tr>
-                <td>debugger</td>
-                <td>Зупиняє виконання JavaScript і викликає (якщо є) функцію налагодження (дебаггінг)</td>
-            </tr>
-            <tr>
-                <td>do ... while</td>
-                <td>Виконує блок інструкцій і повторює блок, доки умова істинна (true)</td>
-            </tr>
-            <tr>
-                <td>var</td>
-                <td>Оголошує змінну</td>
-            </tr>
-            <tr>
-                <td class="notranslate">let</td>
-                <td>Оголошує блочну змінну</td>
-            </tr>
-            <tr>
-                <td class="notranslate">const</td>
-                <td>Оголошує блочну константу</td>
-            </tr>
-            <tr>
-                <td class="notranslate">if</td>
-                <td>Позначає блок операторів, які потрібно виконати залежно від умови</td>
-            </tr>
-            <tr>
-                <td class="notranslate">switch</td>
-                <td>Позначає блок операторів, які потрібно виконати в різних випадках (кейсах)</td>
-            </tr>
-            <tr>
-                <td class="notranslate">for</td>
-                <td>Позначає блок операторів для виконання в циклі</td>
-            </tr>
-            <tr>
-                <td class="notranslate">function</td>
-                <td>Оголошує функцію</td>
-            </tr>
-            <tr>
-                <td class="notranslate">return</td>
-                <td>Виходить із функції</td>
-            </tr>
-            <tr>
-                <td class="notranslate">try</td>
-                <td>Реалізує обробку помилок в блоку інструкцій</td>
-            </tr>
-        </table>
-        <div class='w3-panel w3-note'>
-            <p>Ключові слова JavaScript є зарезервованими словами. Зарезервовані слова не можуть бути використані як імена для змінних.</p>
-        </div>
-        <hr>
-        <div class='w3-clear nextprev'>
-            <a class='w3-left w3-btn' href='js_output.html'>&#10094; Prev</a>
-            <a class='w3-right w3-btn' href='js_syntax.html'>Next &#10095;</a>
-        </div>
-    </article>
+    </form>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_if_else.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_loop_for.html">Next &#10095;</a>
+    </div>
+</article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->

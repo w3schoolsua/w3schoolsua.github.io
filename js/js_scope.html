@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Інструкції (Заяви). Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='JavaScript Інструкції (Заяви). Програми. Крапка з комою. Використання пробілу. Довжина рядка та розриви рядків. Блоки коду. Ключові слова. Зарезервовані слова не можуть бути використані як імена для змінних. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Область дії. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='JavaScript Область дії. JavaScript має 3 типи області дії: блок, функція, глобальна. Глобальні JavaScript змінні. Автоматично глобальні. Strict Mode - Строгий режим. Глобальні змінні в HTML. Час життя JavaScript змінних. Аргументи функції. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -501,188 +501,179 @@
 </div>
             <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='JavaScript для початківців. W3Schools українською мовою' style='width:120px'></a>
 <p class='w3-right'>
-    <a href="js_statements_en.html" title='Перейти на англійську мову'>En</a>
+    <a href='js_scope_en.html' title='Перейти на англійську мову'>En</a>
 </p>
-    <article>
-        <h1>JavaScript <span class='color_h1'>Інструкції / Заяви</span></h1>
-        <div class='w3-clear nextprev'>
-            <a class='w3-left w3-btn' href='js_output.html'>&#10094; Prev</a>
-            <a class='w3-right w3-btn' href='js_syntax.html'>Next &#10095;</a>
+<article>
+    <h1>JavaScript <span class="color_h1">Область дії</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_errors.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_hoisting.html">Next &#10095;</a>
+    </div>
+    <div class="w3-info">
+        <p class="intro"><strong>Область дії</strong> (або <strong>область видимості</strong>) визначає доступність (видимість) змінних.</p>
+        <p>JavaScript має 3 типи області дії:</p>
+        <ul>
+            <li>Область дії блоку</li>
+            <li>Область дії функції</li>
+            <li>Область дії глобальна</li>
+        </ul>
+    </div>
+    <h2>Область дії блоку</h2>
+    <p>До ES6 (2015), JavaScript мав лише <b>Глобальну область дії</b> та <b>Область дії функції</b>.</p>
+    <p>ES6 запровадив два важливих нових JavaScript ключових слова: <code class="w3-codespan">let</code> та <code class="w3-codespan">const</code>.</p>
+    <p>Ці два ключових слова забезпечують <strong>область дії блоку</strong> в JavaScript.</p>
+    <p>До змінних, оголошених всередині блоку { }, не можна отримати доступ поза блоком:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            { <br>&nbsp;&nbsp;let x = 2;<br>}<br>// x НЕ МОЖЕ бути використано тут
         </div>
-        <p><strong>Інструкція</strong> — це елемент мови, що визначає повний опис дії, яку необхідно виконати. Кожна інструкція є закінченою фразою мови програмування та визначає певний цілком закінчений етап обробки даних.</p>
-        <hr>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                var x, y, z;&nbsp;&nbsp;&nbsp; // Заява 1<br>
-                x = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 2<br>
-                y = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 3<br>
-                z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 4<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements.html' target='_blank'>Спробуйте самі &raquo;</a>
+    </div>
+    <p>Змінні, оголошені за допомогою ключового слова <code class="w3-codespan">var</code> НЕ можуть мати область дії блоку.</p>
+    <p>До змінних, оголошених в середині блоку { }, можна отримати доступ поза блоком.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            { <br>&nbsp;&nbsp;var x = 2; <br>}<br>// x МОЖЕ бути використано тут
         </div>
-        <hr>
-        <h2>JavaScript Програми</h2>
-        <p><strong>Комп&rsquo;ютерна програма</strong> - це список &quot;інструкцій&quot;, які мають бути &quot;виконані&quot; комп&rsquo;ютером.</p>
-        <p>На мові програмування ці інструкції з програмування називаються <strong>заявами</strong> (або операторами).</p>
-        <p><strong>Програма на JavaScript</strong> - це список програмних <strong>інструкцій</strong>.</p>
-        <div class='w3-panel w3-note'>
-            <p>В HTML програми JavaScript виконуються безпосередньо веббраузером (на стороні клієнта).</p>
+    </div>
+    <hr>
+    <h2>Локальна область дії</h2>
+    <p>Змінні, оголошені в JavaScript функції, стають <strong>ЛОКАЛЬНИМИ</strong> для функції.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            // код тут НЕ МОЖЕ використовувати carName<br><br>function myFunction() {<br>&nbsp;&nbsp;let carName = &quot;Volvo&quot;;<br>&nbsp; // код тут МОЖЕ використовувати carName<br>}<br><br>// код тут НЕ МОЖЕ використовувати carName
         </div>
-        <hr>
-        <h2>JavaScript Інструкції</h2>
-        <p>JavaScript інструкції складаються із: значень, операторів, виразів, ключових слів та коментарів.</p>
-        <p>Ця інструкція вказує браузеру написати &quot;Hello Dolly.&quot; всередині HTML елемента з id=&quot;demo&quot;:</p>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello Dolly.&quot;;</div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statement.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_scope_local.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-note">
+        <p>Локальні змінні мають <strong>Область дії функції</strong>:</p>
+        <p>Доступ до них можна отримати лише із функції.</p>
+    </div>
+    <p>Оскільки локальні змінні розпізнаються лише всередині своїх функцій, змінні з однаковими іменами можуть використовуватись в різних функціях.</p>
+    <p>Локальні змінні створюються при запуску функції та видаляються, коли функція завершується.</p>
+    <hr>
+    <h2>Область дії функції</h2>
+    <p>JavaScript має область дії функції: кожна функція створює нову область дії.</p>
+    <p>Змінні, визначені всередині функції, не доступні (видимі) поза функцією.</p>
+    <p>Змінні, оголошені за допомогою <code class="w3-codespan">var</code>, <code class="w3-codespan">let</code> та <code class="w3-codespan">const</code> дуже схожі, коли оголошені всередині функції.</p>
+    <p>Вони всі мають <strong>Область дії функції</strong>:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            function myFunction() {<br>
+            &nbsp; var carName = "Volvo";&nbsp;&nbsp; // Область дії функції<br>}
         </div>
-        <p>Більшість програм JavaScript містять багато різних JavaScript заяв (інструкцій).</p>
-        <p>Інструкції виконуються одна за одною у тому порядку, в якому вони написані в коді.</p>
-        <div class='w3-panel w3-note'>
-            <p>Програми JavaScript (JavaScript заяви / інструкції) часто називають JavaScript кодом.</p>
+    </div>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            function myFunction() {<br>&nbsp; let carName = "Volvo";&nbsp;&nbsp; // Область дії функції<br>}
         </div>
-        <hr>
-        <h2>JavaScript Крапка з комою ;</h2>
-        <p>Крапка з комою ділять JavaScript інструкції.</p>
-        <p>Додайте крапку з комою в кінці кожної інструкції, що виконується:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var a, b, c;&nbsp;&nbsp;&nbsp;&nbsp; // Оголосити 3 змінних a, b, c<br>a = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                // Присвоїти значення 5 змінній а<br>
-                b = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Присвоїти значення 6 змінній b<br>
-                c = a + b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Присвоїти суму a і b змінній c<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_semicolon1.html' target='_blank'>Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            function myFunction() {<br>&nbsp; const carName = "Volvo";&nbsp;&nbsp; // Область дії функції<br>}
         </div>
-        <p>Коли вони розділені крапкою з комою, допускається кілька інструкцій в одному рядку:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                a = 5; b = 6; c = a + b;
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_semicolon2.html' target='_blank'>Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Глобальні JavaScript змінні</h2>
+    <p>Змінна, оголошена поза функцією, стає <strong>ГЛОБАЛЬНОЮ</strong>.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            let carName = &quot;Volvo&quot;;<br>// код тут може використовувати carName<br><br>function myFunction() {<br>// код тут також може використовувати carName <br>}
         </div>
-        <div class='w3-panel w3-note'>
-            <p>В Інтернеті ви можете побачити приклади без крапок із комою. Завершення інструкцій крапкою з комою не потрібно, але рекомендується.</p>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_scope_global.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-note">
+        <p>Глобальні змінні мають <strong>Глобальну область дії</strong>:</p>
+        <p>Всі скрипти та функції на вебсторінці можуть отримати до неї доступ.</p>
+    </div>
+    <hr>
+    <h2>Глобальна область дії</h2>
+    <p>Змінні, оголошені <strong>Глобально</strong> (поза будь-якою функцією) мають <strong>Глобальну область дії</strong>.</p>
+    <p>Доступ до <strong>Глобальних змінних</strong> можна отримати із будь-якого місця в JavaScript програмі.</p>
+    <p>Змінні, оголошені за допомогою <code class="w3-codespan">var</code>, <code class="w3-codespan">let</code> та <code class="w3-codespan">const</code> дуже схожі, коли оголошені поза блоком.</p>
+    <p>Вони всі мають <strong>Глобальну область дії</strong>:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            var x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Глобальна область дії
         </div>
-        <hr>
-        <h2>JavaScript Пробіл</h2>
-        <p>JavaScript ігнорує кілька пробілів. Ви можете додати зайві пробіли у ваш скрипт, щоб зробити його більш читабельним.</p>
-        <p>Наступні рядки еквівалентні:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var person = &quot;Hege&quot;;<br>
-                var person=&quot;Hege&quot;;
-            </div>
+    </div>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            let x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Глобальна область дії
         </div>
-        <p>Хорошою практикою є розміщення пробілів навколо операторів ( = + - * / ):</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var x = y + z;</div>
+    </div>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            const x = 2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Глобальна область дії
         </div>
-        <hr>
-        <h2>JavaScript Довжина рядка та розриви рядків</h2>
-        <p>Для кращої читаності програмісти часто воліють уникати рядків коду довше 80 символів.</p>
-        <p>Якщо JavaScript оголошення не вміщується в один рядок, найкраще його перервати після оператора (перенести на наступний рядок):</p>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Hello Dolly!&quot;;
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_linebreak.html' target='_blank'>Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>JavaScript змінні</h2>
+    <p>В JavaScript об&#8217;єкти та функції також змінні.</p>
+    <div class="w3-panel w3-note">
+        <p>Область видимості визначає доступність змінних, об&#8217;єктів та функцій із різних частин коду.</p>
+    </div>
+    <hr>
+    <h2>Автоматично глобальна</h2>
+    <p>Якщо ви присвоюєте значення змінній, яка не була оголошена, вона автоматично стане <b>ГЛОБАЛЬНОЮ</b> змінною.</p>
+    <p>Цей приклад коду оголошує глобальну змінну <code class="w3-codespan">carName</code>, навіть якщо значення призначається всередині функції.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            myFunction();<br><br>// код тут може використовувати carName<br><br>function myFunction() {<br>&nbsp; carName = &quot;Volvo&quot;;<br>}
         </div>
-        <hr>
-        <h2>JavaScript Блоки коду</h2>
-        <p>Інструкції JavaScript можуть бути згруповані в блоки коду всередині фігурних дужок {...}.</p>
-        <p>Метою блоків коду є визначення інструкцій, які будуть виконуватись разом.</p>
-        <p>В одному місці ви знайдете інструкції, згруповані за блоками, у функціях JavaScript:</p>
-        <div class='w3-example'>
-            <h3>Приклади</h3>
-            <div class='w3-code notranslate jsHigh'>
-                function myFunction() {<br>
-                &nbsp;&nbsp;document.getElementById(&quot;demo1&quot;).innerHTML = &quot;Hello Dolly!&quot;;<br>
-                &nbsp;&nbsp;document.getElementById(&quot;demo2&quot;).innerHTML = &quot;How are you?&quot;;<br>
-                }<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_blocks.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_local_global.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Strict Mode / Строгий режим</h2>
+    <p>Всі сучасні браузери підтримують виконання JavaScript в &quot;Strict Mode&quot; (&quot;Строгому режимі&quot;).</p>
+    <p>Ви дізнаєтесь більше про те, як використовувати строгий режим пізніше в цьому підручнику на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
+    <div class="w3-panel w3-warning">
+        <p>В &quot;Строгому режимі&quot; неоголошені змінні не стають глобальними автоматично.</p>
+    </div>
+    <hr>
+    <h2>Глобальні змінні в HTML</h2>
+    <p>В JavaScript глобальною областю дії є середовище JavaScript.</p>
+    <p>В HTML глобальною областю дії є об&#8217;єкт вікна.</p>
+    <p>Глобальні змінні, визначені за допомогою ключового слова <code class="w3-codespan">var</code>, належать об&#8217;єкту вікна:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            var carName = &quot;Volvo&quot;;<br>// код тут може використовувати window.carName
         </div>
-        <div class='w3-panel w3-note'>
-            <p>У цьому підручнику використовується 2 пробіли для блоків коду.<br>Ви дізнаєтеся більше про функції пізніше в цьому підручнику.</p>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_scope_window.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Глобальні змінні, визначені за допомогою ключового слова <code class="w3-codespan">let</code>, не належать об&#8217;єкту вікна:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            let carName = &quot;Volvo&quot;;<br>// код тут не може використовувати window.carName
         </div>
-        <hr>
-        <h2>JavaScript Ключові слова</h2>
-        <p>JavaScript інструкції часто починаються з <strong>ключового слова</strong>, щоб визначити дію JavaScript, яку потрібно виконати.</p>
-        <p>Завітайте на наш довідник &quot;Зарезервовані слова&quot;, щоб переглянути повний список <a href='js_reserved.html'>JavaScript ключових слів</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
-        <p>Ось список деяких ключових слів, які ви будете вивчати у цьому підручнику:</p>
-        <table class='w3-table-all' style='width: 100%'>
-            <tr>
-                <th style='height: 25px'>Ключове слово</th>
-                <th style='height: 25px'>Опис</th>
-            </tr>
-            <tr>
-                <td>break</td>
-                <td>Завершує перемикач (switch) або цикл (loop)</td>
-            </tr>
-            <tr>
-                <td>continue</td>
-                <td>Виходить з циклу і починається зверху</td>
-            </tr>
-            <tr>
-                <td>debugger</td>
-                <td>Зупиняє виконання JavaScript і викликає (якщо є) функцію налагодження (дебаггінг)</td>
-            </tr>
-            <tr>
-                <td>do ... while</td>
-                <td>Виконує блок інструкцій і повторює блок, доки умова істинна (true)</td>
-            </tr>
-            <tr>
-                <td>var</td>
-                <td>Оголошує змінну</td>
-            </tr>
-            <tr>
-                <td class="notranslate">let</td>
-                <td>Оголошує блочну змінну</td>
-            </tr>
-            <tr>
-                <td class="notranslate">const</td>
-                <td>Оголошує блочну константу</td>
-            </tr>
-            <tr>
-                <td class="notranslate">if</td>
-                <td>Позначає блок операторів, які потрібно виконати залежно від умови</td>
-            </tr>
-            <tr>
-                <td class="notranslate">switch</td>
-                <td>Позначає блок операторів, які потрібно виконати в різних випадках (кейсах)</td>
-            </tr>
-            <tr>
-                <td class="notranslate">for</td>
-                <td>Позначає блок операторів для виконання в циклі</td>
-            </tr>
-            <tr>
-                <td class="notranslate">function</td>
-                <td>Оголошує функцію</td>
-            </tr>
-            <tr>
-                <td class="notranslate">return</td>
-                <td>Виходить із функції</td>
-            </tr>
-            <tr>
-                <td class="notranslate">try</td>
-                <td>Реалізує обробку помилок в блоку інструкцій</td>
-            </tr>
-        </table>
-        <div class='w3-panel w3-note'>
-            <p>Ключові слова JavaScript є зарезервованими словами. Зарезервовані слова не можуть бути використані як імена для змінних.</p>
-        </div>
-        <hr>
-        <div class='w3-clear nextprev'>
-            <a class='w3-left w3-btn' href='js_output.html'>&#10094; Prev</a>
-            <a class='w3-right w3-btn' href='js_syntax.html'>Next &#10095;</a>
-        </div>
-    </article>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_let_global.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>УВАГА!</h2>
+    <div class="w3-panel w3-warning">
+        <p>НЕ створюйте глобальні змінні, якщо ви не збираєтесь їх використовувати.</p>
+        <p>Ваші глобальні змінні (або функції) можуть перезаписувати змінні (або функції) вікна.<br>Будь яка функція, включаючи об&#8217;єкт вікна, може перезаписувати ваші глобальні змінні та функції.</p>
+    </div>
+    <hr>
+    <h2>Час життя JavaScript змінних</h2>
+    <p>Час життя JavaScript змінних починається з моменту її оголошення.</p>
+    <p>Функціональні (локальні) змінні видаляються по завершенню функції.</p>
+    <p>В веббраузері глобальні змінні видаляються при закритті вікна (або вкладки) браузера.</p>
+    <hr>
+    <h2>Аргументи функції</h2>
+    <p>Аргументи функції (параметри) працюють як локальні змінні всередині функцій.</p>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_errors.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_hoisting.html">Next &#10095;</a>
+    </div>
+</article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->

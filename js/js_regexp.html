@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Інструкції (Заяви). Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='JavaScript Інструкції (Заяви). Програми. Крапка з комою. Використання пробілу. Довжина рядка та розриви рядків. Блоки коду. Ключові слова. Зарезервовані слова не можуть бути використані як імена для змінних. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Регулярні вирази. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='JavaScript Регулярні вирази. Що таке регулярні вирази? Синтаксис. Використання рядкових методів. Використання String search() та String replace() з рядком та регулярним виразом. Модифікатори та шаблони регулярних виразів. Використання об&#8217;єкту RegExp, test(), exec(). Повний довідник RegExp. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -501,188 +501,251 @@
 </div>
             <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='JavaScript для початківців. W3Schools українською мовою' style='width:120px'></a>
 <p class='w3-right'>
-    <a href="js_statements_en.html" title='Перейти на англійську мову'>En</a>
+    <a href='js_regexp_en.html' title='Перейти на англійську мову'>En</a>
 </p>
-    <article>
-        <h1>JavaScript <span class='color_h1'>Інструкції / Заяви</span></h1>
-        <div class='w3-clear nextprev'>
-            <a class='w3-left w3-btn' href='js_output.html'>&#10094; Prev</a>
-            <a class='w3-right w3-btn' href='js_syntax.html'>Next &#10095;</a>
+<article>
+    <h1>JavaScript <span class="color_h1">Регулярні вирази</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_bitwise.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_errors.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro"><strong>Регулярний вираз</strong> - це послідовність символів, що утворює шаблон (патерн) пошуку.</p>
+    <p class="intro">Шаблон (патерн) пошуку можна використовувати для текстового пошуку та операцій заміни тексту.</p>
+    <hr>
+    <h2>Що таке регулярні вирази?</h2>
+    <p><strong>Регулярний вираз</strong> - це послідовність символів, що утворюють <strong>шаблон пошуку</strong> (патерн пошуку).</p>
+    <p>Коли ви шукаєте дані в тексті, ви можете використовувати цей шаблон пошуку, щоб описати те, що ви шукаєте.</p>
+    <p>Регулярний вираз може бути окремим символом або більш складним шаблоном.</p>
+    <p>Регулярні вирази можна використовувати для виконання всіх типів операцій <strong>текстового пошуку</strong> та <strong>заміни тексту</strong>.</p>
+    <h2>Синтаксис</h2>
+    <div class="w3-code w3-border notranslate">
+        <div>
+            /<em>pattern</em>/<em>modifiers</em>;
         </div>
-        <p><strong>Інструкція</strong> — це елемент мови, що визначає повний опис дії, яку необхідно виконати. Кожна інструкція є закінченою фразою мови програмування та визначає певний цілком закінчений етап обробки даних.</p>
-        <hr>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                var x, y, z;&nbsp;&nbsp;&nbsp; // Заява 1<br>
-                x = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 2<br>
-                y = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 3<br>
-                z = x + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Заява 4<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements.html' target='_blank'>Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate">
+            /w3schools/i;
         </div>
-        <hr>
-        <h2>JavaScript Програми</h2>
-        <p><strong>Комп&rsquo;ютерна програма</strong> - це список &quot;інструкцій&quot;, які мають бути &quot;виконані&quot; комп&rsquo;ютером.</p>
-        <p>На мові програмування ці інструкції з програмування називаються <strong>заявами</strong> (або операторами).</p>
-        <p><strong>Програма на JavaScript</strong> - це список програмних <strong>інструкцій</strong>.</p>
-        <div class='w3-panel w3-note'>
-            <p>В HTML програми JavaScript виконуються безпосередньо веббраузером (на стороні клієнта).</p>
+    </div>
+    <p>Пояснення прикладу:</p>
+    <p><strong>/w3schools/i</strong>&nbsp; є регулярним виразом.</p>
+    <p><strong>w3schools</strong>&nbsp; - це шаблон (патерн) (для використання в пошуку).</p>
+    <p><strong>i</strong>&nbsp; - це модифікатор (змінює пошук без урахування регістру).</p>
+    <hr>
+    <h2>Використання рядкових методів</h2>
+    <p>В JavaScript регулярні вирази часто використовуються з двома <strong>рядковими методами</strong>: <code class="w3-codespan">search()</code> та <code class="w3-codespan">replace()</code>.</p>
+    <p>Метод <code class="w3-codespan">search()</code> використовує вираз для пошуку збігу і повертає позицію збігу.</p>
+    <p>Метод <code class="w3-codespan">replace()</code> повертає змінений рядок, в якому замінено шаблон.</p>
+    <hr>
+    <h2>Використання String search() з рядком</h2>
+    <p>Метод <code class="w3-codespan">search()</code> шукає рядок для вказаного значення та повертає позицію збігу:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>Використовуйте рядок, щоб виконати пошук по запиту &quot;W3schools&quot; в рядку:</p>
+        <div class="w3-code notranslate jsHigh">
+            let text = &quot;Visit W3Schools!&quot;;<br>let n = text.search(&quot;W3Schools&quot;);
         </div>
-        <hr>
-        <h2>JavaScript Інструкції</h2>
-        <p>JavaScript інструкції складаються із: значень, операторів, виразів, ключових слів та коментарів.</p>
-        <p>Ця інструкція вказує браузеру написати &quot;Hello Dolly.&quot; всередині HTML елемента з id=&quot;demo&quot;:</p>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello Dolly.&quot;;</div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statement.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <p>Результат в <em>n</em> буде:</p>
+        <div class="w3-white w3-padding notranslate">
+            <code>6</code>
         </div>
-        <p>Більшість програм JavaScript містять багато різних JavaScript заяв (інструкцій).</p>
-        <p>Інструкції виконуються одна за одною у тому порядку, в якому вони написані в коді.</p>
-        <div class='w3-panel w3-note'>
-            <p>Програми JavaScript (JavaScript заяви / інструкції) часто називають JavaScript кодом.</p>
+        <a class="w3-btn" href="../jstryit/tryjs_string_search.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Використання String search() з регулярним виразом</h2>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>Використовуйте регулярний вираз для пошуку по запиту &quot;w3schools&quot; без урахування регістру в рядку:</p>
+        <div class="w3-code notranslate jsHigh">
+            let text = &quot;Visit W3Schools&quot;;<br>let n = text.search(/w3schools/i);
         </div>
-        <hr>
-        <h2>JavaScript Крапка з комою ;</h2>
-        <p>Крапка з комою ділять JavaScript інструкції.</p>
-        <p>Додайте крапку з комою в кінці кожної інструкції, що виконується:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var a, b, c;&nbsp;&nbsp;&nbsp;&nbsp; // Оголосити 3 змінних a, b, c<br>a = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                // Присвоїти значення 5 змінній а<br>
-                b = 6;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Присвоїти значення 6 змінній b<br>
-                c = a + b;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Присвоїти суму a і b змінній c<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_semicolon1.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <p>Результат в <em>n</em> буде:</p>
+        <div class="w3-white w3-padding notranslate">
+            <code>6</code>
         </div>
-        <p>Коли вони розділені крапкою з комою, допускається кілька інструкцій в одному рядку:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                a = 5; b = 6; c = a + b;
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_semicolon2.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a class="w3-btn" href="../jstryit/tryjs_regexp_string_search.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Використання String replace() з рядком</h2>
+    <p>Метод <code class="w3-codespan">replace()</code> замінює вказане значення іншим значенням в рядку:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            let text = &quot;Visit Microsoft!&quot;;<br>let result = text.replace(&quot;Microsoft&quot;, &quot;W3Schools&quot;);
         </div>
-        <div class='w3-panel w3-note'>
-            <p>В Інтернеті ви можете побачити приклади без крапок із комою. Завершення інструкцій крапкою з комою не потрібно, але рекомендується.</p>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_replace.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Використання String replace() з регулярним виразом</h2>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>Використовуйте регулярний вираз без урахування регістру, щоб замінити Microsoft на W3Schools в рядку:</p>
+        <div class="w3-code notranslate jsHigh">
+            let text = &quot;Visit Microsoft!&quot;;<br>let result = text.replace(/microsoft/i, &quot;W3Schools&quot;);
         </div>
-        <hr>
-        <h2>JavaScript Пробіл</h2>
-        <p>JavaScript ігнорує кілька пробілів. Ви можете додати зайві пробіли у ваш скрипт, щоб зробити його більш читабельним.</p>
-        <p>Наступні рядки еквівалентні:</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var person = &quot;Hege&quot;;<br>
-                var person=&quot;Hege&quot;;
-            </div>
+        <p>Результат в <em>res</em> буде:</p>
+        <div class="w3-white w3-padding notranslate">
+            <code>Visit W3Schools!</code>
         </div>
-        <p>Хорошою практикою є розміщення пробілів навколо операторів ( = + - * / ):</p>
-        <div class='w3-example'>
-            <div class='w3-code notranslate jsHigh'>
-                var x = y + z;</div>
+        <a class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_regexp_string_replace.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Ви помітили?</h2>
+    <div class="w3-panel w3-note">
+        <p>Аргументи регулярного виразу (замість рядкових аргументів) можна використовувати в наведених вище методах.<br>Регулярні вирази можуть зробити ваш пошук набагато більш потужнішим (наприклад, без урахування регістру).</p>
+    </div>
+    <hr>
+    <h2>Модифікатори регулярних виразів</h2>
+    <p><strong>Модифікатори</strong> можна використовувати для більш глобального пошуку без урахування регістру:</p>
+    <table class="ws-table-all notranslate">
+        <tr>
+            <th style="width:22%">Модифікатор</th>
+            <th>Опис</th>
+            <th>Спробуй це</th>
+        </tr>
+        <tr>
+            <td>i</td>
+            <td>Співставлення без урахування регістру</td>
+            <td><a target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_i.html">Спробуй це &raquo;</a></td>
+        </tr>
+        <tr>
+            <td>g</td>
+            <td>Виконати глобальне співставлення (знайти всі збіги, а не зупинятися після першого збігу)</td>
+            <td><a target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_g.html">Спробуй це &raquo;</a></td>
+        </tr>
+        <tr>
+            <td>m</td>
+            <td>Виконати багаторядкове співставлення</td>
+            <td><a target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_m.html">Спробуй це &raquo;</a></td>
+        </tr>
+    </table>
+    <h2>Шаблони регулярних виразів</h2>
+    <p><strong>Скобки</strong> використовуються для пошуку ряда символів:</p>
+    <table class="ws-table-all notranslate">
+        <tr>
+            <th style="width:22%">Вираз</th>
+            <th>Опис</th>
+            <th style="width:5%">Спробуй це</th>
+        </tr>
+        <tr>
+            <td>[abc]</td>
+            <td>Знайти будь-який символ в скобках</td>
+            <td><a style="float:right" target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_abc.html">Спробуй це &raquo;</a></td>
+        <tr>
+            <td>[0-9]</td>
+            <td>Знайти будь-яку з цифр в скобках</td>
+            <td><a style="float:right" target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_0-9.html">Спробуй це &raquo;</a></td>
+        <tr>
+            <td>(x|y)</td>
+            <td>Знайти будь-яку з альтернатив, розділених |</td>
+            <td><a style="float:right" target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_xy.html">Спробуй це &raquo;</a></td>
+        </tr>
+    </table>
+    <p><strong>Метасимволи</strong> - це символи зі спеціальним значенням:</p>
+    <table class="ws-table-all notranslate">
+        <tr>
+            <th style="width:22%">Метасимвол</th>
+            <th>Опис</th>
+            <th>Спробуй це</th>
+        </tr>
+        <tr>
+            <td>\d</td>
+            <td>Знайти цифру</td>
+            <td><a target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_d.html">Спробуй це &raquo;</a></td>
+        </tr>
+        <tr>
+            <td>\s</td>
+            <td>Знайти символ пробілу</td>
+            <td><a target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_s.html">Спробуй це &raquo;</a></td>
+        </tr>
+        <tr>
+            <td>\b</td>
+            <td>Знайти збіг на початку такого слова: \bWORD, або в кінці такого слова: WORD\b</td>
+            <td>
+                <a target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_b.html">Спробуй це &raquo;</a>
+                <br>
+                <a target="_blank" style="margin-top:2px;" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_b2.html">Спробуй це &raquo;</a>
+            </td>
+        </tr>
+        <tr>
+            <td>\uxxxx</td>
+            <td>Знайти символ Unicode, вказаний шістнадцятковим числом xxxx</td>
+            <td><a target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_ux.html">Спробуй це &raquo;</a></td>
+        </tr>
+    </table>
+    <p><strong>Квантифікатори</strong> визначають кількості:</p>
+    <table class="ws-table-all notranslate">
+        <tr>
+            <th style="width:22%">Квантифікатор</th>
+            <th>Опис</th>
+            <th style="width:5%">Спробуй це</th>
+        </tr>
+        <tr>
+            <td>n+</td>
+            <td>Відповідає будь-якому рядку, що містить хоча б один <em>n</em></td>
+            <td style="float:right"><a target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_n1.html">Спробуй це &raquo;</a></td>
+        </tr>
+        <tr>
+            <td>n*</td>
+            <td>Відповідає будь-якому рядку, що містить нуль або більше входжень <em>n</em></td>
+            <td style="float:right"><a target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_n2.html">Спробуй це &raquo;</a></td>
+        </tr>
+        <tr>
+            <td>n?</td>
+            <td>Відповідає будь-якому рядку, що містить нуль або одне входження <em>n</em></td>
+            <td style="float:right"><a target="_blank" class="w3-btn btnsmall w3-padding-small" href="../jstryit/tryjs_regexp_n3.html">Спробуй це &raquo;</a></td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Використання об&#8217;єкту RegExp</h2>
+    <p>В JavaScript об&#8217;єкт RegExp - це об&#8217;єкт регулярного виразу із передвизначеними властивостями та методами.</p>
+    <hr>
+    <h2>Використання test()</h2>
+    <p>Метод <code class="w3-codespan">test()</code> - це метод виразу RegExp.</p>
+    <p>Він шукає в рядку шаблон та повертає true або false, в залежності від результату.</p>
+    <p>В наступному прикладі виконується пошук в рядку символа &quot;e&quot;:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            const pattern = /e/;<br>pattern.test(&quot;Все найкраще в житті - безкоштовне!&quot;);
         </div>
-        <hr>
-        <h2>JavaScript Довжина рядка та розриви рядків</h2>
-        <p>Для кращої читаності програмісти часто воліють уникати рядків коду довше 80 символів.</p>
-        <p>Якщо JavaScript оголошення не вміщується в один рядок, найкраще його перервати після оператора (перенести на наступний рядок):</p>
-        <div class='w3-example'>
-            <h3>Приклад</h3>
-            <div class='w3-code notranslate jsHigh'>
-                document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Hello Dolly!&quot;;
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_linebreak.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <p>Оскільки в рядку є літера &quot;e&quot;, виведення наведеного вище коду буде:</p>
+        <div class="w3-white w3-padding notranslate">
+            <code>true</code>
         </div>
-        <hr>
-        <h2>JavaScript Блоки коду</h2>
-        <p>Інструкції JavaScript можуть бути згруповані в блоки коду всередині фігурних дужок {...}.</p>
-        <p>Метою блоків коду є визначення інструкцій, які будуть виконуватись разом.</p>
-        <p>В одному місці ви знайдете інструкції, згруповані за блоками, у функціях JavaScript:</p>
-        <div class='w3-example'>
-            <h3>Приклади</h3>
-            <div class='w3-code notranslate jsHigh'>
-                function myFunction() {<br>
-                &nbsp;&nbsp;document.getElementById(&quot;demo1&quot;).innerHTML = &quot;Hello Dolly!&quot;;<br>
-                &nbsp;&nbsp;document.getElementById(&quot;demo2&quot;).innerHTML = &quot;How are you?&quot;;<br>
-                }<br>
-            </div>
-            <a class='w3-btn w3-margin-bottom' href='../jstryit/tryjs_statements_blocks.html' target='_blank'>Спробуйте самі &raquo;</a>
+        <a target="_blank" href="../jstryit/tryjs_regexp_test.html" class="w3-btn">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <p>Вам не потрібно спочатку розміщувати регулярний вираз у змінну. Два наведених вище рядка можна скоротити до одного:</p>
+        <div class="w3-code notranslate jsHigh">
+            /e/.test(&quot;Все найкраще в житті - безкоштовне!&quot;);
         </div>
-        <div class='w3-panel w3-note'>
-            <p>У цьому підручнику використовується 2 пробіли для блоків коду.<br>Ви дізнаєтеся більше про функції пізніше в цьому підручнику.</p>
+    </div>
+    <hr>
+    <h2>Використання exec()</h2>
+    <p>Метод <code class="w3-codespan">exec()</code> це метод виразу RegExp.</p>
+    <p>Він шукає рядок для вказаного шаблону і повертає знайдений текст як об&#8217;єкт.</p>
+    <p>Якщо збігів не знайдено, повертається пустий <i>(null)</i> об&#8217;єкт.</p>
+    <p>В наступному прикладі виконується пошук в рядку символа &quot;e&quot;:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            /e/.exec(&quot;Найкраща річ в житті - це свобода!&quot;);
         </div>
-        <hr>
-        <h2>JavaScript Ключові слова</h2>
-        <p>JavaScript інструкції часто починаються з <strong>ключового слова</strong>, щоб визначити дію JavaScript, яку потрібно виконати.</p>
-        <p>Завітайте на наш довідник &quot;Зарезервовані слова&quot;, щоб переглянути повний список <a href='js_reserved.html'>JavaScript ключових слів</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
-        <p>Ось список деяких ключових слів, які ви будете вивчати у цьому підручнику:</p>
-        <table class='w3-table-all' style='width: 100%'>
-            <tr>
-                <th style='height: 25px'>Ключове слово</th>
-                <th style='height: 25px'>Опис</th>
-            </tr>
-            <tr>
-                <td>break</td>
-                <td>Завершує перемикач (switch) або цикл (loop)</td>
-            </tr>
-            <tr>
-                <td>continue</td>
-                <td>Виходить з циклу і починається зверху</td>
-            </tr>
-            <tr>
-                <td>debugger</td>
-                <td>Зупиняє виконання JavaScript і викликає (якщо є) функцію налагодження (дебаггінг)</td>
-            </tr>
-            <tr>
-                <td>do ... while</td>
-                <td>Виконує блок інструкцій і повторює блок, доки умова істинна (true)</td>
-            </tr>
-            <tr>
-                <td>var</td>
-                <td>Оголошує змінну</td>
-            </tr>
-            <tr>
-                <td class="notranslate">let</td>
-                <td>Оголошує блочну змінну</td>
-            </tr>
-            <tr>
-                <td class="notranslate">const</td>
-                <td>Оголошує блочну константу</td>
-            </tr>
-            <tr>
-                <td class="notranslate">if</td>
-                <td>Позначає блок операторів, які потрібно виконати залежно від умови</td>
-            </tr>
-            <tr>
-                <td class="notranslate">switch</td>
-                <td>Позначає блок операторів, які потрібно виконати в різних випадках (кейсах)</td>
-            </tr>
-            <tr>
-                <td class="notranslate">for</td>
-                <td>Позначає блок операторів для виконання в циклі</td>
-            </tr>
-            <tr>
-                <td class="notranslate">function</td>
-                <td>Оголошує функцію</td>
-            </tr>
-            <tr>
-                <td class="notranslate">return</td>
-                <td>Виходить із функції</td>
-            </tr>
-            <tr>
-                <td class="notranslate">try</td>
-                <td>Реалізує обробку помилок в блоку інструкцій</td>
-            </tr>
-        </table>
-        <div class='w3-panel w3-note'>
-            <p>Ключові слова JavaScript є зарезервованими словами. Зарезервовані слова не можуть бути використані як імена для змінних.</p>
-        </div>
-        <hr>
-        <div class='w3-clear nextprev'>
-            <a class='w3-left w3-btn' href='js_output.html'>&#10094; Prev</a>
-            <a class='w3-right w3-btn' href='js_syntax.html'>Next &#10095;</a>
-        </div>
-    </article>
+        <a target="_blank" href="../jstryit/tryjs_regexp_exec.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Повний довідник RegExp</h2>
+    <p>Для більш детального ознайомлення з регулярними виразами, відвідайте <a href="../jsref/jsref_obj_regexp_en.html">Повний довідник JavaScript RegExp</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
+    <p>Довідник містить описи та приклади всіх властивостей та методів регулярних виразів.</p>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_bitwise.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_errors.html">Next &#10095;</a>
+    </div>
+</article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
