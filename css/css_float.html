@@ -12,8 +12,13 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Шрифти. Скорочена властивість. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='CSS Шрифти. Скорочена властивість. Як скоротити код при написанні шрифтів? Щоб скоротити код, також можна вказати всі індивідуальні властивості шрифту в одній властивості. Всі властивості шрифту. Значення font-size та font-family обов&#8217;язкові. Якщо одні з інших значень відсутні, використовується значення за замовчуванням. Сучасний підручник по CSS3. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Макет - float та clear. Clearfix. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='CSS Макет - float та clear. Clearfix. Позиціонування (розташування) елементів. Як зробити обтікання тексту або картинки? Вирівнювання елемента зліва та справа. Стилізація вебсторінок. Сучасний підручник по CSS3. Уроки для початківців. W3Schools українською'>
+<style>
+    .floatl:after {font-weight: bold;content: 'Float Left';color:white;}
+    .floatr:after  {font-weight:bold;content: 'Float Right';color:white;}
+    @media only screen and (max-width: 500px){.floatl:after  {content: 'Left';}.floatr:after  {content: 'Right';}}
+</style>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -501,82 +506,89 @@
 </div>
             <a href='index.html'><img src='../svg/css3_icon1.svg' alt='CSS3. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='CSS3 для початківців. W3Schools українською' style='width: 90px'></a>
 <p class='w3-right'>
-    <a href="css_font_shorthand_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="css_float_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>CSS <span class="color_h1">Шрифт. Скорочена властивість</span></h1>
+    <h1>CSS Макет<span class="color_h1"> - float и clear</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="css_font_pairings.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="css_icons.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="css_overflow.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css_float_clear.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>CSS Скорочена властивість шрифту</h2>
-    <p>Щоб скоротити код, також можна вказати всі індивідуальні властивості шрифту в одній властивості.</p>
-    <p>Властивість <code class="w3-codespan">font</code> - це скорочена властивість для:</p>
-    <ul>
-        <li><code class="w3-codespan">font-style</code></li>
-        <li><code class="w3-codespan">font-variant</code></li>
-        <li><code class="w3-codespan">font-weight</code></li>
-        <li><code class="w3-codespan">font-size/line-height</code></li>
-        <li><code class="w3-codespan">font-family</code></li>
-    </ul>
+    <p class="intro">CSS властивість <code class="w3-codespan">float</code> визначає, як елемент має позиціонуватись (плавати) відносно інших елементів.</p>
+    <p class="intro">CSS властивість <code class="w3-codespan">clear</code> визначає, які елементи можуть плавати поруч з очищеним (clear) елементом і з якого боку.</p>
+    <div style="background-color:#2196F3;padding:16px;float:left;width:30%;opacity:0.85;text-align:center;">
+        <span class="floatl"></span>
+    </div>
+    <div style="background-color:#F44336;padding:16px;float:right;width:30%;opacity:0.85;text-align:center;">
+        <span class="floatr"></span>
+    </div>
+    <br><br>
+    <hr style="clear:both;margin-bottom:15px;margin-top:32px">
 
-    <p><b>Примітка:</b> Значення <code class="w3-codespan">font-size</code> та <code class="w3-codespan">font-family</code> обов&#8217;язкові. Якщо одні з інших значень відсутні, використовується значення за замовчуванням.</p>
+    <h2>Властивість float</h2>
+    <p>Властивість <code class="w3-codespan">float</code> використовується для позиціонування та форматування змісту, наприклад, коли зображення розташовується зліва від тексту в контейнері.</p>
+    <p>Властивість <code class="w3-codespan">float</code> може мати одне із наступних значень:</p>
+    <ul>
+        <li><code class="w3-codespan">left</code> - Елемент плаває зліва від свого контейнера.</li>
+        <li><code class="w3-codespan">right</code> - Елемент плаває справа від свого контейнера.</li>
+        <li><code class="w3-codespan">none</code> - Елемент не плаває (буде відображатися саме там, де він зустрічається в тексті). Це за замовчуванням</li>
+        <li><code class="w3-codespan">inherit</code> - Елемент наслідує float-значення свого предка</li>
+    </ul>
+    <p>В найпростішому випадку властивість <code class="w3-codespan">float</code> можна використовувати для обтікання текстом зображень.</p>
+    <hr>
+    <h2>Приклад - float: right;</h2>
+    <p>В наступному прикладі показано, що зображення має розташовуватись (плавати) від тексту <strong>справа</strong>:</p>
+    <div class="w3-clear w3-border w3-padding">
+        <p><img src="../images/pineapple.jpg" alt="Властивість float. Обтікання справа" style="width:170px;height:170px;float:right;margin-left:15px;margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. <span class="w3-hide-small">Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</span></p>
+    </div>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Використовуйте <code class="w3-codespan">font</code> щоб задати кілька властивостей шрифту в одній об&#8217;яві:</p>
         <div class="w3-code notranslate cssHigh">
-            p.a {<br>&nbsp;font: 20px Arial, sans-serif;<br>}<br><br>p.b {<br>&nbsp;font: italic small-caps bold 12px/30px Georgia, serif;<br>}
-        </div>
-        <a target="_blank" href="../csstryit/trycss_font.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+            img {<br>&nbsp; float: right;<br>}</div>
+        <a target="_blank" href="../csstryit/trycss_layout_float.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <div class="w3-container w3-dark-grey w3-padding">
-        <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ!</h2>
-        <div class="w3-bar w3-margin-bottom">
-            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_font1" target="_blank">Вправа 1 &raquo;</a>
-            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_font2" target="_blank">Вправа 2 &raquo;</a>
-            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_font3" target="_blank">Вправа 3 &raquo;</a>
-            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_font4" target="_blank">Вправа 4 &raquo;</a>
-            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_font5" target="_blank">Вправа 5 &raquo;</a>
+    <h2>Приклад - float: left;</h2>
+    <p>В наступному прикладі показано, що зображення має розташовуватись (плавати) від тексту <strong>зліва</strong>:</p>
+    <div class="w3-clear w3-border w3-padding">
+        <p><img src="../images/pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;float:left;margin-right:15px;margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. <span class="w3-hide-small">Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</span></p>
+    </div>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            img {<br>&nbsp; float: left;<br>}
         </div>
+        <a target="_blank" href="../csstryit/trycss_layout_float2.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Всі CSS властивості шрифту</h2>
-    <table class="w3-table-all notranslate">
-        <tr>
-            <th style="width:25%">Властивість</th>
-            <th>Опис</th>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_font.html">font</a></td>
-            <td>Встановлює всі властивості шрифту в одній об&#8217;яві</td>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_font-family.html">font-family</a></td>
-            <td>Визначає сімейство шрифтів для тексту</td>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_font-size.html">font-size</a></td>
-            <td>Визначає розмір шрифту для тексту</td>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_font-style.html">font-style</a></td>
-            <td>Визначає стиль шрифту для тексту</td>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_font-variant.html">font-variant</a></td>
-            <td>Визначає, чи слід відображати текст дрібним шрифтом</td>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_weight.html">font-weight</a></td>
-            <td>Визначає товщину шрифту</td>
-        </tr>
-    </table>
+    <h2>Приклад - No float</h2>
+    <p>В наступному прикладі зображення буде відображатися саме там, де воно зустрічається в тексті (float: none;):</p>
+    <div class="w3-clear w3-border w3-padding">
+        <p><img src="../images/pineapple.jpg" alt="Pineapple" style="max-width:185px;width:50%;float:none;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. <span class="w3-hide-small">Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...</span></p>
+    </div>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            img {<br>&nbsp; float: none;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_layout_float_none.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Приклад - Елементи розташовуються поруч один з одним</h2>
+    <p>Зазвичай елементи div відображаються один над іншим. Однак, якщо застосовується <code class="w3-codespan">float: left</code>, то елементи розташовуються поруч один з одним:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            div {<br>&nbsp; float: left;<br>&nbsp; padding: 15px; <br>}<br><br>.div1 {<br>&nbsp; background: red;<br>}<br><br>.div2 {<br>&nbsp; background: yellow;<br>}<br><br>.div3 {<br>&nbsp; background: green;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_layout_float3.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="css_font_pairings.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="css_icons.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="css_overflow.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css_float_clear.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">

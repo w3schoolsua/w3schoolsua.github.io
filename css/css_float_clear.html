@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Шрифти. Скорочена властивість. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='CSS Шрифти. Скорочена властивість. Як скоротити код при написанні шрифтів? Щоб скоротити код, також можна вказати всі індивідуальні властивості шрифту в одній властивості. Всі властивості шрифту. Значення font-size та font-family обов&#8217;язкові. Якщо одні з інших значень відсутні, використовується значення за замовчуванням. Сучасний підручник по CSS3. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Макет. Clear та clearfix. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='CSS Макет. Clear та clearfix. Властивість clear може мати одне з наступних значень: none, left, right, both, inherit. Хак clearfix. Псевдоелемент ::after. Розташування елементів. Як зробити обтікання тексту або картинки? Сучасний підручник по CSS3. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -501,82 +501,73 @@
 </div>
             <a href='index.html'><img src='../svg/css3_icon1.svg' alt='CSS3. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='CSS3 для початківців. W3Schools українською' style='width: 90px'></a>
 <p class='w3-right'>
-    <a href="css_font_shorthand_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="css_float_clear_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>CSS <span class="color_h1">Шрифт. Скорочена властивість</span></h1>
+    <h1>CSS Макет <span class="color_h1"> - clear та clearfix</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="css_font_pairings.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="css_icons.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="css_float.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css_float_examples.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>CSS Скорочена властивість шрифту</h2>
-    <p>Щоб скоротити код, також можна вказати всі індивідуальні властивості шрифту в одній властивості.</p>
-    <p>Властивість <code class="w3-codespan">font</code> - це скорочена властивість для:</p>
+    <h2>Властивість clear</h2>
+    <p>Властивість <code class="w3-codespan">clear</code> визначає, які елементи можуть плавати поруч із очищеним елементом і з якого боку.</p>
+    <p>Властивість <code class="w3-codespan">clear</code> може мати одне з наступних значень:</p>
     <ul>
-        <li><code class="w3-codespan">font-style</code></li>
-        <li><code class="w3-codespan">font-variant</code></li>
-        <li><code class="w3-codespan">font-weight</code></li>
-        <li><code class="w3-codespan">font-size/line-height</code></li>
-        <li><code class="w3-codespan">font-family</code></li>
+        <li><code class="w3-codespan">none</code> - допускає плаваючи елементи з обох боків. Це за замовчуванням</li>
+        <li><code class="w3-codespan">left</code> - з лівого боку заборонені плаваючи елементи</li>
+        <li><code class="w3-codespan">right</code> - з правого боку заборонені плаваючи елементи</li>
+        <li><code class="w3-codespan">both</code> - плаваючи елементи заборонені з лівого і з правого боку</li>
+        <li><code class="w3-codespan">inherit</code> - елемент наслідує clear значення свого предка</li>
     </ul>
-
-    <p><b>Примітка:</b> Значення <code class="w3-codespan">font-size</code> та <code class="w3-codespan">font-family</code> обов&#8217;язкові. Якщо одні з інших значень відсутні, використовується значення за замовчуванням.</p>
+    <p>Найбільш розповсюджений спосіб використання властивості <code class="w3-codespan">clear</code> - після того, як ви застосували властивість <code class="w3-codespan">float</code> для елемента.</p>
+    <p>При очищенні float ви маєте співставити clear із float: якщо елемент переміщується вліво, ви маєте очистити його. Ваш float елемент буде продовжувати плавати, але clear-елемент з&#8217;явиться під ним на вебсторінці.</p>
+    <p>В наступному прикладі очищується float зліва. Це означає, що з лівого боку (від div) не допускаються плаваючи елементи:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Використовуйте <code class="w3-codespan">font</code> щоб задати кілька властивостей шрифту в одній об&#8217;яві:</p>
         <div class="w3-code notranslate cssHigh">
-            p.a {<br>&nbsp;font: 20px Arial, sans-serif;<br>}<br><br>p.b {<br>&nbsp;font: italic small-caps bold 12px/30px Georgia, serif;<br>}
+            div {<br>&nbsp;&nbsp;clear: left;<br>}
         </div>
-        <a target="_blank" href="../csstryit/trycss_font.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        <a target="_blank" href="../csstryit/trycss_layout_clear.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <div class="w3-container w3-dark-grey w3-padding">
-        <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ!</h2>
-        <div class="w3-bar w3-margin-bottom">
-            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_font1" target="_blank">Вправа 1 &raquo;</a>
-            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_font2" target="_blank">Вправа 2 &raquo;</a>
-            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_font3" target="_blank">Вправа 3 &raquo;</a>
-            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_font4" target="_blank">Вправа 4 &raquo;</a>
-            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_font5" target="_blank">Вправа 5 &raquo;</a>
+    <h2>Хак clearfix</h2>
+    <p>Якщо елемент вище, ніж елемент, що його містить, має float, він &quot;вийде за межі&quot; свого контейнера:</p>
+    <div class="w3-border w3-padding">
+        <div class="w3-row-padding" style="margin:0 -16px 32px">
+            <div class="w3-half">
+                <h3>Без Clearfix</h3>
+                <img src="../images/clearfix_prob.jpg" style="width:100%;" class="w3-image" alt="Елемент без Clearfix">
+            </div>
+            <div class="w3-half">
+                <h3>Із Clearfix</h3>
+                <img src="../images/clearfix_solution.jpg" style="width:100%;" class="w3-image" alt="Елемент із Clearfix">
+            </div>
         </div>
     </div>
-    <hr>
-    <h2>Всі CSS властивості шрифту</h2>
-    <table class="w3-table-all notranslate">
-        <tr>
-            <th style="width:25%">Властивість</th>
-            <th>Опис</th>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_font.html">font</a></td>
-            <td>Встановлює всі властивості шрифту в одній об&#8217;яві</td>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_font-family.html">font-family</a></td>
-            <td>Визначає сімейство шрифтів для тексту</td>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_font-size.html">font-size</a></td>
-            <td>Визначає розмір шрифту для тексту</td>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_font-style.html">font-style</a></td>
-            <td>Визначає стиль шрифту для тексту</td>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_font-variant.html">font-variant</a></td>
-            <td>Визначає, чи слід відображати текст дрібним шрифтом</td>
-        </tr>
-        <tr>
-            <td><a href="../cssref/pr_font_weight.html">font-weight</a></td>
-            <td>Визначає товщину шрифту</td>
-        </tr>
-    </table>
+    <p>Ми можемо додати <code class="w3-codespan">overflow: auto;</code> до елементу, що містить, щоб розв&#8217;язати цю проблему:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            .clearfix {<br>&nbsp;&nbsp;overflow: auto;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_layout_clearfix.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <p><code class="w3-codespan">overflow: auto</code> clearfix працює добре, поки ви можете контролювати свої поля та відступи (інакше ви можете побачити смуги прокрутки). Однак <strong>новий сучасний спосіб clearfix-хак</strong> більш безпечний, і наступний код використовується для більшості вебсторінок:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            .clearfix::after {<br>&nbsp;&nbsp;content: &quot;&quot;;<br>&nbsp;&nbsp;clear: both;<br>&nbsp;&nbsp;display: table;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_layout_clearfix2.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-note w3-panel">
+        <p>Ви дізнаєтесь більше про псевдоелемент <code class="w3-codespan">::after</code> в наступному розділі <a href="index.html">CSS Підручника</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
+    </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="css_font_pairings.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="css_icons.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="css_float.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css_float_examples.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
