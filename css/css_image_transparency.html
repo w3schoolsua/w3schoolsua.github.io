@@ -12,13 +12,18 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Списки. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='CSS Списки. Як стилізуються списки на вебсторінках? Впорядковані та невпорядковані списки. HTML-списки та CSS-властивості списків. Різні маркери списку. Стилізація списків. Зображення як маркер. Як видалити налаштування за замовчуванням? Скорочена властивість. Список стилів з кольорами. Приклади. Сучасний підручник по CSS3. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Opacity / Transparency. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='CSS Opacity / Transparency. CSS Властивість Opacity / Transparency. Прозорість та непрозорість зображень. Як зробити елемент прозорим або напівпрозорим? Ефект прозорості при наведенні курсора. Прозорий блок. Прозорість з використанням RGBA. Текст в прозорому полі. Вправи. Сучасний підручник по CSS3. Уроки для початківців. W3Schools українською'>
 <style>
-    ol#ex1,ol#ex4 {background: #ff9999;padding: 20px;}
-    ul#ex2,ul#ex5 {background: #3399ff;padding: 20px;}
-    ol#ex1 li,ol#ex4 li {background: #ffe5e5;padding: 5px;margin-left: 35px;}
-    ul#ex2 li,ul#ex5 li {background: #cce5ff;margin: 5px;}
+    #klem1,#klem2{opacity:0.4;filter:alpha(opacity=40); /* For IE8 and earlier */}
+    #klem1:hover,#klem2:hover {opacity:1.0;filter:alpha(opacity=100); /* For IE8 and earlier */}
+    div.background {background: url(../images/klematis.jpg) repeat; border: 2px solid black;}
+    div.transbox {margin: 30px;background-color: #fff;border: 1px solid black; /* for IE */ filter:alpha(opacity=60); /* CSS3 standard */ opacity:0.6; }
+    div.transbox p {margin: 5%;font-weight: bold;color: #000;}
+    .imgopac2 {opacity: 0.5;filter: alpha(opacity=50); /* For IE8 and earlier */}
+    .imgopac2:hover {opacity: 1.0;filter: alpha(opacity=100); /* For IE8 and earlier */}
+    .imgopac {opacity: 1.0;filter: alpha(opacity=100); /* For IE8 and earlier */}
+    .imgopac:hover {opacity: 0.5;filter: alpha(opacity=50); /* For IE8 and earlier */}
 </style>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
@@ -507,209 +512,163 @@
 </div>
             <a href='index.html'><img src='../svg/css3_icon1.svg' alt='CSS3. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='CSS3 для початківців. W3Schools українською' style='width: 90px'></a>
 <p class='w3-right'>
-    <a href="css_list_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="css_image_transparency_en.html" title='Перейти на англійську мову'>En</a>
 </p>
-  <article>
-      <h1>CSS <span class="color_h1">Списки</span></h1>
-      <div class="w3-clear nextprev">
-          <a class="w3-left w3-btn" href="css_link.html">&#10094; Prev</a>
-          <a class="w3-right w3-btn" href="css_table.html">Next &#10095;</a>
-      </div>
-      <hr>
-      <div class="w3-row">
-          <div class="w3-half w3-container">
-              <h2>Невпорядковані списки:</h2>
-              <ul style="list-style:circle">
-                  <li>Coffee</li>
-                  <li>Tea</li>
-                  <li>Coca Cola</li>
-              </ul>
-              <ul style="list-style:square">
-                  <li>Coffee</li>
-                  <li>Tea</li>
-                  <li>Coca Cola</li>
-              </ul>
-          </div>
-          <div class="w3-half w3-container">
-              <h2>Впорядковані списки:</h2>
-              <ol style="list-style:decimal">
-                  <li>Coffee</li>
-                  <li>Tea</li>
-                  <li>Coca Cola</li>
-              </ol>
-              <ol style="list-style:upper-roman">
-                  <li>Coffee</li>
-                  <li>Tea</li>
-                  <li>Coca Cola</li>
-              </ol>
-          </div>
-      </div>
-      <hr>
-      <h2>HTML-списки та CSS-властивості списків</h2>
-      <p>В <strong>HTML</strong> є два основних типи списків:</p>
-      <ul>
-          <li>невпорядковані списки (<code class="w3-codespan">&lt;ul&gt;</code>) - елементи списку помічені маркерами</li>
-          <li>впорядковані списки (<code class="w3-codespan">&lt;ol&gt;</code>) - елементи списку помічені цифрами або буквами</li>
-      </ul>
-      <p>Властивості <strong>CSS</strong> списку дозволяють вам:</p>
-      <ul>
-          <li>Встановити різні маркери елементів списку для впорядкованих списків</li>
-          <li>Встановити різні маркери елементів списку для невпорядкованих списків</li>
-          <li>Встановити зображення як маркер елемента списку</li>
-          <li>Додати кольори фону в списки та елементи списку</li>
-      </ul>
-      <hr>
-      <h2>Різні маркери списку</h2>
-      <p>Властивість <code class="w3-codespan">list-style-type</code> визначає тип маркера елемента списку.</p>
-      <p>В наступному прикладі показані деякі з доступних маркерів елементів списку:</p>
-      <div class="w3-example">
-          <h3>Приклад</h3>
-          <div class="w3-code notranslate cssHigh">
-              ul.a {<br>&nbsp;&nbsp;list-style-type: circle;<br>}<br>
-              <br>ul.b {<br>&nbsp; list-style-type: square;<br>}<br>
-              <br>ol.c {<br>&nbsp; list-style-type: upper-roman;<br>}<br>
-              <br>ol.d {<br>&nbsp; list-style-type: lower-alpha;<br>}
-          </div>
-          <a target="_blank" href="../csstryit/trycss_list-style-type_ex.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-      </div>
-      <p><b>Примітка</b>: Деякі значення для невпорядкованих списків, а деякі для впорядкованих списків.</p>
-      <hr>
-
-      <h2>Зображення як маркер елемента списку</h2>
-      <p>Властивість <code class="w3-codespan">list-style-image</code> визначає зображення як маркер елемента списку:</p>
-      <div class="w3-example">
-          <h3>Приклад</h3>
-          <div class="w3-code notranslate cssHigh">
-              ul {<br>&nbsp; list-style-image: url('sqpurple.gif');<br>}
-          </div>
-          <a target="_blank" href="../csstryit/trycss_list-style-image.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-      </div>
-      <hr>
-
-      <h2>Розташуйте маркери елементів списку</h2>
-      <p>Властивість <code class="w3-codespan">list-style-position</code> визначає положення маркерів елемента списку (марковані пункти).</p>
-      <p>&quot;<code class="w3-codespan">list-style-position: outside;</code>&quot; означає, що маркери будуть поза елементом списку. Початок кожного рядка елемента списку буде вирівняно по вертикалі. Це за замовчуванням:</p>
-      <ul style="list-style-position:outside;width:25%;">
-          <li style="border:1px solid #000;">Кава - <span style="display: inline !important; float: none; background-color: transparent; color: rgb(0, 0, 0); font-family: 'Times New Roman', serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; list-style-position: inside; orphans: 2; text-align: left; text-decoration: none; text-indent: 0; text-transform: none; -webkit-text-stroke-width: 0; white-space: normal; word-spacing: 0;">Зварений напій, приготовлений зі смажених кавових зерен...</span></li>
-          <li style="border:1px solid #000;border-top:0;">Чай</li>
-          <li style="border:1px solid #000;border-top:0;">Coca-cola</li>
-      </ul>
-      <p>&quot;<code class="w3-codespan">list-style-position: inside;</code>&quot; означає, що маркери будуть всередині елемента списку. Оскільки він є частиною елемента списку, він буде частиною тексту та вставить текст на початку:</p>
-      <ul style="list-style-position:inside;width:25%;">
-          <li style="border:1px solid #000;">Кава - <span style="display: inline !important; float: none; background-color: transparent; color: rgb(0, 0, 0); font-family: 'Times New Roman', serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; list-style-position: inside; orphans: 2; text-align: left; text-decoration: none; text-indent: 0; text-transform: none; -webkit-text-stroke-width: 0; white-space: normal; word-spacing: 0;">Зварений напій, приготовлений зі смажених кавових зерен...</span></li>
-          <li style="border:1px solid #000;border-top:0;">Чай</li>
-          <li style="border:1px solid #000;border-top:0;">Coca-cola</li>
-      </ul>
-
-      <div class="w3-example">
-          <h3>Приклад</h3>
-          <div class="w3-code notranslate cssHigh">
-              ul.a {<br>&nbsp; list-style-position: outside;<br>}<br><br>ul.b {<br>&nbsp;&nbsp;list-style-position: inside;<br>}
-          </div>
-          <a target="_blank" href="../csstryit/trycss_list-style-position.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-      </div>
-      <hr>
-
-      <h2>Видалити налаштування за замовчуванням</h2>
-      <p>Властивість <code class="w3-codespan">list-style-type:none</code> також може бути використано для видалення міток/маркерів. Зверніть увагу, що в списку також є поля за замовчуванням та відступи. Щоб видалити їх, додайте <code class="w3-codespan">margin:0</code> та <code class="w3-codespan">padding:0</code> до <code class="w3-codespan">&lt;ul&gt;</code> або <code class="w3-codespan">&lt;ol&gt;</code>:</p>
-      <div class="w3-example">
-          <h3>Приклад</h3>
-          <div class="w3-code notranslate cssHigh">
-              ul {<br>&nbsp; list-style-type: none;<br>&nbsp; margin: 0;<br>&nbsp; padding: 0;<br>}
-          </div>
-          <a target="_blank" href="../csstryit/trycss_list-style_none.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-      </div>
-      <hr>
-
-      <h2>Список - Скорочена властивість</h2>
-      <p>Властивість <code class="w3-codespan">list-style</code> є скороченою властивістю. Використовується для встановлення всіх властивостей списку в одній об&#8217;яві:</p>
-      <div class="w3-example">
-          <h3>Приклад</h3>
-          <div class="w3-code notranslate cssHigh">
-              ul {<br>&nbsp;list-style: square inside url(&quot;sqpurple.gif&quot;);<br>}
-          </div>
-          <a target="_blank" href="../csstryit/trycss_list-style.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-      </div>
-
-      <p>При використанні скороченої властивості порядок значень властивостей:</p>
-      <ul>
-          <li><code class="w3-codespan">list-style-type</code> (якщо вказано list-style-image, значення цієї властивості буде відображатися, якщо зображення з якоїсь причини не може бути відображено)</li>
-          <li><code class="w3-codespan">list-style-position</code> (визначає, чи повинні маркери елементів списку з&#8217;являтися всередині або поза потоком контенту)</li>
-          <li><code class="w3-codespan">list-style-image</code> (визначає зображення як маркер елемента списку)</li>
-      </ul>
-      <p>Якщо одні зі значень властивості вище відсутнє, буде вставлено значення за замовчуванням для відсутньої властивості, якщо вона є.</p>
-      <hr>
-
-      <h2>Список стилів з кольорами</h2>
-      <p>Ми також можемо стилізувати списки за допомогою кольорів, щоб вони вигляділи дещо цікавіше.</p>
-      <p>Все, що додано в тег <code class="w3-codespan">&lt;ol&gt;</code> або <code class="w3-codespan">&lt;ul&gt;</code> впливає на весь список, в той час як властивості, додані в тег <code class="w3-codespan">&lt;li&gt;</code>, впливають на окремі елементи списку:</p>
-      <div class="w3-example">
-          <h3>Приклад</h3>
-          <div class="w3-code notranslate cssHigh">
-              ol {<br>&nbsp; background: #ff9999;<br>&nbsp; padding: 20;<br>}<br><br>ul {<br>&nbsp; background: #3399ff;<br>&nbsp; padding: 20;<br>}<br><br>ol li {<br>&nbsp; background: #ffe5e5;<br>&nbsp; padding: 5px;<br>&nbsp; margin-left: 35px;<br>}<br><br>ul li {<br>&nbsp; background: #cce5ff;<br>&nbsp; margin: 5px;<br>}
-          </div>
-          <p>Результат:</p>
-          <div class="w3-padding w3-white notranslate">
-              <ol id="ex4">
-                  <li>Кава</li>
-                  <li>Чай</li>
-                  <li>Coca Cola</li>
-              </ol>
-              <ul id="ex5">
-                  <li>Кава</li>
-                  <li>Чай</li>
-                  <li>Coca Cola</li>
-              </ul>
-          </div>
-          <a target="_blank" href="../csstryit/trycss_list-style_colors.html" class="w3-btn w3-margin-bottom w3-margin-top">Спробуйте самі &raquo;</a>
-      </div>
-      <hr>
-
-      <h2>Більше прикладів</h2>
-      <p><a target="_blank" href="../csstryit/trycss_list-style-red-border.html">Користувальницький список з червоною лівою межею</a><br>Цей приклад демонструє, як створити список з червоною лівою межею.</p>
-      <p><a target="_blank" href="../csstryit/trycss_list-style-border.html">Обмежений список на всю ширину</a><br>Цей приклад демонструє, як створити обмежений список без маркерів.</p>
-      <p><a target="_blank" href="../csstryit/trycss_list-style-type_all.html">Всі різні маркери елементів списку для списків</a><br>Цей приклад демонструє всі різні маркери елементів списку в CSS.</p>
-      <hr>
-      <div class="w3-container w3-dark-grey w3-padding">
-          <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ!</h2>
-          <div class="w3-bar w3-margin-bottom">
-              <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_list1" target="_blank">Вправа 1 »</a>
-              <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_list2" target="_blank">Вправа 2 »</a>
-              <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_list3" target="_blank">Вправа 3 »</a>
-              <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_list4" target="_blank">Вправа 4 »</a>
-          </div>
-      </div>
-      <hr>
-
-      <h2>Всі властивості CSS Списку</h2>
-      <table class="w3-table-all notranslate">
-          <tr>
-              <th style="width:20%">Властивість</th>
-              <th>Опис</th>
-          </tr>
-          <tr>
-              <td><a href="../cssref/pr_list-style.html">list-style</a></td>
-              <td>Встановлює всі властивості для списку в одній об&#8217;яві</td>
-          </tr>
-          <tr>
-              <td><a href="../cssref/pr_list-style-image.html">list-style-image</a></td>
-              <td>Визначає зображення як маркер елемента списку</td>
-          </tr>
-          <tr>
-              <td><a href="../cssref/pr_list-style-position.html">list-style-position</a></td>
-              <td>Визначає положення маркерів елемента списку (точки маркерів)</td>
-          </tr>
-          <tr>
-              <td><a href="../cssref/pr_list-style-type.html">list-style-type</a></td>
-              <td>Визначає тип маркера елемента списку</td>
-          </tr>
-      </table>
-      <hr>
-      <div class="w3-clear nextprev">
-          <a class="w3-left w3-btn" href="css_link.html">&#10094; Prev</a>
-          <a class="w3-right w3-btn" href="css_table.html">Next &#10095;</a>
-      </div>
-  </article>
+<article>
+    <h1>CSS <span class="color_h1">Opacity / Transparency</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="css_pseudo_elements.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css_navbar.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro"><strong>Властивість <code class="w3-codespan">opacity</code> визначає непрозорість / прозорість елемента</strong>.</p>
+    <hr>
+    <h2>Прозоре зображення</h2>
+    <p>Властивість <code class="w3-codespan">opacity</code> може приймати значення від 0,0 до 1,0. Чим нижче значення, тим прозоріше:</p>
+    <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-third w3-center">
+            <img src="../images/img_forest.jpg" alt="Прозоре зображення" style="width:100%;opacity:0.2;">
+            <p>opacity 0.2</p>
+        </div>
+        <div class="w3-third w3-center">
+            <img src="../images/img_forest.jpg" alt="Прозоре зображення" style="width:100%;opacity:0.5">
+            <p>opacity 0.5</p>
+        </div>
+        <div class="w3-third w3-center">
+            <img src="../images/img_forest.jpg" alt="Прозоре зображення" style="width:100%;">
+            <p>opacity 1<br>(за замовчуванням)</p>
+        </div>
+    </div>
+    <p><b>Примітка:</b> IE8 та більш ранні версії використовують <code class="w3-codespan">filter:alpha(opacity=x)</code>. Значення x може приймати значення від 0 до 100. Більш низьке значення робить елемент більш прозорим.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            img {<br>&nbsp;&nbsp;opacity: 0.5;<br>&nbsp;&nbsp;filter: alpha(opacity=50); /* Для IE8 і раніших */<br>}</div>
+        <a target="_blank" href="../csstryit/trycss_image_opacity.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Ефект прозорості при наведенні курсора</h2>
+    <p>Властивість <code class="w3-codespan">opacity</code> часто використовується разом із селектором <code class="w3-codespan">:hover</code> для зміни непрозорості при наведенні курсора:</p>
+    <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-third w3-center">
+            <img src="../images/img_lights.jpg" alt="Ефект прозорості" style="width:100%;" class="imgopac2">
+        </div>
+        <div class="w3-third w3-center">
+            <img src="../images/img_mountains.jpg" alt="Ефект прозорості" style="width:100%;" class="imgopac2">
+        </div>
+        <div class="w3-third w3-center">
+            <img src="../images/img_5terre_css.jpg" alt="Ефект прозорості" style="width:100%;" class="imgopac2">
+        </div>
+    </div>
+    <div class="w3-example" style="margin-bottom:24px;">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            img {<br>&nbsp; opacity: 0.5;<br>&nbsp; filter: alpha(opacity=50); /* Для IE8 и ранее */<br>}<br><br>img:hover {<br>&nbsp;&nbsp;opacity: 1.0;<br>&nbsp; filter: alpha(opacity=100); /* Для IE8 и ранее */<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_image_transparency.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <h3>Пояснення прикладу</h3>
+    <p>Перший блок CSS схожий на код в Прикладі 1. Крім того, ми додали, що має відбуватись, коли користувач наводить курсор на одне із зображень. В цьому випадку ми хочемо, щоб зображення НЕ було прозорим, коли користувач наводить на нього курсор. Значення в CSS для цього <code class="w3-codespan">opacity:1;</code>.</p>
+    <p>Коли вказівник миші віддаляється від зображення, зображення знову стає прозорим.</p>
+    <p>Приклад зворотнього ефекту при наведенні курсора:</p>
+    <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-third w3-center">
+            <img src="../images/img_lights.jpg" alt="Ефект при наведении курсора" style="width:100%;" class="imgopac">
+        </div>
+        <div class="w3-third w3-center">
+            <img src="../images/img_mountains.jpg" alt="Ефект при наведении курсора" style="width:100%;" class="imgopac">
+        </div>
+        <div class="w3-third w3-center">
+            <img src="../images/img_5terre_css.jpg" alt="Ефект при наведении курсора" style="width:100%;" class="imgopac">
+        </div>
+    </div>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            img:hover {<br>&nbsp;&nbsp;opacity: 0.5;<br>&nbsp; filter: alpha(opacity=50); /* Для IE8 и ранее */<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_image_transparency2.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Прозорий блок</h2>
+    <p>При використанні властивості <code class="w3-codespan">opacity</code> для додавання прозорості на фон елемента всі його дочірні елементи успадковують однакову прозорість. Це може ускладнити читання тексту всередині повністю прозорого елементу:</p>
+    <div class="w3-cell-row">
+        <div class="w3-cell w3-mobile w3-center">
+            <div style="background-color:#4CAF50;opacity:1;padding:50px;color:black"><p>opacity 1</p></div>
+        </div>
+        <div class="w3-cell w3-mobile w3-center">
+            <div style="background-color:#4CAF50;opacity:0.6;padding:50px;color:black"><p>opacity 0.6</p></div>
+        </div>
+        <div class="w3-cell w3-mobile w3-center">
+            <div style="background-color:#4CAF50;opacity:0.3;padding:50px;color:black"><p>opacity 0.3</p></div>
+        </div>
+        <div class="w3-cell w3-mobile w3-center">
+            <div style="background-color:#4CAF50;opacity:0.1;padding:50px;color:black"><p>opacity 0.1</p></div>
+        </div>
+    </div>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            div {<br>&nbsp;&nbsp;opacity: 0.3;<br>&nbsp;&nbsp;filter: alpha(opacity=30); /* Для IE8 і більш ранніх */<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_opacity_box.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Прозорість з використанням RGBA</h2>
+    <p>Якщо ви не хочете застосовувати непрозорість до дочірніх елементів, як в прикладі вище, використовуйте кольорові значення <strong>RGBA</strong>. В наступному прикладі задається прозорість кольору фону, а не текста:</p>
+    <div class="w3-cell-row">
+        <div class="w3-cell w3-mobile w3-center">
+            <div style="background:rgb(76, 175, 80);padding:50px;color:black"><p>100% opacity</p></div>
+        </div>
+        <div class="w3-cell w3-mobile w3-center">
+            <div style="background:rgba(76, 175, 80,0.6);padding:50px;color:black"><p>60% opacity</p></div>
+        </div>
+        <div class="w3-cell w3-mobile w3-center">
+            <div style="background:rgba(76, 175, 80,0.3);padding:50px;color:black"><p>30% opacity</p></div>
+        </div>
+        <div class="w3-cell w3-mobile w3-center">
+            <div style="background:rgba(76, 175, 80,0.1);padding:50px;color:black"><p>10% opacity</p></div>
+        </div>
+    </div>
+    <p>Із розділу <a href="css_colors.html">CSS Кольори</a> ви дізнались, що в якості значення кольору можна використовувати RGB. В додаток до RGB можна використовувати значення кольору RGB з альфа-каналом (RGBA), яке визначає непрозорість для кольору.</p>
+    <p>Значення кольору RGBA визначається за допомогою: rgba (червоний, зелений, синій, <em>альфа</em>). Параметр <em>alpha</em> - це число від 0,0 (повністю прозоре) до 1,0 (повністю непрозоре).</p>
+    <p><b>Порада.</b> Докладніше про кольори RGBA ви можете дізнатись в розділі <a href="css3_colors.html">CSS Кольори</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            div {<br>&nbsp; background: rgba(76, 175, 80, 0.3) /* Зелений фон із 30% прозорості */<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_opacity_box2.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Текст в прозорому полі</h2>
+    <div class="background">
+        <div class="transbox">
+            <p>Це деякий текст, який розміщується в прозорому блоці.</p>
+        </div>
+    </div>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>div.background {<br>&nbsp; background: url(klematis.jpg) repeat;<br>&nbsp; border: 2px solid black;<br>}<br><br>div.transbox {<br>&nbsp; margin: 30px;<br>&nbsp; background-color: #fff;<br>&nbsp; border: 1px solid black;<br>&nbsp;&nbsp;opacity: 0.6;<br>&nbsp;&nbsp;filter: alpha(opacity=60);&nbsp;/* Для IE8 і більш ранніх */<br>}<br><br>div.transbox p {<br>&nbsp;&nbsp;margin: 5%;<br>&nbsp;&nbsp;font-weight: bold;<br>&nbsp; color: #000;<br>}<br>&lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;div class=&quot;background&quot;&gt;<br>&nbsp; &lt;div class=&quot;transbox&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;p&gt;Це деякий текст, який розміщується в прозорому блоці.&lt;/p&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+        </div>
+        <a target="_blank" href="../csstryit/trycss_transparency.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Спочатку ми створюємо елемент <code class="w3-codespan">&lt;div&gt;</code> (class=&quot;background&quot;) з фоновим зображенням і межею. Потім створюємо ще один <code class="w3-codespan">&lt;div&gt;</code> (class=&quot;transbox&quot;) всередині першого <code class="w3-codespan">&lt;div&gt;</code>. &lt;div class=&quot;transbox&quot;&gt; мають колір фона та межу - div прозорий. Всередині прозорого <code class="w3-codespan">&lt;div&gt;</code> додаємо текст всередині елемента <code class="w3-codespan">&lt;p&gt;</code>.</p>
+    <hr>
+    <div class="w3-container w3-dark-grey w3-padding">
+        <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ!</h2>
+        <div class="w3-bar w3-margin-bottom">
+            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_image_transparency1" target="_blank" rel="nofollow">Вправа 1 &raquo;</a>
+            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_image_transparency2" target="_blank" rel="nofollow">Вправа 2 &raquo;</a>
+        </div>
+    </div>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="css_pseudo_elements.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css_navbar.html">Next &#10095;</a>
+    </div>
+</article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
