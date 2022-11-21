@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Tooltip. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='CSS Tooltip. Basic Tooltip. Positioning Tooltips. Tooltip Arrows. Fade In Tooltips (Animation). Examples. Lessons for beginners. W3Schools in English'>
+<style>
+    .tooltip {position: relative;display: inline-block;border-bottom: 1px dotted #ccc; cursor: help; color: #006080;}
+    .tooltip .tooltiptext {visibility: hidden;position: absolute;width: 120px;background-color: #555;color: #fff;text-align: center;padding: 5px 0;border-radius: 6px;z-index: 1;opacity: 0;transition: opacity .6s;}
+    .tooltip:hover .tooltiptext {visibility: visible;opacity: 1;}
+    .tooltip .tooltiptext2 {visibility: hidden;position: absolute;width: 120px;background-color: #555;color: #fff;text-align: center;padding: 5px 0;border-radius: 6px;z-index: 1;}
+    .tooltip:hover .tooltiptext2 {visibility: visible;}
+    .tooltip-right {top: -5px;left: 125%;}
+    .tooltip-right2 {top: -5px;left: 105%;}
+    .tooltip-right::after {content: "";position: absolute;top: 50%;right: 100%;margin-top: -5px;border-width: 5px;border-style: solid;border-color: transparent #555 transparent transparent;}
+    .tooltip-bottom {top: 135%;left: 50%;margin-left: -60px;}
+    .tooltip-bottom2 {top: 125%;left: 50%;margin-left: -60px;}
+    .tooltip-bottom::after {content: "";position: absolute;bottom: 100%;left: 50%;margin-left: -5px;border-width: 5px;    border-style: solid;border-color: transparent transparent #555 transparent;}
+    .tooltip-top {bottom: 125%;left: 50%;margin-left: -60px;}
+    .tooltip-top2 {bottom: 115%;left: 50%;margin-left: -60px;}
+    .tooltip-top::after {content: "";position: absolute;top: 100%;left: 50%;margin-left: -5px;border-width: 5px;    border-style: solid;border-color: #555 transparent transparent transparent;}
+    .tooltip-left {top: -5px;bottom:auto;right: 128%;}
+    .tooltip-left2 {top: -5px;bottom:auto;right: 105%;}
+    .tooltip-left::after {content: "";position: absolute;top: 50%;left: 100%;margin-top: -5px;border-width: 5px;    border-style: solid;border-color: transparent transparent transparent #555;}
+    .tooltip .tooltiptext-bottomarrow {visibility: hidden;width: 120px;background-color: #111;color: #fff;text-align: center;border-radius: 6px;padding: 5px 0;position: absolute;z-index: 1;bottom: 130%;left: 50%;margin-left: -60px;}
+    .tooltip .tooltiptext-bottomarrow::after {content: "";position: absolute;top: 100%;left: 50%;margin-left: -5px; border-width: 5px;border-style: solid;border-color: black transparent transparent transparent;}
+    .tooltip:hover .tooltiptext-bottomarrow {visibility: visible;}
+    .tooltip .tooltiptext-toparrow {visibility: hidden;width: 120px;background-color: #111;color: #fff;text-align: center;border-radius: 6px;padding: 5px 0;position: absolute;z-index: 1;top: 150%;left: 50%;margin-left: -60px;}
+    .tooltip .tooltiptext-toparrow::after {content: "";position: absolute;bottom: 100%;left: 50%;margin-left: -5px;border-width: 5px;border-style: solid;border-color: transparent transparent black transparent;}
+    .tooltip:hover .tooltiptext-toparrow {visibility: visible;}
+    .tooltip .tooltiptext-leftarrow {visibility: hidden;width: 120px;background-color: #111;color: #fff;text-align:center;border-radius: 6px;padding: 5px 0;position: absolute;z-index: 1;top: -5px;left: 110%;}
+    .tooltip .tooltiptext-leftarrow::after {content: "";position: absolute;top: 50%;right: 100%;margin-top: -5px;border-width: 5px;border-style: solid;border-color: transparent black transparent transparent;}
+    .tooltip:hover .tooltiptext-leftarrow {visibility: visible;}
+    .tooltip .tooltiptext-rightarrow {visibility: hidden;width: 120px;background-color: #111;color: #fff;text-align: center;border-radius: 6px;padding: 5px 0;position: absolute;z-index: 1;top: -5px;right: 110%;}
+    .tooltip .tooltiptext-rightarrow::after {content: "";position: absolute;top: 50%;left: 100%;margin-top: -5px;border-width: 5px;border-style: solid;border-color: transparent transparent transparent black;}
+    .tooltip:hover .tooltiptext-rightarrow {visibility: visible;}
+</style>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_en.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_en.html' title='HTML Tutorial'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_en.html' title='CSS Tutorial'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_en.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_en.html' title='SQL Tutorial'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index_en.html' title='Python Tutorial'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index_en.html' title='PHP Tutorial'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_en.html' title='How To'>HOW TO</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_en.html' title='W3.CSS Tutorial'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index_en.html' title='jQuery Tutorial'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index_en.html' title='XML Tutorial'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index_en.html' title='Java Tutorial'>JAVA</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='More tutorials'>More <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Search'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Dark theme'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Download books for free from Google drive'>Books</a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class="w3-bar-item w3-button w3-right" id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style="display:none;">
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML и CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_en.html'>Learn HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_en.html'>Learn CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_en.html'>Learn RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html'>Learn Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_en.html'>Learn W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>Learn Colors</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_en.html'>Learn Icons</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_en.html'>Learn Graphics</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_en.html'>Learn SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_en.html'>Learn Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_en.html'>Learn How To</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_en.html'>Learn Sass</a>
+                    <div class="w3-hide-large w3-hide-small">
+                        <h3>Data Analytics</h3>
+                        <a class='w3-bar-item w3-button' href="../ai/index_en.html">Learn AI</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_en.html'>Learn JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_en.html'>Learn jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_en.html'>Learn React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_en.html'>Learn AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_en.html'>Learn JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_en.html'>Learn AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_en.html'>Learn AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_en.html'>Learn W3.JS</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index_en.html'>Learn Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_en.html'>Learn Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_en.html'>Learn C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_en.html'>Learn C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_en.html'>Learn C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_en.html'>Learn R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_en.html'>Learn Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_en.html'>Learn Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_en.html'>Learn Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_en.html'>Learn TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_en.html'>Learn SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_en.html'>Learn MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_en.html'>Learn PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_en.html'>Learn ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_en.html'>Learn Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_en.html'>Learn Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_en.html'>Learn Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_en.html'>Learn GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_en.html'>Learn AWS Cloud</a>
+                    <h3>Web Building</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_en.html'>Where To Start</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_en.html'>Web Templates</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_en.html'>Web Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_en.html'>Code Editor</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_en.html'>Web Development</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_en.html'>Cyber Security</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_en.html'>Accessibility</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Typing Speeds Test</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Code Game</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Data Analytics</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_en.html'>Learn AI</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style="position:absolute;right:0;font-weight:bold;">&times;</span>
+            <div class='w3-row-padding' style="padding:24px 48px">
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_en.html'>HTML Tag Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_en.html'>HTML Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_en.html'>HTML Event Reference</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>HTML Color Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_en.html'>HTML Attribute Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_en.html'>HTML Canvas Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_en.html'>HTML SVG Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_en.html'>Google Maps Reference</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_en.html'>CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_en.html'>CSS Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_en.html'>CSS Selector Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_en.html'>W3.CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_en.html'>Icons Reference</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_en.html'>Sass Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>JavaScript Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>HTML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_en.html'>AngularJS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_en.html'>AppML Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_en.html'>W3.JS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_en.html'>JS Ready Scripts</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_en.html'>Python Reference</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_en.html'>Java Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_en.html'>SQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_en.html'>MySQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_en.html'>PHP Reference</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_en.html'>ASP Reference</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_en.html'>XML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_en.html'>XML Http Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_en.html'>XSLT Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_en.html'>XML Schema Reference</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Character Sets</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_en.html'>HTML Character Sets</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_en.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_en.html'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_en.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_en.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_en.html'>HTML Symbols</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_en.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Exercises</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_en.html'>HTML Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_en.html'>CSS Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_en.html'>JavaScript Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_en.html'>SQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_en.html'>MySQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_en.html'>PHP Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_en.html'>Python Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_en.html'>NumPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_en.html'>Pandas Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_en.html'>SciPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_en.html'>jQuery Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_en.html'>Java Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_en.html'>Bootstrap Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_en.html'>Bootstrap 4 Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_en.html'>C++ Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_en.html'>C# Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_en.html'>R Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_en.html'>Kotlin Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_en.html'>Go Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_en.html'>Git Exercises</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Quizzes</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_en.html' target='_top'>HTML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_en.html' target='_top'>CSS Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_en.html' target='_top'>JavaScript Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_en.html' target='_top'>SQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_en.html' target='_top'>MySQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_en.html' target='_top'>PHP Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_en.html' target='_top'>Python Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_en.html' target='_top'>NumPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_en.html' target='_top'>Pandas Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_en.html' target='_top'>SciPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_en.html' target='_top'>jQuery Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_en.html' target='_top'>Java Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_en.html' target='_top'>Bootstrap Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_en.html' target='_top'>Bootstrap 4 Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_en.html' target='_top'>C++ Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_en.html' target='_top'>C# Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_en.html' target='_top'>R Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_en.html' target='_top'>XML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_en.html' target='_top'>Cyber Security Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_en.html' target='_top'>Accessibility Quiz</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Certificates</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_en.html' target='_top'>HTML Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_en.html' target='_top'>CSS Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_en.html' target='_top'>JavaScript Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_en.html' target='_top'>SQL Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_en.html' target='_top'>PHP Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_en.html' target='_top'>Python Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_en.html' target='_top'>jQuery Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_en.html' target='_top'>Bootstrap Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_en.html' target='_top'>XML Certificate</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu sidebar -->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div class='w3-light-grey' id='leftmenuinnerinner'>
+            <h2 class='left'><span class='left_h2'>CSS</span> Tutorial</h2>
+            <a target='_top' href='index_en.html'>CSS HOME</a>
+            <a target='_top' href='css_intro_en.html'>CSS Introduction</a>
+            <a target='_top' href='css_syntax_en.html'>CSS Syntax</a>
+            <a target='_top' href='css_selectors_en.html'>CSS Selectors</a>
+            <a target='_top' href='css_howto_en.html'>CSS How To</a>
+            <a target='_top' href='css_comments_en.html'>CSS Comments</a>
+            <a target='_top' href='css_colors_en.html'>CSS Colors</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css_colors_en.html'>Colors</a>
+                <a target='_top' href='css_colors_rgb_en.html'>RGB</a>
+                <a target='_top' href='css_colors_hex_en.html'>HEX</a>
+                <a target='_top' href='css_colors_hsl_en.html'>HSL</a>
+            </div>
+            <a target='_top' href='css_background_en.html'>CSS Backgrounds</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css_background_en.html'>Background Color</a>
+                <a target='_top' href='css_background_image_en.html'>Background Image</a>
+                <a target='_top' href='css_background_repeat_en.html'>Background Repeat</a>
+                <a target='_top' href='css_background_attachment_en.html'>Background Attachment</a>
+                <a target='_top' href='css_background_shorthand_en.html'>Background Shorthand</a>
+            </div>
+            <a target='_top' href='css_border_en.html'>CSS Borders</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css_border_en.html'>Borders</a>
+                <a target='_top' href='css_border_width_en.html'>Border Width</a>
+                <a target='_top' href='css_border_color_en.html'>Border Color</a>
+                <a target='_top' href='css_border_sides_en.html'>Border Sides</a>
+                <a target='_top' href='css_border_shorthand_en.html'>Border Shorthand</a>
+                <a target='_top' href='css_border_rounded_en.html'>Rounded Borders</a>
+            </div>
+            <a target='_top' href='css_margin_en.html'>CSS Margins</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css_margin_en.html'>Margins</a>
+                <a target='_top' href='css_margin_collapse_en.html'>Margin Collapse</a>
+            </div>
+            <a target='_top' href='css_padding_en.html'>CSS Padding</a>
+            <a target='_top' href='css_dimension_en.html'>CSS Height/Width</a>
+            <a target='_top' href='css_boxmodel_en.html'>CSS Box Model</a>
+            <a target='_top' href='css_outline_en.html'>CSS Outline</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css_outline_en.html'>Outline</a>
+                <a target='_top' href='css_outline_width_en.html'>Outline Width</a>
+                <a target='_top' href='css_outline_color_en.html'>Outline Color</a>
+                <a target='_top' href='css_outline_shorthand_en.html'>Outline Shorthand</a>
+                <a target='_top' href='css_outline_offset_en.html'>Outline Offset</a>
+            </div>
+            <a target='_top' href='css_text_en.html'>CSS Text</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css_text_en.html'>Text Color</a>
+                <a target='_top' href='css_text_align_en.html'>Text Alignment</a>
+                <a target='_top' href='css_text_decoration_en.html'>Text Decoration</a>
+                <a target='_top' href='css_text_transformation_en.html'>Text Transformation</a>
+                <a target='_top' href='css_text_spacing_en.html'>Text Spacing</a>
+                <a target='_top' href='css_text_shadow_en.html'>Text Shadow</a>
+            </div>
+            <a target='_top' href='css_font_en.html'>CSS Fonts</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css_font_en.html'>Font Family</a>
+                <a target='_top' href='css_font_websafe_en.html'>Font Web Safe</a>
+                <a target='_top' href='css_font_fallbacks_en.html'>Font Fallbacks</a>
+                <a target='_top' href='css_font_style_en.html'>Font Style</a>
+                <a target='_top' href='css_font_size_en.html'>Font Size</a>
+                <a target='_top' href='css_font_google_en.html'>Font Google</a>
+                <a target='_top' href='css_font_pairings_en.html'>Font Pairings</a>
+                <a target='_top' href='css_font_shorthand_en.html'>Font Shorthand</a>
+            </div>
+            <a target='_top' href='css_icons_en.html'>CSS Icons</a>
+            <a target='_top' href='css_link_en.html'>CSS Links</a>
+            <a target='_top' href='css_list_en.html'>CSS Lists</a>
+            <a target='_top' href='css_table_en.html'>CSS Tables</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css_table_en.html'>Table Borders</a>
+                <a target='_top' href='css_table_size_en.html'>Table Size</a>
+                <a target='_top' href='css_table_align_en.html'>Table Alignment</a>
+                <a target='_top' href='css_table_style_en.html'>Table Style</a>
+                <a target='_top' href='css_table_responsive_en.html'>Table Responsive</a>
+            </div>
+            <a target='_top' href='css_display_visibility_en.html'>CSS Display</a>
+            <a target='_top' href='css_max-width_en.html'>CSS Max-width</a>
+            <a target='_top' href='css_positioning_en.html'>CSS Position</a>
+            <a target='_top' href='css_z-index_en.html'>CSS Z-index</a>
+            <a target='_top' href='css_overflow_en.html'>CSS Overflow</a>
+            <a target='_top' href='css_float_en.html'>CSS Float</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css_float_en.html'>Float</a>
+                <a target='_top' href='css_float_clear_en.html'>Clear</a>
+                <a target='_top' href='css_float_examples_en.html'>Float Examples</a>
+            </div>
+            <a target='_top' href='css_inline-block_en.html'>CSS Inline-block</a>
+            <a target='_top' href='css_align_en.html'>CSS Align</a>
+            <a target='_top' href='css_combinators_en.html'>CSS Combinators</a>
+            <a target='_top' href='css_pseudo_classes_en.html'>CSS Pseudo-class</a>
+            <a target='_top' href='css_pseudo_elements_en.html'>CSS Pseudo-element</a>
+            <a target='_top' href='css_image_transparency_en.html'>CSS Opacity</a>
+            <a target='_top' href='css_navbar_en.html'>CSS Navigation Bar</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css_navbar_en.html'>Navbar</a>
+                <a target='_top' href='css_navbar_vertical_en.html'>Vertical Navbar</a>
+                <a target='_top' href='css_navbar_horizontal_en.html'>Horizontal Navbar</a>
+            </div>
+            <a target='_top' href='css_dropdowns_en.html'>CSS Dropdowns</a>
+            <a target='_top' href='css_image_gallery_en.html'>CSS Image Gallery</a>
+            <a target='_top' href='css_image_sprites_en.html'>CSS Image Sprites</a>
+            <a target='_top' href='css_attribute_selectors_en.html'>CSS Attr Selectors</a>
+            <a target='_top' href='css_form_en.html'>CSS Forms</a>
+            <a target='_top' href='css_counters_en.html'>CSS Counters</a>
+            <a target='_top' href='css_website_layout_en.html'>CSS Website Layout</a>
+            <a target='_top' href='css_units_en.html'>CSS Units</a>
+            <a target='_top' href='css_specificity_en.html'>CSS Specificity</a>
+            <a target='_top' href='css_important_en.html'>CSS !important</a>
+            <a target='_top' href='css_math_functions_en.html'>CSS Math Functions</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>CSS Advanced</span></h2>
+            <a target='_top' href='css3_borders_en.html'>CSS Rounded Corners</a>
+            <a target='_top' href='css3_border_images_en.html'>CSS Border Images</a>
+            <a target='_top' href='css3_backgrounds_en.html'>CSS Backgrounds</a>
+            <a target='_top' href='css3_colors_en.html'>CSS Colors</a>
+            <a target='_top' href='css_colors_keywords_en.html'>CSS Color Keywords</a>
+            <a target='_top' href='css3_gradients_en.html'>CSS Gradients</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css3_gradients_en.html'>Linear Gradients</a>
+                <a target='_top' href='css3_gradients_radial_en.html'>Radial Gradients</a>
+                <a target='_top' href='css3_gradients_conic_en.html'>Conic Gradients</a>
+            </div>
+            <a target='_top' href='css3_shadows_en.html'>CSS Shadows</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css3_shadows_en.html'>Shadow Effects</a>
+                <a target='_top' href='css3_shadows_box_en.html'>Box Shadow</a>
+            </div>
+            <a target='_top' href='css3_text_effects_en.html'>CSS Text Effects</a>
+            <a target='_top' href='css3_fonts_en.html'>CSS Web Fonts</a>
+            <a target='_top' href='css3_2dtransforms_en.html'>CSS 2D Transforms</a>
+            <a target='_top' href='css3_3dtransforms_en.html'>CSS 3D Transforms</a>
+            <a target='_top' href='css3_transitions_en.html'>CSS Transitions</a>
+            <a target='_top' href='css3_animations_en.html'>CSS Animations</a>
+            <a target='_top' href='css_tooltip_en.html'>CSS Tooltips</a>
+            <a target='_top' href='css3_images_en.html'>CSS Style Images</a>
+            <a target='_top' href='css3_image_reflection_en.html'>CSS Image Reflection</a>
+            <a target='_top' href='css3_object-fit_en.html'>CSS object-fit</a>
+            <a target='_top' href='css3_object-position_en.html'>CSS object-position</a>
+            <a target='_top' href='css3_masking_en.html'>CSS Masking</a>
+            <a target='_top' href='css3_buttons_en.html'>CSS Buttons</a>
+            <a target='_top' href='css3_pagination_en.html'>CSS Pagination</a>
+            <a target='_top' href='css3_multiple_columns_en.html'>CSS Multiple Columns</a>
+            <a target='_top' href='css3_user_interface_en.html'>CSS User Interface</a>
+            <a target='_top' href='css3_variables_en.html'>CSS Variables</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css3_variables_en.html'>The var() Function</a>
+                <a target='_top' href='css3_variables_overriding_en.html'>Overriding Variables</a>
+                <a target='_top' href='css3_variables_javascript_en.html'>Variables and JavaScript</a>
+                <a target='_top' href='css3_variables_mediaqueries_en.html'>Variables in Media Queries</a>
+            </div>
+            <a target='_top' href='css3_box-sizing_en.html'>CSS Box Sizing</a>
+            <a target='_top' href='css3_mediaqueries_en.html'>CSS Media Queries</a>
+            <a target='_top' href='css3_mediaqueries_ex_en.html'>CSS MQ Examples</a>
+            <a target='_top' href='css3_flexbox_en.html'>CSS Flexbox</a>
+            <div class='tut_overview'>
+                <a target='_top' href='css3_flexbox_en.html'>CSS Flexbox</a>
+                <a target='_top' href='css3_flexbox_container_en.html'>CSS Flex Container</a>
+                <a target='_top' href='css3_flexbox_items_en.html'>CSS Flex Items</a>
+                <a target='_top' href='css3_flexbox_responsive_en.html'>CSS Flex Responsive</a>
+            </div>
+            <br>
+            <h2 class='left'><span class='left_h2'>CSS</span> Responsive</h2>
+            <a target='_top' href='css_rwd_intro_en.html'>RWD Intro</a>
+            <a target='_top' href='css_rwd_viewport_en.html'>RWD Viewport</a>
+            <a target='_top' href='css_rwd_grid_en.html'>RWD Grid View</a>
+            <a target='_top' href='css_rwd_mediaqueries_en.html'>RWD Media Queries</a>
+            <a target='_top' href='css_rwd_images_en.html'>RWD Images</a>
+            <a target='_top' href='css_rwd_videos_en.html'>RWD Videos</a>
+            <a target='_top' href='css_rwd_frameworks_en.html'>RWD Frameworks</a>
+            <a target='_top' href='css_rwd_templates_en.html'>RWD Templates</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>CSS</span> Grid</h2>
+            <a target='_top' href='css_grid_en.html'>Grid Intro</a>
+            <a target='_top' href='css_grid_container_en.html'>Grid Container</a>
+            <a target='_top' href='css_grid_item_en.html'>Grid Item</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>CSS</span> SASS</h2>
+            <a target='_top' href='../sass/index_en.html'>SASS Tutorial</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>CSS</span> Examples</h2>
+            <a target='_top' href='css_templates_en.html'>CSS Templates</a>
+            <a target='_top' href='css_examples_en.html'>CSS Examples</a>
+            <a target='_top' href='css_quiz_en.html'>CSS Quiz</a>
+            <a target='_top' href='css_exercises_en.html'>CSS Exercises</a>
+            <a target='_top' href='css_exam_en.html'>CSS Certificate</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>CSS</span> References</h2>
+            <a target='_top' href='/cssref/index_en.html'>CSS Reference</a>
+            <a target='_top' href='/cssref/css_selectors_en.html'>CSS Selectors</a>
+            <a target='_top' href='/cssref/css_functions_en.html'>CSS Functions</a>
+            <a target='_top' href='/cssref/css_ref_aural_en.html'>CSS Reference Aural</a>
+            <a target='_top' href='/cssref/css_websafe_fonts_en.html'>CSS Web Safe Fonts</a>
+            <a target='_top' href='/cssref/css_animatable_en.html'>CSS Animatable</a>
+            <a target='_top' href='/cssref/css_units_en.html'>CSS Units</a>
+            <a target='_top' href='/cssref/css_pxtoemconversion_en.html'>CSS PX-EM Converter</a>
+            <a target='_top' href='/cssref/css_colors_en.html'>CSS Colors</a>
+            <a target='_top' href='/cssref/css_colors_legal_en.html'>CSS Color Values</a>
+            <a target='_top' href='/cssref/css_default_values_en.html'>CSS Default Values</a>
+            <a target='_top' href='/cssref/css3_browsersupport_en.html'>CSS Browser Support</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu sidebar --><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+            <a href='index_en.html'><img src='../svg/css3_icon1.svg' alt='CSS Lessons for beginners' class='w3-left w3-padding' title='CSS3 for beginners. W3Schools in English' style="width: 90px"></a>
+<p class='w3-right'>
+    <a href='css_tooltip.html' title='Go to Ukrainian language'>Ua</a>
+</p>
+<article>
+    <h1>CSS <span class="color_h1">Tooltip</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="css3_animations_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css3_images_en.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <p class="intro">Create tooltips with CSS.</p>
+    <hr>
+    <h2>Demo: Tooltip Examples</h2>
+    <p>A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element:</p>
+    <div class="w3-row w3-center" style="margin-top:35px;margin-bottom:35px;">
+        <div class="w3-quarter">
+            <div class="tooltip">Top <span class="tooltiptext tooltip-top">Tooltip text</span></div>
+        </div>
+        <div class="w3-quarter">
+            <div class="tooltip">Right
+                <span class="tooltiptext tooltip-right">Tooltip text</span>
+            </div>
+        </div>
+        <div class="w3-quarter">
+            <div class="tooltip">Bottom
+                <span class="tooltiptext tooltip-bottom">Tooltip text</span>
+            </div>
+        </div>
+        <div class="w3-quarter">
+            <div class="tooltip">Left
+                <span class="tooltiptext tooltip-left">Tooltip text</span>
+            </div>
+        </div>
+    </div>
+    <p style="clear:both"></p>
+    <hr>
+    <h2>Basic Tooltip</h2>
+    <p>Create a tooltip that appears when the user moves the mouse over an element:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate cssHigh">
+            &lt;style&gt;<br>/* Tooltip container */<br>.tooltip {<br>&nbsp;&nbsp;position: relative;<br>&nbsp;display: inline-block;<br>&nbsp; border-bottom: 1px dotted black; /* If you want dots under the hoverable text */<br>}<br><br>/* Tooltip text */<br>.tooltip .tooltiptext {<br>&nbsp;&nbsp;visibility: hidden;<br>&nbsp;&nbsp;width: 120px;<br>&nbsp; background-color: black;<br>&nbsp;&nbsp;color: #fff;<br>&nbsp;&nbsp;text-align: center;<br> &nbsp; padding: 5px 0;<br>&nbsp; border-radius: 6px;<br>&nbsp;<br>&nbsp; /* Position the tooltip text - see examples below! */<br>&nbsp; position: absolute;<br>&nbsp; z-index: 1;<br>}<br><br>/* Show the tooltip text when you mouse over the tooltip container */<br>.tooltip:hover .tooltiptext {<br>&nbsp;&nbsp;visibility: visible;<br>}<br>&lt;/style&gt;<br><br><span class="htmlHigh">&lt;div class="tooltip"&gt;<span style="color:black !important">Hover over me</span><br>&nbsp; &lt;span class=&quot;tooltiptext&quot;&gt;<span style="color:black;">Tooltip text</span>&lt;/span&gt;<br>&lt;/div&gt;</span>
+        </div>
+        <a target="_blank" href="../csstryit/trycss_tooltip.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <h3>Example Explained</h3>
+    <p><strong>HTML:</strong> Use a container element (like &lt;div&gt;) and add the <code class="w3-codespan">&quot;tooltip&quot;</code> class to it. When the user mouse over this &lt;div&gt;, it will show the tooltip text.</p>
+    <p>The tooltip text is placed inside an inline element (like &lt;span&gt;) with <code class="w3-codespan">class=&quot;tooltiptext&quot;</code>.</p>
+    <p><strong>CSS:</strong> The <code class="w3-codespan">tooltip</code> class use <code class="w3-codespan">position:relative</code>, which is needed to position the tooltip text (<code class="w3-codespan">position:absolute</code>). <strong>Note:</strong> See examples below on how to position the tooltip.</p>
+    <p>The <code class="w3-codespan">tooltiptext</code> class holds the actual tooltip text. It is hidden by default, and will be visible on hover (see below). We have also added some basic styles to it: 120px width, black background color, white text color, centered text, and 5px top and bottom padding.</p>
+    <p>The CSS <code class="w3-codespan">border-radius</code> property is used to add rounded corners to the tooltip text.</p>
+    <p>The <code class="w3-codespan">:hover</code> selector is used to show the tooltip text when the user moves the mouse over the &lt;div&gt; with <code class="w3-codespan">class=&quot;tooltip&quot;</code>.</p>
+    <hr>
+    <h2>Positioning Tooltips</h2>
+    <p>In this example, the tooltip is placed to the right (<code class="w3-codespan">left:105%</code>) of the &quot;hoverable&quot; text (&lt;div&gt;). Also note that <code class="w3-codespan">top:-5px</code> is used to place it in the middle of its container element. We use the number <strong>5</strong> because the tooltip text has a top and bottom padding of 5px. If you increase its padding, also increase the value of the <code class="w3-codespan">top</code> property to ensure that it stays in the middle (if this is something you want). The same applies if you want the tooltip placed to the left.</p>
+    <div class="w3-example">
+        <h3>Right Tooltip</h3>
+        <div class="w3-code notranslate cssHigh">
+            .tooltip .tooltiptext {<br>&nbsp; top: -5px;<br>&nbsp; left: 105%; <br>}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+            <div class="tooltip">Hover over me <span class="tooltiptext2 tooltip-right2">Tooltip text</span></div>
+        </div>
+        <a target="_blank" href="../csstryit/trycss_tooltip_right.html" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <h3>Left Tooltip</h3>
+        <div class="w3-code notranslate cssHigh">
+            .tooltip .tooltiptext {<br>&nbsp; top: -5px;<br>&nbsp; right: 105%; <br>}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+            <div class="tooltip">Hover over me <span class="tooltiptext2 tooltip-left2">Tooltip text</span></div>
+        </div>
+        <a target="_blank" href="../csstryit/trycss_tooltip_left.html" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <p>If you want the tooltip to appear on top or on the bottom, see examples below. Note that we use the <code class="w3-codespan">margin-left</code> property with a value of minus 60 pixels. This is to center the tooltip above/below the hoverable text. It is set to the half of the tooltip's width (120/2 = 60).</p>
+    <div class="w3-example">
+        <h3>Top Tooltip</h3>
+        <div class="w3-code notranslate cssHigh">
+            .tooltip .tooltiptext {<br>&nbsp; width: 120px;<br>&nbsp; bottom: 100%;<br>&nbsp; left: 50%; <br>&nbsp;&nbsp;margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */<br>}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+            <div class="tooltip">Hover over me <span class="tooltiptext2 tooltip-top2">Tooltip text</span></div>
+        </div>
+        <a target="_blank" href="../csstryit/trycss_tooltip_top.html" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <h3>Bottom Tooltip</h3>
+        <div class="w3-code notranslate cssHigh">
+            .tooltip .tooltiptext {<br>&nbsp; width: 120px;<br>&nbsp; top: 100%;<br>&nbsp; left: 50%; <br>&nbsp;&nbsp;margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */<br>}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+            <div class="tooltip">Hover over me <span class="tooltiptext2 tooltip-bottom2">Tooltip text</span></div>
+        </div>
+        <a target="_blank" href="../csstryit/trycss_tooltip_bottom.html" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Tooltip Arrows</h2>
+    <p>To create an arrow that should appear from a specific side of the tooltip, add "empty" content after tooltip, with the pseudo-element class <code class="w3-codespan">::after</code> together with the <code class="w3-codespan">content</code> property. The arrow itself is created using borders. This will make the tooltip look like a speech bubble.</p>
+    <p>This example demonstrates how to add an arrow to the bottom of the tooltip:</p>
+    <div class="w3-example">
+        <h3>Bottom Arrow</h3>
+        <div class="w3-code notranslate cssHigh">
+            .tooltip .tooltiptext::after {<br>&nbsp; content: &quot; &quot;;<br>&nbsp; position: absolute;<br>&nbsp; top: 100%; /* At the bottom of the tooltip */<br>&nbsp; left: 50%;<br>&nbsp; margin-left: -5px;<br>&nbsp; border-width: 5px;<br>&nbsp; border-style: solid;<br>&nbsp; border-color: black transparent transparent transparent;<br>}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+            <div class="tooltip">Hover over me <span class="tooltiptext-bottomarrow">Tooltip text</span></div>
+        </div>
+        <a target="_blank" href="../csstryit/trycss_tooltip_arrow_bottom.html" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <h3>Example Explained</h3>
+    <p>Position the arrow inside the tooltip: <code class="w3-codespan">top: 100%</code> will place the arrow at the bottom of the tooltip. <code class="w3-codespan">left: 50%</code> will center the arrow.</p>
+    <p><strong>Note:</strong> The <code class="w3-codespan">border-width</code> property specifies the size of the arrow. If you change this, also change the <code class="w3-codespan">margin-left</code> value to the same. This will keep the arrow centered.</p>
+    <p>The <code class="w3-codespan">border-color</code> is used to transform the content into an arrow. We set the top border to black, and the rest to transparent. If all sides were black, you would end up with a black square box.</p>
+    <p>This example demonstrates how to add an arrow to the top of the tooltip. Notice that we set the bottom border color this time:</p>
+    <div class="w3-example">
+        <h3>Top Arrow</h3>
+        <div class="w3-code notranslate cssHigh">
+            .tooltip .tooltiptext::after {<br>&nbsp;&nbsp;content: &quot; &quot;;<br>&nbsp;&nbsp;position: absolute;<br>&nbsp;&nbsp;bottom: 100%;&nbsp; /* At the top of the tooltip */<br>&nbsp; left: 50%;<br>&nbsp; margin-left: -5px;<br>&nbsp; border-width: 5px;<br>&nbsp; border-style: solid;<br>&nbsp; border-color: transparent transparent black transparent;<br>}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+            <div class="tooltip">Hover over me <span class="tooltiptext-toparrow">Tooltip text</span></div>
+        </div>
+        <a target="_blank" href="../csstryit/trycss_tooltip_arrow_top.html" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <p>This example demonstrates how to add an arrow to the left of the tooltip:</p>
+    <div class="w3-example">
+        <h3>Left Arrow</h3>
+        <div class="w3-code notranslate cssHigh">
+            .tooltip .tooltiptext::after {<br>&nbsp; content: &quot; &quot;;<br>&nbsp;&nbsp;position: absolute;<br>&nbsp;&nbsp;top: 50%;<br>&nbsp; right: 100%; /* To the left of the tooltip */<br>&nbsp; margin-top: -5px;<br>&nbsp; border-width: 5px;<br>&nbsp; border-style: solid;<br>&nbsp; border-color: transparent black transparent transparent;<br>}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+            <div class="tooltip">Hover over me <span class="tooltiptext-leftarrow">Tooltip text</span></div>
+        </div>
+        <a target="_blank" href="../csstryit/trycss_tooltip_arrow_left.html" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <p>This example demonstrates how to add an arrow to the right of the tooltip:</p>
+    <div class="w3-example">
+        <h3>Right Arrow</h3>
+        <div class="w3-code notranslate cssHigh">
+            .tooltip .tooltiptext::after {<br>&nbsp; content: &quot; &quot;;<br>&nbsp; position: absolute;<br>&nbsp; top: 50%;<br>&nbsp; left: 100%; /* To the right of the tooltip */<br>&nbsp; margin-top: -5px;<br>&nbsp; border-width: 5px;<br>&nbsp; border-style: solid;<br>&nbsp; border-color: transparent transparent transparent black;<br>}
+        </div>
+        <p>Result:</p>
+        <div class="w3-padding w3-white notranslate w3-center">
+            <div class="tooltip">Hover over me <span class="tooltiptext-rightarrow">Tooltip text</span></div>
+        </div>
+        <a target="_blank" href="../csstryit/trycss_tooltip_arrow_right.html" class="w3-btn w3-margin-top w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Fade In Tooltips (Animation)</h2>
+    <p>If you want to fade in the tooltip text when it is about to be visible, you can use the CSS <code class="w3-codespan">transition</code> property together with the <code class="w3-codespan">opacity</code> property, and go from being completely invisible to 100% visible, in a number of specified seconds (1 second in our example):</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate cssHigh">
+            .tooltip .tooltiptext {<br>&nbsp; opacity: 0;<br>&nbsp; transition: opacity 1s;<br>}<br><br>.tooltip:hover .tooltiptext {<br>&nbsp;&nbsp;opacity: 1;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_tooltip_transition.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="css3_animations_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css3_images_en.html">Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker_en.html'>COLOR PICKER</a></h4>
+        <a href='../colors/colors_picker_en.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection'>
+        <h4>SUBSCRIBE!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook W3Schools Rus' title='Facebook page' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='YouTube-channel W3Schools Rus' title='1th YouTube-channel' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram-channel' title='Telegram-channel' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='YouTube-channel W3Schools Rus' title='2th YouTube-channel' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>CONTACTS</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>PRINT PAGE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>BLOG</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index_en.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ABOUT</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Contacts</h2>
+      <p>If you want to report a bug, as well as make an offer for the site, add an ad or advertisement on the site, do not hesitate to send an email to the admin:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Tutorial</h4>
+        <a href='../html/index_en.html'>HTML Tutorial</a><br>
+        <a href='../css/index_en.html'>CSS Tutorial</a><br>
+        <a href='../js/index_en.html'>JavaScript Tutorial</a><br>
+        <a href='../sql/index_en.html'>SQL Tutorial</a><br>
+        <a href='../python/index_en.html'>Python Tutorial</a><br>
+        <a href='../php/index_en.html'>PHP Tutorial</a><br>
+        <a href='../bootstrap/bootstrap_ver_en.html'>Bootstrap Tutorial</a><br>
+        <a href='../w3css/index_en.html'>W3.CSS Tutorial</a><br>
+        <a href='../appml/index_en.html'>AppML Tutorial</a><br>
+        <a href='../jquery/index_en.html'>jQuery Tutorial</a><br>
+        <a href='../angular/index_en.html'>Angular Tutorial</a><br>
+        <a href='../sass/index_en.html'>Sass Tutorial</a><br>
+        <a href='../java/index_en.html'>Java Tutorial</a><br>
+        <a href='../cpp/index_en.html'>C++ Tutorial</a><br>
+        <a href='../cs/index_en.html'>C# Tutorial</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top References</h4>
+        <a href='../tags/index_en.html'>HTML Reference</a><br>
+        <a href='../cssref/index_en.html'>CSS Reference</a><br>
+        <a href='../jsref/index_en.html'>JavaScript Reference</a><br>
+        <a href='../sql/sql_ref_keywords_en.html'>SQL Reference</a><br>
+        <a href='../python/python_reference_en.html'>Python Reference</a><br>
+        <a href='../php/php_ref_overview_en.html'>PHP Reference</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a><br>
+        <a href='../w3css/w3css_references_en.html'>W3.CSS Reference</a><br>
+        <a href='../appml/appml_reference_en.html'>Appml Reference</a><br>
+        <a href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a><br>
+        <a href='../angular/angular_ref_directives_en.html'>Angular Reference</a><br>
+        <a href='../sass/sass_functions_string_en.html'>Sass Reference</a><br>
+        <a href='../java/java_ref_keywords_en.html'>Java Reference</a><br>
+        <a href='../colors/colors_names_en.html'>Colors Reference</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Examples</h4>
+        <a href='../html/html_examples_en.html'>HTML Examples</a><br>
+        <a href='../css/css_examples_en.html'>CSS Examples</a><br>
+        <a href='../js/js_examples_en.html'>JavaScript Examples</a><br>
+        <a href='../sql/sql_examples_en.html'>SQL Examples</a><br>
+        <a href='../python/python_examples_en.html'>Python Examples</a><br>
+        <a href='../php/php_examples_en.html'>PHP Examples</a><br>
+        <a href='../bootstrap/bootstrap_examples_en.html'>Bootstrap Examples</a><br>
+        <a href='../w3css/w3css_examples_en.html'>W3.CSS Examples</a><br>
+        <a href='../jquery/jquery_examples_en.html'>jQuery Examples</a><br>
+        <a href='../angular/angular_examples_en.html'>Angular Examples</a><br>
+        <a href='../java/java_examples_en.html'>Java Examples</a><br>
+        <a href='../cpp/cpp_examples_en.html'>C++ Examples</a><br>
+        <a href='../cs/cs_examples_en.html'>C# Examples</a><br>
+        <a href='../xml/xml_examples_en.html'>XML Examples</a><br>
+        <a href='../howto/index_en.html'>How To Examples</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_en.html'>Web Certificates</a></h4>
+        <a href='../cert/cert_html_en.html'>HTML Certificate</a><br>
+        <a href='../cert/cert_css_en.html'>CSS Certificate</a><br>
+        <a href='../cert/cert_javascript_en.html'>JavaScript Certificate</a><br>
+        <a href='../cert/cert_frontend_en.html'>Front End Certificate</a><br>
+        <a href='../cert/cert_python_en.html'>Python Certificate</a><br>
+        <a href='../cert/cert_datascience_en.html'>Data Science Certificate</a><br>
+        <a href='../cert/cert_jquery_en.html'>jQuery Certificate</a><br>
+        <a href='../cert/cert_sql_en.html'>SQL Certificate</a><br>
+        <a href='../cert/cert_php_en.html'>PHP Certificate</a><br>
+        <a href='../cert/cert_java_en.html'>Java Certificate</a><br>
+        <a href='../cert/cert_bootstrap_en.html'>Bootstrap Certificate</a><br>
+        <a href='../cert/cert_xml_en.html'>XML Certificate</a><br>
+        <a href='../cert/career_tips_en.html'>Career planning</a><br>
+        <a href='../cert/career_cv_en.html'>Writing a resume</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>This site is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our <a href='../about/about_copyright_en.html'>terms of use</a>, <a href='../about/about_privacy_en.html'>cookie and privacy policy</a>.<br>
+You can also use the Ukrainian version of the site <a href='../index.html'><strong>W3Schools українською</strong></a>.<br>
+    <a href='../about/about_copyright_en.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index_en.html'>W3Schools is Powered by W3.CSS</a>.<br><br>
+    <a href='../index_en.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>

@@ -12,28 +12,16 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Стиль таблиці. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='CSS Стиль таблиці. Стилізація таблиць. Як стилізувати таблиці? Відступи в таблиці за допомогою padding. Горизонтальні роздільники. Виділення рядків таблиці при наведенні. Смугаста таблиця. Колір таблиці. Як зробити? Сучасний підручник по CSS3. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>CSS Псевдо-класи. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='CSS Псевдо-класи. Синтаксис. Що таке псевдо-класи? Якірні псевдо-класи. Псевдо-класи та CSS-класи. Наведення курсора. Проста виринаюча підказка. Псевдо-клас :first-child. Псевдо-клас :lang. Всі CSS псевдо-класи. Сучасний підручник по CSS3. Уроки для початківців. W3Schools українською'>
 <style>
-    table {font-size:16px;font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;border-collapse: collapse;border-spacing: 0;width: 100%;}
-    #customers td, #customers th {border: 1px solid #ddd;text-align: left;padding: 8px;}
-    #customers tr:nth-child(even){background-color: #f2f2f2}
-    #customers th {padding-top: 11px;padding-bottom: 11px;background-color: #4CAF50;color: white;}
-    .tabletest th,.tabletest td {padding: 8px;text-align: left;}
-    .tabletest2 {font-size:15px;margin-top: 20px;margin-bottom: 40px;border-collapse: collapse;width: 100%;}
-    .tabletest2,.tabletest2 th,.tabletest2 td {padding: 8px;text-align: left;border-bottom: 1px solid #ddd;}
-    .tabletest3 th,.tabletest3 td {padding: 8px;text-align: left;border-bottom: 1px solid #ddd;}
-    .tabletest4 {margin-top: 20px;margin-bottom: 40px;border-collapse: collapse;width: 100%;}
-    .tabletest4,.tabletest4 th,.tabletest4 td {padding: 8px;text-align: left;border-bottom: 1px solid #ddd;}
-    .tabletest4 tr:hover {background-color: #f5f5f5}
-    .tabler2 th,.tabler2 td {border: none;text-align: left;padding: 8px;}
-    .tabler2 tbody tr:nth-child(even) {background-color: #f2f2f2}
-    .tabler {margin-top: 20px;margin-bottom: 40px;border-collapse: collapse;border-spacing: 0;width: 100%;}
-    .tabler,.tabler th,.tabler td {border: none;text-align: left;padding: 8px;}
-    .tabler tbody tr:nth-child(even) {background-color: #f2f2f2}
-    table.styletable,table.styletable td,table.styletable th {border: 1px solid;}
-    table.styletable{border-collapse: collapse;width: 100%;}
-    table.styletable.st1 td,table.styletable.st1 th {padding: 15px;text-align: left;}
+    p.tooltiptext {display: none;background-color: yellow;padding: 20px;}
+    div.tooltip-container:hover p.tooltiptext {display: block;}
+    .mouseover {background-color: #04AA6D;color: white;display: inline-block;padding: 2px 25px;text-align: center;width:93%;}
+    .mouseover:hover {background-color:#008CBA;}
+    .focus {width: 99%;padding: 16px 20px;box-sizing: border-box;border: 4px solid #ccc;}
+    .focus:focus {background-color:#555;color: white;outline: none;}
+    @media screen and (max-width: 600px) {.focus, .mouseover {width:100%;margin:5px;}}
 </style>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
@@ -522,187 +510,355 @@
 </div>
             <a href='index.html'><img src='../svg/css3_icon1.svg' alt='CSS3. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='CSS3 для початківців. W3Schools українською' style='width: 90px'></a>
 <p class='w3-right'>
-    <a href="css_table_style_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="css_pseudo_classes_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-  <h1>CSS <span class="color_h1">Стиль таблиці</span></h1>
-  <div class="w3-clear nextprev">
-      <a class="w3-left w3-btn" href="css_table_align.html">&#10094; Prev</a>
-      <a class="w3-right w3-btn" href="css_table_responsive.html">Next &#10095;</a>
-  </div>
-  <hr>
-  <h2>Відступи в таблиці - padding</h2>
-  <p>Щоб контролувати відстань між межею та змістом таблиці, використовуйте властивість <code class="w3-codespan">padding</code> на елементах <code class="w3-codespan">&lt;td&gt;</code> та <code class="w3-codespan">&lt;th&gt;</code>:</p>
-    <table class="styletable st1">
-        <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Savings</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Peter</td>
-            <td>Griffin</td>
-            <td>$100</td>
-        </tr>
-        <tr>
-            <td>Lois</td>
-            <td>Griffin</td>
-            <td>$150</td>
-        </tr>
-        <tr>
-            <td>Joe</td>
-            <td>Swanson</td>
-            <td>$300</td>
-        </tr>
-        </tbody>
-    </table>
-  <div class="w3-example">
-      <h3>Приклад</h3>
-      <div class="w3-code notranslate cssHigh">
-          th, td {<br>&nbsp;padding: 15px;<br>&nbsp; text-align: left;<br>}
-      </div>
-      <a target="_blank" class="w3-btn w3-margin-bottom" href="../csstryit/trycss_table_padding.html">Спробуйте самі &raquo;</a>
-  </div>
-  <hr>
-  <h2>Горизонтальні роздільники</h2>
-  <table class="tabletest2">
-      <thead>
-      <tr>
-          <th>Ім&#8217;я</th>
-          <th>Прізвище</th>
-          <th>Доходи</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-          <td>Peter</td>
-          <td>Griffin</td>
-          <td>$100</td>
-      </tr>
-      <tr>
-          <td>Lois</td>
-          <td>Griffin</td>
-          <td>$150</td>
-      </tr>
-      <tr>
-          <td>Joe</td>
-          <td>Swanson</td>
-          <td>$300</td>
-      </tr>
-      </tbody>
-  </table>
-    <p>Додайте властивість <code class="w3-codespan">border-bottom</code> до <code class="w3-codespan">&lt;th&gt;</code> та <code class="w3-codespan">&lt;td&gt;</code> для горизонтальних роздільників:</p>
-  <div class="w3-example">
-      <h3>Приклад</h3>
-      <div class="w3-code notranslate cssHigh">
-          th, td {<br>&nbsp;&nbsp;border-bottom: 1px solid #ddd;<br>}</div>
-      <a target="_blank" href="../csstryit/trycss_table_border_divider.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-  </div>
-  <hr>
-  <h2>Виділення рядків таблиці при наведенні</h2>
-  <p>Використовуйте селектор <code class="w3-codespan">:hover</code> на <code class="w3-codespan">&lt;tr&gt;</code> щоб виділити рядки таблиці при наведенні курсору:</p>
-  <table class="tabletest4">
-      <tr>
-          <th>Ім&#8217;я</th>
-          <th>Прізвище</th>
-          <th>Доходи</th>
-      </tr>
-      <tr>
-          <td>Peter</td>
-          <td>Griffin</td>
-          <td>$100</td>
-      </tr>
-      <tr>
-          <td>Lois</td>
-          <td>Griffin</td>
-          <td>$150</td>
-      </tr>
-      <tr>
-          <td>Joe</td>
-          <td>Swanson</td>
-          <td>$300</td>
-      </tr>
-  </table>
-  <div class="w3-example">
-      <h3>Приклад</h3>
-      <div class="w3-code notranslate cssHigh">
-          tr:hover {background-color: #f5f5f5;}
-      </div>
-      <a target="_blank" href="../csstryit/trycss_table_hover.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-  </div>
-  <hr>
-  <h2>Смугаста таблиця</h2>
-  <table class="tabler">
-      <tr>
-          <th>Ім&#8217;я</th>
-          <th>Прізвище</th>
-          <th>Доходи</th>
-      </tr>
-      <tr>
-          <td>Peter</td>
-          <td>Griffin</td>
-          <td>$100</td>
-      </tr>
-      <tr>
-          <td>Lois</td>
-          <td>Griffin</td>
-          <td>$150</td>
-      </tr>
-      <tr>
-          <td>Joe</td>
-          <td>Swanson</td>
-          <td>$300</td>
-      </tr>
-  </table>
-  <p>Для таблиць зі смугами зебри використовуйте селектор <code class="w3-codespan">nth-child()</code> та додайте <code class="w3-codespan">background-color</code> (колір фону) до всіх парних (або непарних) рядків таблиці:</p>
-  <div class="w3-example">
-      <h3>Приклад</h3>
-      <div class="w3-code notranslate cssHigh">
-          tr:nth-child(even) {background-color: #f2f2f2;}
-      </div>
-      <a target="_blank" href="../csstryit/trycss_table_striped.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-  </div>
-  <hr>
-  <h2>Колір таблиці</h2>
-  <p>В наведеному нижче прикладі вказані колір фону та колір тексту для елементів <code class="w3-codespan">&lt;th&gt;</code>:</p>
-  <table class="tabler">
-      <tr style="background-color:#4CAF50;color:white;">
-          <th>Ім&#8217;я</th>
-          <th>Прізвище</th>
-          <th>Доходи</th>
-      </tr>
-      <tr>
-          <td>Peter</td>
-          <td>Griffin</td>
-          <td>$100</td>
-      </tr>
-      <tr>
-          <td>Lois</td>
-          <td>Griffin</td>
-          <td>$150</td>
-      </tr>
-      <tr>
-          <td>Joe</td>
-          <td>Swanson</td>
-          <td>$300</td>
-      </tr>
-  </table>
+    <h1>CSS <span class="color_h1">Псевдо-класси</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="css_combinators.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css_pseudo_elements.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <h2>Що таке Псевдо-класи?</h2>
+    <p><strong>Псевдо-клас</strong> використовується для визначення особливого стану елемента.</p>
+    <p>Наприклад, його можна використовувати для:</p>
+    <ul>
+        <li>Стилізації елемента, коли користувач наводить на нього курсор</li>
+        <li>Стилізації відвіданих та невідвіданих посилань по-різному</li>
+        <li>Стилізації елемента, коли він знаходиться в фокусі</li>
+    </ul>
+    <div class="w3-row">
+        <div class="w3-half">
+            <div class="mouseover">
+                <p>Наведи курсор наді мною</p>
+            </div>
+        </div>
+        <div class="w3-half">
+            <input class="focus" type="text" name="fname" placeholder="Натисни мене, щоб отримати фокус">
+        </div>
+    </div>
+    <p style="clear:both;"></p>
+    <hr>
+    <h2>Синтаксис</h2>
+    <p><strong>Синтаксис псевдо-класів</strong>:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate cssHigh">
+            selector:pseudo-class {<br>&nbsp;&nbsp;property:value;<br>}</div>
+    </div>
+    <hr>
+    <h2>Якірні псевдо-класи</h2>
+    <p>Посилання можуть відображатися по-різному:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            /* невідвідуване посилання */<br>a:link {<br>&nbsp; color: #FF0000;<br>}<br><br>/* відвідуване посилання */<br>a:visited {<br>&nbsp; color: #00FF00;<br>}<br><br>/* курсор над посиланням */<br>a:hover {<br>&nbsp;&nbsp;color: #FF00FF;<br>}<br><br>/* обране (активне) посилання */<br>a:active {<br>&nbsp;&nbsp;color: #0000FF;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_link.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        <br>
+    </div>
+    <div class="w3-panel w3-note">
+        <p><b>Примітка:</b> <code class="w3-codespan">a:hover</code> ПОВИНЕН йти після <code class="w3-codespan">a:link</code> та
+            <code class="w3-codespan">a:visited</code> у визначенні CSS для того, щоб бути ефективним! <code class="w3-codespan">a:active</code> ПОВИНЕН йти після <code class="w3-codespan">a:hover</code> у визначенні CSS, щоб бути ефективним! Імена псевдо-класів не чутливі до регістру.</p>
+    </div>
+    <hr>
+    <h2>Псевдо-класи та CSS-класи</h2>
+    <p>Псевдо-класи можна комбінувати із CSS-класами:</p>
+    <p>Коли ви наведете курсор на посилання в прикладі, воно змінить колір:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            a.highlight:hover {<br>&nbsp;&nbsp;color: #ff0000;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_pseudo-class.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Наведення курсора на &lt;div&gt;</h2>
+    <p>Приклад використання псевдо-класу <code class="w3-codespan">:hover</code> на елементі <code class="w3-codespan">&lt;div&gt;</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            div:hover {<br>&nbsp; background-color: blue;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_pseudo-class_hover_div.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        <br>
+    </div>
+    <hr>
+    <h2>Проста виринаюча підказка</h2>
+    <p>Наведіть вказівник миші на елемент <code class="w3-codespan">&lt;div&gt;</code> щоб відобразити елемент <code class="w3-codespan">&lt;p&gt;</code> (наприклад, виринаючу підказку):</p>
+    <div class="tooltip-container w3-text-red"><b>Наведіть вказівник миші на мене, щоб відобразити елемент <code class="w3-codespan">&lt;p&gt;</code>.</b>
+        <p class="tooltiptext w3-text-black">Опачки! А ось і я!</p>
+    </div>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            p {<br>&nbsp; display: none;<br>&nbsp; background-color: yellow;<br>&nbsp; padding: 20px;<br>}<br><br>div:hover p {<br>&nbsp; display: block;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_pseudo-class_hover_tooltip.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        <br>
+    </div>
+    <hr>
+    <h2>CSS - Псевдо-клас :first-child</h2>
+    <p>Псевдо-клас <code class="w3-codespan">:first-child</code> відповідає заданому елементу, який є першим дочірнім елементом другого елементу.</p>
+    <h2>Відповідає першому елементу &lt;p&gt;</h2>
+    <p>В наступному прикладі селектор відповідає будь-якому елементу <code class="w3-codespan">&lt;p&gt;</code>, який є першим дочірнім елементом будь-якого елемента:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            p:first-child {<br>&nbsp; color: blue;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_first-child1.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Відповідає першому елементу &lt;i&gt; в усіх елементах &lt;p&gt;</h2>
+    <p>В наступному прикладі селектор відповідає першому елементу <code class="w3-codespan">&lt;i&gt;</code> в усіх елементах <code class="w3-codespan">&lt;p&gt;</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            p i:first-child {<br>&nbsp; color: blue;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_first-child2.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Співставити всі елементи &lt;i&gt; в усіх перших дочірніх елементах &lt;p&gt;</h2>
+    <p>В наступному прикладі селектор співставляє всі елементи <code class="w3-codespan">&lt;i&gt;</code> в елементах <code class="w3-codespan">&lt;p&gt;</code>, які є першими дочірніми елементами другого елемента:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate cssHigh">
+            p:first-child i {<br>&nbsp;&nbsp;color: blue;<br>}
+        </div>
+        <a target="_blank" href="../csstryit/trycss_first-child3.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>CSS - Псевдо-клас :lang</h2>
+    <p>Псевдо-клас <code class="w3-codespan">:lang</code> дозволяє визначати спеціальні правила для різних мов.</p>
+    <p>В наведеному нижче прикладі <code class="w3-codespan">:lang</code> визначає лапки для елементів <code class="w3-codespan">&lt;q&gt;</code> із <code class="w3-codespan">lang=&quot;no&quot;</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>q:lang(no) {<br>&nbsp; quotes: &quot;~&quot; &quot;~&quot;;<br>}<br>&lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;p&gt;Какой-то текст &lt;q lang=&quot;no&quot;&gt;Цитата в параграфе&lt;/q&gt;Какой-то текст.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+        </div>
+        <a target="_blank" href="../csstryit/trycss_lang.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <h2>Більше прикладів</h2>
+    <p><a target="_blank" href="../csstryit/trycss_link2.html">Додати різні стилі до гіперпосилань</a><br>
+        Цей приклад демонструє, як додати інші стилі до гіперпосилань.</p>
+    <p><a target="_blank" href="../csstryit/trycss_link_focus.html">Використання :focus</a><br>
+        Цей приклад демонструє, як використовувати псевдо-клас :focus.</p>
+    <hr>
+    <div class="w3-container w3-dark-grey w3-padding">
+        <h2 class="shadow-black-1">Перевірте себе за допомогою вправ!</h2>
+        <div class="w3-bar w3-margin-bottom">
+            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_pseudo_classes1" target="_blank" rel="nofollow">Вправа 1 &raquo;</a>
+            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_pseudo_classes2" target="_blank" rel="nofollow">Вправа 2 &raquo;</a>
+            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_pseudo_classes3" target="_blank" rel="nofollow">Вправа 3 &raquo;</a>
+            <a class="w3-bar-item w3-btn" href="https://www.w3schools.com/css/exercise.asp?filename=exercise_pseudo_classes4" target="_blank" rel="nofollow">Вправа 4 &raquo;</a>
+        </div>
+    </div>
+    <hr>
 
-  <div class="w3-example">
-      <h3>Приклад</h3>
-      <div class="w3-code notranslate cssHigh">
-          th {<br>&nbsp; background-color: #4CAF50;<br>&nbsp;&nbsp;color: white;<br>}
-      </div>
-      <a target="_blank" href="../csstryit/trycss_table_color.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-  </div>
-  <hr>
-  <div class="w3-clear nextprev">
-      <a class="w3-left w3-btn" href="css_table_align.html">&#10094; Prev</a>
-      <a class="w3-right w3-btn" href="css_table_responsive.html">Next &#10095;</a>
-  </div>
+    <h2>Всі CSS Псевдо-класи</h2>
+    <table class="w3-table-all notranslate">
+        <tr>
+            <th style="width:20%">Селектор</th>
+            <th style="width:20%">Приклад</th>
+            <th>Опис</th>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_active.html">:active</a></td>
+            <td class="notranslate">a:active</td>
+            <td>Обирає активне посилання</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_checked.html">:checked</a></td>
+            <td class="notranslate">input:checked</td>
+            <td>Обирає кожен перевірений елемент <code class="w3-codespan">&lt;input&gt;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_disabled.html">:disabled</a></td>
+            <td class="notranslate">input:disabled</td>
+            <td>Обирає кожен відключений елемент <code class="w3-codespan">&lt;input&gt;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_empty.html">:empty</a></td>
+            <td class="notranslate">p:empty</td>
+            <td>Обирає кожен елемент <code class="w3-codespan">&lt;p&gt;</code>, який не має дочірніх елементів</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_enabled.html">:enabled</a></td>
+            <td class="notranslate">input:enabled</td>
+            <td>Обирає кожен включений елемент <code class="w3-codespan">&lt;input&gt;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_firstchild.html">:first-child</a></td>
+            <td class="notranslate">p:first-child</td>
+            <td>Обирає всі елементи <code class="w3-codespan">&lt;p&gt;</code>, які є першим нащадком свого предка</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_first-of-type.html">:first-of-type</a></td>
+            <td class="notranslate">p:first-of-type</td>
+            <td>Обирає кожен елемент <code class="w3-codespan">&lt;p&gt;</code> який є першим елементом <code class="w3-codespan">&lt;p&gt;</code> свого предка</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_focus.html">:focus</a></td>
+            <td class="notranslate">input:focus</td>
+            <td>Обирає елемент <code class="w3-codespan">&lt;input&gt;</code> який має фокус</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_hover.html">:hover</a></td>
+            <td class="notranslate">a:hover</td>
+            <td>Обирає посилання при наведенні миші</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_in-range.html">:in-range</a></td>
+            <td class="notranslate">input:in-range</td>
+            <td>Обирає елементи <code class="w3-codespan">&lt;input&gt;</code> зі значенням у визначеному діапазоні</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_invalid.html">:invalid</a></td>
+            <td class="notranslate">input:invalid</td>
+            <td>Обирає всі елементи <code class="w3-codespan">&lt;input&gt;</code> з неприпустимим значенням</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_lang.html">:lang(<i>language</i>)</a></td>
+            <td class="notranslate">p:lang(it)</td>
+            <td>Обирає кожен елемент <code class="w3-codespan">&lt;p&gt;</code> зі значенням атрибута <code class="w3-codespan">lang</code>, що починається з <code class="w3-codespan">&quot;it&quot;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_last-child.html">:last-child</a></td>
+            <td class="notranslate">p:last-child</td>
+            <td>Обирає всі елементи <code class="w3-codespan">&lt;p&gt;</code>, які є останнім дочірнім елементом свого предка</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_last-of-type.html">:last-of-type</a></td>
+            <td class="notranslate">p:last-of-type</td>
+            <td>Обирає кожен елемент <code class="w3-codespan">&lt;p&gt;</code>, який є останнім елементом <code class="w3-codespan">&lt;p&gt;</code> свого предка</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_link.html">:link</a></td>
+            <td class="notranslate">a:link</td>
+            <td>Обирає всі не відвідувані посилання</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_not.html">:not(selector)</a></td>
+            <td class="notranslate">:not(p)</td>
+            <td>Обирає кожен елемент, який не є елементом <code class="w3-codespan">&lt;p&gt;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_nth-child.html">:nth-child(n)</a></td>
+            <td class="notranslate">p:nth-child(2)</td>
+            <td>Обирає кожен елемент <code class="w3-codespan">&lt;p&gt;</code>, який є другим дочірнім елементом свого предка</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_nth-last-child.html">:nth-last-child(n)</a></td>
+            <td class="notranslate">p:nth-last-child(2)</td>
+            <td>Обирає кожен елемент <code class="w3-codespan">&lt;p&gt;</code>, який є другим дочірнім елементом свого предка, рахуючи від останнього дочірнього елемента</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_nth-last-of-type.html">:nth-last-of-type(n)</a></td>
+            <td class="notranslate">p:nth-last-of-type(2)</td>
+            <td>Обирає кожен елемент <code class="w3-codespan">&lt;p&gt;</code>, який є другим елементом <code class="w3-codespan">&lt;p&gt;</code> свого предка, рахуючи від останнього нащадка</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_nth-of-type.html">:nth-of-type(n)</a></td>
+            <td class="notranslate">p:nth-of-type(2)</td>
+            <td>Обирає кожен елемент <code class="w3-codespan">&lt;p&gt;</code> який є другим елементом <code class="w3-codespan">&lt;p&gt;</code> свого предка</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_only-of-type.html">:only-of-type</a></td>
+            <td class="notranslate">p:only-of-type</td>
+            <td>Обирає кожен елемент <code class="w3-codespan">&lt;p&gt;</code> який є єдиним елементом <code class="w3-codespan">&lt;p&gt;</code> свого предка</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_only-child.html">:only-child</a></td>
+            <td class="notranslate">p:only-child</td>
+            <td>Обирає кожен елемент <code class="w3-codespan">&lt;p&gt;</code> який є єдиним потомком свого предка</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_optional.html">:optional</a></td>
+            <td class="notranslate">input:optional</td>
+            <td>Обирає елементи <code class="w3-codespan">&lt;input&gt;</code> без атрибута <code class="w3-codespan">&quot;required&quot;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_out-of-range.html">:out-of-range</a></td>
+            <td class="notranslate">input:out-of-range</td>
+            <td>Обирає елементи <code class="w3-codespan">&lt;input&gt;</code> зі значенням поза вказаного діапазону</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_read-only.html">:read-only</a></td>
+            <td class="notranslate">input:read-only</td>
+            <td>Обирає елементи <code class="w3-codespan">&lt;input&gt;</code> зі вказаним атрибутом <code class="w3-codespan">&quot;readonly&quot;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_read-write.html">:read-write</a></td>
+            <td class="notranslate">input:read-write</td>
+            <td>Обирає елементи <code class="w3-codespan">&lt;input&gt;</code> без атрибута <code class="w3-codespan">&quot;readonly&quot;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_required.html">:required</a></td>
+            <td class="notranslate">input:required</td>
+            <td>Обирає елементи <code class="w3-codespan">&lt;input&gt;</code> зі вказаним атрибутом <code class="w3-codespan">&quot;required&quot;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_root.html">:root</a></td>
+            <td class="notranslate">root</td>
+            <td>Обирає кореневий елемент документа</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_target.html">:target</a></td>
+            <td class="notranslate">#news:target</td>
+            <td>Обирає поточний активний елемент #news (при натисканні на URL, що містить це ім&#8217;я якоря)</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_valid.html">:valid</a></td>
+            <td class="notranslate">input:valid</td>
+            <td>Обирає всі елементи <code class="w3-codespan">&lt;input&gt;</code> с допустимим значенням</td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_visited.html">:visited</a></td>
+            <td class="notranslate">a:visited</td>
+            <td>Обирає всі відвідані посилання</td>
+        </tr>
+    </table>
+
+    <h2>Всі CSS Псевдо-елементи</h2>
+    <table class="w3-table-all notranslate">
+        <tr>
+            <th style="width:20%">Селектор</th>
+            <th style="width:20%">Приклад</th>
+            <th>Опис</th>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_after.html">::after</a></td>
+            <td class="notranslate">p::after</td>
+            <td>Вставляє контент після кожного елемента <code class="w3-codespan">&lt;p&gt;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_before.html">::before</a></td>
+            <td class="notranslate">p::before</td>
+            <td>Вставляє контент перед кожним елементом <code class="w3-codespan">&lt;p&gt;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_firstletter.html">::first-letter</a></td>
+            <td class="notranslate">p::first-letter</td>
+            <td>Обирає першу літеру кожного елемента <code class="w3-codespan">&lt;p&gt;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_firstline.html">::first-line</a></td>
+            <td class="notranslate">p::first-line</td>
+            <td>Обирає перший рядок кожного елемента <code class="w3-codespan">&lt;p&gt;</code></td>
+        </tr>
+        <tr>
+            <td><a href="../cssref/sel_selection.html">::selection</a></td>
+            <td class="notranslate">p::selection</td>
+            <td>Обирає частину елемента, яка обрана користувачем</td>
+        </tr>
+    </table>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="css_combinators.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css_pseudo_elements.html">Next &#10095;</a>
+    </div>
 </article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
