@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML Графіка. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='HTML Графіка. Застосування на вебсторінках. Google Мапи. Елементи SVG та Canvas. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Google Мапи. Базис. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='HTML Графіка. Google Мапи. Базис. Створити основну (базисну) Google Мапу. Контейнер та розмір мапи. Створити функцію для встановлення властивостей мапи. Багато мап. Безкоштовний Google API ключ. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -368,91 +368,72 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
             <a href='index.html'><img src='../images/graphic_icon.png' alt='Графіка. Уроки W3Schools українською для початківців' class='w3-left w3-padding' title='Графіка для початківців. W3Schools українською мовою' style='width:120px;'></a><p class='w3-right'>
-    <a href="index_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="google_maps_basic_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>HTML Графіка</h1>
+    <h1>Google Мапи. <span class="color_h1">Базис</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="../index.html">&#10094; Home</a>
-        <a class="w3-right w3-btn" href="google_maps_intro.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="google_maps_intro.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="google_maps_overlays.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Google Мапи</h2>
-    <p><a href="google_maps_intro.html">Google Мапи</a> дозволяють вбудувати мапи (карти) в HTML.</p>
+    <h2>Створити основну (базисну) Google Мапу</h2>
+    <p>В цьому прикладі створюється Google мапа, яка зосереджена в Лондоні, Англія:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;Моя перша Google Мапа&lt;/h1&gt;<br><br>&lt;div id=&quot;googleMap&quot; style=&quot;width:100%;height:400px;&quot;&gt;&lt;/div&gt;<br><br>&lt;script&gt;<br>function myMap() {<br>var mapProp= {<br>&nbsp;&nbsp;center:new google.maps.LatLng(51.508742,-0.120850),<br>&nbsp;&nbsp;zoom:5,<br>};<br>var map = new google.maps.Map(document.getElementById(&quot;googleMap&quot;),mapProp);<br>}<br>&lt;/script&gt;<br><br>&lt;script src=&quot;https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&amp;callback=myMap&quot;&gt;&lt;/script&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+        </div>
+    </div>
+    <p>Решта цієї сторінки описує наведений вище приклад, крок за кроком.</p>
     <hr>
-    <h2>SVG</h2>
-    <p><a href="svg_intro.html">HTML елемент &lt;svg&gt;</a> дозволяє векторну графіку в HTML:</p>
-    <div class="w3-row-padding" style="margin:16px -16px">
-        <div class="w3-third w3-container">
-            <div class="w3-card-4">
-                <svg style="width:100%;height:200px">
-                    <circle cx="100" cy="100" r="80" stroke="green" stroke-width="4" fill="yellow" />
-                </svg>
-            </div>
+    <h2>Контейнер та розмір мапи</h2>
+    <p>На мапі потрібен HTML-елемент, щоб утримувати мапу:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div id=&quot;googleMap&quot; style=&quot;width:100%;height:400px&quot;&gt;&lt;/div&gt;
         </div>
-        <div class="w3-third w3-container">
-            <div class="w3-card-4">
-                <svg style="width:100%;height:200px">
-                    <rect x="30" y="20" rx="20" ry="20" width="150" height="150" style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
-                </svg>
-            </div>
+    </div>
+    <div class="w3-panel w3-note">
+        <p>Також встановіть розмір мапи.</p>
+    </div>
+    <hr>
+    <h2>Створити функцію для встановлення властивостей мапи</h2>
+    <div class="w3-example">
+        <div class="w3-code notranslate htmlHigh">
+            function myMap() {<br>var mapProp = {<br>&nbsp;&nbsp;&nbsp; center:new google.maps.LatLng(51.508742,-0.120850),<br>&nbsp;&nbsp;&nbsp; zoom:5,<br>};<br>var map = new google.maps.Map(document.getElementById(&quot;googleMap&quot;),mapProp);<br>}
         </div>
-        <div class="w3-third w3-container">
-            <div class="w3-card-4">
-                <svg style="width:100%;height:200px">
-                    <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
-                </svg>
-            </div>
+    </div>
+    <p>Змінна <strong>mapProp</strong> визначає властивості для мапи.</p>
+    <p>Властивість <strong>center</strong> визначає, де слід зосередити карту (використовуючи координати широти та довготи).</p>
+    <p>Властивість <strong>zoom</strong> визначає рівень масштабування для карти (спробуйте експериментувати з рівнем Zoom).</p>
+    <p>Рядок: <strong>var map=new google.maps.Map(document.getElementById(&quot;googleMap&quot;), mapProp);</strong> створює нову мапу всередині елементу &lt;div&gt; з id=&quot;googleMap&quot;, використовуючи параметри, що передаються (mapProp).</p>
+    <hr>
+    <h2>Багато мап</h2>
+    <p>Наведений нижче приклад визначає чотири мапи з різними типами мап:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            var map1 = new google.maps.Map(document.getElementById(&quot;googleMap1&quot;), mapOptions1);<br>
+            var map2 = new google.maps.Map(document.getElementById(&quot;googleMap2&quot;), mapOptions2);<br>
+            var map3 = new google.maps.Map(document.getElementById(&quot;googleMap3&quot;), mapOptions3);<br>
+            var map4 = new google.maps.Map(document.getElementById(&quot;googleMap4&quot;), mapOptions4);
         </div>
     </div>
     <hr>
-    <h2>HTML Canvas</h2>
-    <p><a href="canvas_intro.html">HTML елемент &lt;canvas&gt;</a> можна використовувати для залучення графіки на вебсторінці:</p>
-    <div class="w3-panel w3-card-4">
-        <p class="intro">Графіка нижче створена за допомогою &lt;canvas&gt;:</p>
-        <canvas id="myCanvas" style="width:50%;border:1px solid #c3c3c3">
-            Ваш браузер не підтримує елемент &lt;canvas&gt;.
-        </canvas>
-        <p class="intro">Він показує чотири елементи: червоний прямокутник, градієнтний прямокутник, багатобарвний прямокутник та багатоколірний текст.</p>
+    <h2>Безкоштовний Google API ключ</h2>
+    <p>Google дозволяє вебсайту додзвонюватись будь-яким Google API безкоштовно, тисячі разів на день.</p>
+    <p>Перейдіть на <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">https://developers.google.com/maps/documentation/javascript/get-api-key</a> щоб дізнатися, як отримати API ключ.</p>
+    <p>Google мапи розраховують знайти API ключ у параметрі <strong>ключа</strong> при завантаженні API:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate htmlHigh">
+            &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?<strong>key=YOUR_KEY</strong>&amp;callback=myMap&quot;&gt;&lt;/script&gt;
+        </div>
     </div>
-    <script>
-        var c=document.getElementById("myCanvas");
-        var canvOK=1;
-        try {c.getContext("2d");}
-        catch (er) {canvOK=0;}
-        if (canvOK==1)
-        {
-            var ctx=c.getContext("2d");
-            ctx.fillStyle="#FF0000";
-            ctx.fillRect(20,20,100,50);
-            var grd=ctx.createLinearGradient(140,20,240,70);
-            grd.addColorStop(0,"black");
-            grd.addColorStop(1,"white");
-            ctx.fillStyle=grd;
-            ctx.fillRect(140,20,100,50);
-            var grd2=ctx.createLinearGradient(20,90,120,90);
-            grd2.addColorStop(0,"black");
-            grd2.addColorStop("0.3","magenta");
-            grd2.addColorStop("0.5","blue");
-            grd2.addColorStop("0.6","green");
-            grd2.addColorStop("0.8","yellow");
-            grd2.addColorStop(1,"red");
-            ctx.fillStyle=grd2;
-            ctx.fillRect(20,90,100,50);
-            ctx.font="30px Verdana";
-            var grd3=ctx.createLinearGradient(140,20,240,90);
-            grd3.addColorStop(0,"black");
-            grd3.addColorStop("0.3","magenta");
-            grd3.addColorStop("0.6","blue");
-            grd3.addColorStop("0.8","green");
-            grd3.addColorStop(1,"red");
-            ctx.strokeStyle=grd3;
-            ctx.strokeText("Smile!",140,120); }
-    </script>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="../index.html">&#10094; Home</a>
-        <a class="w3-right w3-btn" href="google_maps_intro.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="google_maps_intro.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="google_maps_overlays.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
