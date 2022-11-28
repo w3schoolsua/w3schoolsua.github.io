@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Google Мапи. Контроль. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Google Мапи. Контроль. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='Google Мапи. Контроль. Керування за замовчуванням. Вимкнення елементів керування за замовчуванням. Увімкнути всі елементи керування. Зміна елементів керування. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -393,62 +393,62 @@
         <li>Rotate - відображає невеликий круговий значок, який дозволяє обертати мапи</li>
         <li>Overview Map - відображає мапу огляду мініатюри, що відображає поточний перегляд мапи в більш широкій області</li>
     </ul>
-    <p>You can specify which controls to show when creating the map (inside MapOptions) or by calling setOptions() to change the map's options.</p>
+    <p>Ви можете вказати, які елементи керування показувати під час створення мапи (всередині MapOptions) або викликом setOptions(), щоб змінити параметри мапи.</p>
     <hr>
-    <h2>Google Мапи - Disabling The Default Controls</h2>
-    <p>You may instead wish to turn off the default controls.</p>
-    <p>To do so, set the Map's disableDefaultUI property (within the Map options object) to true:</p>
+    <h2>Google Мапи - Вимкнення елементів керування за замовчуванням</h2>
+    <p>Натомість ви можете вимкнути елементи керування за замовчуванням.</p>
+    <p>Для цього встановіть для властивості disableDefaultUI мапи (в об&#8217;єкті параметрів мапи) значення true:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate jsHigh">
             var mapOptions {disableDefaultUI: true}
         </div>
     </div>
     <hr>
-    <h2>Google Мапи - Turn On All Controls</h2>
-    <p>Some controls appear on the map by default; while others will not appear unless you set them.</p>
-    <p>Adding or removing controls from the map is specified in the Map options object.</p>
-    <p>Set the control to true to make it visible - Set the control too false to hide it.</p>
-    <p>The following example turns &quot;on&quot; all controls:</p>
+    <h2>Google Мапи - Увімкнути всі елементи керування</h2>
+    <p>Деякі елементи керування відображаються на мапі за умовчанням; тоді як інші не відображатимуться, доки ви їх не встановите.</p>
+    <p>Додавання або видалення елементів керування з мапи вказується в об&#8217;єкті параметрів мапи.</p>
+    <p>Установіть для елемента керування значення true, щоб зробити його видимим. Встановіть для елемента керування значення false, щоб приховати його.</p>
+    <p>У наступному прикладі &quot;вмикаються&quot; всі елементи керування:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate jsHigh">
             var mapOptions {<br>&nbsp;&nbsp;panControl: true,<br>&nbsp;&nbsp;zoomControl: true,<br>&nbsp;mapTypeControl: true,<br>&nbsp;scaleControl: true,<br>&nbsp; streetViewControl: true,<br>&nbsp;&nbsp;overviewMapControl: true,<br>&nbsp; rotateControl: true<br>}
         </div>
     </div>
     <hr>
-    <h2>Google Мапи - Modifying Controls</h2>
-    <p>Several of the map controls are configurable.</p>
-    <p>The controls can be modified by specifying control options fields.</p>
-    <p>For example, options for modifying a Zoom control are specified in the zoomControlOptions field. The zoomControlOptions field may contain:</p>
+    <h2>Google Мапи - Зміна елементів керування</h2>
+    <p>Кілька елементів керування мапою можна налаштувати.</p>
+    <p>Елементи керування можна змінити, вказавши поля параметрів керування.</p>
+    <p>Наприклад, параметри для зміни елемента керування Zoom вказуються в полі zoomControlOptions. Поле zoomControlOptions може містити:</p>
     <ul>
-        <li>google.maps.ZoomControlStyle.SMALL - displays a mini-zoom control (only + and - buttons)</li>
-        <li>google.maps.ZoomControlStyle.LARGE - displays the standard zoom slider control</li>
-        <li>google.maps.ZoomControlStyle.DEFAULT - picks the best zoom control based on device and map size</li>
+        <li>google.maps.ZoomControlStyle.SMALL - відображає елемент керування міні-масштабуванням (тільки кнопки + та -)</li>
+        <li>google.maps.ZoomControlStyle.LARGE - відображає стандартний повзунок масштабування</li>
+        <li>google.maps.ZoomControlStyle.DEFAULT - вибирає найкраще керування масштабуванням на основі пристрою та розміру карти</li>
     </ul>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate jsHigh">
             zoomControl: true,<br>zoomControlOptions: {<br>&nbsp;&nbsp;&nbsp; style: google.maps.ZoomControlStyle.SMALL<br>}
         </div>
     </div>
-    <p><b>Note:</b> If you modify a control, always enable the control first (set it to true).</p>
-    <p>Another configurable control is the MapType control.</p>
-    <p>Options for modifying a control are specified in the mapTypeControlOptions field. The mapTypeControlOptions field may contain:</p>
+    <p><b>Примітка:</b> Якщо ви змінюєте елемент керування, завжди спочатку вмикайте його (встановіть значення true).</p>
+    <p>Іншим настроюваним елементом керування є елемент керування MapType.</p>
+    <p>Параметри для зміни елемента керування вказуються в полі mapTypeControlOptions. Поле mapTypeControlOptions може містити:</p>
     <ul>
-        <li>google.maps.MapTypeControlStyle.HORIZONTAL_BAR - display one button for each map type</li>
-        <li>google.maps.MapTypeControlStyle.DROPDOWN_MENU - select map type via a dropdown menu</li>
-        <li>google.maps.MapTypeControlStyle.DEFAULT - displays the &quot;default&quot; behavior (depends on screen size)</li>
+        <li>google.maps.MapTypeControlStyle.HORIZONTAL_BAR - відображає одну кнопку для кожного типу мапи</li>
+        <li>google.maps.MapTypeControlStyle.DROPDOWN_MENU - вибір типу карти за допомогою спадного меню</li>
+        <li>google.maps.MapTypeControlStyle.DEFAULT - відображає поведінку &quot;за замовчуванням&quot; (залежить від розміру екрана)</li>
     </ul>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate jsHigh">
             mapTypeControl: true,<br>mapTypeControlOptions: {<br>&nbsp; style: google.maps.MapTypeControlStyle.DROPDOWN_MENU<br>}
         </div>
     </div>
-    <p>You can also position a control, with the ControlPosition property:</p>
+    <p>Ви також можете позиціонувати елемент керування за допомогою властивості ControlPosition:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate jsHigh">
             mapTypeControl: true,<br>mapTypeControlOptions: {<br>&nbsp;&nbsp;style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,<br>&nbsp;&nbsp;position: google.maps.ControlPosition.TOP_CENTER<br>}
         </div>
