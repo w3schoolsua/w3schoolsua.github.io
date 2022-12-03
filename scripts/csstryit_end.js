@@ -1,6 +1,5 @@
 /*CSS tryit end*/
     submitTryit()
-
     function submitTryit(n) {
     if (window.editor) {
     window.editor.save();
@@ -47,7 +46,6 @@
     if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {
     restack(true);
 }
-
     function restack(horizontal) {
         var tc, ic, t, i, c, f, sv, sh, d, height, flt, width;
         tc = document.getElementById("textareacontainer");
@@ -97,7 +95,6 @@
         fixDragBtn();
         showFrameSize();
     }
-
     function showFrameSize() {
         var t;
         var width, height;
@@ -107,7 +104,6 @@
     }
     var dragging = false;
     var stack;
-
     function fixDragBtn() {
         var textareawidth, leftpadding, dragleft, containertop, buttonwidth
         var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
@@ -143,13 +139,11 @@
         document.getElementById("dragbar").style.cursor = "row-resize";
     }
     }
-
     function dragstart(e) {
         e.preventDefault();
         dragging = true;
         var main = document.getElementById("iframecontainer");
     }
-
     function dragmove(e) {
         if (dragging) {
         document.getElementById("shield").style.display = "block";
@@ -174,7 +168,6 @@
         showFrameSize();
     }
     }
-
     function dragend() {
         document.getElementById("shield").style.display = "none";
         dragging = false;
@@ -200,26 +193,21 @@
         window.addEventListener("load", fixDragBtn);
         window.addEventListener("load", showFrameSize);
     }
-
     function click_savebtn() {
         if (window.editor) {
         window.editor.save();
     }
         document.getElementById('saveModal').style.display = 'block';
     }
-
     function click_google_savebtn() {
         if (window.editor) {
         window.editor.save();
     }
         document.getElementById('driveSaveModal').style.display = 'block'
     }
-
     function click_google_loadbtn() {
         document.getElementById('driveLoadModal').style.display = 'block'
     }
-
-
     function colorcoding() {
         var ua = navigator.userAgent;
         //Opera Mini обновляет страницу при попытке редактировать текстовую область.
@@ -236,7 +224,6 @@
         //  window.editor.on("change", function () {window.editor.save();});
     }
     colorcoding();
-
     function w3_getStyleValue(elmnt, style) {
         if (window.getComputedStyle) {
         return window.getComputedStyle(elmnt, null).getPropertyValue(style);
@@ -251,7 +238,6 @@
     var developerKey = 'AIzaSyAMZDPXiGcCNWs1UCWG9LS6kkW5YiABfJ0';
     var CLIENT_ID = '451843133508-ckbr5r6ch1ofqbmh87oll4u6ltinqv2t.apps.googleusercontent.com';
     var SCOPES = ['https://www.googleapis.com/auth/drive.file'];
-
     //Проверьте, авторизовал ли данный пользователь это приложение
     function checkAuth() {
         gapi.auth.authorize({
@@ -260,7 +246,6 @@
             'immediate': true
         }, handleAuthResult);
     }
-
     //Обработка ответа от сервера авторизации
     function handleAuthResult(authResult) {
         if (authResult && !authResult.error) {
@@ -268,7 +253,6 @@
         loadApi();
     }
     }
-
     //Инициировать поток аутентификации в ответ на нажатие пользователем кнопки авторизации
     function handleAuthClick(event, userClick) {
         userAction = userClick;
@@ -280,7 +264,6 @@
         handleAuthResult);
         return false;
     }
-
     // Загрузить библиотеку API
     function loadApi() {
         gapi.client.load('drive', 'v3');
@@ -288,7 +271,6 @@
         'callback': onPickerApiLoad
     });
     }
-
     function onPickerApiLoad() {
         pickerApiLoaded = true;
         if (userAction == "save") {
@@ -302,7 +284,6 @@
         createPicker();
     }
     }
-
     // Создание и рендеринг объекта Picker для выбора файла HTML
     function createPicker() {
         if (pickerApiLoaded) {
@@ -326,7 +307,6 @@
         getContentOfFile(docID);
     }
     }
-
     //Получить содержимое
     function getContentOfFile(theID) {
         gapi.client.request({
@@ -352,18 +332,15 @@
             }
         });
     }
-
     var createFileWithHTMLContent = function(name, data, callback) {
         const boundary = '-------314159265358979323846';
         const delimiter = "\r\n--" + boundary + "\r\n";
         const close_delim = "\r\n--" + boundary + "--";
         const contentType = 'text/html';
-
         var metadata = {
         'name': name,
         'mimeType': contentType
     };
-
         var multipartRequestBody =
         delimiter +
         'Content-Type: application/json\r\n\r\n' +
@@ -372,7 +349,6 @@
         'Content-Type: ' + contentType + '\r\n\r\n' +
         data +
         close_delim;
-
         var request = gapi.client.request({
         'path': '/upload/drive/v3/files',
         'method': 'POST',
@@ -393,13 +369,10 @@
     }
         request.execute(callback);
     }
-
     if (navigator.userAgent.indexOf("MSIE") > 0 || navigator.userAgent.indexOf("Edge") > 0) {
         document.getElementById("saveGDriveBtn").style.display = "none";
         document.getElementById("loadGDriveBtn").style.display = "none";
     }
-
-
     function resetDriveSaveModal() {
         document.getElementById('driveSavedText').innerHTML = '';
         document.getElementById('driveSaveModal').style.display = 'none'
@@ -407,11 +380,9 @@
         document.getElementById('driveText').style.display = 'block'
         document.getElementById("driveSavedPanel").className = "w3-panel w3-large loader";
     }
-
     function resetDriveLoadModal() {
         document.getElementById('driveLoadModal').style.display = 'none'
     }
-
     function saveFile(code) {
         document.getElementById('preSave').style.display = 'none';
         if (code.length > 20000) {
@@ -424,9 +395,7 @@
         var paramB = JSON.stringify(paramObj);
         var httpB = new XMLHttpRequest();
         httpB.open("POST.html", globalURL, true);
-
         httpB.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
         httpB.onreadystatechange = function() {
         if (httpB.readyState == 4 && httpB.status == 200) {
         if (httpB.responseText.substr(0, 2) == "OK") {
@@ -440,7 +409,6 @@
     }
         httpB.send(paramB);
     }
-
     function hideAndResetModal() {
         document.getElementById("saveModal").style.display = "none";
         document.getElementById('preSave').style.display = "block";
@@ -450,24 +418,19 @@
         document.getElementById('saveDisclaimer').style.display = "none";
         document.getElementById('saveLoader').style.display = "block";
     }
-
     var addr = document.location.href;
-
     function displayError() {
         document.getElementById("err_url").value = addr;
         document.getElementById("err_form").style.display = "block";
         document.getElementById("err_email").focus();
         hideSent();
     }
-
     function hideError() {
         document.getElementById("err_form").style.display = "none";
     }
-
     function hideSent() {
         document.getElementById("err_sent").style.display = "none";
     }
-
     function sendErr() {
         var xmlhttp;
         var err_url = document.getElementById("err_url").value;
@@ -485,7 +448,6 @@
         hideError();
         document.getElementById("err_sent").style.display = "block";
     }
-
     function openMenu() {
         var x = document.getElementById("navbarDropMenu");
         var y = document.getElementById("menuOverlay");
@@ -525,5 +487,4 @@
         if (event.target == document.getElementById("menuOverlay")) {
         openMenu();
     }
-
     }

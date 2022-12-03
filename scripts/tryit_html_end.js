@@ -246,7 +246,6 @@ submitTryit()
         'immediate': true
       }, handleAuthResult);
     }
-
     //Обработка ответа от сервера авторизации
     function handleAuthResult(authResult) {
       if (authResult && !authResult.error) {
@@ -254,7 +253,6 @@ submitTryit()
         loadApi();
       }
     }
-
     //Инициировать поток аутентификации в ответ на нажатие пользователем кнопки авторизации
     function handleAuthClick(event, userClick) {
       userAction = userClick;
@@ -266,7 +264,6 @@ submitTryit()
         handleAuthResult);
       return false;
     }
-
     // Загрузить библиотеку API
     function loadApi() {
       gapi.client.load('drive', 'v3');
@@ -287,7 +284,6 @@ submitTryit()
         createPicker();
       }
     }
-
     // Создание и рендеринг объекта Picker для выбора файла HTML
     function createPicker() {
       if (pickerApiLoaded) {
@@ -311,7 +307,6 @@ submitTryit()
         getContentOfFile(docID);
       }
     }
-
     //Получить содержимое
     function getContentOfFile(theID) {
       gapi.client.request({
@@ -400,9 +395,7 @@ submitTryit()
       var paramB = JSON.stringify(paramObj);
       var httpB = new XMLHttpRequest();
       httpB.open("POST.html", globalURL, true);
-
       httpB.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
       httpB.onreadystatechange = function() {
         if (httpB.readyState == 4 && httpB.status == 200) {
           if (httpB.responseText.substr(0, 2) == "OK") {
