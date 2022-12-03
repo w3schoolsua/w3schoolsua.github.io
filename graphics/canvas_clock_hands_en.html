@@ -12,9 +12,9 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML Canvas Clock Numbers. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='HTML Canvas Clock Numbers. The clock needs numbers. Create a JavaScript function to draw clock numbers. Lessons for beginners. W3Schools in English'>
-<meta name='keywords' content='w3schools, tutorial, html, javascript, lessons, draw, canvas, clock, numbers, code'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML Canvas Clock Hands. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='HTML Canvas Clock Hands. The clock needs hands. Create a JavaScript function to draw clock hands. Lessons for beginners. W3Schools in English'>
+<meta name='keywords' content='w3schools, html, javascript, tutorial, lessons, draw, canvas, clock, hands, code'>
 <script src="../scripts/clock.js"></script>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
@@ -367,24 +367,49 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
             <a href='index_en.html'><img src='../images/graphic_icon.png' alt='Graphic. Lessons for beginners' class='w3-left w3-padding' title='Graphic for beginners. W3Schools in English' style='width:100px;'></a><p class='w3-right'>
-    <a href='canvas_clock_numbers.html' title='Switch to the Ukrainian language'>Ua</a>
+    <a href='canvas_clock_hands.html' title='Switch to the Ukrainian language'>Ua</a>
 </p>
 <article>
-    <h1>Canvas <span class="color_h1">Clock Numbers</span></h1>
+    <h1>Canvas <span class="color_h1">Clock Hands</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="canvas_clock_face_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="canvas_clock_hands_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="canvas_clock_numbers_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="canvas_clock_start_en.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Part III - Draw Clock Numbers</h2>
-    <p>The clock needs numbers. Create a JavaScript function to draw clock numbers:</p>
+    <h2>Part IV - Draw Clock Hands</h2>
+    <p>The clock needs hands. Create a JavaScript function to draw clock hands:</p>
     <p><canvas id="canvas" width="300" height="300" style="background-color:#333"></canvas></p>
     <div class="w3-example">
         <h3>JavaScript:</h3>
         <div class="w3-code notranslate jsHigh">
-            function drawClock() {<br>&nbsp; drawFace(ctx, radius);<br>&nbsp; <strong>drawNumbers(ctx, radius);</strong><br>}<br><br>function drawNumbers(ctx, radius) {<br>&nbsp; var ang;<br>&nbsp;&nbsp;var num;<br>&nbsp;&nbsp;ctx.font = radius * 0.15 + &quot;px arial&quot;;<br>&nbsp; ctx.textBaseline = &quot;middle&quot;;<br>&nbsp; ctx.textAlign = &quot;center&quot;;<br>&nbsp; for(num = 1; num &lt; 13; num++){<br>&nbsp;&nbsp;&nbsp; ang = num * Math.PI / 6;<br>&nbsp;&nbsp;&nbsp; ctx.rotate(ang);<br>&nbsp;&nbsp;&nbsp; ctx.translate(0, -radius * 0.85);<br>&nbsp;&nbsp;&nbsp;&nbsp;ctx.rotate(-ang);<br>&nbsp;&nbsp;&nbsp; ctx.fillText(num.toString(), 0, 0);<br>&nbsp;&nbsp;&nbsp; ctx.rotate(ang);<br>&nbsp;&nbsp;&nbsp; ctx.translate(0, radius * 0.85);<br>&nbsp;&nbsp;&nbsp; ctx.rotate(-ang);<br>&nbsp;&nbsp;}<br>}
+            function drawClock() {<br>&nbsp; drawFace(ctx, radius);<br>&nbsp; drawNumbers(ctx, radius);<br><strong>&nbsp; drawTime(ctx, radius);<br></strong>}<br><br>function drawTime(ctx, radius){<br>&nbsp; var now = new Date();<br>&nbsp; var hour = now.getHours();<br>&nbsp; var minute = now.getMinutes();<br>&nbsp; var second = now.getSeconds();<br>&nbsp; //hour<br>&nbsp; hour = hour%12;<br>&nbsp; hour = (hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));<br>&nbsp;&nbsp;drawHand(ctx, hour, radius*0.5, radius*0.07);<br>&nbsp; //minute<br>&nbsp; minute = (minute*Math.PI/30)+(second*Math.PI/(30*60));<br>&nbsp; drawHand(ctx, minute, radius*0.8, radius*0.07);<br>&nbsp; // second<br>&nbsp;&nbsp;second = (second*Math.PI/30);<br>&nbsp; drawHand(ctx, second, radius*0.9, radius*0.02);<br>}<br><br>function drawHand(ctx, pos, length, width) {<br>&nbsp; ctx.beginPath();<br>&nbsp; ctx.lineWidth = width;<br>&nbsp; ctx.lineCap = &quot;round&quot;;<br>&nbsp;&nbsp;ctx.moveTo(0,0);<br>&nbsp;&nbsp;ctx.rotate(pos);<br>&nbsp;&nbsp;ctx.lineTo(0, -length);<br>&nbsp; ctx.stroke();<br>&nbsp;
+            ctx.rotate(-pos);<br>}
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../graphicstryit/trycanvas_clock_numbers.html" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../graphicstryit/trycanvas_clock_hands.html" target="_blank">Try it Yourself &raquo;</a>
+    </div>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Example Explained</h2>
+    <p>Use Date to get hour, minute, second:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            var now = new Date();<br>var hour = now.getHours();<br>var minute = now.getMinutes();<br>var second = now.getSeconds();
+        </div>
+    </div>
+    <p>Calculate the angle of the hour hand, and draw it a length (50% of radius), and a width (7% of radius):</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            hour = hour%12;<br>hour = (hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));<br>drawHand(ctx, hour, radius*0.5, radius*0.07);</div>
+    </div>
+    <p>Use the same technique for minutes and seconds.</p>
+    <p>The drawHand() routine does not need an explanation. It just draws a line with a given length and width.</p>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="canvas_clock_numbers_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="canvas_clock_start_en.html">Next &#10095;</a>
     </div>
     <script>
         var canvas = document.getElementById("canvas");
@@ -392,41 +417,13 @@
         var radius = canvas.height/2;
         ctx.translate(radius, radius);
         radius = radius*0.90
-        drawClock(ctx, radius);
-        function drawClock(ctx, radius) {
+        drawClock();
+        function drawClock() {
             drawFace(ctx, radius);
             drawNumbers(ctx, radius);
+            drawTime(ctx, radius);
         }
     </script>
-    <hr>
-    <div class="adver_adinfeed">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Example Explained</h2>
-    <p>Set the font size (of the drawing object) to 15% of the radius:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh">
-            ctx.font = radius * 0.15 + &quot;px arial&quot;;
-        </div>
-    </div>
-    <p>Set the text alignment to the middle and the center of the print position:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh">
-            ctx.textBaseline = &quot;middle&quot;;<br>ctx.textAlign = &quot;center&quot;;
-        </div>
-    </div>
-    <p>Calculate the print position (for 12 numbers) to 85% of the radius, rotated (PI/6) for each number:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh">
-            for(num = 1; num &lt; 13; num++) {<br>&nbsp; ang = num * Math.PI / 6;<br>&nbsp; ctx.rotate(ang);<br>&nbsp; ctx.translate(0, -radius * 0.85);<br>&nbsp; ctx.rotate(-ang);<br>&nbsp;&nbsp;ctx.fillText(num.toString(), 0, 0);<br>&nbsp;&nbsp;ctx.rotate(ang);<br>&nbsp;&nbsp;ctx.translate(0, radius * 0.85);<br>&nbsp;&nbsp;ctx.rotate(-ang);<br>}
-        </div>
-    </div>
-    <hr>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="canvas_clock_face_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="canvas_clock_hands_en.html">Next &#10095;</a>
-    </div>
 </article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>

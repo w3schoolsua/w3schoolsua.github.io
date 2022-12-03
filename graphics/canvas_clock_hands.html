@@ -12,9 +12,9 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML Canvas Циферблат годинника. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='HTML Canvas Циферблат годинника. Для годинника потрібен циферблат. Створіть функцію JavaScript, щоб намалювати циферблат. Уроки для початківців. W3Schools українською'>
-<meta name='keywords' content='w3schools, html, javascript, підручник, уроки, canvas, циферблат, створити, годинник, код'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML Canvas Стрілки годинника. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='HTML Canvas Стрілки годинника. Для годинника потрібні стрілки. Створіть функцію JavaScript для малювання стрілок годинника. Уроки для початківців. W3Schools українською'>
+<meta name='keywords' content='w3schools, html, javascript, підручник, уроки, canvas, стрілки, створити, годинника, код'>
 <script src="../scripts/clock.js"></script>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
@@ -370,24 +370,49 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
             <a href='index.html'><img src='../images/graphic_icon.png' alt='Графіка. Уроки W3Schools українською для початківців' class='w3-left w3-padding' title='Графіка для початківців. W3Schools українською мовою' style='width:100px;'></a><p class='w3-right'>
-    <a href='canvas_clock_face_en.html' title='Перейти на англійську мову'>En</a>
+    <a href='canvas_clock_hands_en.html' title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>Canvas <span class="color_h1">Циферблат годинника</span></h1>
+    <h1>Canvas <span class="color_h1">Стрілки годинника</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="canvas_clock_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="canvas_clock_numbers_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="canvas_clock_numbers.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="canvas_clock_start.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Частина II - Намалювати циферблат годинника</h2>
-    <p>Для годинника потрібен циферблат. Створіть функцію JavaScript, щоб намалювати циферблат:</p>
+    <h2>Частина IV - Намалювати стрілки годинника</h2>
+    <p>Для годинника потрібні стрілки. Створіть функцію JavaScript для малювання стрілок годинника:</p>
     <p><canvas id="canvas" width="300" height="300" style="background-color:#333"></canvas></p>
     <div class="w3-example">
         <h3>JavaScript:</h3>
         <div class="w3-code notranslate jsHigh">
-            function drawClock() {<br>&nbsp; <strong>drawFace(ctx, radius);</strong><br>}<br><br>function drawFace(ctx, radius) {<br>&nbsp;&nbsp;var grad;<br><br>&nbsp;&nbsp;ctx.beginPath();<br>&nbsp; ctx.arc(0, 0, radius, 0, 2 * Math.PI);<br>&nbsp; ctx.fillStyle = 'white';<br>&nbsp; ctx.fill();<br><br>&nbsp; grad = ctx.createRadialGradient(0, 0 ,radius * 0.95, 0, 0, radius * 1.05);<br>&nbsp; grad.addColorStop(0, '#333');<br>&nbsp; grad.addColorStop(0.5, 'white');<br>&nbsp; grad.addColorStop(1, '#333');<br>&nbsp; ctx.strokeStyle = grad;<br>&nbsp;&nbsp;ctx.lineWidth = radius*0.1;<br>&nbsp; ctx.stroke();<br><br>&nbsp; ctx.beginPath();<br>&nbsp; ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);<br>&nbsp; ctx.fillStyle = '#333';<br>&nbsp; ctx.fill();<br>}
+            function drawClock() {<br>&nbsp; drawFace(ctx, radius);<br>&nbsp; drawNumbers(ctx, radius);<br><strong>&nbsp; drawTime(ctx, radius);<br></strong>}<br><br>function drawTime(ctx, radius){<br>&nbsp; var now = new Date();<br>&nbsp; var hour = now.getHours();<br>&nbsp; var minute = now.getMinutes();<br>&nbsp; var second = now.getSeconds();<br>&nbsp; //hour<br>&nbsp; hour = hour%12;<br>&nbsp; hour = (hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));<br>&nbsp;&nbsp;drawHand(ctx, hour, radius*0.5, radius*0.07);<br>&nbsp; //minute<br>&nbsp; minute = (minute*Math.PI/30)+(second*Math.PI/(30*60));<br>&nbsp; drawHand(ctx, minute, radius*0.8, radius*0.07);<br>&nbsp; // second<br>&nbsp;&nbsp;second = (second*Math.PI/30);<br>&nbsp; drawHand(ctx, second, radius*0.9, radius*0.02);<br>}<br><br>function drawHand(ctx, pos, length, width) {<br>&nbsp; ctx.beginPath();<br>&nbsp; ctx.lineWidth = width;<br>&nbsp; ctx.lineCap = &quot;round&quot;;<br>&nbsp;&nbsp;ctx.moveTo(0,0);<br>&nbsp;&nbsp;ctx.rotate(pos);<br>&nbsp;&nbsp;ctx.lineTo(0, -length);<br>&nbsp; ctx.stroke();<br>&nbsp;
+            ctx.rotate(-pos);<br>}
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../graphicstryit/trycanvas_clock_face.html" target="_blank">Спробуйте самі &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../graphicstryit/trycanvas_clock_hands.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Пояснення прикладу</h2>
+    <p>Використовуйте дату, щоб отримати годину, хвилину, секунду:</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            var now = new Date();<br>var hour = now.getHours();<br>var minute = now.getMinutes();<br>var second = now.getSeconds();
+        </div>
+    </div>
+    <p>Обчисліть кут годинникової стрілки та накресліть її довжину (50% радіуса) і ширину (7% радіуса):</p>
+    <div class="w3-example">
+        <div class="w3-code notranslate jsHigh">
+            hour = hour%12;<br>hour = (hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));<br>drawHand(ctx, hour, radius*0.5, radius*0.07);</div>
+    </div>
+    <p>Використовуйте ту саму техніку для хвилин і секунд.</p>
+    <p>Процедура drawHand() не потребує пояснення. Вона просто малює лінію заданої довжини та ширини.</p>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="canvas_clock_numbers.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="canvas_clock_start.html">Next &#10095;</a>
     </div>
     <script>
         var canvas = document.getElementById("canvas");
@@ -395,70 +420,13 @@
         var radius = canvas.height/2;
         ctx.translate(radius, radius);
         radius = radius*0.90
-        drawClock(ctx, radius);
-        function drawClock(ctx, radius) {
+        drawClock();
+        function drawClock() {
             drawFace(ctx, radius);
+            drawNumbers(ctx, radius);
+            drawTime(ctx, radius);
         }
     </script>
-    <hr>
-    <div class="adver_adinfeed">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Пояснення коду</h2>
-    <p>Створіть функцію drawFace() для малювання циферблата годинника:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh">
-            function drawClock() {<br>&nbsp; <strong>drawFace(ctx, radius);</strong><br>}<br><br>function drawFace(ctx, radius) {<br>}
-        </div>
-    </div>
-    <p>Намалюйте біле коло:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh">
-            ctx.beginPath();<br>ctx.arc(0, 0, radius, 0, 2 * Math.PI);<br>ctx.fillStyle = 'white';<br>ctx.fill();
-        </div>
-    </div>
-    <p>Створіть радіальний градієнт (95% і 105% від вихідного радіуса годинника):</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh">
-            grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
-        </div>
-    </div>
-    <p>Створіть 3 кольорові точки, що відповідають внутрішньому, середньому та зовнішньому краю дуги:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh">
-            grad.addColorStop(0, '#333');<br>grad.addColorStop(0.5, 'white');<br>grad.addColorStop(1, '#333');
-        </div>
-    </div>
-    <div class="w3-panel w3-note">
-        <p>Кольорові зупинки створюють ефект 3D</p>
-    </div>
-    <p>Визначте градієнт як стиль обведення об&#8217;єкта малювання:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh">
-            ctx.strokeStyle = grad;</div>
-    </div>
-    <p>Визначте ширину лінії об&#8217;єкта малювання (10% радіуса):</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh">
-            ctx.lineWidth = radius * 0.1;
-        </div>
-    </div>
-    <p>Намалюйте коло:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh" style="color: #404040">ctx.stroke();</div>
-    </div>
-    <p>Намалюйте центр годинника:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate jsHigh">
-            ctx.beginPath();<br>ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);<br>ctx.fillStyle = '#333';<br>ctx.fill();
-        </div>
-    </div>
-    <hr>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="canvas_clock.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="canvas_clock_numbers.html">Next &#10095;</a>
-    </div>
 </article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
