@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Tryit Editor v3.6 - Онлайн редактор для Node.js</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/w3.css"><link rel="stylesheet" href="../lib/codemirror.css">
+  <script src="../lib/codemirror.js"></script>
+  <script src="../scripts/tryit_nodejs_head.js"></script>
+  <link rel='stylesheet' href='../styles/tryitstyle.css'>
+  <!--[if lt IE 8]>
+  <style>
+    #textareacontainer, #iframecontainer {width:48%;}
+    #container {height:500px;}
+    #textarea, #iframe {width:90%;height:450px;}
+    #textareaCode, #iframeResult {height:450px;}
+    .stack {display:none;}
+  </style>
+  <![endif]-->
+</head>
+<body>
+
+<div class="trytopnav">
+  <div class="w3-bar" style="overflow:auto">
+    <a class="w3-bar-item w3-button topnav-icons fa fa-home stack" id="tryhome" href="../index.html" target="_blank" title="Главная" style="font-size:28px;margin-top:-2px"></a>
+    <a href="javascript:void(0);" class="w3-bar-item w3-button topnav-icons fa fa-rotate stack" onclick="restack(currentStack)" title="Изменить ориентацию" style="font-size:28px;margin-top:-2px;width:58px;"></a>
+    <a href="javascript:void(0);" onclick="retheme()" title="Изменить тему" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="font-size:28px;margin-top:-2px"></a>
+    <span class='w3-right w3-hide-medium w3-hide-small' style='padding:8px;display:block'></span>
+    <span class='w3-right w3-hide-small' style='padding:8px 0;display:block;float:right;'><span id='framesize'></span></span>
+  </div>
+</div>
+<div id="shield"></div>
+<a href="javascript:void(0)" id="dragbar"></a>
+<div id="container">
+  <div id="textareacontainer">
+    <div id="textarea">
+      <div id="textareawrapper">
+        <textarea autocomplete="off" id="textareaCode" wrap="soft" spellcheck="false">
+var http = require('http');
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World!');
+}).listen(8080);
+        </textarea>
+      </div>
+    </div>
+  </div>
+  <div id="iframecontainer">
+    <div id="iframe">
+      <div id="iframewrapper">
+        <div style="width:100%;text-align:center;z-index:4;"><span style="opacity:0.9;padding:1px 6px;font-family:Consolas sans-serif; background-color:#F1F1F1;font-size:16px;">http://localhost:8080</span></div>
+        <iframe id="iframeResult" src="demo_intro_ifr.html"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../scripts/tryit_nodejs_end.js"></script>
+</body>
+</html>
