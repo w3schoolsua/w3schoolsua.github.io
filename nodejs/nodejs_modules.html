@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Node.js Підручник. Початок навчання. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Node.js Підручник. Початок навчання. Завантажити Node.js. Початок роботи. Інтерфейс командного рядка. Запустіть файл Node.js. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Node.js Підручник. Модулі. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Node.js Підручник. Модулі. Що таке модуль у Node.js? Вбудовані модулі. Включити модулі. Створити власні модулі. Включити власний модуль. Ініціювати файл. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -363,58 +363,77 @@
 </div>
             <a href='index.html'><img src='../svg/nodejs_icon.svg' alt='NodeJS. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='NodeJS для початківців. W3Schools українською мовою' style='width:100px'></a>
 <p class='w3-right'>
-    <a href="nodejs_get_started_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="nodejs_modules_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>Node.js <span class="color_h1">Початок навчання</span></h1>
+    <h1>Node.js <span class="color_h1">Модулі</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="nodejs_intro.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="nodejs_modules.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="nodejs_get_started.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="nodejs_http.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Завантажити Node.js</h2>
-    <p>На офіційному вебсайті Node.js є інструкції зі встановлення Node.js: <a target="_blank" href="https://nodejs.org">https://nodejs.org</a></p>
-    <p>Також при необхідності перегляньте <strong><a href="https://nodejs.org/uk/docs/" target="_blank" rel="nofollow">Документацію по Node.js українською мовою</a></strong>.</p>
+    <h2>Що таке модуль у Node.js?</h2>
+    <p>Розглядайте модулі так само як і бібліотеки JavaScript.</p>
+    <p>Набір функцій, які ви хочете включити у свою програму.</p>
     <hr>
-    <h2>Початок роботи</h2>
-    <p>Після того, як ви завантажили та встановили Node.js на своєму комп&#8217;ютері, давайте спробуємо відобразити &quot;Hello World&quot; у веб-браузері.</p>
-    <p>Створіть файл Node.js під назвою &quot;myfirst.js&quot; і додайте наступний код:</p>
+    <h2>Вбудовані модулі</h2>
+    <p>Node.js має набір вбудованих модулів, які ви можете використовувати без подальшої установки.</p>
+    <p>Подивіться розділ <a href="ref_modules.html">Довідник вбудованих модулів</a> для ознайомлення із повним списком модулів.</p>
+    <hr>
+    <h2>Включити модулі</h2>
+    <p>Щоб включити модуль, використовуйте функцію <code class="w3-codespan">require()</code> з назвою модуля:</p>
     <div class="w3-example">
-        <p>myfirst.js</p>
         <div class="w3-code notranslate jsHigh">
-            var http = require('http');<br><br>http.createServer(function (req, res) {<br>&nbsp;&nbsp;res.writeHead(200, {'Content-Type': 'text/html'});<br>&nbsp; res.end('Hello World!');<br>}).listen(8080);
+            var http = require('http');
         </div>
     </div>
-    <p>Збережіть файл на своєму комп&#8217;ютері: C:\Users\<em>Your Name</em>\myfirst.js</p>
-    <p>Код повідомляє комп&#8217;ютеру написати &quot;Hello World!&quot; якщо хтось (наприклад, веб-браузер) намагається отримати доступ до вашого комп&#8217;ютера через порт 8080.</p>
-    <p>Поки що вам не потрібно розуміти код. Це буде пояснено пізніше.</p>
-    <hr>
-    <h2>Інтерфейс командного рядка</h2>
-    <p>Файли Node.js потрібно ініціювати в &quot;інтерфейсі командного рядка&quot; програми вашого комп&#8217;ютера.</p>
-    <p>Як відкрити інтерфейс командного рядка на вашому комп&#8217;ютері, залежить від операційної системи. Для користувачів Windows натисніть кнопку &quot;Пуск&quot; і знайдіть &quot;Командний рядок&quot; або просто напишіть &quot;cmd&quot; у полі пошуку.</p>
-    <p>Перейдіть до теки, яка містить файл &quot;myfirst.js&quot;, вікно інтерфейсу командного рядка має виглядати приблизно так:</p>
+    <p>Тепер ваша програма має доступ до модуля HTTP і може створити сервер:</p>
     <div class="w3-example">
-        <div class="w3-code notranslate w3-black">
-            C:\Users\<em>Your Name</em>&gt;_
+        <div class="w3-code notranslate jsHigh">
+            http.createServer(function (req, res) {<br>&nbsp; res.writeHead(200, {'Content-Type': 'text/html'});<br>&nbsp; res.end('Hello World!');<br>}).listen(8080);
         </div>
     </div>
     <hr>
-    <h2>Запустіть файл Node.js</h2>
-    <p>Файл, який ви щойно створили, має бути ініційований Node.js перед виконанням будь-яких дій.</p>
-    <p>Запустіть інтерфейс командного рядка, напишіть <code class="w3-codespan">node myfirst.js</code> і натисніть Enter:</p>
+    <h2>Створити власні модулі</h2>
+    <p>Ви можете створити власні модулі та легко включити їх у свої програми.</p>
+    <p>Наступний приклад створює модуль, який повертає об&#8217;єкт дати та часу:</p>
     <div class="w3-example">
-        <p>Ініціювати "myfirst.js":</p>
-        <div class="w3-code notranslate w3-black">
-            C:\Users\<em>Your Name</em>&gt;node myfirst.js
+        <h3>Приклад</h3>
+        <p>Створіть модуль, який повертає поточну дату та час:</p>
+        <div class="w3-code notranslate jsHigh">
+            exports.myDateTime = function () {<br>&nbsp;&nbsp;return Date();<br>};
         </div>
     </div>
-    <p>Тепер ваш комп&#8217;ютер працює як сервер!</p>
-    <p>Якщо хтось спробує отримати доступ до вашого комп&#8217;ютера через порт 8080, він отримає повідомлення &quot;Hello World!&quot; повідомлення у відповідь!</p>
-    <p>Запустіть веб-браузер і введіть адресу: <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></p>
+    <p>Використовуйте ключове слово <code class="w3-codespan">exports</code>, щоб зробити властивості та методи доступними поза файлом модуля.</p>
+    <p>Збережіть наведений вище код у файлі "myfirstmodule.js"</p>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Включити власний модуль</h2>
+    <p>Тепер ви можете включити та використовувати модуль у будь-який із файлів вашого node.js.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>Використовуйте модуль &quot;myfirstmodule&quot; у файлі Node.js:</p>
+        <div class="w3-code notranslate jsHigh">
+            var http = require('http');<br><b>var dt = require('./myfirstmodule');<br></b><br>http.createServer(function (req, res) {<br>&nbsp;res.writeHead(200, {'Content-Type': 'text/html'});<br>&nbsp; res.write("Дата і час зараз: " + <strong>dt.myDateTime()</strong>);<br>&nbsp; res.end();<br>}).listen(8080);
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../nodejstryit/demo_module.html">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Зауважте, що ми використовуємо <code class="w3-codespan">./</code> для пошуку модуля, це означає, що модуль розташований у тій самій теці, що і файл Node.js.</p>
+    <p>Збережіть наведений вище код у файлі, який називається &quot;demo_module.js&quot;, та ініціюйте файл:</p>
+    <div class="w3-example">
+        <p>Ініціювати demo_module.js:</p>
+        <div class="w3-code notranslate w3-black">
+            C:\Users\<em>Your Name</em>&gt;node demo_module.js
+        </div>
+    </div>
+    <p>Якщо ви дотримувались тих самих кроків на своєму комп&#8217;ютері, ви побачите той самий результат, що і приклад: <a href="http://localhost:8080" target="_blank">http://localhost:8080</a></p>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="nodejs_intro.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="nodejs_modules.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="nodejs_get_started.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="nodejs_http.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
