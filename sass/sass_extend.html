@@ -13,8 +13,8 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Sass @extend та успадкування. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Sass @extend та успадкування. Перед вами - найкращий сайт для веб-розробників! Уроки для початківців. W3Schools українською'>
-<meta name="keywords" content="css, sass, extend, успадкування, файли, уроки, підручник, w3schools">
+<meta name='description' content='Sass @extend та успадкування. Директива @extend дозволяє поділитися набором властивостей CSS від одного селектора до іншого. Перед вами - найкращий сайт для веб-розробників! Гайда сюди негайно! Уроки для початківців. W3Schools українською'>
+<meta name="keywords" content="css, sass, extend, успадкування, директива, властивості, сайт, уроки, підручник, w3schools">
 <link rel='canonical' href='https://w3schoolsua.github.io/sass/sass_extend.html' />
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
@@ -338,23 +338,23 @@
     <hr>
     <h2>Sass директива @extend</h2>
     <p>Директива <code class="w3-codespan">@extend</code> дозволяє поділитися набором властивостей CSS від одного селектора до іншого.</p>
-    <p>The <code class="w3-codespan">@extend</code> directive is useful if you have almost identically styled elements that only differ in some small details.</p>
-    <p>The following Sass example first creates a basic style for buttons (this style will be used for most buttons). Then, we create one style for a &quot;Report&quot; button and one style for a &quot;Submit&quot; button. Both &quot;Report&quot; and &quot;Submit&quot; button inherit all the CSS properties from the .button-basic class, through the <code class="w3-codespan">@extend</code> directive. In addition, they have their own colors defined:</p>
+    <p>Директива <code class="w3-codespan">@extend</code> якщо у вас є елементи з майже ідентичним стилем, які відрізняються лише деякими дрібними деталями.</p>
+    <p>У наступному прикладі Sass спочатку створюється базовий стиль для кнопок (цей стиль використовуватиметься для більшості кнопок). Потім ми створюємо один стиль для кнопки &quot;Звіту&quot; та один стиль для кнопки &quot;Надіслати&quot;. Обидві кнопки &quot;Звіт&quot; та &quot;Надіслати&quot; успадковують всі властивості CSS від класу .button-basic через директиву <code class="w3-codespan">@extend</code>. Крім того, вони мають власні кольори:</p>
     <div class="w3-example">
-        <p>SCSS Syntax:</p>
+        <p>SCSS Синтаксис:</p>
         <div class="w3-code notranslate cssHigh">
             .button-basic&nbsp; {<br>&nbsp; border: none;<br>&nbsp; padding: 15px 30px;<br>&nbsp; text-align: center;<br>&nbsp; font-size: 16px;<br>&nbsp; cursor: pointer;<br>}<br><br>.button-report&nbsp; {<br>&nbsp; @extend .button-basic;<br>&nbsp; background-color: red;<br>}<br><br>.button-submit&nbsp; {<br>&nbsp; @extend .button-basic;<br>&nbsp; background-color: green;<br>&nbsp; color: white;<br>}
         </div>
     </div>
-    <p>After compilation, the CSS will look like this:</p>
+    <p>Після компіляції CSS буде виглядати так:</p>
     <div class="w3-example">
-        <p>CSS Output:</p>
+        <p>CSS виведення:</p>
         <div class="w3-code notranslate cssHigh">
             .button-basic, .button-report, .button-submit {<br>&nbsp; border: none;<br>&nbsp; padding: 15px 30px;<br>&nbsp; text-align: center;<br>&nbsp; font-size: 16px;<br>&nbsp; cursor: pointer;<br>}<br><br>.button-report&nbsp; {<br>&nbsp; background-color: red;<br>}<br><br>.button-submit&nbsp; {<br>&nbsp; background-color: green;<br>&nbsp; color: white;<br>}
         </div>
     </div>
-    <p>By using the <code class="w3-codespan">@extend</code> directive, you do not need to specify several classes for an element in your HTML code, like this: &lt;button class=&quot;button-basic button-report&quot;&gt;Report this&lt;/button&gt;. You just need to specify .button-report to get both sets of styles.</p>
-    <p>The <code class="w3-codespan">@extend</code> directive helps keep your Sass code very DRY.</p>
+    <p>Використовуючи директиву <code class="w3-codespan">@extend</code>, вам не потрібно вказувати кілька класів для елемента у вашому HTML-коді, наприклад: &lt;button class=&quot;button-basic button-report&quot;&gt;Повідомити про це&lt;/button&gt;. Вам просто потрібно вказати .button-report, щоб отримати обидва набори стилів.</p>
+    <p>Директива <code class="w3-codespan">@extend</code> допомагає зберегти ваш код Sass дуже DRY.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="sass_mixin_include.html">&#10094; Prev</a>
