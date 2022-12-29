@@ -12,10 +12,10 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Sass Змінні. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Sass Змінні. Область дії змінної. Використання Sass !global. Глобальні змінні слід визначати поза будь-якими правилами. Перед вами - найкращі уроки для веб-розробників! Уроки для початківців. W3Schools українською'>
-<meta name="keywords" content="html, css, sass, змінні, глобальні, уроки, для початківців, область дії, підручник, w3schools">
-<link rel='canonical' href='https://w3schoolsua.github.io/sass/sass_variables.html' />
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Sass Вкладення. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Sass Вкладення. Вкладені правила та властивості. Синтаксис. Приклад коду Sass. Перед вами - найкращий сайт для веб-розробників! Уроки для початківців. W3Schools українською'>
+<meta name="keywords" content="css, sass, властивості, вкладення, вкладені, правила, уроки, для початківців, підручник, w3schools">
+<link rel='canonical' href='https://w3schoolsua.github.io/sass/sass_nesting.html' />
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -327,101 +327,61 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
             <a href='index.html'><img src='../svg/sass_icon.svg' alt='Sass. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='Sass для початківців. W3Schools українською' style='width:100px;'></a><p class='w3-right'>
-    <a href="sass_variables_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="sass_nesting_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>Sass <span class="color_h1">Змінні</span></h1>
+    <h1>Sass <span class="color_h1">Вкладені правила та властивості</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sass_installation.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sass_nesting.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="sass_variables.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="sass_import.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Sass Змінні</h2>
-    <p><strong>Змінні</strong> - це спосіб зберігати інформацію, яку ви можете знову використовувати.</p>
-    <p>За допомогою <strong>Sass</strong> ви можете зберігати інформацію в змінних, наприклад:</p>
-    <ul>
-        <li>strings / рядки</li>
-        <li>numbers / числа</li>
-        <li>colors / кольори</li>
-        <li>booleans / булеві</li>
-        <li>lists / списки</li>
-        <li>nulls / нулі</li>
-    </ul>
-    <p>Sass використовує символ $, а потім ім&#8217;я, щоб оголосити змінну:</p>
+    <h2>Вкладені правила Sass</h2>
+    <p>Sass дозволяє вкладати селектори CSS так само, як і HTML.</p>
+    <p>Погляньте на приклад коду Sass для навігації сайтом:</p>
     <div class="w3-example">
-        <p>Синтаксис змінної Sass:</p>
-        <div class="w3-code notranslate xcssHigh">
-            $<i>ім&#8217;язмінної</i>: <em>значення</em>;
-        </div>
-    </div>
-    <p>Наступний приклад оголошує 4 змінні на ім&#8217;я Myfont, Mycolor, Myfontsize та MyWidth. Після оголошення змінних ви можете використовувати змінні, де завгодно:</p>
-    <div class="w3-example">
+        <h3>Приклад</h3>
         <p>SCSS Синтаксис:</p>
         <div class="w3-code notranslate cssHigh">
-            $myFont: Helvetica, sans-serif;<br>$myColor: red;<br>$myFontSize: 18px;<br>$myWidth: 680px;<br><br>body {<br>&nbsp; font-family: $myFont;<br>&nbsp; font-size: $myFontSize;<br>&nbsp; color: $myColor;<br>}<br><br>#container {<br>&nbsp; width: $myWidth;<br>}
+            nav {<br>&nbsp; ul {<br>&nbsp;&nbsp;&nbsp; margin: 0;<br>&nbsp;&nbsp;&nbsp; padding: 0;<br>&nbsp;&nbsp;&nbsp; list-style: none;<br>&nbsp; }<br>&nbsp; li {<br>&nbsp;&nbsp;&nbsp; display: inline-block;<br>&nbsp; }<br>&nbsp; a {<br>&nbsp;&nbsp;&nbsp; display: block;<br>&nbsp;&nbsp;&nbsp; padding: 6px 12px;<br>&nbsp;&nbsp;&nbsp; text-decoration: none;<br>&nbsp; }<br>}
         </div>
-        <a target="_blank" class="w3-btn" href="../sasstryit/demo_sass_var1.html">Спробуйте самі &raquo;</a>
+        <a target="_blank" class="w3-btn" href="../sasstryit/demo_sass_nest1.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>Отже, коли файл SASS транспірується, він приймає змінні (Myfont, Mycolor тощо) і виводить нормальні CSS зі змінними значеннями, розміщеними в CSS, як це:</p>
+    <p>Зверніть увагу, що в Sass селектори <code class="w3-codespan">ul</code>, <code class="w3-codespan">li</code> та <code class="w3-codespan">a</code> вкладено в селектор <code class="w3-codespan">nav</code>.</p>
+    <p>У CSS правила визначаються по одному (не вкладені):</p>
     <div class="w3-example">
-        <p>CSS виведення:</p>
+        <p>CSS Синтаксис:</p>
         <div class="w3-code notranslate cssHigh">
-            body {<br>&nbsp; font-family: Helvetica, sans-serif;<br>&nbsp; font-size: 18px;<br>&nbsp; color: red;<br>}<br><br>#container {<br>&nbsp;
-            width: 680px;<br>}
+            nav ul {<br>&nbsp; margin: 0;<br>&nbsp; padding: 0;<br>&nbsp; list-style: none;<br>}<br>nav li {<br>&nbsp; display: inline-block;<br>}<br>nav a {<br>&nbsp; display: block;<br>&nbsp; padding: 6px 12px;<br>&nbsp; text-decoration: none;<br>}
         </div>
     </div>
+    <p>Оскільки ви можете вкладати властивості в Sass, він чистіший і легший для читання, ніж стандартний CSS.</p>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Sass Область дії змінної</h2>
-    <p>Змінні Sass доступні лише на тому рівні, де вони визначені.</p>
-    <p>Подивіться на наступний приклад:</p>
+</div>    <h2>Вкладені властивості Sass</h2>
+    <p>Багато властивостей CSS мають однаковий префікс, наприклад font-family, font-size і font-weight або text-align, text-transform і text-overflow.</p>
+    <p>За допомогою Sass ви можете записати їх як вкладені властивості:</p>
     <div class="w3-example">
+        <h3>Приклад</h3>
         <p>SCSS Синтаксис:</p>
         <div class="w3-code notranslate cssHigh">
-            $myColor: red;<br><br>h1 {<br>&nbsp; $myColor: green;<br>&nbsp; color: $myColor;<br>}<br><br>p {<br>&nbsp; color: $myColor;<br>}
+            font: {<br>&nbsp; family: Helvetica, sans-serif;<br>&nbsp; size: 18px;<br>&nbsp; weight: bold;<br>}<br><br>text: {<br>&nbsp; align: center;<br>&nbsp; transform: lowercase;<br>&nbsp; overflow: hidden;<br>}
         </div>
-        <a target="_blank" class="w3-btn" href="../sasstryit/demo_sass_var2.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>Чи буде колір тексту всередині тегу <code class="w3-codespan">&lt;p&gt;</code> червоним чи зеленим? Буде червоний!</p>
-    <p>Інше визначення, $myColor: green; знаходиться всередині правила <code class="w3-codespan">&lt;h1&gt;</code> і буде доступним лише там!</p>
-    <p>Отже, виведення CSS буде:</p>
+    <p>Транспілер Sass перетворить наведене вище на звичайний CSS:</p>
     <div class="w3-example">
         <p>CSS виведення:</p>
         <div class="w3-code notranslate cssHigh">
-            h1 {<br>&nbsp; color: green;<br>}<br><br>p {<br>&nbsp; color: red;<br>}
+            font-family: Helvetica, sans-serif;<br>font-size: 18px;<br>font-weight: bold;<br><br>text-align: center;<br>text-transform: lowercase;<br>text-overflow: hidden;
         </div>
-    </div>
-    <p>Ок, це типова поведінка для області змінної.</p>
-    <hr>
-    <h2>Використання Sass !global</h2>
-    <p>Поведінку за умовчанням для області змінної можна змінити за допомогою перемикача <code class="w3-codespan">!global</code>.</p>
-    <p><code class="w3-codespan">!global</code> вказує, що змінна є глобальною, а це означає, що вона доступна на всіх рівнях.</p>
-    <p>Погляньте на наступний приклад (те саме, що й вище, але з доданим <code class="w3-codespan">!global</code>):</p>
-    <div class="w3-example">
-        <p>SCSS Синтаксис:</p>
-        <div class="w3-code notranslate cssHigh">
-            $myColor: red;<br><br>h1 {<br>&nbsp; $myColor: green !global;<br>&nbsp; color: $myColor;<br>}<br><br>p {<br>&nbsp; color: $myColor;<br>}
-        </div>
-        <a target="_blank" class="w3-btn" href="../sasstryit/demo_sass_var3.html">Спробуйте самі &raquo;</a>
-    </div>
-    <p>Тепер колір тексту всередині тегу <code class="w3-codespan">&lt;p&gt;</code> буде зеленим!</p>
-    <p>Отже, вивидення CSS буде:</p>
-    <div class="w3-example">
-        <p>CSS виведення:</p>
-        <div class="w3-code notranslate cssHigh">
-            h1 {<br>&nbsp; color: green;<br>}<br><br>p {<br>&nbsp; color: green;<br>}
-        </div>
-    </div>
-    <div class="w3-panel w3-note">
-        <p><b>Підказка:</b> Глобальні змінні слід визначати поза будь-якими правилами. Було б доцільно визначити всі глобальні змінні у власному файлі з назвою &quot;_globals.scss&quot; і включити файл із ключовим словом <a href="sass_mixin_include.html">@include</a>.</p>
     </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sass_installation.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sass_nesting.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="sass_variables.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="sass_import.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
