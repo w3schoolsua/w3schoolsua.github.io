@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel="stylesheet" href="../cdn/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="../cdn/jquery/1.11.3/jquery.min.js"></script>
+<script src="../cdn/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Перетворення PX в EM. Конвертер PX в EM. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Перетворення (конвертація) PX в EM. Конвертер PX в EM. Розмір основного шрифту. Яка різниця між px, em та відсотками? Сучасний підручник по CSS3. Уроки для початківців. W3Schools українською'>
+<link rel="stylesheet" href="../styles/w3-fix.css">
+<style>
+    table.notranslate tr:hover td {background-color:#555;color:white;}
+    .conv {border:1px solid #999;padding: 10px 16px;font-size: 18px;vertical-align: middle;line-height: 1.33;}
+    .conv2 {font-size: 25px;background-color:#E7E9EB;line-height: 1.33;border:none;margin-left:15px;}
+    .conv:hover {border-color:black;}
+    .btn-lg {margin-top:25px;display:block;padding: 11px 25px 11px 25px;}
+    .pxem {float:left;margin-top:25px;}
+    .empx {float:right;margin-top:25px;}
+    .jumbotron input {color:#000;}
+    @media screen and (max-width: 600px){.conv, .empx, .pxem {float:left;width: 100%;}}
+</style>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver' title='Bootstrap Підручник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index' title='How To'>ЯК ЗРОБИТИ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index' title='jQuery Підручник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index' title='XML Підручник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../go/index' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='where_to_start'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div class='w3-light-grey' id='leftmenuinnerinner'>
+            <h2 class='left'><span class='left_h2'>CSS</span> Довідник</h2>
+            <a target='_top' href='index'>CSS Довідник</a>
+            <a target='_top' href='css3_browsersupport'>CSS Підтримка браузерами</a>
+            <a target='_top' href='css_selectors'>CSS Селектори</a>
+            <a target='_top' href='css_functions'>CSS Функції</a>
+            <a target='_top' href='css_ref_aural'>CSS Довідник Aural</a>
+            <a target='_top' href='css_websafe_fonts'>CSS Безпечні веб-шрифти</a>
+            <a target='_top' href='css_fonts_fallbacks'>CSS Альтернативні шрифти</a>
+            <a target='_top' href='css_animatable'>CSS Анімація</a>
+            <a target='_top' href='css_units'>CSS Одиниці</a>
+            <a target='_top' href='css_pxtoemconversion'>CSS PX-EM Конвертер</a>
+            <a target='_top' href='css_colors'>CSS Кольори</a>
+            <a target='_top' href='css_colors_legal'>CSS Значення кольору</a>
+            <a target='_top' href='css_default_values'>CSS Значення за замовчуванням</a>
+            <a target='_top' href='css_entities'>CSS Сутності</a>
+            <br>
+            <div class='notranslate'>
+                <h2 class='left'><span class='left_h2'>CSS</span> Властивості</h2>
+                <a target='_top' href='css4_pr_accent-color'>accent-color</a>
+                <a target='_top' href='css3_pr_align-content'>align-content</a>
+                <a target='_top' href='css3_pr_align-items'>align-items</a>
+                <a target='_top' href='css3_pr_align-self'>align-self</a>
+                <a target='_top' href='css3_pr_all'>all</a>
+                <a target='_top' href='css3_pr_animation'>animation</a>
+                <a target='_top' href='css3_pr_animation-delay'>animation-delay</a>
+                <a target='_top' href='css3_pr_animation-direction'>animation-direction</a>
+                <a target='_top' href='css3_pr_animation-duration'>animation-duration</a>
+                <a target='_top' href='css3_pr_animation-fill-mode'>animation-fill-mode</a>
+                <a target='_top' href='css3_pr_animation-iteration-count'>animation-iteration-count</a>
+                <a target='_top' href='css3_pr_animation-name'>animation-name</a>
+                <a target='_top' href='css3_pr_animation-play-state'>animation-play-state</a>
+                <a target='_top' href='css3_pr_animation-timing-function'>animation-timing-function</a>
+                <a target='_top' href='css3_pr_backdrop-filter'>backdrop-filter</a>
+                <a target='_top' href='css3_pr_backface-visibility'>backface-visibility</a>
+                <a target='_top' href='css3_pr_background'>background</a>
+                <a target='_top' href='pr_background-attachment'>background-attachment</a>
+                <a target='_top' href='pr_background-blend-mode'>background-blend-mode</a>
+                <a target='_top' href='css3_pr_background-clip'>background-clip</a>
+                <a target='_top' href='pr_background-color'>background-color</a>
+                <a target='_top' href='pr_background-image'>background-image</a>
+                <a target='_top' href='css3_pr_background-origin'>background-origin</a>
+                <a target='_top' href='pr_background-position'>background-position</a>
+                <a target='_top' href='pr_background-repeat'>background-repeat</a>
+                <a target='_top' href='css3_pr_background-size'>background-size</a>
+                <a target='_top' href='pr_border'>border</a>
+                <a target='_top' href='pr_border-bottom'>border-bottom</a>
+                <a target='_top' href='pr_border-bottom_color'>border-bottom-color</a>
+                <a target='_top' href='css3_pr_border-bottom-left-radius'>border-bottom-left-radius</a>
+                <a target='_top' href='css3_pr_border-bottom-right-radius'>border-bottom-right-radius</a>
+                <a target='_top' href='pr_border-bottom_style'>border-bottom-style</a>
+                <a target='_top' href='pr_border-bottom_width'>border-bottom-width</a>
+                <a target='_top' href='pr_border-collapse'>border-collapse</a>
+                <a target='_top' href='pr_border-color'>border-color</a>
+                <a target='_top' href='css3_pr_border-image'>border-image</a>
+                <a target='_top' href='css3_pr_border-image-outset'>border-image-outset</a>
+                <a target='_top' href='css3_pr_border-image-repeat'>border-image-repeat</a>
+                <a target='_top' href='css3_pr_border-image-slice'>border-image-slice</a>
+                <a target='_top' href='css3_pr_border-image-source'>border-image-source</a>
+                <a target='_top' href='css3_pr_border-image-width'>border-image-width</a>
+                <a target='_top' href='pr_border-left'>border-left</a>
+                <a target='_top' href='pr_border-left_color'>border-left-color</a>
+                <a target='_top' href='pr_border-left_style'>border-left-style</a>
+                <a target='_top' href='pr_border-left_width'>border-left-width</a>
+                <a target='_top' href='css3_pr_border-radius'>border-radius</a>
+                <a target='_top' href='pr_border-right'>border-right</a>
+                <a target='_top' href='pr_border-right_color'>border-right-color</a>
+                <a target='_top' href='pr_border-right_style'>border-right-style</a>
+                <a target='_top' href='pr_border-right_width'>border-right-width</a>
+                <a target='_top' href='pr_border-spacing'>border-spacing</a>
+                <a target='_top' href='pr_border-style'>border-style</a>
+                <a target='_top' href='pr_border-top'>border-top</a>
+                <a target='_top' href='pr_border-top_color'>border-top-color</a>
+                <a target='_top' href='css3_pr_border-top-left-radius'>border-top-left-radius</a>
+                <a target='_top' href='css3_pr_border-top-right-radius'>border-top-right-radius</a>
+                <a target='_top' href='pr_border-top_style'>border-top-style</a>
+                <a target='_top' href='pr_border-top_width'>border-top-width</a>
+                <a target='_top' href='pr_border-width'>border-width</a>
+                <a target='_top' href='pr_pos_bottom'>bottom</a>
+                <a target='_top' href='css3_pr_box-decoration-break'>box-decoration-break</a>
+                <a target='_top' href='css3_pr_box-shadow'>box-shadow</a>
+                <a target='_top' href='css3_pr_box-sizing'>box-sizing</a>
+                <a target='_top' href='pr_break-after'>break-after</a>
+                <a target='_top' href='pr_break-before'>break-before</a>
+                <a target='_top' href='pr_break-inside'>break-inside</a>
+                <a target='_top' href='pr_tab_caption-side'>caption-side</a>
+                <a target='_top' href='css3_pr_caret-color'>caret-color</a>
+                <a target='_top' href='pr_charset_rule'>@charset</a>
+                <a target='_top' href='pr_class_clear'>clear</a>
+                <a target='_top' href='pr_pos_clip'>clip</a>
+                <a target='_top' href='css3_pr_clip-path'>clip-path</a>
+                <a target='_top' href='pr_text_color'>color</a>
+                <a target='_top' href='css3_pr_column-count'>column-count</a>
+                <a target='_top' href='css3_pr_column-fill'>column-fill</a>
+                <a target='_top' href='css3_pr_column-gap'>column-gap</a>
+                <a target='_top' href='css3_pr_column-rule'>column-rule</a>
+                <a target='_top' href='css3_pr_column-rule-color'>column-rule-color</a>
+                <a target='_top' href='css3_pr_column-rule-style'>column-rule-style</a>
+                <a target='_top' href='css3_pr_column-rule-width'>column-rule-width</a>
+                <a target='_top' href='css3_pr_column-span'>column-span</a>
+                <a target='_top' href='css3_pr_column-width'>column-width</a>
+                <a target='_top' href='css3_pr_columns'>columns</a>
+                <a target='_top' href='pr_gen_content'>content</a>
+                <a target='_top' href='pr_gen_counter-increment'>counter-increment</a>
+                <a target='_top' href='pr_gen_counter-reset'>counter-reset</a>
+                <a target='_top' href='pr_class_cursor'>cursor</a>
+                <a target='_top' href='pr_text_direction'>direction</a>
+                <a target='_top' href='pr_class_display'>display</a>
+                <a target='_top' href='pr_tab_empty-cells'>empty-cells</a>
+                <a target='_top' href='css3_pr_filter'>filter</a>
+                <a target='_top' href='css3_pr_flex'>flex</a>
+                <a target='_top' href='css3_pr_flex-basis'>flex-basis</a>
+                <a target='_top' href='css3_pr_flex-direction'>flex-direction</a>
+                <a target='_top' href='css3_pr_flex-flow'>flex-flow</a>
+                <a target='_top' href='css3_pr_flex-grow'>flex-grow</a>
+                <a target='_top' href='css3_pr_flex-shrink'>flex-shrink</a>
+                <a target='_top' href='css3_pr_flex-wrap'>flex-wrap</a>
+                <a target='_top' href='pr_class_float'>float</a>
+                <a target='_top' href='pr_font_font'>font</a>
+                <a target='_top' href='css3_pr_font-face_rule'>@font-face</a>
+                <a target='_top' href='pr_font_font-family'>font-family</a>
+                <a target='_top' href='css3_pr_font-feature-settings'>font-feature-settings</a>
+                <a target='_top' href='css3_pr_font-kerning'>font-kerning</a>
+                <a target='_top' href='pr_font_font-size'>font-size</a>
+                <a target='_top' href='css3_pr_font-size-adjust'>font-size-adjust</a>
+                <a target='_top' href='css3_pr_font-stretch'>font-stretch</a>
+                <a target='_top' href='pr_font_font-style'>font-style</a>
+                <a target='_top' href='pr_font_font-variant'>font-variant</a>
+                <a target='_top' href='css3_pr_font-variant-caps'>font-variant-caps</a>
+                <a target='_top' href='pr_font_weight'>font-weight</a>
+                <a target='_top' href='css3_pr_gap'>gap</a>
+                <a target='_top' href='pr_grid'>grid</a>
+                <a target='_top' href='pr_grid-area'>grid-area</a>
+                <a target='_top' href='pr_grid-auto-columns'>grid-auto-columns</a>
+                <a target='_top' href='pr_grid-auto-flow'>grid-auto-flow</a>
+                <a target='_top' href='pr_grid-auto-rows'>grid-auto-rows</a>
+                <a target='_top' href='pr_grid-column'>grid-column</a>
+                <a target='_top' href='pr_grid-column-end'>grid-column-end</a>
+                <a target='_top' href='pr_grid-column-gap'>grid-column-gap</a>
+                <a target='_top' href='pr_grid-column-start'>grid-column-start</a>
+                <a target='_top' href='pr_grid-gap'>grid-gap</a>
+                <a target='_top' href='pr_grid-row'>grid-row</a>
+                <a target='_top' href='pr_grid-row-end'>grid-row-end</a>
+                <a target='_top' href='pr_grid-row-gap'>grid-row-gap</a>
+                <a target='_top' href='pr_grid-row-start'>grid-row-start</a>
+                <a target='_top' href='pr_grid-template'>grid-template</a>
+                <a target='_top' href='pr_grid-template-areas'>grid-template-areas</a>
+                <a target='_top' href='pr_grid-template-columns'>grid-template-columns</a>
+                <a target='_top' href='pr_grid-template-rows'>grid-template-rows</a>
+                <a target='_top' href='css3_pr_hanging-punctuation'>hanging-punctuation</a>
+                <a target='_top' href='pr_dim_height'>height</a>
+                <a target='_top' href='css3_pr_hyphens'>hyphens</a>
+                <a target='_top' href='css3_pr_image-rendering'>image-rendering</a>
+                <a target='_top' href='pr_import_rule'>@import</a>
+                <a target='_top' href='css3_pr_isolation'>isolation</a>
+                <a target='_top' href='css3_pr_justify-content'>justify-content</a>
+                <a target='_top' href='css3_pr_animation-keyframes'>@keyframes</a>
+                <a target='_top' href='pr_pos_left'>left</a>
+                <a target='_top' href='pr_text_letter-spacing'>letter-spacing</a>
+                <a target='_top' href='pr_dim_line-height'>line-height</a>
+                <a target='_top' href='pr_list-style'>list-style</a>
+                <a target='_top' href='pr_list-style-image'>list-style-image</a>
+                <a target='_top' href='pr_list-style-position'>list-style-position</a>
+                <a target='_top' href='pr_list-style-type'>list-style-type</a>
+                <a target='_top' href='pr_margin'>margin</a>
+                <a target='_top' href='pr_margin-bottom'>margin-bottom</a>
+                <a target='_top' href='pr_margin-left'>margin-left</a>
+                <a target='_top' href='pr_margin-right'>margin-right</a>
+                <a target='_top' href='pr_margin-top'>margin-top</a>
+                <a target='_top' href='css3_pr_mask-image'>mask-image</a>
+                <a target='_top' href='css3_pr_mask-mode'>mask-mode</a>
+                <a target='_top' href='css3_pr_mask-origin'>mask-origin</a>
+                <a target='_top' href='css3_pr_mask-position'>mask-position</a>
+                <a target='_top' href='css3_pr_mask-repeat'>mask-repeat</a>
+                <a target='_top' href='css3_pr_mask-size'>mask-size</a>
+                <a target='_top' href='pr_dim_max-height'>max-height</a>
+                <a target='_top' href='pr_dim_max-width'>max-width</a>
+                <a target='_top' href='css3_pr_mediaquery'>@media</a>
+                <a target='_top' href='pr_dim_min-height'>min-height</a>
+                <a target='_top' href='pr_dim_min-width'>min-width</a>
+                <a target='_top' href='pr_mix-blend-mode'>mix-blend-mode</a>
+                <a target='_top' href='css3_pr_object-fit'>object-fit</a>
+                <a target='_top' href='css3_pr_object-position'>object-position</a>
+                <a target='_top' href='css3_pr_opacity'>opacity</a>
+                <a target='_top' href='css3_pr_order'>order</a>
+                <a target='_top' href='css3_pr_orphans'>orphans</a>
+                <a target='_top' href='pr_outline'>outline</a>
+                <a target='_top' href='pr_outline-color'>outline-color</a>
+                <a target='_top' href='css3_pr_outline-offset'>outline-offset</a>
+                <a target='_top' href='pr_outline-style'>outline-style</a>
+                <a target='_top' href='pr_outline-width'>outline-width</a>
+                <a target='_top' href='pr_pos_overflow'>overflow</a>
+                <a target='_top' href='css3_pr_overflow-wrap'>overflow-wrap</a>
+                <a target='_top' href='css3_pr_overflow-x'>overflow-x</a>
+                <a target='_top' href='css3_pr_overflow-y'>overflow-y</a>
+                <a target='_top' href='pr_padding'>padding</a>
+                <a target='_top' href='pr_padding-bottom'>padding-bottom</a>
+                <a target='_top' href='pr_padding-left'>padding-left</a>
+                <a target='_top' href='pr_padding-right'>padding-right</a>
+                <a target='_top' href='pr_padding-top'>padding-top</a>
+                <a target='_top' href='pr_print_pageba'>page-break-after</a>
+                <a target='_top' href='pr_print_pagebb'>page-break-before</a>
+                <a target='_top' href='pr_print_pagebi'>page-break-inside</a>
+                <a target='_top' href='css3_pr_perspective'>perspective</a>
+                <a target='_top' href='css3_pr_perspective-origin'>perspective-origin</a>
+                <a target='_top' href='css3_pr_pointer-events'>pointer-events</a>
+                <a target='_top' href='pr_class_position'>position</a>
+                <a target='_top' href='pr_gen_quotes'>quotes</a>
+                <a target='_top' href='css3_pr_resize'>resize</a>
+                <a target='_top' href='pr_pos_right'>right</a>
+                <a target='_top' href='css3_pr_row-gap'>row-gap</a>
+                <a target='_top' href='pr_scroll-behavior'>scroll-behavior</a>
+                <a target='_top' href='css3_pr_tab-size'>tab-size</a>
+                <a target='_top' href='pr_tab_table-layout'>table-layout</a>
+                <a target='_top' href='pr_text_text-align'>text-align</a>
+                <a target='_top' href='css3_pr_text-align-last'>text-align-last</a>
+                <a target='_top' href='pr_text_text-decoration'>text-decoration</a>
+                <a target='_top' href='css3_pr_text-decoration-color'>text-decoration-color</a>
+                <a target='_top' href='css3_pr_text-decoration-line'>text-decoration-line</a>
+                <a target='_top' href='css3_pr_text-decoration-style'>text-decoration-style</a>
+                <a target='_top' href='pr_text_text-decoration-thickness'>text-decoration-thickness</a>
+                <a target='_top' href='pr_text_text-indent'>text-indent</a>
+                <a target='_top' href='css3_pr_text-justify'>text-justify</a>
+                <a target='_top' href='css3_pr_text-overflow'>text-overflow</a>
+                <a target='_top' href='css3_pr_text-shadow'>text-shadow</a>
+                <a target='_top' href='pr_text_text-transform'>text-transform</a>
+                <a target='_top' href='pr_pos_top'>top</a>
+                <a target='_top' href='css3_pr_transform'>transform</a>
+                <a target='_top' href='css3_pr_transform-origin'>transform-origin</a>
+                <a target='_top' href='css3_pr_transform-style'>transform-style</a>
+                <a target='_top' href='css3_pr_transition'>transition</a>
+                <a target='_top' href='css3_pr_transition-delay'>transition-delay</a>
+                <a target='_top' href='css3_pr_transition-duration'>transition-duration</a>
+                <a target='_top' href='css3_pr_transition-property'>transition-property</a>
+                <a target='_top' href='css3_pr_transition-timing-function'>transition-timing-function</a>
+                <a target='_top' href='pr_text_unicode-bidi'>unicode-bidi</a>
+                <a target='_top' href='css3_pr_user-select'>user-select</a>
+                <a target='_top' href='pr_pos_vertical-align'>vertical-align</a>
+                <a target='_top' href='pr_class_visibility'>visibility</a>
+                <a target='_top' href='pr_text_white-space'>white-space</a>
+                <a target='_top' href='css3_pr_widows'>widows</a>
+                <a target='_top' href='pr_dim_width'>width</a>
+                <a target='_top' href='css3_pr_word-break'>word-break</a>
+                <a target='_top' href='pr_text_word-spacing'>word-spacing</a>
+                <a target='_top' href='css3_pr_word-wrap'>word-wrap</a>
+                <a target='_top' href='css3_pr_writing-mode'>writing-mode</a>
+                <a target='_top' href='pr_pos_z-index'>z-index</a>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+            <a href='index'><img src='../svg/css3_icon1.svg' alt='CSS3. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='CSS3 для початківців. W3Schools українською' style='width: 90px'></a>
+<p class='w3-right'>
+    <a href="css_pxtoemconversion_en" title='Перейти на англійську мову'>En</a>
+</p>
+<article>
+    <h1>Конвертація <span class="color_h1"></span>PX в EM</h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="css_units_en">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css_colors_en">Next &#10095;</a>
+    </div>
+    <hr>
+    <h2>Конвертер PX в EM</h2>
+    <ul>
+        <li>Встановіть розмір шрифту за замовчуванням (зазвичай 16 пікселів)</li>
+        <li>Потім перетворіть значення пікселя на em на основі розміру за замовчуванням</li>
+        <li>Або конвертуйте значення em у пікселі на основі розміру за замовчуванням</li>
+    </ul>
+    <div class="jumbotron ws-grey" style="padding:50px;margin-top:17px;">
+        <p>Установіть розмір шрифту за замовчуванням:</p>
+        <input class="conv" type="text" id="pix1" size="8" value="16"> <span style="font-size:23px">px</span>
+        <br><br>
+        <p class="pxem">Перетворення PX в EM:<br>
+            <input onfocus="wrong()" onblur="works()" class="conv" type="text" size="8" id="myInput" value=""> <span style="font-size:23px">px</span>
+        </p>
+        <p class="empx">Перетворення EM в PX:<br>
+            <input onfocus="wrong2()" onblur="works2()" class="conv" type="text" size="8" id="myInput2" value=""> <span style="font-size:23px">em</span>
+        </p>
+        <p class="clearfix"></p>
+        <button class="btn btn-lg ws-green w3-round" onclick="myFunction()"><span style="top:4px;" class="glyphicon glyphicon-transfer"></span> Конвертувати</button>
+        <hr>
+        <p>Результат: <span style="font-size:24px" id="result1"></span></p>
+        <br>
+    </div>
+    <hr>
+    <h2>Розмір основного шрифту</h2>
+    <p>У таблиці нижче виберіть розмір основного шрифту в пікселях (px), щоб відобразити повну таблицю перетворення &quot;px в em та відсотки&quot;.</p>
+    <p><b>Порада.</b> Розмір шрифту за умовчанням зазвичай становить 16 пікселів.</p>
+    <div id="demo"></div>
+    <div class="w3-panel w3-note">
+        <p><strong>Яка різниця між PX, EM та відсотками?</strong></p>
+        <p>Пікселі (px) є статичними вимірюваннями, тоді як відсотки та EM є відносними. Відсоток залежить від розміру батьківського шрифту. EM є відносно поточного розміру шрифту елемента (2em означає 2-кратний розмір поточного шрифту). Отже, якщо розмір шрифту body становить 16 пікселів, то 150% буде 24 пікселя (1,5 * 16), а 2em буде 32 пікселя (16 * 2). Перегляньте розділ <a href="css_units_en">CSS Одиниці</a>, щоб дізнатися більше про одиниці вимірювання в HTML/CSS.</p>
+    </div>
+    <script>
+        function fillTable(x) {
+            var t = "";
+            t = t + "<table style='cursor:pointer;' class='ws-table-all notranslate'>"
+            t = t + "<tr>"
+            t = t + "<th style='cursor:auto;width:33%;font-weight:bold;'>px</th>"
+            t = t + "<th style='cursor:auto;width:33%;font-weight:bold;'>em</th>"
+            t = t + "<th style='cursor:auto;width:33%;font-weight:bold;'>відсоток</th>"
+            t = t + "</tr>"
+            for (i = 5; i < 26; i++) {
+                t = t + "<tr onclick='fillTable(" + i + ")')'"
+                if (i == x) {
+                    t = t + " style='background-color:#555;color:white;' "
+                }
+                t = t + "><td>" + i + "px</td>"
+                t = t + "<td>" + (i/x).toFixed(4) + "em</td>"
+                t = t + "<td>" + ((i/x) * 100).toFixed(2) + "%</td>"
+                t = t + "</tr>"
+            }
+            t = t + "</table>";
+            document.getElementById("demo").innerHTML = t;
+        }
+        fillTable(16);
+        function wrong() {
+            document.getElementById("myInput2").disabled = true;
+            document.getElementById("myInput2").value = "";
+        }
+        function wrong2() {
+            document.getElementById("myInput").disabled = true;
+            document.getElementById("myInput").value = "";
+        }
+        function works() {
+            document.getElementById("myInput2").disabled = false;
+            document.getElementById("myInput2").value = "";
+        }
+        function works2() {
+            document.getElementById("myInput").disabled = false;
+            document.getElementById("myInput").value = "";
+        }
+        function myFunction() {
+            var x = document.getElementById("myInput").value;
+            var z = document.getElementById("myInput2").value;
+            var y = document.getElementById("pix1").value;
+            var res = document.getElementById("result1");
+            if (x) {
+                res.innerHTML = x/y + "em";
+            } else {
+                res.innerHTML = z*y + "px";
+            }
+            if (isNaN (x) || isNaN (z) || isNaN (y)) {
+                res.innerHTML = "Неправильне введення! Використовуйте цифри";
+                res.style.color = "red";
+            } else {
+                res.style.color = "";
+            }
+        }
+    </script>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="css_units">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="css_colors">Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
+    </div>
+    <div class='sidesection'>
+        <h4>ПРИЄДНУЙТЕСЬ!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook сторінка' title='Перейти на Facebook сторінку' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCzJZhVkn5O609CaWXupIqpw' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index'>HTML Підручник</a><br>
+        <a href='../css/index'>CSS Підручник</a><br>
+        <a href='../js/index'>JavaScript Підручник</a><br>
+        <a href='../sql/index'>SQL Підручник</a><br>
+        <a href='../python/index'>Python Підручник</a><br>
+        <a href='../php/index'>PHP Підручник</a><br>
+        <a href='../bootstrap/bootstrap_ver'>Bootstrap Підручник</a><br>
+        <a href='../w3css/index'>W3.CSS Підручник</a><br>
+        <a href='../appml/index'>AppML Підручник</a><br>
+        <a href='../jquery/index'>jQuery Підручник</a><br>
+        <a href='../angular/index'>Angular Підручник</a><br>
+        <a href='../sass/index'>Sass Підручник</a><br>
+        <a href='../java/index'>Java Підручник</a><br>
+        <a href='../cpp/index'>C++ Підручник</a><br>
+        <a href='../cs/index'>C# Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index'>HTML Довідник</a><br>
+        <a href='../cssref/index'>CSS Довідник</a><br>
+        <a href='../jsref/index'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords'>SQL Довідник</a><br>
+        <a href='../python/python_reference'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords'>Java Довідник</a><br>
+        <a href='../colors/colors_names'>Кольори Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples'>HTML Приклади</a><br>
+        <a href='../css/css_examples'>CSS Приклади</a><br>
+        <a href='../js/js_examples'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples'>SQL Приклади</a><br>
+        <a href='../python/python_examples'>Python Приклади</a><br>
+        <a href='../php/php_examples'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples'>Angular Приклади</a><br>
+        <a href='../java/java_examples'>Java Приклади</a><br>
+        <a href='../cpp/cpp_examples'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples'>C# Приклади</a><br>
+        <a href='../xml/xml_examples'>XML Приклади</a><br>
+        <a href='../howto/index'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index'>Веб-Сертифікати</a></h4>
+        <a href='../cert/cert_html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java'>Java Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+    Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright'>умови використання</a>, <a href='../about/about_privacy'>cookie і політику конфіденційності</a>.<br>
+    Також доступна версія сайту <a href='../index_en' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
+    <a href='../about/about_copyright'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
+    <a href='../index'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
