@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript HTML DOM Колекції. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='JavaScript HTML DOM Колекції. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='JavaScript HTML DOM Колекції. Об&#8217;єкт HTMLCollection. HTMLCollection Довжина. Властивість length визначає кількість елементів у HTMLCollection. HTMLCollection НЕ є масивом! Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -512,50 +512,50 @@
     <hr>
     <h2>Об&#8217;єкт HTMLCollection</h2>
     <p>Метод <code class="w3-codespan">getElementsByTagName()</code> поверне об&#8217;єкт <code class="w3-codespan">HTMLCollection</code>.</p>
-    <p>Об&#8217;єкт <code class="w3-codespan">HTMLCollection</code> object is an array-like list (collection) of HTML elements.</p>
-    <p>The following code selects all <code class="w3-codespan">&lt;p&gt;</code> elements in a document:</p>
+    <p>Об&#8217;єкт <code class="w3-codespan">HTMLCollection</code> — це список (набір) елементів HTML у вигляді масиву.</p>
+    <p>Наступний код вибирає всі елементи <code class="w3-codespan">&lt;p&gt;</code> у документі:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate jsHigh">
             const myCollection = document.getElementsByTagName(&quot;p&quot;);
         </div>
-        <p>The elements in the collection can be accessed by an index number.</p>
-        <p>To access the second &lt;p&gt; element you can write:</p>
+        <p>Доступ до елементів колекції можна отримати за номером індексу.</p>
+        <p>Щоб отримати доступ до другого &lt;p&gt; елементу, який ви можете написати:</p>
         <div class="w3-code notranslate jsHigh">
             myCollection[1]
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_dom_htmlcollection.html" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_dom_htmlcollection.html" target="_blank">Спробуйте самі &raquo;</a>
     </div>
-    <p><b>Note:</b> The index starts at 0.</p>
+    <p><b>Примітка:</b> Індекс починається з 0.</p>
     <hr>
-    <h2>HTML HTMLCollection Length</h2>
-    <p>The <code class="w3-codespan">length</code> property defines the number of elements in an <code class="w3-codespan">HTMLCollection</code>:</p>
+    <h2>HTML HTMLCollection Довжина</h2>
+    <p>Властивість <code class="w3-codespan">length</code>  визначає кількість елементів у <code class="w3-codespan">HTMLCollection</code>:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate jsHigh">
             myCollection.length
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_dom_htmlcollection_length.html" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_dom_htmlcollection_length.html" target="_blank">Спробуйте самі &raquo;</a>
     </div>
-    <p>The <code class="w3-codespan">length</code> property is useful when you want to loop through the elements in a collection:</p>
+    <p>Властивість <code class="w3-codespan">length</code> корисна, коли ви хочете перебрати елементи в колекції:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>Change the text color of all &lt;p&gt; elements:</p>
+        <h3>Приклад</h3>
+        <p>Змінити колір тексту всіх &lt;p&gt; елементів:</p>
         <div class="w3-code notranslate jsHigh">
             const myCollection = document.getElementsByTagName(&quot;p&quot;);<br>for (let i = 0; i &lt; myCollection.length; i++) {<br>&nbsp;&nbsp;myCollection[i].style.color = &quot;red&quot;;<br>}
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_dom_htmlcollection_loop.html" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_dom_htmlcollection_loop.html" target="_blank">Спробуйте самі &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p><strong>An HTMLCollection is NOT an array!</strong><br></p>
-        <p>An HTMLCollection may look like an array, but it is not.</p>
-        <p>You can loop through the list and refer to the elements with a number (just like an array).</p>
-        <p>However, you cannot use array methods like valueOf(), pop(), push(), or join() on an HTMLCollection.</p>
+        <p><strong>HTMLCollection НЕ є масивом!</strong><br></p>
+        <p>HTMLCollection може виглядати як масив, але це не так.</p>
+        <p>Ви можете перебрати список і посилатися на елементи за допомогою номерів (подібно до масиву).</p>
+        <p>Однак ви не можете використовувати такі методи масиву, як valueOf(), pop(), push() або join() у HTMLCollection.</p>
     </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="js_htmldom_nodes_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="js_htmldom_nodelist_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="js_htmldom_nodes.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_htmldom_nodelist.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
