@@ -297,16 +297,23 @@
 <!--/Top menu--><!--Left menu-->
 <div class='w3-sidebar w3-collapse' id='sidenav'>
     <div id='leftmenuinner'>
-        <div class='w3-light-grey' id='leftmenuinnerinner'>
-            <!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+        <div id='leftmenuinnerinner'>
+            <script src='../scripts/content_search.js'></script>
+            <link rel='stylesheet' href='../styles/content_search.css'>
             <div class='notranslate'>
+                <form class='search_in_content' action='../action_page.html'>
+                    <input type='text' placeholder='Пошук...' id='search2' autocomplete='off' onkeydown='key_pressed_in_search(this, event)' oninput='find_search_results(this)' onfocus='find_search_results(this);'>
+                </form>
+                <div id='listofsearchresults'>
+                </div>
+                <br>
                 <h2 class='left' style='white-space: nowrap;'><span class='left_h2'>JS</span> Довідник</h2>
-                <a target='_top' href='index.html'>JS по категорії</a>
-                <a target='_top' href='jsref_reference.html'>JS по алфавіту</a>
+                <a target='_top' href='index.html'>JS за категорією</a>
+                <a target='_top' href='jsref_reference.html'>JS за алфавітом</a>
                 <br>
                 <h2 class='left'><span class='left_h2'>JavaScript</span></h2>
                 <a target='_top' href='jsref_obj_array.html'>JS Масив</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='jsref_concat_array.html'>concat()</a>
                     <a target='_top' href='jsref_constructor_array.html'>constructor</a>
                     <a target='_top' href='jsref_copywithin.html'>copyWithin()</a>
@@ -323,8 +330,8 @@
                     <a target='_top' href='jsref_isarray.html'>isArray()</a>
                     <a target='_top' href='jsref_join.html'>join()</a>
                     <a target='_top' href='jsref_keys.html'>keys()</a>
-                    <a target='_top' href='jsref_length_array.html'>length</a>
                     <a target='_top' href='jsref_lastindexof_array.html'>lastIndexOf()</a>
+                    <a target='_top' href='jsref_length_array.html'>length</a>
                     <a target='_top' href='jsref_map.html'>map()</a>
                     <a target='_top' href='jsref_pop.html'>pop()</a>
                     <a target='_top' href='jsref_prototype_array.html'>prototype</a>
@@ -342,21 +349,21 @@
                     <a target='_top' href='jsref_valueof_array.html'>valueOf()</a>
                 </div>
                 <a target='_top' href='jsref_obj_boolean.html'>JS Булеві</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='jsref_constructor_boolean.html'>constructor</a>
                     <a target='_top' href='jsref_prototype_boolean.html'>prototype</a>
                     <a target='_top' href='jsref_tostring_boolean.html'>toString()</a>
                     <a target='_top' href='jsref_valueof_boolean.html'>valueOf()</a>
                 </div>
                 <a target='_top' href='jsref_classes.html'>JS Класи</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='jsref_constructor_class.html'>constructor()</a>
                     <a target='_top' href='jsref_class_extends.html'>extends</a>
                     <a target='_top' href='jsref_class_static.html'>static</a>
                     <a target='_top' href='jsref_class_super.html'>super</a>
                 </div>
-                <a target='_top' href='jsref_obj_date.html'>JS Дати</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='jsref_obj_date.html'>JS Дата</a>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='jsref_constructor_date.html'>constructor</a>
                     <a target='_top' href='jsref_getdate.html'>getDate()</a>
                     <a target='_top' href='jsref_getday.html'>getDay()</a>
@@ -406,15 +413,13 @@
                     <a target='_top' href='jsref_utc.html'>UTC()</a>
                     <a target='_top' href='jsref_valueof_date.html'>valueOf()</a>
                 </div>
-
-                <a target='_top' href='jsref_obj_error.html'>JS Помилки</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='jsref_obj_error.html'>JS Помилка</a>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='prop_error_name.html'>name</a>
                     <a target='_top' href='prop_error_message.html'>message</a>
                 </div>
-
                 <a target='_top' href='jsref_obj_global.html'>JS Глобальні</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='jsref_decodeuri.html'>decodeURI()</a>
                     <a target='_top' href='jsref_decodeuricomponent.html'>decodeURIComponent()</a>
                     <a target='_top' href='jsref_encodeuri.html'>encodeURI()</a>
@@ -432,15 +437,13 @@
                     <a target='_top' href='jsref_undefined.html'>undefined</a>
                     <a target='_top' href='jsref_unescape.html'>unescape()</a>
                 </div>
-
                 <a target='_top' href='jsref_obj_json.html'>JS JSON</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='jsref_parse_json.html'>parse()</a>
                     <a target='_top' href='jsref_stringify.html'>stringify()</a>
                 </div>
-
-                <a target='_top' href='jsref_obj_math.html'>JS Математика</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='jsref_obj_math.html'>JS Математичні</a>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='jsref_abs.html'>abs()</a>
                     <a target='_top' href='jsref_acos.html'>acos()</a>
                     <a target='_top' href='jsref_acosh.html'>acosh()</a>
@@ -475,6 +478,7 @@
                     <a target='_top' href='jsref_round.html'>round()</a>
                     <a target='_top' href='jsref_sign.html'>sign()</a>
                     <a target='_top' href='jsref_sin.html'>sin()</a>
+                    <a target='_top' href='jsref_sinh.html'>sinh()</a>
                     <a target='_top' href='jsref_sqrt.html'>sqrt()</a>
                     <a target='_top' href='jsref_sqrt1_2.html'>SQRT1_2</a>
                     <a target='_top' href='jsref_sqrt2.html'>SQRT2</a>
@@ -482,18 +486,23 @@
                     <a target='_top' href='jsref_tanh.html'>tanh()</a>
                     <a target='_top' href='jsref_trunc.html'>trunc()</a>
                 </div>
-                <a target='_top' href='jsref_obj_number.html'>JS Числа</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='jsref_obj_number.html'>JS Число</a>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='jsref_constructor_number.html'>constructor</a>
+                    <a target='_top' href='jsref_number_epsilon.html'>EPSILON</a>
                     <a target='_top' href='jsref_isfinite_number.html'>isFinite()</a>
                     <a target='_top' href='jsref_isinteger.html'>isInteger()</a>
                     <a target='_top' href='jsref_isnan_number.html'>isNaN()</a>
                     <a target='_top' href='jsref_issafeinteger.html'>isSafeInteger()</a>
+                    <a target='_top' href='jsref_max_safe_integer.html'>MAX_SAFE_INTEGER</a>
+                    <a target='_top' href='jsref_min_safe_integer.html'>MIN_SAFE_INTEGER</a>
                     <a target='_top' href='jsref_max_value.html'>MAX_VALUE</a>
                     <a target='_top' href='jsref_min_value.html'>MIN_VALUE</a>
-                    <a target='_top' href='jsref_negative_infinity.html'>NEGATIVE_INFINITY</a>
                     <a target='_top' href='jsref_number_nan.html'>NaN</a>
+                    <a target='_top' href='jsref_negative_infinity.html'>NEGATIVE_INFINITY</a>
                     <a target='_top' href='jsref_positive_infinity.html'>POSITIVE_INFINITY</a>
+                    <a target='_top' href='jsref_number_parsefloat.html'>parseFloat()</a>
+                    <a target='_top' href='jsref_number_parseint.html'>parseInt()</a>
                     <a target='_top' href='jsref_prototype_num.html'>prototype</a>
                     <a target='_top' href='jsref_toexponential.html'>toExponential()</a>
                     <a target='_top' href='jsref_tofixed.html'>toFixed()</a>
@@ -502,37 +511,29 @@
                     <a target='_top' href='jsref_tostring_number.html'>toString()</a>
                     <a target='_top' href='jsref_valueof_number.html'>valueOf()</a>
                 </div>
+                <a target='_top' href='jsref_obj_object.html'>JS Об&#8217;єкт</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='jsref_object_constructor.html'>constructor</a>
+                    <a target='_top' href='jsref_object_keys.html'>keys()</a>
+                    <a target='_top' href='jsref_object_prototype.html'>prototype</a>
+                    <a target='_top' href='jsref_object_tostring.html'>toString()</a>
+                    <a target='_top' href='jsref_object_valueof.html'>valueOf()</a>
+                </div>
                 <a target='_top' href='jsref_operators.html'>JS Оператори</a>
-                <a target='_top' href='jsref_obj_regexp.html'>JS RegExp</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
-                    <a target='_top' href='jsref_regexp_constructor.html'>constructor</a>
-                    <a target='_top' href='jsref_regexp_compile.html'>compile()</a>
-                    <a target='_top' href='jsref_regexp_exec.html'>exec()</a>
+                <a target='_top' href='jsref_precedence.html'>JS Пріоритет</a>
+                <a target='_top' href='jsref_obj_regexp.html'>JS Регулярні вирази</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <span style='display:inline-block;margin-left:0;padding:5px;margin-top:2px;'>Модифікатори:</span>
                     <a target='_top' href='jsref_regexp_g.html'>g</a>
-                    <a target='_top' href='jsref_regexp_global.html'>global</a>
                     <a target='_top' href='jsref_regexp_i.html'>i</a>
-                    <a target='_top' href='jsref_regexp_ignorecase.html'>ignoreCase</a>
-                    <a target='_top' href='jsref_regexp_lastindex.html'>lastIndex</a>
                     <a target='_top' href='jsref_regexp_m.html'>m</a>
-                    <a target='_top' href='jsref_regexp_multiline.html'>multiline</a>
-                    <a target='_top' href='jsref_regexp_onemore.html'>n+</a>
-                    <a target='_top' href='jsref_regexp_zeromore.html'>n*</a>
-                    <a target='_top' href='jsref_regexp_zeroone.html'>n?</a>
-                    <a target='_top' href='jsref_regexp_nx.html'>n{X}</a>
-                    <a target='_top' href='jsref_regexp_nxy.html'>n{X,Y}</a>
-                    <a target='_top' href='jsref_regexp_nxcomma.html'>n{X,}</a>
-                    <a target='_top' href='jsref_regexp_ndollar.html'>n$</a>
-                    <a target='_top' href='jsref_regexp_ncaret.html'>^n</a>
-                    <a target='_top' href='jsref_regexp_nfollow.html'>?=n</a>
-                    <a target='_top' href='jsref_regexp_nfollow_not.html'>?!n</a>
-                    <a target='_top' href='jsref_regexp_source.html'>source</a>
-                    <a target='_top' href='jsref_regexp_test.html'>test()</a>
-                    <a target='_top' href='jsref_regexp_tostring.html'>toString()</a>
+                    <span style='display:inline-block;margin-left:0;padding:5px;margin-top:4px;'>Групи:</span>
                     <a target='_top' href='jsref_regexp_charset.html'>[abc]</a>
                     <a target='_top' href='jsref_regexp_charset_not.html'>[^abc]</a>
                     <a target='_top' href='jsref_regexp_0-9.html'>[0-9]</a>
                     <a target='_top' href='jsref_regexp_not_0-9.html'>[^0-9]</a>
                     <a target='_top' href='jsref_regexp_xy.html'>(x|y)</a>
+                    <span style='display:inline-block;margin-left:0;padding:5px;margin-top:4px;'>Метасимволи:</span>
                     <a target='_top' href='jsref_regexp_dot.html'>.</a>
                     <a target='_top' href='jsref_regexp_wordchar.html'>\w</a>
                     <a target='_top' href='jsref_regexp_wordchar_non.html'>\W</a>
@@ -551,11 +552,35 @@
                     <a target='_top' href='jsref_regexp_octal.html'>\xxx</a>
                     <a target='_top' href='jsref_regexp_hex.html'>\xdd</a>
                     <a target='_top' href='jsref_regexp_unicode_hex.html'>\uxxxx</a>
+                    <span style='display:inline-block;margin-left:0;padding:5px;margin-top:4px;'>Квантори:</span>
+                    <a target='_top' href='jsref_regexp_onemore.html'>+</a>
+                    <a target='_top' href='jsref_regexp_zeromore.html'>*</a>
+                    <a target='_top' href='jsref_regexp_zeroone.html'>?</a>
+                    <a target='_top' href='jsref_regexp_nx.html'>{X}</a>
+                    <a target='_top' href='jsref_regexp_nxy.html'>{X,Y}</a>
+                    <a target='_top' href='jsref_regexp_nxcomma.html'>{X,}</a>
+                    <a target='_top' href='jsref_regexp_ndollar.html'>$</a>
+                    <a target='_top' href='jsref_regexp_ncaret.html'>^</a>
+                    <a target='_top' href='jsref_regexp_nfollow.html'>?=</a>
+                    <a target='_top' href='jsref_regexp_nfollow_not.html'>?!</a>
+                    <span style='display:inline-block;margin-left:0;padding:5px;margin-top:4px;'>Властивості:</span>
+                    <a target='_top' href='jsref_regexp_constructor.html'>constructor</a>
+                    <a target='_top' href='jsref_regexp_global.html'>global</a>
+                    <a target='_top' href='jsref_regexp_ignorecase.html'>ignoreCase</a>
+                    <a target='_top' href='jsref_regexp_lastindex.html'>lastIndex</a>
+                    <a target='_top' href='jsref_regexp_multiline.html'>multiline</a>
+                    <a target='_top' href='jsref_regexp_source.html'>source</a>
+                    <span style='display:inline-block;margin-left:0;padding:5px;margin-top:4px;'>Методи:</span>
+                    <a target='_top' href='jsref_regexp_compile.html'>compile()</a>
+                    <a target='_top' href='jsref_regexp_exec.html'>exec()</a>
+                    <a target='_top' href='jsref_regexp_test.html'>test()</a>
+                    <a target='_top' href='jsref_regexp_tostring.html'>toString()</a>
                 </div>
                 <a target='_top' href='jsref_statements.html'>JS Інструкції</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='jsref_break.html'>break</a>
                     <a target='_top' href='jsref_class.html'>class</a>
+                    <a target='_top' href='jsref_const.html'>const</a>
                     <a target='_top' href='jsref_continue.html'>continue</a>
                     <a target='_top' href='jsref_debugger.html'>debugger</a>
                     <a target='_top' href='jsref_dowhile.html'>do...while</a>
@@ -564,6 +589,7 @@
                     <a target='_top' href='jsref_forof.html'>for...of</a>
                     <a target='_top' href='jsref_function.html'>function</a>
                     <a target='_top' href='jsref_if.html'>if...else</a>
+                    <a target='_top' href='jsref_let.html'>let</a>
                     <a target='_top' href='jsref_return.html'>return</a>
                     <a target='_top' href='jsref_switch.html'>switch</a>
                     <a target='_top' href='jsref_throw.html'>throw</a>
@@ -572,9 +598,10 @@
                     <a target='_top' href='jsref_while.html'>while</a>
                 </div>
                 <a target='_top' href='jsref_obj_string.html'>JS Рядки</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='jsref_charat.html'>charAt()</a>
                     <a target='_top' href='jsref_charcodeat.html'>charCodeAt()</a>
+                    <a target='_top' href='jsref_codepointat.html'>codePointAt()</a>
                     <a target='_top' href='jsref_concat_string.html'>concat()</a>
                     <a target='_top' href='jsref_constructor_string.html'>constructor</a>
                     <a target='_top' href='jsref_endswith.html'>endsWith()</a>
@@ -600,24 +627,139 @@
                     <a target='_top' href='jsref_tostring_string.html'>toString()</a>
                     <a target='_top' href='jsref_touppercase.html'>toUpperCase()</a>
                     <a target='_top' href='jsref_trim_string.html'>trim()</a>
+                    <a target='_top' href='jsref_string_trim_end.html'>trimEnd()</a>
+                    <a target='_top' href='jsref_string_trim_start.html'>trimStart()</a>
                     <a target='_top' href='jsref_valueof_string.html'>valueOf()</a>
+                </div>
+                <a target='_top' href='jsref_obj_typed_array.html'>JS Типізований масив</a>
+                <br>
+                <h2 class='left'><span class='left_h2'>Window</span></h2>
+                <a target='_top' href='obj_window.html'>Об&#8217;єкт Window</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='met_win_addeventlistener.html'>addeventlistener()</a>
+                    <a target='_top' href='met_win_alert.html'>alert()</a>
+                    <a target='_top' href='met_win_atob.html'>atob()</a>
+                    <a target='_top' href='met_win_blur.html'>blur()</a>
+                    <a target='_top' href='met_win_btoa.html'>btoa()</a>
+                    <a target='_top' href='met_win_clearinterval.html'>clearInterval()</a>
+                    <a target='_top' href='met_win_cleartimeout.html'>clearTimeout()</a>
+                    <a target='_top' href='met_win_close.html'>close()</a>
+                    <a target='_top' href='prop_win_closed.html'>closed</a>
+                    <a target='_top' href='met_win_confirm.html'>confirm()</a>
+                    <a target='_top' href='prop_win_console.html'>console</a>
+                    <a target='_top' href='prop_win_defaultstatus.html'>defaultStatus</a>
+                    <a target='_top' href='prop_win_document.html'>document</a>
+                    <a target='_top' href='met_win_focus.html'>focus()</a>
+                    <a target='_top' href='prop_win_frameelement.html'>frameElement</a>
+                    <a target='_top' href='prop_win_frames.html'>frames</a>
+                    <a target='_top' href='prop_win_history.html'>history</a>
+                    <a target='_top' href='jsref_getcomputedstyle.html'>getComputedStyle()</a>
+                    <a target='_top' href='prop_win_innerheight.html'>innerHeight</a>
+                    <a target='_top' href='prop_win_innerwidth.html'>innerWidth</a>
+                    <a target='_top' href='prop_win_length.html'>length</a>
+                    <a target='_top' href='prop_win_localstorage.html'>localStorage</a>
+                    <a target='_top' href='prop_win_location.html'>location</a>
+                    <a target='_top' href='met_win_matchmedia.html'>matchMedia()</a>
+                    <a target='_top' href='met_win_moveby.html'>moveBy()</a>
+                    <a target='_top' href='met_win_moveto.html'>moveTo()</a>
+                    <a target='_top' href='prop_win_name.html'>name</a>
+                    <a target='_top' href='prop_win_navigator.html'>navigator</a>
+                    <a target='_top' href='met_win_open.html'>open()</a>
+                    <a target='_top' href='prop_win_opener.html'>opener</a>
+                    <a target='_top' href='prop_win_outerheight.html'>outerHeight</a>
+                    <a target='_top' href='prop_win_outerwidth.html'>outerWidth</a>
+                    <a target='_top' href='prop_win_pagexoffset.html'>pageXOffset</a>
+                    <a target='_top' href='prop_win_pageyoffset.html'>pageYOffset</a>
+                    <a target='_top' href='prop_win_parent.html'>parent</a>
+                    <a target='_top' href='met_win_print.html'>print()</a>
+                    <a target='_top' href='met_win_prompt.html'>prompt()</a>
+                    <a target='_top' href='met_win_removeeventlistener.html'>removeEventlistener()</a>
+                    <a target='_top' href='met_win_resizeby.html'>resizeBy()</a>
+                    <a target='_top' href='met_win_resizeto.html'>resizeTo()</a>
+                    <a target='_top' href='prop_win_screen.html'>screen</a>
+                    <a target='_top' href='prop_win_screenleft.html'>screenLeft</a>
+                    <a target='_top' href='prop_win_screentop.html'>screenTop</a>
+                    <a target='_top' href='prop_win_screenx.html'>screenX</a>
+                    <a target='_top' href='prop_win_screeny.html'>screenY</a>
+                    <a target='_top' href='met_win_scrollby.html'>scrollBy()</a>
+                    <a target='_top' href='met_win_scrollto.html'>scrollTo()</a>
+                    <a target='_top' href='prop_win_scrollx.html'>scrollX</a>
+                    <a target='_top' href='prop_win_scrolly.html'>scrollY</a>
+                    <a target='_top' href='prop_win_sessionstorage.html'>sessionStorage</a>
+                    <a target='_top' href='prop_win_self.html'>self</a>
+                    <a target='_top' href='met_win_setinterval.html'>setInterval()</a>
+                    <a target='_top' href='met_win_settimeout.html'>setTimeout()</a>
+                    <a target='_top' href='prop_win_status.html'>status</a>
+                    <a target='_top' href='met_win_stop.html'>stop()</a>
+                    <a target='_top' href='prop_win_top.html'>top</a>
+                </div>
+                <a target='_top' href='obj_console.html'>Window консоль</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top'  href='met_console_assert.html'>assert()</a>
+                    <a target='_top'  href='met_console_clear.html'>clear()</a>
+                    <a target='_top'  href='met_console_count.html'>count()</a>
+                    <a target='_top'  href='met_console_error.html'>error()</a>
+                    <a target='_top'  href='met_console_group.html'>group()</a>
+                    <a target='_top'  href='met_console_groupcollapsed.html'>groupCollapsed()</a>
+                    <a target='_top'  href='met_console_groupend.html'>groupEnd()</a>
+                    <a target='_top'  href='met_console_info.html'>info()</a>
+                    <a target='_top'  href='met_console_log.html'>log()</a>
+                    <a target='_top'  href='met_console_table.html'>table()</a>
+                    <a target='_top'  href='met_console_time.html'>time()</a>
+                    <a target='_top'  href='met_console_timeend.html'>timeEnd()</a>
+                    <a target='_top'  href='met_console_trace.html'>trace()</a>
+                    <a target='_top'  href='met_console_warn.html'>warn()</a>
+                </div>
+                <a target='_top' href='obj_history.html'>Window Історія</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='met_his_back.html'>back()</a>
+                    <a target='_top' href='met_his_forward.html'>forward()</a>
+                    <a target='_top' href='met_his_go.html'>go()</a>
+                    <a target='_top' href='prop_his_length.html'>length</a>
+                </div>
+                <a target='_top' href='obj_location.html'>Window Локація</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='met_loc_assign.html'>assign()</a>
+                    <a target='_top' href='prop_loc_hash.html'>hash</a>
+                    <a target='_top' href='prop_loc_host.html'>host</a>
+                    <a target='_top' href='prop_loc_hostname.html'>hostname</a>
+                    <a target='_top' href='prop_loc_href.html'>href</a>
+                    <a target='_top' href='prop_loc_origin.html'>origin</a>
+                    <a target='_top' href='prop_loc_pathname.html'>pathname</a>
+                    <a target='_top' href='prop_loc_port.html'>port</a>
+                    <a target='_top' href='prop_loc_protocol.html'>protocol</a>
+                    <a target='_top' href='met_loc_reload.html'>reload()</a>
+                    <a target='_top' href='met_loc_replace.html'>replace()</a>
+                    <a target='_top' href='prop_loc_search.html'>search</a>
+                </div>
+                <a target='_top' href='obj_navigator.html'>Window Навігатор</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='prop_nav_appcodename.html'>appCodeName</a>
+                    <a target='_top' href='prop_nav_appname.html'>appName</a>
+                    <a target='_top' href='prop_nav_appversion.html'>appVersion</a>
+                    <a target='_top' href='prop_nav_cookieenabled.html'>cookieEnabled</a>
+                    <a target='_top' href='prop_nav_geolocation.html'>geolocation</a>
+                    <a target='_top' href='met_nav_javaenabled.html'>javaEnabled()</a>
+                    <a target='_top' href='prop_nav_language.html'>language</a>
+                    <a target='_top' href='prop_nav_online.html'>onLine</a>
+                    <a target='_top' href='prop_nav_platform.html'>platform</a>
+                    <a target='_top' href='prop_nav_product.html'>product</a>
+                    <a target='_top' href='met_nav_taintenabled.html'>taintEnabled()</a>
+                    <a target='_top' href='prop_nav_useragent.html'>userAgent</a>
+                </div>
+                <a target='_top' href='obj_screen.html'>Window Екран</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='prop_screen_availheight.html'>availHeight</a>
+                    <a target='_top' href='prop_screen_availwidth.html'>availWidth</a>
+                    <a target='_top' href='prop_screen_colordepth.html'>colorDepth</a>
+                    <a target='_top' href='prop_screen_height.html'>height</a>
+                    <a target='_top' href='prop_screen_pixeldepth.html'>pixelDepth</a>
+                    <a target='_top' href='prop_screen_width.html'>width</a>
                 </div>
                 <br>
                 <h2 class='left'><span class='left_h2'>HTML DOM</span></h2>
-                <a target='_top' href='dom_obj_attributes.html'>DOM Атрибути</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
-                    <a target='_top' href='met_namednodemap_getnameditem.html'>getNamedItem()</a>
-                    <a target='_top' href='prop_attr_isid.html'>isId</a>
-                    <a target='_top' href='met_namednodemap_item.html'>item()</a>
-                    <a target='_top' href='prop_namednodemap_length.html'>length</a>
-                    <a target='_top' href='prop_attr_name.html'>name</a>
-                    <a target='_top' href='met_namednodemap_removenameditem.html'>removeNamedItem()</a>
-                    <a target='_top' href='met_namednodemap_setnameditem.html'>setNamedItem()</a>
-                    <a target='_top' href='prop_attr_specified.html'>specified</a>
-                    <a target='_top' href='prop_attr_value.html'>value</a>
-                </div>
-                <a target='_top' href='dom_obj_document.html'>DOM Документ</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='dom_obj_document.html'>HTML Документи</a>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top'  href='prop_document_activeelement.html'>activeElement</a>
                     <a target='_top'  href='met_document_addeventlistener.html'>addEventListener()</a>
                     <a target='_top'  href='met_document_adoptnode.html'>adoptNode()</a>
@@ -625,10 +767,10 @@
                     <a target='_top'  href='coll_doc_applets.html'>applets</a>
                     <a target='_top'  href='prop_doc_baseuri.html'>baseURI</a>
                     <a target='_top'  href='prop_doc_body.html'>body</a>
+                    <a target='_top'  href='prop_document_charset.html'>charset</a>
+                    <a target='_top'  href='prop_document_characterset.html'>characterSet</a>
                     <a target='_top'  href='met_doc_close.html'>close()</a>
                     <a target='_top'  href='prop_doc_cookie.html'>cookie</a>
-                    <a target='_top'  href='prop_document_characterset.html'>charset</a>
-                    <a target='_top'  href='prop_document_characterset.html'>characterSet</a>
                     <a target='_top'  href='met_document_createattribute.html'>createAttribute()</a>
                     <a target='_top'  href='met_document_createcomment.html'>createComment()</a>
                     <a target='_top'  href='met_document_createdocumentfragment.html'>createDocumentFragment()</a>
@@ -642,11 +784,10 @@
                     <a target='_top'  href='prop_doc_documentmode.html'>documentMode</a>
                     <a target='_top'  href='prop_document_documenturi.html'>documentURI</a>
                     <a target='_top'  href='prop_doc_domain.html'>domain</a>
+                    <a target='_top'  href='prop_document_domconfig.html'>domConfig</a>
                     <a target='_top'  href='coll_doc_embeds.html'>embeds</a>
                     <a target='_top'  href='met_document_execcommand.html'>execCommand()</a>
                     <a target='_top'  href='coll_doc_forms.html'>forms</a>
-                    <a target='_top'  href='prop_document_fullscreenelement.html'>fullscreenElement</a>
-                    <a target='_top'  href='met_document_fullscreenenabled.html'>fullscreenEnabled()</a>
                     <a target='_top'  href='met_document_getelementbyid.html'>getElementById()</a>
                     <a target='_top'  href='met_document_getelementsbyclassname.html'>getElementsByClassName()</a>
                     <a target='_top'  href='met_doc_getelementsbyname.html'>getElementsByName()</a>
@@ -675,8 +816,8 @@
                     <a target='_top'  href='met_doc_write.html'>write()</a>
                     <a target='_top'  href='met_doc_writeln.html'>writeln()</a>
                 </div>
-                <a target='_top' href='dom_obj_all.html'>DOM Елемент</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='dom_obj_all.html'>HTML Елементи</a>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top'  href='prop_html_accesskey.html'>accessKey</a>
                     <a target='_top' href='met_element_addeventlistener.html'>addEventListener()</a>
                     <a target='_top' href='met_node_appendchild.html'>appendChild()</a>
@@ -698,7 +839,6 @@
                     <a target='_top' href='met_node_contains.html'>contains()</a>
                     <a target='_top' href='prop_html_contenteditable.html'>contentEditable</a>
                     <a target='_top' href='prop_html_dir.html'>dir</a>
-                    <a target='_top' href='met_element_exitfullscreen.html'>exitFullscreen()</a>
                     <a target='_top' href='prop_node_firstchild.html'>firstChild</a>
                     <a target='_top' href='prop_element_firstelementchild.html'>firstElementChild</a>
                     <a target='_top' href='met_html_focus.html'>focus()</a>
@@ -753,7 +893,6 @@
                     <a target='_top' href='met_node_removechild.html'>removeChild()</a>
                     <a target='_top' href='met_element_removeeventlistener.html'>removeEventListener()</a>
                     <a target='_top' href='met_node_replacechild.html'>replaceChild()</a>
-                    <a target='_top' href='met_element_requestfullscreen.html'>requestFullscreen()</a>
                     <a target='_top' href='prop_element_scrollheight.html'>scrollHeight</a>
                     <a target='_top' href='met_element_scrollintoview.html'>scrollIntoView()</a>
                     <a target='_top' href='prop_element_scrollleft.html'>scrollLeft</a>
@@ -767,215 +906,51 @@
                     <a target='_top' href='prop_node_textcontent.html'>textContent</a>
                     <a target='_top' href='prop_html_title.html'>title</a>
                 </div>
-
-                <a target='_top' href='dom_obj_event.html'>DOM Події</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
-                    <a target='_top' href='event_onabort_media.html'>abort</a>
-                    <a target='_top' href='event_onafterprint.html'>afterprint</a>
-                    <a target='_top' href='event_animationend.html'>animationend</a>
-                    <a target='_top' href='event_animationiteration.html'>animationiteration</a>
-                    <a target='_top' href='event_animationstart.html'>animationstart</a>
-                    <a target='_top' href='event_onbeforeprint.html'>beforeprint</a>
-                    <a target='_top' href='event_onbeforeunload.html'>beforeunload</a>
-                    <a target='_top' href='event_onblur.html'>blur</a>
-                    <a target='_top' href='event_oncanplay.html'>canplay</a>
-                    <a target='_top' href='event_oncanplaythrough.html'>canplaythrough</a>
-                    <a target='_top' href='event_onchange.html'>change</a>
-                    <a target='_top' href='event_onclick.html'>click</a>
-                    <a target='_top' href='event_oncontextmenu.html'>contextmenu</a>
-                    <a target='_top' href='event_oncopy.html'>copy</a>
-                    <a target='_top' href='event_oncut.html'>cut</a>
-                    <a target='_top' href='event_ondblclick.html'>dblclick</a>
-                    <a target='_top' href='event_ondrag.html'>drag</a>
-                    <a target='_top' href='event_ondragend.html'>dragend</a>
-                    <a target='_top' href='event_ondragenter.html'>dragenter</a>
-                    <a target='_top' href='event_ondragleave.html'>dragleave</a>
-                    <a target='_top' href='event_ondragover.html'>dragover</a>
-                    <a target='_top' href='event_ondragstart.html'>dragstart</a>
-                    <a target='_top' href='event_ondrop.html'>drop</a>
-                    <a target='_top' href='event_ondurationchange.html'>durationchange</a>
-                    <a target='_top' href='event_onended.html'>ended</a>
-                    <a target='_top' href='event_onerror.html'>error</a>
-                    <a target='_top' href='event_onfocus.html'>focus</a>
-                    <a target='_top' href='event_onfocusin.html'>focusin</a>
-                    <a target='_top' href='event_onfocusout.html'>focusout</a>
-                    <a target='_top' href='event_fullscreenchange.html'>fullscreenchange</a>
-                    <a target='_top' href='event_fullscreenerror.html'>fullscreenerror</a>
-                    <a target='_top' href='event_onhashchange.html'>hashchange</a>
-                    <a target='_top' href='event_oninput.html'>input</a>
-                    <a target='_top' href='event_oninvalid.html'>invalid</a>
-                    <a target='_top' href='event_onkeydown.html'>keydown</a>
-                    <a target='_top' href='event_onkeypress.html'>keypress</a>
-                    <a target='_top' href='event_onkeyup.html'>keyup</a>
-                    <a target='_top' href='event_onload.html'>load</a>
-                    <a target='_top' href='event_onloadeddata.html'>loadeddata</a>
-                    <a target='_top' href='event_onloadedmetadata.html'>loadedmetadata</a>
-                    <a target='_top' href='event_onloadstart.html'>loadstart</a>
-                    <a target='_top' href='event_onmessage_sse.html'>message</a>
-                    <a target='_top' href='event_onmousedown.html'>mousedown</a>
-                    <a target='_top' href='event_onmouseenter.html'>mouseenter</a>
-                    <a target='_top' href='event_onmouseleave.html'>mouseleave</a>
-                    <a target='_top' href='event_onmousemove.html'>mousemove</a>
-                    <a target='_top' href='event_onmouseover.html'>mouseover</a>
-                    <a target='_top' href='event_onmouseout.html'>mouseout</a>
-                    <a target='_top' href='event_onmouseup.html'>mouseup</a>
-                    <a target='_top' href='event_onoffline.html'>offline</a>
-                    <a target='_top' href='event_ononline.html'>online</a>
-                    <a target='_top' href='event_onopen_sse.html'>open</a>
-                    <a target='_top' href='event_onpagehide.html'>pagehide</a>
-                    <a target='_top' href='event_onpageshow.html'>pageshow</a>
-                    <a target='_top' href='event_onpaste.html'>paste</a>
-                    <a target='_top' href='event_onpause.html'>pause</a>
-                    <a target='_top' href='event_onplay.html'>play</a>
-                    <a target='_top' href='event_onplaying.html'>playing</a>
-                    <a target='_top' href='event_onprogress.html'>progress</a>
-                    <a target='_top' href='event_onratechange.html'>ratechange</a>
-                    <a target='_top' href='event_onresize.html'>resize</a>
-                    <a target='_top' href='event_onreset.html'>reset</a>
-                    <a target='_top' href='event_onscroll.html'>scroll</a>
-                    <a target='_top' href='event_onsearch.html'>search</a>
-                    <a target='_top' href='event_onseeked.html'>seeked</a>
-                    <a target='_top' href='event_onseeking.html'>seeking</a>
-                    <a target='_top' href='event_onselect.html'>select</a>
-                    <a target='_top' href='event_onshow.html'>show</a>
-                    <a target='_top' href='event_onstalled.html'>stalled</a>
-                    <a target='_top' href='event_onsubmit.html'>submit</a>
-                    <a target='_top' href='event_onsuspend.html'>suspend</a>
-                    <a target='_top' href='event_ontimeupdate.html'>timeupdate</a>
-                    <a target='_top' href='event_ontoggle.html'>toggle</a>
-                    <a target='_top' href='event_touchcancel.html'>touchcancel</a>
-                    <a target='_top' href='event_touchend.html'>touchend</a>
-                    <a target='_top' href='event_touchmove.html'>touchmove</a>
-                    <a target='_top' href='event_touchstart.html'>touchstart</a>
-                    <a target='_top' href='event_transitionend.html'>transitionend</a>
-                    <a target='_top' href='event_onunload.html'>unload</a>
-                    <a target='_top' href='event_onvolumechange.html'>volumechange</a>
-                    <a target='_top' href='event_onwaiting.html'>waiting</a>
-                    <a target='_top' href='event_onwheel.html'>wheel</a>
-                    <a target='_top' href='event_altkey.html'>altKey</a>
-                    <a target='_top' href='event_key_altkey.html'>altKey</a>
-                    <a target='_top' href='event_animation_animationName.html'>animationName</a>
-                    <a target='_top' href='event_bubbles.html'>bubbles</a>
-                    <a target='_top' href='event_button.html'>button</a>
-                    <a target='_top' href='event_buttons.html'>buttons</a>
-                    <a target='_top' href='event_cancelable.html'>cancelable</a>
-                    <a target='_top' href='event_key_charcode.html'>charCode</a>
-                    <a target='_top' href='event_clientx.html'>clientX</a>
-                    <a target='_top' href='event_clienty.html'>clientY</a>
-                    <a target='_top' href='event_key_code.html'>code</a>
-                    <a target='_top' href='event_createevent.html'>createEvent()</a>
-                    <a target='_top' href='event_ctrlkey.html'>ctrlKey</a>
-                    <a target='_top' href='event_key_ctrlkey.html'>ctrlKey</a>
-                    <a target='_top' href='event_currenttarget.html'>currentTarget</a>
-                    <a target='_top' href='event_inputevent_data.html'>data</a>
-                    <a target='_top' href='event_defaultprevented.html'>defaultPrevented</a>
-                    <a target='_top' href='event_wheel_deltax.html'>deltaX</a>
-                    <a target='_top' href='event_wheel_deltay.html'>deltaY</a>
-                    <a target='_top' href='event_wheel_deltaz.html'>deltaZ</a>
-                    <a target='_top' href='event_wheel_deltamode.html'>deltaMode</a>
-                    <a target='_top' href='event_detail.html'>detail</a>
-                    <a target='_top' href='event_animation_elapsedtime.html'>elapsedTime</a>
-                    <a target='_top' href='event_transition_elapsedtime.html'>elapsedTime</a>
-                    <a target='_top' href='event_eventphase.html'>eventPhase</a>
-                    <a target='_top' href='event_mouse_getmodifierstate.html'>getModifierState()</a>
-                    <a target='_top' href='event_inputevent_inputtype.html'>inputType</a>
-                    <a target='_top' href='event_istrusted.html'>isTrusted</a>
-                    <a target='_top' href='event_key_key.html'>key</a>
-                    <a target='_top' href='event_key_keycode.html'>keyCode</a>
-                    <a target='_top' href='event_key_location.html'>location</a>
-                    <a target='_top' href='event_metakey.html'>metaKey</a>
-                    <a target='_top' href='event_key_metakey.html'>metaKey</a>
-                    <a target='_top' href='event_hashchange_newurl.html'>newURL</a>
-                    <a target='_top' href='event_hashchange_oldurl.html'>oldURL</a>
-                    <a target='_top' href='event_pagex.html'>pageX</a>
-                    <a target='_top' href='event_pagey.html'>pageY</a>
-                    <a target='_top' href='event_pagetransition_persisted.html'>persisted</a>
-                    <a target='_top' href='event_preventdefault.html'>preventDefault()</a>
-                    <a target='_top' href='event_transition_propertyName.html'>propertyName</a>
-                    <a target='_top' href='event_relatedtarget.html'>relatedTarget</a>
-                    <a target='_top' href='event_focus_relatedtarget.html'>relatedTarget</a>
-                    <a target='_top' href='event_screenx.html'>screenX</a>
-                    <a target='_top' href='event_screeny.html'>screenY</a>
-                    <a target='_top' href='event_shiftkey.html'>shiftKey</a>
-                    <a target='_top' href='event_key_shiftkey.html'>shiftKey</a>
-                    <a target='_top' href='event_stopimmediatepropagation.html'>stopImmediatePropagation()</a>
-                    <a target='_top' href='event_stoppropagation.html'>stopPropagation()</a>
-                    <a target='_top' href='event_target.html'>target</a>
-                    <a target='_top' href='event_touch_targettouches.html'>targetTouches</a>
-                    <a target='_top' href='event_timestamp.html'>timeStamp</a>
-                    <a target='_top' href='event_touch_touches.html'>touches</a>
-                    <a target='_top' href='event_type.html'>type</a>
-                    <a target='_top' href='event_which.html'>which</a>
-                    <a target='_top' href='event_key_which.html'>which</a>
-                    <a target='_top' href='event_view.html'>view</a>
+                <a target='_top' href='dom_obj_attributes.html'>HTML Атрибути</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='met_namednodemap_getnameditem.html'>getNamedItem()</a>
+                    <a target='_top' href='prop_attr_isid.html'>isId</a>
+                    <a target='_top' href='met_namednodemap_item.html'>item()</a>
+                    <a target='_top' href='prop_namednodemap_length.html'>length</a>
+                    <a target='_top' href='prop_attr_name.html'>name</a>
+                    <a target='_top' href='met_namednodemap_removenameditem.html'>removeNamedItem()</a>
+                    <a target='_top' href='met_namednodemap_setnameditem.html'>setNamedItem()</a>
+                    <a target='_top' href='prop_attr_specified.html'>specified</a>
+                    <a target='_top' href='prop_attr_value.html'>value</a>
                 </div>
-                <a target='_top' href='obj_events.html'>DOM Об&rsquo;єкти подій</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
-                    <a href='obj_animationevent.html'>AnimationEvent</a>
-                    <a href='obj_clipboardevent.html'>ClipboardEvent</a>
-                    <a href='obj_dragevent.html'>DragEvent</a>
-                    <a href='obj_event.html'>Event</a>
-                    <a href='obj_focusevent.html'>FocusEvent</a>
-                    <a href='obj_hashchangeevent.html'>HashChangeEvent</a>
-                    <a href='obj_inputevent.html'>InputEvent</a>
-                    <a href='obj_keyboardevent.html'>KeyboardEvent</a>
-                    <a href='obj_mouseevent.html'>MouseEvent</a>
-                    <a href='obj_pagetransitionevent.html'>PageTransitionEvent</a>
-                    <a href='obj_popstateevent.html'>PopStateEvent</a>
-                    <a href='obj_progressevent.html'>ProgressEvent</a>
-                    <a href='obj_storageevent.html'>StorageEvent</a>
-                    <a href='obj_touchevent.html'>TouchEvent</a>
-                    <a href='obj_transitionevent.html'>TransitionEvent</a>
-                    <a href='obj_uievent.html'>UiEvent</a>
-                    <a href='obj_wheelevent.html'>WheelEvent</a>
-                </div>
-                <a target='_top' href='dom_obj_htmlcollection.html'>DOM HTML Колекція</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='dom_obj_htmlcollection.html'>HTML Колекція</a>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='met_htmlcollection_item.html'>item()</a>
                     <a target='_top' href='prop_htmlcollection_length.html'>length</a>
                     <a target='_top' href='met_htmlcollection_nameditem.html'>namedItem()</a>
                 </div>
-                <a target='_top' href='obj_location.html'>DOM Локація</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
-                    <a target='_top' href='prop_loc_hash.html'>hash</a>
-                    <a target='_top' href='prop_loc_host.html'>host</a>
-                    <a target='_top' href='prop_loc_hostname.html'>hostname</a>
-                    <a target='_top' href='prop_loc_href.html'>href</a>
-                    <a target='_top' href='prop_loc_origin.html'>origin</a>
-                    <a target='_top' href='prop_loc_pathname.html'>pathname</a>
-                    <a target='_top' href='prop_loc_port.html'>port</a>
-                    <a target='_top' href='prop_loc_protocol.html'>protocol</a>
-                    <a target='_top' href='prop_loc_search.html'>search</a>
-                    <a target='_top' href='met_loc_assign.html'>assign()</a>
-                    <a target='_top' href='met_loc_reload.html'>reload()</a>
-                    <a target='_top' href='met_loc_replace.html'>replace()</a>
+                <a target='_top' href='dom_obj_html_nodelist.html'>HTML NodeList</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='met_nodelist_entries.html'>entries()</a>
+                    <a target='_top' href='met_nodelist_forEach.html'>forEach()</a>
+                    <a target='_top' href='met_nodelist_item.html'>item()</a>
+                    <a target='_top' href='met_nodelist_keys.html'>keys()</a>
+                    <a target='_top' href='prop_nodelist_length.html'>length</a>
+                    <a target='_top' href='met_nodelist_values.html'>values()</a>
                 </div>
-                <a target='_top' href='obj_navigator.html'>DOM Навігатор</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
-                    <a target='_top' href='prop_nav_appcodename.html'>appCodeName</a>
-                    <a target='_top' href='prop_nav_appname.html'>appName</a>
-                    <a target='_top' href='prop_nav_appversion.html'>appVersion</a>
-                    <a target='_top' href='prop_nav_cookieenabled.html'>cookieEnabled</a>
-                    <a target='_top' href='prop_nav_geolocation.html'>geolocation</a>
-                    <a target='_top' href='prop_nav_language.html'>language</a>
-                    <a target='_top' href='prop_nav_online.html'>onLine</a>
-                    <a target='_top' href='prop_nav_platform.html'>platform</a>
-                    <a target='_top' href='prop_nav_product.html'>product</a>
-                    <a target='_top' href='prop_nav_useragent.html'>userAgent</a>
-                    <a target='_top' href='met_nav_javaenabled.html'>javaEnabled()</a>
-                    <a target='_top' href='met_nav_taintenabled.html'>taintEnabled()</a>
+                <a target='_top' href='dom_obj_html_domtokenlist.html'>HTML DOMTokenList</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='met_domtokenlist_add.html'>add()</a>
+                    <a target='_top' href='met_domtokenlist_contains.html'>contains()</a>
+                    <a target='_top' href='met_domtokenlist_entries.html'>entries()</a>
+                    <a target='_top' href='met_domtokenlist_forEach.html'>forEach()</a>
+                    <a target='_top' href='met_domtokenlist_item.html'>item()</a>
+                    <a target='_top' href='met_domtokenlist_keys.html'>keys()</a>
+                    <a target='_top' href='prop_domtokenlist_length.html'>length</a>
+                    <a target='_top' href='met_domtokenlist_remove.html'>remove()</a>
+                    <a target='_top' href='met_domtokenlist_replace.html'>replace()</a>
+                    <a target='_top' href='met_domtokenlist_supports.html'>supports()</a>
+                    <a target='_top' href='met_domtokenlist_toggle.html'>toggle()</a>
+                    <a target='_top' href='prop_domtokenlist_value.html'>value</a>
+                    <a target='_top' href='met_domtokenlist_values.html'>values()</a>
                 </div>
-                <a target='_top' href='obj_screen.html'>DOM Екран</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
-                    <a target='_top' href='prop_screen_availheight.html'>availHeight</a>
-                    <a target='_top' href='prop_screen_availwidth.html'>availWidth</a>
-                    <a target='_top' href='prop_screen_colordepth.html'>colorDepth</a>
-                    <a target='_top' href='prop_screen_height.html'>height</a>
-                    <a target='_top' href='prop_screen_pixeldepth.html'>pixelDepth</a>
-                    <a target='_top' href='prop_screen_width.html'>width</a>
-                </div>
-                <a target='_top' href='dom_obj_style.html'>DOM Стиль</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='dom_obj_style.html'>HTML Стилі</a>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='prop_style_aligncontent.html'>alignContent</a>
                     <a target='_top' href='prop_style_alignitems.html'>alignItems</a>
                     <a target='_top' href='prop_style_alignself.html'>alignSelf</a>
@@ -990,12 +965,12 @@
                     <a target='_top' href='prop_style_animationplaystate.html'>animationPlayState</a>
                     <a target='_top' href='prop_style_background.html'>background</a>
                     <a target='_top' href='prop_style_backgroundattachment.html'>backgroundAttachment</a>
+                    <a target='_top' href='prop_style_backgroundclip.html'>backgroundClip</a>
                     <a target='_top' href='prop_style_backgroundcolor.html'>backgroundColor</a>
                     <a target='_top' href='prop_style_backgroundimage.html'>backgroundImage</a>
+                    <a target='_top' href='prop_style_backgroundorigin.html'>backgroundOrigin</a>
                     <a target='_top' href='prop_style_backgroundposition.html'>backgroundPosition</a>
                     <a target='_top' href='prop_style_backgroundrepeat.html'>backgroundRepeat</a>
-                    <a target='_top' href='prop_style_backgroundclip.html'>backgroundClip</a>
-                    <a target='_top' href='prop_style_backgroundorigin.html'>backgroundOrigin</a>
                     <a target='_top' href='prop_style_backgroundsize.html'>backgroundSize</a>
                     <a target='_top' href='prop_style_backfacevisibility.html'>backfaceVisibility</a>
                     <a target='_top' href='prop_style_border.html'>border</a>
@@ -1051,6 +1026,7 @@
                     <a target='_top' href='prop_style_columnwidth.html'>columnWidth</a>
                     <a target='_top' href='prop_style_counterincrement.html'>counterIncrement</a>
                     <a target='_top' href='prop_style_counterreset.html'>counterReset</a>
+                    <a target='_top' href='prop_style_cssfloat.html'>cssFloat</a>
                     <a target='_top' href='prop_style_cursor.html'>cursor</a>
                     <a target='_top' href='prop_style_direction.html'>direction</a>
                     <a target='_top' href='prop_style_display.html'>display</a>
@@ -1063,7 +1039,6 @@
                     <a target='_top' href='prop_style_flexgrow.html'>flexGrow</a>
                     <a target='_top' href='prop_style_flexshrink.html'>flexShrink</a>
                     <a target='_top' href='prop_style_flexwrap.html'>flexWrap</a>
-                    <a target='_top' href='prop_style_cssfloat.html'>cssFloat</a>
                     <a target='_top' href='prop_style_font.html'>font</a>
                     <a target='_top' href='prop_style_fontfamily.html'>fontFamily</a>
                     <a target='_top' href='prop_style_fontsize.html'>fontSize</a>
@@ -1150,106 +1125,211 @@
                     <a target='_top' href='prop_style_widows.html'>widows</a>
                     <a target='_top' href='prop_style_zindex.html'>zIndex</a>
                 </div>
-
-                <a target='_top' href='obj_window.html'>DOM Вікно</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
-                    <a target='_top' href='prop_win_closed.html'>closed</a>
-                    <a target='_top' href='obj_console.html'>console</a>
-                    <a target='_top' href='prop_win_defaultstatus.html'>defaultStatus</a>
-                    <a target='_top' href='dom_obj_document.html'>document</a>
-                    <a target='_top' href='prop_win_frameElement.html'>frameElement</a>
-                    <a target='_top' href='prop_win_frames.html'>frames</a>
-                    <a target='_top' href='obj_history.html'>history</a>
-                    <a target='_top' href='prop_win_innerheight.html'>innerHeight</a>
-                    <a target='_top' href='prop_win_innerheight.html'>innerWidth</a>
-                    <a target='_top' href='prop_win_length.html'>length</a>
-                    <a target='_top' href='prop_win_localstorage.html'>localStorage</a>
-                    <a target='_top' href='obj_location.html'>location</a>
-                    <a target='_top' href='prop_win_name.html'>name</a>
-                    <a target='_top' href='obj_navigator.html'>navigator</a>
-                    <a target='_top' href='prop_win_opener.html'>opener</a>
-                    <a target='_top' href='prop_win_outerheight.html'>outerHeight</a>
-                    <a target='_top' href='prop_win_outerheight.html'>outerWidth</a>
-                    <a target='_top' href='prop_win_pagexoffset.html'>pageXOffset</a>
-                    <a target='_top' href='prop_win_pagexoffset.html'>pageYOffset</a>
-                    <a target='_top' href='prop_win_parent.html'>parent</a>
-                    <a target='_top' href='obj_screen.html'>screen</a>
-                    <a target='_top' href='prop_win_screenleft.html'>screenLeft</a>
-                    <a target='_top' href='prop_win_screenleft.html'>screenTop</a>
-                    <a target='_top' href='prop_win_screenx.html'>screenX</a>
-                    <a target='_top' href='prop_win_screenx.html'>screenY</a>
-                    <a target='_top' href='prop_win_sessionstorage.html'>sessionStorage</a>
-                    <a target='_top' href='prop_win_self.html'>self</a>
-                    <a target='_top' href='prop_win_status.html'>status</a>
-                    <a target='_top' href='prop_win_top.html'>top</a>
-                    <a target='_top' href='met_win_alert.html'>alert()</a>
-                    <a target='_top' href='met_win_atob.html'>atob()</a>
-                    <a target='_top' href='met_win_blur.html'>blur()</a>
-                    <a target='_top' href='met_win_btoa.html'>btoa()</a>
-                    <a target='_top' href='met_win_clearinterval.html'>clearInterval()</a>
-                    <a target='_top' href='met_win_cleartimeout.html'>clearTimeout()</a>
-                    <a target='_top' href='met_win_close.html'>close()</a>
-                    <a target='_top' href='met_win_confirm.html'>confirm()</a>
-                    <a target='_top' href='met_win_focus.html'>focus()</a>
-                    <a target='_top' href='jsref_getcomputedstyle.html'>getComputedStyle()</a>
-                    <a target='_top' href='met_win_matchmedia.html'>matchMedia()</a>
-                    <a target='_top' href='met_win_moveby.html'>moveBy()</a>
-                    <a target='_top' href='met_win_moveto.html'>moveTo()</a>
-                    <a target='_top' href='met_win_open.html'>open()</a>
-                    <a target='_top' href='met_win_print.html'>print()</a>
-                    <a target='_top' href='met_win_prompt.html'>prompt()</a>
-                    <a target='_top' href='met_win_resizeby.html'>resizeBy()</a>
-                    <a target='_top' href='met_win_resizeto.html'>resizeTo()</a>
-                    <a target='_top' href='met_win_scrollby.html'>scrollBy()</a>
-                    <a target='_top' href='met_win_scrollto.html'>scrollTo()</a>
-                    <a target='_top' href='met_win_setinterval.html'>setInterval()</a>
-                    <a target='_top' href='met_win_settimeout.html'>setTimeout()</a>
-                    <a target='_top' href='met_win_stop.html'>stop()</a>
+                <br>
+                <h2 class='left'><span class='left_h2'>HTML Події</span></h2>
+                <a target='_top' href='dom_obj_event.html'>HTML Події</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='event_onabort_media.html'>abort</a>
+                    <a target='_top' href='event_onafterprint.html'>afterprint</a>
+                    <a target='_top' href='event_animationend.html'>animationend</a>
+                    <a target='_top' href='event_animationiteration.html'>animationiteration</a>
+                    <a target='_top' href='event_animationstart.html'>animationstart</a>
+                    <a target='_top' href='event_onbeforeprint.html'>beforeprint</a>
+                    <a target='_top' href='event_onbeforeunload.html'>beforeunload</a>
+                    <a target='_top' href='event_onblur.html'>blur</a>
+                    <a target='_top' href='event_oncanplay.html'>canplay</a>
+                    <a target='_top' href='event_oncanplaythrough.html'>canplaythrough</a>
+                    <a target='_top' href='event_onchange.html'>change</a>
+                    <a target='_top' href='event_onclick.html'>click</a>
+                    <a target='_top' href='event_oncontextmenu.html'>contextmenu</a>
+                    <a target='_top' href='event_oncopy.html'>copy</a>
+                    <a target='_top' href='event_oncut.html'>cut</a>
+                    <a target='_top' href='event_ondblclick.html'>dblclick</a>
+                    <a target='_top' href='event_ondrag.html'>drag</a>
+                    <a target='_top' href='event_ondragend.html'>dragend</a>
+                    <a target='_top' href='event_ondragenter.html'>dragenter</a>
+                    <a target='_top' href='event_ondragleave.html'>dragleave</a>
+                    <a target='_top' href='event_ondragover.html'>dragover</a>
+                    <a target='_top' href='event_ondragstart.html'>dragstart</a>
+                    <a target='_top' href='event_ondrop.html'>drop</a>
+                    <a target='_top' href='event_ondurationchange.html'>durationchange</a>
+                    <a target='_top' href='event_onended.html'>ended</a>
+                    <a target='_top' href='event_onerror.html'>error</a>
+                    <a target='_top' href='event_onfocus.html'>focus</a>
+                    <a target='_top' href='event_onfocusin.html'>focusin</a>
+                    <a target='_top' href='event_onfocusout.html'>focusout</a>
+                    <a target='_top' href='event_fullscreenchange.html'>fullscreenchange</a>
+                    <a target='_top' href='event_fullscreenerror.html'>fullscreenerror</a>
+                    <a target='_top' href='event_onhashchange.html'>hashchange</a>
+                    <a target='_top' href='event_oninput.html'>input</a>
+                    <a target='_top' href='event_oninvalid.html'>invalid</a>
+                    <a target='_top' href='event_onkeydown.html'>keydown</a>
+                    <a target='_top' href='event_onkeypress.html'>keypress</a>
+                    <a target='_top' href='event_onkeyup.html'>keyup</a>
+                    <a target='_top' href='event_onload.html'>load</a>
+                    <a target='_top' href='event_onloadeddata.html'>loadeddata</a>
+                    <a target='_top' href='event_onloadedmetadata.html'>loadedmetadata</a>
+                    <a target='_top' href='event_onloadstart.html'>loadstart</a>
+                    <a target='_top' href='event_onmessage_sse.html'>message</a>
+                    <a target='_top' href='event_onmousedown.html'>mousedown</a>
+                    <a target='_top' href='event_onmouseenter.html'>mouseenter</a>
+                    <a target='_top' href='event_onmouseleave.html'>mouseleave</a>
+                    <a target='_top' href='event_onmousemove.html'>mousemove</a>
+                    <a target='_top' href='event_onmouseover.html'>mouseover</a>
+                    <a target='_top' href='event_onmouseout.html'>mouseout</a>
+                    <a target='_top' href='event_onmouseup.html'>mouseup</a>
+                    <a target='_top' href='event_onoffline.html'>offline</a>
+                    <a target='_top' href='event_ononline.html'>online</a>
+                    <a target='_top' href='event_onopen_sse.html'>open</a>
+                    <a target='_top' href='event_onpagehide.html'>pagehide</a>
+                    <a target='_top' href='event_onpageshow.html'>pageshow</a>
+                    <a target='_top' href='event_onpaste.html'>paste</a>
+                    <a target='_top' href='event_onpause.html'>pause</a>
+                    <a target='_top' href='event_onplay.html'>play</a>
+                    <a target='_top' href='event_onplaying.html'>playing</a>
+                    <a target='_top' href='event_onprogress.html'>progress</a>
+                    <a target='_top' href='event_onratechange.html'>ratechange</a>
+                    <a target='_top' href='event_onresize.html'>resize</a>
+                    <a target='_top' href='event_onreset.html'>reset</a>
+                    <a target='_top' href='event_onscroll.html'>scroll</a>
+                    <a target='_top' href='event_onsearch.html'>search</a>
+                    <a target='_top' href='event_onseeked.html'>seeked</a>
+                    <a target='_top' href='event_onseeking.html'>seeking</a>
+                    <a target='_top' href='event_onselect.html'>select</a>
+                    <a target='_top' href='event_onshow.html'>show</a>
+                    <a target='_top' href='event_onstalled.html'>stalled</a>
+                    <a target='_top' href='event_onsubmit.html'>submit</a>
+                    <a target='_top' href='event_onsuspend.html'>suspend</a>
+                    <a target='_top' href='event_ontimeupdate.html'>timeupdate</a>
+                    <a target='_top' href='event_ontoggle.html'>toggle</a>
+                    <a target='_top' href='event_touchcancel.html'>touchcancel</a>
+                    <a target='_top' href='event_touchend.html'>touchend</a>
+                    <a target='_top' href='event_touchmove.html'>touchmove</a>
+                    <a target='_top' href='event_touchstart.html'>touchstart</a>
+                    <a target='_top' href='event_transitionend.html'>transitionend</a>
+                    <a target='_top' href='event_onunload.html'>unload</a>
+                    <a target='_top' href='event_onvolumechange.html'>volumechange</a>
+                    <a target='_top' href='event_onwaiting.html'>waiting</a>
+                    <a target='_top' href='event_onwheel.html'>wheel</a>
+                </div>
+                <a target='_top' href='obj_events.html'>HTML Об&#8217;єкти подій</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a href='obj_animationevent.html'>Animation події</a>
+                    <a href='obj_clipboardevent.html'>Clipboard події</a>
+                    <a href='obj_dragevent.html'>Drag події</a>
+                    <a href='obj_event.html'>Події</a>
+                    <a href='obj_focusevent.html'>Focus події</a>
+                    <a href='obj_hashchangeevent.html'>HashChange події</a>
+                    <a href='obj_inputevent.html'>Input події</a>
+                    <a href='obj_keyboardevent.html'>Keyboard події</a>
+                    <a href='obj_mouseevent.html'>Mouse події</a>
+                    <a href='obj_pagetransitionevent.html'>PageTransition події</a>
+                    <a href='obj_popstateevent.html'>PopState події</a>
+                    <a href='obj_progressevent.html'>Progress події</a>
+                    <a href='obj_storageevent.html'>Storage події</a>
+                    <a href='obj_touchevent.html'>Touch події</a>
+                    <a href='obj_transitionevent.html'>Transition події</a>
+                    <a href='obj_uievent.html'>Ui події</a>
+                    <a href='obj_wheelevent.html'>Wheel події</a>
+                </div>
+                <a target='_top' href='dom_obj_event_prop.html'>HTML Властивості події</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='event_altkey.html'>altKey (Mouse)</a>
+                    <a target='_top' href='event_key_altkey.html'>altKey (Key)</a>
+                    <a target='_top' href='event_animation_animationname.html'>animationName</a>
+                    <a target='_top' href='event_bubbles.html'>bubbles</a>
+                    <a target='_top' href='event_button.html'>button</a>
+                    <a target='_top' href='event_buttons.html'>buttons</a>
+                    <a target='_top' href='event_cancelable.html'>cancelable</a>
+                    <a target='_top' href='event_key_charcode.html'>charCode</a>
+                    <a target='_top' href='event_clientx.html'>clientX</a>
+                    <a target='_top' href='event_clienty.html'>clientY</a>
+                    <a target='_top' href='event_key_code.html'>code</a>
+                    <a target='_top' href='event_ctrlkey.html'>ctrlKey (Mouse)</a>
+                    <a target='_top' href='event_key_ctrlkey.html'>ctrlKey (Key)</a>
+                    <a target='_top' href='event_currenttarget.html'>currentTarget</a>
+                    <a target='_top' href='event_inputevent_data.html'>data</a>
+                    <a target='_top' href='event_defaultprevented.html'>defaultPrevented</a>
+                    <a target='_top' href='event_wheel_deltax.html'>deltaX</a>
+                    <a target='_top' href='event_wheel_deltay.html'>deltaY</a>
+                    <a target='_top' href='event_wheel_deltaz.html'>deltaZ</a>
+                    <a target='_top' href='event_wheel_deltamode.html'>deltaMode</a>
+                    <a target='_top' href='event_detail.html'>detail</a>
+                    <a target='_top' href='event_animation_elapsedtime.html'>elapsedTime</a>
+                    <a target='_top' href='event_transition_elapsedtime.html'>elapsedTime</a>
+                    <a target='_top' href='event_eventphase.html'>eventPhase</a>
+                    <a target='_top' href='event_inputevent_inputtype.html'>inputType</a>
+                    <a target='_top' href='event_istrusted.html'>isTrusted</a>
+                    <a target='_top' href='event_key_key.html'>key</a>
+                    <a target='_top' href='event_key_keycode.html'>keyCode</a>
+                    <a target='_top' href='event_key_location.html'>location</a>
+                    <a target='_top' href='event_metakey.html'>metaKey (Mouse)</a>
+                    <a target='_top' href='event_key_metakey.html'>metaKey (Key)</a>
+                    <a target='_top' href='event_hashchange_newurl.html'>newURL</a>
+                    <a target='_top' href='event_hashchange_oldurl.html'>oldURL</a>
+                    <a target='_top' href='event_offsetx.html'>offsetX</a>
+                    <a target='_top' href='event_offsety.html'>offsetY</a>
+                    <a target='_top' href='event_pagex.html'>pageX</a>
+                    <a target='_top' href='event_pagey.html'>pageY</a>
+                    <a target='_top' href='event_pagetransition_persisted.html'>persisted</a>
+                    <a target='_top' href='event_transition_propertyName.html'>propertyName</a>
+                    <a target='_top' href='event_relatedtarget.html'>relatedTarget</a>
+                    <a target='_top' href='event_focus_relatedtarget.html'>relatedTarget</a>
+                    <a target='_top' href='event_screenx.html'>screenX</a>
+                    <a target='_top' href='event_screeny.html'>screenY</a>
+                    <a target='_top' href='event_shiftkey.html'>shiftKey (Mouse)</a>
+                    <a target='_top' href='event_key_shiftkey.html'>shiftKey (Key)</a>
+                    <a target='_top' href='event_target.html'>target</a>
+                    <a target='_top' href='event_touch_targettouches.html'>targetTouches</a>
+                    <a target='_top' href='event_timestamp.html'>timeStamp</a>
+                    <a target='_top' href='event_touch_touches.html'>touches</a>
+                    <a target='_top' href='event_type.html'>type</a>
+                    <a target='_top' href='event_which.html'>which (Mouse)</a>
+                    <a target='_top' href='event_key_which.html'>which (Key)</a>
+                    <a target='_top' href='event_view.html'>view</a>
+                </div>
+                <a target='_top' href='dom_obj_event_methods.html'>HTML Методи подій</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='event_mouse_getmodifierstate.html'>getModifierState()</a>
+                    <a target='_top' href='event_preventdefault.html'>preventDefault()</a>
+                    <a target='_top' href='event_stopimmediatepropagation.html'>stopImmidiatePropagation()</a>
+                    <a target='_top' href='event_stoppropagation.html'>stopPropagation()</a>
                 </div>
                 <br>
-                <h2 class='left'><span class='left_h2'>Веб API</span></h2>
+                <h2 class='left'><span class='left_h2'>Web API</span></h2>
                 <a target='_top' href='api_console.html'>API Консоль</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
-                    <a target='_top'  href='met_console_assert.html'>assert()</a>
-                    <a target='_top'  href='met_console_clear.html'>clear()</a>
-                    <a target='_top'  href='met_console_count.html'>count()</a>
-                    <a target='_top'  href='met_console_error.html'>error()</a>
-                    <a target='_top'  href='met_console_group.html'>group()</a>
-                    <a target='_top'  href='met_console_groupcollapsed.html'>groupCollapsed()</a>
-                    <a target='_top'  href='met_console_groupend.html'>groupEnd()</a>
-                    <a target='_top'  href='met_console_info.html'>info()</a>
-                    <a target='_top'  href='met_console_log.html'>log()</a>
-                    <a target='_top'  href='met_console_table.html'>table()</a>
-                    <a target='_top'  href='met_console_time.html'>time()</a>
-                    <a target='_top'  href='met_console_timeend.html'>timeEnd()</a>
-                    <a target='_top'  href='met_console_trace.html'>trace()</a>
-                    <a target='_top'  href='met_console_warn.html'>warn()</a>
+                <a target='_top' href='api_fetch.html'>API Fetch</a>
+                <a target='_top' href='api_fullscreen.html'>API Fullscreen</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='met_element_exitfullscreen.html'>exitFullscreen()</a>
+                    <a target='_top'  href='prop_document_fullscreenelement.html'>fullscreenElement</a>
+                    <a target='_top'  href='met_document_fullscreenenabled.html'>fullscreenEnabled()</a>
+                    <a target='_top' href='met_element_requestfullscreen.html'>requestFullscreen()</a>
                 </div>
-
                 <a target='_top' href='api_geolocation.html'>API Геолокація</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a target='_top' href='prop_geo_coordinates.html'>coordinates</a>
+                    <a target='_top' href='met_geo_getcurrentposition.html'>getCurrentPosition()</a>
                     <a target='_top' href='prop_geo_position.html'>position</a>
                 </div>
-
                 <a target='_top' href='api_history.html'>API Історія</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
-                    <a target='_top' href='met_his_back.html'>back()</a>
-                    <a target='_top' href='met_his_forward.html'>forward()</a>
-                    <a target='_top' href='met_his_go.html'>go()</a>
-                    <a target='_top' href='prop_his_length.html'>length</a>
-                </div>
+                <a target='_top' href='api_mediaquerylist.html'>API MediaQueryList</a>
                 <a target='_top' href='api_storage.html'>API Сховище</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='met_storage_clear.html'>clear()</a>
+                    <a target='_top' href='met_storage_getitem.html'>getItem()</a>
                     <a target='_top' href='met_storage_key.html'>key()</a>
                     <a target='_top' href='prop_storage_length.html'>length</a>
-                    <a target='_top' href='met_storage_getitem.html'>getItem()</a>
-                    <a target='_top' href='met_storage_setitem.html'>setItem()</a>
                     <a target='_top' href='met_storage_removeitem.html'>removeItem()</a>
-                    <a target='_top' href='met_storage_clear.html'>clear()</a>
+                    <a target='_top' href='met_storage_setitem.html'>setItem()</a>
+                </div>
+                <a target='_top' href='api_validation.html'>API Валідація</a>
+                <a target='_top' href='api_web.html'>API Веб</a>
+                <div class='ref_overview' style='margin-left:10px;'>
+                    <a target='_top' href='met_crypto_getrandomvalues.html'>crypto.getRandomNumber()</a>
                 </div>
                 <br>
-                <h2 class='left'><span class='left_h2'>HTML Об&rsquo;єкти</span></h2>
+                <h2 class='left'><span class='left_h2'>HTML Об&#8217;єкти</span></h2>
                 <a target='_top' href='dom_obj_anchor.html'>&lt;a&gt;</a>
                 <a target='_top' href='dom_obj_abbr.html'>&lt;abbr&gt;</a>
                 <a target='_top' href='dom_obj_address.html'>&lt;address&gt;</a>
@@ -1370,7 +1450,7 @@
                 <br>
                 <h2 class='left'><span class='left_h2'>Інші довідники</span></h2>
                 <a target='_top' href='obj_cssstyledeclaration.html'>CSSStyleDeclaration</a>
-                <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <div class='ref_overview' style='margin-left:10px;'>
                     <a href='prop_cssstyle_csstext.html'>cssText</a>
                     <a href='met_cssstyle_getpropertypriority.html'>getPropertyPriority()</a>
                     <a href='met_cssstyle_getpropertyvalue.html'>getPropertyValue()</a>
@@ -1380,7 +1460,7 @@
                     <a href='met_cssstyle_removeproperty.html'>removeProperty()</a>
                     <a href='met_cssstyle_setproperty.html'>setProperty()</a>
                 </div>
-                <a target='_top' href='jsref_type_conversion.html'>JS Конверсія</a>
+                <a target='_top' href='jsref_type_conversion.html'>JS Перетворення</a>
                 <br>
             </div>
             <br><br>
