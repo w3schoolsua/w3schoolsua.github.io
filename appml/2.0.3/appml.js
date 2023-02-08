@@ -31,7 +31,7 @@ function AppML(container, appsrc, appmlname) {
     }
     if (this.container === undefined || this.container === null) {
         if (container !== "" && container !== undefined) {
-            window.alert("The container '" + container + "' does not exist.");
+            window.alert("Контейнера '" + container + "' не існує.");
           return -1;
       }
   }
@@ -59,7 +59,7 @@ function AppML(container, appsrc, appmlname) {
     this.invokeAppML = function () {
         var z, i, a, datasource, controller, appmlid, count, xmlhttp, att;
         z = document.getElementsByTagName("*");
-        for (i = 0; i < z.length; i += 1) { //Управление включениями:
+        for (i = 0; i < z.length; i += 1) { //Управління включеннями:
             if (z[i].getAttribute("appml-include-html")) {
                 a = z[i].cloneNode(false);
                 xmlhttp = this.xmlHttp(z[i].getAttribute("appml-include-html"), "", "GET", false);
@@ -68,7 +68,7 @@ function AppML(container, appsrc, appmlname) {
                 z[i].parentNode.replaceChild(a, z[i]);
             }
         }
-        for (i = 0; i < z.length; i += 1) { //Управление Appml приложениями:
+        for (i = 0; i < z.length; i += 1) { //Управління Appml додатками:
             if (z[i].hasAttributes && ((att = z[i].getAttribute("appml-controller")) !== null || (att = z[i].getAttribute("appml-data")) !== null)) {
                 controller = z[i].getAttribute("appml-controller");
                 datasource = z[i].getAttribute("appml-data");
@@ -86,7 +86,7 @@ function AppML(container, appsrc, appmlname) {
         for (i = appmlObjects.length -1; i > -1; i -= 1) {
             if (appmlObjects[i].controller) {
                 if (typeof window[appmlObjects[i].controller] == "undefined") {
-                    window.alert("Контроллер " + controller + " не существует");
+                    window.alert("Контролер " + controller + " не існує");
                 } else {
                     appmlObjects[i].message = "ready";
                     if (window[appmlObjects[i].controller](appmlObjects[i]) == -1) {
@@ -130,7 +130,7 @@ function AppML(container, appsrc, appmlname) {
         if (navigate === "last") {fromrec = -1; }
         if (navigate === "same") {fromrec = this.data.fromRec; }
         if (this.dataSource) {
-            if (this.dataSource.indexOf(".") == -1 && this.dataSource.indexOf("local?") == -1) {errmsg = "Источник данных " + this.dataSource + " не существует"; }
+            if (this.dataSource.indexOf(".") == -1 && this.dataSource.indexOf("local?") == -1) {errmsg = "Джерело даних " + this.dataSource + " не існує"; }
             if (errmsg == null && this.dataSource.indexOf("?model=") > -1) {
             this.data.records = [];
             if (this.appmlID === "NULL") {fromrec = 0; }
@@ -167,12 +167,12 @@ function AppML(container, appsrc, appmlname) {
                 } catch (er) {
                   errmsg = xmlhttp.responseText;
                 }
-                if (xmlhttp.status == 404) {errmsg = "Страница не найдена: " + this.dataSource; }
+                if (xmlhttp.status == 404) {errmsg = "Сторінка не знайдена: " + this.dataSource; }
                 if (this.data.error) {errmsg = this.data.error; }
             }
             if (errmsg !== null) {
             errmsg = this.translate(errmsg);
-              if (errmsg === "") {errmsg = "Пустой ответ."; }
+              if (errmsg === "") {errmsg = "Пуста відповідь."; }
               try {
                   this.displayMessage(errmsg);
               } catch (er) {
@@ -202,7 +202,7 @@ function AppML(container, appsrc, appmlname) {
         if (!this.template) {manageTemplate(this); }
         if (!this.template) {return false; }
         if (this.template === null) {
-            this.displayMessage("Шаблон не существует.");
+            this.displayMessage("Шаблон не існує.");
             return false;
         }
         //if (this.data.records && this.data.records.length === 0) {this.container.innerHTML = ""; return false; }
@@ -220,7 +220,7 @@ function AppML(container, appsrc, appmlname) {
             arr[j].removeAttribute("appml-repeat");
             repeatObj = (eval("this.data." + repeat) || eval("this." + repeat));
             if (!repeatObj) {
-                this.displayMessage("appml-repeat должен быть массив.\n\n'" + repeat + "' не является массивом.\n\n");
+                this.displayMessage("appml-repeat должен быть массив.\n\n'" + repeat + "' не є масивом.\n\n");
                 return -1;
             }
             if (repeatObj && typeof repeatObj === "object" && repeatObj.length != "undefined") {
@@ -384,7 +384,7 @@ function AppML(container, appsrc, appmlname) {
             }
         }
     };
-    this.getElement = function (id, parent) {//Поиск внутри указанного элемента или контейнера appml, если родительский элемент не определен. Вернуть элемент с указанным id:
+    this.getElement = function (id, parent) {//Пошук всередині вказаного елемента або контейнера appml, якщо батьківський елемент не визначений. Повернути елемент зі вказаним id:
         var parentObj = (parent || this.container);
         if (!parentObj) {return false; }
         var y = parentObj.getElementsByTagName("*"), l = y.length, i, z = id.toUpperCase();
@@ -392,7 +392,7 @@ function AppML(container, appsrc, appmlname) {
             if (y[i].id.toUpperCase() === z) {return y[i]; }
         }
     };
-    this.getElementsByAttribute = function (x, att) {//Искать в указанном элементе и возвращать все элементы с указанным атрибутом
+    this.getElementsByAttribute = function (x, att) {//Шукати у вказаному елементі та повертати всі елементи зі вказаним атрибутом
         var arr = [], arrCount = -1, i, l, y = x.getElementsByTagName("*"), z = att.toUpperCase();
         l = y.length;
         for (i = -1; i < l; i += 1) {
@@ -468,29 +468,29 @@ function AppML(container, appsrc, appmlname) {
     };
     this.translate = function (txt) {
       var patt;
-      patt = /APPML_ERR_USN_OR_PWD_REQ/g; txt = txt.replace(patt, "Требуется имя пользователя или пароль");
-      patt = /APPML_ERR_ACTION_REQ/g; txt = txt.replace(patt, "Требуются действия");
-      patt = /APPML_ERR_MODEL_REQ/g; txt = txt.replace(patt, "Требуется модель");
-      patt = /APPML_ERR_MODEL_ERR/g; txt = txt.replace(patt, "Ошибка в модели");
-      patt = /APPML_ERR_NO_LOGIN/g; txt = txt.replace(patt, "Вы не авторизованы");
-      patt = /APPML_ERR_NOT_AUTHORIZED/g; txt = txt.replace(patt, "У вас нет прав на выполнение этого действия");
-      patt = /APPML_ERR_DATASOURCE_REQ/g; txt = txt.replace(patt, "Требуется источник данных");
-      patt = /APPML_ERR_KEYFIELD_REQ/g; txt = txt.replace(patt, "Требуется ключевое поле");
-      patt = /APPML_ERR_MAINTABLE_REQ/g; txt = txt.replace(patt, "Требуется Maintable");
-      patt = /APPML_ERR_ILLEGAL_ACTION/g; txt = txt.replace(patt, "Недопустимое действие");
-      patt = /APPML_ERR_DATAMODEL/g; txt = txt.replace(patt, "Ошибка в модели данных");
-      patt = /APPML_ERR_INPUT_MIN/g; txt = txt.replace(patt, "Ошибка минимального значения");
-      patt = /APPML_ERR_INPUT_MAX/g; txt = txt.replace(patt, "Ошибка максимального значения");
-      patt = /APPML_ERR_INPUT_REQ/g; txt = txt.replace(patt, "Ошибка обязательного значения");
-      patt = /APPML_ERR_ILLEGAL_QUERY/g; txt = txt.replace(patt, "Ошибка недопустимого запроса");
-      patt = /APPML_ERR_UKNOWN_DB/g; txt = txt.replace(patt, "Неизвестная база данных");
-      patt = /APPML_ERR_UKNOWN_DB_FIELD/g; txt = txt.replace(patt, "Неизвестное поле базы данных");
-      patt = /APPML_ERR_INVALID_KEY/g; txt = txt.replace(patt, "Неправильный ключ");
-      patt = /APPML_ERR_ERROR/g; txt = txt.replace(patt, "Ошибка");
-      patt = /APPML_MESSAGE_RECORD_UPDATED/g; txt = txt.replace(patt, "Запись обновлена");
-      patt = /APPML_MESSAGE_RECORD_ADDED/g; txt = txt.replace(patt, "Запись добавлена");
-      patt = /APPML_MESSAGE_RECORD_DELETED/g; txt = txt.replace(patt, "Запись удалена");
-      patt = /APPML_MESSAGE_OF/g; txt = txt.replace(patt, "выкл");
+      patt = /APPML_ERR_USN_OR_PWD_REQ/g; txt = txt.replace(patt, "Потрібні ім&#8217;я користувача або пароль");
+      patt = /APPML_ERR_ACTION_REQ/g; txt = txt.replace(patt, "Потрібні дії");
+      patt = /APPML_ERR_MODEL_REQ/g; txt = txt.replace(patt, "Потрібна модель");
+      patt = /APPML_ERR_MODEL_ERR/g; txt = txt.replace(patt, "Помилка в моделі");
+      patt = /APPML_ERR_NO_LOGIN/g; txt = txt.replace(patt, "Ви не авторизовані");
+      patt = /APPML_ERR_NOT_AUTHORIZED/g; txt = txt.replace(patt, "У вас немає прав на виконання цієї дії");
+      patt = /APPML_ERR_DATASOURCE_REQ/g; txt = txt.replace(patt, "Потрібне джерело даних");
+      patt = /APPML_ERR_KEYFIELD_REQ/g; txt = txt.replace(patt, "Потрібне ключове поле");
+      patt = /APPML_ERR_MAINTABLE_REQ/g; txt = txt.replace(patt, "Потрібна головна таблиця");
+      patt = /APPML_ERR_ILLEGAL_ACTION/g; txt = txt.replace(patt, "Неприпустима дія");
+      patt = /APPML_ERR_DATAMODEL/g; txt = txt.replace(patt, "Помилка в моделі даных");
+      patt = /APPML_ERR_INPUT_MIN/g; txt = txt.replace(patt, "Помилка мінімального значення");
+      patt = /APPML_ERR_INPUT_MAX/g; txt = txt.replace(patt, "Помилка максимального значення");
+      patt = /APPML_ERR_INPUT_REQ/g; txt = txt.replace(patt, "Помилка обов&#8217;язкового значення");
+      patt = /APPML_ERR_ILLEGAL_QUERY/g; txt = txt.replace(patt, "Помилка неприпустимого запиту");
+      patt = /APPML_ERR_UKNOWN_DB/g; txt = txt.replace(patt, "Невідома база даних");
+      patt = /APPML_ERR_UKNOWN_DB_FIELD/g; txt = txt.replace(patt, "Невідоме поле бази даних");
+      patt = /APPML_ERR_INVALID_KEY/g; txt = txt.replace(patt, "Неправильний ключ");
+      patt = /APPML_ERR_ERROR/g; txt = txt.replace(patt, "Помилка");
+      patt = /APPML_MESSAGE_RECORD_UPDATED/g; txt = txt.replace(patt, "Запис оновлений");
+      patt = /APPML_MESSAGE_RECORD_ADDED/g; txt = txt.replace(patt, "Запис доданий");
+      patt = /APPML_MESSAGE_RECORD_DELETED/g; txt = txt.replace(patt, "Запис видалений");
+      patt = /APPML_MESSAGE_OF/g; txt = txt.replace(patt, "викл");
       return txt;
     };
     this.displayMessage = function (txt) {
@@ -579,7 +579,7 @@ function AppML(container, appsrc, appmlname) {
         if (this.list) {this.list.data.totalRecCounter = 0; this.list.fnpl("same"); }
     };
     this.deleteRecord = function () {
-        var s = window.confirm("Are you sure you want to delete this record?");
+        var s = window.confirm("Ви дійсно хочете видалити цей запис?");
         if (s === false) {return -1; }
         this.putRecord("DELETE");
     };
@@ -606,7 +606,7 @@ function AppML(container, appsrc, appmlname) {
         var httpObj, async = a;
         if (async !== true) {async = false; }
         if (method !== "GET" && method !== "POST") {
-            window.alert("httpRequest требует GET или POST");
+            window.alert("httpRequest вимагає GET або POST");
             return false;
         }
         if (window.XMLHttpRequest) {
@@ -666,7 +666,7 @@ function AppML(container, appsrc, appmlname) {
         }
         return "";
     }
-    function checkReplaceInnerHTML(elmnt) { // проверяя, как браузер заменяет innerHTML, IE имеет проблемы с заменой innerHTML некоторых элементов, например TR
+    function checkReplaceInnerHTML(elmnt) { // перевіряє, як браузер замінює innerHTML, IE має проблеми із заміною innerHTML деяких елементів, наприклад TR
         var cc, cc1, cc2, cc3, x = 1;
         try {
             cc = elmnt.cloneNode(true);
@@ -892,7 +892,7 @@ function AppML(container, appsrc, appmlname) {
     function localStorage(obj, cb) {
         var xmlhttp;
         if (!w3schoolsWebSQLOK) {
-            obj.displayMessage("Ваш браузер не поддерживает базу данных локального хранилища (WebSQL).");
+            obj.displayMessage("Ваш браузер не підтримує базу даних локального сховища (WebSQL).");
             return;
         }
         if (obj.app.action === "GET") {
