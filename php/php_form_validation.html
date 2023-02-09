@@ -1360,29 +1360,29 @@
     <div class="w3-panel w3-note">
         <p><b>Cross-site scripting (XSS) is a type of computer security vulnerability typically found in Web applications. XSS enables attackers to inject client-side script into Web pages viewed by other users.</b></p>
     </div>
-    <p>Assume we have the following form in a page named &quot;test_form.html&quot;:</p>
+    <p>Assume we have the following form in a page named &quot;test_form.php&quot;:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
         <div>
             &lt;form method=&quot;post&quot; action=&quot;&lt;?php echo $_SERVER[&quot;PHP_SELF&quot;];?&gt;&quot;&gt;
         </div>
     </div>
-    <p>Now, if a user enters the normal URL in the address bar like &quot;https://www.example.com/test_form.html&quot;, the above code will be translated to:</p>
+    <p>Now, if a user enters the normal URL in the address bar like &quot;https://www.example.com/test_form.php&quot;, the above code will be translated to:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
         <div>
-            &lt;form method=&quot;post&quot; action=&quot;test_form.html&quot;&gt;
+            &lt;form method=&quot;post&quot; action=&quot;test_form.php&quot;&gt;
         </div>
     </div>
     <p>So far, so good.</p>
     <p>However, consider that a user enters the following URL in the address bar:</p>
     <div class="w3-code w3-border notranslate">
         <div>
-            https://www.example.com/test_form.html/%22%3E%3Cscript%3Ealert('hacked')%3C/script%3E
+            https://www.example.com/test_form.php/%22%3E%3Cscript%3Ealert('hacked')%3C/script%3E
         </div>
     </div>
     <p>In this case, the above code will be translated to:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
         <div>
-            &lt;form method=&quot;post&quot; action=&quot;test_form.html/&quot;&gt;&lt;script&gt;alert('hacked')&lt;/script&gt;
+            &lt;form method=&quot;post&quot; action=&quot;test_form.php/&quot;&gt;&lt;script&gt;alert('hacked')&lt;/script&gt;
         </div>
     </div>
     <p>This code adds a script tag and an alert command. And when the page loads, the JavaScript code will be executed (the user will see an alert box). This is just a simple and harmless example how the PHP_SELF variable can be exploited.</p>
@@ -1399,7 +1399,7 @@
     <p>The htmlspecialchars() function converts special characters to HTML entities. Now if the user tries to exploit the PHP_SELF variable, it will result in the following output:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
         <div>
-            &lt;form method=&quot;post&quot; action=&quot;test_form.html/&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert('hacked')&amp;lt;/script&amp;gt;&quot;&gt;
+            &lt;form method=&quot;post&quot; action=&quot;test_form.php/&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert('hacked')&amp;lt;/script&amp;gt;&quot;&gt;
         </div>
     </div>
     <p>The exploit attempt fails, and no harm is done!</p>
