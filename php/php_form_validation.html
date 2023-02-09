@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Перевірка форми. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Перевірка форми. Приклади. Вправи. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP Перевірка форми. Текстові поля. Радіо кнопки. Елементи форми. Важлива примітка щодо безпеки форм PHP. Cross-site scripting / Кроссайтовий скриптинг (XSS). Як уникнути експлуатації $_SERVER["PHP_SELF"]? Перевірити дані форми за допомогою PHP. Створити повідомлення про помилки. Приклади. Вправи. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1280,155 +1280,150 @@
         <a class="w3-right w3-btn" href="php_form_required.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">This and the next chapters show how to use PHP to validate form data.</p>
+    <p class="intro">Цей і наступні розділи показують, як використовувати PHP для <strong>перевірки даних форми</strong>.</p>
     <hr>
     <h2>PHP Перевірка форми</h2>
     <div class="w3-panel w3-note"><p>
-        <p><strong>Think SECURITY when processing PHP forms!</strong></p>
-        <p>These pages will show how to process PHP forms with security in mind. Proper validation of form data is important to protect your form from hackers and spammers!</p>
+        <p><strong>Думайте про БЕЗПЕКУ під час обробки PHP-форм!</strong></p>
+        <p>На цих сторінках буде показано, як обробляти форми PHP з урахуванням безпеки. Належна перевірка даних форми важлива для захисту вашої форми від хакерів і спамерів!</p>
     </div>
-    <p>The HTML form we will be working at in these chapters, contains various input fields: required and optional text fields, radio buttons, and a submit button:</p>
-    <iframe src="https://tryphp.w3schools.com/demo/demo_form_validation_complete.html" style="border:3px solid #ddd;height:600px;width:100%;padding-left:8px;padding-right:"></iframe>
-    <p>The validation rules for the form above are as follows:</p>
+    <p>HTML-форма, над якою ми працюватимемо в цих розділах, містить різні поля введення: обов&#8217;язкові та необов&#8217;язкові текстові поля, перемикачі та кнопку надсилання:</p>
+    <iframe src="../phptryit/demo_form_validation_complete.html" style="border:3px solid #ddd;height:600px;width:100%;padding-left:8px;padding-right:"></iframe>
+    <p>Правила перевірки для форми вище є такими:</p>
     <table class="ws-table-all notranslate">
         <tr>
-            <th style="width:25%">Field</th>
-            <th style="width:75%">Validation Rules</th>
+            <th style="width:25%">Поле</th>
+            <th style="width:75%">Правила перевірки</th>
         </tr>
         <tr>
-            <td>Name</td>
-            <td>Required. + Must only contain letters and whitespace</td>
+            <td>Ім&#8217;я</td>
+            <td>Обов&#8217;язково. + Має містити лише літери та пробіли</td>
         </tr>
         <tr>
             <td>E-mail</td>
-            <td>Required. + Must contain a valid email address (with @ and .)</td>
+            <td>Обов&#8217;язково. + Має містити дійсну електронну адресу (з @ та .)</td>
         </tr>
         <tr>
-            <td>Website</td>
-            <td>Optional. If present, it must contain a valid URL</td>
+            <td>Вебсайт</td>
+            <td>Не обов&#8217;язково. Якщо він присутній, він має містити дійсну URL-адресу</td>
         </tr>
         <tr>
-            <td>Comment</td>
-            <td>Optional. Multi-line input field (textarea)</td>
+            <td>Коментар</td>
+            <td>Не обов&#8217;язково. Багаторядкове поле введення (textarea)</td>
         </tr>
         <tr>
-            <td>Gender</td>
-            <td>Required. Must select one</td>
+            <td>Стать</td>
+            <td>Обов&#8217;язково. Потрібно вибрати один варіант</td>
         </tr>
     </table>
-    <p>First we will look at the plain HTML code for the form:</p>
+    <p>Спочатку ми розглянемо звичайний HTML-код для форми:</p>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>Текстові поля</h2>
-    <p>The name, email, and website fields are text input elements, and the comment field is a textarea. The HTML code looks like this:</p>
+    <p>Поля імені, електронної пошти та вебсайту є елементами введення тексту, а поле коментаря є текстовим полем. HTML-код виглядає так:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
         <div>
-            Ім&#8217;я: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;<br>E-mail: &lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;<br>Website: &lt;input type=&quot;text&quot; name=&quot;website&quot;&gt;<br>Comment: &lt;textarea name=&quot;comment&quot; rows=&quot;5&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;
+            Ім&#8217;я: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;<br>E-mail: &lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;<br>Вебсайт: &lt;input type=&quot;text&quot; name=&quot;website&quot;&gt;<br>Коментар: &lt;textarea name=&quot;comment&quot; rows=&quot;5&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;
         </div>
     </div>
     <hr>
     <h2>Радіо кнопки</h2>
-    <p>The gender fields are radio buttons and the HTML code looks like this:</p>
+    <p>Поля статі є перемикачами, а HTML-код виглядає так:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
         <div>
-            Стать:<br>&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;Female<br>&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt;Male<br>&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;other&quot;&gt;Other
+            Стать:<br>&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;Жінка<br>&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot;&gt;Чоловік<br>&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;other&quot;&gt;Щось середнє
         </div>
     </div>
     <hr>
     <h2>Елементи форми</h2>
-    <p>The HTML code of the form looks like this:</p>
+    <p>HTML-код форми виглядає так:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
         <div>
             &lt;form method=&quot;post&quot; action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&quot;PHP_SELF&quot;]);?&gt;&quot;&gt;
         </div>
     </div>
-    <p>When the form is submitted, the form data is sent with method=&quot;post&quot;.</p>
+    <p>Коли форма надсилається, дані форми надсилаються за допомогою method=&quot;post&quot;.</p>
     <div class="w3-panel w3-note">
-        <p><b>What is the $_SERVER[&quot;PHP_SELF&quot;] variable?</b><br><br>The $_SERVER[&quot;PHP_SELF&quot;] is a super global variable that returns the filename of the currently executing script.</p>
+        <p><b>Що таке змінна $_SERVER[&quot;PHP_SELF&quot;]?</b><br><br>$_SERVER[&quot;PHP_SELF&quot;] — це суперглобальна змінна, яка повертає ім&#8217;я файлу скрипту, що зараз виконується.</p>
     </div>
-    <p>So, the $_SERVER[&quot;PHP_SELF&quot;] sends the submitted form data to the page itself, instead of jumping to a different page. This way, the user will get error messages on the same page as the form.</p>
+    <p>Отже, $_SERVER[&quot;PHP_SELF&quot;] надсилає надіслані дані форми на саму сторінку, замість переходу на іншу сторінку. Таким чином, користувач отримуватиме повідомлення про помилки на тій же сторінці, що й форма.</p>
     <div class="w3-panel w3-note">
-        <p><strong>What is the htmlspecialchars() function?</strong><br><br>The htmlspecialchars() function converts special characters to HTML entities. This means that it will replace HTML characters like &lt; and &gt; with &amp;lt; and &amp;gt;. This prevents attackers from exploiting the code by injecting HTML or Javascript code (Cross-site Scripting attacks) in forms.</p>
+        <p><strong>Що таке функція htmlspecialchars()?</strong><br><br>Функція htmlspecialchars() перетворює спеціальні символи на об&#8217;єкти HTML. Це означає, що він замінить такі символи HTML, як &lt; та &gt; з &amp;lt; та &amp;gt;. Це запобігає зловмисникам від використання коду, вставляючи код HTML або Javascript (атаки міжсайтового скриптінгу) у форми.</p>
     </div>
     <hr>
-    <h2>Big Note on PHP Form Security</h2>
-    <p>The $_SERVER[&quot;PHP_SELF&quot;] variable can be used by hackers!</p>
-    <p>If PHP_SELF is used in your page then a user can enter a slash (/) and then some Cross Site Scripting (XSS) commands to execute.</p>
+    <h2>Важлива примітка щодо безпеки форм PHP</h2>
+    <p>Змінна $_SERVER[&quot;PHP_SELF&quot;] може бути використана хакерами!</p>
+    <p>Якщо на вашій сторінці використовується PHP_SELF, то користувач може ввести слеш (/) і потім якусь команду кроссайтового скриптингу (XSS) для виконання.</p>
     <div class="w3-panel w3-note">
-        <p><b>Cross-site scripting (XSS) is a type of computer security vulnerability typically found in Web applications. XSS enables attackers to inject client-side script into Web pages viewed by other users.</b></p>
+        <p><b>Cross-site scripting / Кроссайтовий скриптинг (XSS) - це тип вразливості комп&#8217;ютерної безпеки, як правило, зустрічається у вебдодатках. XSS дозволяє зловмисникам вводити скрипт на стороні клієнта на вебсторінки, які переглядаються іншими користувачами.</b></p>
     </div>
-    <p>Assume we have the following form in a page named &quot;test_form.php&quot;:</p>
+    <p>Припустимо, у нас є така форма на сторінці &quot;test_form.php&quot;:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
         <div>
             &lt;form method=&quot;post&quot; action=&quot;&lt;?php echo $_SERVER[&quot;PHP_SELF&quot;];?&gt;&quot;&gt;
         </div>
     </div>
-    <p>Now, if a user enters the normal URL in the address bar like &quot;https://www.example.com/test_form.php&quot;, the above code will be translated to:</p>
+    <p>Тепер, якщо користувач вводить звичайну URL-адресу в адресному рядку, наприклад, &quot;https://www.example.com/test_form.php&quot;, наведений вище код буде перекладений на:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
         <div>
             &lt;form method=&quot;post&quot; action=&quot;test_form.php&quot;&gt;
         </div>
     </div>
-    <p>So far, so good.</p>
-    <p>However, consider that a user enters the following URL in the address bar:</p>
+    <p>Поки що все добре.</p>
+    <p>Однак, подумайте, що користувач вводить наступну URL-адресу в адресному рядку:</p>
     <div class="w3-code w3-border notranslate">
-        <div>
-            https://www.example.com/test_form.php/%22%3E%3Cscript%3Ealert('hacked')%3C/script%3E
-        </div>
+        <div>https://www.example.com/test_form.php/%22%3E%3Cscript%3Ealert('hacked')%3C/script%3E</div>
     </div>
-    <p>In this case, the above code will be translated to:</p>
+    <p>У цьому випадку наведений вище код буде перекладений на:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
-        <div>
-            &lt;form method=&quot;post&quot; action=&quot;test_form.php/&quot;&gt;&lt;script&gt;alert('hacked')&lt;/script&gt;
-        </div>
+        <div>&lt;form method=&quot;post&quot; action=&quot;test_form.php/&quot;&gt;&lt;script&gt;alert('hacked')&lt;/script&gt;</div>
     </div>
-    <p>This code adds a script tag and an alert command. And when the page loads, the JavaScript code will be executed (the user will see an alert box). This is just a simple and harmless example how the PHP_SELF variable can be exploited.</p>
-    <p>Be aware of that <strong>any JavaScript code can be added inside the &lt;script&gt; tag!</strong> A hacker can redirect the user to a file on another server, and that file can hold malicious code that can alter the global variables or submit the form to another address to save the user data, for example.</p>
+    <p>Цей код додає тег script та команду alert (оповіщення). І коли сторінка завантажується, код JavaScript буде виконаний (користувач побачить поле оповіщення). Це просто простий і нешкідливий приклад того, як можна використовувати змінну PHP_SELF.</p>
+    <p>Будьте в курсі того, що <strong>будь-який JavaScript код можна додати всередині тегу &lt;script&gt;!</strong> Хакер може перенаправити користувача на файл на іншому сервері, і цей файл може містити шкідливий код, який може змінити глобальні змінні або подати форму на іншу адресу, щоб зберегти дані користувача, наприклад.</p>
+    <p>Круто, еге ж?</p>
     <hr>
-    <h2>How To Avoid $_SERVER[&quot;PHP_SELF&quot;] Exploits?</h2>
-    <p>$_SERVER[&quot;PHP_SELF&quot;] exploits can be avoided by using the htmlspecialchars() function.</p>
-    <p>The form code should look like this:</p>
+    <h2>Як уникнути експлуатації $_SERVER[&quot;PHP_SELF&quot;]?</h2>
+    <p>Експлуатацію $_SERVER[&quot;PHP_SELF&quot;] можна уникнути за допомогою функції htmlspecialchars().</p>
+    <p>Код форми повинен виглядати так:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
         <div>
             &lt;form method=&quot;post&quot; action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&quot;PHP_SELF&quot;]);?&gt;&quot;&gt;
         </div>
     </div>
-    <p>The htmlspecialchars() function converts special characters to HTML entities. Now if the user tries to exploit the PHP_SELF variable, it will result in the following output:</p>
+    <p>Функція htmlspecialchars() перетворює спеціальні символи в об&#8217;єкти HTML. Тепер, якщо користувач намагається використовувати змінну PHP_SELF, це призведе до наступного виведення:</p>
     <div class="w3-code w3-border notranslate htmlHigh">
-        <div>
-            &lt;form method=&quot;post&quot; action=&quot;test_form.php/&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert('hacked')&amp;lt;/script&amp;gt;&quot;&gt;
-        </div>
+        <div>&lt;form method=&quot;post&quot; action=&quot;test_form.php/&amp;quot;&amp;gt;&amp;lt;script&amp;gt;alert('hacked')&amp;lt;/script&amp;gt;&quot;&gt;</div>
     </div>
-    <p>The exploit attempt fails, and no harm is done!</p>
+    <p>Спроба експлуатації не вдається, і ніякої шкоди не робиться!</p>
     <hr>
-    <h2>Validate Form Data With PHP</h2>
-    <p>The first thing we will do is to pass all variables through PHP's htmlspecialchars() function.</p>
-    <p>When we use the htmlspecialchars() function; then if a user tries to submit the following in a text field:</p>
+    <h2>Перевірити дані форми за допомогою PHP</h2>
+    <p>Перше, що ми зробимо, це передамо всі змінні через PHP функцію htmlspecialchars().</p>
+    <p>Коли ми використовуємо функцію htmlspecialchars(); тоді, якщо користувач намагається надіслати наступне в текстове поле:</p>
     <p>&lt;script&gt;location.href('https://www.hacked.com')&lt;/script&gt;</p>
-    <p>- this would not be executed, because it would be saved as HTML escaped code, like this:</p>
+    <p>- це не буде виконано, оскільки буде збережено як екранований код HTML, як це:</p>
     <p>&amp;lt;script&amp;gt;location.href('https://www.hacked.com')&amp;lt;/script&amp;gt;</p>
-    <p>The code is now safe to be displayed on a page or inside an e-mail.</p>
-    <p>We will also do two more things when the user submits the form:</p>
+    <p>Тепер код можна безпечно відображати на сторінці або в електронному листі.</p>
+    <p>Ми також зробимо ще дві речі, коли користувач надішле форму:</p>
     <ol>
-        <li>Strip unnecessary characters (extra space, tab, newline) from the user input data (with the PHP trim() function)</li>
-        <li>Remove backslashes (\) from the user input data (with the PHP stripslashes() function)</li>
+        <li>Видаліть непотрібні символи (зайвий пробіл, табуляцію, новий рядок) із введених користувачем даних (за допомогою PHP функції trim())</li>
+        <li>Видаліть зворотні косі риски (\) із введених користувачем даних (за допомогою PHP функції stripslashes())</li>
     </ol>
-    <p>The next step is to create a function that will do all the checking for us (which is much more convenient than writing the same code over and over again).</p>
-    <p>We will name the function test_input().</p>
-    <p>Now, we can check each $_POST variable with the test_input() function, and the script looks like this:</p>
+    <p>Наступним кроком є створення функції, яка виконуватиме всю перевірку за нас (що набагато зручніше, ніж писати той самий код знову і знову).</p>
+    <p>Ми назвемо функцію test_input().</p>
+    <p>Тепер ми можемо перевірити кожну змінну $_POST за допомогою функції test_input(), і скрипт буде виглядати так:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>// define variables and set to empty values<br>$name = $email = $gender = $comment = $website = &quot;&quot;;<br><br>if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {<br>&nbsp; $name = test_input($_POST[&quot;name&quot;]);<br>&nbsp; $email = test_input($_POST[&quot;email&quot;]);<br>&nbsp; $website = test_input($_POST[&quot;website&quot;]);<br>&nbsp; $comment = test_input($_POST[&quot;comment&quot;]);<br>&nbsp; $gender = test_input($_POST[&quot;gender&quot;]);<br>}<br><br>function test_input($data) {<br>&nbsp; $data = trim($data);<br>&nbsp; $data = stripslashes($data);<br>&nbsp; $data = htmlspecialchars($data);<br>&nbsp; return $data;<br>}<br>?&gt;
+            &lt;?php<br>// визначте змінні та встановіть порожні значення<br>$name = $email = $gender = $comment = $website = &quot;&quot;;<br><br>if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {<br>&nbsp; $name = test_input($_POST[&quot;name&quot;]);<br>&nbsp; $email = test_input($_POST[&quot;email&quot;]);<br>&nbsp; $website = test_input($_POST[&quot;website&quot;]);<br>&nbsp; $comment = test_input($_POST[&quot;comment&quot;]);<br>&nbsp; $gender = test_input($_POST[&quot;gender&quot;]);<br>}<br><br>function test_input($data) {<br>&nbsp; $data = trim($data);<br>&nbsp; $data = stripslashes($data);<br>&nbsp; $data = htmlspecialchars($data);<br>&nbsp; return $data;<br>}<br>?&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_form_validation_escapechar.html">Виконати приклад &raquo;</a>
     </div>
-    <p>Notice that at the start of the script, we check whether the form has been submitted using $_SERVER[&quot;REQUEST_METHOD&quot;]. If the REQUEST_METHOD is POST, then the form has been submitted - and it should be validated. If it has not been submitted, skip the validation and display a blank form.</p>
-    <p>However, in the example above, all input fields are optional. The script works fine even if the user does not enter any data.</p>
-    <p>The next step is to make input fields required and create error messages if needed.</p>
+    <p>Зауважте, що на початку скрипту ми перевіряємо, чи надіслано форму за допомогою $_SERVER[&quot;REQUEST_METHOD&quot;]. Якщо REQUEST_METHOD має значення POST, це означає, що форму надіслано, і її потрібно перевірити. Якщо його не було надіслано, пропустіть перевірку та відобразіть порожню форму.</p>
+    <p>Однак у наведеному вище прикладі всі поля введення необов&#8217;язкові. Скрипт працює нормально, навіть якщо користувач не вводить жодних даних.</p>
+    <p>Наступним кроком буде зробити поля введення обов&#8217;язковими та за потреби створити повідомлення про помилки.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="php_forms.html">&#10094; Prev</a>
