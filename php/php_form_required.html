@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Обов&#8217;язкові поля форми. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Обов&#8217;язкові поля форми. Приклади. Вправи. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP Обов&#8217;язкові поля форми. Відобразити повідомлення про помилку. Перевірка вхідних даних. Приклади. Вправи. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1280,10 +1280,10 @@
         <a class="w3-right w3-btn" href="php_form_url_email_en.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">This chapter shows how to make input fields required and create error messages if needed.</p>
+    <p class="intro">У цьому розділі показано, як зробити поля введення обов&#8217;язковими та створити повідомлення про помилки, якщо потрібно.</p>
     <hr>
     <h2>PHP - Обов&#8217;язкові поля</h2>
-    <p>From the validation rules table on the previous page, we see that the &quot;Name&quot;, &quot;E-mail&quot;, and &quot;Gender&quot; fields are required. These fields cannot be empty and must be filled out in the HTML form.</p>
+    <p>З таблиці правил валідації (перевірки) на попередній сторінці ми бачимо, що &quot;Ім’я&quot;, &quot;Електронна адреса&quot; та &quot;Стать&quot; поля обов&#8217;язкові для заповнення. Ці поля не можуть бути порожніми та мають бути заповнені у формі HTML.</p>
     <table class="ws-table-all notranslate">
         <tr>
             <th style="width:25%">Поле</th>
@@ -1291,30 +1291,29 @@
         </tr>
         <tr>
             <td>Ім&#8217;я</td>
-            <td>Обов&#8217;язково. + Must only contain letters and whitespace</td>
+            <td>Обов&#8217;язково. + Має містити лише літери та пробіли</td>
         </tr>
         <tr>
             <td>E-mail</td>
-            <td>Обов&#8217;язково. + Must contain a valid email address (with @ and .)</td>
+            <td>Обов&#8217;язково. + Має містити дійсну електронну адресу (з @ та .)</td>
         </tr>
         <tr>
             <td>Вебсайт</td>
-            <td>Опціонально. If present, it must contain a valid URL</td>
+            <td>Опціонально. Якщо присутній, це повинно містити дійсний URL</td>
         </tr>
         <tr>
             <td>Коментар</td>
-            <td>Опціонально. Multi-line input field (textarea)</td>
+            <td>Опціонально. Багаторядкове поле введення (textarea)</td>
         </tr>
         <tr>
             <td>Стать</td>
-            <td>Обов&#8217;язково. Must select one</td>
+            <td>Обов&#8217;язково. Треба вибрати один варіант</td>
         </tr>
     </table>
-    <p>In the previous chapter, all input fields were optional. </p>
-    <p>In the following code we have added some new variables: $nameErr, $emailErr, $genderErr, and $websiteErr. These error variables will hold error messages for the required fields. We have also added an <code class="w3-codespan">if else</code> statement for each $_POST variable. This checks if the $_POST variable is empty (with the PHP <code class="w3-codespan">empty()</code> function). If it is empty, an error message is stored in the different error variables, and if it is not empty, it sends the user input data through the <code class="w3-codespan">test_input()</code> function:</p>
+    <p>У попередньому розділі всі поля введення були необов&#8217;язковими.</p>
+    <p>У наступному коді ми додали кілька нових змінних: $nameErr, $emailErr, $genderErr і $websiteErr. Ці змінні помилок міститимуть повідомлення про помилки для обов&#8217;язкових полів. Ми також додали інструкцію <code class="w3-codespan">if else</code> для кожної змінної $_POST. Це перевіряє, чи змінна $_POST порожня (за допомогою функції PHP <code class="w3-codespan">empty()</code>). Якщо вона порожня, повідомлення про помилку зберігається в різних змінних помилки, а якщо вона не порожня, вона надсилає введені користувачем дані через функцію <code class="w3-codespan">test_input()</code>:</p>
     <div class="w3-code w3-border notranslate htmlHigh"><div>
-            &lt;?php<br>// define variables and set to empty values<br>$nameErr = $emailErr = $genderErr = $websiteErr = &quot;&quot;;<br>$name = $email = $gender = $comment = $website = &quot;&quot;;<br><br>if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {<br>&nbsp; if (empty($_POST[&quot;name&quot;])) {<br>&nbsp;&nbsp;&nbsp; $nameErr = &quot;Name is required&quot;;<br>&nbsp; } else {<br>&nbsp;&nbsp;&nbsp; $name = test_input($_POST[&quot;name&quot;]);<br>&nbsp; }<br><br>&nbsp; if (empty($_POST[&quot;email&quot;])) {<br>&nbsp;&nbsp;&nbsp; $emailErr = &quot;Email is required&quot;;<br>&nbsp; } else {<br>&nbsp;&nbsp;&nbsp; $email = test_input($_POST[&quot;email&quot;]);<br>&nbsp; }<br><br>&nbsp; if (empty($_POST[&quot;website&quot;])) {<br>&nbsp;&nbsp;&nbsp; $website = &quot;&quot;;<br>&nbsp; } else {<br>&nbsp;&nbsp;&nbsp; $website = test_input($_POST[&quot;website&quot;]);<br>&nbsp; }<br><br>&nbsp; if (empty($_POST[&quot;comment&quot;])) {<br>&nbsp;&nbsp;&nbsp; $comment = &quot;&quot;;<br>&nbsp; } else {<br>&nbsp;&nbsp;&nbsp; $comment = test_input($_POST[&quot;comment&quot;]);<br>&nbsp; }<br><br>&nbsp; if (empty($_POST[&quot;gender&quot;])) {<br>&nbsp;&nbsp;&nbsp; $genderErr = &quot;Gender is required&quot;;<br>&nbsp; } else
-            {<br>&nbsp;&nbsp;&nbsp; $gender = test_input($_POST[&quot;gender&quot;]);<br>&nbsp; }<br>}<br>?&gt;
+            &lt;?php<br>// визначте змінні та встановіть порожні значення<br>$nameErr = $emailErr = $genderErr = $websiteErr = &quot;&quot;;<br>$name = $email = $gender = $comment = $website = &quot;&quot;;<br><br>if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {<br>&nbsp; if (empty($_POST[&quot;name&quot;])) {<br>&nbsp;&nbsp;&nbsp; $nameErr = &quot;Ім&#8217;я є обов&#8217;язковим&quot;;<br>&nbsp; } else {<br>&nbsp;&nbsp;&nbsp; $name = test_input($_POST[&quot;name&quot;]);<br>&nbsp; }<br><br>&nbsp; if (empty($_POST[&quot;email&quot;])) {<br>&nbsp;&nbsp;&nbsp; $emailErr = &quot;Email є обов&#8217;язковим&quot;;<br>&nbsp; } else {<br>&nbsp;&nbsp;&nbsp; $email = test_input($_POST[&quot;email&quot;]);<br>&nbsp; }<br><br>&nbsp; if (empty($_POST[&quot;website&quot;])) {<br>&nbsp;&nbsp;&nbsp; $website = &quot;&quot;;<br>&nbsp; } else {<br>&nbsp;&nbsp;&nbsp; $website = test_input($_POST[&quot;website&quot;]);<br>&nbsp; }<br><br>&nbsp; if (empty($_POST[&quot;comment&quot;])) {<br>&nbsp;&nbsp;&nbsp; $comment = &quot;&quot;;<br>&nbsp; } else {<br>&nbsp;&nbsp;&nbsp; $comment = test_input($_POST[&quot;comment&quot;]);<br>&nbsp; }<br><br>&nbsp; if (empty($_POST[&quot;gender&quot;])) {<br>&nbsp;&nbsp;&nbsp; $genderErr = &quot;Стать є обов&#8217;язковим&quot;;<br>&nbsp; } else {<br>&nbsp;&nbsp;&nbsp; $gender = test_input($_POST[&quot;gender&quot;]);<br>&nbsp; }<br>}<br>?&gt;
         </div>
     </div>
     <hr>
@@ -1323,7 +1322,7 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>PHP - Відобразити повідомлення про помилку</h2>
-    <p>Then in the HTML form, we add a little script after each required field, which generates the correct error message if needed (that is if the user tries to submit the form without filling out the required fields):</p>
+    <p>Потім у формі HTML ми додаємо невеликий скрипт після кожного обов&#8217;язкового поля, який за потреби генерує правильне повідомлення про помилку (тобто якщо користувач намагається надіслати форму, не заповнивши обов&#8217;язкові поля):</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
@@ -1331,11 +1330,11 @@
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_form_validation_required.html">Виконати приклад &raquo;</a>
     </div>
-    <p>The next step is to validate the input data, that is &quot;Does the Name field contain only letters and whitespace?&quot;, and &quot;Does the E-mail field contain a valid e-mail address syntax?&quot;, and if filled out, &quot;Does the Website field contain a valid URL?&quot;.</p>
+    <p>Наступним кроком є перевірка вхідних даних, тобто &quot;Чи поле Name містить лише літери та пробіл?&quot;, та &quot;Чи поле E-mail містить дійсний синтаксис e-mail адреси?&quot;, а також &quot;Чи містить поле Website дійсну URL адресу?&quot;.</p>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_form_validation_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_form_url_email_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_form_validation.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_form_url_email.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
