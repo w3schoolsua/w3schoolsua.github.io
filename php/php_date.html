@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Дата і час. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Дата і час. PHP функція Date(). Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP Дата і час. PHP функція Date(). Отримати дату. Автоматичний рік авторського права. Отримати час. Отримати часовий пояс. Створити дату за допомогою mktime(). Створити дату із рядка за допомогою strtotime(). Повний довідник PHP Дати. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1283,12 +1283,10 @@
     <p class="intro">PHP функція <code class="w3-codespan">date()</code> використовується, щоб форматувати дату та/або час.</p>
     <hr>
     <h2>PHP функція Date()</h2>
-    <p>The PHP <code class="w3-codespan">date()</code> function formats a timestamp to a more readable date and time.</p>
+    <p>PHP функція <code class="w3-codespan">date()</code> форматує мітку часу в більш зрозумілі дату й час.</p>
     <h3>Синтаксис</h3>
     <div class="w3-code w3-border notranslate">
-        <div>
-            date(<i>format</i>,<i>timestamp</i>)
-        </div>
+        <div>date(<i>format</i>,<i>timestamp</i>)</div>
     </div>
     <table class="ws-table-all notranslate">
         <tr>
@@ -1297,33 +1295,33 @@
         </tr>
         <tr>
             <td>format</td>
-            <td>Обов&#8217;язково. Specifies the format of the timestamp</td>
+            <td>Обов&#8217;язково. Визначає формат позначки часу</td>
         </tr>
         <tr>
             <td>timestamp</td>
-            <td>Не обов&#8217;язково. Specifies a timestamp. Default is the current date and time</td>
+            <td>Не обов&#8217;язково. Визначає мітку часу. За замовчуванням поточні дата й час</td>
         </tr>
     </table>
     <div class="w3-panel w3-note">
-        <p>A timestamp is a sequence of characters, denoting the date and/or time at which a certain event occurred.</p>
+        <p>Мітка часу — це послідовність символів, що позначає дату та/або час, коли сталася певна подія.</p>
     </div>
     <hr>
-    <h2>Get a Date</h2>
-    <p>The required <i>format</i> parameter of the date() function specifies how to format the date (or time).</p>
-    <p>Here are some characters that are commonly used for dates:</p>
+    <h2>Отримати дату</h2>
+    <p>Необхідний параметр <i>format</i> функції date() визначає спосіб форматування дати (або часу).</p>
+    <p>Ось деякі символи, які зазвичай використовуються для дат:</p>
     <ul>
-        <li>d - Represents the day of the month (01 to 31) </li>
-        <li>m - Represents a month (01 to 12)</li>
-        <li>Y - Represents a year (in four digits)</li>
-        <li>l (lowercase 'L') - Represents the day of the week</li>
+        <li>d – позначає день місяця (від 01 до 31) </li>
+        <li>m – позначає місяць (від 1 до 12)</li>
+        <li>Y – позначає рік (чотирма цифрами)</li>
+        <li>l (малий регістр 'L') – позначає день тижня</li>
     </ul>
-    <p>Other characters, like&quot;/&quot;, &quot;.&quot;, or &quot;-&quot; can also be inserted between the characters to add additional formatting.</p>
-    <p>The example below formats today's date in three different ways:</p>
+    <p>Інші символи, наприклад &quot;/&quot;, &quot;.&quot; або &quot;-&quot; також можна вставити між символами для додаткового форматування.</p>
+    <p>Наведений нижче приклад форматує сьогоднішню дату трьома різними способами:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>echo &quot;Today is &quot; . date(&quot;Y/m/d&quot;) . &quot;&lt;br&gt;&quot;;<br>echo &quot;Today is &quot; . date(&quot;Y.m.d&quot;) . &quot;&lt;br&gt;&quot;;<br>echo &quot;Today is &quot; . date(&quot;Y-m-d&quot;) . &quot;&lt;br&gt;&quot;;<br>
-            echo &quot;Today is &quot; . date(&quot;l&quot;);<br>?&gt;</div>
+            &lt;?php<br>echo &quot;Сьогодні &quot; . date(&quot;Y/m/d&quot;) . &quot;&lt;br&gt;&quot;;<br>echo &quot;Сьогодні &quot; . date(&quot;Y.m.d&quot;) . &quot;&lt;br&gt;&quot;;<br>echo &quot;Сьогодні &quot; . date(&quot;Y-m-d&quot;) . &quot;&lt;br&gt;&quot;;<br>echo &quot;Сьогодні &quot; . date(&quot;l&quot;);<br>?&gt;
+        </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_date1.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
@@ -1331,8 +1329,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>PHP Tip - Automatic Copyright Year</h2>
-    <p>Use the <code class="w3-codespan">date()</code> function to automatically update the copyright year on your website:</p>
+</div>    <h2>PHP Порада – автоматичний рік авторського права</h2>
+    <p>Використовуйте функцію <code class="w3-codespan">date()</code>, щоб автоматично оновлювати рік авторського права на вашому вебсайті:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
@@ -1341,50 +1339,50 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_date_copyright.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Get a Time</h2>
-    <p>Here are some characters that are commonly used for times:</p>
+    <h2>Отримати час</h2>
+    <p>Ось кілька символів, які зазвичай використовуються для позначення часу:</p>
     <ul>
-        <li>H - 24-hour format of an hour (00 to 23)</li>
-        <li>h - 12-hour format of an hour with leading zeros (01 to 12) </li>
-        <li>i - Minutes with leading zeros (00 to 59)</li>
-        <li>s - Seconds with leading zeros (00 to 59)</li>
-        <li>a - Lowercase Ante meridiem and Post meridiem (am or pm)</li>
+        <li>H – 24-годинний формат години (від 00 до 23)</li>
+        <li>h – 12-годинний формат години з нулями на початку (від 01 до 12) </li>
+        <li>i – хвилини з нулями на початку (від 00 до 59)</li>
+        <li>s – секунди з нулями на початку (від 00 до 59)</li>
+        <li>a – нижній регістр Ante meridiem і Post meridiem (Am або Pm - до полудня або після полудня)</li>
     </ul>
-    <p>The example below outputs the current time in the specified format:</p>
+    <p>Наведений нижче приклад виводить поточний час у вказаному форматі:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>echo &quot;The time is &quot; . date(&quot;h:i:sa&quot;);<br>?&gt;
+            &lt;?php<br>echo &quot;Час є &quot; . date(&quot;h:i:sa&quot;);<br>?&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_date2.html">Спробуйте самі &raquo;</a>
     </div>
     <div class="w3-panel w3-note"><p>
-        <p>Note that the PHP date() function will return the current date/time of the server!</p>
+        <p>Зауважте, що PHP функція date() поверне поточну дату/час сервера!</p>
     </div>
     <hr>
-    <h2>Get Your Time Zone</h2>
-    <p>If the time you got back from the code is not correct, it's probably because your server is in another country or set up for a different timezone.</p>
-    <p>So, if you need the time to be correct according to a specific location, you can set the timezone you want to use.</p>
-    <p>The example below sets the timezone to &quot;America/New_York&quot;, then outputs the current time in the specified format:</p>
+    <h2>Отримати часовий пояс</h2>
+    <p>Якщо час, який ви отримали від коду, неправильний, можливо, ваш сервер знаходиться в іншій країні або налаштовано на інший часовий пояс.</p>
+    <p>Отже, якщо вам потрібен правильний час відповідно до певного місця, ви можете встановити часовий пояс, який хочете використовувати.</p>
+    <p>У наведеному нижче прикладі встановлюється часовий пояс на &quot;America/New_York&quot;, а потім виводиться поточний час у вказаному форматі:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>date_default_timezone_set(&quot;America/New_York&quot;);<br>echo &quot;The time is &quot; . date(&quot;h:i:sa&quot;);<br>?&gt;</div>
+            &lt;?php<br>date_default_timezone_set(&quot;America/New_York&quot;);<br>echo &quot;Час є &quot; . date(&quot;h:i:sa&quot;);<br>?&gt;</div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_date3.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
     <h2>Створити дату за допомогою mktime()</h2>
-    <p>The optional <i>timestamp</i> parameter in the date() function specifies a timestamp. If omitted, the current date and time will be used (as in the examples above).</p>
-    <p>The PHP <code class="w3-codespan">mktime()</code> function returns the Unix timestamp for a date. The Unix timestamp contains the number of seconds between the Unix Epoch (January, 1 1970 00:00:00 GMT) and the time specified.</p>
+    <p>Додатковий (необов&#8217;язковий) параметр <i>timestamp</i> у функції date() визначає позначку часу. Якщо пропущено, використовуватимуться поточні дата й час (як у наведених вище прикладах).</p>
+    <p>PHP функція <code class="w3-codespan">mktime()</code> повертає мітку часу Unix для дати. Позначка часу Unix містить кількість секунд між епохою Unix (1 січня 1970 р. 00:00:00 GMT) і вказаним часом.</p>
     <h3>Синтаксис</h3>
     <div class="w3-code w3-border notranslate">
-        <div>mktime(<em>hour, minute, second, month, day, year</em>)</div>
+        <div>mktime(<em>hour, minute, second, month, day, year</em>) (година, хвилина, секунда, місяць, день, рік)</div>
     </div>
-    <p>The example below creates a date and time with the <code class="w3-codespan">date()</code> function from a number of parameters in the <code class="w3-codespan">mktime()</code> function:</p>
+    <p>У наведеному нижче прикладі створюється дата й час за допомогою функції <code class="w3-codespan">date()</code> із кількох параметрів у функції <code class="w3-codespan">mktime()</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$d=mktime(11, 14, 54, 8, 12, 2014);<br>echo &quot;Created date is &quot; . date(&quot;Y-m-d h:i:sa&quot;, $d);<br>?&gt;
+            &lt;?php<br>$d=mktime(11, 14, 54, 8, 12, 2014);<br>echo &quot;Дата створення є &quot; . date(&quot;Y-m-d h:i:sa&quot;, $d);<br>?&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_date4.html">Спробуйте самі &raquo;</a>
     </div>
@@ -1394,20 +1392,20 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>Створити дату із рядка за допомогою strtotime()</h2>
-    <p>The PHP <code class="w3-codespan">strtotime()</code> function is used to convert a human-readable date string into a Unix timestamp (the number of seconds since January, 1 1970 00:00:00 GMT).</p>
+    <p>PHP функція <code class="w3-codespan">strtotime()</code> використовується для перетворення зрозумілого людині рядка дати на мітку часу Unix (кількість секунд після January, 1 1970 00:00:00 GMT).</p>
     <h3>Синтаксис</h3>
     <div class="w3-code w3-border notranslate">
-        <div>strtotime(<em>time, now</em>)</div>
+        <div>strtotime(<em>time, now</em>) (час, тепер)</div>
     </div>
-    <p>The example below creates a date and time from the <code class="w3-codespan">strtotime()</code> function:</p>
+    <p>У прикладі нижче створюється дата й час із функції <code class="w3-codespan">strtotime()</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$d=strtotime(&quot;10:30pm April 15 2014&quot;);<br>echo &quot;Created date is &quot; . date(&quot;Y-m-d h:i:sa&quot;, $d);<br>?&gt;
+            &lt;?php<br>$d=strtotime(&quot;10:30pm April 15 2024&quot;);<br>echo &quot;Дата створення є &quot; . date(&quot;Y-m-d h:i:sa&quot;, $d);<br>?&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_date5.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>PHP is quite clever about converting a string to a date, so you can put in various values:</p>
+    <p>PHP досить розумно перетворює рядок на дату, тому ви можете вводити різні значення:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
@@ -1415,10 +1413,10 @@
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_date6.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>However, <code class="w3-codespan">strtotime()</code> is not perfect, so remember to check the strings you put in there.</p>
+    <p>Однак, <code class="w3-codespan">strtotime()</code> не є досконалим, тому не забудьте перевірити рядки, які ви туди додали.</p>
     <hr>
     <h2>Більше прикладів дати</h2>
-    <p>The example below outputs the dates for the next six Saturdays:</p>
+    <p>Наведений нижче приклад виводить дати наступних шести субот:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
@@ -1426,25 +1424,25 @@
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_date7.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>The example below outputs the number of days until 4th of July:</p>
+    <p>У наведеному нижче прикладі виводиться кількість днів до 4 липня:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$d1=strtotime(&quot;July 04&quot;);<br>$d2=ceil(($d1-time())/60/60/24);<br>echo &quot;There are &quot; . $d2 .&quot; days until 4th of July.&quot;;<br>?&gt;
+            &lt;?php<br>$d1=strtotime(&quot;July 04&quot;);<br>$d2=ceil(($d1-time())/60/60/24);<br>echo &quot;Є &quot; . $d2 .&quot; днів до 4 липня.&quot;;<br>?&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_date8.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
     <h2>Повний довідник PHP Дати</h2>
-    <p>For a complete reference of all date functions, go to our complete <a href="php_ref_date.html">PHP Довідник дати</a>.</p>
-    <p>The reference contains a brief description, and examples of use, for each function!</p>
+    <p>Щоб отримати повну довідку про всі функції дат, перейдіть до нашого повного <a href="php_ref_date.html">PHP Довідника дати</a>.</p>
+    <p>Довідник містить короткий опис і приклади використання для кожної функції!</p>
     <hr>
     <h2>PHP Вправи</h2>
     <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/php/exercise.asp?filename=exercise_dates1" method="post" target="_blank">
         <h2 class="shadow-black-1" title="Вправи працюють лише онлайн!">Перевірте себе за допомогою вправ</h2>
         <div class="exercisewindow">
             <h2>Вправа:</h2>
-            <p>Use the correct date function to output the weekday name of today (monday, tuesday etc.).</p>
+            <p>Використовуйте правильну функцію дати, щоб вивести назву дня тижня сьогодні (понеділок, вівторок тощо).</p>
             <div class="exerciseprecontainer">
 <pre>
 echo <input name="ex1" maxlength="9" style="width: 96px;">;
