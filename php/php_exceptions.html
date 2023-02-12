@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Винятки. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Винятки. Що таке винятки? Вправи. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP Винятки. Що таке винятки? Створення винятку. Синтаксис. Інструкція try...catch. Інструкція try...catch...finally. Об&#8217;єкт Exception (Виняток). Повний довідник про PHP винятки. Вправи. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1281,15 +1281,15 @@
     </div>
     <hr>
     <h2>Що таке винятки?</h2>
-    <p>An exception is an object that describes an error or unexpected behaviour of a PHP script.</p>
-    <p>Exceptions are thrown by many PHP functions and classes.</p>
-    <p>User defined functions and classes can also throw exceptions.</p>
-    <p>Exceptions are a good way to stop a function when it comes across data that it cannot use.</p>
+    <p>Винятком є об&#8217;єкт, який описує помилку або неочікувану поведінку PHP скрипту.</p>
+    <p>Багато функцій і класів PHP створюють винятки.</p>
+    <p>Визначені користувачем функції та класи також можуть створювати винятки.</p>
+    <p>Винятки — це хороший спосіб зупинити функцію, коли вона натрапляє на дані, які не може використовувати.</p>
     <hr>
-    <h2>Throwing an Exception</h2>
-    <p>The <code class="w3-codespan">throw</code> statement allows a user defined function or method to throw an exception. When an exception is thrown, the code following it will not be executed.</p>
-    <p>If an exception is not caught, a fatal error will occur with an &quot;Uncaught Exception&quot; message.</p>
-    <p>Lets try to throw an exception without catching it:</p>
+    <h2>Створення винятку</h2>
+    <p>Інструкція <code class="w3-codespan">throw</code> дозволяє визначеній користувачем функції чи методу створювати виняток. Коли виникає виняток, наступний за ним код не буде виконано.</p>
+    <p>Якщо виняток не буде перехоплено, станеться фатальна помилка з повідомленням &quot;Uncaught Exception&quot; (&quot;Неперехоплене виключення&quot;).</p>
+    <p>Давайте спробуємо створити виняток, не перехоплюючи його:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code htmlHigh notranslate w3-border-red">
@@ -1297,7 +1297,7 @@
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_exceptions_throw.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>The result will look something like this:</p>
+    <p>Результат буде виглядати приблизно так:</p>
     <div class="w3-code w3-border notranslate">
         <div>
             <b>Fatal error</b>: <strong>Uncaught Exception</strong>: Division by zero in C:\webfolder\test.html:4<br>
@@ -1307,38 +1307,38 @@
     </div>
     <hr>
     <h2>Інструкція try...catch</h2>
-    <p>To avoid the error from the example above, we can use the <code class="w3-codespan">try...catch</code> statement to catch exceptions and continue the process.</p>
+    <p>Щоб уникнути помилки з наведеного вище прикладу, ми можемо використати інструкцію <code class="w3-codespan">try...catch</code> для перехоплення винятків і продовження процесу.</p>
     <h3>Синтаксис</h3>
     <div class="w3-code w3-border notranslate jsHigh">
         <div>
-            try {<br>&nbsp; code that can throw exceptions<br>} catch(Exception $e) {<br>&nbsp; code that runs when an exception is caught<br>}
+            try {<br>&nbsp; код, який може створювати винятки<br>} catch(Exception $e) {<br>&nbsp; код, який запускається, коли виявляється виняток<br>}
         </div>
     </div>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Show a message when an exception is thrown:</p>
+        <p>Показувати повідомлення, коли виникає виняток:</p>
         <div class="w3-code htmlHigh notranslate">
             &lt;?php<br>function divide($dividend, $divisor) {<br>&nbsp; if($divisor == 0) {<br>&nbsp;&nbsp;&nbsp; throw new Exception(&quot;Division by zero&quot;);<br>&nbsp; }<br>&nbsp; return $dividend / $divisor;<br>}<br><br>try {<br>&nbsp; echo divide(5, 0);<br>} catch(Exception $e) {<br>&nbsp; echo &quot;Unable to divide.&quot;;<br>}<br>?&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_exceptions_try_catch.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>The catch block indicates what type of exception should be caught and the name of the variable which can be used to access the exception. In the example above, the type of exception is <code class="w3-codespan">Exception</code> and the variable name is <code class="w3-codespan">$e</code>.</p>
+    <p>Блок catch вказує, який тип винятку слід перехопити, і ім&#8217;я змінної, яка може бути використана для доступу до винятку. У наведеному вище прикладі тип винятку – <code class="w3-codespan">Exception</code>, а ім’я змінної – <code class="w3-codespan">$e</code>.</p>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>Інструкція try...catch...finally</h2>
-    <p>The <code class="w3-codespan">try...catch...finally</code> statement can be used to catch exceptions. Code in the <code class="w3-codespan">finally</code> block will always run regardless of whether an exception was caught. If <code class="w3-codespan">finally</code> is present, the <code class="w3-codespan">catch</code> block is optional.</p>
+    <p>Інструкцію <code class="w3-codespan">try...catch...finally</code> можна використовувати для перехоплення винятків. Код у блоці <code class="w3-codespan">finally</code> завжди виконуватиметься незалежно від того, чи була перехоплена виняткова ситуація. Якщо присутній <code class="w3-codespan">finally</code>, блок <code class="w3-codespan">catch</code> необов&#8217;язковий.</p>
     <h3>Синтаксис</h3>
     <div class="w3-code w3-border notranslate jsHigh">
         <div>
-            try {<br>&nbsp; code that can throw exceptions<br>} catch(Exception $e) {<br>&nbsp; code that runs when an exception is caught<br>} finally {<br>&nbsp; code that always runs regardless of whether an exception was caught<br>}
+            try {<br>&nbsp; код, який може створювати винятки<br>} catch(Exception $e) {<br>&nbsp; код, який запускається, коли виявляється виняток<br>} finally {<br>&nbsp; код, який завжди виконується незалежно від того, чи було перехоплено виняток<br>}
         </div>
     </div>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Show a message when an exception is thrown and then indicate that the process has ended:</p>
+        <p>Показувати повідомлення, коли виникає виняток, а потім вказувати, що процес завершено:</p>
         <div class="w3-code htmlHigh notranslate">
             &lt;?php<br>function divide($dividend, $divisor) {<br>&nbsp; if($divisor == 0) {<br>&nbsp;&nbsp;&nbsp; throw new Exception(&quot;Division by zero&quot;);<br>&nbsp; }<br>&nbsp; return $dividend / $divisor;<br>}<br><br>try {<br>&nbsp; echo divide(5, 0);<br>} catch(Exception $e) {<br>&nbsp; echo "Unable to divide. ";<br>} finally {<br>&nbsp; echo "Process complete.";<br>}<br>?&gt;
         </div>
@@ -1346,7 +1346,7 @@
     </div>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Output a string even if an exception was not caught:</p>
+        <p>Вивести рядок, навіть якщо виняток не було перехоплено:</p>
         <div class="w3-code htmlHigh notranslate">
             &lt;?php<br>function divide($dividend, $divisor) {<br>&nbsp; if($divisor == 0) {<br>&nbsp;&nbsp;&nbsp; throw new Exception(&quot;Division by zero&quot;);<br>&nbsp; }<br>&nbsp; return $dividend / $divisor;<br>}<br><br>try {<br>&nbsp; echo divide(5, 0);<br>} finally {<br>&nbsp; echo
             "Process complete.";<br>}<br>?&gt;
@@ -1355,12 +1355,12 @@
     </div>
     <hr>
     <h2>Об&#8217;єкт Exception (Виняток)</h2>
-    <p>The Exception Object contains information about the error or unexpected behaviour that the function encountered.</p>
-    <h3>Syntax</h3>
+    <p>Об&#8217;єкт Exception містить інформацію про помилку або неочікувану поведінку, з якою зіткнулася функція.</p>
+    <h3>Синтаксис</h3>
     <div class="w3-code w3-border notranslate">
         <div>new Exception(message, code, previous)</div>
     </div>
-    <h3>Parameter Values</h3>
+    <h3>Значення параметрів</h3>
     <table class="ws-table-all notranslate">
         <tr>
             <th style="width:20%">Параметр</th>
@@ -1368,19 +1368,19 @@
         </tr>
         <tr>
             <td>message</td>
-            <td>Не обов&#8217;язково. A string describing why the exception was thrown</td>
+            <td>Не обов&#8217;язково. Рядок, що описує причину виключення</td>
         </tr>
         <tr>
             <td>code</td>
-            <td>Не обов&#8217;язково. An integer that can be used used to easily distinguish this exception from others of the same type</td>
+            <td>Не обов&#8217;язково. Ціле число, за допомогою якого можна легко відрізнити цей виняток від інших того самого типу</td>
         </tr>
         <tr>
             <td>previous</td>
-            <td>Не обов&#8217;язково. If this exception was thrown in a catch block of another exception, it is recommended to pass that exception into this parameter</td>
+            <td>Не обов&#8217;язково. Якщо цей виняток було створено в блоці catch іншого винятку, рекомендується передати цей виняток у цей параметр</td>
         </tr>
     </table>
     <h3>Методи</h3>
-    <p>When catching an exception, the following table shows some of the methods that can be used to get information about the exception:</p>
+    <p>Під час перехоплення виняткової ситуації в наведеній нижче таблиці показано деякі методи, які можна використовувати для отримання інформації про виняткову ситуацію:</p>
     <table class="ws-table-all notranslate">
         <tr>
             <th style="width:20%">Метод</th>
@@ -1388,36 +1388,36 @@
         </tr>
         <tr>
             <td>getMessage()</td>
-            <td>Returns a string describing why the exception was thrown</td>
+            <td>Повертає рядок, що описує причину виключення</td>
         </tr>
         <tr>
             <td>getPrevious()</td>
-            <td>If this exception was triggered by another one, this method returns the previous exception. If not, then it returns <em>null</em></td>
+            <td>Якщо цей виняток був викликаний іншим, цей метод повертає попередній виняток. Якщо ні, то повертається <em>null</em></td>
         </tr>
         <tr>
             <td>getCode()</td>
-            <td>Returns the exception code</td>
+            <td>Повертає код винятку</td>
         </tr>
         <tr>
             <td>getFile()</td>
-            <td>Returns the full path of the file in which the exception was thrown</td>
+            <td>Повертає повний шлях до файлу, у якому було створено виняток</td>
         </tr>
         <tr>
             <td>getLine()</td>
-            <td>Returns the line number of the line of code which threw the exception</td>
+            <td>Повертає номер рядка коду, який викликав виняток</td>
         </tr>
     </table>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Output information about an exception that was thrown:</p>
+        <p>Вивести інформацію про виняткову ситуацію, яка була створена:</p>
         <div class="w3-code htmlHigh notranslate">
             &lt;?php<br>function divide($dividend, $divisor) {<br>&nbsp; if($divisor == 0) {<br>&nbsp;&nbsp;&nbsp; throw new Exception(&quot;Division by zero&quot;, 1);<br>&nbsp; }<br>&nbsp; return $dividend / $divisor;<br>}<br><br>try {<br>&nbsp; echo divide(5, 0);<br>} catch(Exception $ex) {<br>&nbsp; $code = $ex-&gt;getCode();<br>&nbsp; $message = $ex-&gt;getMessage();<br>&nbsp; $file = $ex-&gt;getFile();<br>&nbsp; $line = $ex-&gt;getLine();<br>&nbsp; echo &quot;Exception thrown in $file on line $line: [Code $code]<br>&nbsp; $message&quot;;<br>}<br>?&gt;</div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_exceptions_obj_info.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Complete Exception Reference</h2>
-    <p>For a complete reference, go to our <a href="php_ref_exception.html">Complete PHP Exception Reference</a>.</p>
-    <p>The reference contains descriptions and examples of all Exception methods.</p>
+    <h2>Повний довідник про PHP винятки</h2>
+    <p>Щоб отримати повну довідку, перейдіть до <a href="php_ref_exception.html">Повний довідник про PHP винятки</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
+    <p>Довідник містить описи та приклади всіх методів винятків.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="php_json.html">&#10094; Prev</a>
