@@ -1281,22 +1281,22 @@
     </div>
     <hr>
     <h2>Що таке JSON?</h2>
-    <p>JSON stands for JavaScript Object Notation, and is a syntax for storing and exchanging data.</p>
-    <p>Since the JSON format is a text-based format, it can easily be sent to and from a server, and used as a data format by any programming language.</p>
+    <p>JSON розшифровується як JavaScript Object Notation (нотація об&#8217;єктів JavaScript) і є синтаксисом для зберігання та обміну даними.</p>
+    <p>Оскільки формат JSON є текстовим форматом, його можна легко надсилати на сервер і з нього, а також використовувати як формат даних будь-якою мовою програмування.</p>
     <hr>
     <h2>PHP та JSON</h2>
-    <p>PHP has some built-in functions to handle JSON.</p>
-    <p>First, we will look at the following two functions:</p>
+    <p>PHP має деякі вбудовані функції для обробки JSON.</p>
+    <p>Спочатку ми розглянемо наступні дві функції:</p>
     <ul>
         <li><span class="w3-codespan">json_encode()</span></li>
         <li><span class="w3-codespan">json_decode()</span></li>
     </ul>
     <hr>
     <h2>PHP - json_encode()</h2>
-    <p>The <span class="w3-codespan">json_encode()</span> function is used to encode a value to JSON format.</p>
+    <p>Функція <span class="w3-codespan">json_encode()</span> використовується для кодування значення у формат JSON.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>This example shows how to encode an associative array into a JSON object:</p>
+        <p>У цьому прикладі показано, як закодувати асоціативний масив в об&#8217;єкт JSON:</p>
         <div class="w3-code notranslate htmlHigh">
             &lt;?php<br>$age = array(&quot;Peter&quot;=&gt;35, &quot;Ben&quot;=&gt;37, &quot;Joe&quot;=&gt;43);<br><br>echo json_encode($age);<br>?&gt;
         </div>
@@ -1304,7 +1304,7 @@
     </div>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>This example shows how to encode an indexed array into a JSON array:</p>
+        <p>У цьому прикладі показано, як закодувати індексований масив у масив JSON:</p>
         <div class="w3-code notranslate htmlHigh">
             &lt;?php<br>$cars = array(&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Toyota&quot;);<br><br>echo json_encode($cars);<br>?&gt;
         </div>
@@ -1316,30 +1316,30 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>PHP - json_decode()</h2>
-    <p>The <span class="w3-codespan">json_decode()</span> function is used to decode a JSON object into a PHP object or an associative array.</p>
+    <p>Функція <span class="w3-codespan">json_decode()</span> використовується для декодування об&#8217;єкта JSON у об&#8217;єкт PHP або асоціативний масив.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>This example decodes JSON data into a PHP object:</p>
+        <p>У цьому прикладі дані JSON декодуються в об&#8217;єкт PHP:</p>
         <div class="w3-code notranslate htmlHigh">
             &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>var_dump(json_decode($jsonobj));<br>?&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_decode1.html">Виконати приклад &raquo;</a>
     </div>
-    <p>The <span class="w3-codespan">json_decode()</span> function returns an object by default. The <span class="w3-codespan">json_decode()</span> function has a second parameter, and when set to true, JSON objects are decoded into associative arrays.</p>
+    <p>Функція <span class="w3-codespan">json_decode()</span> за умовчанням повертає об&#8217;єкт. Функція <span class="w3-codespan">json_decode()</span> має другий параметр, і коли встановлено значення true, об&#8217;єкти JSON декодуються в асоціативні масиви.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>This example decodes JSON data into a PHP associative array:</p>
+        <p>У цьому прикладі дані JSON декодуються в асоціативний масив PHP:</p>
         <div class="w3-code notranslate htmlHigh">
             &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>var_dump(json_decode($jsonobj, true));<br>?&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_decode2.html">Виконати приклад &raquo;</a>
     </div>
     <hr>
-    <h2>PHP - Accessing the Decoded Values</h2>
-    <p>Here are two examples of how to access the decoded values from an object and from an associative array:</p>
+    <h2>PHP - Доступ до декодованих значень</h2>
+    <p>Ось два приклади того, як отримати доступ до декодованих значень з об&#8217;єкта та з асоціативного масиву:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>This example shows how to access the values from a PHP object:</p>
+        <p>У цьому прикладі показано, як отримати доступ до значень з об&#8217;єкта PHP:</p>
         <div class="w3-code notranslate htmlHigh">
             &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>$obj = json_decode($jsonobj);<br><br>echo $obj-&gt;Peter;<br>echo $obj-&gt;Ben;<br>echo $obj-&gt;Joe;<br>?&gt;
         </div>
@@ -1347,18 +1347,18 @@
     </div>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>This example shows how to access the values from a PHP associative array:</p>
+        <p>У цьому прикладі показано, як отримати доступ до значень з асоціативного масиву PHP:</p>
         <div class="w3-code notranslate htmlHigh">
             &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>$arr = json_decode($jsonobj, true);<br><br>echo $arr[&quot;Peter&quot;];<br>echo $arr[&quot;Ben&quot;];<br>echo $arr[&quot;Joe&quot;];<br>?&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_json_decode4.html">Виконати приклад &raquo;</a>
     </div>
     <hr>
-    <h2>PHP - Looping Through the Values</h2>
-    <p>You can also loop through the values with a <span class="w3-codespan">foreach()</span> loop:</p>
+    <h2>PHP - Перегляд значень у циклі</h2>
+    <p>Ви також можете перебирати значення за допомогою циклу <span class="w3-codespan">foreach()</span>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>This example shows how to loop through the values of a PHP object:</p>
+        <p>У цьому прикладі показано, як перебирати значення об&#8217;єкта PHP:</p>
         <div class="w3-code notranslate htmlHigh">
             &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>$obj = json_decode($jsonobj);<br><br>foreach($obj
             as $key =&gt; $value) {<br>&nbsp; echo $key . &quot; =&gt; &quot; . $value . &quot;&lt;br&gt;&quot;;<br>}<br>?&gt;
@@ -1367,7 +1367,7 @@
     </div>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>This example shows how to loop through the values of a PHP associative array:</p>
+        <p>У цьому прикладі показано, як перебирати значення асоціативного масиву PHP:</p>
         <div class="w3-code notranslate htmlHigh">
             &lt;?php<br>$jsonobj = '{&quot;Peter&quot;:35,&quot;Ben&quot;:37,&quot;Joe&quot;:43}';<br><br>$arr = json_decode($jsonobj, true);<br><br>foreach($arr as $key =&gt; $value) {<br>&nbsp; echo $key . &quot; =&gt; &quot; . $value . &quot;&lt;br&gt;&quot;;<br>}<br>?&gt;
         </div>
