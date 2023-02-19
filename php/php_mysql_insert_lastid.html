@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Вставити дані MySQL. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Вставити дані MySQL. Використання MySQLi та PDO. Інструкція INSERT INTO використовується для додавання нових записів в MySQL таблицю. Приклади. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Отримати останній вставлений ID. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='PHP Отримати останній вставлений ID. Як отримати ID останнього вставленого запису. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1271,37 +1271,28 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index.html'><img src='../svg/php_icon1.svg' alt='PHP. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='PHP для початківців. W3Schools українською' style='width: 120px'></a><p class='w3-right'>
-    <a href="php_mysql_insert_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="php_mysql_insert_lastid_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>PHP <span class="color_h1">MySQL Вставити дані</span></h1>
+    <h1>PHP <span class="color_h1">MySQL Отримати останній вставлений ID</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_mysql_create_table.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_mysql_insert_lastid.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_mysql_insert.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_mysql_insert_multiple.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Вставити дані в MySQL за допомогою MySQLi та PDO</h2>
-    <p>Після створення бази даних і таблиці ми можемо почати додавати в них дані.</p>
-    <p>Ось деякі правила синтаксису, яких слід дотримуватися:</p>
-    <ul>
-        <li>SQL-запит має бути взято в лапки PHP</li>
-        <li>Рядкові значення в запиті SQL мають бути взяті в лапки</li>
-        <li>Числові значення не можна брати в лапки</li>
-        <li>Слово NULL не можна брати в лапки</li>
-    </ul>
-    <p>Інструкція INSERT INTO використовується для додавання нових записів до таблиці MySQL:</p>
-    <div class="w3-code w3-border notranslate">INSERT INTO table_name (column1, column2, column3,...)<br>VALUES (value1, value2, value3,...)</div>
-    <p>Щоб дізнатися більше про SQL, відвідайте <a href="../sql/index.html">Підручник SQL</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
-    <p>У попередньому розділі ми створили порожню таблицю під назвою &quot;MyGuests&quot; з п’ятьма стовпцями: &quot;id&quot;, &quot;firstname&quot;, &quot;lastname&quot;, &quot;email&quot; та &quot;reg_date&quot;. Тепер давайте заповнимо таблицю даними.</p>
-    <div class="w3-panel w3-note">
-        <p><b>Примітка:</b> якщо стовпець AUTO_INCREMENT (наприклад, стовпець &quot;id&quot;) або TIMESTAMP із оновленням за замовчуванням current_timesamp (як стовпець &quot;reg_date&quot;), його не потрібно вказувати в запиті SQL; MySQL автоматично додасть значення.</p>
-    </div>
-    <p>Наведені нижче приклади додають новий запис до таблиці &quot;MyGuests&quot;:</p>
+    <h2>Отримати ID останнього вставленого запису</h2>
+    <p>If we perform an INSERT or UPDATE on a table with an AUTO_INCREMENT field, we can get the ID of the last inserted/updated record immediately.</p>
+    <p>In the table &quot;MyGuests&quot;, the &quot;id&quot; column is an AUTO_INCREMENT field:</p>
     <div class="w3-example">
-        <h3>Приклад (MySQLi Об'єктно-орієнтований)</h3>
+        <div class="w3-code notranslate">
+            CREATE TABLE MyGuests (<br>id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,<br>firstname VARCHAR(30) NOT NULL,<br>lastname VARCHAR(30) NOT NULL,<br>email VARCHAR(50),<br>reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP<br>)
+        </div>
+    </div>
+    <p>The following examples are equal to the examples from the previous page (<a href="php_mysql_insert.html">PHP Insert Data Into MySQL</a>), except that we have added one single line of code to retrieve the ID of the last inserted record. We also echo the last inserted ID:</p>
+    <div class="w3-example">
+        <h3>Приклад (MySQLi Об&#8217;єктно-орієнтований)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>
-            if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br>}<br><br>$sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>VALUES ('John', 'Doe', 'john@example.com')&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp; echo &quot;Новий запис успішно створено&quot;;<br>} else {<br>&nbsp; echo &quot;Error: &quot; . $sql . &quot;&lt;br&gt;&quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp; die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br>}<br><br>$sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>VALUES ('John', 'Doe', 'john@example.com')&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp; $last_id = $conn-&gt;insert_id;<br>&nbsp; echo &quot;Новий запис успішно створено. Останній вставлений ID: &quot; . $last_id;<br>} else {<br>&nbsp; echo &quot;Error: &quot; . $sql . &quot;&lt;br&gt;&quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
         </div>
     </div>
     <hr>
@@ -1312,19 +1303,20 @@
 </div>    <div class="w3-example">
         <h3>Приклад (MySQLi Procedural)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Connection failed: &quot; . mysqli_connect_error());<br>}<br><br>$sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>VALUES ('John', 'Doe', 'john@example.com')&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Новий запис успішно створено&quot;;<br>} else {<br>&nbsp; echo &quot;Error: &quot; . $sql . &quot;&lt;br&gt;&quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>
+            // Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Connection failed: &quot; . mysqli_connect_error());<br>}<br><br>$sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>VALUES ('John', 'Doe', 'john@example.com')&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp;&nbsp;$last_id = mysqli_insert_id($conn);<br>&nbsp;&nbsp;echo &quot;Новий запис успішно створено. Останній вставлений ID: &quot; . $last_id;<br>} else {<br>&nbsp; echo &quot;Error: &quot; . $sql . &quot;&lt;br&gt;&quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
         </div>
     </div>
     <div class="w3-example">
         <h3>Приклад (PDO)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp; // встановити режим помилки PDO у виняток<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br>&nbsp; $sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>&nbsp; VALUES ('John', 'Doe', 'john@example.com')&quot;;<br>&nbsp; // використовуйте exec(), оскільки результати не повертаються<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp; echo &quot;Новий запис успішно створено&quot;;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp;&nbsp;// set the PDO error mode to exception<br>&nbsp;&nbsp;$conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br>&nbsp; $sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>&nbsp; VALUES ('John', 'Doe', 'john@example.com')&quot;;<br>&nbsp; // use exec() because no results are returned<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp;&nbsp;$last_id = $conn-&gt;lastInsertId();<br>&nbsp;&nbsp;echo &quot;Новий запис успішно створено. Останній вставлений ID: &quot; . $last_id;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
         </div>
     </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_mysql_create_table.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_mysql_insert_lastid.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_mysql_insert.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_mysql_insert_multiple.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
