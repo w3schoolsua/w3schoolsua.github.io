@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Простори імен. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Простори імен. Оголошення простору імен. Синтаксис. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP Простори імен — це кваліфікатори, які вирішують дві різні проблеми. Оголошення простору імен. Синтаксис. Використання просторів імен. Псевдонім namespace / простору імен. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -381,7 +381,7 @@
             <a target='_top' href='php_oop_static_methods.html'>PHP Статичні методи</a>
             <a target='_top' href='php_oop_static_properties.html'>PHP Статичні властивості</a>
             <a target='_top' href='php_namespaces.html'>PHP Простори імен</a>
-            <a target='_top' href='php_iterables.html'>PHP Ітерабелі</a>
+            <a target='_top' href='php_iterables.html'>PHP Ітерація</a>
             <br>
             <h2 class='left'><span class='left_h2'>MySQL</span> База даних</h2>
             <a target='_top' href='php_mysql_intro.html'>MySQL База даних</a>
@@ -1274,50 +1274,50 @@
     <a href="php_namespaces_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>PHP <span class="color_h1">Простори імен</span></h1>
+    <h1>PHP <span class="color_h1">Простори імен / namespace</span></h1>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="php_oop_static_properties.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="php_iterables.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>PHP Простори імен</h2>
-    <p>Namespaces are qualifiers that solve two different problems:</p>
+    <h2>PHP Простори імен (namespace)</h2>
+    <p><strong>Простори імен</strong> — це кваліфікатори, які вирішують дві різні проблеми:</p>
     <ol>
-        <li>They allow for better organization by grouping classes that work together to perform a task</li>
-        <li>They allow the same name to be used for more than one class</li>
+        <li>Вони забезпечують кращу організацію, групуючи класи, які працюють разом для виконання завдання</li>
+        <li>Вони дозволяють використовувати одне ім&#8217;я для кількох класів</li>
     </ol>
-    <p>For example, you may have a set of classes which describe an HTML table, such as Table, Row and Cell while also having another set of classes to describe furniture, such as Table, Chair and Bed. Namespaces can be used to organize the classes into two different groups while also preventing the two classes Table and Table from being mixed up.</p>
+    <p>Наприклад, у вас може бути набір класів, які описують таблицю HTML, як-от Table, Row і Cell, а також інший набір класів для опису меблів, як-от Table, Chair і Bed. Простори імен можна використовувати для організації класів у дві різні групи, а також запобігають змішенню двох класів Table та Table.</p>
     <hr>
     <h2>Оголошення простору імен</h2>
-    <p>Namespaces are declared at the beginning of a file using the <code class="w3-codespan">namespace</code> keyword:</p>
+    <p>Простори імен оголошуються на початку файлу за допомогою ключового слова <code class="w3-codespan">namespace</code>:</p>
     <div class="w3-example">
         <h3>Синтаксис</h3>
-        <p>Declare a namespace called Html:</p>
+        <p>Оголосіть простір імен під назвою Html:</p>
         <div class="w3-code htmlHigh notranslate">
             <span style="color:mediumblue;">namespace</span> Html;
         </div>
     </div>
     <div class="w3-note w3-panel">
-        <p><b>Примітка:</b> A <code class="w3-codespan">namespace</code> declaration must be the first thing in the PHP file. The following code would be invalid:</p>
+        <p><b>Примітка:</b> Оголошення <code class="w3-codespan">namespace</code> має бути першим у файлі PHP. Наступний код буде недійсним:</p>
         <div class="w3-example w3-pale-red">
             <div class="w3-code htmlHigh notranslate w3-border-red">
                 &lt;?php<br>echo &quot;Hello World!&quot;;<br>namespace Html;<br>...<br>?&gt;
             </div>
         </div>
     </div>
-    <p>Constants, classes and functions declared in this file will belong to the <strong>Html</strong> namespace:</p>
+    <p>Константи, класи та функції, оголошені в цьому файлі, належатимуть до простору імен <strong>Html</strong>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Create a Table class in the Html namespace:</p>
+        <p>Створіть клас Table у просторі імен Html:</p>
         <div class="w3-code htmlHigh notranslate">
             &lt;?php<br>namespace Html;<br>class Table {<br>&nbsp; public $title = &quot;&quot;;<br>&nbsp; public $numRows = 0;<br>&nbsp; public function message() {<br>&nbsp;&nbsp;&nbsp; echo &quot;&lt;p&gt;Table '{$this-&gt;title}' has {$this-&gt;numRows} rows.&lt;/p&gt;&quot;;<br>&nbsp; }<br>}<br>$table = new Table();<br>$table-&gt;title = &quot;My table&quot;;<br>$table-&gt;numRows = 5;<br>?&gt;<br><br>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;?php <br>$table-&gt;message(); <br>?&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/tryphp_namespace1.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>For further organization, it is possible to have nested namespaces:</p>
+    <p>Для подальшої організації можна мати вкладені простори імен:</p>
     <div class="w3-example">
         <h3>Синтаксис</h3>
-        <p>Declare a namespace called Html inside a namespace called Code:</p>
+        <p>Оголошіть простір імен під назвою Html всередині простору імен під назвою Code:</p>
         <div class="w3-code notranslate">
             <span style="color:mediumblue;">namespace</span> Code\Html;
         </div>
@@ -1328,30 +1328,30 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>Використання просторів імен</h2>
-    <p>Any code that follows a <code class="w3-codespan">namespace</code> declaration is operating inside the namespace, so classes that belong to the namespace can be instantiated without any qualifiers. To access classes from outside a namespace, the class needs to have the namespace attached to it.</p>
+    <p>Будь-який код, який слідує за оголошенням <code class="w3-codespan">namespace</code>, працює всередині простору імен, тому класи, які належать до простору імен, можуть бути створені без будь-яких кваліфікаторів. Щоб отримати доступ до класів поза простором імен, клас повинен мати простір імен, приєднаний до нього.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Use classes from the Html namespace:</p>
+        <p>Використовуйте класи з простору імен Html:</p>
         <div class="w3-code jsHigh notranslate">
             $table = new Html\Table()<br>$row = new Html\Row();
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_classesphp.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>When many classes from the same namespace are being used at the same time, it is easier to use the <code class="w3-codespan">namespace</code> keyword:</p>
+    <p>Коли одночасно використовується багато класів з одного простору імен, легше використовувати ключове слово <code class="w3-codespan">namespace</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Use classes from the Html namespace without the need for the Html\qualifier:</p>
+        <p>Використовуйте класи з простору імен Html без Html\кваліфікатора:</p>
         <div class="w3-code jsHigh notranslate">
             namespace Html;<br>$table = new Table();<br>$row = new Row();
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_classesphp_qual.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Namespace Alias</h2>
-    <p>It can be useful to give a namespace or class an alias to make it easier to write. This is done with the <code class="w3-codespan">use</code> keyword:</p>
+    <h2>Псевдонім namespace / простору імен</h2>
+    <p>Може бути корисно надати простору імен або класу псевдонім, щоб полегшити написання. Це робиться за допомогою ключового слова <code class="w3-codespan">use</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Give a namespace an alias:</p>
+        <p>Дайте простору імен псевдонім:</p>
         <div class="w3-code notranslate">
             <span style="color:mediumblue">use</span> Html <span style="color:mediumblue">as</span> H;<br>$table = <span style="color:mediumblue">new</span> H\Table();
         </div>
@@ -1359,7 +1359,7 @@
     </div>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Give a class an alias:</p>
+        <p>Дайте класу псевдонім:</p>
         <div class="w3-code notranslate">
             <span style="color:mediumblue">use</span> Html\Table <span style="color:mediumblue">as</span> T;<br>$table = <span style="color:mediumblue">new</span> T();
         </div>
