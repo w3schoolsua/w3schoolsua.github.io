@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Підготовлені інструкції MySQL. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Підготовлені інструкції MySQL. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP Підготовлені інструкції MySQL. Підготовлена інструкція — це функція, яка використовується для багаторазового виконання тих самих (або схожих) SQL-інструкцій з високою ефективністю. Gідготовлені інструкції та зв&#8217;язані параметри в MySQLi, в PDO. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1280,56 +1280,56 @@
         <a class="w3-right w3-btn" href="php_mysql_select.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Prepared statements are very useful against SQL injections.</p>
+    <p class="intro"><strong>Підготовлені інструкції</strong> дуже корисні проти SQL-ін&#8217;єкцій.</p>
     <hr>
-    <h2>Prepared Statements and Bound Parameters</h2>
-    <p>A prepared statement is a feature used to execute the same (or similar) SQL statements repeatedly with high efficiency.</p>
-    <p>Prepared statements basically work like this:</p>
+    <h2>Підготовлені інструкції та зв&#8217;язані параметри</h2>
+    <p><strong>Підготовлена інструкція</strong> — це функція, яка використовується для багаторазового виконання тих самих (або схожих) SQL-інструкцій з високою ефективністю.</p>
+    <p>Підготовлені інструкції в основному працюють так:</p>
     <ol>
-        <li>Prepare: An SQL statement template is created and sent to the database. Certain values are left unspecified, called parameters (labeled &quot;?&quot;). Example: INSERT INTO MyGuests VALUES(?, ?, ?)</li>
-        <li>The database parses, compiles, and performs query optimization on the SQL statement template, and stores the result without executing it</li>
-        <li>Execute: At a later time, the application binds the values to the parameters, and the database executes the statement. The application may execute the statement as many times as it wants with different values</li>
+        <li>Підготувати: створюється шаблон SQL-інструкції і надсилається до бази даних. Певні значення залишаються невизначеними, вони називаються параметрами (позначаються &quot;?&quot;). Приклад: INSERT INTO MyGuest VALUES(?, ?, ?)</li>
+        <li>База даних аналізує, компілює та виконує оптимізацію запитів у шаблоні SQL-інструкції і зберігає результат без його виконання</li>
+        <li>Виконати: пізніше програма прив&#8217;язує значення до параметрів, а база даних виконує інструкцію. Програма може виконувати інструкцію скільки завгодно разів із різними значеннями</li>
     </ol>
-    <p>Compared to executing SQL statements directly, prepared statements have three main advantages:</p>
+    <p>Порівняно з прямим виконанням SQL-інструкцій підготовлені інструкції мають три основні переваги:</p>
     <ul>
-        <li>Prepared statements reduce parsing time as the preparation on the query is done only once (although the statement is executed multiple times)</li>
-        <li>Bound parameters minimize bandwidth to the server as you need send only the parameters each time, and not the whole query</li>
-        <li>Prepared statements are very useful against SQL injections, because parameter values, which are transmitted later using a different protocol, need not be correctly escaped. If the original statement template is not derived from external input, SQL injection cannot occur.</li>
+        <li>Підготовлені інструкції скорочують час аналізу, оскільки підготовка запиту виконується лише один раз (хоча інструкція виконується кілька разів)</li>
+        <li>Прив&#8217;язані параметри мінімізують пропускну здатність сервера, оскільки кожного разу потрібно надсилати лише параметри, а не весь запит.</li>
+        <li>Підготовлені інструкції дуже корисні проти SQL-ін&#8217;єкцій, оскільки значення параметрів, які передаються пізніше за допомогою іншого протоколу, не потребують правильного екранування. Якщо оригінальний шаблон інструкції не отримано із зовнішнього введення, SQL-ін&#8217;єкція не відбудеться.</li>
     </ul>
     <hr>
-    <h2>Prepared Statements in MySQLi</h2>
-    <p>The following example uses prepared statements and bound parameters in MySQLi:</p>
+    <h2>Підготовлені інструкції в MySQLi</h2>
+    <p>У наступному прикладі використовуються підготовлені інструкції та зв&#8217;язані параметри в MySQLi:</p>
     <div class="w3-example">
         <h3>Приклад (MySQLi із підготовленими інструкціями)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Create connection<br>$conn = new mysqli($servername, $username, $password, $dbname);<br><br>// Check connection<br>if ($conn-&gt;connect_error) {<br>&nbsp;&nbsp;die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br>}<br><br>// prepare and bind<br>$stmt = $conn-&gt;prepare(&quot;INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)&quot;);<br>$stmt-&gt;bind_param(&quot;sss&quot;, $firstname, $lastname, $email);<br><br>// set parameters and execute<br>$firstname = &quot;John&quot;;<br>$lastname = &quot;Doe&quot;;<br>$email = &quot;john@example.com&quot;;<br>$stmt-&gt;execute();<br><br>$firstname = &quot;Mary&quot;;<br>$lastname = &quot;Moe&quot;;<br>$email = &quot;mary@example.com&quot;;<br>$stmt-&gt;execute();<br><br>$firstname = &quot;Julie&quot;;<br>$lastname = &quot;Dooley&quot;;<br>$email = &quot;julie@example.com&quot;;<br>$stmt-&gt;execute();<br><br>echo &quot;New records created successfully&quot;;<br><br>$stmt-&gt;close();<br>$conn-&gt;close();<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br><br>// Перевірити підключення<br>if ($conn-&gt;connect_error) {<br>&nbsp;&nbsp;die(&quot;Підключення не вдалося: &quot; . $conn-&gt;connect_error);<br>}<br><br>// підготувати та зв&#8217;язати<br>$stmt = $conn-&gt;prepare(&quot;INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)&quot;);<br>$stmt-&gt;bind_param(&quot;sss&quot;, $firstname, $lastname, $email);<br><br>// встановити параметри та виконати<br>$firstname = &quot;John&quot;;<br>$lastname = &quot;Doe&quot;;<br>$email = &quot;john@example.com&quot;;<br>$stmt-&gt;execute();<br><br>$firstname = &quot;Mary&quot;;<br>$lastname = &quot;Moe&quot;;<br>$email = &quot;mary@example.com&quot;;<br>$stmt-&gt;execute();<br><br>$firstname = &quot;Julie&quot;;<br>$lastname = &quot;Dooley&quot;;<br>$email = &quot;julie@example.com&quot;;<br>$stmt-&gt;execute();<br><br>echo &quot;Нові записи успішно створено&quot;;<br><br>$stmt-&gt;close();<br>$conn-&gt;close();<br>?&gt;
         </div>
     </div>
-    <p>Code lines to explain from the example above:</p>
+    <p>Рядки коду для пояснення з прикладу вище:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">
             &quot;INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)&quot;
         </div>
     </div>
-    <p>In our SQL, we insert a question mark (?) where we want to substitute in an integer, string, double or blob value.</p>
-    <p>Then, have a look at the bind_param() function:</p>
+    <p>У нашому SQL ми вставляємо знак питання (?), де ми хочемо замінити ціле число, рядок, значення типу double або blob.</p>
+    <p>Потім подивіться на функцію bind_param():</p>
     <div class="w3-example">
         <div class="w3-code notranslate">
             $stmt-&gt;bind_param(&quot;sss&quot;, $firstname, $lastname, $email);
         </div>
     </div>
-    <p>This function binds the parameters to the SQL query and tells the database what the parameters are. The &quot;sss&quot; argument lists the types of data that the parameters are. The s character tells mysql that the parameter is a string.</p>
-    <p>The argument may be one of four types:</p>
+    <p>Ця функція прив&#8217;язує параметри до SQL-запиту та повідомляє базі даних, що це за параметри. &quot;sss&quot; аргумент перелічує типи даних, якими є параметри. Символ s повідомляє mysql, що параметр є рядком.</p>
+    <p>Аргумент може бути одного з чотирьох типів:</p>
     <ul>
         <li>i - integer</li>
         <li>d - double</li>
         <li>s - string</li>
         <li>b - BLOB</li>
     </ul>
-    <p>We must have one of these for each parameter.</p>
-    <p>By telling mysql what type of data to expect, we minimize the risk of SQL injections.</p>
+    <p>Ми повинні мати один із них для кожного параметра.</p>
+    <p>Повідомляючи mysql, який тип даних очікувати, ми мінімізуємо ризик SQL-ін&#8217;єкцій.</p>
     <div class="w3-panel w3-note">
-        <p><b>Примітка:</b> If we want to insert any data from external sources (like user input), it is very important that the data is sanitized and validated.</p>
+        <p><b>Примітка:</b> Якщо ми хочемо вставити будь-які дані із зовнішніх джерел (наприклад, введені користувачем), дуже важливо, щоб дані були оброблені та підтверджені.</p>
     </div>
     <hr>
     <div class="adver_adinfeed">
@@ -1337,11 +1337,11 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>Підготовлені інструкції в PDO</h2>
-    <p>The following example uses prepared statements and bound parameters in PDO:</p>
+    <p>У наступному прикладі використовуються підготовлені інструкції та зв&#8217;язані параметри в PDO:</p>
     <div class="w3-example">
         <h3>Приклад (PDO із підготовленими інструкціями)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp; $conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp; // set the PDO error mode to exception<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br><br>&nbsp; // prepare sql and bind parameters<br>&nbsp; $stmt = $conn-&gt;prepare(&quot;INSERT INTO MyGuests (firstname, lastname, email)<br>&nbsp; VALUES (:firstname, :lastname, :email)&quot;);<br>&nbsp; $stmt-&gt;bindParam(':firstname', $firstname);<br>&nbsp; $stmt-&gt;bindParam(':lastname', $lastname);<br>&nbsp; $stmt-&gt;bindParam(':email', $email);<br><br>&nbsp;&nbsp;// insert a row<br>&nbsp;&nbsp;$firstname = &quot;John&quot;;<br>&nbsp;&nbsp;$lastname = &quot;Doe&quot;;<br>&nbsp;&nbsp;$email = &quot;john@example.com&quot;;<br>&nbsp; $stmt-&gt;execute();<br><br>&nbsp;&nbsp;// insert another row<br>&nbsp;&nbsp;$firstname = &quot;Mary&quot;;<br>&nbsp;&nbsp;$lastname = &quot;Moe&quot;;<br>&nbsp;&nbsp;$email = &quot;mary@example.com&quot;;<br>&nbsp; $stmt-&gt;execute();<br><br>&nbsp; // insert another row<br>&nbsp; $firstname = &quot;Julie&quot;;<br>&nbsp; $lastname = &quot;Dooley&quot;;<br>&nbsp; $email = &quot;julie@example.com&quot;;<br>&nbsp; $stmt-&gt;execute();<br><br>&nbsp; echo &quot;New records created successfully&quot;;<br>} catch(PDOException $e) {<br>&nbsp; echo &quot;Error: &quot; . $e-&gt;getMessage();<br>}<br>$conn = null;<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp; $conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp; // встановити режим помилки PDO у виняток<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br><br>&nbsp; // підготуйте sql і параметри прив&#8217;язки<br>&nbsp; $stmt = $conn-&gt;prepare(&quot;INSERT INTO MyGuests (firstname, lastname, email)<br>&nbsp; VALUES (:firstname, :lastname, :email)&quot;);<br>&nbsp; $stmt-&gt;bindParam(':firstname', $firstname);<br>&nbsp; $stmt-&gt;bindParam(':lastname', $lastname);<br>&nbsp; $stmt-&gt;bindParam(':email', $email);<br><br>&nbsp;&nbsp;// вставити рядок<br>&nbsp;&nbsp;$firstname = &quot;John&quot;;<br>&nbsp;&nbsp;$lastname = &quot;Doe&quot;;<br>&nbsp;&nbsp;$email = &quot;john@example.com&quot;;<br>&nbsp; $stmt-&gt;execute();<br><br>&nbsp;&nbsp;// вставте інший рядок<br>&nbsp;&nbsp;$firstname = &quot;Mary&quot;;<br>&nbsp;&nbsp;$lastname = &quot;Moe&quot;;<br>&nbsp;&nbsp;$email = &quot;mary@example.com&quot;;<br>&nbsp; $stmt-&gt;execute();<br><br>&nbsp; // вставте інший рядок<br>&nbsp; $firstname = &quot;Julie&quot;;<br>&nbsp; $lastname = &quot;Dooley&quot;;<br>&nbsp; $email = &quot;julie@example.com&quot;;<br>&nbsp; $stmt-&gt;execute();<br><br>&nbsp; echo &quot;Нові записи успішно створено&quot;;<br>} catch(PDOException $e) {<br>&nbsp; echo &quot;Error: &quot; . $e-&gt;getMessage();<br>}<br>$conn = null;<br>?&gt;
         </div>
     </div>
     <hr>
