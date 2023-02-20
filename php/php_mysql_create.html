@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Створення бази даних MySQL. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Створити базу даних MySQL. Використання MySQLi та PDO. Інструкція CREATE DATABASE використовується для створення бази даних в MySQL. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP Створити базу даних MySQL за допомогою MySQLi та PDO. Щоб створити або видалити базу даних MySQL, вам знадобляться спеціальні привілеї CREATE. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1281,19 +1281,19 @@
     </div>
     <hr>
     <p class="intro"><strong>База даних</strong> містить одну або більше таблиць.</p>
-    <p class="intro">You will need special CREATE privileges to create or to delete a MySQL database.</p>
+    <p class="intro">Щоб створити або видалити базу даних MySQL, вам знадобляться спеціальні привілеї CREATE.</p>
     <hr>
-    <h2>Create a MySQL Database Using MySQLi and PDO</h2>
-    <p>The CREATE DATABASE statement is used to create a database in MySQL.</p>
-    <p>The following examples create a database named &quot;myDB&quot;:</p>
+    <h2>Створити базу даних MySQL за допомогою MySQLi та PDO</h2>
+    <p>Інструкція CREATE DATABASE використовується для створення бази даних у MySQL.</p>
+    <p>Наведені нижче приклади створюють базу даних під назвою &quot;myDB&quot;:</p>
     <div class="w3-example">
-        <h3>Приклад (MySQLi Object-oriented)</h3>
+        <h3>Приклад (MySQLi Об&#8217;єктно-орієнтований)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br><br>// Create connection<br>$conn = new mysqli($servername, $username, $password);<br>// Check connection<br>if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br>}<br><br>// Create database<br>$sql = &quot;CREATE DATABASE myDB&quot;;<br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp;&nbsp;echo &quot;Database created successfully&quot;;<br>} else {<br>&nbsp;&nbsp;echo &quot;Error creating database: &quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password);<br>// Перевірити підключення<br>if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Підключення не вдалося: &quot; . $conn-&gt;connect_error);<br>}<br><br>// Створити базу даних<br>$sql = &quot;CREATE DATABASE myDB&quot;;<br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp;&nbsp;echo &quot;Базу даних створено успішно&quot;;<br>} else {<br>&nbsp;&nbsp;echo &quot;Помилка створення бази даних: &quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
         </div>
     </div>
     <div class="w3-panel w3-note">
-        <p><b>Примітка:</b> When you create a new database, you must only specify the first three arguments to the mysqli object (servername, username and password).<br><br><strong>Tip:</strong> If you have to use a specific port, add an empty string for the database-name argument, like this: new mysqli(&quot;localhost&quot;, &quot;username&quot;, &quot;password&quot;, &quot;&quot;, port)</p>
+        <p><b>Примітка:</b> Коли ви створюєте нову базу даних, ви повинні вказати лише перші три аргументи для об&#8217;єкта mysqli (ім&#8217;я сервера, ім&#8217;я користувача та пароль).<br><br><b>Порада:</b> якщо вам потрібно використовувати певний порт, додайте порожній рядок для аргументу імені бази даних, як це: new mysqli(&quot;localhost&quot;, &quot;username&quot;, &quot;password&quot;, &quot;&quot;, port)</p>
     </div>
     <hr>
     <div class="adver_addown">
@@ -1303,19 +1303,19 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
     <div class="w3-example">
-        <h3>Приклад (MySQLi Procedural)</h3>
+        <h3>Приклад (MySQLi Процедурний)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br><br>// Create connection<br>$conn = mysqli_connect($servername, $username, $password);<br>// Check connection<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Connection failed: &quot; . mysqli_connect_error());<br>}<br><br>// Create database<br>$sql = &quot;CREATE DATABASE myDB&quot;;<br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Database created successfully&quot;;<br>} else {<br>&nbsp; echo &quot;Error creating database: &quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password);<br>// Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Підключення не вдалося: &quot; . mysqli_connect_error());<br>}<br><br>// Створити базу даних<br>$sql = &quot;CREATE DATABASE myDB&quot;;<br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Базу даних створено успішно&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка створення бази даних: &quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
         </div>
     </div>
-    <p><b>Примітка:</b> The following PDO example create a database named &quot;myDBPDO&quot;:</p>
+    <p><b>Примітка:</b> У наступному прикладі PDO створюється база даних під назвою &quot;myDBPDO&quot;:</p>
     <div class="w3-example">
         <h3>Приклад (PDO)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername&quot;, $username, $password);<br>&nbsp; // set the PDO error mode to exception<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br>&nbsp; $sql = &quot;CREATE DATABASE myDBPDO&quot;;<br>&nbsp; // use exec() because no results are returned<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp; echo &quot;Database created successfully&lt;br&gt;&quot;;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername&quot;, $username, $password);<br>&nbsp; // встановити режим помилки PDO у виняток<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br>&nbsp; $sql = &quot;CREATE DATABASE myDBPDO&quot;;<br>&nbsp; // використовуйте exec(), оскільки результати не повертаються<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp; echo &quot;Базу даних створено успішно&lt;br&gt;&quot;;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
         </div>
     </div>
-    <p><b>Порада:</b> A great benefit of PDO is that it has exception class to handle any problems that may occur in our database queries. If an exception is thrown within the try{ } block, the script stops executing and flows directly to the first catch(){ } block. In the catch block above we echo the SQL statement and the generated error message.</p>
+    <p><b>Порада:</b> Великою перевагою PDO є те, що він має клас винятків для обробки будь-яких проблем, які можуть виникнути під час запитів до нашої бази даних. Якщо в блоці try{ } виникає виняток, скрипт припиняє виконання та переходить безпосередньо до першого блоку catch(){ }. У блоці catch вище ми повторюємо інструкцію SQL і згенероване повідомлення про помилку.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="php_mysql_connect.html">&#10094; Prev</a>
