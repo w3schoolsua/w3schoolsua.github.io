@@ -1281,18 +1281,18 @@
     </div>
     <hr>
     <h2>Отримати ID останнього вставленого запису</h2>
-    <p>If we perform an INSERT or UPDATE on a table with an AUTO_INCREMENT field, we can get the ID of the last inserted/updated record immediately.</p>
-    <p>In the table &quot;MyGuests&quot;, the &quot;id&quot; column is an AUTO_INCREMENT field:</p>
+    <p>Якщо ми виконуємо INSERT або UPDATE для таблиці з полем AUTO_INCREMENT, ми можемо негайно отримати ідентифікатор останнього вставленого/оновленого запису.</p>
+    <p>У таблиці &quot;MyGuests&quot; &quot;id&quot; стовпець є полем AUTO_INCREMENT:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">
             CREATE TABLE MyGuests (<br>id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,<br>firstname VARCHAR(30) NOT NULL,<br>lastname VARCHAR(30) NOT NULL,<br>email VARCHAR(50),<br>reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP<br>)
         </div>
     </div>
-    <p>The following examples are equal to the examples from the previous page (<a href="php_mysql_insert.html">PHP Insert Data Into MySQL</a>), except that we have added one single line of code to retrieve the ID of the last inserted record. We also echo the last inserted ID:</p>
+    <p>Наступні приклади збігаються з прикладами з попередньої сторінки (<a href="php_mysql_insert.html">PHP Вставити дані в MySQL</a>), за винятком того, що ми додали один рядок коду для отримання ID останнього вставленого запису. Ми також повторюємо останній вставлений ID:</p>
     <div class="w3-example">
         <h3>Приклад (MySQLi Об&#8217;єктно-орієнтований)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp; die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br>}<br><br>$sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>VALUES ('John', 'Doe', 'john@example.com')&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp; $last_id = $conn-&gt;insert_id;<br>&nbsp; echo &quot;Новий запис успішно створено. Останній вставлений ID: &quot; . $last_id;<br>} else {<br>&nbsp; echo &quot;Error: &quot; . $sql . &quot;&lt;br&gt;&quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp; die(&quot;Підключення не вдалося: &quot; . $conn-&gt;connect_error);<br>}<br><br>$sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>VALUES ('John', 'Doe', 'john@example.com')&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp; $last_id = $conn-&gt;insert_id;<br>&nbsp; echo &quot;Новий запис успішно створено. Останній вставлений ID: &quot; . $last_id;<br>} else {<br>&nbsp; echo &quot;Error: &quot; . $sql . &quot;&lt;br&gt;&quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
         </div>
     </div>
     <hr>
@@ -1301,16 +1301,15 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <div class="w3-example">
-        <h3>Приклад (MySQLi Procedural)</h3>
+        <h3>Приклад (MySQLi Процедурний)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>
-            // Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Connection failed: &quot; . mysqli_connect_error());<br>}<br><br>$sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>VALUES ('John', 'Doe', 'john@example.com')&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp;&nbsp;$last_id = mysqli_insert_id($conn);<br>&nbsp;&nbsp;echo &quot;Новий запис успішно створено. Останній вставлений ID: &quot; . $last_id;<br>} else {<br>&nbsp; echo &quot;Error: &quot; . $sql . &quot;&lt;br&gt;&quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Підключення не вдалося: &quot; . mysqli_connect_error());<br>}<br><br>$sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>VALUES ('John', 'Doe', 'john@example.com')&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp;&nbsp;$last_id = mysqli_insert_id($conn);<br>&nbsp;&nbsp;echo &quot;Новий запис успішно створено. Останній вставлений ID: &quot; . $last_id;<br>} else {<br>&nbsp; echo &quot;Error: &quot; . $sql . &quot;&lt;br&gt;&quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
         </div>
     </div>
     <div class="w3-example">
         <h3>Приклад (PDO)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp;&nbsp;// set the PDO error mode to exception<br>&nbsp;&nbsp;$conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br>&nbsp; $sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>&nbsp; VALUES ('John', 'Doe', 'john@example.com')&quot;;<br>&nbsp; // use exec() because no results are returned<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp;&nbsp;$last_id = $conn-&gt;lastInsertId();<br>&nbsp;&nbsp;echo &quot;Новий запис успішно створено. Останній вставлений ID: &quot; . $last_id;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp;&nbsp;// встановити режим помилки PDO у виняток<br>&nbsp;&nbsp;$conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br>&nbsp; $sql = &quot;INSERT INTO MyGuests (firstname, lastname, email)<br>&nbsp; VALUES ('John', 'Doe', 'john@example.com')&quot;;<br>&nbsp; // використовуйте exec(), оскільки результати не повертаються<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp;&nbsp;$last_id = $conn-&gt;lastInsertId();<br>&nbsp;&nbsp;echo &quot;Новий запис успішно створено. Останній вставлений ID: &quot; . $last_id;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
         </div>
     </div>
     <hr>
