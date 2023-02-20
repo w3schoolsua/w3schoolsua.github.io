@@ -1280,33 +1280,32 @@
         <a class="w3-right w3-btn" href="php_mysql_insert.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">A database table has its own unique name and consists of columns and rows.</p>
+    <p class="intro">Таблиця бази даних має власну унікальну назву і складається зі стовпців і рядків.</p>
     <hr>
     <h2>Створити таблицю MySQL, використовуючи MySQLi та PDO</h2>
     <p>Інструкція CREATE TABLE використовується для створення таблиці в MySQL.</p>
-    <p>We will create a table named &quot;MyGuests&quot;, with five columns: &quot;id&quot;, &quot;firstname&quot;, &quot;lastname&quot;, &quot;email&quot; and &quot;reg_date&quot;:</p>
+    <p>Ми створимо таблицю під назвою &quot;MyGuests&quot;, із п'ятьма стовпцями: &quot;id&quot;, &quot;firstname&quot;, &quot;lastname&quot;, &quot;email&quot; та &quot;reg_date&quot;:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">
             CREATE TABLE MyGuests (<br>id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,<br>firstname VARCHAR(30) NOT NULL,<br>lastname VARCHAR(30) NOT NULL,<br>email VARCHAR(50),<br>reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP<br>)
         </div>
     </div>
-    <p><b>Notes on the table above:</b></p>
-    <p>The data type specifies what type of data the column can hold. For a complete reference of all the available data types, go to our <a href="../sql/sql_datatypes.html">Data Types reference</a>.</p>
-    <p>After the data type, you can specify other optional attributes for each column:</p>
+    <p><b>Примітки до таблиці вище:</b></p>
+    <p>Тип даних визначає, який тип даних може містити стовпець. Щоб отримати повну довідку про всі доступні типи даних, перейдіть до <a href="../sql/sql_datatypes.html">Довідник типів даних</a>.</p>
+    <p>Після типу даних ви можете вказати інші додаткові атрибути для кожного стовпця:</p>
     <ul>
-        <li>NOT NULL - Each row must contain a value for that column, null values are not allowed</li>
-        <li>DEFAULT value - Set a default value that is added when no other value is passed</li>
-        <li>UNSIGNED - Used for number types, limits the stored data to positive numbers and zero</li>
-        <li>AUTO INCREMENT - MySQL automatically increases the value of the field by 1 each time a new record is added</li>
-        <li>PRIMARY KEY - Used to uniquely identify the rows in a table. The column with PRIMARY KEY setting is often an ID number, and is often used with AUTO_INCREMENT</li>
+        <li>NOT NULL – кожен рядок має містити значення для цього стовпця, нульові значення не допускаються</li>
+        <li>DEFAULT значення – установіть значення за замовчуванням, яке додається, коли не передається жодне інше значення</li>
+        <li>UNSIGNED – використовується для типів чисел, обмежує збережені дані додатними числами та нулем</li>
+        <li>AUTO INCREMENT - MySQL автоматично збільшує значення поля на 1 кожного разу, коли додається новий запис</li>
+        <li>PRIMARY KEY – використовується для унікальної ідентифікації рядків у таблиці. Стовпець із налаштуванням PRIMARY KEY часто є ідентифікаційним номером і часто використовується з AUTO_INCREMENT</li>
     </ul>
-    <p>Each table should have a primary key column (in this case: the &quot;id&quot; column). Its value must be unique for each record in the table.</p>
-    <p>The following examples shows how to create the table in PHP:</p>
+    <p>Кожна таблиця повинна мати стовпець первинного ключа (у цьому випадку: стовпець &quot;id&quot;). Його значення має бути унікальним для кожного запису в таблиці.</p>
+    <p>У наступних прикладах показано, як створити таблицю в PHP:</p>
     <div class="w3-example">
-        <h3>Приклад (MySQLi Object-oriented)</h3>
+        <h3>Приклад (MySQLi Об&#8217;єктно-орієнтований)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Create connection<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Check connection<br>
-            if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br>}<br><br>// sql to create table<br>$sql = &quot;CREATE TABLE MyGuests (<br>id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, <br>firstname VARCHAR(30) NOT NULL,<br>lastname VARCHAR(30) NOT NULL,<br>email VARCHAR(50),<br>reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP<br>)&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp; echo &quot;Table MyGuests created successfully&quot;;<br>} else {<br>&nbsp; echo &quot;Error creating table: &quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Підключення не вдалося: &quot; . $conn-&gt;connect_error);<br>}<br><br>// sql для створення таблиці<br>$sql = &quot;CREATE TABLE MyGuests (<br>id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, <br>firstname VARCHAR(30) NOT NULL,<br>lastname VARCHAR(30) NOT NULL,<br>email VARCHAR(50),<br>reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP<br>)&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp; echo &quot;Таблицю MyGuest створено успішно&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка створення таблиці: &quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
         </div>
     </div>
     <hr>
@@ -1315,16 +1314,15 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <div class="w3-example">
-        <h3>Приклад (MySQLi Procedural)</h3>
+        <h3>Приклад (MySQLi Процедурний)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Create connection<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>
-            // Check connection<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Connection failed: &quot; . mysqli_connect_error());<br>}<br><br>// sql to create table<br>$sql = &quot;CREATE TABLE MyGuests (<br>id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, <br>firstname VARCHAR(30) NOT NULL,<br>lastname VARCHAR(30) NOT NULL,<br>email VARCHAR(50),<br>reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP<br>)&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Table MyGuests created successfully&quot;;<br>} else {<br>&nbsp;&nbsp;echo &quot;Error creating table: &quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Підключення не вдалося: &quot; . mysqli_connect_error());<br>}<br><br>// sql для створення таблиці<br>$sql = &quot;CREATE TABLE MyGuests (<br>id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, <br>firstname VARCHAR(30) NOT NULL,<br>lastname VARCHAR(30) NOT NULL,<br>email VARCHAR(50),<br>reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP<br>)&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Таблицю MyGuests створено успішно&quot;;<br>} else {<br>&nbsp;&nbsp;echo &quot;Помилка створення таблиці: &quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
         </div>
     </div>
     <div class="w3-example">
         <h3>Приклад (PDO)</h3>
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp; // set the PDO error mode to exception<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br><br>&nbsp; // sql to create table<br>&nbsp; $sql = &quot;CREATE TABLE MyGuests (<br>&nbsp;&nbsp;id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, <br>&nbsp;&nbsp;firstname VARCHAR(30) NOT NULL,<br>&nbsp; lastname VARCHAR(30) NOT NULL,<br>&nbsp; email VARCHAR(50),<br>&nbsp; reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP<br>&nbsp;&nbsp;)&quot;;<br><br>&nbsp;&nbsp;// use exec() because no results are returned<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp; echo &quot;Table MyGuests created successfully&quot;;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp; // встановити режим помилки PDO у виняток<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br><br>&nbsp; // sql для створення таблиці<br>&nbsp; $sql = &quot;CREATE TABLE MyGuests (<br>&nbsp;&nbsp;id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, <br>&nbsp;&nbsp;firstname VARCHAR(30) NOT NULL,<br>&nbsp; lastname VARCHAR(30) NOT NULL,<br>&nbsp; email VARCHAR(50),<br>&nbsp; reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP<br>&nbsp;&nbsp;)&quot;;<br><br>&nbsp;&nbsp;// використовуйте exec(), оскільки результати не повертаються<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp; echo &quot;Таблицю MyGuest створено успішно&quot;;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
         </div>
     </div>
     <hr>
