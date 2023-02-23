@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Видалення даних MySQL. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Видалення даних MySQL. Приклади. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Оновлення даних MySQL. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='PHP Оновлення даних MySQL. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1271,20 +1271,20 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index.html'><img src='../svg/php_icon1.svg' alt='PHP. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='PHP для початківців. W3Schools українською' style='width: 120px'></a><p class='w3-right'>
-    <a href="php_mysql_delete_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="php_mysql_update_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>PHP <span class="color_h1">Видалення даних MySQL</span></h1>
+    <h1>PHP <span class="color_h1">MySQL Оновлення даних</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_mysql_select_orderby.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_mysql_update.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_mysql_delete.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_mysql_select_limit.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Видалення даних із MySQL таблиці, використовуючи MySQLi та PDO</h2>
-    <p>Інструкція DELETE використовується для видалення записів із таблиці:</p>
-    <div class="w3-code w3-border notranslate"><div>DELETE FROM table_name<br>WHERE some_column = some_value</div></div>
+    <h2>Оновлення даних в MySQL таблиці, використовуючи MySQLi та PDO</h2>
+    <p>Інструкція UPDATE використовується для оновлення існуючих записів в таблиці:</p>
+    <div class="w3-code w3-border notranslate"><div>UPDATE table_name<br>SET column1=value, column2=value2,...<br>WHERE some_column=some_value</div></div>
     <div class="w3-panel w3-note">
-        <p><strong>Notice the WHERE clause in the DELETE syntax:</strong> The WHERE clause specifies which record or records that should be deleted. If you omit the WHERE clause, all records will be deleted!</p>
+        <p><strong>Notice the WHERE clause in the UPDATE syntax:</strong> The WHERE clause specifies which record or records that should be updated. If you omit the WHERE clause, all records will be updated!</p>
     </div>
     <p>Щоб дізнатись більше про SQL, відвідайте <a href="../sql/index.html">SQL Підручник</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
     <p>Let's look at the &quot;MyGuests&quot; table:</p>
@@ -1311,20 +1311,13 @@
                 <td>mary@example.com</td>
                 <td>2024-10-23 10:22:30</td>
             </tr>
-            <tr>
-                <td>3</td>
-                <td>Julie</td>
-                <td>Dooley</td>
-                <td>julie@example.com</td>
-                <td>2024-10-26 10:48:23</td>
-            </tr>
         </table>
     </div>
-    <p>В наступному прикладі видаляється запис із id=3 в таблиці &quot;MyGuests&quot;:</p>
+    <p>В наступному прикладі оновлюється запис із id=2 в таблиці &quot;MyGuests&quot;:</p>
     <div class="w3-example">
         <h3>Приклад (MySQLi Об&#8217;єктно-орієнтований)</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Підключення потерпіло невдачу: &quot; . $conn-&gt;connect_error);<br>}<br><br>// sql to delete a record<br>$sql = &quot;DELETE FROM MyGuests WHERE id=3&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp; echo &quot;Запис повністю видалено&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка видалення запису: &quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br> if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br>}<br><br>$sql = &quot;UPDATE MyGuests SET lastname='Doe' WHERE id=2&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp;&nbsp;echo &quot;Запис оновлено успішно&quot;;<br>} else {<br>&nbsp;&nbsp;echo &quot;Помилка оновлення запису: &quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
         </div>
     </div>
     <hr>
@@ -1335,16 +1328,16 @@
 </div>    <div class="w3-example">
         <h3>Приклад (MySQLi Процедурний)</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Підключення потерпіло невдачу: &quot; . mysqli_connect_error());<br>}<br><br>// sql to delete a record<br>$sql = &quot;DELETE FROM MyGuests WHERE id=3&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Запис повністю видалено&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка видалення запису: &quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Connection failed: &quot; . mysqli_connect_error());<br>}<br><br>$sql = &quot;UPDATE MyGuests SET lastname='Doe' WHERE id=2&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Запис оновлено успішно&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка оновлення запису: &quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
         </div>
     </div>
     <div class="w3-example">
         <h3>Приклад (PDO)</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp; // set the PDO error mode to exception<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br><br>&nbsp; // sql to delete a record<br>&nbsp; $sql = &quot;DELETE FROM MyGuests WHERE id=3&quot;;<br><br>&nbsp; // use exec() because no results are returned<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp; echo &quot;Запис повністю видалено&quot;;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp; $conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp; // set the PDO error mode to exception<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br><br>&nbsp; $sql = &quot;UPDATE MyGuests SET lastname='Doe' WHERE id=2&quot;;<br><br>&nbsp; // Підготовлена інструкція<br>&nbsp;&nbsp;$stmt = $conn-&gt;prepare($sql);<br><br>&nbsp;&nbsp;// execute the query<br>&nbsp; $stmt-&gt;execute();<br><br>&nbsp;&nbsp;// echo a message to say the UPDATE succeeded<br>&nbsp; echo $stmt-&gt;rowCount() . &quot; records UPDATED successfully&quot;;<br>} catch(PDOException $e) {<br>&nbsp; echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
         </div>
     </div>
-    <p>After the record is deleted, the table will look like this:</p>
+    <p>After the record is updated, the table will look like this:</p>
     <div class="w3-responsive">
         <table class="ws-table-all notranslate">
             <tr>
@@ -1364,7 +1357,7 @@
             <tr>
                 <td>2</td>
                 <td>Mary</td>
-                <td>Moe</td>
+                <td>Doe</td>
                 <td>mary@example.com</td>
                 <td>2024-10-23 10:22:30</td>
             </tr>
@@ -1372,8 +1365,8 @@
     </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_mysql_select_orderby.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_mysql_update.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_mysql_delete.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_mysql_select_limit.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
