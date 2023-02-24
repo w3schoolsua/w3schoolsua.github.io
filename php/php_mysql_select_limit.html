@@ -1281,22 +1281,22 @@
     </div>
     <hr>
     <h2>Обмеження вибраних даних із бази даних MySQL</h2>
-    <p>MySQL provides a LIMIT clause that is used to specify the number of records to return.</p>
-    <p>The LIMIT clause makes it easy to code multipage results or pagination with SQL, and is very useful on large tables. Returning a large number of records can impact on performance.</p>
-    <p>Assume we wish to select all records from 1 to 30 (inclusive) from a table called "Orders". The SQL query would then look like this:</p>
+    <p>MySQL надає пропозицію LIMIT, яка використовується для визначення кількості записів, які потрібно повернути.</p>
+    <p>Пропозиція LIMIT полегшує кодування багатосторінкових результатів або розбиття на сторінки за допомогою SQL і дуже корисне для великих таблиць. Повернення великої кількості записів може вплинути на продуктивність.</p>
+    <p>Припустімо, ми хочемо вибрати всі записи від 1 до 30 (включно) із таблиці під назвою &quot;Orders&quot; (&quot;Замовлення&quot;). Тоді SQL-запит виглядатиме так:</p>
     <div class="w3-code w3-border notranslate"><div>$sql = &quot;SELECT * FROM Orders LIMIT 30&quot;;</div></div>
-    <p>When the SQL query above is run, it will return the first 30 records.</p>
-    <p>What if we want to select records 16 - 25 (inclusive)?</p>
-    <p>Mysql also provides a way to handle this: by using OFFSET.</p>
-    <p>The SQL query below says "return only 10 records, start on record 16 (OFFSET 15)":</p>
+    <p>Під час виконання наведеного вище SQL-запиту буде повернуто перші 30 записів.</p>
+    <p>Що робити, якщо ми хочемо вибрати записи 16–25 (включно)?</p>
+    <p>Mysql також надає спосіб впоратися з цим: за допомогою OFFSET.</p>
+    <p>Наведений нижче запит SQL каже &quot;повернути лише 10 записів, розпочати із запису 16 (OFFSET 15)&quot;:</p>
     <div class="w3-code w3-border notranslate">
         <div>$sql = &quot;SELECT * FROM Orders LIMIT 10 OFFSET 15&quot;;</div>
     </div>
-    <p>You could also use a shorter syntax to achieve the same result:</p>
+    <p>Ви також можете використовувати коротший синтаксис, щоб досягти того самого результату:</p>
     <div class="w3-code w3-border notranslate">
         <div>$sql = &quot;SELECT * FROM Orders LIMIT 15, 10&quot;;</div>
     </div>
-    <p>Notice that the numbers are reversed when you use a comma.</p>
+    <p>Зверніть увагу, що під час коми цифри змінюються на протилежні.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="php_mysql_update.html">&#10094; Prev</a>
