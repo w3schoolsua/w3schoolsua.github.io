@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Видалення даних MySQL. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Видалення даних MySQL. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP Видалення даних MySQL. Видалення даних із MySQL таблиці, використовуючи MySQLi та PDO. Інструкція DELETE використовується для видалення записів із таблиці. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1284,10 +1284,10 @@
     <p>Інструкція DELETE використовується для видалення записів із таблиці:</p>
     <div class="w3-code w3-border notranslate"><div>DELETE FROM table_name<br>WHERE some_column = some_value</div></div>
     <div class="w3-panel w3-note">
-        <p><strong>Notice the WHERE clause in the DELETE syntax:</strong> The WHERE clause specifies which record or records that should be deleted. If you omit the WHERE clause, all records will be deleted!</p>
+        <p><strong>Зверніть увагу на пропозицію WHERE у синтаксисі DELETE:</strong> Пропозиція WHERE визначає, який запис чи записи слід видалити. Якщо ви опустите пропозицію WHERE, усі записи будуть видалені!</p>
     </div>
     <p>Щоб дізнатись більше про SQL, відвідайте <a href="../sql/index.html">SQL Підручник</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
-    <p>Let's look at the &quot;MyGuests&quot; table:</p>
+    <p>Давайте подивимося на таблицю &quot;MyGuests&quot;:</p>
     <div class="w3-responsive">
         <table class="ws-table-all notranslate">
             <tr>
@@ -1324,7 +1324,7 @@
     <div class="w3-example">
         <h3>Приклад (MySQLi Об&#8217;єктно-орієнтований)</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Підключення потерпіло невдачу: &quot; . $conn-&gt;connect_error);<br>}<br><br>// sql to delete a record<br>$sql = &quot;DELETE FROM MyGuests WHERE id=3&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp; echo &quot;Запис повністю видалено&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка видалення запису: &quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Підключення потерпіло невдачу: &quot; . $conn-&gt;connect_error);<br>}<br><br>// sql для видалення запису<br>$sql = &quot;DELETE FROM MyGuests WHERE id=3&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp; echo &quot;Запис повністю видалено&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка видалення запису: &quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
         </div>
     </div>
     <hr>
@@ -1335,16 +1335,16 @@
 </div>    <div class="w3-example">
         <h3>Приклад (MySQLi Процедурний)</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Підключення потерпіло невдачу: &quot; . mysqli_connect_error());<br>}<br><br>// sql to delete a record<br>$sql = &quot;DELETE FROM MyGuests WHERE id=3&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Запис повністю видалено&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка видалення запису: &quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Підключення потерпіло невдачу: &quot; . mysqli_connect_error());<br>}<br><br>// sql для видалення запису<br>$sql = &quot;DELETE FROM MyGuests WHERE id=3&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Запис повністю видалено&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка видалення запису: &quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
         </div>
     </div>
     <div class="w3-example">
         <h3>Приклад (PDO)</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp; // set the PDO error mode to exception<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br><br>&nbsp; // sql to delete a record<br>&nbsp; $sql = &quot;DELETE FROM MyGuests WHERE id=3&quot;;<br><br>&nbsp; // use exec() because no results are returned<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp; echo &quot;Запис повністю видалено&quot;;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDBPDO&quot;;<br><br>try {<br>&nbsp;&nbsp;$conn = new PDO(&quot;mysql:host=$servername;dbname=$dbname&quot;, $username, $password);<br>&nbsp; // встановити режим помилки PDO у виняток<br>&nbsp; $conn-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);<br><br>&nbsp; // sql для видалення запису<br>&nbsp; $sql = &quot;DELETE FROM MyGuests WHERE id=3&quot;;<br><br>&nbsp; // використовуйте exec(), оскільки результати не повертаються<br>&nbsp; $conn-&gt;exec($sql);<br>&nbsp; echo &quot;Запис повністю видалено&quot;;<br>} catch(PDOException $e) {<br>&nbsp;&nbsp;echo $sql . &quot;&lt;br&gt;&quot; . $e-&gt;getMessage();<br>}<br><br>$conn = null;<br>?&gt;
         </div>
     </div>
-    <p>After the record is deleted, the table will look like this:</p>
+    <p>Після видалення запису таблиця матиме такий вигляд:</p>
     <div class="w3-responsive">
         <table class="ws-table-all notranslate">
             <tr>
