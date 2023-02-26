@@ -12,8 +12,24 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, Python, PHP, Bootstrap, Java, XML and more.'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP AJAX and PHP. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='PHP AJAX and PHP. The PHP File - gethint.php. Examples. Lessons for beginners. W3Schools in English'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP AJAX and MySQL. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='PHP AJAX and MySQL. The MySQL Database. The PHP File. Examples. Lessons for beginners. W3Schools in English'>
+<script>
+    function showCD(str) {
+        if (str=="") {
+            document.getElementById("txtHint").innerHTML="";
+            return;
+        }
+        var xmlhttp=new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function() {
+            if (this.readyState==4 && this.status==200) {
+                document.getElementById("txtHint").innerHTML=this.responseText;
+            }
+        }
+        xmlhttp.open("GET.html","getcd.php?q="+str,true);
+        xmlhttp.send();
+    }
+</script>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
@@ -1270,98 +1286,72 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index_en.html'><img src='../svg/php.svg' alt='PHP. Lessons for beginners' class='w3-left w3-padding' title='PHP Lessons for beginners. W3Schools in English' style='width: 120px'></a><p class='w3-right'>
-    <a href="php_ajax_php.html" title='Switch to Ukrainian'>Ua</a>
+    <a href="php_ajax_xml.html" title='Switch to Ukrainian'>Ua</a>
 </p>
 <article>
-    <h1>PHP - <span class="color_h1">AJAX and PHP</span></h1>
+    <h1>PHP Example - <span class="color_h1">AJAX and XML</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_ajax_intro_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_ajax_database_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_ajax_database_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_ajax_livesearch_en.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">AJAX is used to create more interactive applications.</p>
+    <p class="intro">AJAX can be used for interactive communication with an XML file.</p>
     <hr>
-    <h2>AJAX PHP Example</h2>
-    <p>The following example will demonstrate how a web page can communicate with a web server while a user type characters in an input field:</p>
+    <h2>AJAX XML Example</h2>
+    <p>The following example will demonstrate how a web page can fetch information from an XML file with AJAX:</p>
     <div class="w3-example">
         <h3>Example</h3>
         <div class="w3-padding w3-white w3-margin-bottom notranslate">
-            <p><b>Start typing a name in the input field below:</b></p>
             <form action="#">
-                <label for="fname">First name:</label>
-                <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
+                <select name="cds" onchange="showCD(this.value)">
+                    <option value="">Select a CD:</option>
+                    <option value="Bob Dylan">Bob Dylan</option>
+                    <option value="Bee Gees">Bee Gees</option>
+                    <option value="Cat Stevens">Cat Stevens</option>
+                </select>
             </form>
-            <p>Suggestions: <span id="txtHint"></span></p>
+            <br>
+            <div id="txtHint">CD info will be listed here...</div>
         </div>
     </div>
     <hr>
-    <h2>Example Explained</h2>
-    <p>In the example above, when a user types a character in the input field, a function called &quot;showHint()&quot; is executed.</p>
-    <p>The function is triggered by the onkeyup event.</p>
-    <p>Here is the HTML code:</p>
+    <h2>Example Explained - The HTML Page</h2>
+    <p>When a user selects a CD in the dropdown list above, a function called &quot;showCD()&quot; is executed. The function is triggered by the &quot;onchange&quot; event:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate htmlHigh">
-            &lt;html&gt;<br>&lt;head&gt;<br>&lt;script&gt;<br>function showHint(str) {<br>&nbsp; if (str.length == 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&quot;txtHint&quot;).innerHTML = &quot;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;return;<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp; var xmlhttp = new XMLHttpRequest();<br>&nbsp;&nbsp;&nbsp; xmlhttp.onreadystatechange = function() {<br>&nbsp;&nbsp;&nbsp; &nbsp; if (this.readyState == 4 &amp;&amp; this.status == 200) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById(&quot;txtHint&quot;).innerHTML = this.responseText;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp; xmlhttp.open(&quot;GET&quot;, &quot;gethint.php?q=&quot; + str, true);<br>&nbsp;&nbsp;&nbsp;&nbsp;xmlhttp.send();<br>&nbsp;&nbsp;}<br>}<br>&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;p&gt;&lt;b&gt;Start typing a name in the input field below:&lt;/b&gt;&lt;/p&gt;<br>&lt;form action=&quot;&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;<br>&nbsp;&lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; onkeyup=&quot;showHint(this.value)&quot;&gt;<br>&lt;/form&gt;<br>&lt;p&gt;Suggestions: &lt;span id=&quot;txtHint&quot;&gt;&lt;/span&gt;&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;
+        <div class="w3-code htmlHigh notranslate">
+            &lt;html&gt;<br>&lt;head&gt;<br>&lt;script&gt;<br>function showCD(str) {<br>&nbsp; if (str==&quot;&quot;) {<br>&nbsp; &nbsp; document.getElementById(&quot;txtHint&quot;).innerHTML=&quot;&quot;;<br>&nbsp;&nbsp;&nbsp; return;<br>&nbsp; } <br>&nbsp; var xmlhttp=new XMLHttpRequest();<br>&nbsp; xmlhttp.onreadystatechange=function() {<br>&nbsp; &nbsp; if (this.readyState==4 &amp;&amp; this.status==200) {<br>&nbsp; &nbsp;&nbsp;&nbsp; document.getElementById(&quot;txtHint&quot;).innerHTML=this.responseText;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp; }<br>&nbsp; xmlhttp.open(&quot;GET&quot;,&quot;getcd.php?q=&quot;+str,true);<br>&nbsp; xmlhttp.send();<br>}<br>&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;form&gt;<br>Select a CD:<br>&lt;select name=&quot;cds&quot; onchange=&quot;showCD(this.value)&quot;&gt;<br>&nbsp; &lt;option value=&quot;&quot;&gt;Select a CD:&lt;/option&gt;<br>&nbsp; &lt;option value=&quot;Bob Dylan&quot;&gt;Bob Dylan&lt;/option&gt;<br>&nbsp; &lt;option value=&quot;Bee Gees&quot;&gt;Bee Gees&lt;/option&gt;<br>&nbsp; &lt;option value=&quot;Cat Stevens&quot;&gt;Cat Stevens&lt;/option&gt;<br>&lt;/select&gt;<br>&lt;/form&gt;<br>&lt;div id=&quot;txtHint&quot;&gt;&lt;b&gt;CD info will be listed here...&lt;/b&gt;&lt;/div&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_ajax_php.html">Run example &raquo;</a>
     </div>
-    <p>Code explanation:</p>
-    <p>First, check if the input field is empty (str.length == 0). If it is, clear the content of the txtHint placeholder and exit the function.</p>
-    <p>However, if the input field is not empty, do the following:</p>
+    <p>The showCD() function does the following:</p>
     <ul>
+        <li>Check if a CD is selected</li>
         <li>Create an XMLHttpRequest object</li>
         <li>Create the function to be executed when the server response is ready</li>
-        <li>Send the request off to a PHP file (gethint.php) on the server</li>
-        <li>Notice that q parameter is added to the url (gethint.php?q=&quot;+str)</li>
-        <li>And the str variable holds the content of the input field</li>
+        <li>Send the request off to a file on the server</li>
+        <li>Notice that a parameter (q) is added to the URL (with the content of the dropdown list)</li>
     </ul>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>The PHP File - &quot;gethint.php&quot;</h2>
-    <p>The PHP file checks an array of names, and returns the corresponding name(s) to the browser:</p>
+</div>    <h2>The PHP File</h2>
+    <p>The page on the server called by the JavaScript above is a PHP file called &quot;getcd.php&quot;.</p>
+    <p>The PHP script loads an XML document, &quot;<a target="_blank" href="cd_catalog.xml">cd_catalog.xml</a>&quot;, runs a query against the XML file, and returns the result as HTML:</p>
     <div class="w3-example">
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>// Array with names<br>
-            $a[] = &quot;Anna&quot;;<br>
-            $a[] = &quot;Brittany&quot;;<br>
-            $a[] = &quot;Cinderella&quot;;<br>
-            $a[] = &quot;Diana&quot;;<br>
-            $a[] = &quot;Eva&quot;;<br>
-            $a[] = &quot;Fiona&quot;;<br>
-            $a[] = &quot;Gunda&quot;;<br>
-            $a[] = &quot;Hege&quot;;<br>
-            $a[] = &quot;Inga&quot;;<br>
-            $a[] = &quot;Johanna&quot;;<br>
-            $a[] = &quot;Kitty&quot;;<br>
-            $a[] = &quot;Linda&quot;;<br>
-            $a[] = &quot;Nina&quot;;<br>
-            $a[] = &quot;Ophelia&quot;;<br>
-            $a[] = &quot;Petunia&quot;;<br>
-            $a[] = &quot;Amanda&quot;;<br>
-            $a[] = &quot;Raquel&quot;;<br>
-            $a[] = &quot;Cindy&quot;;<br>
-            $a[] = &quot;Doris&quot;;<br>
-            $a[] = &quot;Eve&quot;;<br>
-            $a[] = &quot;Evita&quot;;<br>
-            $a[] = &quot;Sunniva&quot;;<br>
-            $a[] = &quot;Tove&quot;;<br>
-            $a[] = &quot;Unni&quot;;<br>
-            $a[] = &quot;Violet&quot;;<br>
-            $a[] = &quot;Liza&quot;;<br>
-            $a[] = &quot;Elizabeth&quot;;<br>
-            $a[] = &quot;Ellen&quot;;<br>
-            $a[] = &quot;Wenche&quot;;<br>
-            $a[] = &quot;Vicky&quot;;<br><br>
-            // get the q parameter from URL<br>$q = $_REQUEST[&quot;q&quot;];<br><br>$hint = &quot;&quot;;<br><br>// lookup all hints from array if $q is different from &quot;&quot; <br>if ($q !== &quot;&quot;) {<br>&nbsp;&nbsp;$q = strtolower($q);<br>&nbsp;&nbsp;$len=strlen($q);<br>&nbsp;&nbsp;foreach($a as $name) {<br>&nbsp;&nbsp;&nbsp; if (stristr($q, substr($name, 0, $len))) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($hint === &quot;&quot;) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $hint = $name;<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $hint .= &quot;, $name&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br><br>// Output &quot;no suggestion&quot; if no hint was found or output correct values<br>echo $hint === &quot;&quot; ? &quot;no suggestion&quot; : $hint;<br>?&gt;</div>
+            &lt;?php<br>$q=$_GET[&quot;q&quot;];<br><br>$xmlDoc = new DOMDocument();<br>$xmlDoc-&gt;load(&quot;cd_catalog.xml&quot;);<br><br>$x=$xmlDoc-&gt;getElementsByTagName('ARTIST');<br><br>for ($i=0; $i&lt;=$x-&gt;length-1; $i++) {<br>&nbsp; //Process only element nodes<br>&nbsp; if ($x-&gt;item($i)-&gt;nodeType==1)&nbsp;{<br>&nbsp; &nbsp;&nbsp;if ($x-&gt;item($i)-&gt;childNodes-&gt;item(0)-&gt;nodeValue == $q) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$y=($x-&gt;item($i)-&gt;parentNode);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br><br>$cd=($y-&gt;childNodes);<br><br>for ($i=0;$i&lt;$cd-&gt;length;$i++) {<br>&nbsp; //Process only element nodes<br>&nbsp; if ($cd-&gt;item($i)-&gt;nodeType==1)&nbsp;{<br>&nbsp; &nbsp; echo(&quot;&lt;b&gt;&quot; . $cd-&gt;item($i)-&gt;nodeName . &quot;:&lt;/b&gt; &quot;);<br>&nbsp;&nbsp;&nbsp; echo($cd-&gt;item($i)-&gt;childNodes-&gt;item(0)-&gt;nodeValue);<br>&nbsp; &nbsp;&nbsp;echo(&quot;&lt;br&gt;&quot;);<br>&nbsp;&nbsp;}<br>}<br>?&gt;</div>
     </div>
+    <p>When the CD query is sent from the JavaScript to the PHP page, the following happens:</p>
+    <ol>
+        <li>PHP creates an XML DOM object</li>
+        <li>Find all &lt;artist&gt; elements that matches the name sent from the JavaScript</li>
+        <li>Output the album information (send to the &quot;txtHint&quot; placeholder)</li>
+    </ol>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_ajax_intro_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_ajax_database_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_ajax_database_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_ajax_livesearch_en.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
