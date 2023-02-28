@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP XML Expat Парсер. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP XML Expat Парсер. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP XML Expat Парсер. Синтаксичний парсер Expat – це аналізатор на основі подій. XML файл. Ініціалізація XML Expat Парсера. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1280,27 +1280,27 @@
         <a class="w3-right w3-btn" href="php_xml_dom.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">The built-in XML Expat Parser makes it possible to process XML documents in PHP.</p>
+    <p class="intro">Вбудований <strong>XML Expat парсер</strong> дає змогу обробляти XML-документи в PHP.</p>
     <hr>
     <h2>XML Expat Парсер</h2>
-    <p>The Expat parser is an event-based parser.</p>
-    <p>Look at the following XML fraction:</p>
+    <p>Синтаксичний аналізатор Expat – це аналізатор на основі подій.</p>
+    <p>Погляньте на наступну частину XML:</p>
     <div class="w3-code w3-border notranslate">
         <div>&lt;from&gt;Jani&lt;/from&gt;</div>
     </div>
-    <p>An event-based parser reports the XML above as a series of three events:</p>
+    <p>Синтаксичний аналізатор, заснований на подіях, повідомляє XML вище як серію з трьох подій:</p>
     <ul>
-        <li>Start element: from</li>
-        <li>Start CDATA section, value: Jani</li>
-        <li>Close element: from</li>
+        <li>Стартовий елемент: from</li>
+        <li>Старт розділу CDATA, значення: Jani</li>
+        <li>Закрити елемент: from</li>
     </ul>
-    <p>The XML Expat Parser functions are part of the PHP core. There is no installation needed to use these functions.</p>
+    <p>Функції XML Expat Parser є частиною ядра PHP. Для використання цих функцій не потрібна установка.</p>
     <hr>
     <h2>XML файл</h2>
     <p>XML файл &quot;note.xml&quot; буде використовуватись в прикладі нижче:</p>
     <div class="w3-code w3-border notranslate">
         <div>
-            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>&lt;note&gt;<br>&lt;to&gt;Tove&lt;/to&gt;<br>&lt;from&gt;Jani&lt;/from&gt;<br>&lt;heading&gt;Reminder&lt;/heading&gt;<br>&lt;body&gt;Don't forget me this weekend!&lt;/body&gt;<br>&lt;/note&gt;
+            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>&lt;note&gt;<br>&lt;to&gt;Tove&lt;/to&gt;<br>&lt;from&gt;Jani&lt;/from&gt;<br>&lt;heading&gt;Reminder&lt;/heading&gt;<br>&lt;body&gt;Не забудь мене поцілувати в ці вихідні!&lt;/body&gt;<br>&lt;/note&gt;
         </div>
     </div>
     <hr>
@@ -1308,28 +1308,28 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Initializing the XML Expat Parser</h2>
-    <p>We want to initialize the XML Expat Parser in PHP, define some handlers for different XML events, and then parse the XML file.</p>
+</div>    <h2>Ініціалізація XML Expat Парсера</h2>
+    <p>Ми хочемо ініціалізувати XML Expat Parser у PHP, визначити деякі обробники для різних подій XML, а потім проаналізувати файл XML.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>// Initialize the XML parser<br>$parser=xml_parser_create();<br><br>// Function to use at the start of an element<br>function start($parser,$element_name,$element_attrs)&nbsp;{<br>&nbsp;&nbsp;switch($element_name)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;case &quot;NOTE&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;echo &quot;-- Note --&lt;br&gt;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case &quot;TO&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;echo &quot;To: &quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case &quot;FROM&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;echo &quot;From: &quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case &quot;HEADING&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;echo &quot;Heading: &quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case &quot;BODY&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;echo &quot;Message: &quot;;<br>&nbsp;&nbsp;}<br>}<br><br>// Function to use at the end of an element<br>function stop($parser,$element_name)&nbsp;{<br>&nbsp;&nbsp;echo &quot;&lt;br&gt;&quot;;<br>}<br><br>// Function to use when finding character data<br>function char($parser,$data)&nbsp;{<br>&nbsp;&nbsp;echo $data;<br>}<br><br>// Specify element handler<br>xml_set_element_handler($parser,&quot;start&quot;,&quot;stop&quot;);<br><br>// Specify data handler<br>xml_set_character_data_handler($parser,&quot;char&quot;);<br><br>// Open XML file<br>$fp=fopen(&quot;note.xml&quot;,&quot;r&quot;);<br><br>// Read data<br>while ($data=fread($fp,4096))&nbsp;{<br>&nbsp;&nbsp;xml_parse($parser,$data,feof($fp)) or <br>&nbsp;&nbsp;die (sprintf(&quot;XML Error: %s at line %d&quot;, <br>&nbsp;&nbsp;xml_error_string(xml_get_error_code($parser)),<br>&nbsp;&nbsp;xml_get_current_line_number($parser)));<br>}<br><br>// Free the XML parser<br>xml_parser_free($parser);<br>?&gt;
+            &lt;?php<br>// Ініціалізуйте XML парсер<br>$parser=xml_parser_create();<br><br>// Функція для використання на початку елемента<br>function start($parser,$element_name,$element_attrs)&nbsp;{<br>&nbsp;&nbsp;switch($element_name)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;case &quot;NOTE&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;echo &quot;-- Note --&lt;br&gt;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case &quot;TO&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;echo &quot;To: &quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case &quot;FROM&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;echo &quot;From: &quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case &quot;HEADING&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;echo &quot;Heading: &quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;&nbsp;case &quot;BODY&quot;:<br>&nbsp;&nbsp;&nbsp;&nbsp;echo &quot;Message: &quot;;<br>&nbsp;&nbsp;}<br>}<br><br>// Функція для використання в кінці елемента<br>function stop($parser,$element_name)&nbsp;{<br>&nbsp;&nbsp;echo &quot;&lt;br&gt;&quot;;<br>}<br><br>// Функція для використання під час пошуку символьних даних<br>function char($parser,$data)&nbsp;{<br>&nbsp;&nbsp;echo $data;<br>}<br><br>// Вкажіть обробник елемента<br>xml_set_element_handler($parser,&quot;start&quot;,&quot;stop&quot;);<br><br>// Вкажіть обробника даних<br>xml_set_character_data_handler($parser,&quot;char&quot;);<br><br>// Відкрити XML файл<br>$fp=fopen(&quot;note.xml&quot;,&quot;r&quot;);<br><br>// Читати дані<br>while ($data=fread($fp,4096))&nbsp;{<br>&nbsp;&nbsp;xml_parse($parser,$data,feof($fp)) or <br>&nbsp;&nbsp;die (sprintf(&quot;XML Error: %s на лінії %d&quot;, <br>&nbsp;&nbsp;xml_error_string(xml_get_error_code($parser)),<br>&nbsp;&nbsp;xml_get_current_line_number($parser)));<br>}<br><br>// Звільніть аналізатор XML<br>xml_parser_free($parser);<br>?&gt;
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_xml.html">Run example &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_xml.html">Виконати приклад &raquo;</a>
     </div>
     <p>Пояснення прикладу:</p>
     <ol>
-        <li>Initialize the XML parser with the <code class="w3-codespan">xml_parser_create()</code> function</li>
-        <li>Create functions to use with the different event handlers</li>
-        <li>Add the <code class="w3-codespan">xml_set_element_handler()</code> function to specify which function will be executed when the parser encounters the opening and closing tags</li>
-        <li>Add the <code class="w3-codespan">xml_set_character_data_handler()</code> function to specify which function will execute when the parser encounters character data</li>
-        <li>Parse the file &quot;note.xml&quot; with the <code class="w3-codespan">xml_parse()</code> function</li>
-        <li>In case of an error, add <code class="w3-codespan">xml_error_string()</code> function to convert an XML error to a textual description</li>
-        <li>Call the <code class="w3-codespan">xml_parser_free()</code> function to release the memory allocated with the <code class="w3-codespan">xml_parser_create()</code> function</li>
+        <li>Ініціалізуйте XML парсер за допомогою функції <code class="w3-codespan">xml_parser_create()</code></li>
+        <li>Створіть функції для використання з різними обробниками подій</li>
+        <li>Додайте функцію <code class="w3-codespan">xml_set_element_handler()</code>, щоб указати, яка функція буде виконана, коли синтаксичний аналізатор зустріне відкриваючі та закриваючі теги</li>
+        <li>Додайте функцію <code class="w3-codespan">xml_set_character_data_handler()</code>, щоб указати, яка функція виконуватиметься, коли аналізатор зустрічатиме символьні дані</li>
+        <li>Проаналізуйте файл &quot;note.xml&quot; за допомогою функції <code class="w3-codespan">xml_parse()</code></li>
+        <li>У разі помилки додайте функцію <code class="w3-codespan">xml_error_string()</code>, щоб перетворити помилку XML у текстовий опис</li>
+        <li>Викличте функцію <code class="w3-codespan">xml_parser_free()</code>, щоб звільнити пам&#8217;ять, виділену функцією <code class="w3-codespan">xml_parser_create()</code></li>
     </ol>
     <hr>
-    <h2>More PHP XML Expat Parser</h2>
-    <p>For more information about the PHP Expat functions, visit our <a href="php_ref_xml_en.html">PHP XML Parser Reference</a>.</p>
+    <h2>Більше про PHP XML Expat Парсер</h2>
+    <p>Для отримання додаткової інформації про функції PHP Expat відвідайте <a href="php_ref_xml_en.html">Довідник PHP XML Парсер</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="php_xml_simplexml_get.html">&#10094; Prev</a>
