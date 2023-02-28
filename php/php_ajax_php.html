@@ -1303,7 +1303,7 @@
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;html&gt;<br>&lt;head&gt;<br>&lt;script&gt;<br>function showHint(str) {<br>&nbsp; if (str.length == 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&quot;txtHint&quot;).innerHTML = &quot;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;return;<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp; var xmlhttp = new XMLHttpRequest();<br>&nbsp;&nbsp;&nbsp; xmlhttp.onreadystatechange = function() {<br>&nbsp;&nbsp;&nbsp; &nbsp; if (this.readyState == 4 &amp;&amp; this.status == 200) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById(&quot;txtHint&quot;).innerHTML = this.responseText;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp; xmlhttp.open(&quot;GET&quot;, &quot;gethint.html?q=&quot; + str, true);<br>&nbsp;&nbsp;&nbsp;&nbsp;xmlhttp.send();<br>&nbsp;&nbsp;}<br>}<br>&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;p&gt;&lt;b&gt;Start typing a name in the input field below:&lt;/b&gt;&lt;/p&gt;<br>&lt;form action=&quot;&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;<br>&nbsp;&lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; onkeyup=&quot;showHint(this.value)&quot;&gt;<br>&lt;/form&gt;<br>&lt;p&gt;Suggestions: &lt;span id=&quot;txtHint&quot;&gt;&lt;/span&gt;&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;
+            &lt;html&gt;<br>&lt;head&gt;<br>&lt;script&gt;<br>function showHint(str) {<br>&nbsp; if (str.length == 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&quot;txtHint&quot;).innerHTML = &quot;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;return;<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp; var xmlhttp = new XMLHttpRequest();<br>&nbsp;&nbsp;&nbsp; xmlhttp.onreadystatechange = function() {<br>&nbsp;&nbsp;&nbsp; &nbsp; if (this.readyState == 4 &amp;&amp; this.status == 200) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById(&quot;txtHint&quot;).innerHTML = this.responseText;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp; xmlhttp.open(&quot;GET&quot;, &quot;gethint.php?q=&quot; + str, true);<br>&nbsp;&nbsp;&nbsp;&nbsp;xmlhttp.send();<br>&nbsp;&nbsp;}<br>}<br>&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;p&gt;&lt;b&gt;Start typing a name in the input field below:&lt;/b&gt;&lt;/p&gt;<br>&lt;form action=&quot;&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;<br>&nbsp;&lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; onkeyup=&quot;showHint(this.value)&quot;&gt;<br>&lt;/form&gt;<br>&lt;p&gt;Suggestions: &lt;span id=&quot;txtHint&quot;&gt;&lt;/span&gt;&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_ajax_php.html">Виконати приклад &raquo;</a>
     </div>
@@ -1313,8 +1313,8 @@
     <ul>
         <li>Створіть об&#8217;єкт XMLHttpRequest</li>
         <li>Створіть функцію, яка буде виконана, коли відповідь сервера буде готова</li>
-        <li>Надішліть запит у файл PHP (gethint.html) на сервері</li>
-        <li>Зверніть увагу, що параметр q додано до URL-адреси (gethint.html?q=&quot;+str)</li>
+        <li>Надішліть запит у файл PHP (gethint.php) на сервері</li>
+        <li>Зверніть увагу, що параметр q додано до URL-адреси (gethint.php?q=&quot;+str)</li>
         <li>І змінна str містить вміст поля введення</li>
     </ul>
     <hr>
@@ -1322,7 +1322,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>PHP файл - &quot;gethint.html&quot;</h2>
+</div>    <h2>PHP файл - &quot;gethint.php&quot;</h2>
     <p>Файл PHP перевіряє масив імен і повертає відповідні імена браузеру:</p>
     <div class="w3-example">
         <div class="w3-code htmlHigh notranslate">
