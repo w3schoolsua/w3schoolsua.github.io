@@ -12,7 +12,7 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Приклад - AJAX Живий пошук. Уроки для початківців. W3Schools українською</title>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Приклад - AJAX Опитування. Уроки для початківців. W3Schools українською</title>
 <meta name='description' content='PHP - Приклад - AJAX Опитування. HTML-файл. PHP-файл. Текстовий файл. Результати опитування. Збереження результатів. Приклади. Уроки для початківців. W3Schools українською'>
 <script>
     function getVote(int) {
@@ -22,7 +22,7 @@
                 document.getElementById("poll").innerHTML=this.responseText;
             }
         }
-        xmlhttp.open("GET.html","poll_vote.php?vote="+int,true);
+        xmlhttp.open("GET","poll_vote.php?vote="+int,true);
         xmlhttp.send();
     }
 </script>
@@ -1303,18 +1303,18 @@
     </div>
     <hr>
     <h2>Пояснення прикладу - HTML сторінка</h2>
-    <p>When a user chooses an option above, a function called &quot;getVote()&quot; is executed. The function is triggered by the &quot;onclick&quot; event:</p>
+    <p>Коли користувач вибирає опцію вище, функція &quot;getVote()&quot; виконується. Функція запускається подією &quot;onclick&quot;:</p>
     <div class="w3-example">
         <div class="w3-code htmlHigh notranslate">
             &lt;html&gt;<br>&lt;head&gt;<br>&lt;script&gt;<br>function getVote(int) {<br>&nbsp; var xmlhttp=new XMLHttpRequest();<br>&nbsp; xmlhttp.onreadystatechange=function() {<br>&nbsp; &nbsp; if (this.readyState==4 &amp;&amp; this.status==200) {<br>&nbsp; &nbsp; &nbsp;&nbsp;document.getElementById(&quot;poll&quot;).innerHTML=this.responseText;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp; }<br>&nbsp; xmlhttp.open(&quot;GET&quot;,&quot;poll_vote.php?vote=&quot;+int,true);<br>&nbsp; xmlhttp.send();<br>}<br>&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;div id=&quot;poll&quot;&gt;<br>&lt;h3&gt;Do you like PHP and AJAX so far?&lt;/h3&gt;<br>&lt;form&gt;<br>Yes: &lt;input type=&quot;radio&quot; name=&quot;vote&quot; value=&quot;0&quot; onclick=&quot;getVote(this.value)&quot;&gt;&lt;br&gt;<br>No: &lt;input type=&quot;radio&quot; name=&quot;vote&quot; value=&quot;1&quot; onclick=&quot;getVote(this.value)&quot;&gt;<br> &lt;/form&gt;<br>&lt;/div&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
         </div>
     </div>
-    <p>The getVote() function does the following:</p>
+    <p>Функція getVote() робить наступне:</p>
     <ul>
-        <li>Create an XMLHttpRequest object</li>
-        <li>Create the function to be executed when the server response is ready</li>
-        <li>Send the request off to a file on the server</li>
-        <li>Notice that a parameter (vote) is added to the URL (with the value of the yes or no option)</li>
+        <li>Створити об&#8217;єкт XMLHttpRequest</li>
+        <li>Створити функцію, яка буде виконана, коли відповідь сервера буде готова</li>
+        <li>Надіслати запит у файл на сервері</li>
+        <li>Зверніть увагу, що до URL-адреси додано параметр (голосування) (зі значенням опції &quot;так&quot; або &quot;ні&quot;)</li>
     </ul>
     <hr>
     <div class="adver_adinfeed">
@@ -1322,18 +1322,18 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>PHP файл</h2>
-    <p>The page on the server called by the JavaScript above is a PHP file called &quot;poll_vote.php&quot;:</p>
+    <p>Сторінка на сервері, викликана JavaScript вище, є файлом PHP під назвою &quot;poll_vote.php&quot;:</p>
     <div class="w3-example">
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$vote = $_REQUEST['vote'];<br><br>//get content of textfile<br>$filename = &quot;poll_result.txt&quot;;<br>$content = file($filename);<br><br>//put content in array<br>$array = explode(&quot;||&quot;, $content[0]);<br>$yes = $array[0];<br>$no = $array[1];<br><br>if ($vote == 0)&nbsp;{<br>&nbsp;&nbsp;$yes = $yes + 1;<br>}<br>if ($vote == 1)&nbsp;{<br>&nbsp;&nbsp;$no = $no + 1;<br>}<br><br>//insert votes to txt file<br>$insertvote = $yes.&quot;||&quot;.$no;<br>$fp = fopen($filename,&quot;w&quot;);<br>fputs($fp,$insertvote);<br>fclose($fp);<br>?&gt;<br><br>&lt;h2&gt;Result:&lt;/h2&gt;<br>&lt;table&gt;<br>&lt;tr&gt;<br>&lt;td&gt;Yes:&lt;/td&gt;<br>&lt;td&gt;&lt;img src=&quot;poll.gif&quot;<br>width='&lt;?php echo(100*round($yes/($no+$yes),2)); ?&gt;'<br>height='20'&gt;<br>&lt;?php echo(100*round($yes/($no+$yes),2)); ?&gt;%<br>&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;No:&lt;/td&gt;<br>&lt;td&gt;&lt;img src=&quot;poll.gif&quot;<br>width='&lt;?php echo(100*round($no/($no+$yes),2)); ?&gt;'<br>height='20'&gt;<br>&lt;?php echo(100*round($no/($no+$yes),2)); ?&gt;%<br>&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/table&gt;
+            &lt;?php<br>$vote = $_REQUEST['vote'];<br><br>//отримати вміст текстового файлу<br>$filename = &quot;poll_result.txt&quot;;<br>$content = file($filename);<br><br>//помістити вміст у масив<br>$array = explode(&quot;||&quot;, $content[0]);<br>$yes = $array[0];<br>$no = $array[1];<br><br>if ($vote == 0)&nbsp;{<br>&nbsp;&nbsp;$yes = $yes + 1;<br>}<br>if ($vote == 1)&nbsp;{<br>&nbsp;&nbsp;$no = $no + 1;<br>}<br><br>//вставити голоси в текстовий файл<br>$insertvote = $yes.&quot;||&quot;.$no;<br>$fp = fopen($filename,&quot;w&quot;);<br>fputs($fp,$insertvote);<br>fclose($fp);<br>?&gt;<br><br>&lt;h2&gt;Результат:&lt;/h2&gt;<br>&lt;table&gt;<br>&lt;tr&gt;<br>&lt;td&gt;Yes:&lt;/td&gt;<br>&lt;td&gt;&lt;img src=&quot;poll.gif&quot;<br>width='&lt;?php echo(100*round($yes/($no+$yes),2)); ?&gt;'<br>height='20'&gt;<br>&lt;?php echo(100*round($yes/($no+$yes),2)); ?&gt;%<br>&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&lt;td&gt;No:&lt;/td&gt;<br>&lt;td&gt;&lt;img src=&quot;poll.gif&quot;<br>width='&lt;?php echo(100*round($no/($no+$yes),2)); ?&gt;'<br>height='20'&gt;<br>&lt;?php echo(100*round($no/($no+$yes),2)); ?&gt;%<br>&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/table&gt;
         </div>
     </div>
-    <p>The value is sent from the JavaScript, and the following happens:</p>
+    <p>Значення надсилається з JavaScript, і відбувається таке:</p>
     <ol>
-        <li>Get the content of the &quot;poll_result.txt&quot; file</li>
-        <li>Put the content of the file in variables and add one to the selected variable</li>
-        <li>Write the result to the &quot;poll_result.txt&quot; file</li>
-        <li>Output a graphical representation of the poll result</li>
+        <li>Отримати вміст &quot;poll_result.txt&quot; файл</li>
+        <li>Помістити вміст файлу в змінні та додати одну до вибраної змінної</li>
+        <li>Записати результат у файл &quot;poll_result.txt&quot;</li>
+        <li>Вивести графічне представлення результату опитування</li>
     </ol>
     <hr>
     <h2>Текстовий файл</h2>
@@ -1343,7 +1343,7 @@
         <div>0||0</div>
     </div>
     <p>Перше число представляє &quot;Так&quot; голоси, друге число представляє &quot;Ні&quot; голоси.</p>
-    <p><b>Примітка:</b> Remember to allow your web server to edit the text file. Do <b>NOT</b> give everyone access, just the web server (PHP).</p>
+    <p><b>Примітка:</b> Не забудьте дозволити веб-серверу редагувати текстовий файл. <b>НЕ</b> надавайте доступ усім, лише веб-серверу (PHP).</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="php_ajax_livesearch_en.html">&#10094; Prev</a>
