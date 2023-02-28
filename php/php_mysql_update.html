@@ -1317,7 +1317,7 @@
     <div class="w3-example">
         <h3>Приклад (MySQLi Об&#8217;єктно-орієнтований)</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br> if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Connection failed: &quot; . $conn-&gt;connect_error);<br>}<br><br>$sql = &quot;UPDATE MyGuests SET lastname='Doe' WHERE id=2&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp;&nbsp;echo &quot;Запис оновлено успішно&quot;;<br>} else {<br>&nbsp;&nbsp;echo &quot;Помилка оновлення запису: &quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = new mysqli($servername, $username, $password, $dbname);<br>// Перевірити підключення<br> if ($conn-&gt;connect_error)&nbsp;{<br>&nbsp;&nbsp;die(&quot;Підключення не вдалося: &quot; . $conn-&gt;connect_error);<br>}<br><br>$sql = &quot;UPDATE MyGuests SET lastname='Doe' WHERE id=2&quot;;<br><br>if ($conn-&gt;query($sql) === TRUE) {<br>&nbsp;&nbsp;echo &quot;Запис оновлено успішно&quot;;<br>} else {<br>&nbsp;&nbsp;echo &quot;Помилка оновлення запису: &quot; . $conn-&gt;error;<br>}<br><br>$conn-&gt;close();<br>?&gt;
         </div>
     </div>
     <hr>
@@ -1328,7 +1328,7 @@
 </div>    <div class="w3-example">
         <h3>Приклад (MySQLi Процедурний)</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Connection failed: &quot; . mysqli_connect_error());<br>}<br><br>$sql = &quot;UPDATE MyGuests SET lastname='Doe' WHERE id=2&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Запис оновлено успішно&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка оновлення запису: &quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
+            &lt;?php<br>$servername = &quot;localhost&quot;;<br>$username = &quot;username&quot;;<br>$password = &quot;password&quot;;<br>$dbname = &quot;myDB&quot;;<br><br>// Створити підключення<br>$conn = mysqli_connect($servername, $username, $password, $dbname);<br>// Перевірити підключення<br>if (!$conn)&nbsp;{<br>&nbsp; die(&quot;Підключення не вдалося: &quot; . mysqli_connect_error());<br>}<br><br>$sql = &quot;UPDATE MyGuests SET lastname='Doe' WHERE id=2&quot;;<br><br>if (mysqli_query($conn, $sql)) {<br>&nbsp; echo &quot;Запис оновлено успішно&quot;;<br>} else {<br>&nbsp; echo &quot;Помилка оновлення запису: &quot; . mysqli_error($conn);<br>}<br><br>mysqli_close($conn);<br>?&gt;
         </div>
     </div>
     <div class="w3-example">
