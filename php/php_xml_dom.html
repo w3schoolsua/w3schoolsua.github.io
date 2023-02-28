@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP XML DOM Парсер. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP XML DOM Парсер. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP XML DOM Парсер. Вбудований аналізатор DOM дозволяє обробляти XML-документи в PHP. DOM є деревоподібним аналізатором. Функції аналізатора DOM є частиною ядра PHP. Для використання цих функцій не потрібна установка. XML файл. Завантаження та виведення XML. Перегляд XML. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1280,23 +1280,23 @@
         <a class="w3-right w3-btn" href="php_ajax_intro.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">The built-in DOM parser makes it possible to process XML documents in PHP.</p>
+    <p class="intro"><strong>Вбудований аналізатор DOM</strong> дозволяє обробляти XML-документи в PHP.</p>
     <hr>
     <h2>XML DOM Парсер</h2>
-    <p>The DOM parser is a tree-based parser.</p>
-    <p>Look at the following XML document fraction:</p>
+    <p>Синтаксичний аналізатор DOM є деревоподібним аналізатором.</p>
+    <p>Погляньте на наступну частину документа XML:</p>
     <div class="w3-code w3-border notranslate">
         <div>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>&lt;from&gt;Jani&lt;/from&gt;</div>
     </div>
-    <p>The DOM sees the XML above as a tree structure: </p>
+    <p>DOM розглядає XML вище як структуру дерева:</p>
     <ul>
-        <li>Level 1: XML Document</li>
-        <li>Level 2: Root element: &lt;from&gt;</li>
-        <li>Level 3: Text element: &quot;Jani&quot;</li>
+        <li>Рівень 1: XML документ</li>
+        <li>Рівень 2: Кореневий елемент: &lt;from&gt;</li>
+        <li>Рівень 3: Текстовий елемент: &quot;Jani&quot;</li>
     </ul>
     <hr>
     <h2>Інсталяція</h2>
-    <p>The DOM parser functions are part of the PHP core. There is no installation needed to use these functions.</p>
+    <p>Функції аналізатора DOM є частиною ядра PHP. Для використання цих функцій не потрібна установка.</p>
     <hr>
     <h2>XML файл</h2>
     <p>XML файл нижче (&quot;note.xml&quot;) буде використовуватись в цьому прикладі:</p>
@@ -1317,37 +1317,37 @@
             &lt;?php<br>$xmlDoc = new DOMDocument();<br>$xmlDoc-&gt;load(&quot;note.xml&quot;);<br><br>print $xmlDoc-&gt;saveXML();<br>?&gt;
         </div>
     </div>
-    <p>The output of the code above will be:</p>
+    <p>Виведення коду вище буде:</p>
     <div class="w3-code w3-border notranslate">
         <div>Tove Jani Reminder Don't forget me this weekend!</div>
     </div>
-    <p>If you select &quot;View source&quot; in the browser window, you will see the following HTML:</p>
+    <p>Якщо вибрати &quot;View source&quot; (&quot;Переглянути джерело&quot;) у вікні браузера ви побачите наступний HTML:</p>
     <div class="w3-code w3-border notranslate">
         <div>
             &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>&lt;note&gt;<br>&lt;to&gt;Tove&lt;/to&gt;<br>&lt;from&gt;Jani&lt;/from&gt;<br>&lt;heading&gt;Reminder&lt;/heading&gt;<br>&lt;body&gt;Don't forget me this weekend!&lt;/body&gt;<br>&lt;/note&gt;
         </div>
     </div>
-    <p>The example above creates a DOMDocument-Object and loads the XML from &quot;note.xml&quot; into it.</p>
-    <p>Then the saveXML() function puts the internal XML document into a string, so we can output it.</p>
+    <p>У прикладі вище створюється об&#8217;єкт DOMDocument і завантажується XML із &quot;note.xml&quot; у нього.</p>
+    <p>Потім функція saveXML() поміщає внутрішній XML-документ у рядок, щоб ми могли вивести його.</p>
     <hr>
-    <h2>Looping through XML</h2>
-    <p>We want to initialize the XML parser, load the XML, and loop through all elements of the &lt;note&gt; element:</p>
+    <h2>Перегляд XML</h2>
+    <p>Ми хочемо ініціалізувати аналізатор XML, завантажити XML і перебрати всі елементи &lt;note&gt; елемента:</p>
     <div class="w3-example">
         <div class="w3-code htmlHigh notranslate">
             &lt;?php<br>$xmlDoc = new DOMDocument();<br>$xmlDoc-&gt;load(&quot;note.xml&quot;);<br><br>$x = $xmlDoc-&gt;documentElement;<br>foreach ($x-&gt;childNodes AS $item) {<br>&nbsp;&nbsp;print $item-&gt;nodeName . &quot; = &quot; . $item-&gt;nodeValue . &quot;&lt;br&gt;&quot;;<br>
             }<br>?&gt;
         </div>
     </div>
-    <p>The output of the code above will be:</p>
+    <p>Виведення коду вище буде:</p>
     <div class="w3-code w3-border notranslate">
         <div>
             #text = <br>to = Tove<br>#text =<br>from = Jani<br>#text =<br>heading = Reminder<br>#text =<br>body = Don't forget me this weekend!<br>#text =
         </div>
     </div>
-    <p>In the example above you see that there are empty text nodes between each element.</p>
-    <p>When XML generates, it often contains white-spaces between the nodes. The XML DOM parser treats these as ordinary elements, and if you are not aware of them, they sometimes cause problems.</p>
+    <p>У прикладі вище ви бачите, що між кожним елементом є порожні текстові вузли.</p>
+    <p>Коли XML генерується, він часто містить пробіли між вузлами. Синтаксичний аналізатор XML DOM розглядає їх як звичайні елементи, і якщо ви про них не знаєте, вони іноді викликають проблеми.</p>
     <hr>
-    <p>If you want to learn more about the XML DOM, please visit our <a href="../xml/index.html">XML Підручник</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
+    <p>Якщо ви хочете дізнатися більше про XML DOM, відвідайте <a href="../xml/index.html">XML Підручник</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="php_xml_parser_expat.html">&#10094; Prev</a>
