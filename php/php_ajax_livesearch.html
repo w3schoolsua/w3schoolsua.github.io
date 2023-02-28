@@ -18,7 +18,7 @@
     function showResult(str) {
         if (str.length==0) {
             document.getElementById("livesearch").innerHTML="";
-            document.getElementById("livesearch").style.border="0";
+            document.getElementById("livesearch").style.border="0px";
             return;
         }
         var xmlhttp=new XMLHttpRequest();
@@ -28,7 +28,7 @@
                 document.getElementById("livesearch").style.border="1px solid #A5ACB2";
             }
         }
-        xmlhttp.open("GET.html","livesearch.php?q="+str,true);
+        xmlhttp.open("GET","livesearch.php?q="+str,true);
         xmlhttp.send();
     }
 </script>
@@ -1302,38 +1302,38 @@
         <a class="w3-right w3-btn" href="php_ajax_poll.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro"><strong>AJAX</strong> can be used to create more user-friendly and interactive searches.</p>
+    <p class="intro"><strong>AJAX</strong> можна використовувати для створення більш зручного та інтерактивного пошуку.</p>
     <hr>
     <h2>AJAX Живий пошук</h2>
-    <p>The following example will demonstrate a live search, where you get search results while you type.</p>
-    <p>Live search has many benefits compared to traditional searching:</p>
+    <p>У наведеному нижче прикладі демонструється пошук у реальному часі, коли ви отримуєте результати під час введення тексту.</p>
+    <p>Живий пошук має багато переваг у порівнянні з традиційним пошуком:</p>
     <ul>
-        <li>Results are shown as you type</li>
-        <li>Results narrow as you continue typing</li>
-        <li>If results become too narrow, remove characters to see a broader result</li>
+        <li>Результати відображаються під час введення тексту</li>
+        <li>Результати звужуються, якщо ви продовжуєте вводити текст</li>
+        <li>Якщо результати стають надто вузькими, видаліть символи, щоб побачити ширший результат</li>
     </ul>
-    <p>Search for a W3Schools page in the input field below:</p>
+    <p>Знайдіть сторінку W3Schools у полі введення нижче:</p>
     <form>
         <input type="text" size="30" onkeyup="showResult(this.value)" />
         <div id="livesearch"></div>
     </form>
-    <p>The results in the example above are found in an XML file (<a target="_blank" href="links.xml">links.xml</a>). To make this example small and simple, only six results are available.</p>
+    <p>Результати в наведеному вище прикладі містяться у файлі XML (<a target="_blank" href="links.xml">links.xml</a>). Щоб зробити цей приклад невеликим і простим, доступно лише шість результатів.</p>
     <hr>
     <h2>Пояснення прикладу - HTML сторінка</h2>
-    <p>When a user types a character in the input field above, the function &quot;showResult()&quot; is executed. The function is triggered by the &quot;onkeyup&quot; event:</p>
+    <p>Коли користувач вводить символ у поле введення вище, виконується функція &quot;showResult()&quot;. Функція запускається кнопкою події &quot;onkeyup&quot;:</p>
     <div class="w3-example">
         <div class="w3-code htmlHigh notranslate">
             &lt;html&gt;<br>&lt;head&gt;<br>&lt;script&gt;<br>function showResult(str) {<br>&nbsp; if (str.length==0) { <br>&nbsp; &nbsp;&nbsp;document.getElementById(&quot;livesearch&quot;).innerHTML=&quot;&quot;;<br>&nbsp;&nbsp;&nbsp; document.getElementById(&quot;livesearch&quot;).style.border=&quot;0px&quot;;<br>&nbsp; &nbsp; return;<br>&nbsp; }<br>&nbsp; var xmlhttp=new XMLHttpRequest();<br>&nbsp; xmlhttp.onreadystatechange=function() {<br>&nbsp; &nbsp; if (this.readyState==4 &amp;&amp; this.status==200) {<br>&nbsp; &nbsp; &nbsp;&nbsp;document.getElementById(&quot;livesearch&quot;).innerHTML=this.responseText;<br>&nbsp;&nbsp;&nbsp; &nbsp; document.getElementById(&quot;livesearch&quot;).style.border=&quot;1px solid #A5ACB2&quot;;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp; }<br>&nbsp; xmlhttp.open(&quot;GET&quot;,&quot;livesearch.php?q=&quot;+str,true);<br>&nbsp; xmlhttp.send();<br>}<br>&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;form&gt;<br>&lt;input type=&quot;text&quot; size=&quot;30&quot; onkeyup=&quot;showResult(this.value)&quot;&gt;<br>&lt;div id=&quot;livesearch&quot;&gt;&lt;/div&gt;<br>&lt;/form&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
         </div>
     </div>
-    <p>Source code explanation:</p>
-    <p>If the input field is empty (str.length==0), the function clears the content of the livesearch placeholder and exits the function.</p>
-    <p>If the input field is not empty, the showResult() function executes the following:</p>
+    <p>Пояснення вихідного коду:</p>
+    <p>Якщо поле введення порожнє (str.length==0), функція очищає вміст заповнювача livesearch і виходить із функції.</p>
+    <p>Якщо поле введення не порожнє, функція showResult() виконує наступне:</p>
     <ul>
-        <li>Create an XMLHttpRequest object</li>
-        <li>Create the function to be executed when the server response is ready</li>
-        <li>Send the request off to a file on the server</li>
-        <li>Notice that a parameter (q) is added to the URL (with the content of the input field)</li>
+        <li>Створити об&#8217;єкт XMLHttpRequest</li>
+        <li>Створити функцію, яка буде виконана, коли відповідь сервера буде готова</li>
+        <li>Надіслати запит у файл на сервері</li>
+        <li>Зверніть увагу, що до URL-адреси (з вмістом поля введення) додано параметр (q).</li>
     </ul>
     <hr>
     <div class="adver_adinfeed">
@@ -1341,20 +1341,22 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>PHP файл</h2>
-    <p>The page on the server called by the JavaScript above is a PHP file called &quot;livesearch.php&quot;.</p>
-    <p>The source code in &quot;livesearch.php&quot; searches an XML file for titles matching the search string and returns the result:</p>
+    <p>Сторінка на сервері, викликана JavaScript вище, є файлом PHP під назвою &quot;livesearch.php&quot;.</p>
+    <p>Вихідний код у &quot;livesearch.php&quot; шукає у файлі XML заголовки, що відповідають рядку пошуку, і повертає результат:</p>
     <div class="w3-example">
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>$xmlDoc=new DOMDocument();<br>$xmlDoc-&gt;load(&quot;links.xml&quot;);<br><br>$x=$xmlDoc-&gt;getElementsByTagName('link');<br> <br>//get the q parameter from URL<br>$q=$_GET[&quot;q&quot;];<br><br>//lookup all links from the xml file if length of q&gt;0<br>if (strlen($q)&gt;0) {<br>&nbsp; $hint=&quot;&quot;;<br>&nbsp; for($i=0; $i&lt;($x-&gt;length); $i++)&nbsp;{<br>&nbsp; &nbsp;&nbsp;$y=$x-&gt;item($i)-&gt;getElementsByTagName('title');<br>&nbsp;&nbsp;&nbsp; $z=$x-&gt;item($i)-&gt;getElementsByTagName('url');<br>&nbsp;&nbsp;&nbsp;if ($y-&gt;item(0)-&gt;nodeType==1)&nbsp;{<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;//find a link matching the search text<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;if (stristr($y-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue,$q))&nbsp;{<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($hint==&quot;&quot;)&nbsp;{<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$hint=&quot;&lt;a href='&quot; . <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$z-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue . <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;' target='_blank'&gt;&quot; . <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;$y-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue . &quot;&lt;/a&gt;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$hint=$hint . &quot;&lt;br /&gt;&lt;a href='&quot; . <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$z-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue . <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;' target='_blank'&gt;&quot; . <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;$y-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue . &quot;&lt;/a&gt;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br><br>// Set output to &quot;no suggestion&quot; if no hint was found<br>// or to the correct values<br>if ($hint==&quot;&quot;)&nbsp;{<br>&nbsp;&nbsp;$response=&quot;no suggestion&quot;;<br>} else&nbsp;{<br>&nbsp;&nbsp;$response=$hint;<br>}<br><br>//output the response<br>echo $response;<br>?&gt;
+            &lt;?php<br>$xmlDoc=new DOMDocument();<br>$xmlDoc-&gt;load(&quot;links.xml&quot;);<br><br>$x=$xmlDoc-&gt;getElementsByTagName('link');<br> <br>//отримати параметр q з URL<br>$q=$_GET[&quot;q&quot;];<br><br>//пошук усіх посилань у файлі xml, якщо його довжина становить q&gt;0<br>if (strlen($q)&gt;0) {<br>&nbsp; $hint=&quot;&quot;;<br>&nbsp; for($i=0; $i&lt;($x-&gt;length); $i++)&nbsp;{<br>&nbsp; &nbsp;&nbsp;$y=$x-&gt;item($i)-&gt;getElementsByTagName('title');<br>&nbsp;&nbsp;&nbsp; $z=$x-&gt;item($i)-&gt;getElementsByTagName('url');<br>&nbsp;&nbsp;&nbsp;if ($y-&gt;item(0)-&gt;nodeType==1)&nbsp;{<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;//знайти посилання, що відповідає пошуковому тексту<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;if (stristr($y-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue,$q))&nbsp;{<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($hint==&quot;&quot;)&nbsp;{<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$hint=&quot;&lt;a href='&quot; . <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$z-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue . <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;' target='_blank'&gt;&quot; . <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;$y-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue . &quot;&lt;/a&gt;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$hint=$hint . &quot;&lt;br /&gt;&lt;a href='&quot; . <br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$z-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue . <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;' target='_blank'&gt;&quot; . <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;$y-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue . &quot;&lt;/a&gt;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br><br>// Встановіть вихід на &quot;no suggestion&quot; якщо підказка не знайдена<br>// або до правильних значень<br>if ($hint==&quot;&quot;)&nbsp;{<br>&nbsp;&nbsp;$response=&quot;no suggestion&quot;;<br>} else&nbsp;{<br>&nbsp;&nbsp;$response=$hint;<br>}<br><br>//вивести відповідь<br>echo $response;<br>?&gt;
         </div>
     </div>
-    <p>If there is any text sent from the JavaScript (strlen($q) &gt; 0), the following happens:</p>
+    <p>Якщо з JavaScript (strlen($q) &gt; 0) надсилається будь-який текст, відбувається таке:</p>
     <ul>
-        <li>Load an XML file into a new XML DOM object</li>
-        <li>Loop through all&nbsp;&lt;title&gt; elements to find matches from the text sent from the JavaScript</li>
-        <li>Sets the correct url and title in the &quot;$response&quot; variable. If more than one match is found, all matches are added to the variable</li>
-        <li>If no matches are found, the $response variable is set to &quot;no suggestion&quot;</li>
+        <li>Завантажте файл XML у новий об&#8217;єкт XML DOM</li>
+        <li>Переглянути всі елементи &lt;title&gt; для пошуку збігів у тексті, надісланому з JavaScript</li>
+        <li>Установити правильну URL-адресу та заголовок у змінній &quot;$response&quot;. Якщо знайдено більше одного збігу, усі збіги додаються до змінної</li>
+        <li>Якщо збігів не знайдено, для змінної $response встановлюється значення &quot;no suggestion&quot; (&quot;немає пропозиції&quot;)</li>
     </ul>
+    <hr>
+    <p><b>Примітка.</b> Приклади працюють лише на сервері з підтримкою PHP.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="php_ajax_xml.html">&#10094; Prev</a>
