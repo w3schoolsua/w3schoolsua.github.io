@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP - AJAX та PHP. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP - AJAX та PHP. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP - AJAX та PHP. PHP файл. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1280,14 +1280,14 @@
         <a class="w3-right w3-btn" href="php_ajax_database.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">AJAX is used to create more interactive applications.</p>
+    <p class="intro"><strong>AJAX</strong> використовується для створення більш інтерактивних програм.</p>
     <hr>
     <h2>AJAX PHP Приклад</h2>
-    <p>The following example will demonstrate how a web page can communicate with a web server while a user type characters in an input field:</p>
+    <p>У наступному прикладі показано, як вебсторінка може спілкуватися з вебсервером, коли користувач вводить символи в поле введення:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-padding w3-white w3-margin-bottom notranslate">
-            <p><b>Start typing a name in the input field below:</b></p>
+            <p><b>Почніть вводити ім&#8217;я в полі введення нижче:</b></p>
             <form action="#">
                 <label for="fname">First name:</label>
                 <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
@@ -1297,36 +1297,36 @@
     </div>
     <hr>
     <h2>Пояснення прикладу</h2>
-    <p>In the example above, when a user types a character in the input field, a function called &quot;showHint()&quot; is executed.</p>
-    <p>The function is triggered by the onkeyup event.</p>
+    <p>У наведеному вище прикладі, коли користувач вводить символ у поле введення, функція &quot;showHint()&quot; виконується.</p>
+    <p>Функція запускається подією onkeyup.</p>
     <p>Тут HTML код:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate htmlHigh">
-            &lt;html&gt;<br>&lt;head&gt;<br>&lt;script&gt;<br>function showHint(str) {<br>&nbsp; if (str.length == 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&quot;txtHint&quot;).innerHTML = &quot;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;return;<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp; var xmlhttp = new XMLHttpRequest();<br>&nbsp;&nbsp;&nbsp; xmlhttp.onreadystatechange = function() {<br>&nbsp;&nbsp;&nbsp; &nbsp; if (this.readyState == 4 &amp;&amp; this.status == 200) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById(&quot;txtHint&quot;).innerHTML = this.responseText;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp; xmlhttp.open(&quot;GET&quot;, &quot;gethint.php?q=&quot; + str, true);<br>&nbsp;&nbsp;&nbsp;&nbsp;xmlhttp.send();<br>&nbsp;&nbsp;}<br>}<br>&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;p&gt;&lt;b&gt;Start typing a name in the input field below:&lt;/b&gt;&lt;/p&gt;<br>&lt;form action=&quot;&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;<br>&nbsp;&lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; onkeyup=&quot;showHint(this.value)&quot;&gt;<br>&lt;/form&gt;<br>&lt;p&gt;Suggestions: &lt;span id=&quot;txtHint&quot;&gt;&lt;/span&gt;&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;
+            &lt;html&gt;<br>&lt;head&gt;<br>&lt;script&gt;<br>function showHint(str) {<br>&nbsp; if (str.length == 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&quot;txtHint&quot;).innerHTML = &quot;&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;return;<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp; var xmlhttp = new XMLHttpRequest();<br>&nbsp;&nbsp;&nbsp; xmlhttp.onreadystatechange = function() {<br>&nbsp;&nbsp;&nbsp; &nbsp; if (this.readyState == 4 &amp;&amp; this.status == 200) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById(&quot;txtHint&quot;).innerHTML = this.responseText;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp; xmlhttp.open(&quot;GET&quot;, &quot;gethint.html?q=&quot; + str, true);<br>&nbsp;&nbsp;&nbsp;&nbsp;xmlhttp.send();<br>&nbsp;&nbsp;}<br>}<br>&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;p&gt;&lt;b&gt;Start typing a name in the input field below:&lt;/b&gt;&lt;/p&gt;<br>&lt;form action=&quot;&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;<br>&nbsp;&lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; onkeyup=&quot;showHint(this.value)&quot;&gt;<br>&lt;/form&gt;<br>&lt;p&gt;Suggestions: &lt;span id=&quot;txtHint&quot;&gt;&lt;/span&gt;&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../phptryit/demo_ajax_php.html">Виконати приклад &raquo;</a>
     </div>
-    <p>Code explanation:</p>
-    <p>First, check if the input field is empty (str.length == 0). If it is, clear the content of the txtHint placeholder and exit the function.</p>
-    <p>However, if the input field is not empty, do the following:</p>
+    <p>Пояснення коду:</p>
+    <p>По-перше, перевірте, чи поле введення порожнє (str.length == 0). Якщо так, очистіть вміст заповнювача txtHint і вийдіть із функції.</p>
+    <p>Однак, якщо поле введення не пусте, виконайте наступне:</p>
     <ul>
-        <li>Create an XMLHttpRequest object</li>
-        <li>Create the function to be executed when the server response is ready</li>
-        <li>Send the request off to a PHP file (gethint.php) on the server</li>
-        <li>Notice that q parameter is added to the url (gethint.php?q=&quot;+str)</li>
-        <li>And the str variable holds the content of the input field</li>
+        <li>Створіть об&#8217;єкт XMLHttpRequest</li>
+        <li>Створіть функцію, яка буде виконана, коли відповідь сервера буде готова</li>
+        <li>Надішліть запит у файл PHP (gethint.html) на сервері</li>
+        <li>Зверніть увагу, що параметр q додано до URL-адреси (gethint.html?q=&quot;+str)</li>
+        <li>І змінна str містить вміст поля введення</li>
     </ul>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>PHP файл - &quot;gethint.php&quot;</h2>
-    <p>The PHP file checks an array of names, and returns the corresponding name(s) to the browser:</p>
+</div>    <h2>PHP файл - &quot;gethint.html&quot;</h2>
+    <p>Файл PHP перевіряє масив імен і повертає відповідні імена браузеру:</p>
     <div class="w3-example">
         <div class="w3-code htmlHigh notranslate">
-            &lt;?php<br>// Array with names<br>
+            &lt;?php<br>// Масив з іменами<br>
             $a[] = &quot;Anna&quot;;<br>
             $a[] = &quot;Brittany&quot;;<br>
             $a[] = &quot;Cinderella&quot;;<br>
@@ -1357,7 +1357,7 @@
             $a[] = &quot;Ellen&quot;;<br>
             $a[] = &quot;Wenche&quot;;<br>
             $a[] = &quot;Vicky&quot;;<br><br>
-            // get the q parameter from URL<br>$q = $_REQUEST[&quot;q&quot;];<br><br>$hint = &quot;&quot;;<br><br>// lookup all hints from array if $q is different from &quot;&quot; <br>if ($q !== &quot;&quot;) {<br>&nbsp;&nbsp;$q = strtolower($q);<br>&nbsp;&nbsp;$len=strlen($q);<br>&nbsp;&nbsp;foreach($a as $name) {<br>&nbsp;&nbsp;&nbsp; if (stristr($q, substr($name, 0, $len))) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($hint === &quot;&quot;) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $hint = $name;<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $hint .= &quot;, $name&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br><br>// Output &quot;no suggestion&quot; if no hint was found or output correct values<br>echo $hint === &quot;&quot; ? &quot;no suggestion&quot; : $hint;<br>?&gt;</div>
+            // отримати параметр q з URL<br>$q = $_REQUEST[&quot;q&quot;];<br><br>$hint = &quot;&quot;;<br><br>// шукати всі підказки з масиву, якщо $q відрізняється від &quot;&quot; <br>if ($q !== &quot;&quot;) {<br>&nbsp;&nbsp;$q = strtolower($q);<br>&nbsp;&nbsp;$len=strlen($q);<br>&nbsp;&nbsp;foreach($a as $name) {<br>&nbsp;&nbsp;&nbsp; if (stristr($q, substr($name, 0, $len))) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($hint === &quot;&quot;) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $hint = $name;<br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $hint .= &quot;, $name&quot;;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br><br>// Вивести &quot;no suggestion&quot; якщо підказки не знайдено, або виведіть правильні значення<br>echo $hint === &quot;&quot; ? &quot;no suggestion&quot; : $hint;<br>?&gt;</div>
     </div>
     <hr>
     <div class="w3-clear nextprev">
