@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Функції масиву. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='PHP Довідник. Функції масиву. Інсталяція. Таблиця функцій. Повний довідник. Уроки для початківців. W3Schools українською'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Підручник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>ЯК ЗРОБИТИ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Підручник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Підручник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu sidebar Python-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div class='w3-light-grey' id='leftmenuinnerinner'>
+            <!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+            <h2 class='left'><span class='left_h2'>PHP</span> Підручник</h2>
+            <a target='_top' href='index.html'>PHP СТАРТ</a>
+            <a target='_top' href='php_intro.html'>PHP Інтро</a>
+            <a target='_top' href='php_install.html'>PHP Встановлення</a>
+            <a target='_top' href='php_syntax.html'>PHP Синтаксис</a>
+            <a target='_top' href='php_comments.html'>PHP Коментарі</a>
+            <a target='_top' href='php_variables.html'>PHP Змінні</a>
+            <div class='tut_overview'>
+                <a target='_top' href='php_variables.html'>Змінні</a>
+                <a target='_top' href='php_variables_scope.html'>Область дії змінних</a>
+            </div>
+            <a target='_top' href='php_echo_print.html'>PHP Echo / Print</a>
+            <a target='_top' href='php_datatypes.html'>PHP Типи даних</a>
+            <a target='_top' href='php_string.html'>PHP Рядки</a>
+            <a target='_top' href='php_numbers.html'>PHP Числа</a>
+            <a target='_top' href='php_math.html'>PHP Математика</a>
+            <a target='_top' href='php_constants.html'>PHP Константи</a>
+            <a target='_top' href='php_operators.html'>PHP Оператори</a>
+            <a target='_top' href='php_if_else.html'>PHP If...Else...Elseif</a>
+            <a target='_top' href='php_switch.html'>PHP Switch</a>
+            <a target='_top' href='php_looping.html'>PHP Цикли</a>
+            <div class='tut_overview'>
+                <a target='_top' href='php_looping.html'>Цикли</a>
+                <a target='_top' href='php_looping_while.html'>Цикл While</a>
+                <a target='_top' href='php_looping_do_while.html'>Цикл Do While</a>
+                <a target='_top' href='php_looping_for.html'>Цикл For</a>
+                <a target='_top' href='php_looping_foreach.html'>Цикл Foreach</a>
+                <a target='_top' href='php_looping_break.html'>Break/Continue</a>
+            </div>
+            <a target='_top' href='php_functions.html'>PHP Функції</a>
+            <a target='_top' href='php_arrays.html'>PHP Масиви</a>
+            <div class='tut_overview'>
+                <a target='_top' href='php_arrays.html'>Масиви</a>
+                <a target='_top' href='php_arrays_indexed.html'>Індексовані масиви</a>
+                <a target='_top' href='php_arrays_associative.html'>Асоціативні масиви</a>
+                <a target='_top' href='php_arrays_multidimensional.html'>Багатовимірні масиви</a>
+                <a target='_top' href='php_arrays_sort.html'>Сортування масивів</a>
+            </div>
+            <a target='_top' href='php_superglobals.html'>PHP Суперглобали</a>
+            <div class='tut_overview'>
+                <a target='_top' href='php_superglobals.html'>Суперглобали</a>
+                <a target='_top' href='php_superglobals_globals.html'>$GLOBALS</a>
+                <a target='_top' href='php_superglobals_server.html'>$_SERVER</a>
+                <a target='_top' href='php_superglobals_request.html'>$_REQUEST</a>
+                <a target='_top' href='php_superglobals_post.html'>$_POST</a>
+                <a target='_top' href='php_superglobals_get.html'>$_GET</a>
+            </div>
+            <a target='_top' href='php_regex.html'>PHP RegEx</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>PHP</span> Форми</h2>
+            <a target='_top' href='php_forms.html'>PHP Обробка форми</a>
+            <a target='_top' href='php_form_validation.html'>PHP Перевірка форми</a>
+            <a target='_top' href='php_form_required.html'>PHP Обов'язкові поля форми</a>
+            <a target='_top' href='php_form_url_email.html'>PHP Форма URL/E-mail</a>
+            <a target='_top' href='php_form_complete.html'>PHP Заповнення форми</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>PHP</span> Розширений</h2>
+            <a target='_top' href='php_date.html'>PHP Дата і час</a>
+            <a target='_top' href='php_includes.html'>PHP Підключення файлів</a>
+            <a target='_top' href='php_file.html'>PHP Обробка файлів</a>
+            <a target='_top' href='php_file_open.html'>PHP Файл відкрити/читати</a>
+            <a target='_top' href='php_file_create.html'>PHP Файл створити/записати</a>
+            <a target='_top' href='php_file_upload.html'>PHP Файл Завантажити</a>
+            <a target='_top' href='php_cookies.html'>PHP Кукі</a>
+            <a target='_top' href='php_sessions.html'>PHP Сесії</a>
+            <a target='_top' href='php_filter.html'>PHP Фільтри</a>
+            <a target='_top' href='php_filter_advanced.html'>PHP Розширені фільтри</a>
+            <a target='_top' href='php_callback_functions.html'>PHP Callback функції</a>
+            <a target='_top' href='php_json.html'>PHP JSON</a>
+            <a target='_top' href='php_exceptions.html'>PHP Винятки</a>
+            <!-- <a target='_top' href='php_error_handling.html'>PHP Error Handling</a>
+            <a target='_top' href='php_exception.html'>PHP Exception</a> -->
+            <br>
+            <h2 class='left'><span class='left_h2'>PHP</span> ООП</h2>
+            <a target='_top' href='php_oop_what_is.html'>PHP Що таке ООП</a>
+            <a target='_top' href='php_oop_classes_objects.html'>PHP класи/об'єкти</a>
+            <a target='_top' href='php_oop_constructor.html'>PHP Конструктор</a>
+            <a target='_top' href='php_oop_destructor.html'>PHP Деструктор</a>
+            <a target='_top' href='php_oop_access_modifiers.html'>PHP Модифікатори доступу</a>
+            <a target='_top' href='php_oop_inheritance.html'>PHP Спадкування</a>
+            <a target='_top' href='php_oop_constants.html'>PHP Константи</a>
+            <a target='_top' href='php_oop_classes_abstract.html'>PHP Абстрактні класи</a>
+            <a target='_top' href='php_oop_interfaces.html'>PHP Інтерфейси</a>
+            <a target='_top' href='php_oop_traits.html'>PHP Трейти</a>
+            <a target='_top' href='php_oop_static_methods.html'>PHP Статичні методи</a>
+            <a target='_top' href='php_oop_static_properties.html'>PHP Статичні властивості</a>
+            <a target='_top' href='php_namespaces.html'>PHP Простори імен</a>
+            <a target='_top' href='php_iterables.html'>PHP Ітерація</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>MySQL</span> База даних</h2>
+            <a target='_top' href='php_mysql_intro.html'>MySQL База даних</a>
+            <a target='_top' href='php_mysql_connect.html'>MySQL Підключення</a>
+            <a target='_top' href='php_mysql_create.html'>MySQL Створити БД</a>
+            <a target='_top' href='php_mysql_create_table.html'>MySQL Створити таблиці</a>
+            <a target='_top' href='php_mysql_insert.html'>MySQL Вставити дані</a>
+            <a target='_top' href='php_mysql_insert_lastid.html'>MySQL Отримати останній ID</a>
+            <a target='_top' href='php_mysql_insert_multiple.html'>MySQL Вставити кілька записів</a>
+            <a target='_top' href='php_mysql_prepared_statements.html'>MySQL Підготовлені інструкції</a>
+            <a target='_top' href='php_mysql_select.html'>MySQL Вибрати дані</a>
+            <a target='_top' href='php_mysql_select_where.html'>MySQL Where</a>
+            <a target='_top' href='php_mysql_select_orderby.html'>MySQL Order By</a>
+            <a target='_top' href='php_mysql_delete.html'>MySQL Видалення даних</a>
+            <a target='_top' href='php_mysql_update.html'>MySQL Оновлення даних</a>
+            <a target='_top' href='php_mysql_select_limit.html'>MySQL Обмеження даних</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>PHP</span> XML</h2>
+            <a target='_top' href='php_xml_parsers.html'>PHP XML Парсери</a>
+            <a target='_top' href='php_xml_simplexml_read.html'>PHP SimpleXML Парсер</a>
+            <a target='_top' href='php_xml_simplexml_get.html'>PHP SimpleXML - Get</a>
+            <a target='_top' href='php_xml_parser_expat.html'>PHP XML Expat</a>
+            <a target='_top' href='php_xml_dom.html'>PHP XML DOM</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>PHP</span> - AJAX</h2>
+            <a target='_top' href='php_ajax_intro.html'>AJAX Інтро</a>
+            <a target='_top' href='php_ajax_php.html'>AJAX PHP</a>
+            <a target='_top' href='php_ajax_database.html'>AJAX База даних</a>
+            <a target='_top' href='php_ajax_xml.html'>AJAX XML</a>
+            <a target='_top' href='php_ajax_livesearch.html'>AJAX Живий пошук</a>
+            <a target='_top' href='php_ajax_poll.html'>AJAX Опитування</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>PHP</span> Приклади</h2>
+            <a target='_top' href='php_examples.html'>PHP Приклади</a>
+            <a target='_top' href='php_compiler.html'>PHP Компілятор</a>
+            <a target='_top' href='php_quiz.html'>PHP Вікторина</a>
+            <a target='_top' href='php_exercises.html'>PHP Вправи</a>
+            <a target='_top' href='php_exam.html'>PHP Сертифікат</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>PHP</span> Довідник</h2>
+            <a target='_top' href='php_ref_overview.html'>PHP Огляд</a>
+            <a target='_top' href='php_ref_array.html'>PHP Масив</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_array.html'>array()</a>
+                <a target='_top' href='func_array_change_key_case.html'>array_change_key_case()</a>
+                <a target='_top' href='func_array_chunk.html'>array_chunk()</a>
+                <a target='_top' href='func_array_column.html'>array_column()</a>
+                <a target='_top' href='func_array_combine.html'>array_combine()</a>
+                <a target='_top' href='func_array_count_values.html'>array_count_values()</a>
+                <a target='_top' href='func_array_diff.html'>array_diff()</a>
+                <a target='_top' href='func_array_diff_assoc.html'>array_diff_assoc()</a>
+                <a target='_top' href='func_array_diff_key.html'>array_diff_key()</a>
+                <a target='_top' href='func_array_diff_uassoc.html'>array_diff_uassoc()</a>
+                <a target='_top' href='func_array_diff_ukey.html'>array_diff_ukey()</a>
+                <a target='_top' href='func_array_fill.html'>array_fill()</a>
+                <a target='_top' href='func_array_fill_keys.html'>array_fill_keys()</a>
+                <a target='_top' href='func_array_filter.html'>array_filter()</a>
+                <a target='_top' href='func_array_flip.html'>array_flip()</a>
+                <a target='_top' href='func_array_intersect.html'>array_intersect()</a>
+                <a target='_top' href='func_array_intersect_assoc.html'>array_intersect_assoc()</a>
+                <a target='_top' href='func_array_intersect_key.html'>array_intersect_key()</a>
+                <a target='_top' href='func_array_intersect_uassoc.html'>array_intersect_uassoc()</a>
+                <a target='_top' href='func_array_intersect_ukey.html'>array_intersect_ukey()</a>
+                <a target='_top' href='func_array_key_exists.html'>array_key_exists()</a>
+                <a target='_top' href='func_array_keys.html'>array_keys()</a>
+                <a target='_top' href='func_array_map.html'>array_map()</a>
+                <a target='_top' href='func_array_merge.html'>array_merge()</a>
+                <a target='_top' href='func_array_merge_recursive.html'>array_merge_recursive()</a>
+                <a target='_top' href='func_array_multisort.html'>array_multisort()</a>
+                <a target='_top' href='func_array_pad.html'>array_pad()</a>
+                <a target='_top' href='func_array_pop.html'>array_pop()</a>
+                <a target='_top' href='func_array_product.html'>array_product()</a>
+                <a target='_top' href='func_array_push.html'>array_push()</a>
+                <a target='_top' href='func_array_rand.html'>array_rand()</a>
+                <a target='_top' href='func_array_reduce.html'>array_reduce()</a>
+                <a target='_top' href='func_array_replace.html'>array_replace()</a>
+                <a target='_top' href='func_array_replace_recursive.html'>array_replace_recursive()</a>
+                <a target='_top' href='func_array_reverse.html'>array_reverse()</a>
+                <a target='_top' href='func_array_search.html'>array_search()</a>
+                <a target='_top' href='func_array_shift.html'>array_shift()</a>
+                <a target='_top' href='func_array_slice.html'>array_slice()</a>
+                <a target='_top' href='func_array_splice.html'>array_splice()</a>
+                <a target='_top' href='func_array_sum.html'>array_sum()</a>
+                <a target='_top' href='func_array_udiff.html'>array_udiff()</a>
+                <a target='_top' href='func_array_udiff_assoc.html'>array_udiff_assoc()</a>
+                <a target='_top' href='func_array_udiff_uassoc.html'>array_udiff_uassoc()</a>
+                <a target='_top' href='func_array_uintersect.html'>array_uintersect()</a>
+                <a target='_top' href='func_array_uintersect_assoc.html'>array_uintersect_assoc()</a>
+                <a target='_top' href='func_array_uintersect_uassoc.html'>array_uintersect_uassoc()</a>
+                <a target='_top' href='func_array_unique.html'>array_unique()</a>
+                <a target='_top' href='func_array_unshift.html'>array_unshift()</a>
+                <a target='_top' href='func_array_values.html'>array_values()</a>
+                <a target='_top' href='func_array_walk.html'>array_walk()</a>
+                <a target='_top' href='func_array_walk_recursive.html'>array_walk_recursive()</a>
+                <a target='_top' href='func_array_arsort.html'>arsort()</a>
+                <a target='_top' href='func_array_asort.html'>asort()</a>
+                <a target='_top' href='func_array_compact.html'>compact()</a>
+                <a target='_top' href='func_array_count.html'>count()</a>
+                <a target='_top' href='func_array_current.html'>current()</a>
+                <a target='_top' href='func_array_each.html'>each()</a>
+                <a target='_top' href='func_array_end.html'>end()</a>
+                <a target='_top' href='func_array_extract.html'>extract()</a>
+                <a target='_top' href='func_array_in_array.html'>in_array()</a>
+                <a target='_top' href='func_array_key.html'>key()</a>
+                <a target='_top' href='func_array_krsort.html'>krsort()</a>
+                <a target='_top' href='func_array_ksort.html'>ksort()</a>
+                <a target='_top' href='func_array_list.html'>list()</a>
+                <a target='_top' href='func_array_natcasesort.html'>natcasesort()</a>
+                <a target='_top' href='func_array_natsort.html'>natsort()</a>
+                <a target='_top' href='func_array_next.html'>next()</a>
+                <a target='_top' href='func_array_pos.html'>pos()</a>
+                <a target='_top' href='func_array_prev.html'>prev()</a>
+                <a target='_top' href='func_array_range.html'>range()</a>
+                <a target='_top' href='func_array_reset.html'>reset()</a>
+                <a target='_top' href='func_array_rsort.html'>rsort()</a>
+                <a target='_top' href='func_array_shuffle.html'>shuffle()</a>
+                <a target='_top' href='func_array_sizeof.html'>sizeof()</a>
+                <a target='_top' href='func_array_sort.html'>sort()</a>
+                <a target='_top' href='func_array_uasort.html'>uasort()</a>
+                <a target='_top' href='func_array_uksort.html'>uksort()</a>
+                <a target='_top' href='func_array_usort.html'>usort()</a>
+            </div>
+            <a target='_top' href='php_ref_calendar.html'>PHP Календар</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_cal_cal_days_in_month.html'>cal_days_in_month()</a>
+                <a target='_top' href='func_cal_cal_from_jd.html'>cal_from_jd()</a>
+                <a target='_top' href='func_cal_cal_info.html'>cal_info()</a>
+                <a target='_top' href='func_cal_cal_to_jd.html'>cal_to_jd()</a>
+                <a target='_top' href='func_cal_easter_date.html'>easter_date()</a>
+                <a target='_top' href='func_cal_easter_days.html'>easter_days()</a>
+                <a target='_top' href='func_cal_frenchtojd.html'>frenchtojd()</a>
+                <a target='_top' href='func_cal_gregoriantojd.html'>gregoriantojd()</a>
+                <a target='_top' href='func_cal_jddayofweek.html'>jddayofweek()</a>
+                <a target='_top' href='func_cal_jdmonthname.html'>jdmonthname()</a>
+                <a target='_top' href='func_cal_jdtofrench.html'>jdtofrench()</a>
+                <a target='_top' href='func_cal_jdtogregorian.html'>jdtogregorian()</a>
+                <a target='_top' href='func_cal_jdtojewish.html'>jdtojewish()</a>
+                <a target='_top' href='func_cal_jdtojulian.html'>jdtojulian()</a>
+                <a target='_top' href='func_cal_jdtounix.html'>jdtounix()</a>
+                <a target='_top' href='func_cal_jewishtojd.html'>jewishtojd()</a>
+                <a target='_top' href='func_cal_juliantojd.html'>juliantojd()</a>
+                <a target='_top' href='func_cal_unixtojd.html'>unixtojd()</a>
+            </div>
+            <a target='_top' href='php_ref_date.html'>PHP Дата</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_date_checkdate.html'>checkdate()</a>
+                <a target='_top' href='func_date_date_add.html'>date_add()</a>
+                <a target='_top' href='func_date_create_from_format.html'>date_create_from_format()</a>
+                <a target='_top' href='func_date_date_create.html'>date_create()</a>
+                <a target='_top' href='func_date_date_set.html'>date_date_set()</a>
+                <a target='_top' href='func_date_default_timezone_get.html'>date_default_timezone_get()</a>
+                <a target='_top' href='func_date_default_timezone_set.html'>date_default_timezone_set()</a>
+                <a target='_top' href='func_date_date_diff.html'>date_diff()</a>
+                <a target='_top' href='func_date_date_format.html'>date_format()</a>
+                <a target='_top' href='func_date_get_last_errors.html'>date_get_last_errors()</a>
+                <a target='_top' href='func_date_interval_create_from_date_string.html'>date_interval_create_from_date_string()</a>
+                <a target='_top' href='func_date_interval_format.html'>date_interval_format()</a>
+                <a target='_top' href='func_date_isodate_set.html'>date_isodate_set()</a>
+                <a target='_top' href='func_date_modify.html'>date_modify()</a>
+                <a target='_top' href='func_date_offset_get.html'>date_offset_get()</a>
+                <a target='_top' href='func_date_parse_from_format.html'>date_parse_from_format()</a>
+                <a target='_top' href='func_date_date_parse.html'>date_parse()</a>
+                <a target='_top' href='func_date_date_sub.html'>date_sub()</a>
+                <a target='_top' href='func_date_sun_info.html'>date_sun_info()</a>
+                <a target='_top' href='func_date_sunrise.html'>date_sunrise()</a>
+                <a target='_top' href='func_date_sunset.html'>date_sunset()</a>
+                <a target='_top' href='func_date_time_set.html'>date_time_set()</a>
+                <a target='_top' href='func_date_timestamp_get.html'>date_timestamp_get()</a>
+                <a target='_top' href='func_date_timestamp_set.html'>date_timestamp_set()</a>
+                <a target='_top' href='func_date_timezone_get.html'>date_timezone_get()</a>
+                <a target='_top' href='func_date_timezone_set.html'>date_timezone_set()</a>
+                <a target='_top' href='func_date_date.html'>date()</a>
+                <a target='_top' href='func_date_getdate.html'>getdate()</a>
+                <a target='_top' href='func_date_gettimeofday.html'>gettimeofday()</a>
+                <a target='_top' href='func_date_gmdate.html'>gmdate()</a>
+                <a target='_top' href='func_date_gmmktime.html'>gmmktime()</a>
+                <a target='_top' href='func_date_gmstrftime.html'>gmstrftimee()</a>
+                <a target='_top' href='func_date_idate.html'>idate()</a>
+                <a target='_top' href='func_date_localtime.html'>localtime()</a>
+                <a target='_top' href='func_date_microtime.html'>microtime()</a>
+                <a target='_top' href='func_date_mktime.html'>mktime()</a>
+                <a target='_top' href='func_date_strftime.html'>strftime()</a>
+                <a target='_top' href='func_date_strptime.html'>strptime()</a>
+                <a target='_top' href='func_date_strtotime.html'>strtotime()</a>
+                <a target='_top' href='func_date_time.html'>time()</a>
+                <a target='_top' href='func_date_timezone_abbreviations_list.html'>timezone_abbreviations_list()</a>
+                <a target='_top' href='func_date_timezone_identifiers_list.html'>timezone_identifiers_list()</a>
+                <a target='_top' href='func_date_timezone_location_get.html'>timezone_location_get()</a>
+                <a target='_top' href='func_date_timezone_name_from_abbr.html'>timezone_name_from_abbr()</a>
+                <a target='_top' href='func_date_timezone_name_get.html'>timezone_name_get()</a>
+                <a target='_top' href='func_date_timezone_offset_get.html'>timezone_offset_get()</a>
+                <a target='_top' href='func_date_timezone_open.html'>timezone_open()</a>
+                <a target='_top' href='func_date_timezone_transitions_get.html'>timezone_transitions_get()</a>
+                <a target='_top' href='func_date_timezone_version_get.html'>timezone_version_get()</a>
+            </div>
+            <a target='_top' href='php_ref_directory.html'>PHP Каталог</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_directory_chdir.html'>chdir()</a>
+                <a target='_top' href='func_directory_chroot.html'>chroot()</a>
+                <a target='_top' href='func_directory_closedir.html'>closedir()</a>
+                <a target='_top' href='func_directory_dir.html'>dir()</a>
+                <a target='_top' href='func_directory_getcwd.html'>getcwd()</a>
+                <a target='_top' href='func_directory_opendir.html'>opendir()</a>
+                <a target='_top' href='func_directory_readdir.html'>readdir()</a>
+                <a target='_top' href='func_directory_rewinddir.html'>rewinddir()</a>
+                <a target='_top' href='func_directory_scandir.html'>scandir()</a>
+            </div>
+            <a target='_top' href='php_ref_error.html'>PHP Помилка</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_error_debug_backtrace.html'>debug_backtrace()</a>
+                <a target='_top' href='func_error_debug_print_backtrace.html'>debug_print_backtrace()</a>
+                <a target='_top' href='func_error_get_last.html'>error_get_last()</a>
+                <a target='_top' href='func_error_log.html'>error_log()</a>
+                <a target='_top' href='func_error_reporting.html'>error_reporting()</a>
+                <a target='_top' href='func_error_restore_error_handler.html'>restore_error_handler()</a>
+                <a target='_top' href='func_error_restore_exception_handler.html'>restore_exception_handler()</a>
+                <a target='_top' href='func_error_set_error_handler.html'>set_error_handler()</a>
+                <a target='_top' href='func_error_set_exception_handler.html'>set_exception_handler()</a>
+                <a target='_top' href='func_error_trigger_error.html'>trigger_error()</a>
+            </div>
+            <a target='_top' href='php_ref_exception.html'>PHP Виняток</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='ref_exception_obj.html'>Exception()</a>
+                <a target='_top' href='ref_exception_getcode.html'>getCode()</a>
+                <a target='_top' href='ref_exception_getfile.html'>getFile()</a>
+                <a target='_top' href='ref_exception_getmessage.html'>getMessage()</a>
+                <a target='_top' href='ref_exception_getline.html'>getLine()</a>
+                <a target='_top' href='ref_exception_getprevious.html'>getPrevious()</a>
+                <a target='_top' href='ref_exception_gettrace.html'>getTrace()</a>
+                <a target='_top' href='ref_exception_gettraceasstring.html'>getTraceAsString()</a>
+            </div>
+            <a target='_top' href='php_ref_filesystem.html'>PHP Файлова система</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_filesystem_basename.html'>basename()</a>
+                <a target='_top' href='func_filesystem_chgrp.html'>chgrp()</a>
+                <a target='_top' href='func_filesystem_chmod.html'>chmod()</a>
+                <a target='_top' href='func_filesystem_chown.html'>chown()</a>
+                <a target='_top' href='func_filesystem_clearstatcache.html'>clearstatcache()</a>
+                <a target='_top' href='func_filesystem_copy.html'>copy()</a>
+                <a target='_top' href='func_filesystem_delete.html'>delete()</a>
+                <a target='_top' href='func_filesystem_dirname.html'>dirname()</a>
+                <a target='_top' href='func_filesystem_disk_free_space.html'>disk_free_space()</a>
+                <a target='_top' href='func_filesystem_disk_total_space.html'>disk_total_space()</a>
+                <a target='_top' href='func_filesystem_diskfreespace.html'>diskfreespace()</a>
+                <a target='_top' href='func_filesystem_fclose.html'>fclose()</a>
+                <a target='_top' href='func_filesystem_feof.html'>feof()</a>
+                <a target='_top' href='func_filesystem_fflush.html'>fflush()</a>
+                <a target='_top' href='func_filesystem_fgetc.html'>fgetc()</a>
+                <a target='_top' href='func_filesystem_fgetcsv.html'>fgetcsv()</a>
+                <a target='_top' href='func_filesystem_fgets.html'>fgets()</a>
+                <a target='_top' href='func_filesystem_fgetss.html'>fgetss()</a>
+                <a target='_top' href='func_filesystem_file.html'>file()</a>
+                <a target='_top' href='func_filesystem_file_exists.html'>file_exists()</a>
+                <a target='_top' href='func_filesystem_file_get_contents.html'>file_get_contents()</a>
+                <a target='_top' href='func_filesystem_file_put_contents.html'>file_put_contents()</a>
+                <a target='_top' href='func_filesystem_fileatime.html'>fileatime()</a>
+                <a target='_top' href='func_filesystem_filectime.html'>filectime()</a>
+                <a target='_top' href='func_filesystem_filegroup.html'>filegroup()</a>
+                <a target='_top' href='func_filesystem_fileinode.html'>fileinode()</a>
+                <a target='_top' href='func_filesystem_filemtime.html'>filemtime()</a>
+                <a target='_top' href='func_filesystem_fileowner.html'>fileowner()</a>
+                <a target='_top' href='func_filesystem_fileperms.html'>fileperms()</a>
+                <a target='_top' href='func_filesystem_filesize.html'>filesize()</a>
+                <a target='_top' href='func_filesystem_filetype.html'>filetype()</a>
+                <a target='_top' href='func_filesystem_flock.html'>flock()</a>
+                <a target='_top' href='func_filesystem_fnmatch.html'>fnmatch()</a>
+                <a target='_top' href='func_filesystem_fopen.html'>fopen()</a>
+                <a target='_top' href='func_filesystem_fpassthru.html'>fpassthru()</a>
+                <a target='_top' href='func_filesystem_fputcsv.html'>fputcsv()</a>
+                <a target='_top' href='func_filesystem_fputs.html'>fputs()</a>
+                <a target='_top' href='func_filesystem_fread.html'>fread()</a>
+                <a target='_top' href='func_filesystem_fscanf.html'>fscanf()</a>
+                <a target='_top' href='func_filesystem_fseek.html'>fseek()</a>
+                <a target='_top' href='func_filesystem_fstat.html'>fstat()</a>
+                <a target='_top' href='func_filesystem_ftell.html'>ftell()</a>
+                <a target='_top' href='func_filesystem_ftruncate.html'>ftruncate()</a>
+                <a target='_top' href='func_filesystem_fwrite.html'>fwrite()</a>
+                <a target='_top' href='func_filesystem_glob.html'>glob()</a>
+                <a target='_top' href='func_filesystem_is_dir.html'>is_dir()</a>
+                <a target='_top' href='func_filesystem_is_executable.html'>is_executable()</a>
+                <a target='_top' href='func_filesystem_is_file.html'>is_file()</a>
+                <a target='_top' href='func_filesystem_is_link.html'>is_link()</a>
+                <a target='_top' href='func_filesystem_is_readable.html'>is_readable()</a>
+                <a target='_top' href='func_filesystem_is_uploaded_file.html'>is_uploaded_file()</a>
+                <a target='_top' href='func_filesystem_is_writable.html'>is_writable()</a>
+                <a target='_top' href='func_filesystem_is_writeable.html'>is_writeable()</a>
+                <a target='_top' href='func_filesystem_lchgrp.html'>lchgrp()</a>
+                <a target='_top' href='func_filesystem_lchown.html'>lchown()</a>
+                <a target='_top' href='func_filesystem_link.html'>link()</a>
+                <a target='_top' href='func_filesystem_linkinfo.html'>linkinfo()</a>
+                <a target='_top' href='func_filesystem_lstat.html'>lstat()</a>
+                <a target='_top' href='func_filesystem_mkdir.html'>mkdir()</a>
+                <a target='_top' href='func_filesystem_move_uploaded_file.html'>move_uploaded_file()</a>
+                <a target='_top' href='func_filesystem_parse_ini_file.html'>parse_ini_file()</a>
+                <a target='_top' href='func_filesystem_parse_ini_string.html'>parse_ini_string()</a>
+                <a target='_top' href='func_filesystem_pathinfo.html'>pathinfo()</a>
+                <a target='_top' href='func_filesystem_pclose.html'>pclose()</a>
+                <a target='_top' href='func_filesystem_popen.html'>popen()</a>
+                <a target='_top' href='func_filesystem_readfile.html'>readfile()</a>
+                <a target='_top' href='func_filesystem_readlink.html'>readlink()</a>
+                <a target='_top' href='func_filesystem_realpath.html'>realpath()</a>
+                <a target='_top' href='func_filesystem_realpath_cache_get.html'>realpath_cache_get()</a>
+                <a target='_top' href='func_filesystem_realpath_cache_size.html'>realpath_cache_size()</a>
+                <a target='_top' href='func_filesystem_rename.html'>rename()</a>
+                <a target='_top' href='func_filesystem_rewind.html'>rewind()</a>
+                <a target='_top' href='func_filesystem_rmdir.html'>rmdir()</a>
+                <a target='_top' href='func_filesystem_set_file_buffer.html'>set_file_buffer()</a>
+                <a target='_top' href='func_filesystem_stat.html'>stat()</a>
+                <a target='_top' href='func_filesystem_symlink.html'>symlink()</a>
+                <a target='_top' href='func_filesystem_tempnam.html'>tempnam()</a>
+                <a target='_top' href='func_filesystem_tmpfile.html'>tmpfile()</a>
+                <a target='_top' href='func_filesystem_touch.html'>touch()</a>
+                <a target='_top' href='func_filesystem_umask.html'>umask()</a>
+                <a target='_top' href='func_filesystem_unlink.html'>unlink()</a>
+            </div>
+            <a target='_top' href='php_ref_filter.html'>PHP Фільтр</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_filter_has_var.html'>filter_has_var()</a>
+                <a target='_top' href='func_filter_id.html'>filter_id()</a>
+                <a target='_top' href='func_filter_input.html'>filter_input()</a>
+                <a target='_top' href='func_filter_input_array.html'>filter_input_array()</a>
+                <a target='_top' href='func_filter_list.html'>filter_list()</a>
+                <a target='_top' href='func_filter_var.html'>filter_var()</a>
+                <a target='_top' href='func_filter_var_array.html'>filter_var_array()</a>
+            </div>
+            <a target='_top' href='php_ref_ftp.html'>PHP FTP</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_ftp_alloc.html'>ftp_alloc()</a>
+                <a target='_top' href='func_ftp_cdup.html'>ftp_cdup()</a>
+                <a target='_top' href='func_ftp_chdir.html'>ftp_chdir()</a>
+                <a target='_top' href='func_ftp_chmod.html'>ftp_chmod()</a>
+                <a target='_top' href='func_ftp_close.html'>ftp_close()</a>
+                <a target='_top' href='func_ftp_connect.html'>ftp_connect()</a>
+                <a target='_top' href='func_ftp_delete.html'>ftp_delete()</a>
+                <a target='_top' href='func_ftp_exec.html'>ftp_exec()</a>
+                <a target='_top' href='func_ftp_fget.html'>ftp_fget()</a>
+                <a target='_top' href='func_ftp_fput.html'>ftp_fput()</a>
+                <a target='_top' href='func_ftp_get.html'>ftp_get()</a>
+                <a target='_top' href='func_ftp_get_option.html'>ftp_get_option()</a>
+                <a target='_top' href='func_ftp_login.html'>ftp_login()</a>
+                <a target='_top' href='func_ftp_mdtm.html'>ftp_mdtm()</a>
+                <a target='_top' href='func_ftp_mkdir.html'>ftp_mkdir()</a>
+                <a target='_top' href='func_ftp_mlsd.html'>ftp_mlsd()</a>
+                <a target='_top' href='func_ftp_nb_continue.html'>ftp_nb_continue()</a>
+                <a target='_top' href='func_ftp_nb_fget.html'>ftp_nb_fget()</a>
+                <a target='_top' href='func_ftp_nb_fput.html'>ftp_nb_fput()</a>
+                <a target='_top' href='func_ftp_nb_get.html'>ftp_nb_get()</a>
+                <a target='_top' href='func_ftp_nb_put.html'>ftp_nb_put()</a>
+                <a target='_top' href='func_ftp_nlist.html'>ftp_nlist()</a>
+                <a target='_top' href='func_ftp_pasv.html'>ftp_pasv()</a>
+                <a target='_top' href='func_ftp_put.html'>ftp_put()</a>
+                <a target='_top' href='func_ftp_pwd.html'>ftp_pwd()</a>
+                <a target='_top' href='func_ftp_quit.html'>ftp_quit()</a>
+                <a target='_top' href='func_ftp_raw.html'>ftp_raw()</a>
+                <a target='_top' href='func_ftp_rawlist.html'>ftp_rawlist()</a>
+                <a target='_top' href='func_ftp_rename.html'>ftp_rename()</a>
+                <a target='_top' href='func_ftp_rmdir.html'>ftp_rmdir()</a>
+                <a target='_top' href='func_ftp_set_option.html'>ftp_set_option()</a>
+                <a target='_top' href='func_ftp_site.html'>ftp_site()</a>
+                <a target='_top' href='func_ftp_size.html'>ftp_size()</a>
+                <a target='_top' href='func_ftp_ssl_connect.html'>ftp_ssl_connect()</a>
+                <a target='_top' href='func_ftp_systype.html'>ftp_systype()</a>
+            </div>
+            <a target='_top' href='php_ref_json.html'>PHP JSON</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_json_decode.html'>json_decode()</a>
+                <a target='_top' href='func_json_encode.html'>json_encode()</a>
+                <!--<a target='_top' href='func_json_last_error.html'>json_last_error()</a>
+                    <a target='_top' href='func_json_last_error_msg.html'>json_last_error_msg()</a>-->
+            </div>
+
+            <a target='_top' href='php_ref_keywords.html'>PHP Ключові слова</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='keyword_abstract.html'>abstract</a>
+                <a target='_top' href='keyword_and.html'>and</a>
+                <a target='_top' href='keyword_as.html'>as</a>
+                <a target='_top' href='keyword_break.html'>break</a>
+                <a target='_top' href='keyword_callable.html'>callable</a>
+                <a target='_top' href='keyword_case.html'>case</a>
+                <a target='_top' href='keyword_catch.html'>catch</a>
+                <a target='_top' href='keyword_class.html'>class</a>
+                <a target='_top' href='keyword_clone.html'>clone</a>
+                <a target='_top' href='keyword_const.html'>const</a>
+                <a target='_top' href='keyword_continue.html'>continue</a>
+                <a target='_top' href='keyword_declare.html'>declare</a>
+                <a target='_top' href='keyword_default.html'>default</a>
+                <a target='_top' href='keyword_do.html'>do</a>
+                <a target='_top' href='keyword_echo.html'>echo</a>
+                <a target='_top' href='keyword_else.html'>else</a>
+                <a target='_top' href='keyword_elseif.html'>elseif</a>
+                <a target='_top' href='keyword_empty.html'>empty</a>
+                <a target='_top' href='keyword_enddeclare.html'>enddeclare</a>
+                <a target='_top' href='keyword_endfor.html'>endfor</a>
+                <a target='_top' href='keyword_endforeach.html'>endforeach</a>
+                <a target='_top' href='keyword_endif.html'>endif</a>
+                <a target='_top' href='keyword_endswitch.html'>endswitch</a>
+                <a target='_top' href='keyword_extends.html'>extends</a>
+                <a target='_top' href='keyword_final.html'>final</a>
+                <a target='_top' href='keyword_finally.html'>finally</a>
+                <a target='_top' href='keyword_fn.html'>fn</a>
+                <a target='_top' href='keyword_for.html'>for</a>
+                <a target='_top' href='keyword_foreach.html'>foreach</a>
+                <a target='_top' href='keyword_function.html'>function</a>
+                <a target='_top' href='keyword_global.html'>global</a>
+                <a target='_top' href='keyword_if.html'>if</a>
+                <a target='_top' href='keyword_implements.html'>implements</a>
+                <a target='_top' href='keyword_include.html'>include</a>
+                <a target='_top' href='keyword_include_once.html'>include_once</a>
+                <a target='_top' href='keyword_instanceof.html'>instanceof</a>
+                <a target='_top' href='keyword_insteadof.html'>insteadof</a>
+                <a target='_top' href='keyword_interface.html'>interface</a>
+                <a target='_top' href='keyword_isset.html'>isset</a>
+                <a target='_top' href='keyword_list.html'>list</a>
+                <a target='_top' href='keyword_namespace.html'>namespace</a>
+                <a target='_top' href='keyword_new.html'>new</a>
+                <a target='_top' href='keyword_or.html'>or</a>
+                <a target='_top' href='keyword_print.html'>print</a>
+                <a target='_top' href='keyword_private.html'>private</a>
+                <a target='_top' href='keyword_protected.html'>protected</a>
+                <a target='_top' href='keyword_public.html'>public</a>
+                <a target='_top' href='keyword_require.html'>require</a>
+                <a target='_top' href='keyword_require_once.html'>require_once</a>
+                <a target='_top' href='keyword_return.html'>return</a>
+                <a target='_top' href='keyword_static.html'>static</a>
+                <a target='_top' href='keyword_switch.html'>switch</a>
+                <a target='_top' href='keyword_throw.html'>throw</a>
+                <a target='_top' href='keyword_trait.html'>trait</a>
+                <a target='_top' href='keyword_try.html'>try</a>
+                <a target='_top' href='keyword_use.html'>use</a>
+                <a target='_top' href='keyword_var.html'>var</a>
+                <a target='_top' href='keyword_while.html'>while</a>
+                <a target='_top' href='keyword_xor.html'>xor</a>
+                <a target='_top' href='keyword_yield.html'>yield</a>
+                <a target='_top' href='keyword_yield_from.html'>yield from</a>
+            </div>
+
+            <a target='_top' href='php_ref_libxml.html'>PHP Libxml</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_libxml_clear_errors.html'>libxml_clear_errors()</a>
+                <a target='_top' href='func_libxml_disable_entity_loader.html'>libxml_disable_entity_loader()</a>
+                <a target='_top' href='func_libxml_get_errors.html'>libxml_get_errors()</a>
+                <a target='_top' href='func_libxml_get_last_error.html'>libxml_get_last_error()</a>
+                <a target='_top' href='func_libxml_set_external_entity_loader.html'>libxml_set_external_entity_loader()</a>
+                <a target='_top' href='func_libxml_set_streams_context.html'>libxml_set_streams_context()</a>
+                <a target='_top' href='func_libxml_use_internal_errors.html'>libxml_use_internal_errors()</a>
+            </div>
+            <a target='_top' href='php_ref_mail.html'>PHP Пошта</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_mail_ezmlm_hash.html'>ezmlm_hash()</a>
+                <a target='_top' href='func_mail_mail.html'>mail()</a>
+            </div>
+            <a target='_top' href='php_ref_math.html'>PHP Математика</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_math_abs.html'>abs()</a>
+                <a target='_top' href='func_math_acos.html'>acos()</a>
+                <a target='_top' href='func_math_acosh.html'>acosh()</a>
+                <a target='_top' href='func_math_asin.html'>asin()</a>
+                <a target='_top' href='func_math_asinh.html'>asinh()</a>
+                <a target='_top' href='func_math_atan.html'>atan()</a>
+                <a target='_top' href='func_math_atan2.html'>atan2()</a>
+                <a target='_top' href='func_math_atanh.html'>atanh()</a>
+                <a target='_top' href='func_math_base_convert.html'>base_convert()</a>
+                <a target='_top' href='func_math_bindec.html'>bindec()</a>
+                <a target='_top' href='func_math_ceil.html'>ceil()</a>
+                <a target='_top' href='func_math_cos.html'>cos()</a>
+                <a target='_top' href='func_math_cosh.html'>cosh()</a>
+                <a target='_top' href='func_math_decbin.html'>decbin()</a>
+                <a target='_top' href='func_math_dechex.html'>dechex()</a>
+                <a target='_top' href='func_math_decoct.html'>decoct()</a>
+                <a target='_top' href='func_math_deg2rad.html'>deg2rad()</a>
+                <a target='_top' href='func_math_exp.html'>exp()</a>
+                <a target='_top' href='func_math_expm1.html'>expm1()</a>
+                <a target='_top' href='func_math_floor.html'>floor()</a>
+                <a target='_top' href='func_math_fmod.html'>fmod()</a>
+                <a target='_top' href='func_math_getrandmax.html'>getrandmax()</a>
+                <a target='_top' href='func_math_hexdec.html'>hexdec()</a>
+                <a target='_top' href='func_math_hypot.html'>hypot()</a>
+                <a target='_top' href='func_math_intdiv.html'>intdiv()</a>
+                <a target='_top' href='func_math_is_finite.html'>is_finite()</a>
+                <a target='_top' href='func_math_is_infinite.html'>is_infinite()</a>
+                <a target='_top' href='func_math_is_nan.html'>is_nan()</a>
+                <a target='_top' href='func_math_lcg_value.html'>lcg_value()</a>
+                <a target='_top' href='func_math_log.html'>log()</a>
+                <a target='_top' href='func_math_log10.html'>log10()</a>
+                <a target='_top' href='func_math_log1p.html'>log1p()</a>
+                <a target='_top' href='func_math_max.html'>max()</a>
+                <a target='_top' href='func_math_min.html'>min()</a>
+                <a target='_top' href='func_math_mt_getrandmax.html'>mt_getrandmax()</a>
+                <a target='_top' href='func_math_mt_rand.html'>mt_rand()</a>
+                <a target='_top' href='func_math_mt_srand.html'>mt_srand()</a>
+                <a target='_top' href='func_math_octdec.html'>octdec()</a>
+                <a target='_top' href='func_math_pi.html'>pi()</a>
+                <a target='_top' href='func_math_pow.html'>pow()</a>
+                <a target='_top' href='func_math_rad2deg.html'>rad2deg()</a>
+                <a target='_top' href='func_math_rand.html'>rand()</a>
+                <a target='_top' href='func_math_round.html'>round()</a>
+                <a target='_top' href='func_math_sin.html'>sin()</a>
+                <a target='_top' href='func_math_sinh.html'>sinh()</a>
+                <a target='_top' href='func_math_sqrt.html'>sqrt()</a>
+                <a target='_top' href='func_math_srand.html'>srand()</a>
+                <a target='_top' href='func_math_tan.html'>tan()</a>
+                <a target='_top' href='func_math_tanh.html'>tanh()</a>
+            </div>
+            <a target='_top' href='php_ref_misc.html'>PHP Різне</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_misc_connection_aborted.html'>connection_aborted()</a>
+                <a target='_top' href='func_misc_connection_status.html'>connection_status()</a>
+                <a target='_top' href='func_misc_connection_timeout.html'>connection_timeout()</a>
+                <a target='_top' href='func_misc_constant.html'>constant()</a>
+                <a target='_top' href='func_misc_define.html'>define()</a>
+                <a target='_top' href='func_misc_defined.html'>defined()</a>
+                <a target='_top' href='func_misc_die.html'>die()</a>
+                <a target='_top' href='func_misc_eval.html'>eval()</a>
+                <a target='_top' href='func_misc_exit.html'>exit()</a>
+                <a target='_top' href='func_misc_get_browser.html'>get_browser()</a>
+                <a target='_top' href='func_misc___halt_compiler.html'>__halt_compiler()</a>
+                <a target='_top' href='func_misc_highlight_file.html'>highlight_file()</a>
+                <a target='_top' href='func_misc_highlight_string.html'>highlight_string()</a>
+                <a target='_top' href='func_misc_hrtime.html'>hrtime()</a>
+                <a target='_top' href='func_misc_ignore_user_abort.html'>ignore_user_abort()</a>
+                <a target='_top' href='func_misc_pack.html'>pack()</a>
+                <a target='_top' href='func_misc_php_strip_whitespace.html'>php_strip_whitespace()</a>
+                <a target='_top' href='func_misc_show_source.html'>show_source()</a>
+                <a target='_top' href='func_misc_sleep.html'>sleep()</a>
+                <a target='_top' href='func_misc_sys_getloadavg.html'>sys_getloadavg()</a>
+                <a target='_top' href='func_misc_time_nanosleep.html'>time_nanosleep()</a>
+                <a target='_top' href='func_misc_time_sleep_until.html'>time_sleep_until()</a>
+                <a target='_top' href='func_misc_uniqid.html'>uniqid()</a>
+                <a target='_top' href='func_misc_unpack.html'>unpack()</a>
+                <a target='_top' href='func_misc_usleep.html'>usleep()</a>
+            </div>
+            <a target='_top' href='php_ref_mysqli.html'>PHP MySQLi</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_mysqli_affected_rows.html'>affected_rows</a>
+                <a target='_top' href='func_mysqli_autocommit.html'>autocommit</a>
+                <a target='_top' href='func_mysqli_change_user.html'>change_user</a>
+                <a target='_top' href='func_mysqli_character_set_name.html'>character_set_name</a>
+                <a target='_top' href='func_mysqli_close.html'>close</a>
+                <a target='_top' href='func_mysqli_commit.html'>commit</a>
+                <a target='_top' href='func_mysqli_connect.html'>connect</a>
+                <a target='_top' href='func_mysqli_connect_errno.html'>connect_errno</a>
+                <a target='_top' href='func_mysqli_connect_error.html'>connect_error</a>
+                <a target='_top' href='func_mysqli_data_seek.html'>data_seek</a>
+                <a target='_top' href='func_mysqli_debug.html'>debug</a>
+                <a target='_top' href='func_mysqli_dump_debug_info.html'>dump_debug_info</a>
+                <a target='_top' href='func_mysqli_errno.html'>errno</a>
+                <a target='_top' href='func_mysqli_error.html'>error</a>
+                <a target='_top' href='func_mysqli_error_list.html'>error_list</a>
+                <a target='_top' href='func_mysqli_fetch_all.html'>fetch_all</a>
+                <a target='_top' href='func_mysqli_fetch_array.html'>fetch_array</a>
+                <a target='_top' href='func_mysqli_fetch_assoc.html'>fetch_assoc</a>
+                <a target='_top' href='func_mysqli_fetch_field.html'>fetch_field</a>
+                <a target='_top' href='func_mysqli_fetch_field_direct.html'>fetch_field_direct</a>
+                <a target='_top' href='func_mysqli_fetch_fields.html'>fetch_fields</a>
+                <a target='_top' href='func_mysqli_fetch_lengths.html'>fetch_lengths</a>
+                <a target='_top' href='func_mysqli_fetch_object.html'>fetch_object</a>
+                <a target='_top' href='func_mysqli_fetch_row.html'>fetch_row</a>
+                <a target='_top' href='func_mysqli_field_count.html'>field_count</a>
+                <a target='_top' href='func_mysqli_field_seek.html'>field_seek</a>
+                <a target='_top' href='func_mysqli_get_charset.html'>get_charset</a>
+                <a target='_top' href='func_mysqli_get_client_info.html'>get_client_info</a>
+                <a target='_top' href='func_mysqli_get_client_stats.html'>get_client_stats</a>
+                <a target='_top' href='func_mysqli_get_client_version.html'>get_client_version</a>
+                <a target='_top' href='func_mysqli_get_connection_stats.html'>get_connection_stats</a>
+                <a target='_top' href='func_mysqli_get_host_info.html'>get_host_info</a>
+                <a target='_top' href='func_mysqli_get_proto_info.html'>get_proto_info</a>
+                <a target='_top' href='func_mysqli_get_server_info.html'>get_server_info</a>
+                <a target='_top' href='func_mysqli_get_server_version.html'>get_server_version</a>
+                <a target='_top' href='func_mysqli_info.html'>info</a>
+                <a target='_top' href='func_mysqli_init.html'>init</a>
+                <a target='_top' href='func_mysqli_insert_id.html'>insert_id</a>
+                <a target='_top' href='func_mysqli_kill.html'>kill</a>
+                <a target='_top' href='func_mysqli_more_results.html'>more_results</a>
+                <a target='_top' href='func_mysqli_multi_query.html'>multi_query</a>
+                <a target='_top' href='func_mysqli_next_result.html'>next_result</a>
+                <a target='_top' href='func_mysqli_options.html'>options</a>
+                <a target='_top' href='func_mysqli_ping.html'>ping</a>
+                <a target='_top' href='func_mysqli_poll.html'>poll</a>
+                <a target='_top' href='func_mysqli_prepare.html'>prepare</a>
+                <a target='_top' href='func_mysqli_query.html'>query</a>
+                <a target='_top' href='func_mysqli_real_connect.html'>real_connect</a>
+                <a target='_top' href='func_mysqli_real_escape_string.html'>real_escape_string</a>
+                <a target='_top' href='func_mysqli_real_query.html'>real_query</a>
+                <a target='_top' href='func_mysqli_reap_async_query.html'>reap_async_query</a>
+                <a target='_top' href='func_mysqli_refresh.html'>refresh</a>
+                <a target='_top' href='func_mysqli_rollback.html'>rollback</a>
+                <a target='_top' href='func_mysqli_select_db.html'>select_db</a>
+                <a target='_top' href='func_mysqli_set_charset.html'>set_charset</a>
+                <a target='_top' href='func_mysqli_set_local_infile_handler.html'>set_local_infile_handler</a>
+                <a target='_top' href='func_mysqli_sqlstate.html'>sqlstate</a>
+                <a target='_top' href='func_mysqli_ssl_set.html'>ssl_set</a>
+                <a target='_top' href='func_mysqli_stat.html'>stat</a>
+                <a target='_top' href='func_mysqli_stmt_init.html'>stmt_init</a>
+                <a target='_top' href='func_mysqli_thread_id.html'>thread_id</a>
+                <a target='_top' href='func_mysqli_thread_safe.html'>thread_safe</a>
+                <a target='_top' href='func_mysqli_use_result.html'>use_result</a>
+                <a target='_top' href='func_mysqli_warning_count.html'>warning_count</a>
+            </div>
+            <a target='_top' href='php_ref_network.html'>PHP Мережа</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_network_checkdnsrr.html'>checkdnsrr()</a>
+                <a target='_top' href='func_network_closelog.html'>closelog()</a>
+                <a target='_top' href='func_network_dns_check_record.html'>dns_check_record()</a>
+                <a target='_top' href='func_network_dns_get_mx.html'>dns_get_mx()</a>
+                <a target='_top' href='func_network_dns_get_record.html'>dns_get_record()</a>
+                <a target='_top' href='func_network_fsockopen.html'>fsockopen()</a>
+                <a target='_top' href='func_network_gethostbyaddr.html'>gethostbyaddr()</a>
+                <a target='_top' href='func_network_gethostbyname.html'>gethostbyname()</a>
+                <a target='_top' href='func_network_gethostbynamel.html'>gethostbynamel()</a>
+                <a target='_top' href='func_network_gethostname.html'>gethostname()</a>
+                <a target='_top' href='func_network_getmxrr.html'>getmxrr()</a>
+                <a target='_top' href='func_network_getprotobyname.html'>getprotobyname()</a>
+                <a target='_top' href='func_network_getprotobynumber.html'>getprotobynumber()</a>
+                <a target='_top' href='func_network_getservbyname.html'>getservbyname()</a>
+                <a target='_top' href='func_network_getservbyport.html'>getservbyport()</a>
+                <a target='_top' href='func_network_header_register_callback.html'>header_register_callback()</a>
+                <a target='_top' href='func_network_header_remove.html'>header_remove()</a>
+                <a target='_top' href='func_network_header.html'>header()</a>
+                <a target='_top' href='func_network_headers_list.html'>headers_list()</a>
+                <a target='_top' href='func_network_headers_sent.html'>headers_sent()</a>
+                <a target='_top' href='func_network_http_response_code.html'>http_response_code()</a>
+                <a target='_top' href='func_network_inet_ntop.html'>inet_ntop()</a>
+                <a target='_top' href='func_network_inet_pton.html'>inet_pton()</a>
+                <a target='_top' href='func_network_ip2long.html'>ip2long()</a>
+                <a target='_top' href='func_network_long2ip.html'>long2ip()</a>
+                <a target='_top' href='func_network_openlog.html'>openlog()</a>
+                <a target='_top' href='func_network_pfsockopen.html'>pfsockopen()</a>
+                <a target='_top' href='func_network_setcookie.html'>setcookie()</a>
+                <a target='_top' href='func_network_setrawcookie.html'>setrawcookie()</a>
+                <a target='_top' href='func_network_socket_get_status.html'>socket_get_status()</a>
+                <a target='_top' href='func_network_socket_set_blocking.html'>socket_set_blocking()</a>
+                <a target='_top' href='func_network_socket_set_timeout.html'>socket_set_timeout()</a>
+                <a target='_top' href='func_network_syslog.html'>syslog()</a>
+            </div>
+            <a target='_top' href='php_ref_output_control.html'>PHP Output Control</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='ref_output_flush.html'>flush()</a>
+                <a target='_top' href='ref_output_ob_clean.html'>ob_clean()</a>
+                <a target='_top' href='ref_output_ob_end_clean.html'>ob_end_clean()</a>
+                <a target='_top' href='ref_output_ob_end_flush.html'>ob_end_flush()</a>
+                <a target='_top' href='ref_output_ob_flush.html'>ob_flush()</a>
+                <a target='_top' href='ref_output_ob_get_clean.html'>ob_get_clean()</a>
+                <a target='_top' href='ref_output_ob_get_contents.html'>ob_get_contents()</a>
+                <a target='_top' href='ref_output_ob_get_flush.html'>ob_get_flush()</a>
+                <a target='_top' href='ref_output_ob_get_length.html'>ob_get_length()</a>
+                <a target='_top' href='ref_output_ob_get_level.html'>ob_get_level()</a>
+                <a target='_top' href='ref_output_ob_gzhandler.html'>ob_gzhandler()</a>
+                <a target='_top' href='ref_output_ob_implicit_flush.html'>ob_implicit_flush()</a>
+                <a target='_top' href='ref_output_ob_list_handlers.html'>ob_list_handlers()</a>
+                <a target='_top' href='ref_output_ob_start.html'>ob_start()</a>
+                <a target='_top' href='ref_output_add_rewrite_var.html'>output_add_rewrite_var()</a>
+                <a target='_top' href='ref_output_reset_rewrite_vars.html'>output_reset_rewrite_vars()</a>
+            </div>
+            <a target='_top' href='php_ref_regex.html'>PHP RegEx</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_regex_preg_filter.html'>preg_filter()</a>
+                <a target='_top' href='func_regex_preg_grep.html'>preg_grep()</a>
+                <a target='_top' href='func_regex_preg_last_error.html'>preg_last_error()</a>
+                <a target='_top' href='func_regex_preg_match.html'>preg_match()</a>
+                <a target='_top' href='func_regex_preg_match_all.html'>preg_match_all()</a>
+                <a target='_top' href='func_regex_preg_replace.html'>preg_replace</a>
+                <a target='_top' href='func_regex_preg_replace_callback.html'>preg_replace_callback</a>
+                <a target='_top' href='func_regex_preg_replace_callback_array.html'>preg_replace_callback_array</a>
+                <a target='_top' href='func_regex_preg_split.html'>preg_split</a>
+                <a target='_top' href='func_regex_preg_quote.html'>preg_quote</a>
+            </div>
+            <a target='_top' href='php_ref_simplexml.html'>PHP SimpleXML</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_simplexml__construct.html'>__construct()</a>
+                <a target='_top' href='func_simplexml__tostring.html'>__tostring()</a>
+                <a target='_top' href='func_simplexml_addattribute.html'>addAttribute()</a>
+                <a target='_top' href='func_simplexml_addchild.html'>addChild()</a>
+                <a target='_top' href='func_simplexml_asxml.html'>asXML()</a>
+                <a target='_top' href='func_simplexml_attributes.html'>attributes()</a>
+                <a target='_top' href='func_simplexml_children.html'>children()</a>
+                <a target='_top' href='func_simplexml_count.html'>count()</a>
+                <a target='_top' href='func_simplexml_getdocnamespaces.html'>getDocNamespaces()</a>
+                <a target='_top' href='func_simplexml_getname.html'>getName()</a>
+                <a target='_top' href='func_simplexml_getnamespaces.html'>getNamespaces()</a>
+                <a target='_top' href='func_simplexml_registerxpathnamespace.html'>registerXPathNamespace()</a>
+                <a target='_top' href='func_simplexml_savexml.html'>saveXML()</a>
+                <a target='_top' href='func_simplexml_import_dom.html'>simplexml_import_dom()</a>
+                <a target='_top' href='func_simplexml_load_file.html'>simplexml_load_file()</a>
+                <a target='_top' href='func_simplexml_load_string.html'>simplexml_load_string()</a>
+                <a target='_top' href='func_simplexml_xpath.html'>xpath()</a>
+                <br>
+                <a target='_top' href='func_simplexml_current.html'>current()</a>
+                <a target='_top' href='func_simplexml_getchildren.html'>getchildren()</a>
+                <a target='_top' href='func_simplexml_haschildren.html'>haschildren()</a>
+                <a target='_top' href='func_simplexml_key.html'>key()</a>
+                <a target='_top' href='func_simplexml_next.html'>next()</a>
+                <a target='_top' href='func_simplexml_rewind.html'>rewind()</a>
+                <a target='_top' href='func_simplexml_valid.html'>valid()</a>
+            </div>
+            <a target='_top' href='php_ref_stream.html'>PHP Потік</a>
+            <a target='_top' href='php_ref_string.html'>PHP Рядок</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_string_addcslashes.html'>addcslashes()</a>
+                <a target='_top' href='func_string_addslashes.html'>addslashes()</a>
+                <a target='_top' href='func_string_bin2hex.html'>bin2hex()</a>
+                <a target='_top' href='func_string_chop.html'>chop()</a>
+                <a target='_top' href='func_string_chr.html'>chr()</a>
+                <a target='_top' href='func_string_chunk_split.html'>chunk_split()</a>
+                <a target='_top' href='func_string_convert_cyr_string.html'>convert_cyr_string()</a>
+                <a target='_top' href='func_string_convert_uudecode.html'>convert_uudecode()</a>
+                <a target='_top' href='func_string_convert_uuencode.html'>convert_uuencode()</a>
+                <a target='_top' href='func_string_count_chars.html'>count_chars()</a>
+                <a target='_top' href='func_string_crc32.html'>crc32()</a>
+                <a target='_top' href='func_string_crypt.html'>crypt()</a>
+                <a target='_top' href='func_string_echo.html'>echo()</a>
+                <a target='_top' href='func_string_explode.html'>explode()</a>
+                <a target='_top' href='func_string_fprintf.html'>fprint()</a>
+                <a target='_top' href='func_string_get_html_translation_table.html'>get_html_translation_table()</a>
+                <a target='_top' href='func_string_hebrev.html'>hebrev()</a>
+                <a target='_top' href='func_string_hebrevc.html'>hebrevc()</a>
+                <a target='_top' href='func_string_hex2bin.html'>hex2bin()</a>
+                <a target='_top' href='func_string_html_entity_decode.html'>html_entity_decode()</a>
+                <a target='_top' href='func_string_htmlentities.html'>htmlentities()</a>
+                <a target='_top' href='func_string_htmlspecialchars_decode.html'>htmlspecialchars_decode()</a>
+                <a target='_top' href='func_string_htmlspecialchars.html'>htmlspecialchars()</a>
+                <a target='_top' href='func_string_implode.html'>implode()</a>
+                <a target='_top' href='func_string_join.html'>join()</a>
+                <a target='_top' href='func_string_lcfirst.html'>lcfirst()</a>
+                <a target='_top' href='func_string_levenshtein.html'>levenshtein()</a>
+                <a target='_top' href='func_string_localeconv.html'>localeconv()</a>
+                <a target='_top' href='func_string_ltrim.html'>ltrim()</a>
+                <a target='_top' href='func_string_md5.html'>md5()</a>
+                <a target='_top' href='func_string_md5_file.html'>md5_file()</a>
+                <a target='_top' href='func_string_metaphone.html'>metaphone()</a>
+                <a target='_top' href='func_string_money_format.html'>money_format()</a>
+                <a target='_top' href='func_string_nl_langinfo.html'>nl_langinfo()</a>
+                <a target='_top' href='func_string_nl2br.html'>nl2br()</a>
+                <a target='_top' href='func_string_number_format.html'>number_format()</a>
+                <a target='_top' href='func_string_ord.html'>ord()</a>
+                <a target='_top' href='func_string_parse_str.html'>parse_str()</a>
+                <a target='_top' href='func_string_print.html'>print()</a>
+                <a target='_top' href='func_string_printf.html'>printf()</a>
+                <a target='_top' href='func_string_quoted_printable_decode.html'>quoted_printable_decode()</a>
+                <a target='_top' href='func_string_quoted_printable_encode.html'>quoted_printable_encode()</a>
+                <a target='_top' href='func_string_quotemeta.html'>quotemeta()</a>
+                <a target='_top' href='func_string_rtrim.html'>rtrim()</a>
+                <a target='_top' href='func_string_setlocale.html'>setlocale()</a>
+                <a target='_top' href='func_string_sha1.html'>sha1()</a>
+                <a target='_top' href='func_string_sha1_file.html'>sha1_file()</a>
+                <a target='_top' href='func_string_similar_text.html'>similar_text()</a>
+                <a target='_top' href='func_string_soundex.html'>soundex()</a>
+                <a target='_top' href='func_string_sprintf.html'>sprintf()</a>
+                <a target='_top' href='func_string_sscanf.html'>sscanf()</a>
+                <a target='_top' href='func_string_str_getcsv.html'>str_getcsv()</a>
+                <a target='_top' href='func_string_str_ireplace.html'>str_ireplace()</a>
+                <a target='_top' href='func_string_str_pad.html'>str_pad()</a>
+                <a target='_top' href='func_string_str_repeat.html'>str_repeat()</a>
+                <a target='_top' href='func_string_str_replace.html'>str_replace()</a>
+                <a target='_top' href='func_string_str_rot13.html'>str_rot13()</a>
+                <a target='_top' href='func_string_str_shuffle.html'>str_shuffle()</a>
+                <a target='_top' href='func_string_str_split.html'>str_split()</a>
+                <a target='_top' href='func_string_str_word_count.html'>str_word_count()</a>
+                <a target='_top' href='func_string_strcasecmp.html'>strcasecmp()</a>
+                <a target='_top' href='func_string_strchr.html'>strchr()</a>
+                <a target='_top' href='func_string_strcmp.html'>strcmp()</a>
+                <a target='_top' href='func_string_strcoll.html'>strcoll()</a>
+                <a target='_top' href='func_string_strcspn.html'>strcspn()</a>
+                <a target='_top' href='func_string_strip_tags.html'>strip_tags()</a>
+                <a target='_top' href='func_string_stripcslashes.html'>stripcslashes()</a>
+                <a target='_top' href='func_string_stripslashes.html'>stripslashes()</a>
+                <a target='_top' href='func_string_stripos.html'>stripos()</a>
+                <a target='_top' href='func_string_stristr.html'>stristr()</a>
+                <a target='_top' href='func_string_strlen.html'>strlen()</a>
+                <a target='_top' href='func_string_strnatcasecmp.html'>strnatcasecmp()</a>
+                <a target='_top' href='func_string_strnatcmp.html'>strnatcmp()</a>
+                <a target='_top' href='func_string_strncasecmp.html'>strncasecmp()</a>
+                <a target='_top' href='func_string_strncmp.html'>strncmp()</a>
+                <a target='_top' href='func_string_strpbrk.html'>strpbrk()</a>
+                <a target='_top' href='func_string_strpos.html'>strpos()</a>
+                <a target='_top' href='func_string_strrchr.html'>strrchr()</a>
+                <a target='_top' href='func_string_strrev.html'>strrev()</a>
+                <a target='_top' href='func_string_strripos.html'>strripos()</a>
+                <a target='_top' href='func_string_strrpos.html'>strrpos()</a>
+                <a target='_top' href='func_string_strspn.html'>strspn()</a>
+                <a target='_top' href='func_string_strstr.html'>strstr()</a>
+                <a target='_top' href='func_string_strtok.html'>strtok()</a>
+                <a target='_top' href='func_string_strtolower.html'>strtolower()</a>
+                <a target='_top' href='func_string_strtoupper.html'>strtoupper()</a>
+                <a target='_top' href='func_string_strtr.html'>strtr()</a>
+                <a target='_top' href='func_string_substr.html'>substr()</a>
+                <a target='_top' href='func_string_substr_compare.html'>substr_compare()</a>
+                <a target='_top' href='func_string_substr_count.html'>substr_count()</a>
+                <a target='_top' href='func_string_substr_replace.html'>substr_replace()</a>
+                <a target='_top' href='func_string_trim.html'>trim()</a>
+                <a target='_top' href='func_string_ucfirst.html'>ucfirst()</a>
+                <a target='_top' href='func_string_ucwords.html'>ucwords()</a>
+                <a target='_top' href='func_string_vfprintf.html'>vfprintf()</a>
+                <a target='_top' href='func_string_vprintf.html'>vprintf()</a>
+                <a target='_top' href='func_string_vsprintf.html'>vsprintf()</a>
+                <a target='_top' href='func_string_wordwrap.html'>wordwrap()</a>
+            </div>
+            <a target='_top' href='php_ref_variable_handling.html'>PHP Обробка змінних</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_var_boolval.html'>boolval()</a>
+                <a target='_top' href='func_var_debug_zval_dump.html'>debug_zval_dump()</a>
+                <a target='_top' href='func_var_doubleval.html'>doubleval()</a>
+                <a target='_top' href='func_var_is_countable.html'>is_countable()</a>
+                <a target='_top' href='func_var_empty.html'>empty()</a>
+                <a target='_top' href='func_var_floatval.html'>floatval()</a>
+                <a target='_top' href='func_var_get_defined_vars.html'>get_defined_vars()</a>
+                <a target='_top' href='func_var_get_resource_type.html'>get_resource_type()</a>
+                <a target='_top' href='func_var_gettype.html'>gettype()</a>
+                <a target='_top' href='func_var_intval.html'>intval()</a>
+                <a target='_top' href='func_var_is_array.html'>is_array()</a>
+                <a target='_top' href='func_var_is_bool.html'>is_bool()</a>
+                <a target='_top' href='func_var_is_callable.html'>is_callable()</a>
+                <a target='_top' href='func_var_is_double.html'>is_double()</a>
+                <a target='_top' href='func_var_is_float.html'>is_float()</a>
+                <a target='_top' href='func_var_is_int.html'>is_int()</a>
+                <a target='_top' href='func_var_is_integer.html'>is_integer()</a>
+                <a target='_top' href='func_var_is_iterable.html'>is_iterable()</a>
+                <a target='_top' href='func_var_is_long.html'>is_long()</a>
+                <a target='_top' href='func_var_is_null.html'>is_null()</a>
+                <a target='_top' href='func_var_is_numeric.html'>is_numeric()</a>
+                <a target='_top' href='func_var_is_object.html'>is_object()</a>
+                <a target='_top' href='func_var_is_real.html'>is_real()</a>
+                <a target='_top' href='func_var_is_resource.html'>is_resource()</a>
+                <a target='_top' href='func_var_is_scalar.html'>is_scalar()</a>
+                <a target='_top' href='func_var_is_string.html'>is_string()</a>
+                <a target='_top' href='func_var_isset.html'>isset()</a>
+                <a target='_top' href='func_var_print_r.html'>print_r()</a>
+                <a target='_top' href='func_var_serialize.html'>serialize()</a>
+                <a target='_top' href='func_var_settype.html'>settype()</a>
+                <a target='_top' href='func_var_strval.html'>strval()</a>
+                <a target='_top' href='func_var_unserialize.html'>unserialize()</a>
+                <a target='_top' href='func_var_unset.html'>unset()</a>
+                <a target='_top' href='func_var_var_dump.html'>var_dump()</a>
+                <a target='_top' href='func_var_var_export.html'>var_export()</a>
+            </div>
+            <a target='_top' href='php_ref_xml.html'>PHP XML Парсер</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_xml_utf8_decode.html'>utf8_decode()</a>
+                <a target='_top' href='func_xml_utf8_encode.html'>utf8_encode()</a>
+                <a target='_top' href='func_xml_error_string.html'>xml_error_string()</a>
+                <a target='_top' href='func_xml_get_current_byte_index.html'>xml_get_current_byte_index()</a>
+                <a target='_top' href='func_xml_get_current_column_number.html'>xml_get_current_column_number()</a>
+                <a target='_top' href='func_xml_get_current_line_number.html'>xml_get_current_line_number()</a>
+                <a target='_top' href='func_xml_get_error_code.html'>xml_get_error_code()</a>
+                <a target='_top' href='func_xml_parse.html'>xml_parse()</a>
+                <a target='_top' href='func_xml_parse_into_struct.html'>xml_parse_into_struct()</a>
+                <a target='_top' href='func_xml_parser_create_ns.html'>xml_parser_create_ns()</a>
+                <a target='_top' href='func_xml_parser_create.html'>xml_parser_create()</a>
+                <a target='_top' href='func_xml_parser_free.html'>xml_parser_free()</a>
+                <a target='_top' href='func_xml_parser_get_option.html'>xml_parser_get_option()</a>
+                <a target='_top' href='func_xml_parser_set_option.html'>xml_parser_set_option()</a>
+                <a target='_top' href='func_xml_set_character_data_handler.html'>xml_set_character_data_handler()</a>
+                <a target='_top' href='func_xml_set_default_handler.html'>xml_set_default_handler()</a>
+                <a target='_top' href='func_xml_set_element_handler.html'>xml_set_element_handler()</a>
+                <a target='_top' href='func_xml_set_end_namespace_decl_handler.html'>xml_set_end_namespace_decl_handler()</a>
+                <a target='_top' href='func_xml_set_external_entity_ref_handler.html'>xml_set_external_entity_ref_handler()</a>
+                <a target='_top' href='func_xml_set_notation_decl_handler.html'>xml_set_notation_decl_handler()</a>
+                <a target='_top' href='func_xml_set_object.html'>xml_set_object()</a>
+                <a target='_top' href='func_xml_set_processing_instruction_handler.html'>xml_set_processing_instruction_handler()</a>
+                <a target='_top' href='func_xml_set_start_namespace_decl_handler.html'>xml_set_start_namespace_decl_handler()</a>
+                <a target='_top' href='func_xml_set_unparsed_entity_decl_handler.html'>xml_set_unparsed_entity_decl_handler()</a>
+            </div>
+            <a target='_top' href='php_ref_zip.html'>PHP Zip</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='func_zip_close.html'>zip_close()</a>
+                <a target='_top' href='func_zip_entry_close.html'>zip_entry_close()</a>
+                <a target='_top' href='func_zip_entry_compressedsize.html'>zip_entry_compressedsize()</a>
+                <a target='_top' href='func_zip_entry_compressionmethod.html'>zip_entry_compressionmethod()</a>
+                <a target='_top' href='func_zip_entry_filesize.html'>zip_entry_filesize()</a>
+                <a target='_top' href='func_zip_entry_name.html'>zip_entry_name()</a>
+                <a target='_top' href='func_zip_entry_open.html'>zip_entry_open()</a>
+                <a target='_top' href='func_zip_entry_read.html'>zip_entry_read()</a>
+                <a target='_top' href='func_zip_open.html'>zip_open()</a>
+                <a target='_top' href='func_zip_read.html'>zip_read()</a>
+            </div>
+            <a target='_top' href='php_ref_timezones.html'>PHP Часові пояси</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu sidebar Python--><!--CONTENT Python-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/php_icon1.svg' alt='PHP. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='PHP для початківців. W3Schools українською' style='width: 120px'></a><p class='w3-right'>
+    <a href="php_ref_array_en.html" title='Перейти на англійську мову'>En</a>
+</p>
+<article>
+    <h1>PHP <span class="color_h1">Функції</span> масиву</h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="php_ref_overview_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_ref_calendar_en.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <h2>PHP Масив. Інтро</h2>
+    <p>The array functions allow you to access and manipulate arrays.</p>
+    <p>Simple and multi-dimensional arrays are supported.</p>
+    <hr>
+    <h2>Інсталяція</h2>
+    <p>The array functions are part of the PHP core. There is no installation needed to use these functions.</p>
+    <hr>
+    <h2>PHP Функції масиву</h2>
+    <table class="ws-table-all notranslate">
+        <tr>
+            <th style="width:25%">Функція</th>
+            <th style="width:75%">Опис</th>
+        </tr>
+        <tr>
+            <td><a href="func_array.html">array()</a></td>
+            <td>Створити масив</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_change_key_case.html">array_change_key_case()</a></td>
+            <td>Changes all keys in an array to lowercase or uppercase</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_chunk.html">array_chunk()</a></td>
+            <td>Splits an array into chunks of arrays</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_column.html">array_column()</a></td>
+            <td>Returns the values from a single column in the input array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_combine.html">array_combine()</a></td>
+            <td>Creates an array by using the elements from one &quot;keys&quot; array and one &quot;values&quot; array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_count_values.html">array_count_values()</a></td>
+            <td>Counts all the values of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_diff.html">array_diff()</a></td>
+            <td>Compare arrays, and returns the differences (compare values only)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_diff_assoc.html">array_diff_assoc()</a></td>
+            <td>Compare arrays, and returns the differences (compare keys and values)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_diff_key.html">array_diff_key()</a></td>
+            <td>Compare arrays, and returns the differences (compare keys only)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_diff_uassoc.html">array_diff_uassoc()</a></td>
+            <td>Compare arrays, and returns the differences (compare keys and values, using a user-defined key comparison function)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_diff_ukey.html">array_diff_ukey()</a></td>
+            <td>Compare arrays, and returns the differences (compare keys only, using a user-defined key comparison function)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_fill.html">array_fill()</a></td>
+            <td>Fills an array with values</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_fill_keys.html">array_fill_keys()</a></td>
+            <td>Fills an array with values, specifying keys</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_filter.html">array_filter()</a></td>
+            <td>Filters the values of an array using a callback function</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_flip.html">array_flip()</a></td>
+            <td>Flips/Exchanges all keys with their associated values in an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_intersect.html">array_intersect()</a></td>
+            <td>Compare arrays, and returns the matches (compare values only)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_intersect_assoc.html">array_intersect_assoc()</a></td>
+            <td>Compare arrays and returns the matches (compare keys and values)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_intersect_key.html">array_intersect_key()</a></td>
+            <td>Compare arrays, and returns the matches (compare keys only)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_intersect_uassoc.html">array_intersect_uassoc()</a></td>
+            <td>Compare arrays, and returns the matches (compare keys and values, using a user-defined key comparison function)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_intersect_ukey.html">array_intersect_ukey()</a></td>
+            <td>Compare arrays, and returns the matches (compare keys only, using a user-defined key comparison function)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_key_exists.html">array_key_exists()</a></td>
+            <td>Checks if the specified key exists in the array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_keys.html">array_keys()</a></td>
+            <td>Returns all the keys of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_map.html">array_map()</a></td>
+            <td>Sends each value of an array to a user-made function, which returns new values</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_merge.html">array_merge()</a></td>
+            <td>Merges one or more arrays into one array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_merge_recursive.html">array_merge_recursive()</a></td>
+            <td>Merges one or more arrays into one array recursively</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_multisort.html">array_multisort()</a></td>
+            <td>Sorts multiple or multi-dimensional arrays</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_pad.html">array_pad()</a></td>
+            <td>Inserts a specified number of items, with a specified value, to an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_pop.html">array_pop()</a></td>
+            <td>Deletes the last element of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_product.html">array_product()</a></td>
+            <td>Calculates the product of the values in an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_push.html">array_push()</a></td>
+            <td>Inserts one or more elements to the end of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_rand.html">array_rand()</a></td>
+            <td>Returns one or more random keys from an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_reduce.html">array_reduce()</a></td>
+            <td>Returns an array as a string, using a user-defined function</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_replace.html">array_replace()</a></td>
+            <td>Replaces the values of the first array with the values from following arrays</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_replace_recursive.html">array_replace_recursive()</a></td>
+            <td>Replaces the values of the first array with the values from following arrays recursively</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_reverse.html">array_reverse()</a></td>
+            <td>Returns an array in the reverse order</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_search.html">array_search()</a></td>
+            <td>Searches an array for a given value and returns the key</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_shift.html">array_shift()</a></td>
+            <td>Removes the first element from an array, and returns the value of the removed element</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_slice.html">array_slice()</a></td>
+            <td>Returns selected parts of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_splice.html">array_splice()</a></td>
+            <td>Removes and replaces specified elements of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_sum.html">array_sum()</a></td>
+            <td>Returns the sum of the values in an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_udiff.html">array_udiff()</a></td>
+            <td>Compare arrays, and returns the differences (compare values only, using a user-defined key comparison function)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_udiff_assoc.html">array_udiff_assoc()</td>
+            <td>Compare arrays, and returns the differences (compare keys and values, using a built-in function to compare the keys and a user-defined function to compare the values)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_udiff_uassoc.html">array_udiff_uassoc()</a></td>
+            <td>Compare arrays, and returns the differences (compare keys and values, using two user-defined key comparison functions)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_uintersect.html">array_uintersect()</a></td>
+            <td>Compare arrays, and returns the matches (compare values only, using a user-defined key comparison function)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_uintersect_assoc.html">array_uintersect_assoc()</a></td>
+            <td>Compare arrays, and returns the matches (compare keys and values, using a built-in function to compare the keys and a user-defined function to compare the values)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_uintersect_uassoc.html">array_uintersect_uassoc()</a></td>
+            <td>Compare arrays, and returns the matches (compare keys and values, using two user-defined key comparison functions)</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_unique.html">array_unique()</a></td>
+            <td>Removes duplicate values from an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_unshift.html">array_unshift()</a></td>
+            <td>Adds one or more elements to the beginning of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_values.html">array_values()</a></td>
+            <td>Returns all the values of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_walk.html">array_walk()</a></td>
+            <td>Applies a user function to every member of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_walk_recursive.html">array_walk_recursive()</a></td>
+            <td>Applies a user function recursively to every member of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_arsort.html">arsort()</a></td>
+            <td>Sorts an associative array in descending order, according to the value</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_asort.html">asort()</a></td>
+            <td>Sorts an associative array in ascending order, according to the value</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_compact.html">compact()</a></td>
+            <td>Create array containing variables and their values</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_count.html">count()</a></td>
+            <td>Returns the number of elements in an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_current.html">current()</a></td>
+            <td>Returns the current element in an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_each.html">each()</a></td>
+            <td><span class="deprecated">Deprecated from PHP 7.2.</span> Returns the current key and value pair from an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_end.html">end()</a></td>
+            <td>Sets the internal pointer of an array to its last element</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_extract.html">extract()</a></td>
+            <td>Imports variables into the current symbol table from an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_in_array.html">in_array()</a></td>
+            <td>Checks if a specified value exists in an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_key.html">key()</a></td>
+            <td>Fetches a key from an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_krsort.html">krsort()</a></td>
+            <td>Sorts an associative array in descending order, according to the key</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_ksort.html">ksort()</a></td>
+            <td>Sorts an associative array in ascending order, according to the key</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_list.html">list()</a></td>
+            <td>Assigns variables as if they were an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_natcasesort.html">natcasesort()</a></td>
+            <td>Sorts an array using a case insensitive &quot;natural order&quot; algorithm</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_natsort.html">natsort()</a></td>
+            <td>Sorts an array using a &quot;natural order&quot; algorithm</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_next.html">next()</a></td>
+            <td>Advance the internal array pointer of an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_pos.html">pos()</a></td>
+            <td>Alias of <a href="func_array_current.html">current()</a></td>
+        </tr>
+        <tr>
+            <td><a href="func_array_prev.html">prev()</a></td>
+            <td>Rewinds the internal array pointer</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_range.html">range()</a></td>
+            <td>Creates an array containing a range of elements</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_reset.html">reset()</a></td>
+            <td>Sets the internal pointer of an array to its first element</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_rsort.html">rsort()</a></td>
+            <td>Sorts an indexed array in descending order</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_shuffle.html">shuffle()</a></td>
+            <td>Shuffles an array</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_sizeof.html">sizeof()</a></td>
+            <td>Alias of <a href="func_array_count.html">count()</a></td>
+        </tr>
+        <tr>
+            <td><a href="func_array_sort.html">sort()</a></td>
+            <td>Sorts an indexed array in ascending order</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_uasort.html">uasort()</a></td>
+            <td>Sorts an array by values using a user-defined comparison function</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_uksort.html">uksort()</a></td>
+            <td>Sorts an array by keys using a user-defined comparison function</td>
+        </tr>
+        <tr>
+            <td><a href="func_array_usort.html">usort()</a></td>
+            <td>Sorts an array using a user-defined comparison function</td>
+        </tr>
+    </table>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="php_ref_overview_en.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_ref_calendar_en.html">Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
+    </div>
+    <div class='sidesection'>
+        <h4>ПРИЄДНУЙТЕСЬ!</h4>
+        <div class='w3-text-grey sharethis'>
+            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook сторінка' title='Перейти на Facebook сторінку' style='width:35px; height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
+            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
+            <a href='https://www.youtube.com/channel/UCzJZhVkn5O609CaWXupIqpw' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб-Сертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+    Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
