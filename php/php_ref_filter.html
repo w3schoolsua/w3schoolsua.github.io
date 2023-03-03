@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Функції масиву. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Довідник. Функції масиву. Інсталяція. Таблиця функцій. Повний довідник. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Файлова система. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='PHP Довідник. Функції файлової системи. Інтро. Інсталяція. Конфігурація. Таблиця. Повний довідник. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1271,345 +1271,296 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index.html'><img src='../svg/php_icon1.svg' alt='PHP. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='PHP для початківців. W3Schools українською' style='width: 120px'></a><p class='w3-right'>
-    <a href="php_ref_array_en.html" title='Перейти на англійську мову'>En</a>
+    <a href="php_ref_filter_en.html" title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>PHP <span class="color_h1">Функції</span> масиву</h1>
+    <h1>PHP <span class="color_h1">Функції</span> фільтра</h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_ref_overview_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_ref_calendar_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_ref_filesystem.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_ref_ftp.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>PHP Масив. Інтро</h2>
-    <p>Функції масиву дозволяють отримувати доступ до масивів і керувати ними.</p>
-    <p>Підтримуються прості та багатовимірні масиви.</p>
+    <h2>PHP Фільтр. Інтро</h2>
+    <p>This PHP filters is used to validate and filter data coming from insecure sources, like user input.</p>
     <hr>
     <h2>Інсталяція</h2>
-    <p>Функції масиву є частиною ядра PHP. Для використання цих функцій не потрібна окрема установка.</p>
+    <p>From PHP 5.2.0, the filter functions are enabled by default. There is no installation needed to use these functions.</p>
     <hr>
-    <h2>PHP Функції масиву</h2>
+    <h2>Runtime Configurations</h2>
+    <p>The behavior of these functions is affected by settings in php.ini:</p>
+    <div class="w3-responsive">
+        <table class="ws-table-all notranslate">
+            <tr>
+                <th>Назва</th>
+                <th>Опис</th>
+                <th>За замовчуванням</th>
+                <th>Changeable</th>
+            </tr>
+            <tr>
+                <td>filter.default</td>
+                <td>Filter all $_GET, $_POST, $_COOKIE, $_REQUEST and $_SERVER data by this filter. Accepts the name of the filter you like to use by default. See the filter list for the list of the filter names</td>
+                <td>&quot;unsafe_raw&quot;</td>
+                <td>PHP_INI_PERDIR</td>
+            </tr>
+            <tr>
+                <td>filter.default_flags</td>
+                <td>Default flags to apply when the default filter is set. This is set to FILTER_FLAG_NO_ENCODE_QUOTES by default for backwards compatibility reasons</td>
+                <td>NULL</td>
+                <td>PHP_INI_PERDIR</td>
+            </tr>
+        </table>
+    </div>
+    <h2>PHP Функції фільтра</h2>
     <table class="ws-table-all notranslate">
         <tr>
-            <th style="width:25%">Функція</th>
-            <th style="width:75%">Опис</th>
+            <th>Функція</th>
+            <th>Опис</th>
         </tr>
         <tr>
-            <td><a href="func_array.html">array()</a></td>
-            <td>Створити масив</td>
+            <td><a href="func_filter_has_var.html">filter_has_var()</a></td>
+            <td>Checks whether a variable of a specified input type exist</td>
         </tr>
         <tr>
-            <td><a href="func_array_change_key_case.html">array_change_key_case()</a></td>
-            <td>Змінює всі ключі в масиві на нижній або верхній регістр</td>
+            <td><a href="func_filter_id.html">filter_id()</a></td>
+            <td>Returns the filter ID of a specified filter name</td>
         </tr>
         <tr>
-            <td><a href="func_array_chunk.html">array_chunk()</a></td>
-            <td>Розділяє масив на частини масивів</td>
+            <td><a href="func_filter_input.html">filter_input()</a></td>
+            <td>Gets an external variable (e.g. from form input) and optionally filters it</td>
         </tr>
         <tr>
-            <td><a href="func_array_column.html">array_column()</a></td>
-            <td>Повертає значення з одного стовпця у вхідному масиві</td>
+            <td><a href="func_filter_input_array.html">filter_input_array()</a></td>
+            <td>Gets external variables (e.g. from form input) and optionally filters them</td>
         </tr>
         <tr>
-            <td><a href="func_array_combine.html">array_combine()</a></td>
-            <td>Створює масив, використовуючи елементи з одного масиву &quot;ключів&quot; одне &quot;значення&quot; масиву</td>
+            <td><a href="func_filter_list.html">filter_list()</a></td>
+            <td>Returns a list of all supported filter names</td>
         </tr>
         <tr>
-            <td><a href="func_array_count_values.html">array_count_values()</a></td>
-            <td>Підраховує всі значення масиву</td>
+            <td><a href="func_filter_var.html">filter_var()</a></td>
+            <td>Filters a variable with a specified filter</td>
         </tr>
         <tr>
-            <td><a href="func_array_diff.html">array_diff()</a></td>
-            <td>Порівняння масивів і повернення відмінностей (лише порівняння значень)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_diff_assoc.html">array_diff_assoc()</a></td>
-            <td>Порівняння масивів і повернення відмінностей (порівняння ключів і значень)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_diff_key.html">array_diff_key()</a></td>
-            <td>Порівняння масивів і повернення відмінностей (лише ключі порівняння)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_diff_uassoc.html">array_diff_uassoc()</a></td>
-            <td>Порівняння масивів і повернення відмінностей (порівняння ключів і значень за допомогою визначеної користувачем функції порівняння ключів)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_diff_ukey.html">array_diff_ukey()</a></td>
-            <td>Порівнює масиви та повертає відмінності (порівняє лише ключі, використовуючи визначену користувачем функцію порівняння ключів)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_fill.html">array_fill()</a></td>
-            <td>Заповнює масив значеннями</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_fill_keys.html">array_fill_keys()</a></td>
-            <td>Заповнює масив значеннями, вказуючи ключі</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_filter.html">array_filter()</a></td>
-            <td>Фільтрує значення масиву за допомогою функції зворотного виклику</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_flip.html">array_flip()</a></td>
-            <td>Перевертає/обмінює всі ключі з відповідними значеннями в масиві</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_intersect.html">array_intersect()</a></td>
-            <td>Порівняння масивів і повернення збігів (лише порівняння значень)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_intersect_assoc.html">array_intersect_assoc()</a></td>
-            <td>Порівняння масивів і повернення збігів (порівняння ключів і значень)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_intersect_key.html">array_intersect_key()</a></td>
-            <td>Порівняння масивів і повернення збігів (лише ключі порівняння)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_intersect_uassoc.html">array_intersect_uassoc()</a></td>
-            <td>Порівняння масивів і повернення збігів (порівняння ключів і значень за допомогою визначеної користувачем функції порівняння ключів)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_intersect_ukey.html">array_intersect_ukey()</a></td>
-            <td>Порівняння масивів і повернення збігів (лише порівняння ключів, використовуючи визначену користувачем функцію порівняння ключів)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_key_exists.html">array_key_exists()</a></td>
-            <td>Перевіряє, чи існує вказаний ключ у масиві</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_keys.html">array_keys()</a></td>
-            <td>Повертає всі ключі масиву</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_map.html">array_map()</a></td>
-            <td>Надсилає кожне значення масиву до створеної користувачем функції, яка повертає нові значення</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_merge.html">array_merge()</a></td>
-            <td>Об&#8217;єднує один або декілька масивів в один масив</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_merge_recursive.html">array_merge_recursive()</a></td>
-            <td>Рекурсивно об&#8217;єднує один або кілька масивів в один масив</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_multisort.html">array_multisort()</a></td>
-            <td>Сортує кілька або багатовимірні масиви</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_pad.html">array_pad()</a></td>
-            <td>Вставляє вказану кількість елементів із заданим значенням у масив</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_pop.html">array_pop()</a></td>
-            <td>Видаляє останній елемент масиву</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_product.html">array_product()</a></td>
-            <td>Обчислює добуток значень у масиві</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_push.html">array_push()</a></td>
-            <td>Вставляє один або кілька елементів у кінець масиву</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_rand.html">array_rand()</a></td>
-            <td>Повертає один або кілька випадкових ключів із масиву</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_reduce.html">array_reduce()</a></td>
-            <td>Повертає масив у вигляді рядка за допомогою функції, визначеної користувачем</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_replace.html">array_replace()</a></td>
-            <td>Replaces the values of the first array with the values from following arrays</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_replace_recursive.html">array_replace_recursive()</a></td>
-            <td>Replaces the values of the first array with the values from following arrays recursively</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_reverse.html">array_reverse()</a></td>
-            <td>Returns an array in the reverse order</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_search.html">array_search()</a></td>
-            <td>Searches an array for a given value and returns the key</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_shift.html">array_shift()</a></td>
-            <td>Removes the first element from an array, and returns the value of the removed element</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_slice.html">array_slice()</a></td>
-            <td>Returns selected parts of an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_splice.html">array_splice()</a></td>
-            <td>Removes and replaces specified elements of an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_sum.html">array_sum()</a></td>
-            <td>Returns the sum of the values in an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_udiff.html">array_udiff()</a></td>
-            <td>Compare arrays, and returns the differences (compare values only, using a user-defined key comparison function)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_udiff_assoc.html">array_udiff_assoc()</td>
-            <td>Compare arrays, and returns the differences (compare keys and values, using a built-in function to compare the keys and a user-defined function to compare the values)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_udiff_uassoc.html">array_udiff_uassoc()</a></td>
-            <td>Compare arrays, and returns the differences (compare keys and values, using two user-defined key comparison functions)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_uintersect.html">array_uintersect()</a></td>
-            <td>Compare arrays, and returns the matches (compare values only, using a user-defined key comparison function)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_uintersect_assoc.html">array_uintersect_assoc()</a></td>
-            <td>Compare arrays, and returns the matches (compare keys and values, using a built-in function to compare the keys and a user-defined function to compare the values)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_uintersect_uassoc.html">array_uintersect_uassoc()</a></td>
-            <td>Compare arrays, and returns the matches (compare keys and values, using two user-defined key comparison functions)</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_unique.html">array_unique()</a></td>
-            <td>Removes duplicate values from an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_unshift.html">array_unshift()</a></td>
-            <td>Adds one or more elements to the beginning of an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_values.html">array_values()</a></td>
-            <td>Returns all the values of an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_walk.html">array_walk()</a></td>
-            <td>Applies a user function to every member of an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_walk_recursive.html">array_walk_recursive()</a></td>
-            <td>Applies a user function recursively to every member of an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_arsort.html">arsort()</a></td>
-            <td>Sorts an associative array in descending order, according to the value</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_asort.html">asort()</a></td>
-            <td>Sorts an associative array in ascending order, according to the value</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_compact.html">compact()</a></td>
-            <td>Create array containing variables and their values</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_count.html">count()</a></td>
-            <td>Returns the number of elements in an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_current.html">current()</a></td>
-            <td>Returns the current element in an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_each.html">each()</a></td>
-            <td><span class="deprecated">Deprecated from PHP 7.2.</span> Returns the current key and value pair from an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_end.html">end()</a></td>
-            <td>Sets the internal pointer of an array to its last element</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_extract.html">extract()</a></td>
-            <td>Imports variables into the current symbol table from an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_in_array.html">in_array()</a></td>
-            <td>Checks if a specified value exists in an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_key.html">key()</a></td>
-            <td>Fetches a key from an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_krsort.html">krsort()</a></td>
-            <td>Sorts an associative array in descending order, according to the key</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_ksort.html">ksort()</a></td>
-            <td>Sorts an associative array in ascending order, according to the key</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_list.html">list()</a></td>
-            <td>Assigns variables as if they were an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_natcasesort.html">natcasesort()</a></td>
-            <td>Sorts an array using a case insensitive &quot;natural order&quot; algorithm</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_natsort.html">natsort()</a></td>
-            <td>Sorts an array using a &quot;natural order&quot; algorithm</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_next.html">next()</a></td>
-            <td>Advance the internal array pointer of an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_pos.html">pos()</a></td>
-            <td>Alias of <a href="func_array_current.html">current()</a></td>
-        </tr>
-        <tr>
-            <td><a href="func_array_prev.html">prev()</a></td>
-            <td>Rewinds the internal array pointer</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_range.html">range()</a></td>
-            <td>Creates an array containing a range of elements</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_reset.html">reset()</a></td>
-            <td>Sets the internal pointer of an array to its first element</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_rsort.html">rsort()</a></td>
-            <td>Sorts an indexed array in descending order</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_shuffle.html">shuffle()</a></td>
-            <td>Shuffles an array</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_sizeof.html">sizeof()</a></td>
-            <td>Alias of <a href="func_array_count.html">count()</a></td>
-        </tr>
-        <tr>
-            <td><a href="func_array_sort.html">sort()</a></td>
-            <td>Sorts an indexed array in ascending order</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_uasort.html">uasort()</a></td>
-            <td>Sorts an array by values using a user-defined comparison function</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_uksort.html">uksort()</a></td>
-            <td>Sorts an array by keys using a user-defined comparison function</td>
-        </tr>
-        <tr>
-            <td><a href="func_array_usort.html">usort()</a></td>
-            <td>Sorts an array using a user-defined comparison function</td>
+            <td><a href="func_filter_var_array.html">filter_var_array()</a></td>
+            <td>Gets multiple variables and filter them</td>
         </tr>
     </table>
     <hr>
+    <div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    <h2>PHP Predefined Filter Constants</h2>
+    <div class="w3-responsive">
+        <table class="ws-table-all notranslate">
+            <tr>
+                <th>Constant</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>INPUT_POST</td>
+                <td>POST variables</td>
+            </tr>
+            <tr>
+                <td>INPUT_GET</td>
+                <td>GET variables</td>
+            </tr>
+            <tr>
+                <td>INPUT_COOKIE</td>
+                <td>COOKIE variables</td>
+            </tr>
+            <tr>
+                <td>INPUT_ENV</td>
+                <td>ENV variables</td>
+            </tr>
+            <tr>
+                <td>INPUT_SERVER</td>
+                <td>SERVER variables</td>
+            </tr>
+            <tr>
+                <td>FILTER_DEFAULT</td>
+                <td>Do nothing, optionally strip/encode special characters. Equivalent to FILTER_UNSAFE_RAW</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_NONE</td>
+                <td>Allows no flags</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_ALLOW_OCTAL</td>
+                <td>Only for inputs that starts with a zero (0) as octal numbers. This only allows the succeeding digits to be 0-7</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_ALLOW_HEX</td>
+                <td>Only for inputs that starts with 0x/0X as hexadecimal numbers. This only allows succeeding characters to be a-fA-F0-9 </td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_STRIP_LOW</td>
+                <td>Strip characters with ASCII value lower than 32</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_STRIP_HIGH</td>
+                <td>Strip characters with ASCII value greater than 127</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_ENCODE_LOW</td>
+                <td>Encode characters with ASCII value lower than 32</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_ENCODE_HIGH</td>
+                <td>Encode characters with ASCII value greater than 127</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_ENCODE_AMP</td>
+                <td>Encode &amp;</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_NO_ENCODE_QUOTES</td>
+                <td>Do not encode ' and &quot;</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_EMPTY_STRING_NULL</td>
+                <td>Not in use</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_ALLOW_FRACTION</td>
+                <td>Allows a period (.) as a fractional separator in numbers</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_ALLOW_THOUSAND</td>
+                <td>Allows a comma (,) as a thousands separator in numbers</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_ALLOW_SCIENTIFIC</td>
+                <td>Allows an e or E for scientific notation in numbers</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_PATH_REQUIRED</td>
+                <td>The URL must contain a path part</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_QUERY_REQUIRED</td>
+                <td>The URL must contain a query string</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_IPV4</td>
+                <td>Allows the IP address to be in IPv4 format</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_IPV6</td>
+                <td>Allows the IP address to be in IPv6 format</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_NO_RES_RANGE</td>
+                <td>Fails validation for the reserved IPv4 ranges: 0.0.0.0/8, 169.254.0.0/16, 127.0.0.0/8 and 240.0.0.0/4, and for the reserved IPv6 ranges: ::1/128, ::/128, ::ffff:0:0/96 and fe80::/10</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_NO_PRIV_RANGE</td>
+                <td>Fails validation for the private IPv4 ranges: 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16, and for the IPv6 addresses starting with FD or FC</td>
+            </tr>
+            <tr>
+                <td>FILTER_FLAG_EMAIL_UNICODE</td>
+                <td>Allows the local part of the email address to contain Unicode characters</td>
+            </tr>
+            <tr>
+                <td>FILTER_REQUIRE_SCALAR</td>
+                <td>The value must be a scalar</td>
+            </tr>
+            <tr>
+                <td>FILTER_REQUIRE_ARRAY</td>
+                <td>The value must be an array</td>
+            </tr>
+            <tr>
+                <td>FILTER_FORCE_ARRAY</td>
+                <td>Treats a scalar value as array with the scalar value as only element</td>
+            </tr>
+            <tr>
+                <td>FILTER_NULL_ON_FAILURE</td>
+                <td>Return NULL on failure for unrecognized boolean values</td>
+            </tr>
+            <tr>
+                <td><a href="filter_validate_boolean.html">FILTER_VALIDATE_BOOLEAN</a></td>
+                <td>Validates a boolean</td>
+            </tr>
+            <tr>
+                <td><a href="filter_validate_email.html">FILTER_VALIDATE_EMAIL</a></td>
+                <td>Validates value as a valid e-mail address</td>
+            </tr>
+            <tr>
+                <td><a href="filter_validate_float.html">FILTER_VALIDATE_FLOAT</a></td>
+                <td>Validates value as float</td>
+            </tr>
+            <tr>
+                <td><a href="filter_validate_int.html">FILTER_VALIDATE_INT</a></td>
+                <td>Validates value as integer</td>
+            </tr>
+            <tr>
+                <td><a href="filter_validate_ip.html">FILTER_VALIDATE_IP</a></td>
+                <td>Validates value as IP address</td>
+            </tr>
+            <tr>
+                <td>FILTER_VALIDATE_MAC</td>
+                <td>Validates value as MAC address</td>
+            </tr>
+            <tr>
+                <td><a href="filter_validate_regexp.html">FILTER_VALIDATE_REGEXP</a></td>
+                <td>Validates value against a regular expression</td>
+            </tr>
+            <tr>
+                <td><a href="filter_validate_url.html">FILTER_VALIDATE_URL</a></td>
+                <td>Validates value as URL</td>
+            </tr>
+            <tr>
+                <td><a href="filter_sanitize_email.html">FILTER_SANITIZE_EMAIL</a></td>
+                <td>Removes all illegal characters from an e-mail address</td>
+            </tr>
+            <tr>
+                <td><a href="filter_sanitize_encoded.html">FILTER_SANITIZE_ENCODED</a></td>
+                <td>Removes/Encodes special characters</td>
+            </tr>
+            <tr>
+                <td><a href="filter_sanitize_magic_quotes.html">FILTER_SANITIZE_MAGIC_QUOTES</a></td>
+                <td>Apply addslashes()</td>
+            </tr>
+            <tr>
+                <td><a href="filter_sanitize_number_float.html">FILTER_SANITIZE_NUMBER_FLOAT</a></td>
+                <td>Remove all characters, except digits, +- signs, and optionally .,eE</td>
+            </tr>
+            <tr>
+                <td><a href="filter_sanitize_number_int.html">FILTER_SANITIZE_NUMBER_INT</a></td>
+                <td>Removes all characters except digits and + - signs</td>
+            </tr>
+            <tr>
+                <td><a href="filter_sanitize_special_chars.html">FILTER_SANITIZE_SPECIAL_CHARS</a></td>
+                <td>Removes special characters</td>
+            </tr>
+            <tr>
+                <td><a href="filter_sanitize_string.html">FILTER_SANITIZE_STRING</a></td>
+                <td>Removes tags/special characters from a string</td>
+            </tr>
+            <tr>
+                <td><a href="filter_sanitize_stripped.html">FILTER_SANITIZE_STRIPPED</a></td>
+                <td>Alias of FILTER_SANITIZE_STRING</td>
+            </tr>
+            <tr>
+                <td><a href="filter_sanitize_url.html">FILTER_SANITIZE_URL</a></td>
+                <td>Removes all illegal character from a URL</td>
+            </tr>
+            <tr>
+                <td><a href="filter_unsafe_raw.html">FILTER_UNSAFE_RAW</a></td>
+                <td>Do nothing, optionally strip/encode special characters</td>
+            </tr>
+            <tr>
+                <td><a href="filter_callback.html">FILTER_CALLBACK</a></td>
+                <td>Call a user-defined function to filter data</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="php_ref_overview_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="php_ref_calendar_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="php_ref_filesystem.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="php_ref_ftp.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
