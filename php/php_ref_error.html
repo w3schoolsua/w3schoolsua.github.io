@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>PHP Функції помилки. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='PHP Довідник. Функції помилки. Інтро. Інсталяція. Таблиця. Повний довідник. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='PHP Довідник. Функції помилки. Інтро. Інсталяція. Конфігурація середовища виконання. Функції реєстрації помилок і журналювання. Попередньо визначені константи помилок і журналювання. Таблиця. Повний довідник. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -1281,125 +1281,125 @@
     </div>
     <hr>
     <h2>PHP Error / Помилка. Інтро</h2>
-    <p>The error functions are used to deal with error handling and logging.</p>
-    <p>The error functions allow us to define own error handling rules, and modify the way the errors can be logged.</p>
-    <p>The logging functions allow us to send messages directly to other machines, emails, or system logs.</p>
-    <p>The error reporting functions allow us to customize what level and kind of error feedback is given.</p>
+    <p>Функції помилок використовуються для обробки та реєстрації помилок.</p>
+    <p>Функції помилок дозволяють нам визначати власні правила обробки помилок і змінювати спосіб реєстрації помилок.</p>
+    <p>Функції журналювання дозволяють нам надсилати повідомлення безпосередньо на інші машини, електронні листи чи системні журнали.</p>
+    <p>Функції звітування про помилки дозволяють нам налаштувати рівень і тип відгуку про помилку.</p>
     <hr>
     <h2>Інсталяція</h2>
-    <p>The PHP error functions are part of the PHP core. No installation is required to use these functions.</p>
+    <p>Функції помилок PHP є частиною ядра PHP. Для використання цих функцій не потрібна установка.</p>
     <hr>
-    <h2>Runtime Configuration</h2>
-    <p>The behavior of the error functions is affected by settings in php.ini.</p>
-    <p>Errors and logging configuration options:</p>
+    <h2>Конфігурація середовища виконання</h2>
+    <p>На поведінку функцій помилок впливають налаштування у php.ini.</p>
+    <p>Помилки та параметри конфігурації журналу:</p>
     <div class="w3-responsive">
         <table class="ws-table-all notranslate">
             <tr>
                 <th style="width:23%">Назва</th>
                 <th style="width:9%">За замовчуванням</th>
                 <th style="width:48%">Опис</th>
-                <th style="width:20%">Changeable</th>
+                <th style="width:20%">Змінний</th>
             </tr>
             <tr>
                 <td>error_reporting</td>
                 <td>NULL</td>
-                <td>Sets the error reporting level (either an integer or&nbsp; named constants)</td>
+                <td>Встановлює рівень повідомлення про помилки (ціле число або іменовані константи)</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>display_errors</td>
                 <td>&quot;1&quot;</td>
-                <td>Specifies whether errors should be printed to the screen, or if they should be hidden from the user.<br><strong>Note:</strong> This feature should never be used on production systems (only to support your development)</td>
+                <td>Визначає, чи слід друкувати помилки на екрані чи приховувати їх від користувача.<br><b>Примітка:</b> цю функцію ніколи не слід використовувати на робочих системах (лише для підтримки вашої розробки)</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>display_startup_errors</td>
                 <td>&quot;0&quot;</td>
-                <td>Even when display_errors is on, errors that occur during PHP's startup sequence are not displayed<br><strong>Note:</strong> It is strongly recommended to keep display_startup_errors off, except for debugging</td>
+                <td>Навіть якщо display_errors увімкнено, помилки, які виникають під час послідовності запуску PHP, не відображаються.<br><b>Примітка:</b> наполегливо рекомендується не відключати display_startup_errors, за винятком налагодження</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>log_errors</td>
                 <td>&quot;0&quot;</td>
-                <td>Defines whether script error messages should be logged to the server's error log or error_log. <br><strong>Note:</strong> It is strongly advised to use error logging instead of error displaying on production web sites</td>
+                <td>Визначає, чи слід записувати повідомлення про помилки сценарію в журнал помилок сервера чи error_log. <br><b>Примітка.</b> Наполегливо рекомендується використовувати журнал помилок замість відображення помилок на робочих веб-сайтах</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>log_errors_max_len</td>
                 <td>&quot;1024&quot;</td>
-                <td>Sets the maximum length of log_errors in bytes. The value &quot;0&quot; can be used to not apply any maximum length at all. This length is applied to logged errors, displayed errors, and also to $php_errormsg (available since PHP 4.3)</td>
+                <td>Встановлює максимальну довжину log_errors у байтах. Значення &quot;0&quot; можна використовувати, щоб взагалі не застосовувати будь-яку максимальну довжину. Ця довжина застосовується до зареєстрованих помилок, відображених помилок, а також до $php_errormsg (доступно з PHP 4.3)</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>ignore_repeated_errors</td>
                 <td>&quot;0&quot;</td>
-                <td>Specifies whether to log repeated error messages. When set to &quot;1&quot; it will not log errors with repeated errors from the same file on the same line (available since PHP 4.3)</td>
+                <td>Визначає, чи реєструвати повторювані повідомлення про помилки. Якщо встановлено значення &quot;1&quot; він не буде реєструвати помилки з повторюваними помилками з того самого файлу в тому самому рядку (доступно з PHP 4.3)</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>ignore_repeated_source</td>
                 <td>&quot;0&quot;</td>
-                <td>Specifies whether to log repeated error messages. When set to &quot;1&quot; it will not log errors with repeated errors from different files or source lines (available since PHP 4.3)</td>
+                <td>Визначає, чи реєструвати повторювані повідомлення про помилки. Якщо встановлено значення &quot;1&quot; він не буде реєструвати помилки з повторюваними помилками з різних файлів або вихідних рядків (доступно з PHP 4.3)</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>report_memleaks</td>
                 <td>&quot;1&quot;</td>
-                <td>If set to &quot;1&quot; (the default), this parameter will show a report of memory leaks detected by the Zend memory manager (available since PHP 4.3)</td>
+                <td>Якщо встановлено &quot;1&quot; (за замовчуванням), цей параметр відображатиме звіт про витоки пам&#8217;яті, виявлені менеджером пам&#8217;яті Zend (доступний з PHP 4.3)</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>track_errors</td>
                 <td>&quot;0&quot;</td>
-                <td>If set to &quot;1&quot;, the last error message will always be present in the variable $php_errormsg</td>
+                <td>Якщо встановлено значення &quot;1&quot;, останнє повідомлення про помилку завжди буде присутнім у змінній $php_errormsg</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>html_errors</td>
                 <td>&quot;1&quot;</td>
-                <td>Turns off HTML tags in error messages</td>
+                <td>Вимикає теги HTML у повідомленнях про помилки</td>
                 <td>PHP_INI_ALL<br>PHP_INI_SYSTEM in PHP &lt;= 4.2.3.</td>
             </tr>
             <tr>
                 <td>xmlrpc_errors</td>
                 <td>&quot;0&quot;</td>
-                <td>Turns off normal error reporting and formats errors as XML-RPC error message (available since PHP 4.1)</td>
+                <td>Вимикає звичайні звіти про помилки та форматує помилки як повідомлення про помилку XML-RPC (доступно з PHP 4.1)</td>
                 <td>PHP_INI_SYSTEM</td>
             </tr>
             <tr>
                 <td>xmlrpc_error_number</td>
                 <td>&quot;0&quot;</td>
-                <td>Used as the value of the XML-RPC faultCode element (available since PHP 4.1)</td>
+                <td>Використовується як значення елемента XML-RPC faultCode (доступний, починаючи з PHP 4.1)</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>docref_root</td>
                 <td>&quot;&quot;</td>
-                <td>(available since PHP 4.3)</td>
+                <td>(доступний, починаючи з PHP 4.3)</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>docref_ext</td>
                 <td>&quot;&quot;</td>
-                <td>(available since PHP 4.3.2)</td>
+                <td>(доступний, починаючи з PHP 4.3.2)</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>error_prepend_string</td>
                 <td>NULL</td>
-                <td>Specifies a string to output before an error message</td>
+                <td>Визначає рядок для виведення перед повідомленням про помилку</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>error_append_string</td>
                 <td>NULL</td>
-                <td>Specifies a string to output after an error message</td>
+                <td>Визначає рядок для виведення після повідомлення про помилку</td>
                 <td>PHP_INI_ALL</td>
             </tr>
             <tr>
                 <td>error_log</td>
                 <td>NULL</td>
-                <td>Specifies the name of the file where script errors should be logged. The file should be writable by the web server's user. If the special value syslog is used, the errors are sent to the system logger instead</td>
+                <td>Вказує ім&#8217;я файлу, куди повинні записуватися помилки скрипту. Файл має бути доступним для запису користувачем вебсервера. Якщо використовується спеціальне значення syslog, помилки надсилаються до системного реєстратора</td>
                 <td>PHP_INI_ALL</td>
             </tr>
         </table>
@@ -1409,7 +1409,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>PHP Error and Logging Functions</h2>
+</div>    <h2>PHP Функції реєстрації помилок і журналювання</h2>
     <table class="ws-table-all notranslate">
         <tr>
             <th style="width:32%">Функція</th>
@@ -1417,51 +1417,51 @@
         </tr>
         <tr>
             <td><a href="func_error_debug_backtrace.html">debug_backtrace()</a></td>
-            <td>Generates a backtrace</td>
+            <td>Створює зворотне трасування</td>
         </tr>
         <tr>
             <td><a href="func_error_debug_print_backtrace.html">debug_print_backtrace()</a></td>
-            <td>Prints a backtrace</td>
+            <td>Друкує зворотне трасування</td>
         </tr>
         <tr>
             <td>error_clear_last()</td>
-            <td>Clears the last error</td>
+            <td>Очищає останню помилку</td>
         </tr>
         <tr>
             <td><a href="func_error_get_last.html">error_get_last()</a></td>
-            <td>Returns the last error that occurred</td>
+            <td>Повертає останню помилку, яка сталася</td>
         </tr>
         <tr>
             <td><a href="func_error_log.html">error_log()</a></td>
-            <td>Sends an error message to a log, to a file, or to a mail account</td>
+            <td>Надсилає повідомлення про помилку в журнал, файл або обліковий запис електронної пошти</td>
         </tr>
         <tr>
             <td><a href="func_error_reporting.html">error_reporting()</a></td>
-            <td>Specifies which errors are reported</td>
+            <td>Визначає, про які помилки повідомляється</td>
         </tr>
         <tr>
             <td><a href="func_error_restore_error_handler.html">restore_error_handler()</a></td>
-            <td>Restores the previous error handler</td>
+            <td>Відновлює попередній обробник помилок</td>
         </tr>
         <tr>
             <td><a href="func_error_restore_exception_handler.html">restore_exception_handler()</a></td>
-            <td>Restores the previous exception handler</td>
+            <td>Відновлює попередній обробник винятків</td>
         </tr>
         <tr>
             <td><a href="func_error_set_error_handler.html">set_error_handler()</a></td>
-            <td>Sets a user-defined error handler function</td>
+            <td>Встановлює визначену користувачем функцію обробки помилок</td>
         </tr>
         <tr>
             <td><a href="func_error_set_exception_handler.html">set_exception_handler()</a></td>
-            <td>Sets a user-defined exception handler function</td>
+            <td>Встановлює визначену користувачем функцію обробки винятків</td>
         </tr>
         <tr>
             <td><a href="func_error_trigger_error.html">trigger_error()</a></td>
-            <td>Creates a user-level error message</td>
+            <td>Створює повідомлення про помилку на рівні користувача</td>
         </tr>
         <tr>
             <td>user_error()</td>
-            <td>Alias of <a href="func_error_trigger_error.html">trigger_error()</a></td>
+            <td>Псевдонім <a href="func_error_trigger_error.html">trigger_error()</a></td>
         </tr>
     </table>
     <hr>
@@ -1469,7 +1469,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>PHP Predefined Error and Logging Constants</h2>
+</div>    <h2>PHP Попередньо визначені константи помилок і журналювання</h2>
     <div class="w3-responsive">
         <table class="ws-table-all notranslate">
             <tr>
@@ -1480,82 +1480,82 @@
             <tr>
                 <td>1</td>
                 <td>E_ERROR</td>
-                <td>Fatal run-time errors. Errors that cannot be recovered from. Execution of the script is halted</td>
+                <td>Фатальні помилки під час виконання. Помилки, які неможливо виправити. Виконання сценарію зупинено</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>E_WARNING</td>
-                <td>Run-time warnings (non-fatal errors). Execution of the script is not halted</td>
+                <td>Попередження під час виконання (нефатальні помилки). Виконання скрипту не зупинено</td>
             </tr>
             <tr>
                 <td>4</td>
                 <td>E_PARSE</td>
-                <td>Compile-time parse errors. Parse errors should only be generated by the parser</td>
+                <td>Помилки аналізу під час компіляції. Помилки аналізу повинні генеруватися лише синтаксичним аналізатором</td>
             </tr>
             <tr>
                 <td>8</td>
                 <td>E_NOTICE</td>
-                <td>Run-time notices. The script found something that might be an error, but could also happen when running a script normally</td>
+                <td>Повідомлення під час виконання. Скрипт виявив щось, що може бути помилкою, але також може статися під час нормального виконання скрипту</td>
             </tr>
             <tr>
                 <td>16</td>
                 <td>E_CORE_ERROR</td>
-                <td>Fatal errors at PHP startup. This is like E_ERROR, except it is generated by the core of PHP</td>
+                <td>Фатальні помилки під час запуску PHP. Це схоже на E_ERROR, за винятком того, що воно генерується ядром PHP</td>
             </tr>
             <tr>
                 <td>32</td>
                 <td>E_CORE_WARNING</td>
-                <td>Non-fatal errors at PHP startup. This is like E_WARNING, except it is generated by the core of PHP</td>
+                <td>Нефатальні помилки під час запуску PHP. Це як E_WARNING, за винятком того, що воно генерується ядром PHP</td>
             </tr>
             <tr>
                 <td>64</td>
                 <td>E_COMPILE_ERROR</td>
-                <td>Fatal compile-time errors. This is like E_ERROR, except it is generated by the Zend Scripting Engine</td>
+                <td>Фатальні помилки під час компіляції. Це схоже на E_ERROR, за винятком того, що її генерує Zend Scripting Engine</td>
             </tr>
             <tr>
                 <td>128</td>
                 <td>E_COMPILE_WARNING</td>
-                <td>Non-fatal compile-time errors. This is like E_WARNING, except it is generated by the Zend Scripting Engine</td>
+                <td>Нефатальні помилки під час компіляції. Це схоже на E_WARNING, за винятком того, що воно генерується Zend Scripting Engine</td>
             </tr>
             <tr>
                 <td>256</td>
                 <td>E_USER_ERROR</td>
-                <td>Fatal user-generated error. This is like E_ERROR, except it is generated in PHP code by using the PHP function trigger_error()</td>
+                <td>Критична помилка, створена користувачем. Це схоже на E_ERROR, за винятком того, що воно генерується в коді PHP за допомогою PHP функції trigger_error()</td>
             </tr>
             <tr>
                 <td>512</td>
                 <td>E_USER_WARNING</td>
-                <td>Non-fatal user-generated warning. This is like E_WARNING, except it is generated in PHP code by using the PHP function trigger_error()</td>
+                <td>Нефатальне попередження, створене користувачем. Це схоже на E_WARNING, за винятком того, що воно генерується в коді PHP за допомогою PHP функції trigger_error()</td>
             </tr>
             <tr>
                 <td>1024</td>
                 <td>E_USER_NOTICE</td>
-                <td>User-generated notice. This is like E_NOTICE, except it is generated in PHP code by using the PHP function trigger_error()</td>
+                <td>Сповіщення, створене користувачем. Це схоже на E_NOTICE, за винятком того, що воно генерується в коді PHP за допомогою PHP функції trigger_error()</td>
             </tr>
             <tr>
                 <td>2048</td>
                 <td>E_STRICT</td>
-                <td>Enable to have PHP suggest changes to your code which will ensure the best interoperability and forward compatibility of your code (Since PHP 5 but not included in E_ALL until PHP 5.4)</td>
+                <td>Увімкніть, щоб PHP пропонував зміни до вашого коду, що забезпечить найкращу сумісність і пряму сумісність вашого коду (починаючи з PHP 5, але не включено в E_ALL до PHP 5.4)</td>
             </tr>
             <tr>
                 <td>4096</td>
                 <td>E_RECOVERABLE_ERROR</td>
-                <td>Catchable fatal error. Indicates that a probably dangerous error occurred, but did not leave the Engine in an unstable state. If the error is not caught by a user defined handle, the application aborts as it was an E_ERROR (Since PHP 5.2)</td>
+                <td>Фатальна помилка, яку можна вловити. Вказує на те, що ймовірно небезпечна помилка сталася, але не залишила двигун у нестабільному стані. Якщо помилка не виявлена визначеним користувачем описом, програма переривається, оскільки це була E_ERROR (починаючи з PHP 5.2)</td>
             </tr>
             <tr>
                 <td>8192</td>
                 <td>E_DEPRECATED</td>
-                <td>Run-time notices. Enable this to receive warnings about code that will not work in future versions (Since PHP 5.3)</td>
+                <td>Повідомлення під час виконання. Увімкніть це, щоб отримувати попередження про код, який не працюватиме в майбутніх версіях (починаючи з PHP 5.3)</td>
             </tr>
             <tr>
                 <td>16384</td>
                 <td>E_USER_DEPRECATED</td>
-                <td>User-generated warning message. This is like E_DEPRECATED, except it is generated in PHP code by using the PHP function trigger_error() (Since PHP 5.3)</td>
+                <td>Попередження, створене користувачем. Це схоже на E_DEPRECATED, за винятком того, що воно генерується в коді PHP за допомогою PHP функції trigger_error() (починаючи з PHP 5.3)</td>
             </tr>
             <tr>
                 <td>32767</td>
                 <td>E_ALL</td>
-                <td>Enable all PHP errors and warnings (except E_STRICT in versions &lt; 5.4)</td>
+                <td>Увімкнути всі помилки та попередження PHP (крім E_STRICT у версіях &lt; 5.4)</td>
             </tr>
         </table>
     </div>
