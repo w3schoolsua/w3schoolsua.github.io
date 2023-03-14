@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Python List Comprehension (Генератор списків). Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Python List Comprehension (Генератор списків). Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='Python List Comprehension (Генератор списків). Синтаксис. Стан. Умова. Ітерація. Вираз. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -530,8 +530,8 @@
     <h2>List Comprehension (генератор списків)</h2>
     <p>List Comprehension (генератор списків) пропонує коротший синтаксис, коли ви хочете створити новий список на основі значень існуючого списку.</p>
     <p>Приклад:</p>
-    <p>Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.</p>
-    <p>Without list comprehension you will have to write a <code class="w3-codespan">for</code> statement with a conditional test inside:</p>
+    <p>На основі списку фруктів вам потрібен новий список, який містить лише фрукти з літерою &quot;а&quot; в назві.</p>
+    <p>Без генератора списку вам доведеться написати інструкцію <code class="w3-codespan">for</code> із умовним тестом усередині:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate pythonHigh">
@@ -539,7 +539,7 @@
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_without_comprehension.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>With list comprehension you can do all that with only one line of code:</p>
+    <p>З генератором списку ви можете зробити все це за допомогою лише одного рядка коду:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate pythonHigh">
@@ -556,43 +556,43 @@
     <div class="w3-codeline notranslate pythonHigh">
         newlist = [<em>expression</em> for <em>item</em> in <em>iterable</em> if <em>condition</em> == True]
     </div>
-    <p>The return value is a new list, leaving the old list unchanged.</p>
+    <p>Поверненим значенням є новий список, який залишає старий список без змін.</p>
     <hr>
-    <h3>Condition</h3>
-    <p>The <em>condition</em> is like a filter that only accepts the items that valuate to <code class="w3-codespan">True</code>.</p>
+    <h3>Стан</h3>
+    <p><em>Умова</em> схожа на фільтр, який приймає лише ті елементи, які мають значення <code class="w3-codespan">True</code>.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Only accept items that are not "apple":</p>
+        <p>Приймати лише ті елементи, які не є "apple":</p>
         <div class="w3-code notranslate pythonHigh">
             newlist = [x for x in fruits if x != "apple"]
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_comprehension_if.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>The condition <span class="w3-codeline notranslate pythonHigh" style="padding:5px;">if x != "apple"</span> &nbsp;will return <code class="w3-codespan">True</code> for all elements other than &quot;apple&quot;, making the new list contain all fruits except &quot;apple&quot;.</p>
-    <p>The <em>condition</em> is optional and can be omitted:</p>
+    <p>Умова <span class="w3-codeline notranslate pythonHigh" style="padding:5px;">if x != "apple"</span> &nbsp;поверне значення <code class="w3-codespan">True</code> для всіх елементів, крім &quot;apple&quot;, завдяки чому новий список міститиме всі фрукти, крім &quot;apple&quot;.</p>
+    <p><em>Умова</em> є необов&#8217;язковою та може бути опущена:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>With no <code class="w3-codespan">if</code> statement:</p>
+        <p>Без інструкції <code class="w3-codespan">if</code>:</p>
         <div class="w3-code notranslate pythonHigh">
             newlist = [x for x in fruits]
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_comprehension_noif.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h3>Iterable</h3>
-    <p>The <em>iterable</em> can be any iterable object, like a list, tuple, set etc.</p>
+    <h3>Ітерація</h3>
+    <p><em>Ітерація</em> може бути будь-яким ітерованим об&#8217;єктом, як-от список, кортеж, набір тощо.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>You can use the <code class="w3-codespan">range()</code> function to create an iterable:</p>
+        <p>Ви можете використовувати функцію <code class="w3-codespan">range()</code> для створення ітерованого об&#8217;єкта:</p>
         <div class="w3-code notranslate pythonHigh">
             newlist = [x for x in range(10)]
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_comprehension_range.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>Same example, but with a condition:</p>
+    <p>Той же приклад, але з умовою:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Accept only numbers lower than 5:</p>
+        <p>Приймати лише числа, менші за 5:</p>
         <div class="w3-code notranslate pythonHigh">
             newlist = [x for x in range(10) if x &lt; 5]
         </div>
@@ -603,35 +603,35 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h3>Expression</h3>
-    <p>The <em>expression</em> is the current item in the iteration, but it is also the outcome, which you can manipulate before it ends up like a list item in the new list:</p>
+</div>    <h3>Вираз</h3>
+    <p><em>Вираз</em> є поточним елементом у ітерації, але це також результат, яким ви можете маніпулювати, перш ніж він закінчиться як елемент списку в новому списку:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Set the values in the new list to upper case:</p>
+        <p>Установіть значення у новому списку у верхній регістр:</p>
         <div class="w3-code notranslate pythonHigh">
             newlist = [x.upper() for x in fruits]
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_comprehension_upper.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>You can set the outcome to whatever you like:</p>
+    <p>Ви можете встановити будь-який результат:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Set all values in the new list to 'hello':</p>
+        <p>Установіть для всіх значень у новому списку значення 'hello':</p>
         <div class="w3-code notranslate pythonHigh">
             newlist = ['hello' for x in fruits]</div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_comprehension_hello.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>The <em>expression</em> can also contain conditions, not like a filter, but as a way to manipulate the outcome:</p>
+    <p><em>Вираз</em> також може містити умови, не як фільтр, а як спосіб маніпулювання результатом:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Return &quot;orange&quot; instead of &quot;banana&quot;:</p>
+        <p>Поверне &quot;orange&quot; замість &quot;banana&quot;:</p>
         <div class="w3-code notranslate pythonHigh">
             newlist = [x if x != &quot;banana&quot; else &quot;orange&quot; for x in fruits]
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_comprehension_if_else.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>The <em>expression</em> in the example above says:</p>
-    <p><em>"Return the item if it is not banana, if it is banana return orange".</em></p>
+    <p><em>Вираз</em> у прикладі вище говорить:</p>
+    <p><em>&quot;Поверніть товар, якщо це не банан, якщо це банан, поверніть апельсин&quot;.</em></p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="python_lists_loop.html">&#10094; Prev</a>
