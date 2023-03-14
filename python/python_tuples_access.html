@@ -12,8 +12,8 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Python Циклічні списки. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Python Циклічні списки. Цикл списку. Цикл чисел індексу. Використання циклу While. Looping Using List Comprehension. Приклади. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Python Кортежі. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Python Кортежі. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -518,73 +518,108 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index.html'><img src='../svg/python_icon1.svg' alt='Python. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='Python для початківців. W3Schools українською' style='width: 100px'></a><p class='w3-right'>
-    <a href='python_lists_loop_en.html' title='Перейти на англійську мову'>En</a>
+    <a href='python_tuples_access_en.html' title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>Python - Циклічні списки</h1>
+    <h1>Python - <span class="color_h1">Access Tuple Items</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="python_lists_remove.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="python_lists_comprehension.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="python_tuples.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="python_tuples_update.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Перебрати список</h2>
-    <p>Ви можете перебрати елементи списку за допомогою циклу <code class="w3-codespan">for</code>:</p>
+    <h2>Access Tuple Items</h2>
+    <p>You can access tuple items by referring to the index number, inside square brackets:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Надрукувати всі елементи в списку, один за одним:</p>
+        <p>Надрукувати другий елемент в кортежі:</p>
         <div class="w3-code notranslate pythonHigh">
-            thislist = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]<br>for x in thislist:<br>&nbsp; print(x)
+            thistuple = ("apple", "banana", "cherry")<br>print(thistuple[1])
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_loop.html">Спробуйте самі &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_tuple1.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>Дізнатись більше про цикли <code class="w3-codespan">for</code> ви можете в розділі <a href="python_for_loops_en.html">Python Цикли For</a> на нашому сайті <a href='../index.html'><strong>W3Schools українською</strong></a>.</p>
+    <div class="w3-panel w3-note">
+        <p><b>Примітка:</b> Перший елемент матиме індекс 0.</p>
+    </div>
     <hr>
-    <h2>Перебрати номери індексів</h2>
-    <p>Ви також можете перебрати елементи списку, посилаючись на їхній індексний номер.</p>
-    <p>Використовуйте функції <code class="w3-codespan">range()</code> та <code class="w3-codespan">len()</code>, щоб створити відповідну ітерацію.</p>
+    <h2>Negative Indexing</h2>
+    <p>Negative indexing means start from the end.</p>
+    <p><code class="w3-codespan">-1</code> refers to the last item, <code class="w3-codespan">-2</code> refers to the second last item etc.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Надрукуйте всі елементи, посилаючись на їхні індексні номери:</p>
+        <p>Print the last item of the tuple:</p>
         <div class="w3-code notranslate pythonHigh">
-            thislist = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]<br>for i in range(len(thislist)):<br>&nbsp; print(thislist[i])
+            thistuple = (&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;)<br>print(thistuple[-1])
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_loop2.html">Спробуйте самі &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_tuple_negative_index.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>Ітератор, створений у прикладі вище, є <code class="w3-codespan">[0, 1, 2]</code>.</p>
     <hr>
-    <div class="adver_adinfeed">
+    <h2>Range of Indexes</h2>
+    <p>You can specify a range of indexes by specifying where to start and where to end the range.</p>
+    <p>When specifying a range, the return value will be a new tuple with the specified items.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>Поверне третій, четвертий і п&#8217;ятий елмент:</p>
+        <div class="w3-code notranslate pythonHigh">
+            thistuple = (&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;orange&quot;, &quot;kiwi&quot;, &quot;melon&quot;, &quot;mango&quot;)<br>print(thistuple[2:5])
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_tuple_range.html">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-panel w3-note">
+        <p><b>Примітка:</b> The search will start at index 2 (included) and end at index 5 (not included).</p>
+    </div>
+    <div class="w3-panel w3-note">
+        <p>Пам&#8217;ятайте, що перший елемент має індекс 0.</p>
+    </div>
+    <p>By leaving out the start value, the range will start at the first item:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>This example returns the items from the beginning to, but NOT included, &quot;kiwi&quot;:</p>
+        <div class="w3-code notranslate pythonHigh">
+            thistuple = (&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;orange&quot;, &quot;kiwi&quot;, &quot;melon&quot;, &quot;mango&quot;)<br>print(thistuple[:4])
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_tuple_range2.html">Спробуйте самі &raquo;</a>
+    </div>
+    <p>By leaving out the end value, the range will go on to the end of the list:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>This example returns the items from &quot;cherry&quot; and to the end:</p>
+        <div class="w3-code notranslate pythonHigh">
+            thistuple = (&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;orange&quot;, &quot;kiwi&quot;, &quot;melon&quot;, &quot;mango&quot;)<br>print(thistuple[2:])
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_tuple_range3.html">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Використання циклу While</h2>
-    <p>Ви можете перебирати елементи списку за допомогою циклу <code class="w3-codespan">while</code>.</p>
-    <p>Використовуйте функцію <code class="w3-codespan">len()</code>, щоб визначити довжину списку, потім почніть з 0 та переберіть елементи списку, посилаючись на їхні індекси.</p>
-    <p>Не забувайте збільшувати індекс на 1 після кожної ітерації.</p>
+</div>
+    <h2>Range of Negative Indexes</h2>
+    <p>Specify negative indexes if you want to start the search from the end of the tuple:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Надрукуйте всі елементи, використовуючи цикл <code class="w3-codespan">while</code>, щоб переглянути всі номери індексів</p>
+        <p>This example returns the items from index -4 (included) to index -1 (excluded)</p>
         <div class="w3-code notranslate pythonHigh">
-            thislist = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]<br>i = 0<br>while i &lt; len(thislist):<br>&nbsp; print(thislist[i])<br>&nbsp; i = i + 1
+            thistuple = (&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;orange&quot;, &quot;kiwi&quot;, &quot;melon&quot;, &quot;mango&quot;)<br>print(thistuple[-4:-1])
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_while_loop.html">Спробуйте самі &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_tuple_range_negative.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>Дізнатись більше про цикли <code class="w3-codespan">while</code> ви можете в розділі <a href="python_while_loops.html">Python Цикли While</a>.</p>
     <hr>
-    <h2>Цикл із використанням List Comprehension (розуміння списку)</h2>
-    <p>List Comprehension пропонує найкоротший синтаксис для циклічного перегляду списків:</p>
+    <h2>Check if Item Exists</h2>
+    <p>To determine if a specified item is present in a tuple use the <code class="w3-codespan">in</code> keyword:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Короткий ручний цикл <code class="w3-codespan">for</code>, який друкує всі елементи в списку:</p>
+        <p>Check if "apple" is present in the tuple:</p>
         <div class="w3-code notranslate pythonHigh">
-            thislist = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]<br>[print(x) for x in thislist]
+            thistuple = (&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;)<br>if &quot;apple&quot; in thistuple:<br>&nbsp; print(&quot;Yes, 'apple' is in the fruits tuple&quot;)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_list_loop_comprehensive.html">Спробуйте самі &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_tuple_in.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>Дізнайтеся більше про розуміння списку в наступному розділі: <a href="python_lists_comprehension_en.html">List Comprehension</a>.</p>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="python_lists_remove.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="python_lists_comprehension.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="python_tuples.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="python_tuples_update.html">Next &#10095;</a>
     </div>
 </article>
 <div class="adver_addown">
