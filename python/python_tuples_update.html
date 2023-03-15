@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Python Оновлення кортежів. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Python Оновлення кортежів. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='Python Оновлення кортежів. Змінити значення кортежу. Додати елементи. Перетворити кортеж на список. Додати кортеж до кортежу. Видалити елементи. Ключове слово del може видалити кортеж повністю. Приклади. Уроки для початківців. W3Schools українською'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -527,15 +527,15 @@
         <a class="w3-right w3-btn" href="python_tuples_unpack.html">Next &#10095;</a>
     </div>
     <hr>
-    <p>Tuples are unchangeable, meaning that you cannot change, add, or remove items once the tuple is created.</p>
-    <p>But there are some workarounds.</p>
+    <p>Кортежі не можна змінювати, тобто ви не можете змінювати, додавати чи видаляти елементи після створення кортежу.</p>
+    <p>Але є деякі обхідні шляхи.</p>
     <hr>
     <h2>Змінити значення кортежу</h2>
-    <p>Once a tuple is created, you cannot change its values. Tuples are <strong>unchangeable</strong>, or <strong>immutable</strong> as it also is called.</p>
-    <p>But there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.</p>
+    <p>Після створення кортежу ви не можете змінити його значення. Кортежі <strong>незмінні</strong> або, як їх ще називають, <strong>немутабельні</strong>.</p>
+    <p>Але є обхідний шлях. Ви можете перетворити кортеж на список, змінити список і перетворити список назад на кортеж.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Convert the tuple into a list to be able to change it:</p>
+        <p>Перетворіть кортеж у список, щоб мати можливість його змінити:</p>
         <div class="w3-code notranslate pythonHigh">
             x = ("apple", "banana", "cherry")<br>y = list(x)<br>y[1] = &quot;kiwi&quot;<br>x = tuple(y)<br><br>print(x)
         </div>
@@ -543,27 +543,27 @@
     </div>
     <hr>
     <h2>Додати елементи</h2>
-    <p>Since tuples are immutable, they do not have a build-in <code class="w3-codespan">append()</code> method, but there are other ways to add items to a tuple.</p>
-    <p>1. <b>Convert into a list</b>: Just like the workaround for<em> changing </em>a tuple, you can convert it into a list, add your item(s), and convert it back into a tuple.</p>
+    <p>Оскільки кортежі є незмінними, вони не мають вбудованого методу <code class="w3-codespan">append()</code>, але існують інші способи додавати елементи до кортежу.</p>
+    <p>1. <b>Перетворити на список</b>: так само як обхідний шлях для <em>зміни</em>кортежу, ви можете перетворити його на список, додати свої елементи та перетворити його назад на кортеж.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Convert the tuple into a list, add "orange", and convert it back into a tuple:</p>
+        <p>Перетворіть кортеж на список, додайте "orange" і знову перетворите його на кортеж:</p>
         <div class="w3-code notranslate pythonHigh">
             thistuple = ("apple", "banana", "cherry")<br>y = list(thistuple)<br>y.append(&quot;orange&quot;)<br>thistuple = tuple(y)
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_tuple_add_orange.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>2. <b>Add tuple to a tuple</b>. You are allowed to add tuples to tuples, so if you want to add one item, (or many), create a new tuple with the item(s), and add it to the existing tuple:</p>
+    <p>2. <b>Додати кортеж до кортежу</b>. Вам дозволено додавати кортежі до кортежів, тому, якщо ви хочете додати один елемент (або багато), створіть новий кортеж із елементами та додайте його до існуючого кортежу:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Create a new tuple with the value &quot;orange&quot;, and add that tuple:</p>
+        <p>Створіть новий кортеж зі значенням &quot;orange&quot; і додайте цей кортеж:</p>
         <div class="w3-code notranslate pythonHigh">
             thistuple = ("apple", "banana", "cherry")<br>y = (&quot;orange&quot;,)<br>thistuple += y<br><br>print(thistuple)
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_tuple_add_tuple.html">Спробуйте самі &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p><b>Примітка:</b> When creating a tuple with only one item, remember to include a comma after the item, otherwise it will not be identified as a tuple.</p>
+        <p><b>Примітка:</b> Створюючи кортеж лише з одним елементом, не забудьте поставити кому після елемента, інакше він не буде ідентифікований як кортеж.</p>
     </div>
     <hr>
     <div class="adver_addown">
@@ -574,12 +574,12 @@
 </div>
     <h2>Видалити елементи</h2>
     <div class="w3-panel w3-note">
-        <p><b>Примітка:</b> You cannot remove items in a tuple.</p>
+        <p><b>Примітка:</b> Ви не можете видалити елементи з кортежу.</p>
     </div>
-    <p>Tuples are <strong>unchangeable</strong>, so you cannot remove items from it, but you can use the same workaround as we used for changing and adding tuple items:</p>
+    <p>Кортежі <b>незмінні</b>, тому ви не можете видалити з них елементи, але можете скористатися тим самим обхідним шляхом, який ми використовували для зміни та додавання елементів кортежу:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Convert the tuple into a list, remove &quot;apple&quot;, and convert it back into a tuple:</p>
+        <p>Перетворіть кортеж на список, видаліть &quot;apple&quot; і знову перетворіть його на кортеж:</p>
         <div class="w3-code notranslate pythonHigh">
             thistuple = ("apple", "banana", "cherry")<br>y = list(thistuple)<br>y.remove(&quot;apple&quot;)<br>thistuple = tuple(y)
         </div>
@@ -590,7 +590,7 @@
         <h3>Приклад</h3>
         <p>Ключове слово <code class="w3-codespan">del</code> може видалити кортеж повністю:</p>
         <div class="w3-code notranslate pythonHigh">
-            thistuple = ("apple", "banana", "cherry")<br>del thistuple<br>print(thistuple) #this will raise an error because the tuple no longer exists
+            thistuple = ("apple", "banana", "cherry")<br>del thistuple<br>print(thistuple) #це викличе помилку, оскільки кортеж більше не існує
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_tuple_del.html">Спробуйте самі &raquo;</a>
     </div>
@@ -764,4 +764,4 @@
 <script src='../cdn/respond/1.4.2/respond.min.js'></script>
 <![endif]-->
 <!--FOOTER-->
-</html>
+</html>F
