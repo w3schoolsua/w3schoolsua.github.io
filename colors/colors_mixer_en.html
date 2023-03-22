@@ -4,6 +4,10 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../lib/w3color.js"></script>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
 <meta property='og:image' content='../images/w3schools_logo_436_2.png'>
@@ -14,110 +18,117 @@
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>HTML Color Mixer. Lessons for beginners. W3Schools in English</title>
 <meta name='description' content='HTML Color Mixer. Lessons for beginners. W3Schools in English'>
-    <!--
-    <link rel="stylesheet" href="../cdn/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="../cdn/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../cdn/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="/lib/w3color.js"></script>
-    <link rel="stylesheet" href="../styles/w3-fix.css">
-    <style>.wronginputDIV {text-align:left;position:absolute;margin:-2px 60px;color:#a94442;display:none;}</style>
-    <script>
-        var colortophex="#FF0000"
-        var colorbottomhex="#0000FF"
-        function mouseOverColortop(hex)
-        {
-            document.getElementById("divpreviewtop").style.backgroundColor=hex
-            document.getElementById("divpreviewtxttop").innerHTML=hex
-            document.body.style.cursor="pointer"
+<link rel="stylesheet" href="../styles/w3-fix.css">
+<style>
+    .wronginputDIV {
+        text-align:left;
+        position:absolute;
+        margin:-2px 60px;
+        color:#a94442;
+        display:none;
+    }
+</style>
+<script>
+    var colortophex="#FF0000"
+    var colorbottomhex="#0000FF"
+
+    function mouseOverColortop(hex)
+    {
+        document.getElementById("divpreviewtop").style.backgroundColor=hex
+        document.getElementById("divpreviewtxttop").innerHTML=hex
+        document.body.style.cursor="pointer"
+    }
+
+    function mouseOverColorbottom(hex)
+    {
+        document.getElementById("divpreviewbottom").style.backgroundColor=hex
+        document.getElementById("divpreviewtxtbottom").innerHTML=hex
+        document.body.style.cursor="pointer"
+    }
+
+    function mouseOutMaptop()
+    {
+        document.getElementById("divpreviewtop").style.backgroundColor=colortophex
+        document.getElementById("divpreviewtxttop").innerHTML=colortophex
+        document.body.style.cursor=""
+    }
+
+    function mouseOutMapbottom()
+    {
+        document.getElementById("divpreviewbottom").style.backgroundColor=colorbottomhex
+        document.getElementById("divpreviewtxtbottom").innerHTML=colorbottomhex
+        document.body.style.cursor=""
+    }
+    function wrongInput(x) {
+        document.getElementById("wronginput" + x).style.display = "block";
+    }
+    function clearWrongInput(x) {
+        document.getElementById("wronginput" + x).style.display = "none";
+    }
+
+    function clickColor(hex, n, seltop, selleft) {
+        var xhttp, c, colortop, colorbottom, colorbottomObj, colortopObj;
+        if (n == 0) {
+            x = "bottom";
+            colortop = document.getElementById("colortop").value;
+            colorbottom = hex
+        } else {
+            x = "top";
+            colortop = hex;
+            colorbottom = document.getElementById("colorbottom").value;
         }
-        function mouseOverColorbottom(hex)
-        {
-            document.getElementById("divpreviewbottom").style.backgroundColor=hex
-            document.getElementById("divpreviewtxtbottom").innerHTML=hex
-            document.body.style.cursor="pointer"
+        if (hex == 0) {
+            colortop = document.getElementById("colortop").value;
+            colorbottom = document.getElementById("colorbottom").value;
         }
-        function mouseOutMaptop()
-        {
-            document.getElementById("divpreviewtop").style.backgroundColor=colortophex
-            document.getElementById("divpreviewtxttop").innerHTML=colortophex
-            document.body.style.cursor=""
+        colortop = colortop.replace(/;/g, ","); //replace any semicolon with a comma
+        colorbottom = colorbottom.replace(/;/g, ","); //replace any semicolon with a comma
+        colortopObj = w3color(colortop);
+        if (colortopObj.valid) {
+            clearWrongInput("top");
+        } else {
+            wrongInput("top");
+            return;
         }
-        function mouseOutMapbottom()
-        {
-            document.getElementById("divpreviewbottom").style.backgroundColor=colorbottomhex
-            document.getElementById("divpreviewtxtbottom").innerHTML=colorbottomhex
-            document.body.style.cursor=""
+        colorbottomObj = w3color(colorbottom);
+        if (colorbottomObj.valid) {
+            clearWrongInput("bottom");
+        } else {
+            wrongInput("bottom");
+            return;
         }
-        function wrongInput(x) {
-            document.getElementById("wronginput" + x).style.display = "block";
+        colortophex = colortopObj.toHexString().toUpperCase();
+        colorbottomhex = colorbottomObj.toHexString().toUpperCase();
+        document.getElementById("colortop").value = colortophex;
+        document.getElementById("colorbottom").value = colorbottomhex;
+        if (window.XMLHttpRequest) {
+            xhttp = new XMLHttpRequest();
+        } else {
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        function clearWrongInput(x) {
-            document.getElementById("wronginput" + x).style.display = "none";
+        xhttp.open("GET","http_colormixer.asp?colortop=" + colortopObj.toHexString().substr(1) + "&colorbottom=" + colorbottomObj.toHexString().substr(1) + "&r=" + Math.random(),false);
+        xhttp.send("");
+        document.getElementById("colormixer").innerHTML = xhttp.responseText;
+        if (seltop > -1 && selleft > -1) {
+            document.getElementById("selectedColor" + x).style.top = seltop + "px";
+            document.getElementById("selectedColor" + x).style.left = selleft + "px";
+            document.getElementById("selectedColor" + x).style.visibility = "visible";
+        } else {
+            document.getElementById("divpreviewtop").style.backgroundColor = colortopObj.toHexString();
+            document.getElementById("divpreviewtxttop").innerHTML = colortopObj.toHexString();
+            document.getElementById("selectedColortop").style.visibility = "hidden";
+            document.getElementById("divpreviewbottom").style.backgroundColor = colorbottomObj.toHexString();
+            document.getElementById("divpreviewtxtbottom").innerHTML = colorbottomObj.toHexString();
+            document.getElementById("selectedColorbottom").style.visibility = "hidden";
         }
-        function clickColor(hex, n, seltop, selleft) {
-            var xhttp, c, colortop, colorbottom, colorbottomObj, colortopObj;
-            if (n == 0) {
-                x = "bottom";
-                colortop = document.getElementById("colortop").value;
-                colorbottom = hex
-            } else {
-                x = "top";
-                colortop = hex;
-                colorbottom = document.getElementById("colorbottom").value;
-            }
-            if (hex == 0) {
-                colortop = document.getElementById("colortop").value;
-                colorbottom = document.getElementById("colorbottom").value;
-            }
-            colortop = colortop.replace(/;/g, ","); //replace any semicolon with a comma
-            colorbottom = colorbottom.replace(/;/g, ","); //replace any semicolon with a comma
-            colortopObj = w3color(colortop);
-            if (colortopObj.valid) {
-                clearWrongInput("top");
-            } else {
-                wrongInput("top");
-                return;
-            }
-            colorbottomObj = w3color(colorbottom);
-            if (colorbottomObj.valid) {
-                clearWrongInput("bottom");
-            } else {
-                wrongInput("bottom");
-                return;
-            }
-            colortophex = colortopObj.toHexString().toUpperCase();
-            colorbottomhex = colorbottomObj.toHexString().toUpperCase();
-            document.getElementById("colortop").value = colortophex;
-            document.getElementById("colorbottom").value = colorbottomhex;
-            if (window.XMLHttpRequest) {
-                xhttp = new XMLHttpRequest();
-            } else {
-                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xhttp.open("GET","http_colormixer.asp?colortop=" + colortopObj.toHexString().substr(1) + "&colorbottom=" + colorbottomObj.toHexString().substr(1) + "&r=" + Math.random(),false);
-            xhttp.send("");
-            document.getElementById("colormixer").innerHTML = xhttp.responseText;
-            if (seltop > -1 && selleft > -1) {
-                document.getElementById("selectedColor" + x).style.top = seltop + "px";
-                document.getElementById("selectedColor" + x).style.left = selleft + "px";
-                document.getElementById("selectedColor" + x).style.visibility = "visible";
-            } else {
-                document.getElementById("divpreviewtop").style.backgroundColor = colortopObj.toHexString();
-                document.getElementById("divpreviewtxttop").innerHTML = colortopObj.toHexString();
-                document.getElementById("selectedColortop").style.visibility = "hidden";
-                document.getElementById("divpreviewbottom").style.backgroundColor = colorbottomObj.toHexString();
-                document.getElementById("divpreviewtxtbottom").innerHTML = colorbottomObj.toHexString();
-                document.getElementById("selectedColorbottom").style.visibility = "hidden";
-            }
+    }
+    function submitOnEnter(e) {
+        keyboardKey = e.which || e.keyCode;
+        if (keyboardKey == 13) {
+            clickColor(0,-1,-1);
         }
-        function submitOnEnter(e) {
-            keyboardKey = e.which || e.keyCode;
-            if (keyboardKey == 13) {
-                clickColor(0,-1,-1);
-            }
-        }
-    </script>
-    -->
+    }
+</script>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
@@ -225,6 +236,7 @@
                     <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_en.html'>Learn Raspberry Pi</a>
                     <a class='w3-bar-item w3-button' href='../git/index_en.html'>Learn Git</a>
                     <a class='w3-bar-item w3-button' href='../githubpages/index_en.html'>Learn GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_en.html'>Learn MongoDB</a>
                     <a class='w3-bar-item w3-button' href='../aws/index_en.html'>Learn AWS Cloud</a>
                     <h3>Web Building</h3>
                     <a class='w3-bar-item w3-button' href='../where_to_start_en.html'>Where To Start</a>
@@ -465,15 +477,10 @@
     <!-- adup_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-            <a href='index_en.html'><img src='../svg/colors_icon.svg' alt='HTML Colors. Lessons for beginners' class='w3-left w3-padding' title='HTML Colors. W3Schools in English' style='width:100px;'></a><p class='w3-right'>
+</div>            <a href='index_en.html'><img src='../svg/colors_icon.svg' alt='HTML Colors. Lessons for beginners' class='w3-left w3-padding' title='HTML Colors. W3Schools in English' style='width:100px;'></a><p class='w3-right'>
     <a href="colors_mixer.html" title='Switch to the Ukrainian language'>Ua</a>
 </p>
 <article>
-    <h2>HTML Color Mixer</h2>
-    <hr>
-    <p>The page is under development!</p>
-    <!--
     <h1>HTML <span class="color_h1">Color Mixer</span></h1>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="colors_picker_en.html">&#10094; Prev</a>
@@ -505,10 +512,10 @@
                 </div>
                 <div class="col-sm-6">
                     <div style="margin-bottom:20px;">
-                        Top color: <input onkeydown='submitOnEnter(event)' onfocus='clearWrongInput("top");' style='width:100px;margin:0px;color:#000;' name='colortop' value='#FF0000' id='colortop' /> <input type='button' value='Submit' onclick='clickColor(0,1,-1,-1)' style='color:#000;' />
+                        Top color: <input onkeydown='submitOnEnter(event)' onfocus='clearWrongInput("top");' style='width:100px;margin:0;color:#000;' name='colortop' value='#FF0000' id='colortop' /> <input type='button' value='Submit' onclick='clickColor(0,1,-1,-1)' style='color:#000;' />
                         <div class="wronginputDIV" id="wronginputtop">Wrong Input</div>
                     </div>
-                    <div id="colormixer"><table style='width:100%;'><tr><td style='height:40px;color:#FFFFFF;background:rgb(255,0,0)'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#ff0000</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(242,0,13)'  onmouseover='mouseOverColortop("#F2000D")' onclick='clickColor("#F2000D",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#f2000d</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(230,0,26)'  onmouseover='mouseOverColortop("#E6001A")' onclick='clickColor("#E6001A",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#e6001a</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(217,0,38)'  onmouseover='mouseOverColortop("#D90026")' onclick='clickColor("#D90026",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#d90026</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(204,0,51)'  onmouseover='mouseOverColortop("#CC0033")' onclick='clickColor("#CC0033",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#cc0033</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(191,0,64)'  onmouseover='mouseOverColortop("#BF0040")' onclick='clickColor("#BF0040",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#bf0040</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(178,0,76)'  onmouseover='mouseOverColortop("#B2004C")' onclick='clickColor("#B2004C",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#b2004c</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(166,0,89)'  onmouseover='mouseOverColortop("#A60059")' onclick='clickColor("#A60059",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#a60059</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(153,0,102)'  onmouseover='mouseOverColortop("#990066")' onclick='clickColor("#990066",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#990066</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(140,0,115)'  onmouseover='mouseOverColortop("#8C0073")' onclick='clickColor("#8C0073",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#8c0073</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(128,0,128)'  onmouseover='mouseOverColorbottom("#800080")' onclick='clickColor("#800080",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#800080</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(115,0,140)'  onmouseover='mouseOverColorbottom("#73008C")' onclick='clickColor("#73008C",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#73008c</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(102,0,153)'  onmouseover='mouseOverColorbottom("#660099")' onclick='clickColor("#660099",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#660099</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(89,0,166)'  onmouseover='mouseOverColorbottom("#5900A6")' onclick='clickColor("#5900A6",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#5900a6</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(77,0,178)'  onmouseover='mouseOverColorbottom("#4D00B2")' onclick='clickColor("#4D00B2",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#4d00b2</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(64,0,191)'  onmouseover='mouseOverColorbottom("#4000BF")' onclick='clickColor("#4000BF",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#4000bf</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(51,0,204)'  onmouseover='mouseOverColorbottom("#3300CC")' onclick='clickColor("#3300CC",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#3300cc</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(38,0,217)'  onmouseover='mouseOverColorbottom("#2600D9")' onclick='clickColor("#2600D9",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#2600d9</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(25,0,230)'  onmouseover='mouseOverColorbottom("#1900E6")' onclick='clickColor("#1900E6",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#1900e6</td></tr><tr><td style='width:200px;height:20px;color:#FFFFFF;background:rgb(13,0,242)'  onmouseover='mouseOverColorbottom("#0D00F2")' onclick='clickColor("#0D00F2",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#0d00f2</td></tr><tr><td style='height:40px;background:rgb(0,0,255)'></td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#0000ff</td></tr></table></div>
+                    <div id="colormixer"><table style='width:100%;'><tr><td style='height:40px;color:#fff;background:rgb(255,0,0)'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#ff0000</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(242,0,13)'  onmouseover='mouseOverColortop("#F2000D")' onclick='clickColor("#F2000D",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#f2000d</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(230,0,26)'  onmouseover='mouseOverColortop("#E6001A")' onclick='clickColor("#E6001A",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#e6001a</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(217,0,38)'  onmouseover='mouseOverColortop("#D90026")' onclick='clickColor("#D90026",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#d90026</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(204,0,51)'  onmouseover='mouseOverColortop("#CC0033")' onclick='clickColor("#CC0033",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#cc0033</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(191,0,64)'  onmouseover='mouseOverColortop("#BF0040")' onclick='clickColor("#BF0040",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#bf0040</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(178,0,76)'  onmouseover='mouseOverColortop("#B2004C")' onclick='clickColor("#B2004C",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#b2004c</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(166,0,89)'  onmouseover='mouseOverColortop("#A60059")' onclick='clickColor("#A60059",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#a60059</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(153,0,102)'  onmouseover='mouseOverColortop("#990066")' onclick='clickColor("#990066",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#990066</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(140,0,115)'  onmouseover='mouseOverColortop("#8C0073")' onclick='clickColor("#8C0073",1)' onmouseout='mouseOutMaptop()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#8c0073</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(128,0,128)'  onmouseover='mouseOverColorbottom("#800080")' onclick='clickColor("#800080",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#800080</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(115,0,140)'  onmouseover='mouseOverColorbottom("#73008C")' onclick='clickColor("#73008C",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#73008c</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(102,0,153)'  onmouseover='mouseOverColorbottom("#660099")' onclick='clickColor("#660099",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#660099</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(89,0,166)'  onmouseover='mouseOverColorbottom("#5900A6")' onclick='clickColor("#5900A6",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#5900a6</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(77,0,178)'  onmouseover='mouseOverColorbottom("#4D00B2")' onclick='clickColor("#4D00B2",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#4d00b2</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(64,0,191)'  onmouseover='mouseOverColorbottom("#4000BF")' onclick='clickColor("#4000BF",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#4000bf</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(51,0,204)'  onmouseover='mouseOverColorbottom("#3300CC")' onclick='clickColor("#3300CC",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#3300cc</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(38,0,217)'  onmouseover='mouseOverColorbottom("#2600D9")' onclick='clickColor("#2600D9",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#2600d9</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(25,0,230)'  onmouseover='mouseOverColorbottom("#1900E6")' onclick='clickColor("#1900E6",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#1900e6</td></tr><tr><td style='width:200px;height:20px;color:#fff;background:rgb(13,0,242)'  onmouseover='mouseOverColorbottom("#0D00F2")' onclick='clickColor("#0D00F2",0)' onmouseout='mouseOutMapbottom()'>&nbsp;</td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#0d00f2</td></tr><tr><td style='height:40px;background:rgb(0,0,255)'></td><td style='font-family:consolas,monospace;'>&nbsp;&nbsp;#0000ff</td></tr></table></div>
                     <div style="margin-top:20px;margin-bottom:20px;">
                         Bottom color: <input style='width:100px;margin:0;color:#000;' name='colorbottom' value='#0000FF' id='colorbottom' /> <input type='button' value='Submit' style='color:#000;' onclick='clickColor(0,0,-1,-1)' />
                         <div class="wronginputDIV" id="wronginputbottom">Wrong Input</div>
@@ -517,7 +524,8 @@
             </div>
         </div>
     </form>
-    -->
+    <hr>
+    <p><b>Note.</b> This page does not work correctly on GitHub!</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="colors_picker_en.html">&#10094; Prev</a>
@@ -537,13 +545,47 @@
         <h4><a href='../colors/colors_picker_en.html'>COLOR PICKER</a></h4>
         <a href='../colors/colors_picker_en.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
     </div>
-    <div class='sidesection'>
-        <h4>SUBSCRIBE!</h4>
-        <div class='w3-text-grey sharethis'>
-            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook W3Schools Rus' title='Facebook page' style='width:35px; height:35px'></a>
-            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='YouTube-channel W3Schools Rus' title='1th YouTube-channel' style='width:35px; height:35px'></a>
-            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram-channel' title='Telegram-channel' style='width:35px;height:35px'></a>
-            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='YouTube-channel W3Schools Rus' title='2th YouTube-channel' style='width:60px; height:30px'></a>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">TUTORIALS</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../html/index_en.html' class='btn-rightbar'>HTML</a>
+            <a href='../css/index_en.html' class='btn-rightbar'>CSS</a>
+            <a href='../css/css_rwd_intro_en.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver_en.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index_en.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index_en.html' class='btn-rightbar'>Colors</a>
+            <a href='../icons/index_en.html' class='btn-rightbar'>Icons</a>
+            <a href='../graphics/index_en.html' class='btn-rightbar'>Graphics</a>
+            <a href='../graphics/svg_intro_en.html' class='btn-rightbar'>SVG Graphics</a>
+            <a href='../graphics/canvas_intro_en.html' class='btn-rightbar'>Canvas Graphics</a>
+            <a href='../howto/index_en.html' class='btn-rightbar'>How To</a>
+            <a href='../sass/index_en.html' class='btn-rightbar'>Sass</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online guides on the site">REFERENCES</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../tags/index_en.html' class='btn-rightbar'>HTML Tags</a>
+            <a href='../tags/ref_html_browsersupport_en.html' class='btn-rightbar'>Browser Support</a>
+            <a href='../tags/ref_attributes_en.html' class='btn-rightbar'>HTML Attributes</a>
+            <a href='../tags/ref_standardattributes_en.html' class='btn-rightbar'>Global Attributes</a>
+            <a href='../tags/ref_eventattributes_en.html' class='btn-rightbar'>Event Attributes</a>
+            <a href='../tags/ref_colornames_en.html' class='btn-rightbar'>HTML Color Names</a>
+            <a href='../tags/ref_canvas_en.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom_en.html' class='btn-rightbar'>Audio/Video DOM</a>
+            <a href='../tags/ref_charactersets_en.html' class='btn-rightbar'>Character Sets</a>
+            <a href='../tags/ref_html_dtd_en.html' class='btn-rightbar'>DOCTYPE</a>
+            <a href='../tags/ref_urlencode_en.html' class='btn-rightbar'>URL Encoding</a>
+            <a href='../tags/ref_language_codes_en.html' class='btn-rightbar'>Language Code</a>
+            <a href='../tags/ref_country_codes_en.html' class='btn-rightbar'>ISO Country Codes</a>
+            <a href='../tags/ref_httpmessages_en.html' class='btn-rightbar'>HTTP Status Messages</a>
+            <a href='../tags/ref_httpmethods_en.html' class='btn-rightbar'>HTTP Request Methods</a>
+            <a href='../tags/ref_pxtoemconversion_en.html' class='btn-rightbar'>Pixel to Em Converter</a>
+            <a href='../tags/ref_keyboardshortcuts_en.html' class='btn-rightbar'>Keyboard Shortcuts</a>
         </div>
     </div>
   <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
@@ -563,7 +605,6 @@
 </div><!--FOOTER-->
 <div id='footer' class='footer w3-container w3-white'>
   <hr>
-
   <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
     <div class='w3-col l3 m3 s12'>
       <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>CONTACTS</a>
