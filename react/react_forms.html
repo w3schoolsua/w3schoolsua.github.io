@@ -13,7 +13,7 @@
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>React Форми. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Підручник React. Форми. Додавання форм у React. Вправа. Приклади. Уроки для початківців. W3Schools українською'>
+<meta name='description' content='Підручник React. Форми. Додавання форм у React. Обробка форм. Надсилання форм. Кілька полів введення. Текстове поле / Textarea. Вибрати. Вправа. Приклади. Уроки для початківців. W3Schools українською'>
 <script src='../lib/prism2.js'></script>
 <link rel='stylesheet' href='../lib/prism1.css'>
 <div class='w3-container top'>
@@ -366,17 +366,17 @@
         <a class="w3-right w3-btn" href="react_router.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Як і в HTML, React використовує форми, щоб дозволити користувачам взаємодіяти з вебсторінкою.</p>
+    <p class="intro">Як і в HTML, React використовує <strong>форми</strong>, щоб дозволити користувачам взаємодіяти з вебсторінкою.</p>
     <hr>
     <h2>Додавання форм у React</h2>
     <p>Ви додаєте форму за допомогою React, як і будь-який інший елемент:</p>
     <div class="w3-example">
-        <h3>Example:</h3>
+        <h3>Приклад:</h3>
         <p>Add a form that allows users to enter their name:</p>
         <pre class="language-jsx w3-white"><code>function MyForm() {
 return (
 &lt;form&gt;
-  &lt;label&gt;Enter your name:
+  &lt;label&gt;Введіть ім&#8217;я:
     &lt;input type=&quot;text&quot; /&gt;
   &lt;/label&gt;
 &lt;/form&gt;
@@ -387,23 +387,23 @@ root.render(&lt;MyForm /&gt;);
 </code></pre>
         <p><a target="_blank" class="w3-btn" href="../reacttryit/demo2_react_forms.html">Виконати приклад &raquo;</a></p>
     </div>
-    <p>This will work as normal, the form will submit and the page will refresh.</p>
-    <p>But this is generally not what we want to happen in React.</p>
-    <p>We want to prevent this default behavior and let React control the form.</p>
+    <p>Це працюватиме як зазвичай, форму буде надіслано, а сторінка оновиться.</p>
+    <p>Але загалом це не те, чого ми хочемо мати в React.</p>
+    <p>Ми хочемо запобігти такій поведінці за умовчанням і дозволити React контролювати форму.</p>
     <hr>
-    <h2>Handling Forms</h2>
-    <p>Handling forms is about how you handle the data when it changes value or gets submitted.</p>
-    <p>In HTML, form data is usually handled by the DOM.</p>
-    <p>In React, form data is usually handled by the components.</p>
-    <p>When the data is handled by the components, all the data is stored in the component state.</p>
-    <p>You can control changes by adding event handlers in the <code class="w3-codespan">onChange</code> attribute.</p>
-    <p>We can use the <code class="w3-codespan">useState</code> Hook to keep track of each inputs value and provide a "single source of truth" for the entire application.</p>
+    <h2>Обробка форм</h2>
+    <p>Обробка форм стосується того, як ви обробляєте дані, коли вони змінюють значення або надсилаються.</p>
+    <p>У HTML дані форми зазвичай обробляються DOM.</p>
+    <p>У React дані форми зазвичай обробляються компонентами.</p>
+    <p>Коли дані обробляються компонентами, усі дані зберігаються в стані компонента.</p>
+    <p>Ви можете контролювати зміни, додаючи обробники подій в атрибут <code class="w3-codespan">onChange</code>.</p>
+    <p>Ми можемо використовувати хук <code class="w3-codespan">useState</code>, щоб відстежувати кожне вхідне значення та надавати &quot;єдине джерело правди&quot; для всієї програми.</p>
     <div class="w3-panel w3-note">
-        <p>See the <a href="react_hooks.html">React Hooks</a> section for more information on Hooks.</p>
+        <p>Перегляньте розділ <a href="react_hooks.html">Хуки React</a>, щоб дізнатися більше про хуки.</p>
     </div>
     <div class="w3-example">
-        <h3>Example:</h3>
-        <p>Use the <code class="w3-codespan">useState</code> Hook to manage the input:</p>
+        <h3>Приклад:</h3>
+        <p>Використовуйте хук <code class="w3-codespan">useState</code> для керування введенням:</p>
         <pre class="language-jsx w3-white"><code>import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -412,7 +412,7 @@ const [name, setName] = useState(&quot;&quot;);
 
 return (
 &lt;form&gt;
-  &lt;label&gt;Enter your name:
+  &lt;label&gt;Введіть ім&#8217;я:
     &lt;input
       type=&quot;text&quot;
       value={name}
@@ -433,11 +433,11 @@ root.render(&lt;MyForm /&gt;);
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Submitting Forms</h2>
-    <p>You can control the submit action by adding an event handler in the <code class="w3-codespan">onSubmit</code> attribute for the <code class="w3-codespan">&lt;form&gt;</code>:</p>
+</div>    <h2>Надсилання форм</h2>
+    <p>Ви можете керувати дією надсилання, додавши обробник події в атрибут <code class="w3-codespan">onSubmit</code> для <code class="w3-codespan">&lt;form&gt;</code>:</p>
     <div class="w3-example">
-        <h3>Example:</h3>
-        <p>Add a submit button and an event handler in the <code class="w3-codespan">onSubmit</code> attribute:</p>
+        <h3>Приклад:</h3>
+        <p>Додайте кнопку надсилання та обробник події в атрибут <code class="w3-codespan">onSubmit</code>:</p>
         <pre class="language-jsx w3-white"><code>import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -446,12 +446,12 @@ const [name, setName] = useState(&quot;&quot;);
 
 const handleSubmit = (event) =&gt; {
 event.preventDefault();
-alert(`The name you entered was: ${name}`)
+alert(`Ім&#8217;я, яке ви ввели, було: ${name}`)
 }
 
 return (
 &lt;form onSubmit={handleSubmit}&gt;
-  &lt;label&gt;Enter your name:
+  &lt;label&gt;Введіть ім&#8217;я:
     &lt;input
       type=&quot;text&quot;
       value={name}
@@ -469,14 +469,14 @@ root.render(&lt;MyForm /&gt;);
         <p><a target="_blank" class="w3-btn" href="../reacttryit/demo2_react_forms_submit.html">Виконати приклад &raquo;</a></p>
     </div>
     <hr>
-    <h2>Multiple Input Fields</h2>
-    <p>You can control the values of more than one input field by adding a <code class="w3-codespan">name</code> attribute to each element.</p>
-    <p>We will initialize our state with an empty object.</p>
-    <p>To access the fields in the event handler use the <code class="w3-codespan">event.target.name</code> and <code class="w3-codespan">event.target.value</code> syntax.</p>
-    <p>To update the state, use square brackets [bracket notation] around the property name.</p>
+    <h2>Кілька полів введення</h2>
+    <p>Ви можете керувати значеннями кількох полів введення, додавши атрибут <code class="w3-codespan">name</code> до кожного елемента.</p>
+    <p>Ми ініціалізуємо наш стан порожнім об&#8217;єктом.</p>
+    <p>Щоб отримати доступ до полів в обробнику подій, використовуйте <code class="w3-codespan">event.target.name</code> і <code class="w3-codespan">event.target.value</code> синтаксис.</p>
+    <p>Щоб оновити стан, використовуйте квадратні дужки [нотація] навколо імені властивості.</p>
     <div class="w3-example">
-        <h3>Example:</h3>
-        <p>Write a form with two input fields:</p>
+        <h3>Приклад:</h3>
+        <p>Напишіть форму з двома полями введення:</p>
         <pre class="language-jsx w3-white"><code>import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -496,7 +496,7 @@ alert(inputs);
 
 return (
 &lt;form onSubmit={handleSubmit}&gt;
-  &lt;label&gt;Enter your name:
+  &lt;label&gt;Введіть ім&#8217;я:
   &lt;input
     type=&quot;text&quot;
     name=&quot;username&quot;
@@ -504,7 +504,7 @@ return (
     onChange={handleChange}
   /&gt;
   &lt;/label&gt;
-  &lt;label&gt;Enter your age:
+  &lt;label&gt;Введіть свій вік:
     &lt;input
       type=&quot;number&quot;
       name=&quot;age&quot;
@@ -522,27 +522,27 @@ root.render(&lt;MyForm /&gt;);</code></pre>
         <p><a target="_blank" class="w3-btn" href="../reacttryit/demo2_react_forms_multiple.html">Виконати приклад &raquo;</a></p>
     </div>
     <div class="w3-panel w3-note">
-        <p><b>Note:</b> We use the same event handler function for both input fields, we could write one event handler for each, but this gives us much cleaner code and is the preferred way in React.</p>
+        <p><b>Примітка:</b> Ми використовуємо ту саму функцію обробника подій для обох полів введення, ми могли б написати один обробник подій для кожного, але це дає нам набагато чистіший код і є кращим способом у React.</p>
     </div>
     <hr>
-    <h2>Textarea</h2>
-    <p>The textarea element in React is slightly different from ordinary HTML.</p>
-    <p>In HTML the value of a textarea was the text between the start tag <code class="w3-codespan">&lt;textarea&gt;</code> and the end tag <code class="w3-codespan">&lt;/textarea&gt;</code>.</p>
+    <h2>Текстове поле / Textarea</h2>
+    <p>Елемент textarea в React трохи відрізняється від звичайного HTML.</p>
+    <p>У HTML значенням текстового поля був текст між початковим тегом <code class="w3-codespan">&lt;textarea&gt;</code> і кінцевим тегом <code class="w3-codespan">&lt;/textarea&gt;</code>.</p>
     <div class="w3-example">
 <pre class="language-jsx w3-white"><code>&lt;textarea&gt;
-Content of the textarea.
+Вміст текстового поля.
 &lt;/textarea&gt;</code></pre>
     </div>
-    <p>In React the value of a textarea is placed in a value attribute. We'll use the <code class="w3-codespan">useState</code> Hook to manage the value of the textarea:</p>
+    <p>У React значення текстового поля поміщається в атрибут value. Ми будемо використовувати хук <code class="w3-codespan">useState</code> для керування значенням текстового поля:</p>
     <div class="w3-example">
-        <h3>Example:</h3>
-        <p>A simple textarea with some content:</p>
+        <h3>Приклад:</h3>
+        <p>Просте текстове поле з деяким вмістом:</p>
         <pre class="language-jsx w3-white"><code>import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
 function MyForm() {
 const [textarea, setTextarea] = useState(
-&quot;The content of a textarea goes in the value attribute&quot;
+&quot;Вміст текстового поля міститься в атрибуті value&quot;
 );
 
 const handleChange = (event) =&gt; {
@@ -561,9 +561,9 @@ root.render(&lt;MyForm /&gt;);</code></pre>
         <p><a target="_blank" class="w3-btn" href="../reacttryit/demo2_react_forms_textarea.html">Виконати приклад &raquo;</a></p>
     </div>
     <hr>
-    <h2>Select</h2>
-    <p>A drop down list, or a select box, in React is also a bit different from HTML.</p>
-    <p>in HTML, the selected value in the drop-down list was defined with the <code class="w3-codespan">selected</code> attribute:</p>
+    <h2>Вибрати</h2>
+    <p>Спадний список або поле вибору в React також дещо відрізняється від HTML.</p>
+    <p>у HTML вибране значення в розкривному списку було визначено за допомогою атрибута <code class="w3-codespan">selected</code>:</p>
     <div class="w3-example">
         <h3>HTML:</h3>
         <pre class="language-html w3-white"><code>&lt;select&gt;
@@ -572,10 +572,10 @@ root.render(&lt;MyForm /&gt;);</code></pre>
 &lt;option value=&quot;Fiat&quot;&gt;Fiat&lt;/option&gt;
 &lt;/select&gt;</code></pre>
     </div>
-    <p>In React, the selected value is defined with a <code class="w3-codespan">value</code> attribute on the <code class="w3-codespan">select</code> tag:</p>
+    <p>У React вибране значення визначається атрибутом <code class="w3-codespan">value</code> у тегу <code class="w3-codespan">select</code>:</p>
     <div class="w3-example">
-        <h3>Example:</h3>
-        <p>A simple select box, where the selected value &quot;Volvo&quot; is initialized in the constructor:</p>
+        <h3>Приклад:</h3>
+        <p>Просте поле вибору, де вибране значення &quot;Volvo&quot; ініціалізується в конструкторі:</p>
         <pre class="language-jsx w3-white"><code>function MyForm() {
 const [myCar, setMyCar] = useState(&quot;Volvo&quot;);
 
@@ -597,7 +597,7 @@ return (
         <p><a target="_blank" class="w3-btn" href="../reacttryit/demo2_react_forms_select.html">Виконати приклад &raquo;</a></p>
     </div>
     <hr>
-    <p>By making these slight changes to <code class="w3-codespan">&lt;textarea></code> and <code class="w3-codespan">&lt;select></code>, React is able to handle all input elements in the same way.</p>
+    <p>Вносячи ці незначні зміни в <code class="w3-codespan">&lt;textarea&gt;</code> і <code class="w3-codespan">&lt;select&gt;</code>, React може обробляти всі введені елементи таким же чином.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="react_lists.html">&#10094; Prev</a>
