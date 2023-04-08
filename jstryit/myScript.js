@@ -1,3 +1,3 @@
 function myFunction() {
-    document.getElementById("demo").innerHTML="Параграф змінено.";
+    document.getElementById("demo").innerHTML="Paragraph changed.";
 }
