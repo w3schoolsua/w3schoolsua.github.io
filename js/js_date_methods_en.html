@@ -14,6 +14,7 @@
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Get Date Methods. Lessons for beginners. W3Schools in English</title>
 <meta name='description' content='JavaScript Get Date Methods. The getTime() Method. The getFullYear() Method. The getMonth() Method. The getDate() Method. The getHours() Method. The getMinutes() Method. The getSeconds() Method. The getMilliseconds() Method. The getDay() Method. UTC Date Methods. Complete JavaScript Date Reference. Lessons for beginners. W3Schools in English'>
+<script src="../scripts/clock.js"></script>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
@@ -121,6 +122,7 @@
                     <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_en.html'>Learn Raspberry Pi</a>
                     <a class='w3-bar-item w3-button' href='../git/index_en.html'>Learn Git</a>
                     <a class='w3-bar-item w3-button' href='../githubpages/index_en.html'>Learn GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_en.html'>Learn MongoDB</a>
                     <a class='w3-bar-item w3-button' href='../aws/index_en.html'>Learn AWS Cloud</a>
                     <h3>Web Building</h3>
                     <a class='w3-bar-item w3-button' href='../where_to_start_en.html'>Where To Start</a>
@@ -326,7 +328,7 @@
             <a target='_top' href='js_random_en.html'>JS Random</a>
             <a target='_top' href='js_booleans_en.html'>JS Booleans</a>
             <a target='_top' href='js_comparisons_en.html'>JS Comparisons</a>
-            <a target='_top' href='js_if_else_en.html'>JS Conditions</a>
+            <a target='_top' href='js_if_else_en.html'>JS If Else</a>
             <a target='_top' href='js_switch_en.html'>JS Switch</a>
             <a target='_top' href='js_loop_for_en.html'>JS Loop For</a>
             <a target='_top' href='js_loop_forin_en.html'>JS Loop For In</a>
@@ -347,6 +349,7 @@
             <a target='_top' href='js_this_en.html'>JS this Keyword</a>
             <a target='_top' href='js_arrow_function_en.html'>JS Arrow Function</a>
             <a target='_top' href='js_classes_en.html'>JS Classes</a>
+            <a target='_top' href='js_modules_en.html'>JS Modules</a>
             <a target='_top' href='js_json_en.html'>JS JSON</a>
             <a target='_top' href='js_debugging_en.html'>JS Debugging</a>
             <a target='_top' href='js_conventions_en.html'>JS Style Guide</a>
@@ -501,8 +504,7 @@
     <!-- adup_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-            <a href='index_en.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools in English. Lessons for beginners' class='w3-left w3-padding' title='JavaScript for beginners. W3Schools in English' style='width: 120px'></a>
+</div>            <a href='index_en.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools in English. Lessons for beginners' class='w3-left w3-padding' title='JavaScript for beginners. W3Schools in English' style='width: 120px'></a>
 <p class='w3-right'>
     <a href='js_date_methods.html' title='Go to Ukrainian language'>Ua</a>
 </p>
@@ -513,7 +515,18 @@
         <a class="w3-right w3-btn" href="js_date_methods_set_en.html">Next &#10095;</a>
     </div>
     <hr>
-    <p>These methods can be used for getting information from a date object:</p>
+    <h2>The new Date() Constructor</h2>
+    <p>In JavaScript, date objects are created with <code class="w3-codespan">new Date()</code>.</p>
+    <p><code class="w3-codespan">new Date()</code> returns a date object with the current date and time.</p>
+    <div class="w3-example">
+        <h3>Get the Current Time</h3>
+        <div class="w3-code notranslate jsHigh">
+            const date = new Date();<br>
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_new.html" target="_blank">Try it Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Date Get Methods</h2>
     <table class="ws-table-all notranslate">
         <tr>
             <th>Method</th>
@@ -521,81 +534,103 @@
         </tr>
         <tr>
             <td>getFullYear()</td>
-            <td>Get the <strong>year</strong> as a four-digit number (yyyy)</td>
+            <td>Get <strong>year</strong> as a four-digit number (yyyy)</td>
         </tr>
         <tr>
             <td>getMonth()</td>
-            <td>Get the <strong>month</strong> as a number (0-11)</td>
+            <td>Get <strong>month</strong> as a number (0-11)</td>
         </tr>
         <tr>
             <td>getDate()</td>
-            <td>Get the <strong>day</strong> as a number (1-31)</td>
-        </tr>
-        <tr>
-            <td>getHours()</td>
-            <td>Get the <strong>hour</strong> (0-23)</td>
-        </tr>
-        <tr>
-            <td>getMinutes()</td>
-            <td>Get the <strong>minute</strong> (0-59)</td>
-        </tr>
-        <tr>
-            <td>getSeconds()</td>
-            <td>Get the <strong>second</strong> (0-59)</td>
-        </tr>
-        <tr>
-            <td>getMilliseconds()</td>
-            <td>Get the <strong>millisecond</strong> (0-999)</td>
-        </tr>
-        <tr>
-            <td>getTime()</td>
-            <td>Get the time (milliseconds since January 1, 1970)</td>
+            <td>Get <strong>day</strong> as a number (1-31)</td>
         </tr>
         <tr>
             <td>getDay()</td>
-            <td>Get the weekday as a number (0-6)</td>
+            <td>Get <b>weekday</b> as a number (0-6)</td>
         </tr>
         <tr>
-            <td>Date.now()</td>
-            <td>Get the time. ECMAScript 5.</td>
+            <td>getHours()</td>
+            <td>Get <strong>hour</strong> (0-23)</td>
+        </tr>
+        <tr>
+            <td>getMinutes()</td>
+            <td>Get <strong>minute</strong> (0-59)</td>
+        </tr>
+        <tr>
+            <td>getSeconds()</td>
+            <td>Get <strong>second</strong> (0-59)</td>
+        </tr>
+        <tr>
+            <td>getMilliseconds()</td>
+            <td>Get <strong>millisecond</strong> (0-999)</td>
+        </tr>
+        <tr>
+            <td>getTime()</td>
+            <td>Get <b>time</b> (milliseconds since January 1, 1970)</td>
         </tr>
     </table>
-    <hr>
-    <h2>The getTime() Method</h2>
-    <p>The <code class="w3-codespan">getTime()</code> method returns the number of milliseconds since January 1, 1970:</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate jsHigh">
-            const d = new Date();<br>d.getTime();
-        </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryittryjs_date_gettime.html" target="_blank">Try it Yourself &raquo;</a>
+    <div class="w3-note">
+        <h2>Note 1</h2>
+        <p>The get methods above return <b>Local time</b>.</p>
+        <p><b>Universal time</b> (UTC) is documented at the bottom of this page.</p>
+    </div>
+    <div class="w3-note">
+        <h2>Note 2</h2>
+        <p>The get methods return information from existing date objects.</p>
+        <p>In a date object, the time is static. The "clock" is not "running".</p>
+        <p>The time in a date object is NOT the same as current time.</p>
     </div>
     <hr>
     <h2>The getFullYear() Method</h2>
     <p>The <code class="w3-codespan">getFullYear()</code> method returns the year of a date as a four digit number:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date("2021-03-25");<br>d.getFullYear();
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_getfullyear2.html" target="_blank">Try it Yourself &raquo;</a>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>d.getFullYear();
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getfullyear.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
+    <div class="w3-warning">
+        <h2>Warning !</h2>
+        <p>Old JavaScript code might use the non-standard method getYear().</p>
+        <p>getYear() is supposed to return a 2-digit year.</p>
+        <p>getYear() is deprecated. Do not use it!</p>
+    </div>
     <hr>
     <h2>The getMonth() Method</h2>
-    <p>The <code class="w3-codespan">getMonth()</code> method returns the month of a date as a number (0-11):</p>
+    <p>The <code class="w3-codespan">getMonth()</code> method returns the month of a date as a number (0-11).</p>
+    <div class="w3-panel w3-note">
+        <h2>Note</h2>
+        <p>In JavaScript, January is month number 0, February is number 1, ...</p>
+        <p>Finally, December is month number 11.</p>
+    </div>
+
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date("2021-03-25");<br>
+            d.getMonth();
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_getmonth2.html" target="_blank">Try it Yourself &raquo;</a>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>d.getMonth();
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getmonth.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p>In JavaScript, the first month (January) is month number 0, so December returns month number 11.</p>
+        <h2>Note</h2>
+        <p>You can use an array of names to return the month as a name:</p>
     </div>
-    <p>You can use an array of names, and <code class="w3-codespan">getMonth()</code> to return the month as a name:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const months = [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;];<br><br>const d = new Date("2021-03-25");<br>let month = months[d.getMonth()];
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_month2.html" target="_blank">Try it Yourself &raquo;</a>
         <div class="w3-code notranslate jsHigh">
             const months = [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;];<br><br>const d = new Date();<br>let month = months[d.getMonth()];
         </div>
@@ -605,47 +640,71 @@
     <h2>The getDate() Method</h2>
     <p>The <code class="w3-codespan">getDate()</code> method returns the day of a date as a number (1-31):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date("2021-03-25");<br>d.getDate();
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_getdate2.html" target="_blank">Try it Yourself &raquo;</a>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>d.getDate();
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getdate.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <hr>
-    <h2>The getHours() Method</h2>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>The getHours() Method</h2>
     <p>The <code class="w3-codespan">getHours()</code> method returns the hours of a date as a number (0-23):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date("2021-03-25");<br>d.getHours();
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_gethours2.html" target="_blank">Try it Yourself &raquo;</a>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>d.getHours();
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getHours.html" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_gethours.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <hr>
     <h2>The getMinutes() Method</h2>
     <p>The <code class="w3-codespan">getMinutes()</code> method returns the minutes of a date as a number (0-59):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date("2021-03-25");<br>d.getMinutes();
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_getminutes2.html" target="_blank">Try it Yourself &raquo;</a>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>d.getMinutes();
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getMinutes.html" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getminutes.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <hr>
     <h2>The getSeconds() Method</h2>
     <p>The <code class="w3-codespan">getSeconds()</code> method returns the seconds of a date as a number (0-59):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date("2021-03-25");<br>d.getSeconds();
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_getseconds2.html" target="_blank">Try it Yourself &raquo;</a>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>d.getSeconds();
         </div>
-        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getSeconds.html" target="_blank">Try it Yourself &raquo;</a>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getseconds.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <hr>
     <h2>The getMilliseconds() Method</h2>
     <p>The <code class="w3-codespan">getMilliseconds()</code> method returns the milliseconds of a date as a number (0-999):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date("2021-03-25");<br>d.getMilliseconds();
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_getmilliseconds2.html" target="_blank">Try it Yourself &raquo;</a>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>d.getMilliseconds();
         </div>
@@ -653,66 +712,136 @@
     </div>
     <hr>
     <h2>The getDay() Method</h2>
-    <p>The <code class="w3-codespan">getDay()</code> method returns the weekday of a date as a number (0-6):</p>
+    <p>The <code class="w3-codespan">getDay()</code> method returns the weekday of a date as a number (0-6).</p>
+    <div class="w3-panel w3-note">
+        <h2>Note</h2>
+        <p>In JavaScript, the first day of the week (day 0) is Sunday.</p>
+        <p>Some countries in the world consider the first day of the week to be Monday.</p>
+    </div>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date("2021-03-25");<br>d.getDay();
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_getday2.html" target="_blank">Try it Yourself &raquo;</a>
         <div class="w3-code notranslate jsHigh">
             const d = new Date();<br>d.getDay();
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_getday.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
-    <div class="w3-panel w3-note">
-        <p>In JavaScript, the first day of the week (0) means &quot;Sunday&quot;, even if some countries in the world consider the first day of the week to be &quot;Monday&quot;</p>
+    <div class="w3-note">
+        <h2>Note</h2>
+        <p>You can use an array of names, and <code class="w3-codespan">getDay()</code> to return weekday as a name:</p>
     </div>
-    <p>You can use an array of names, and <code class="w3-codespan">getDay()</code> to return the weekday as a name:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;];<br><br>const d = new Date("2021-03-25");<br>let day = days[d.getDay()];
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_weekday2.html" target="_blank">Try it Yourself &raquo;</a>
         <div class="w3-code notranslate jsHigh">
             const days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;];<br><br>const d = new Date();<br>let day = days[d.getDay()];
         </div>
         <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_weekday.html" target="_blank">Try it Yourself &raquo;</a>
     </div>
     <hr>
-    <h2>UTC Date Methods</h2>
-    <p>UTC date methods are used for working with UTC dates (Universal Time Zone dates):</p>
+    <h2>The getTime() Method</h2>
+    <p>The <code class="w3-codespan">getTime()</code> method returns the number of milliseconds since January 1, 1970:</p>
+    <div class="w3-example">
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date("1970-01-01");<br>d.getTime();
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_gettime3.html" target="_blank">Try it Yourself &raquo;</a>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date("2021-03-25");<br>d.getTime();
+        </div>
+        <a class="w3-btn" href="../jstryit/tryjs_date_gettime2.html" target="_blank">Try it Yourself &raquo;</a>
+        <div class="w3-code notranslate jsHigh">
+            const d = new Date();<br>d.getTime();
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_date_gettime.html" target="_blank">Try it Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>The Date.now() Method</h2>
+    <p><code class="w3-codespan">Date.now()</code> returns the number of milliseconds since January 1, 1970.</p>
+    <div class="w3-example">
+        <h3>Examples</h3>
+        <div class="w3-code notranslate jsHigh">
+            let ms = Date.now();
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_date_now.html" class="w3-btn">Try it Yourself &raquo;</a>
+        <p>Calculate the number of years since 1970/01/01:</p>
+        <div class="w3-code notranslate jsHigh">
+            const minute = 1000 * 60;<br>
+            const hour = minute * 60;<br>
+            const day = hour * 24;<br>
+            const year = day * 365;<br>
+            <br>let years = Math.round(Date.now() / year);
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_date_now2.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
+    <p><code class="w3-codespan">Date.now()</code> is a static method of the Date object.</p>
+    <p>You cannot use it on a date object like <code class="w3-codespan">myDate.now()</code>.</p>
+    <p>The syntax is always <code class="w3-codespan">Date.now()</code>.</p>
+    <hr>
+    <h2>UTC Date Get Methods</h2>
     <table class="ws-table-all notranslate">
         <tr>
             <th>Method</th>
+            <th>Same As</th>
             <th>Description</th>
         </tr>
         <tr>
             <td>getUTCDate()</td>
-            <td>Same as getDate(), but returns the UTC date</td>
-        </tr>
-        <tr>
-            <td>getUTCDay()</td>
-            <td>Same as getDay(), but returns the UTC day</td>
+            <td>getDate()</td><td>Returns the UTC date</td>
         </tr>
         <tr>
             <td>getUTCFullYear()</td>
-            <td>Same as getFullYear(), but returns the UTC year</td>
-        </tr>
-        <tr>
-            <td>getUTCHours()</td>
-            <td>Same as getHours(), but returns the UTC hour</td>
-        </tr>
-        <tr>
-            <td>getUTCMilliseconds()</td>
-            <td>Same as getMilliseconds(), but returns the UTC milliseconds</td>
-        </tr>
-        <tr>
-            <td>getUTCMinutes()</td>
-            <td>Same as getMinutes(), but returns the UTC minutes</td>
+            <td>getFullYear()</td><td>Returns the UTC year</td>
         </tr>
         <tr>
             <td>getUTCMonth()</td>
-            <td>Same as getMonth(), but returns the UTC month</td>
+            <td>getMonth()</td><td>Returns the UTC month</td>
+        </tr>
+        <tr>
+            <td>getUTCDay()</td>
+            <td>getDay()</td><td>Returns the UTC day</td>
+        </tr>
+        <tr>
+            <td>getUTCHours()</td>
+            <td>getHours()</td><td>Returns the UTC hour</td>
+        </tr>
+        <tr>
+            <td>getUTCMinutes()</td>
+            <td>getMinutes()</td><td>Returns the UTC minutes</td>
         </tr>
         <tr>
             <td>getUTCSeconds()</td>
-            <td>Same as getSeconds(), but returns the UTC seconds</td>
+            <td>getSeconds()</td><td>Returns the UTC seconds</td>
+        </tr>
+        <tr>
+            <td>getUTCMilliseconds()</td>
+            <td>getMilliseconds()</td><td>Returns the UTC milliseconds</td>
         </tr>
     </table>
+
+    <p>UTC methods use UTC time (Coordinated Universal Time).</p>
+    <p>UTC time is the same as GMT (Greenwich Mean Time).</p>
+    <p>The difference between Local time and UTC time can be up to 24 hours.</p>
+    <canvas id="canvas" width="200" height="200" style="background-color:#333"></canvas><br><br>
+    <button class="w3-btn" style="width:200px" onclick="timeShow(0)">Local Time?</button><br><br>
+    <button class="w3-btn" style="width:200px" onclick="timeShow(1)">UTC Time?</button>
+    <hr>
+    <h2>The getTimezoneOffset() Method</h2>
+    <p>The <code class="w3-codespan">getTimezoneOffset()</code> method returns the difference (in minutes) between local time an UTC time:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate jsHigh">
+            let diff = d.getTimezoneOffset();
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_date_gettimezoneoffset.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+    </div>
     <div class="w3-note">
         <h2>Complete JavaScript Date Reference</h2>
         <p>For a complete Date reference, go to our:</p>
@@ -735,6 +864,24 @@ month = <input name="ex1" maxlength="12" style="width: 124px;">;
         </div>
     </form>
     <hr>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var radius = canvas.height/2;
+        ctx.translate(radius, radius);
+        radius = radius*0.90
+        timeShow(0);
+        function timeShow(UTC) {
+            var now = new Date();
+//setInterval(drawClock, 1000);
+            drawClock(UTC, now);
+        }
+        function drawClock(UTC, now) {
+            drawFace(ctx, radius);
+            drawNumbers(ctx, radius);
+            drawTime(ctx, radius, UTC, now);
+        }
+    </script>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="js_date_formats_en.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="js_date_methods_set_en.html">Next &#10095;</a>
@@ -753,13 +900,47 @@ month = <input name="ex1" maxlength="12" style="width: 124px;">;
         <h4><a href='../colors/colors_picker_en.html'>COLOR PICKER</a></h4>
         <a href='../colors/colors_picker_en.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
     </div>
-    <div class='sidesection'>
-        <h4>SUBSCRIBE!</h4>
-        <div class='w3-text-grey sharethis'>
-            <a href='https://www.facebook.com/groups/900220404063356' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook W3Schools Rus' title='Facebook page' style='width:35px; height:35px'></a>
-            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='YouTube-channel W3Schools Rus' title='1th YouTube-channel' style='width:35px; height:35px'></a>
-            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram-channel' title='Telegram-channel' style='width:35px;height:35px'></a>
-            <a href='https://www.youtube.com/channel/UCMiY03HY_PubvnRZoVu66tA' target='_blank'><img src='../svg/youtube_icon2.svg' alt='YouTube-channel W3Schools Rus' title='2th YouTube-channel' style='width:60px; height:30px'></a>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">TUTORIALS</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../html/index_en.html' class='btn-rightbar'>HTML</a>
+            <a href='../css/index_en.html' class='btn-rightbar'>CSS</a>
+            <a href='../css/css_rwd_intro_en.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver_en.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index_en.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index_en.html' class='btn-rightbar'>Colors</a>
+            <a href='../icons/index_en.html' class='btn-rightbar'>Icons</a>
+            <a href='../graphics/index_en.html' class='btn-rightbar'>Graphics</a>
+            <a href='../graphics/svg_intro_en.html' class='btn-rightbar'>SVG Graphics</a>
+            <a href='../graphics/canvas_intro_en.html' class='btn-rightbar'>Canvas Graphics</a>
+            <a href='../howto/index_en.html' class='btn-rightbar'>How To</a>
+            <a href='../sass/index_en.html' class='btn-rightbar'>Sass</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online guides on the site">REFERENCES</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../tags/index_en.html' class='btn-rightbar'>HTML Tags</a>
+            <a href='../tags/ref_html_browsersupport_en.html' class='btn-rightbar'>Browser Support</a>
+            <a href='../tags/ref_attributes_en.html' class='btn-rightbar'>HTML Attributes</a>
+            <a href='../tags/ref_standardattributes_en.html' class='btn-rightbar'>Global Attributes</a>
+            <a href='../tags/ref_eventattributes_en.html' class='btn-rightbar'>Event Attributes</a>
+            <a href='../tags/ref_colornames_en.html' class='btn-rightbar'>HTML Color Names</a>
+            <a href='../tags/ref_canvas_en.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom_en.html' class='btn-rightbar'>Audio/Video DOM</a>
+            <a href='../tags/ref_charactersets_en.html' class='btn-rightbar'>Character Sets</a>
+            <a href='../tags/ref_html_dtd_en.html' class='btn-rightbar'>DOCTYPE</a>
+            <a href='../tags/ref_urlencode_en.html' class='btn-rightbar'>URL Encoding</a>
+            <a href='../tags/ref_language_codes_en.html' class='btn-rightbar'>Language Code</a>
+            <a href='../tags/ref_country_codes_en.html' class='btn-rightbar'>ISO Country Codes</a>
+            <a href='../tags/ref_httpmessages_en.html' class='btn-rightbar'>HTTP Status Messages</a>
+            <a href='../tags/ref_httpmethods_en.html' class='btn-rightbar'>HTTP Request Methods</a>
+            <a href='../tags/ref_pxtoemconversion_en.html' class='btn-rightbar'>Pixel to Em Converter</a>
+            <a href='../tags/ref_keyboardshortcuts_en.html' class='btn-rightbar'>Keyboard Shortcuts</a>
         </div>
     </div>
   <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
@@ -779,7 +960,6 @@ month = <input name="ex1" maxlength="12" style="width: 124px;">;
 </div><!--FOOTER-->
 <div id='footer' class='footer w3-container w3-white'>
   <hr>
-
   <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
     <div class='w3-col l3 m3 s12'>
       <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>CONTACTS</a>
