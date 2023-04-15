@@ -12,20 +12,20 @@
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
-<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript та HTML DOM Довідник. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='JavaScript та HTML DOM Повний довідник. Станом на січень 2023 р. Властивості та методи всіх об&#8217;єктів JavaScript із прикладами. Уроки для початківців. W3Schools українською'>
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>JavaScript Довідник. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Алфавітний довідник JavaScript. Станом на січень 2023 р. Властивості та методи всіх об&#8217;єктів JavaScript із прикладами. Уроки для початківців. W3Schools українською'>
 <link rel="stylesheet" href="../cdn/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>
     function filterSearch() {
         var a, l, b, i, j, c, ahref, s, tr, td;
-        c = document.getЕлементById("searchstring").value.toUpperCase();
-        a = document.getЕлементById("jsreftable").getЕлементsByClassName("ws-table-all");
-        //h = document.getЕлементById("jsreftable").getЕлементsByTagName("h2");
+        c = document.getElementById("searchstring").value.toUpperCase();
+        a = document.getElementById("jsreftable").getElementsByClassName("ws-table-all");
+        //h = document.getElementById("jsreftable").getElementsByTagName("h2");
         for (j = 0; j < a.length; j++) {
             s = 0;
-            tr = a[j].getЕлементsByTagName("tr");
+            tr = a[j].getElementsByTagName("tr");
             for (i = 0; i < tr.length; i++) {
-                td = tr[i].getЕлементsByTagName("td")[0];
+                td = tr[i].getElementsByTagName("td")[0];
                 if (td) {
                     cc = td.textContent;
                     if (cc.toUpperCase().indexOf(c) > -1) {
@@ -1591,7 +1591,7 @@
             <tr>
                 <td><a href="event_altkey.html">altKey</a></td>
                 <td>Повертає, чи була натиснута клавіша &quot;ALT&quot;, коли була запущена подія миші</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a>, <a href="obj_keyboardevent.html">KeyboardПодія</a>, <a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a>, <a href="obj_keyboardevent.html">KeyboardEvent</a>, <a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="coll_doc_anchors.html">anchors</a></td>
@@ -1601,7 +1601,7 @@
             <tr>
                 <td><a href="event_animation_animationName.html">animationName</a></td>
                 <td>Повертає назву анімації</td>
-                <td><a href="obj_animationevent.html">AnimationПодія</a></td>
+                <td><a href="obj_animationevent.html">AnimationEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_nav_appcodename.html">appCodeName</a></td>
@@ -1721,12 +1721,12 @@
             <tr>
                 <td><a href="event_button.html">button</a></td>
                 <td>Повертає кнопку миші, яку було натиснуто під час ініціювання події миші</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_buttons.html">buttons</a></td>
                 <td>Повертає, які кнопки миші було натиснуто під час ініціювання події миші</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_cancelable.html">cancelable</a></td>
@@ -1746,7 +1746,7 @@
             <tr>
                 <td>changeTouches</td>
                 <td>Повертає список усіх об&#8217;єктів дотику, стан яких змінився між попереднім і цим дотиком</td>
-                <td><a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_document_characterset.html">characterSet</a></td>
@@ -1761,7 +1761,7 @@
             <tr>
                 <td><a href="event_key_charcode.html">charCode</a></td>
                 <td>Повертає код символу Unicode для клавіші, яка викликала подію onkeypress</td>
-                <td><a href="obj_keyboardevent.html">KeyboardПодія</a></td>
+                <td><a href="obj_keyboardevent.html">KeyboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_charcodeat.html">charCodeAt()</a></td>
@@ -1806,7 +1806,7 @@
             <tr>
                 <td><a href="met_console_clear.html">clear()</a></td>
                 <td>Очищає консоль</td>
-                <td><a href="obj_console.html">Консоль</a>, <a href="api_storage.html">Storage</a></td>
+                <td><a href="obj_console.html">Консоль</a>, <a href="api_storage.html">Сховище</a></td>
             </tr>
             <tr>
                 <td><a href="met_win_clearinterval.html">clearInterval()</a></td>
@@ -1851,12 +1851,12 @@
             <tr>
                 <td><a href="event_clientx.html">clientX</a></td>
                 <td>Повертає горизонтальну координату вказівника миші відносно поточного вікна, коли була ініційована подія миші</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a>, <a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a>, <a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_clienty.html">clientY</a></td>
                 <td>Повертає вертикальну координату вказівника миші відносно поточного вікна, коли була запущена подія миші</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a>, <a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a>, <a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td>clipboardData</td>
@@ -1886,7 +1886,7 @@
             <tr>
                 <td><a href="event_key_code.html">code</a></td>
                 <td>Повертає код ключа, який викликав подію</td>
-                <td><a href="obj_keyboardevent.html">KeyboardПодія</a></td>
+                <td><a href="obj_keyboardevent.html">KeyboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_screen_colordepth.html">colorDepth</a></td>
@@ -2101,7 +2101,7 @@
             <tr>
                 <td><a href="event_detail.html">detail</a></td>
                 <td>Повертає число, яке вказує, скільки разів було натиснуто мишею</td>
-                <td><a href="obj_uievent.html">UiПодія</a></td>
+                <td><a href="obj_uievent.html">UiEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_dowhile.html">do ... while</a></td>
@@ -2146,7 +2146,7 @@
             <tr>
                 <td><a href="event_animation_elapsedtime.html">elapsedTime</a></td>
                 <td>Повертає кількість секунд, протягом яких працювала анімація</td>
-                <td><a href="obj_animationevent.html">AnimationПодія</a></td>
+                <td><a href="obj_animationevent.html">AnimationEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_transition_elapsedtime.html">elapsedTime</a></td>
@@ -2417,7 +2417,7 @@
             <tr>
                 <td><a href="met_storage_getitem.html">getItem()</a></td>
                 <td>Повертає значення вказаного імені ключа</td>
-                <td><a href="api_storage.html">Storage</a></td>
+                <td><a href="api_storage.html">Сховище</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_getmilliseconds.html">getMilliseconds()</a></td>
@@ -2457,7 +2457,7 @@
             <tr>
                 <td>getTargetRanges()</td>
                 <td>Повертає масив, що містить цільові діапазони, на які вплине вставка/видалення</td>
-                <td><a href="obj_inputevent.html">InputПодія</a></td>
+                <td><a href="obj_inputevent.html">InputEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_gettime.html">getTime()</a></td>
@@ -2541,715 +2541,713 @@
             </tr>
             <tr>
                 <td><a href="met_element_hasattribute.html">hasAttribute()</a></td>
-                <td>Returns true if an element has the specified attribute, otherwise false</td>
+                <td>Повертає true, якщо елемент має вказаний атрибут, інакше повертає false</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_node_hasattributes.html">hasAttributes()</a></td>
-                <td>Returns true if an element has any attributes, otherwise false</td>
+                <td>Повертає true, якщо елемент має будь-які атрибути, інакше повертає false</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_node_haschildnodes.html">hasChildNodes()</a></td>
-                <td>Returns true if an element has any child nodes, otherwise false</td>
+                <td>Повертає true, якщо елемент має дочірні вузли, інакше повертає false</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_document_hasfocus.html">hasFocus()</a></td>
-                <td>Returns a Boolean value indicating whether the document has focus</td>
+                <td>Повертає логічне значення, яке вказує, чи має документ фокус</td>
                 <td><a href="dom_obj_document.html">Документ</a></td>
             </tr>
             <tr>
                 <td><a href="prop_loc_hash.html">hash</a></td>
-                <td>Sets or returns the anchor part (#) of a URL</td>
+                <td>Встановлює або повертає частину прив&#8217;язки (#) URL-адреси</td>
                 <td><a href="obj_location.html">Локація</a></td>
             </tr>
             <tr>
                 <td><a href="prop_doc_head.html">head</a></td>
-                <td>Returns the &lt;head&gt; element of the document</td>
+                <td>Повертає елемент &lt;head&gt; документа</td>
                 <td><a href="dom_obj_document.html">Документ</a></td>
             </tr>
             <tr>
                 <td><a href="prop_screen_height.html">height</a></td>
-                <td>Returns the total height of the screen</td>
+                <td>Повертає загальну висоту екрана</td>
                 <td><a href="obj_screen.html">Екран</a></td>
             </tr>
             <tr>
                 <td><a href="obj_history.html">history</a></td>
-                <td>Returns the History object for the window (<a href="obj_history.html">See History object</a>)</td>
+                <td>Повертає об&#8217;єкт History для вікна (<a href="obj_history.html">Див. об&#8217;єкт History</a>)</td>
                 <td><a href="obj_window.html">Вікно</a></td>
             </tr>
             <tr>
                 <td><a href="prop_loc_host.html">host</a></td>
-                <td>Sets or returns the hostname and port number of a URL</td>
+                <td>Встановлює або повертає ім&#8217;я хоста та номер порту URL-адреси</td>
                 <td><a href="obj_location.html">Локація</a></td>
             </tr>
             <tr>
                 <td><a href="prop_loc_hostname.html">hostname</a></td>
-                <td>Sets or returns the hostname of a URL</td>
+                <td>Встановлює або повертає ім&#8217;я хосту URL-адреси</td>
                 <td><a href="obj_location.html">Локація</a></td>
             </tr>
             <tr>
                 <td><a href="prop_loc_href.html">href</a></td>
-                <td>Sets or returns the entire URL</td>
+                <td>Встановлює або повертає повну URL-адресу</td>
                 <td><a href="obj_location.html">Локація</a></td>
             </tr>
             <tr>
                 <td><a href="prop_html_id.html">id</a></td>
-                <td>Sets or returns the value of the id attribute of an element</td>
+                <td>Встановлює або повертає значення атрибута id елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_if.html">if ... else ... else if</a></td>
-                <td>Marks a block of statements to be executed depending on a condition</td>
+                <td>Позначає блок інструкцій, який буде виконано залежно від умови</td>
                 <td><a href="jsref_statements.html">Інструкції</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_regexp_ignorecase.html">ignoreCase</a></td>
-                <td>Checks whether the &quot;i&quot; modifier is set</td>
+                <td>Перевіряє, чи встановлено модифікатор &quot;i&quot;</td>
                 <td><a href="jsref_obj_regexp.html">RegExp</a></td>
             </tr>
             <tr>
                 <td><a href="coll_doc_images.html">images</a></td>
-                <td>Returns a collection of all &lt;img&gt; elements in the document</td>
+                <td>Повертає колекцію всіх елементів &lt;img&gt; в документі</td>
                 <td><a href="dom_obj_document.html">Документ</a></td>
             </tr>
             <tr>
                 <td><a href="prop_document_implementation.html">implementation</a></td>
-                <td>Returns the DOMImplementation object that handles this document</td>
+                <td>Повертає об&#8217;єкт DOMImplementation, який обробляє цей документ</td>
                 <td><a href="dom_obj_document.html">Документ</a></td>
             </tr>
             <tr>
                 <td>import</td>
-                <td>Import functions exported from an external module, and another script</td>
+                <td>Імпорт функцій, експортованих із зовнішнього модуля, та іншого скрипту</td>
                 <td></td>
             </tr>
             <tr>
                 <td><a href="met_document_importnode.html">importNode()</a></td>
-                <td>Imports a node from another document</td>
+                <td>Імпортує вузол з іншого документа</td>
                 <td><a href="dom_obj_document.html">Документ</a></td>
             </tr>
             <tr>
                 <td>in</td>
-                <td>Returns true if the specified property is in the specified object, otherwise false</td>
+                <td>Повертає true, якщо вказана властивість є у вказаному об&#8217;єкті, інакше – false</td>
                 <td><a href="jsref_operators.html">Оператори</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_includes_array.html">includes()</a></td>
-                <td>Check if an array contains the specified element</td>
+                <td>Перевірте, чи містить масив вказаний елемент</td>
                 <td><a href="jsref_obj_array.html">Масив</a>, <a href="jsref_obj_string.html">Рядок</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_indexof_array.html">indexOf()</a></td>
-                <td>Search the array for an element and returns its position</td>
+                <td>Пошук елемента в масиві та повернення його позиції</td>
                 <td><a href="jsref_obj_array.html">Масив</a>, <a href="jsref_obj_string.html">Рядок</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_infinity.html">Infinity</a></td>
-                <td>A numeric value that represents positive/negative infinity</td>
+                <td>Числове значення, яке представляє додатну/негативну нескінченність</td>
                 <td><a href="jsref_obj_global.html">Глобальні</a></td>
             </tr>
             <tr>
                 <td><a href="met_console_info.html">info()</a></td>
-                <td>Outputs an informational message to the console</td>
+                <td>Виводить на консоль інформаційне повідомлення</td>
                 <td><a href="obj_console.html">Консоль</a></td>
             </tr>
             <tr>
                 <td><a href="prop_win_innerheight.html">innerHeight</a></td>
-                <td>Returns the height of the window's content area (viewport) including scrollbars</td>
+                <td>Повертає висоту області вмісту вікна (окна перегляду), включаючи смуги прокручування</td>
                 <td><a href="obj_window.html">Вікно</a></td>
             </tr>
             <tr>
                 <td><a href="prop_html_innerhtml.html">innerHTML</a></td>
-                <td>Sets or returns the content of an element</td>
+                <td>Встановлює або повертає вміст елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_node_innertext.html">innerText</a></td>
-                <td>Sets or returns the text content of a node and its descendants</td>
+                <td>Встановлює або повертає текстовий вміст вузла та його нащадків</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_win_innerheight.html">innerWidth</a></td>
-                <td>Returns the width of a window's content area (viewport) including scrollbars</td>
+                <td>Повертає ширину області вмісту вікна (окна перегляду), включаючи смуги прокручування</td>
                 <td><a href="obj_window.html">Вікно</a></td>
             </tr>
             <tr>
                 <td><a href="prop_document_inputencoding.html">inputEncoding</a></td>
-                <td>Returns the encoding, character set, used for the document</td>
+                <td>Повертає кодування, набір символів, використаний для документа</td>
                 <td><a href="dom_obj_document.html">Документ</a></td>
             </tr>
             <tr>
                 <td><a href="event_inputevent_inputtype.html">inputType</a></td>
-                <td>Returns the type of the change (i.e &quot;inserting&quot; or &quot;deleting&quot;)</td>
-                <td><a href="obj_inputevent.html">InputПодія</a></td>
+                <td>Повертає тип зміни (тобто &quot;вставлення&quot; або &quot;видалення&quot;)</td>
+                <td><a href="obj_inputevent.html">InputEvent</a></td>
             </tr>
             <tr>
                 <td><a href="met_node_insertadjacentelement.html">insertAdjacentЕлемент()</a></td>
-                <td>Inserts a HTML element at the specified position relative to the current element</td>
+                <td>Вставляє елемент HTML у вказану позицію відносно поточного елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_node_insertadjacenthtml.html">insertAdjacentHTML()</a></td>
-                <td>Inserts a HTML formatted text at the specified position relative to the current element</td>
+                <td>Вставляє текст у форматі HTML у вказану позицію відносно поточного елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_node_insertadjacenttext.html">insertAdjacentText()</a></td>
-                <td>Inserts text into the specified position relative to the current element</td>
+                <td>Вставляє текст у вказану позицію відносно поточного елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_node_insertbefore.html">insertBefore()</a></td>
-                <td>Inserts a new child node before a specified, existing, child node</td>
+                <td>Вставляє новий дочірній вузол перед вказаним існуючим дочірнім вузлом</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td>instanceof</td>
-                <td>Returns true if the specified object is an instance of the specified object</td>
+                <td>Повертає true, якщо вказаний об&#8217;єкт є екземпляром зазначеного об&#8217;єкта</td>
                 <td><a href="jsref_operators.html">Оператори</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_isarray.html">isArray()</a></td>
-                <td>Checks whether an object is an array</td>
+                <td>Перевіряє, чи є об&#8217;єкт масивом</td>
                 <td><a href="jsref_obj_array.html">Масив</a></td>
             </tr>
             <tr>
                 <td>isComposing</td>
-                <td>Returns whether the state of the event is composing or not</td>
-                <td><a href="obj_inputevent.html">InputПодія</a>,
-                    <a href="obj_keyboardevent.html">KeyboardПодія</a></td>
+                <td>Повертає, чи є стан події створенням чи ні</td>
+                <td><a href="obj_inputevent.html">InputEvent</a>, <a href="obj_keyboardevent.html">KeyboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_html_iscontenteditable.html">isContentEditable</a></td>
-                <td>Returns true if the content of an element is editable, otherwise false</td>
+                <td>Повертає true, якщо вміст елемента можна редагувати, інакше повертає false</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_node_isdefaultnamespace.html">isDefaultNamespace()</a></td>
-                <td>Returns true if a specified namespaceURI is the default, otherwise false</td>
+                <td>Повертає true, якщо вказаний простір імен URI є типовим, інакше повертає false</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_node_isequalnode.html">isEqualNode()</a></td>
-                <td>Checks if two elements are equal</td>
+                <td>Перевіряє рівність двох елементів</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_isfinite.html">isFinite()</a></td>
-                <td>Determines whether a value is a finite, legal number</td>
+                <td>Визначає, чи є значення кінцевим допустимим числом</td>
                 <td><a href="jsref_obj_global.html">Глобальні</a>, <a href="jsref_obj_number.html">Число</a></td>
             </tr>
             <tr>
                 <td><a href="prop_attr_isid.html">isId</a></td>
-                <td>Returns true if the attribute is of type Id, otherwise it returns false</td>
+                <td>Повертає true, якщо атрибут має тип Id, інакше повертає false</td>
                 <td><a href="dom_obj_attributes.html">Атрибут</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_isinteger.html">isInteger()</a></td>
-                <td>Checks whether a value is an integer</td>
+                <td>Перевіряє, чи є значення цілим числом</td>
                 <td><a href="jsref_obj_number.html">Число</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_isnan.html">isNaN()</a></td>
-                <td>Determines whether a value is an illegal number</td>
+                <td>Визначає, чи є значення недопустимим числом</td>
                 <td><a href="jsref_obj_global.html">Глобальні</a>, <a href="jsref_obj_number.html">Число</a></td>
             </tr>
             <tr>
                 <td style="height: 23px"><a href="jsref_issafeinteger.html">isSafeInteger()</a></td>
-                <td style="height: 23px">Checks whether a value is a safe integer</td>
+                <td style="height: 23px">Перевіряє, чи є значення безпечним цілим числом</td>
                 <td style="height: 23px"><a href="jsref_obj_number.html">Число</a></td>
             </tr>
             <tr>
                 <td><a href="met_node_issamenode.html">isSameNode()</a></td>
-                <td>Checks if two elements are the same node</td>
+                <td>Перевіряє, чи є два елементи однаковим вузлом</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_node_issupported.html">isSupported()</a></td>
-                <td>Returns true if a specified feature is supported on the element</td>
+                <td>Повертає true, якщо вказана функція підтримується елементом</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="event_istrusted.html">isTrusted</a></td>
-                <td>Returns whether or not an event is trusted</td>
+                <td>Повертає, чи є подія довіреною</td>
                 <td><a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="met_namednodemap_item.html">item()</a></td>
-                <td>Returns the attribute node at a specified index in a NamedNodeMap</td>
-                <td><a href="dom_obj_attributes.html">Attribute</a>, <a href="dom_obj_htmlcollection.html">HTMLCollection</a></td>
+                <td>Повертає вузол атрибута за вказаним індексом у NamedNodeMap</td>
+                <td><a href="dom_obj_attributes.html">Атрибут</a>, <a href="dom_obj_htmlcollection.html">HTMLCollection</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_join.html">join()</a></td>
-                <td>Joins all elements of an array into a string</td>
+                <td>Об&#8217;єднує всі елементи масиву в рядок</td>
                 <td><a href="jsref_obj_array.html">Масив</a></td>
             </tr>
             <tr>
                 <td><a href="event_key_key.html">key</a></td>
-                <td>Returns the key value of the key represented by the event</td>
-                <td><a href="obj_keyboardevent.html">KeyboardПодія</a>, <a href="obj_storageevent.html">StorageПодія</a></td>
+                <td>Повертає значення ключа, представленого подією</td>
+                <td><a href="obj_keyboardevent.html">KeyboardEvent</a>, <a href="obj_storageevent.html">StorageEvent</a></td>
             </tr>
             <tr>
                 <td><a href="met_storage_key.html">key()</a></td>
-                <td>Returns the name of the <em>n</em>th key in the storage</td>
-                <td><a href="api_storage.html">Storage</a></td>
+                <td>Повертає назву <em>n</em>-го ключа в сховищі</td>
+                <td><a href="api_storage.html">Сховище</a></td>
             </tr>
             <tr>
                 <td><a href="event_key_keycode.html">keyCode</a></td>
-                <td>Returns the Unicode character code of the key that triggered the onkeypress event, or the Unicode key code of the key that triggered the onkeydown or onkeyup event</td>
-                <td><a href="obj_keyboardevent.html">KeyboardПодія</a></td>
+                <td>Повертає код символу Unicode для клавіші, яка викликала подію onkeypress, або код клавіші Unicode для клавіші, яка викликала подію onkeydown або onkeyup</td>
+                <td><a href="obj_keyboardevent.html">KeyboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_keys.html">keys()</a></td>
-                <td>Returns a Array Iteration Object, containing the keys of the original array</td>
+                <td>Повертає об&#8217;єкт ітерації масиву, що містить ключі вихідного масиву</td>
                 <td><a href="jsref_obj_array.html">Масив</a></td>
             </tr>
             <tr>
                 <td><a href="prop_html_lang.html">lang</a></td>
-                <td>Sets or returns the value of the lang attribute of an element</td>
+                <td>Встановлює або повертає значення атрибута lang елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_nav_language.html">language</a></td>
-                <td>Returns the language of the browser</td>
+                <td>Повертає мову браузера</td>
                 <td><a href="obj_navigator.html">Навігатор</a></td>
             </tr>
             <tr>
                 <td><a href="prop_node_lastchild.html">lastChild</a></td>
-                <td>Returns the last child node of an element</td>
+                <td>Повертає останній дочірній вузол елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_element_lastelementchild.html">lastЕлементChild</a></td>
-                <td>Returns the last child element of an element</td>
+                <td>Повертає останній дочірній елемент елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_regexp_lastindex.html">lastIndex</a></td>
-                <td>Specifies the index at which to start the next match</td>
+                <td>Визначає індекс, з якого починається наступний збіг</td>
                 <td><a href="jsref_obj_regexp.html">RegExp</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_lastindexof_array.html">lastIndexOf()</a></td>
-                <td>Search the array for an element, starting at the end, and returns its position</td>
+                <td>Пошук елемента в масиві, починаючи з кінця, і повертає його позицію</td>
                 <td><a href="jsref_obj_array.html">Масив</a>, <a href="jsref_obj_string.html">Рядок</a></td>
             </tr>
             <tr>
                 <td><a href="prop_doc_lastmodified.html">lastModified</a></td>
-                <td>Returns the date and time the document was last modified</td>
+                <td>Повертає дату й час останньої зміни документа</td>
                 <td><a href="dom_obj_document.html">Документ</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_length_array.html">length</a></td>
-                <td>Sets or returns the number of elements in an array</td>
-                <td><a href="jsref_obj_array.html">Масив</a>, <a href="dom_obj_attributes.html">Attribute</a>, <a href="obj_history.html">History</a>, <a href="dom_obj_htmlcollection.html">HTMLCollection</a>, <a href="obj_window.html">Вікно</a>, <a href="api_storage.html">Storage</a></td>
+                <td>Встановлює або повертає кількість елементів у масиві</td>
+                <td><a href="jsref_obj_array.html">Масив</a>, <a href="dom_obj_attributes.html">Атрибут</a>, <a href="obj_history.html">Історія</a>, <a href="dom_obj_htmlcollection.html">HTMLCollection</a>, <a href="obj_window.html">Вікно</a>, <a href="api_storage.html">Сховище</a></td>
             </tr>
             <tr>
                 <td>lengthComputable</td>
-                <td>Returns whether the length of the progress can be computable or not</td>
-                <td><a href="obj_progressevent.html">ProgressПодія</a></td>
+                <td>Повертає, чи можна обчислити довжину прогресу</td>
+                <td><a href="obj_progressevent.html">ProgressEvent</a></td>
             </tr>
             <tr>
                 <td>let</td>
-                <td>Declares a variable inside brackets {} scope</td>
+                <td>Оголошує змінну в дужках {} області видимості</td>
                 <td><a href="jsref_statements.html">Інструкції</a></td>
             </tr>
             <tr>
                 <td><a href="coll_doc_links.html">links</a></td>
-                <td>Returns a collection of all &lt;a&gt; and &lt;area&gt; elements in the document that have a href attribute</td>
+                <td>Повертає колекцію всіх елементів &lt;a&gt; та &lt;area&gt; в документі, які мають атрибут href</td>
                 <td><a href="dom_obj_document.html">Документ</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_ln2.html">LN2</a></td>
-                <td>Returns the natural logarithm of 2 (approx. 0.693)</td>
+                <td>Повертає натуральний логарифм 2 (приблизно 0,693)</td>
                 <td><a href="jsref_obj_math.html">Математичні</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_ln10.html">LN10</a></td>
-                <td>Returns the natural logarithm of 10 (approx. 2.302)</td>
+                <td>Повертає натуральний логарифм 10 (приблизно 2,302)</td>
                 <td><a href="jsref_obj_math.html">Математичні</a></td>
             </tr>
             <tr>
                 <td>loaded</td>
-                <td>Returns how much work has been loaded</td>
-                <td><a href="obj_progressevent.html">ProgressПодія</a></td>
+                <td>Повертає обсяг завантаженої роботи</td>
+                <td><a href="obj_progressevent.html">ProgressEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_localecompare.html">localeCompare()</a></td>
-                <td>Compares two strings in the current locale</td>
+                <td>Порівнює два рядки в поточній локалі</td>
                 <td><a href="jsref_obj_string.html">Рядок</a></td>
             </tr>
             <tr>
                 <td><a href="prop_win_localstorage.html">localStorage</a></td>
-                <td>Allows to save key/value pairs in a web browser. Stores the data with no expiration date</td>
+                <td>Дозволяє зберігати пари ключ/значення у веббраузері. Зберігає дані без терміну дії</td>
                 <td><a href="obj_window.html">Вікно</a></td>
             </tr>
             <tr>
                 <td><a href="event_key_location.html">location</a></td>
-                <td>Returns the location of a key on the keyboard or device</td>
-                <td><a href="obj_keyboardevent.html">KeyboardПодія</a></td>
+                <td>Повертає розташування клавіші на клавіатурі чи пристрої</td>
+                <td><a href="obj_keyboardevent.html">KeyboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="obj_location.html">location</a></td>
-                <td>Returns the Location object for the window (<a href="obj_location.html">See Location object</a>)</td>
+                <td>Повертає об&#8217;єкт Location для вікна (<a href="obj_location.html">Див. об&#8217;єкт Location</a>)</td>
                 <td><a href="obj_window.html">Вікно</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_log.html">log()</a></td>
-                <td>Returns the natural logarithm of a number</td>
+                <td>Повертає натуральний логарифм числа</td>
                 <td><a href="jsref_obj_math.html">Математичні</a>, <a href="obj_console.html">Консоль</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_log10.html">log10()</a></td>
-                <td>Returns the base-10 logarithm of a number</td>
+                <td>Повертає логарифм числа за основою 10</td>
                 <td><a href="jsref_obj_math.html">Математичні</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_log1p.html">log1p()</a></td>
-                <td>Returns the natural logarithm of 1 + a number</td>
+                <td>Повертає натуральний логарифм 1 + число</td>
                 <td><a href="jsref_obj_math.html">Математичні</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_log2.html">log2()</a></td>
-                <td>Returns the base-2 logarithm of a number</td>
+                <td>Повертає логарифм числа за основою 2</td>
                 <td><a href="jsref_obj_math.html">Математичні</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_log2e.html">LOG2E</a></td>
-                <td>Returns the base-2 logarithm of E (approx. 1.442)</td>
+                <td>Повертає логарифм E за основою 2 (приблизно 1,442)</td>
                 <td><a href="jsref_obj_math.html">Математичні</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_log10e.html">LOG10E</a></td>
-                <td>Returns the base-10 logarithm of E (approx. 0.434)</td>
+                <td>Повертає логарифм E за основою 10 (приблизно 0,434)</td>
                 <td><a href="jsref_obj_math.html">Математичні</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_map.html">map()</a></td>
-                <td>Creates a new array with the result of calling a function for each array element</td>
+                <td>Створює новий масив із результатом виклику функції для кожного елемента масиву</td>
                 <td><a href="jsref_obj_array.html">Масив</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_match.html">match()</a></td>
-                <td>Searches a string for a match against a regular expression, and returns the matches</td>
+                <td>Шукає в рядку збіг із регулярним виразом і повертає збіги</td>
                 <td><a href="jsref_obj_string.html">Рядок</a></td>
             </tr>
             <tr>
                 <td><a href="met_element_matches.html">matches()</a></td>
-                <td>Returns a Boolean value indicating whether an element is matched by a specific CSS selector or not</td>
+                <td>Повертає логічне значення, яке вказує, чи відповідає елемент певному CSS-селектору чи ні</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_win_matchmedia.html">matchMedia()</a></td>
-                <td>Returns a MediaQueryList object representing the specified CSS media query string</td>
+                <td>Повертає об&#8217;єкт MediaQueryList, який представляє вказаний рядок медіа-запиту CSS</td>
                 <td><a href="obj_window.html">Вікно</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_max.html">max()</a></td>
-                <td>Returns the number with the highest value</td>
+                <td>Повертає число з найбільшим значенням</td>
                 <td><a href="jsref_obj_math.html">Математичні</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_max_value.html">MAX_VALUE</a></td>
-                <td>Returns the largest number possible in JavaScript</td>
+                <td>Повертає найбільше число, можливе в JavaScript</td>
                 <td><a href="jsref_obj_number.html">Число</a></td>
             </tr>
             <tr>
                 <td><a href="prop_error_message.html">message</a></td>
-                <td>Sets or returns an error message (a string)</td>
+                <td>Встановлює або повертає повідомлення про помилку (рядок)</td>
                 <td><a href="jsref_obj_error.html">Error</a></td>
             </tr>
             <tr>
                 <td><a href="event_metakey.html">metaKey</a></td>
-                <td>Returns whether the &quot;META&quot; key was pressed when an event was triggered</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a>, <a href="obj_keyboardevent.html">KeyboardПодія</a>, <a href="obj_touchevent.html">TouchПодія</a></td>
+                <td>Повертає, чи дійсно була натиснута клавіша &quot;META&quot; під час ініціювання події</td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a>, <a href="obj_keyboardevent.html">KeyboardEvent</a>, <a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_min.html">min()</a></td>
-                <td>Returns the number with the lowest value</td>
+                <td>Повертає число з найменшим значенням</td>
                 <td><a href="jsref_obj_math.html">Математичні</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_regexp_multiline.html">multiline</a></td>
-                <td>Checks whether the &quot;m&quot; modifier is set</td>
+                <td>Перевіряє, чи встановлено модифікатор &quot;m&quot;</td>
                 <td><a href="jsref_obj_regexp.html">RegExp</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_min_value.html">MIN_VALUE</a></td>
-                <td>Returns the smallest number possible in JavaScript</td>
+                <td>Повертає найменше число, можливе в JavaScript</td>
                 <td><a href="jsref_obj_number.html">Число</a></td>
             </tr>
             <tr>
                 <td><a href="met_win_moveby.html">moveBy()</a></td>
-                <td>Moves a window relative to its current position</td>
+                <td>Переміщує вікно відносно його поточного положення</td>
                 <td><a href="obj_window.html">Вікно</a></td>
             </tr>
             <tr>
                 <td><a href="met_win_moveto.html">moveTo()</a></td>
-                <td>Moves a window to the specified position</td>
+                <td>Переміщує вікно у вказане положення</td>
                 <td><a href="obj_window.html">Вікно</a></td>
             </tr>
             <tr>
                 <td>MovementX</td>
-                <td>Returns the horizontal coordinate of the mouse pointer relative to the position of the last mousemove event</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td>Повертає горизонтальну координату вказівника миші відносно положення останньої події переміщення миші</td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td>MovementY</td>
-                <td>Returns the vertical coordinate of the mouse pointer relative to the position of the last mousemove event</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td>Повертає вертикальну координату вказівника миші відносно позиції останньої події переміщення миші</td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_error_name.html">name</a></td>
-                <td>Sets or returns an error name</td>
-                <td><a href="jsref_obj_error.html">Error</a>, <a href="dom_obj_attributes.html">Attribute</a>, <a href="obj_window.html">Вікно</a></td>
+                <td>Встановлює або повертає назву помилки</td>
+                <td><a href="jsref_obj_error.html">Error</a>, <a href="dom_obj_attributes.html">Атрибут</a>, <a href="obj_window.html">Вікно</a></td>
             </tr>
             <tr>
                 <td><a href="met_htmlcollection_nameditem.html">namedItem()</a></td>
-                <td>Returns the element with the specified ID, or name, in an HTMLCollection</td>
+                <td>Повертає елемент із вказаним ідентифікатором або назвою в HTMLCollection</td>
                 <td><a href="dom_obj_htmlcollection.html">HTMLCollection</a></td>
             </tr>
             <tr>
                 <td><a href="prop_node_namespaceuri.html">namespaceURI</a></td>
-                <td>Returns the namespace URI of an element</td>
+                <td>Повертає URI простору імен елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_nan.html">NaN</a></td>
-                <td>&quot;Not-a-Number&quot; value</td>
+                <td>Значення &quot;Not-a-Number&quot;</td>
                 <td><a href="jsref_obj_global.html">Глобальні</a>, <a href="jsref_obj_number.html">Число</a></td>
             </tr>
             <tr>
                 <td><a href="obj_navigator.html">navigator</a></td>
-                <td>Returns the Navigator object for the window (<a href="obj_navigator.html">See Navigator object</a>)</td>
+                <td>Повертає об&#8217;єкт Navigator для вікна (<a href="obj_navigator.html">Див. об&#8217;єкт Navigator</a>)</td>
                 <td><a href="obj_window.html">Вікно</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_negative_infinity.html">NEGATIVE_INFINITY</a></td>
-                <td>Represents negative infinity (returned on overflow)</td>
+                <td>Представляє негативну нескінченність (повертається при переповненні)</td>
                 <td><a href="jsref_obj_number.html">Число</a></td>
             </tr>
             <tr>
                 <td>new</td>
-                <td>Creates an instance of a constructor</td>
+                <td>Створює екземпляр конструктора</td>
                 <td></td>
             </tr>
             <tr>
                 <td><a href="event_hashchange_newurl.html">newURL</a></td>
-                <td>Returns the URL of the document, after the hash has been changed</td>
-                <td><a href="obj_hashchangeevent.html">HasChangeПодія</a></td>
+                <td>Повертає URL-адресу документа після зміни хешу</td>
+                <td><a href="obj_hashchangeevent.html">HasChangeEvent</a></td>
             </tr>
             <tr>
                 <td>newValue</td>
-                <td>Returns the new value of the changed storage item</td>
-                <td><a href="obj_storageevent.html">StorageПодія</a></td>
+                <td>Повертає нове значення зміненого елемента зберігання</td>
+                <td><a href="obj_storageevent.html">StorageEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_node_nextsibling.html">nextSibling</a></td>
-                <td>Returns the next node at the same node tree level</td>
+                <td>Повертає наступний вузол на тому самому рівні дерева вузлів</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_element_nextelementsibling.html">nextЕлементSibling</a></td>
-                <td>Returns the next element at the same node tree level</td>
+                <td>Повертає наступний елемент на тому самому рівні дерева вузлів</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_node_nodename.html">nodeName</a></td>
-                <td>Returns the name of a node</td>
+                <td>Повертає назву вузла</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_node_nodetype.html">nodeType</a></td>
-                <td>Returns the node type of a node</td>
+                <td>Повертає тип вузла</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_node_nodevalue.html">nodeValue</a></td>
-                <td>Sets or returns the value of a node</td>
+                <td>Встановлює або повертає значення вузла</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_document_normalize.html">normalize()</a></td>
-                <td>Removes empty Text nodes, and joins adjacent nodes</td>
+                <td>Видаляє порожні текстові вузли та об&#8217;єднує сусідні вузли</td>
                 <td><a href="dom_obj_document.html">Документ</a>, <a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="met_document_normalizedocument.html">normalizeDocument()</a></td>
-                <td>Removes empty Text nodes, and joins adjacent nodes</td>
+                <td>Видаляє порожні текстові вузли та об&#8217;єднує сусідні вузли</td>
                 <td><a href="dom_obj_document.html">Документ</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_now.html">now()</a></td>
-                <td>Returns the number of milliseconds since midnight Jan 1, 1970</td>
+                <td>Повертає кількість мілісекунд з опівночі 1 січня 1970 року</td>
                 <td><a href="jsref_obj_date.html">Дата</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_number.html">Number()</a></td>
-                <td>Converts an object's value to a number</td>
+                <td>Перетворює значення об&#8217;єкта на число</td>
                 <td><a href="jsref_obj_global.html">Глобальні</a></td>
             </tr>
             <tr>
                 <td><a href="prop_element_offsetheight.html">offsetHeight</a></td>
-                <td>Returns the height of an element, including padding, border and scrollbar</td>
+                <td>Повертає висоту елемента, включаючи відступ, рамку та смугу прокрутки</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_element_offsetwidth.html">offsetWidth</a></td>
-                <td>Returns the width of an element, including padding, border and scrollbar</td>
+                <td>Повертає ширину елемента, включаючи відступ, рамку та смугу прокрутки</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_element_offsetleft.html">offsetLeft</a></td>
-                <td>Returns the horizontal offset position of an element</td>
+                <td>Повертає положення горизонтального зсуву елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_element_offsetparent.html">offsetParent</a></td>
-                <td>Returns the offset container of an element</td>
+                <td>Повертає контейнер зсуву елемента</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td><a href="prop_element_offsettop.html">offsetTop</a></td>
-                <td>Returns the vertical offset position of an element</td>
+                <td>Повертає положення елемента по вертикалі</td>
                 <td><a href="dom_obj_all.html">Елемент</a></td>
             </tr>
             <tr>
                 <td>offsetX</td>
-                <td>Returns the horizontal coordinate of the mouse pointer relative to the position of the edge of the target element</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td>Повертає горизонтальну координату вказівника миші відносно положення краю цільового елемента</td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td>offsetY</td>
-                <td>Returns the vertical coordinate of the mouse pointer relative to the position of the edge of the target element</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td>Повертає вертикальну координату вказівника миші відносно положення краю цільового елемента</td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_hashchange_oldurl.html">oldURL</a></td>
-                <td>Returns the URL of the document, before the hash was changed</td>
-                <td><a href="obj_hashchangeevent.html">HasChangeПодія</a></td>
+                <td>Повертає URL-адресу документа до зміни хешу</td>
+                <td><a href="obj_hashchangeevent.html">HasChangeEvent</a></td>
             </tr>
             <tr>
                 <td>oldValue</td>
-                <td>Returns the old value of the changed storage item</td>
-                <td><a href="obj_storageevent.html">StorageПодія</a></td>
+                <td>Повертає старе значення зміненого елемента зберігання</td>
+                <td><a href="obj_storageevent.html">StorageEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onabort_media.html">onabort</a></td>
-                <td>The event occurs when the loading of a media is aborted</td>
-                <td><a href="obj_uievent.html">UiПодія</a>, <a href="obj_event.html">Подія</a></td>
+                <td>Подія виникає, коли завантаження носія переривається</td>
+                <td><a href="obj_uievent.html">UiEvent</a>, <a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onafterprint.html">onafterprint</a></td>
-                <td>The event occurs when a page has started printing, or if the print dialogue box has been closed</td>
+                <td>Подія виникає, коли починається друк сторінки або якщо діалогове вікно друку було закрито</td>
                 <td><a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_animationend.html">onanimationend</a></td>
-                <td>The event occurs when a CSS animation has completed</td>
-                <td><a href="obj_animationevent.html">AnimationПодія</a></td>
+                <td>Подія виникає після завершення анімації CSS</td>
+                <td><a href="obj_animationevent.html">AnimationEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_animationiteration.html">onanimationiteration</a></td>
-                <td>The event occurs when a CSS animation is repeated</td>
-                <td><a href="obj_animationevent.html">AnimationПодія</a></td>
+                <td>Подія виникає, коли CSS-анімація повторюється</td>
+                <td><a href="obj_animationevent.html">AnimationEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_animationstart.html">onanimationstart</a></td>
-                <td>The event occurs when a CSS animation has started</td>
-                <td><a href="obj_animationevent.html">AnimationПодія</a></td>
+                <td>Подія виникає, коли починається CSS-анімація</td>
+                <td><a href="obj_animationevent.html">AnimationEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onbeforeprint.html">onbeforeprint</a></td>
-                <td>The event occurs when a page is about to be printed</td>
+                <td>Подія виникає, коли сторінку збираються надрукувати</td>
                 <td><a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onbeforeunload.html">onbeforeunload</a></td>
-                <td>The event occurs before the document is about to be unloaded</td>
-                <td><a href="obj_uievent.html">UiПодія</a>,
-                    <a href="obj_event.html">Подія</a></td>
+                <td>Подія відбувається перед тим, як документ буде вивантажено</td>
+                <td><a href="obj_uievent.html">UiEvent</a>, <a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onblur.html">onblur</a></td>
-                <td>The event occurs when an element loses focus</td>
-                <td><a href="obj_focusevent.html">FocusПодія</a></td>
+                <td>Подія виникає, коли елемент втрачає фокус</td>
+                <td><a href="obj_focusevent.html">FocusEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_oncanplay.html">oncanplay</a></td>
-                <td>The event occurs when the browser can start playing the media (when it has buffered enough to begin)</td>
+                <td>Подія виникає, коли браузер може розпочати відтворення медіафайлу (коли він достатньо буферизований для початку)</td>
                 <td><a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_oncanplaythrough.html">oncanplaythrough</a></td>
-                <td>The event occurs when the browser can play through the media without stopping for buffering</td>
+                <td>Подія виникає, коли браузер може відтворювати медіа без зупинки для буферизації</td>
                 <td><a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onchange.html">onchange</a></td>
-                <td>The event occurs when the content of a form element, the selection, or the checked state have changed (for &lt;input&gt;, &lt;select&gt;, and &lt;textarea&gt;)</td>
+                <td>Подія виникає, коли змінюється вміст елемента форми, виділення або позначений стан (для &lt;input&gt;, &lt;select&gt; та &lt;textarea&gt;)</td>
                 <td><a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onclick.html">onclick</a></td>
-                <td>The event occurs when the user clicks on an element</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td>Подія виникає, коли користувач натискає на елемент</td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_oncontextmenu.html">oncontextmenu</a></td>
                 <td>The event occurs when the user right-clicks on an element to open a context menu</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_oncopy.html">oncopy</a></td>
                 <td>The event occurs when the user copies the content of an element</td>
-                <td><a href="obj_clipboardevent.html">ClipboardПодія</a></td>
+                <td><a href="obj_clipboardevent.html">ClipboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_oncut.html">oncut</a></td>
                 <td>The event occurs when the user cuts the content of an element</td>
-                <td><a href="obj_clipboardevent.html">ClipboardПодія</a></td>
+                <td><a href="obj_clipboardevent.html">ClipboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_ondblclick.html">ondblclick</a></td>
                 <td>The event occurs when the user double-clicks on an element</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_ondrag.html">ondrag</a></td>
                 <td>The event occurs when an element is being dragged</td>
-                <td><a href="obj_dragevent.html">DragПодія</a></td>
+                <td><a href="obj_dragevent.html">DragEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_ondragend.html">ondragend</a></td>
                 <td>The event occurs when the user has finished dragging an element</td>
-                <td><a href="obj_dragevent.html">DragПодія</a></td>
+                <td><a href="obj_dragevent.html">DragEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_ondragenter.html">ondragenter</a></td>
                 <td>The event occurs when the dragged element enters the drop target</td>
-                <td><a href="obj_dragevent.html">DragПодія</a></td>
+                <td><a href="obj_dragevent.html">DragEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_ondragleave.html">ondragleave</a></td>
                 <td>The event occurs when the dragged element leaves the drop target</td>
-                <td><a href="obj_dragevent.html">DragПодія</a></td>
+                <td><a href="obj_dragevent.html">DragEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_ondragover.html">ondragover</a></td>
                 <td>The event occurs when the dragged element is over the drop target</td>
-                <td><a href="obj_dragevent.html">DragПодія</a></td>
+                <td><a href="obj_dragevent.html">DragEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_ondragstart.html">ondragstart</a></td>
                 <td>The event occurs when the user starts to drag an element</td>
-                <td><a href="obj_dragevent.html">DragПодія</a></td>
+                <td><a href="obj_dragevent.html">DragEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_ondrop.html">ondrop</a></td>
                 <td>The event occurs when the dragged element is dropped on the drop target</td>
-                <td><a href="obj_dragevent.html">DragПодія</a></td>
+                <td><a href="obj_dragevent.html">DragEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_ondurationchange.html">ondurationchange</a></td>
@@ -3269,22 +3267,22 @@
             <tr>
                 <td><a href="event_onerror.html">onerror</a></td>
                 <td>The event occurs when an error occurs while loading an external file </td>
-                <td><a href="obj_progressevent.html">ProgressПодія</a>, <a href="obj_uievent.html">UiПодія</a>, <a href="obj_event.html">Подія</a></td>
+                <td><a href="obj_progressevent.html">ProgressПодія</a>, <a href="obj_uievent.html">UiEvent</a>, <a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onfocus.html">onfocus</a></td>
                 <td>The event occurs when an element gets focus</td>
-                <td><a href="obj_focusevent.html">FocusПодія</a></td>
+                <td><a href="obj_focusevent.html">FocusEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onfocusin.html">onfocusin</a></td>
                 <td>The event occurs when an element is about to get focus</td>
-                <td><a href="obj_focusevent.html">FocusПодія</a></td>
+                <td><a href="obj_focusevent.html">FocusEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onfocusout.html">onfocusout</a></td>
                 <td>The event occurs when an element is about to lose focus</td>
-                <td><a href="obj_focusevent.html">FocusПодія</a></td>
+                <td><a href="obj_focusevent.html">FocusEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_fullscreenchange.html">onfullscreenchange</a></td>
@@ -3299,12 +3297,12 @@
             <tr>
                 <td><a href="event_onhashchange.html">onhashchange</a></td>
                 <td>The event occurs when there has been changes to the anchor part of a URL</td>
-                <td><a href="obj_hashchangeevent.html">HashChangeПодія</a></td>
+                <td><a href="obj_hashchangeevent.html">HashChangeEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_oninput.html">oninput</a></td>
                 <td>The event occurs when an element gets user input</td>
-                <td><a href="obj_inputevent.html">InputПодія</a>, <a href="obj_event.html">Подія</a></td>
+                <td><a href="obj_inputevent.html">InputEvent</a>, <a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_oninvalid.html">oninvalid</a></td>
@@ -3314,17 +3312,17 @@
             <tr>
                 <td><a href="event_onkeydown.html">onkeydown</a></td>
                 <td>The event occurs when the user is pressing a key</td>
-                <td><a href="obj_keyboardevent.html">KeyboardПодія</a></td>
+                <td><a href="obj_keyboardevent.html">KeyboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onkeypress.html">onkeypress</a></td>
                 <td>The event occurs when the user presses a key</td>
-                <td><a href="obj_keyboardevent.html">KeyboardПодія</a></td>
+                <td><a href="obj_keyboardevent.html">KeyboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onkeyup.html">onkeyup</a></td>
                 <td>The event occurs when the user releases a key</td>
-                <td><a href="obj_keyboardevent.html">KeyboardПодія</a></td>
+                <td><a href="obj_keyboardevent.html">KeyboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_nav_online.html">onLine</a></td>
@@ -3334,7 +3332,7 @@
             <tr>
                 <td><a href="event_onload.html">onload</a></td>
                 <td>The event occurs when an object has loaded</td>
-                <td><a href="obj_uievent.html">UiПодія</a>, <a href="obj_event.html">Подія</a></td>
+                <td><a href="obj_uievent.html">UiEvent</a>, <a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onloadeddata.html">onloadeddata</a></td>
@@ -3349,7 +3347,7 @@
             <tr>
                 <td><a href="event_onloadstart.html">onloadstart</a></td>
                 <td>The event occurs when the browser starts looking for the specified media</td>
-                <td><a href="obj_progressevent.html">ProgressПодія</a></td>
+                <td><a href="obj_progressevent.html">ProgressEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onmessage_sse.html">onmessage</a></td>
@@ -3359,37 +3357,37 @@
             <tr>
                 <td><a href="event_onmousedown.html">onmousedown</a></td>
                 <td>The event occurs when the user presses a mouse button over an element</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onmouseenter.html">onmouseenter</a></td>
                 <td>The event occurs when the pointer is moved onto an element</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onmouseleave.html">onmouseleave</a></td>
                 <td>The event occurs when the pointer is moved out of an element</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onmousemove.html">onmousemove</a></td>
                 <td>The event occurs when the pointer is moving while it is over an element</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onmouseover.html">onmouseover</a></td>
                 <td>The event occurs when the pointer is moved onto an element, or onto one of its children</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onmouseout.html">onmouseout</a></td>
                 <td>The event occurs when a user moves the mouse pointer out of an element, or out of one of its children</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onmouseup.html">onmouseup</a></td>
                 <td>The event occurs when a user releases a mouse button over an element</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td>onmousewheel</td>
@@ -3415,17 +3413,17 @@
             <tr>
                 <td><a href="event_onpagehide.html">onpagehide</a></td>
                 <td>The event occurs when the user navigates away from a webpage</td>
-                <td><a href="obj_pagetransitionevent.html">PageTransitionПодія</a></td>
+                <td><a href="obj_pagetransitionevent.html">PageTransitionEvent</a></td>
             </tr>
             <tr>
                 <td style="height: 23px"><a href="event_onpageshow.html">onpageshow</a></td>
                 <td style="height: 23px">The event occurs when the user navigates to a webpage</td>
-                <td style="width: 156px; height: 23px"><a href="obj_pagetransitionevent.html">PageTransitionПодія</a></td>
+                <td style="width: 156px; height: 23px"><a href="obj_pagetransitionevent.html">PageTransitionEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onpaste.html">onpaste</a></td>
                 <td>The event occurs when the user pastes some content in an element</td>
-                <td><a href="obj_clipboardevent.html">ClipboardПодія</a></td>
+                <td><a href="obj_clipboardevent.html">ClipboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onpause.html">onpause</a></td>
@@ -3446,7 +3444,7 @@
             <tr>
                 <td>onpopstate</td>
                 <td>The event occurs when the window's history changes</td>
-                <td><a href="obj_popstateevent.html">PopStateПодія</a></td>
+                <td><a href="obj_popstateevent.html">PopStateEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onprogress.html">onprogress</a></td>
@@ -3461,7 +3459,7 @@
             <tr>
                 <td><a href="event_onresize.html">onresize</a></td>
                 <td>The event occurs when the document view is resized</td>
-                <td><a href="obj_uievent.html">UiПодія</a>, <a href="obj_event.html">Подія</a></td>
+                <td><a href="obj_uievent.html">UiEvent</a>, <a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onreset.html">onreset</a></td>
@@ -3471,7 +3469,7 @@
             <tr>
                 <td><a href="event_onscroll.html">onscroll</a></td>
                 <td>The event occurs when an element's scrollbar is being scrolled</td>
-                <td><a href="obj_uievent.html">UiПодія</a>, <a href="obj_event.html">Подія</a></td>
+                <td><a href="obj_uievent.html">UiEvent</a>, <a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onsearch.html">onsearch</a></td>
@@ -3491,7 +3489,7 @@
             <tr>
                 <td><a href="event_onselect.html">onselect</a></td>
                 <td>The event occurs after the user selects some&nbsp;text (for &lt;input&gt; and &lt;textarea&gt;)</td>
-                <td><a href="obj_uievent.html">UiПодія</a>, <a href="obj_event.html">Подія</a></td>
+                <td><a href="obj_uievent.html">UiEvent</a>, <a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onshow.html">onshow</a></td>
@@ -3506,7 +3504,7 @@
             <tr>
                 <td>onstorage</td>
                 <td>The event occurs when a Web Storage area is updated</td>
-                <td><a href="obj_storageevent.html">StorageПодія</a></td>
+                <td><a href="obj_storageevent.html">StorageEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onsubmit.html">onsubmit</a></td>
@@ -3531,32 +3529,32 @@
             <tr>
                 <td><a href="event_touchcancel.html">ontouchcancel</a></td>
                 <td>The event occurs when the touch is interrupted</td>
-                <td><a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_touchend.html">ontouchend</a></td>
                 <td>The event occurs when a finger is removed from a touch screen</td>
-                <td><a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_touchmove.html">ontouchmove</a></td>
                 <td>The event occurs when a finger is dragged across the screen</td>
-                <td><a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_touchstart.html">ontouchstart</a></td>
                 <td>The event occurs when a finger is placed on a touch screen</td>
-                <td><a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_transitionend.html">ontransitionend</a></td>
                 <td>The event occurs when a CSS transition has completed</td>
-                <td><a href="obj_transitionevent.html">TransitionПодія</a></td>
+                <td><a href="obj_transitionevent.html">TransitionEvent</a></td>
             </tr>
             <tr>
                 <td><a href="event_onunload.html">onunload</a></td>
                 <td>The event occurs once a page has unloaded (for &lt;body&gt;)</td>
-                <td><a href="obj_uievent.html">UiПодія</a>, <a href="obj_event.html">Подія</a></td>
+                <td><a href="obj_uievent.html">UiEvent</a>, <a href="obj_event.html">Подія</a></td>
             </tr>
             <tr>
                 <td><a href="event_onvolumechange.html">onvolumechange</a></td>
@@ -3616,7 +3614,7 @@
             <tr>
                 <td><a href="event_pagex.html">pageX</a></td>
                 <td>Returns the horizontal coordinate of the mouse pointer, relative to the document, when  the mouse event was triggered</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_win_pagexoffset.html">pageXOffset</a></td>
@@ -3626,7 +3624,7 @@
             <tr>
                 <td><a href="event_pagey.html">pageY</a></td>
                 <td>Returns the vertical coordinate of the mouse pointer, relative to the document, when  the mouse event was triggered</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_win_pagexoffset.html">pageYOffset</a></td>
@@ -3671,7 +3669,7 @@
             <tr>
                 <td><a href="event_pagetransition_persisted.html">persisted</a></td>
                 <td>Returns whether the webpage was cached by the browser</td>
-                <td><a href="obj_pagetransitionevent.html">PageTransitionПодія</a></td>
+                <td><a href="obj_pagetransitionevent.html">PageTransitionEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_pi.html">PI</a></td>
@@ -3736,7 +3734,7 @@
             <tr>
                 <td><a href="event_transition_propertyName.html">propertyName</a></td>
                 <td>Returns the name of the CSS property associated with the animation or transition</td>
-                <td><a href="obj_animationevent.html">AnimationПодія</a>, <a href="obj_transitionevent.html">TransitionПодія</a></td>
+                <td><a href="obj_animationevent.html">AnimationПодія</a>, <a href="obj_transitionevent.html">TransitionEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_loc_protocol.html">protocol</a></td>
@@ -3751,7 +3749,7 @@
             <tr>
                 <td>pseudoЕлемент</td>
                 <td>Returns the name of the pseudo-element of the animation or transition</td>
-                <td><a href="obj_animationevent.html">AnimationПодія</a>, <a href="obj_transitionevent.html">TransitionПодія</a></td>
+                <td><a href="obj_animationevent.html">AnimationПодія</a>, <a href="obj_transitionevent.html">TransitionEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_push.html">push()</a></td>
@@ -3796,7 +3794,7 @@
             <tr>
                 <td>region</td>
                 <td></td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="met_loc_reload.html">reload()</a></td>
@@ -3831,12 +3829,12 @@
             <tr>
                 <td><a href="met_storage_removeitem.html">removeItem()</a></td>
                 <td>Removes that key from the storage</td>
-                <td><a href="api_storage.html">Storage</a></td>
+                <td><a href="api_storage.html">Сховище</a></td>
             </tr>
             <tr>
                 <td>repeat</td>
                 <td>Returns whether a key is being hold down repeatedly, or not</td>
-                <td><a href="obj_keyboardevent.html">KeyboardПодія</a></td>
+                <td><a href="obj_keyboardevent.html">KeyboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_repeat.html">repeat()</a></td>
@@ -3916,7 +3914,7 @@
             <tr>
                 <td><a href="event_relatedtarget.html">relatedTarget</a></td>
                 <td>Returns the element related to the element that triggered the mouse event</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a>, <a href="obj_focusevent.html">FocusПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a>, <a href="obj_focusevent.html">FocusEvent</a></td>
             </tr>
             <tr>
                 <td><a href="met_document_removeeventlistener.html">removeEventListener()</a></td>
@@ -3951,12 +3949,12 @@
             <tr>
                 <td><a href="prop_win_screenx.html">screenX</a></td>
                 <td>Returns the horizontal coordinate of the window/mouse pointer relative to the screen</td>
-                <td><a href="obj_window.html">Вікно</a>, <a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_window.html">Вікно</a>, <a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_win_screenx.html">screenY</a></td>
                 <td>Returns the vertical coordinate of the window/mouse pointer relative to the screen</td>
-                <td><a href="obj_window.html">Вікно</a>, <a href="obj_mouseevent.html">MouseПодія</a></td>
+                <td><a href="obj_window.html">Вікно</a>, <a href="obj_mouseevent.html">MouseEvent</a></td>
             </tr>
             <tr>
                 <td><a href="coll_doc_scripts.html">scripts</a></td>
@@ -4066,7 +4064,7 @@
             <tr>
                 <td><a href="met_storage_setitem.html">setItem()</a></td>
                 <td>Adds that key to the storage, or update that key's value if it already exists</td>
-                <td><a href="api_storage.html">Storage</a></td>
+                <td><a href="api_storage.html">Сховище</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_setmilliseconds.html">setMilliseconds()</a></td>
@@ -4151,8 +4149,8 @@
             <tr>
                 <td><a href="event_shiftkey.html">shiftKey</a></td>
                 <td>Returns whether the &quot;SHIFT&quot; key was pressed when an event was triggered</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a>, <a href="obj_keyboardevent.html">KeyboardПодія</a>,
-                    <a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a>, <a href="obj_keyboardevent.html">KeyboardEvent</a>,
+                    <a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_sign.html">sign(x)</a></td>
@@ -4217,7 +4215,7 @@
             <tr>
                 <td>state</td>
                 <td>Returns an object containing a copy of the history entries</td>
-                <td><a href="obj_popstateevent.html">PopStateПодія</a></td>
+                <td><a href="obj_popstateevent.html">PopStateEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_string.html">String()</a></td>
@@ -4272,7 +4270,7 @@
             <tr>
                 <td>storageArea</td>
                 <td>Returns an object representing the affected storage object</td>
-                <td><a href="obj_storageevent.html">StorageПодія</a></td>
+                <td><a href="obj_storageevent.html">StorageEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_html_style.html">style</a></td>
@@ -4332,7 +4330,7 @@
             <tr>
                 <td><a href="event_touch_targettouches.html">targetTouches</a></td>
                 <td>Returns a list of all the touch objects that are in contact with the surface and where the touchstart event occured on the same target element as the current target element</td>
-                <td><a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_regexp_test.html">test()</a></td>
@@ -4453,7 +4451,7 @@
             <tr>
                 <td>total</td>
                 <td>Returns the total amount of work that will be loaded</td>
-                <td><a href="obj_progressevent.html">ProgressПодія</a></td>
+                <td><a href="obj_progressevent.html">ProgressEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_totimestring.html">toTimeString()</a></td>
@@ -4463,7 +4461,7 @@
             <tr>
                 <td><a href="event_touch_touches.html">touches</a></td>
                 <td>Returns a list of all the touch objects that are currently in contact with the surface</td>
-                <td><a href="obj_touchevent.html">TouchПодія</a></td>
+                <td><a href="obj_touchevent.html">TouchEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_touppercase.html">toUpperCase()</a></td>
@@ -4483,7 +4481,7 @@
             <tr>
                 <td><a href="event_transitionend.html">transitionend</a></td>
                 <td>The event occurs when a CSS transition has completed</td>
-                <td><a href="obj_transitionevent.html">TransitionПодія</a></td>
+                <td><a href="obj_transitionevent.html">TransitionEvent</a></td>
             </tr>
             <tr>
                 <td><a href="jsref_trim_string.html">trim()</a></td>
@@ -4528,7 +4526,7 @@
             <tr>
                 <td>url</td>
                 <td>Returns the URL of the changed item's document</td>
-                <td><a href="obj_storageevent.html">StorageПодія</a></td>
+                <td><a href="obj_storageevent.html">StorageEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_doc_url.html">URL</a></td>
@@ -4574,7 +4572,7 @@
             <tr>
                 <td><a href="event_which.html">which</a></td>
                 <td>Returns which mouse button was pressed when the mouse event was triggered</td>
-                <td><a href="obj_mouseevent.html">MouseПодія</a>, <a href="obj_keyboardevent.html">KeyboardПодія</a></td>
+                <td><a href="obj_mouseevent.html">MouseEvent</a>, <a href="obj_keyboardevent.html">KeyboardEvent</a></td>
             </tr>
             <tr>
                 <td><a href="prop_screen_width.html">width</a></td>
@@ -4584,7 +4582,7 @@
             <tr>
                 <td><a href="event_view.html">view</a></td>
                 <td>Returns a reference to the Window object where the event occurred</td>
-                <td><a href="obj_uievent.html">UiПодія</a></td>
+                <td><a href="obj_uievent.html">UiEvent</a></td>
             </tr>
             <tr>
                 <td>void</td>
