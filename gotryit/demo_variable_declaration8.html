@@ -59,13 +59,22 @@
   <div id="textareacontainer">
     <div id="textarea">
       <div id="textareawrapper">
-        <textarea autocomplete="off" id="textareaCode" wrap="soft" spellcheck="false">// Це коментар
-package main
+        <textarea autocomplete="off" id="textareaCode" wrap="soft" spellcheck="false">package main
+
 import ("fmt")
 
 func main() {
-  // Це коментар
-  fmt.Println("Hello World!")
+
+  var (
+    a int
+    b int    = 1
+    c string = "hello"
+  )
+
+  fmt.Println(a)
+  fmt.Println(b)
+  fmt.Println(c)
+
 }
         </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0;display:none;">
@@ -79,7 +88,7 @@ func main() {
       <div id="runloadercontainer"><div id="runloader"></div></div>
       <div id="iframewrapper">
         <div id="iframeResult" style="position:relative;white-space:nowrap;overflow:auto;">
-          <div>Hello World!</div>
+          <div>0<br>1<br>hello</div>
         </div>
       </div>
     </div>
