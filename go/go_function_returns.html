@@ -11,7 +11,7 @@
 <meta property='og:image:width' content='436'>
 <meta property='og:image:height' content='228'>
 <meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'><title>Go Повернення функції. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Go Повернення функції. Вправи. Приклади. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<meta name='description' content='Go Повернення функції. Повернуті значення. Ключове слово return у функції. Приклад повернення функції. Іменування значень, що повертаються. Зберігайте значення, що повертається, у змінній. Кілька повернених значень. Функції Go можуть повертати кілька значень. Приклади. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -385,18 +385,18 @@
     </div>
     <hr>
     <h2>Повернуті значення</h2>
-    <p>If you want the function to return a value, you need to define the data type of the return value (such as <code class="w3-codespan">int</code>, <code class="w3-codespan">string</code>, etc), and also use the <code class="w3-codespan">return</code> keyword inside the function:</p>
+    <p>Якщо ви хочете, щоб функція повертала значення, вам потрібно визначити тип даних, що повертається (наприклад, <code class="w3-codespan">int</code>, <code class="w3-codespan">string</code> тощо), а також використовуйте ключове слово <code class="w3-codespan">return</code> у функції:</p>
     <div class="w3-example">
         <h3>Синтаксис</h3>
         <div class="w3-code notranslate javaHigh">
-            func <em>FunctionName</em>(<em>param1</em> <em>type</em>, <em>param2</em> <em>type</em>) <em>type</em> {<br>&nbsp;&nbsp;<em>// code to be executed</em><br>&nbsp; return <em>output</em><br>}
+            func <em>FunctionName</em>(<em>param1</em> <em>type</em>, <em>param2</em> <em>type</em>) <em>type</em> {<br>&nbsp;&nbsp;<em>// код для виконання</em><br>&nbsp; return <em>output</em><br>}
         </div>
     </div>
     <hr>
-    <h2>Function Return Приклад</h2>
+    <h2>Приклад повернення функції</h2>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Here, <code class="w3-codespan">myFunction()</code> receives two integers (<code class="w3-codespan">x</code> and <code class="w3-codespan">y</code>) and returns their addition (<code class="w3-codespan">x + y</code>) as integer (<code class="w3-codespan">int</code>):</p>
+        <p>Тут <code class="w3-codespan">myFunction()</code> отримує два цілих числа (<code class="w3-codespan">x</code> та <code class="w3-codespan">y</code>) та повертає їх додавання (<code class="w3-codespan">x + y</code>) як ціле число (<code class="w3-codespan">int</code>):</p>
         <div class="w3-code notranslate javaHigh">
             package main<br>import ("fmt")<br><br>func myFunction(x int, y int) int {<br>&nbsp;&nbsp;return x + y<br>}<br><br>func main() {<br>&nbsp;&nbsp;fmt.Println(myFunction(1, 2))<br>}
         </div>
@@ -407,11 +407,11 @@
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../gotryit/demo_func4.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Named Return Values</h2>
-    <p>In Go, you can name the return values of a function.</p>
+    <h2>Іменування значень, що повертаються</h2>
+    <p>У Go ви можете називати значення, що повертаються функцією.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Here, we name the return value as <code class="w3-codespan">result</code> (of type <code class="w3-codespan">int</code>), and return the value with a naked return (means that we use the <code class="w3-codespan">return</code> statement without specifying the variable name):</p>
+        <p>Тут ми називаємо значення, що повертається, як <code class="w3-codespan">result</code> (типу <code class="w3-codespan">int</code>) і повертаємо значення з голим return (означає, що ми використовуємо інструкцію <code class="w3-codespan">return</code> без вказівки назви змінної):</p>
         <div class="w3-code notranslate javaHigh">
             package main<br>import ("fmt")<br><br>func myFunction(x int, y int) (result int) {<br>&nbsp;&nbsp;result =  x + y<br>&nbsp;&nbsp;return<br>}<br><br>func main() {<br>&nbsp;&nbsp;fmt.Println(myFunction(1, 2))<br>}
         </div>
@@ -421,7 +421,7 @@
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../gotryit/demo_func5.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>The example above can also be written like this. Here, the return statement specifies the variable name:</p>
+    <p>Наведений вище приклад також можна записати так. Тут інструкція return визначає ім&#8217;я змінної:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate javaHigh">
@@ -433,22 +433,22 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Store the Return Value in a Variable</h2>
-    <p>You can also store the return value in a variable, like this:</p>
+</div>    <h2>Зберігайте значення, що повертається, у змінній</h2>
+    <p>Ви також можете зберегти повернене значення у змінній, наприклад:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Here, we store the return value in a variable called <code class="w3-codespan">total</code>:</p>
+        <p>Тут ми зберігаємо повернуте значення у змінній, яка називається <code class="w3-codespan">total</code>:</p>
         <div class="w3-code notranslate javaHigh">
             package main<br>import ("fmt")<br><br>func myFunction(x int, y int) (result int) {<br>&nbsp;&nbsp;result = x + y<br>&nbsp;&nbsp;return<br>}<br><br>func main() {<br>&nbsp;&nbsp;total := myFunction(1, 2)<br>&nbsp;&nbsp;fmt.Println(total)<br>}
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../gotryit/demo_func6.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Multiple Return Values</h2>
-    <p>Go functions can also return multiple values.</p>
+    <h2>Кілька повернених значень</h2>
+    <p>Функції Go також можуть повертати кілька значень.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Here, <code class="w3-codespan">myFunction()</code>  returns one integer (<code class="w3-codespan">result</code>) and one string (<code class="w3-codespan">txt1</code>):</p>
+        <p>Тут <code class="w3-codespan">myFunction()</code> повертає одне ціле число (<code class="w3-codespan">result</code>) і один рядок (<code class="w3-codespan">txt1</code>):</p>
         <div class="w3-code notranslate javaHigh">
             package main<br>import ("fmt")<br><br>func myFunction(x int, y string) (result int, txt1 string) {<br>&nbsp;&nbsp;result =  x + x<br>&nbsp;&nbsp;txt1 =  y + " World!"<br>&nbsp;&nbsp;return<br>}<br><br>func main() {<br>&nbsp;&nbsp;fmt.Println(myFunction(5, "Hello"))<br>}
         </div>
@@ -460,7 +460,7 @@
     </div>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Here, we store the two return values into two variables (<code class="w3-codespan">a</code> and <code class="w3-codespan">b</code>):</p>
+        <p>Тут ми зберігаємо два повернених значення у двох змінних (<code class="w3-codespan">a</code> та <code class="w3-codespan">b</code>):</p>
         <div class="w3-code notranslate javaHigh">
             package main<br>import ("fmt")<br><br>func myFunction(x int, y string) (result int, txt1 string) {<br>&nbsp;&nbsp;result = x + x<br>&nbsp;&nbsp;txt1 = y + " World!"<br>&nbsp;&nbsp;return<br>}<br><br>func main() {<br>&nbsp;&nbsp;a, b := myFunction(5, "Hello")<br>&nbsp;&nbsp;fmt.Println(a, b)<br>}
         </div>
@@ -470,10 +470,10 @@
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../gotryit/demo_func8.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>If we (for some reason) do not want to use some of the returned values, we can add an underscore (<code class="w3-codespan">_</code>), to omit this value.</p>
+    <p>Якщо ми (з якихось причин) не хочемо використовувати деякі з повернених значень, ми можемо додати підкреслення (<code class="w3-codespan">_</code>), щоб пропустити це значення.</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Here, we want to omit the first returned value (<code class="w3-codespan">result</code> - which is stored in variable <code class="w3-codespan">a</code>):</p>
+        <p>Тут ми хочемо опустити перше повернуте значення (<code class="w3-codespan">result</code>, яке зберігається в змінній <code class="w3-codespan">a</code>):</p>
         <div class="w3-code notranslate javaHigh">
             package main<br>import ("fmt")<br><br>func myFunction(x int, y string) (result int, txt1 string) {<br>&nbsp;&nbsp;result = x + x<br>&nbsp;&nbsp;txt1 = y + " World!"<br>&nbsp;&nbsp;return<br>}<br><br>func main() {<br>&nbsp;&nbsp; _, b := myFunction(5, "Hello")<br>&nbsp;&nbsp;fmt.Println(b)<br>}
         </div>
@@ -485,7 +485,7 @@
     </div>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <p>Here, we want to omit the second returned value (<code class="w3-codespan">txt1</code> - which is stored in variable <code class="w3-codespan">b</code>):</p>
+        <p>Тут ми хочемо опустити друге повернуте значення (<code class="w3-codespan">txt1</code>, яке зберігається в змінній <code class="w3-codespan">b</code>):</p>
         <div class="w3-code notranslate javaHigh">
             package main<br>import ("fmt")<br><br>func myFunction(x int, y string) (result int, txt1 string) {<br>&nbsp;&nbsp;result = x + x<br>&nbsp;&nbsp;txt1 = y + " World!"<br>&nbsp;&nbsp;return<br>}<br><br>func main() {<br>&nbsp;&nbsp; a, _ := myFunction(5, "Hello")<br>&nbsp;&nbsp;fmt.Println(a)<br>}
         </div>
