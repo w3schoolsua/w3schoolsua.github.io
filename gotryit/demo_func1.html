@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <title>W3Schools Tryit. Редактор коду</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset='utf-8'>
+  <meta name='description' content='Безплатний онлайн-редактор коду W3Schools дозволяє редагувати код і переглядати результат у вашому браузері'>
+  <meta property="og:image" content="../images/w3schools_logo_436_2.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="436">
+  <meta property="og:image:height" content="228">
+  <meta property="og:title" content="W3Schools онлайн GO редактор">
+  <meta property="og:description" content="Онлайн-редактор коду W3Schools дозволяє редагувати код і переглядати результат у вашому браузері">
+  <link rel='stylesheet' href='../styles/w3.css'>
+  <link rel='stylesheet' href='../lib/codemirror_multi.css'>
+  <script src='../lib/codemirror_multi.js'></script>
+  <script src='../lib/codemirror_go.js'></script>
+  <link rel='stylesheet' href='../styles/gotryit_head.css'>
+  <!--[if lt IE 8]>
+  <style>
+    #textareacontainer, #iframecontainer {width:48%;}
+    #container {height:500px;}
+    #textarea, #iframe {width:90%;height:450px;}
+    #textareaCode, #iframeResult {height:450px;}
+  </style>
+  <![endif]-->
+</head>
+<body>
+<div id='tryitLeaderboard'>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- udup_content_media_horizontally -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4060216941760396" data-ad-slot="6582329806" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="trytopnav">
+  <div class="w3-bar" style="overflow:auto">
+    <a id="tryhome" href="../index.html" target="_blank" title="W3Schools Головна" class="w3-button w3-bar-item topnav-icons fa fa-home ga-tryit" style="margin-top:-2px;"></a>
+    <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Відкрити меню" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu ga-tryit" style="margin-top:-2px;"></a>
+    <a href="javascript:void(0);" onclick="restack(currentStack)" title="Змінити орієнтацію" class="w3-button w3-bar-item w3-hide-small topnav-icons fa fa-rotate ga-tryit" style="margin-top:-2px;"></a>
+    <a href="javascript:void(0);" onclick="retheme()" title="Змінити тему" class="w3-button w3-bar-item topnav-icons fa fa-adjust ga-tryit" style="margin-top:-2px;"></a>
+    <button id="runbtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green ga-tryit" onclick="submitTryit(1);uic_r_q();">Пуск &#10095;</button>
+    <span class="w3-right w3-hide-small" style="padding:8px 16px 8px 0;display:block;float:right;font-size:16px;margin-top:4px"><span id="framesize"></span></span>
+  </div>
+</div>
+<div id="shield"></div>
+<a href="javascript:void(0)" id="dragbar"></a>
+<div id="container">
+  <div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
+    <span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent ws-hover-black" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
+    <div class="w3-bar-block">
+      <a class="w3-bar-item w3-button ga-tryit" href='javascript:void(0);' title="Змінити орієнтацію" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Змінити орієнтацію</span></a>
+      <a class="w3-bar-item w3-button ga-tryit" href='javascript:void(0);' title="Змінити тему" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Змінити тему, темна/світла</span></a>
+    </div>
+    <footer class="w3-container w3-small ws-grey">
+      <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green ga-tryit">Політика конфіденційності</a> та <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green ga-tryit">Copyright 1999-2025</a></p>
+    </footer>
+  </div>
+  <div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
+  <div id="textareacontainer">
+    <div id="textarea">
+      <div id="textareawrapper">
+        <textarea autocomplete="off" id="textareaCode" wrap="soft" spellcheck="false">package main
+import ("fmt")
+
+// Створити функцію
+func myMessage() {
+  fmt.Println("Мене щойно виконали!")
+}
+
+func main() {
+  myMessage() // викликати функцію
+}
+        </textarea>
+        <form id="codeForm" autocomplete="off" style="margin:0;display:none;">
+          <input type="hidden" name="code" id="code" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="iframecontainer">
+    <div id="iframe">
+      <div id="runloadercontainer"><div id="runloader"></div></div>
+      <div id="iframewrapper">
+        <div id="iframeResult" style="position:relative;white-space:nowrap;overflow:auto;">
+          <div>Мене щойно виконали!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../scripts/go_tryit_end.js"></script>
+</body>
+</html>
