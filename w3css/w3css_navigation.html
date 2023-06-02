@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'><title>W3.CSS Панелі навігації. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='W3.CSS Панелі навігації. Класи панелі навігації. Основна навігація. Адаптивна навігація. Кольорові панелі навігації. Облямовані панелі навігації. Активне/поточне посилання. Наведені посилання. Посилання, вирівняні по правому краю. Розмір панелі навігації. Панель навігації з іконками. Текст панелі навігації. Навігаційна панель із вводами та кнопками. Панель навігації зі спадним меню. Випадне меню, яке можна натиснути. Горизонтальне спадне меню. Адаптивна навігаційна панель із адаптивним спадним меню. Виправлена панель навігації. Вертикальна панель навігації. Згортання панелі навігації. Бічна навігація. Приклади. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<meta name='keywords' content='w3.css, панель, навігація, класи, адаптивні, основна, кольорові, посилання, зі спадним меню, w3schools'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Підручник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>ЯК ЗРОБИТИ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Підручник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Підручник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML ANSI</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+    <nav>
+    <!--<a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+    <h2 class='left'>W3.CSS Підручник</h2>
+    <a target='_top' href='index.html'>W3.CSS Підручник</a>
+    <a target='_top' href='w3css_intro.html'>W3.CSS Інтро</a>
+    <a target='_top' href='w3css_colors.html'>W3.CSS Кольори</a>
+    <a target='_top' href='w3css_containers.html'>W3.CSS Контейнери</a>
+    <a target='_top' href='w3css_panels.html'>W3.CSS Панелі</a>
+    <a target='_top' href='w3css_borders.html'>W3.CSS Межі</a>
+    <a target='_top' href='w3css_cards.html'>W3.CSS Картки</a>
+    <a target='_top' href='w3css_defaults.html'>W3.CSS Значення за замовчуванням</a>
+    <a target='_top' href='w3css_fonts.html'>W3.CSS Шрифти</a>
+    <a target='_top' href='w3css_fonts_google.html'>W3.CSS Google Шрифти</a>
+    <a target='_top' href='w3css_text.html'>W3.CSS Текст</a>
+    <a target='_top' href='w3css_round.html'>W3.CSS Округлості</a>
+    <a target='_top' href='w3css_padding.html'>W3.CSS Внутрішні відступи</a>
+    <a target='_top' href='w3css_margins.html'>W3.CSS Зовнішні відступи</a>
+    <a target='_top' href='w3css_display.html'>W3.CSS Відображення</a>
+    <a target='_top' href='w3css_buttons.html'>W3.CSS Кнопки</a>
+    <a target='_top' href='w3css_notes.html'>W3.CSS Примітки</a>
+    <a target='_top' href='w3css_quotes.html'>W3.CSS Цитати</a>
+    <a target='_top' href='w3css_alerts.html'>W3.CSS Оповіщення</a>
+    <a target='_top' href='w3css_tables.html'>W3.CSS Таблиці</a>
+    <a target='_top' href='w3css_lists.html'>W3.CSS Списки</a>
+    <a target='_top' href='w3css_images.html'>W3.CSS Зображення</a>
+    <a target='_top' href='w3css_input.html'>W3.CSS Введення</a>
+    <a target='_top' href='w3css_badges.html'>W3.CSS Значки</a>
+    <a target='_top' href='w3css_tags.html'>W3.CSS Ярлики</a>
+    <a target='_top' href='w3css_icons.html'>W3.CSS Іконки</a>
+    <a target='_top' href='w3css_responsive.html'>W3.CSS Адаптив</a>
+    <a target='_top' href='w3css_layout.html'>W3.CSS Макети</a>
+    <a target='_top' href='w3css_animate.html'>W3.CSS Анімація</a>
+    <a target='_top' href='w3css_effects.html'>W3.CSS Ефекти</a>
+    <a target='_top' href='w3css_bars.html'>W3.CSS Панелі</a>
+    <a target='_top' href='w3css_dropdowns.html'>W3.CSS Випадаючі</a>
+    <a target='_top' href='w3css_accordions.html'>W3.CSS Акордеони</a>
+    <a target='_top' href='w3css_navigation.html'>W3.CSS Навігація</a>
+    <a target='_top' href='w3css_sidebar.html'>W3.CSS Сайдбар</a>
+    <a target='_top' href='w3css_tabulators.html'>W3.CSS Вкладки</a>
+    <a target='_top' href='w3css_pagination.html'>W3.CSS Пагінація</a>
+    <a target='_top' href='w3css_progressbar.html'>W3.CSS Прогрес-бари</a>
+    <a target='_top' href='w3css_slideshow.html'>W3.CSS Слайдшоу</a>
+    <a target='_top' href='w3css_modal.html'>W3.CSS Модали</a>
+    <a target='_top' href='w3css_tooltips.html'>W3.CSS Виринаючі підказки</a>
+    <a target='_top' href='w3css_grid.html'>W3.CSS Сітка</a>
+    <a target='_top' href='w3css_code.html'>W3.CSS Код</a>
+    <a target='_top' href='w3css_filters.html'>W3.CSS Фільтри</a>
+    <a target='_top' href='w3css_trends.html'>W3.CSS Тренди</a>
+    <a target='_top' href='w3css_case.html'>W3.CSS Кейс</a>
+    <a target='_top' href='w3css_material.html'>W3.CSS Material-дизайн</a>
+    <a target='_top' href='w3css_validation.html'>W3.CSS Валідація</a>
+    <a target='_top' href='w3css_versions.html'>W3.CSS Версії</a>
+    <a target='_top' href='w3css_mobile.html'>W3.CSS Мобільність</a>
+    <br>
+    <h2 class='left'>W3.CSS Кольори</h2>
+    <a target='_top' href='w3css_color_classes.html'>W3.CSS Класи кольорів</a>
+    <a target='_top' href='w3css_color_material.html'>W3.CSS Колір Material</a>
+    <a target='_top' href='w3css_color_flat.html'>W3.CSS Колір Flat UI</a>
+    <a target='_top' href='w3css_color_metro.html'>W3.CSS Колір Metro UI</a>
+    <a target='_top' href='w3css_color_win8.html'>W3.CSS Колір Win8</a>
+    <a target='_top' href='w3css_color_ios.html'>W3.CSS Колір iOS</a>
+    <a target='_top' href='w3css_color_fashion.html'>W3.CSS Колір iOS</a>
+    <a target='_top' href='w3css_color_libraries.html'>W3.CSS Бібліотеки кольорів</a>
+    <a target='_top' href='w3css_color_schemes.html'>W3.CSS Кольорові схеми</a>
+    <a target='_top' href='w3css_color_themes.html'>W3.CSS Кольорові теми</a>
+    <a target='_top' href='w3css_color_generator.html'>W3.CSS Генератор кольорів</a>
+    <br>
+    <h2 class='left'>Веб-будівництво</h2>
+    <a target='_top' href='w3css_web.html'>Web Інтро</a>
+    <a target='_top' href='w3css_web_html.html'>Web HTML</a>
+    <a target='_top' href='w3css_web_css.html'>Web CSS</a>
+    <a target='_top' href='w3css_web_javascript.html'>Web JavaScript</a>
+    <a target='_top' href='w3css_web_layout.html'>Web Макет</a>
+    <a target='_top' href='w3css_web_tmp_band.html'>Web Група</a>
+    <a target='_top' href='w3css_web_tmp_catering.html'>Web Кейтеринг</a>
+    <a target='_top' href='w3css_web_tmp_pizza.html'>Web Ресторан</a>
+    <a target='_top' href='w3css_web_tmp_architect.html'>Web Архітектор</a>
+    <br>
+    <h2 class='left'>Приклади</h2>
+    <a target='_top' href='w3css_examples.html'>W3.CSS Приклади</a>
+    <a target='_top' href='w3css_demo.html'>W3.CSS Демо</a>
+    <a target='_top' href='w3css_templates.html'>W3.CSS Шаблони</a>
+    <br>
+    <h2 class='left'>Довідники</h2>
+    <a target='_top' href='w3css_references.html'>W3.CSS Довідник</a>
+    <a target='_top' href='w3css_downloads.html'>W3.CSS Завантаження</a>
+    <br><br>
+    </nav>
+    </div>
+  </div>
+</div>
+<!--/Left menu--><!--CONTENT W3CSS-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../images/w3css_logo.png' alt='W3CSS. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='Фреймворк W3CSS для початківців. W3Schools українською' style='width: 90px'></a><p class='w3-right'>
+    <a href="w3css_navigation_en.html" title='Перейти на англійську мову'>En</a>
+</p>
+<article>
+    <h1>W3.CSS <span class="color_h1">Панелі навігації</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="w3css_accordions.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="w3css_sidebar.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <div class="testmedia">
+        <div class="w3-row">
+            <div class="w3-col m4">
+                <p>Вертикальна:</p>
+                <div class="w3-bar-block w3-light-grey w3-mobile" style="width:85%">
+                    <a class="w3-bar-item w3-button w3-green w3-padding" href="javascript:void(0)">Головна</a>
+                    <a class="w3-bar-item w3-button w3-padding" style="color:#000 !important;" href="javascript:void(0)">Посилання 2</a>
+                    <a class="w3-bar-item w3-button w3-padding" style="color:#000 !important;" href="javascript:void(0)">Посилання 3</a>
+                    <a class="w3-bar-item w3-button w3-padding" style="color:#000 !important;" href="javascript:void(0)">Посилання 4</a>
+                    <a class="w3-bar-item w3-button w3-padding" style="color:#000 !important;" href="javascript:void(0)">Посилання 5</a>
+                </div>
+            </div>
+            <div class="w3-col m8">
+                <p>Горизонтальна:</p>
+                <div class="w3-bar w3-light-grey">
+                    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-green">Головна</a>
+                    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small">Посилання 1</a>
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button">
+                            Dropdown <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
+                            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-text-black">Посилання 1</a>
+                            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-text-black">Посилання 2</a>
+                            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-text-black">Посилання 3</a>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+                </div>
+                <br class="w3-hide-small">
+                <div class="w3-bar w3-dark-grey" style="margin-top:15px">
+                    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-black">Головна</a>
+                    <a href="javascript:void(0)" class="w3-bar-item w3-button">Посилання 1</a>
+                    <div class="w3-dropdown-hover w3-hide-small">
+                        <button class="w3-button">
+                            Dropdown <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
+                            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-text-black">Посилання 1</a>
+                            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-text-black">Посилання 2</a>
+                            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-text-black">Посилання 3</a>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+                </div>
+                <br class="w3-hide-small">
+                <div class="w3-bar w3-blue-grey w3-border" style="margin-top:15px">
+                    <a href="javascript:void(0)" class="w3-bar-item w3-button">Головна</a>
+                    <a href="javascript:void(0)" class="w3-bar-item w3-button">Посилання 1</a>
+                    <input type="text" class="w3-bar-item w3-input w3-white w3-hide-small" placeholder="Input" style="width:35%">
+                    <span class="w3-bar-item">Text</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h2>W3.CSS Navigation Bar Classes</h2>
+    <p>W3.CSS provides the following classes for navigation bars:</p>
+    <table class="ws-table-all">
+        <tr>
+            <th style="width:30%">Class</th>
+            <th>Defines</th>
+        </tr>
+        <tr>
+            <td>w3-bar</td>
+            <td>Horizontal container for HTML elements</td>
+        </tr>
+        <tr>
+            <td>w3-bar-block</td>
+            <td>Vertical container for HTML elements</td>
+        </tr>
+        <tr>
+            <td>w3-bar-item</td>
+            <td>Container bar elements</td>
+        </tr>
+        <tr>
+            <td>w3-sidebar</td>
+            <td>Vertical sidebar for HTML elements</td>
+        </tr>
+        <tr>
+            <td>w3-mobile</td>
+            <td>Makes any bar element mobile-first responsive</td>
+        </tr>
+        <tr>
+            <td>w3-dropdown-hover</td>
+            <td>Hoverable dropdown element</td>
+        </tr>
+        <tr>
+            <td>w3-dropdown-click</td>
+            <td>Clickable dropdown element (instead of hover)</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Basic Navigation</h2>
+    <p>The <strong>w3-bar</strong> class is a container for displaying HTML elements horizontally.</p>
+    <p>The <strong>w3-bar-item</strong> class defines the container elements.</p>
+    <p>It is a perfect tool for creating navigation bars:</p>
+    <div class="w3-bar w3-black">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-black&quot;&gt;<br>
+            &nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Home&lt;/a&gt;<br>
+            &nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>
+            &nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 2&lt;/a&gt;<br>
+            &nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 3&lt;/a&gt;<br>
+            &lt;/div&gt;
+        </div>
+        <p><a class="w3-btn" href="../w3csstryit/tryw3css_navigation_bar.html" target="_blank">Try It Yourself &raquo;</a></p>
+    </div>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Responsive Navigation</h2>
+    <p>The <strong>w3-mobile</strong> class makes any bar elements responsive (horizontal on large screens and vertical on small).</p>
+    <div class="w3-row-padding" style="margin:-16px -16px 0">
+        <div class="w3-half">
+            <p>Medium and large screens:</p>
+            <div class="w3-bar w3-black">
+                <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+                <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+                <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+            </div>
+        </div>
+        <div class="w3-half">
+            <p>Small screens:</p>
+            <div class="w3-bar-block w3-black w3-center">
+                <a class="w3-bar-item w3-button w3-center" href="javascript:void(0)">Головна</a>
+                <a class="w3-bar-item w3-button w3-center" href="javascript:void(0)">Посилання 1</a>
+                <a class="w3-bar-item w3-button w3-center" href="javascript:void(0)">Посилання 2</a>
+            </div>
+        </div>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-black&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot;&gt;Link 3&lt;/a&gt;<br>&lt;/div&gt;
+        </div>
+        <p><a class="w3-btn" href="../w3csstryit/tryw3css_navigation_bar_mobile.html" target="_blank">Try It Yourself &raquo;</a></p>
+    </div>
+    <hr>
+    <h2>Colored Navigation Bars</h2>
+    <p>Use a <strong><em>w3-color</em></strong> class to add a color to the navigation bar:</p>
+    <div class="w3-bar w3-light-grey">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <br>
+    <div class="w3-bar w3-green">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <br>
+    <div class="w3-bar w3-blue">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-light-grey&quot;&gt;<br>&lt;div class=&quot;w3-bar w3-green&quot;&gt;<br>&lt;div class=&quot;w3-bar w3-blue&quot;&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navbar_color.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Bordered Navigation Bars</h2>
+    <p>Use a <strong>w3-border</strong> or <strong>w3-card</strong> class to add borders around the navigation bar, or to display it as a card:</p>
+    <div class="w3-bar w3-light-grey w3-border">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <br>
+    <div class="w3-bar w3-light-grey w3-border">
+        <a class="w3-bar-item w3-button w3-border-right" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button w3-border-right" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button w3-border-right" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-border-right w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <br>
+    <div class="w3-bar w3-light-grey w3-card-4">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-border w3-light-grey&quot;&gt;<br>&lt;div class=&quot;w3-bar w3-border w3-card-4&quot;&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navbar_border.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Active/Current Link</h2>
+    <p>Add a <strong><em>w3-color</em></strong> class to a link to highlight it:</p>
+    <div class="w3-bar w3-border w3-light-grey">
+        <a class="w3-bar-item w3-button w3-green" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <br>
+    <div class="w3-bar w3-border w3-light-grey">
+        <a class="w3-bar-item w3-button w3-text-teal" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-border w3-light-grey&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-green&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 3&lt;/a&gt;<br>&lt;/div&gt;
+        </div>
+        <p><a class="w3-btn" href="../w3csstryit/tryw3css_navbar_active.html" target="_blank">Try It Yourself &raquo;</a></p>
+    </div>
+    <hr>
+    <h2>Hoverable Links</h2>
+    <p>When you mouse over a button, the background color will change to grey.</p>
+    <p>If you want a different background color on hover, use any of the <strong>w3-hover-</strong><em><strong>color</strong></em> classes:</p>
+    <div class="w3-bar w3-border w3-light-grey">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button w3-hover-green" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button w3-hover-blue" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hover-teal w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-border w3-light-grey&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-hover-green&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-hover-blue&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-hover-teal&quot;&gt;Link 3&lt;/a&gt;<br>&lt;/div&gt;
+        </div>
+        <p><a class="w3-btn" href="../w3csstryit/tryw3css_navbar_hover.html" target="_blank">Try It Yourself &raquo;</a></p>
+    </div>
+    <p>If you want to change the text color instead, turn off the default hover effect with the <strong>w3-hover-none</strong> class, and add a <strong>w3-hover-text</strong> class.</p>
+    <div class="w3-bar w3-border w3-black">
+        <a class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-border w3-black&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Default&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-white&quot;&gt;Link 3&lt;/a&gt;<br>&lt;/div&gt;
+        </div>
+        <p><a class="w3-btn" href="../w3csstryit/tryw3css_navbar_hover1.html" target="_blank">Try It Yourself &raquo;</a></p>
+    </div>
+    <p>Spend some time to play around with different hover effects:</p>
+    <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Посилання 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Посилання 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black">Посилання 3</a>
+    </div>
+    <br>
+    <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">Посилання 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">Посилання 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">Посилання 3</a>
+    </div>
+    <br>
+    <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-blue w3-hover-text-blue">Посилання 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-blue w3-hover-text-blue">Посилання 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-blue w3-hover-text-blue">Посилання 3</a>
+    </div>
+    <br>
+    <div class="w3-bar">
+        <a href="#" style="border:5px solid white" class="w3-bar-item w3-button w3-hover-none w3-hover-border-green">Посилання 1</a>
+        <a href="#" style="border:5px solid white" class="w3-bar-item w3-button w3-hover-none w3-hover-border-red">Посилання 2</a>
+        <a href="#" style="border:5px solid white" class="w3-bar-item w3-button w3-hover-none w3-hover-border-blue">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar&quot;&gt;<br>&lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black&quot;&gt;Link 1&lt;/a&gt;<br>&lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black&quot;&gt;Link 2&lt;/a&gt;<br>&lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-black&quot;&gt;Link 3&lt;/a&gt;<br>&lt;/div&gt;
+        </div>
+        <p><a class="w3-btn" href="../w3csstryit/tryw3css_navbar_hover2.html" target="_blank">Try It Yourself &raquo;</a></p>
+    </div>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Right-Aligned Links</h2>
+    <p>Use the <strong>w3-right</strong> class on a list item to right-align a specific link:</p>
+    <div class="w3-bar w3-border w3-light-grey">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-green w3-right" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-border w3-light-grey&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-green w3-right&quot;&gt;Link 3&lt;/a&gt;<br>&lt;/div&gt;
+        </div>
+        <p><a class="w3-btn" href="../w3csstryit/tryw3css_navbar_right.html" target="_blank">Try It Yourself &raquo;</a></p>
+    </div>
+    <hr>
+    <h2>Navigation Bar Size</h2>
+    <p>Use a <strong><em>w3-size</em></strong> class to change the font-size of the links inside the navbar:</p>
+    <div class="w3-bar w3-border w3-green w3-large">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <br>
+    <div class="w3-bar w3-border w3-green w3-xlarge">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-green w3-large&quot;&gt;<br>&lt;div class=&quot;w3-bar w3-green w3-xlarge&quot;&gt;
+        </div>
+        <p><a class="w3-btn" href="../w3csstryit/tryw3css_navbar_sizes.html" target="_blank">Try It Yourself &raquo;</a></p>
+    </div>
+    <p>Use a <strong><em>w3-padding</em></strong> class to change the padding of each link inside the navbar:</p>
+    <div class="w3-bar w3-border w3-green">
+        <a class="w3-bar-item w3-button w3-padding-16" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button w3-padding-16" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button w3-padding-16" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-padding-16 w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <br>
+    <div class="w3-bar w3-border w3-green">
+        <a class="w3-bar-item w3-button w3-padding-24" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button w3-padding-24" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button w3-padding-24" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button w3-padding-24 w3-hide-small" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-border w3-green&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-padding-16&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-padding-16&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-padding-16&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-padding-16&quot;&gt;Link 3&lt;/a&gt;<br>&lt;/div&gt;
+        </div>
+        <p><a class="w3-btn" href="../w3csstryit/tryw3css_navbar_sizes2.html" target="_blank">Try It Yourself &raquo;</a></p>
+    </div>
+    <p><b>Note:</b> You can also add padding to the navigation bar, instead of each button. However, if you do this, note that the links do not get full padding on hover:</p>
+    <div class="w3-bar w3-border w3-green w3-padding-16">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-green w3-padding-16&quot;&gt;&lt;/div&gt;
+        </div>
+        <p><a class="w3-btn" href="../w3csstryit/tryw3css_navbar_sizes2.html" target="_blank">Try It Yourself &raquo;</a></p>
+    </div>
+    <p>Customize the width of the links with the CSS width property</p>
+    <p>(<b>Note</b>: Use <strong>w3-mobile</strong> to transform the links to 100% width on small screens):</p>
+    <div class="w3-bar w3-dark-grey">
+        <a class="w3-bar-item w3-button w3-mobile w3-green" style="width:33.3%" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button w3-mobile" style="width:33.3%" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button w3-mobile" style="width:33.4%" href="javascript:void(0)">Посилання 2</a>
+    </div>
+    <br>
+    <div class="w3-bar w3-dark-grey">
+        <a class="w3-bar-item w3-button w3-mobile w3-green" style="width:25%" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button w3-mobile" style="width:25%" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button w3-mobile" style="width:25%" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button w3-mobile" style="width:25%" href="javascript:void(0)">Посилання 1</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+<span lang="no-bok">&lt;div class=&quot;w3-bar w3-dark-grey&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile w3-green&quot; style=&quot;width:33%&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot;
+style=&quot;width:33%&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot; style=&quot;width:33%&quot;&gt;Link 2&lt;/a&gt;<br>&lt;/div&gt;</span>
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navbar_width.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Navigation Bar with Icons</h2>
+    <div class="w3-bar w3-light-grey w3-border w3-large">
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-green"><i class="fa fa-home"></i></a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-light-grey w3-border&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-green&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;&lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;&lt;i class=&quot;fa fa-globe&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;&lt;i class=&quot;fa fa-sign-in&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br>&lt;/div&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navbar_icons.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <div class="w3-panel w3-note">
+        <p>The &quot;fa fa&quot; classes in the example above display &quot;Font Awesome&quot; icons.</p>
+        <p>Learn more about how to display icons in the chapter <a href="w3css_icons.html">W3.CSS Icons</a>.</p>
+    </div>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Navigation Bar Text</h2>
+    <p>If you want text instead of buttons inside the navigation bar, use the <strong>w3-bar-item</strong> class to get the same padding as the buttons.</p>
+    <div class="w3-bar w3-black">
+        <a href="javascript:void(0)" class="w3-bar-item w3-button">Головна</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button">Посилання 1</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small">Посилання 2</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small">Посилання 3</a>
+        <span class="w3-bar-item">Text</span>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-black&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 3&lt;/a&gt;<br>&nbsp; &lt;span class=&quot;w3-bar-item&quot;&gt;Text&lt;/span&gt;<br>&lt;/div&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navigation_item.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Navbar with Inputs and Buttons</h2>
+    <div class="w3-bar w3-light-grey w3-border">
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Головна</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Посилання 1</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Посилання 2</a>
+        <input type="text" class="w3-bar-item w3-input w3-white w3-mobile" placeholder="Search..">
+        <button class="w3-bar-item w3-button w3-green w3-mobile">Go</button>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-light-grey&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp; &lt;input type=&quot;text&quot; class=&quot;w3-bar-item w3-input&quot; placeholder=&quot;Search..&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-green&quot;&gt;Go&lt;/a&gt;<br>&lt;/div&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navbar_input.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Navigation Bar with Dropdown</h2>
+    <p>Move the mouse over the "Dropdown" link:</p>
+    <div class="w3-bar w3-light-grey">
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-green">Головна</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small">Посилання 1</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">
+                Dropdown <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+                <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+                <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 3</a>
+            </div>
+        </div>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-light-grey&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;div class=&quot;w3-dropdown-hover&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;button class=&quot;w3-button&quot;&gt;Dropdown&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;w3-dropdown-content w3-bar-block w3-card-4&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 3&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navbar_dropdown.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Clickable Dropdown</h2>
+    <p>Use <strong>w3-dropdown-click</strong> if you prefer to click on the dropdown link instead of hover:</p>
+    <div class="w3-bar w3-light-grey">
+        <a href="javascript:void(0)" class="w3-green w3-bar-item w3-button">Головна</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-small">Посилання 1</a>
+        <div class="w3-dropdown-click">
+            <button class="w3-button" onclick="myFunction()">
+                Dropdown <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="demodr" class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a class="w3-bar-item w3-button w3-text-black" href="javascript:void(0)">Посилання 1</a>
+                <a class="w3-bar-item w3-button w3-text-black" href="javascript:void(0)">Посилання 2</a>
+                <a class="w3-bar-item w3-button w3-text-black" href="javascript:void(0)">Посилання 3</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("demodr");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-dropdown-click&quot;&gt;<br>&nbsp; &lt;button class=&quot;w3-button&quot; onclick=&quot;myFunction()&quot;&gt;<br>&nbsp;&nbsp;&nbsp; Dropdown &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;<br>&nbsp; &lt;/button&gt;<br>&nbsp; &lt;div id=&quot;demo&quot;
+            class=&quot;w3-dropdown-content w3-bar-block w3-card-4&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 3&lt;/a&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navbar_dropdown3.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Horizontal Dropdown Menu</h2>
+    <p>Remove the w3-bar-block class from the dropdown container if you want the dropdown links to display horizontally instead of vertically:</p>
+    <div class="w3-bar w3-light-grey">
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-green">Головна</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button  w3-hide-small">Посилання 1</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">
+                Dropdown <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="w3-dropdown-content w3-card-4">
+                <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+                <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+                <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 3</a>
+            </div>
+        </div>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar w3-light-grey&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;div class=&quot;w3-dropdown-hover&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;button class=&quot;w3-button&quot;&gt;Dropdown&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;w3-dropdown-content w3-card-4&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 3&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navbar_dropdown_hor.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Responsive Navbar with Responsive Dropdown</h2>
+    <p>Use the w3-mobile class on all links including the dropdown container to create a responsive navbar with responsive dropdown links.</p>
+    <p>Resize the browser window to see the effect:</p>
+    <div class="w3-bar w3-black">
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile w3-green">Головна</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Посилання 1</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Посилання 2</a>
+        <div class="w3-dropdown-hover w3-mobile">
+            <button class="w3-button">Dropdown <i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-light-grey">
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Посилання 1</a>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Посилання 2</a>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-mobile">Посилання 3</a>
+            </div>
+        </div>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &nbsp;&lt;div class=&quot;w3-bar w3-black&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile w3-green&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp; &lt;div class=&quot;w3-dropdown-hover w3-mobile&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;button class=&quot;w3-button&quot;&gt;Dropdown &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/button&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class=&quot;w3-dropdown-content w3-bar-block w3-dark-grey&quot;&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button w3-mobile&quot;&gt;Link 3&lt;/a&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navbar_responsive_drop.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Fixed Navigation Bar</h2>
+    <p>To force the navigation bar to stay at the top or at the bottom of the page, even when the user scrolls the page, wrap a &lt;div&gt; element around the bar and add the <strong>w3-top</strong> or <strong>w3-bottom</strong> class:</p>
+    <div class="width94">
+        <iframe src="tryw3css_navbar_fixed_top_ifr.html" style="height:262px;width:100%;border:1px solid #ccc;background:white;"></iframe>
+        <div class="w3-example">
+            <h3>Fixed Top</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;div class=&quot;w3-top&quot;&gt;<br>&nbsp; &lt;div class=&quot;w3-bar&quot;&gt;<br>&nbsp;&nbsp;&nbsp; ...<br>&nbsp;&nbsp;&nbsp; ...<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;
+            </div>
+            <p><a target="_blank" class="w3-btn" href="../w3csstryit/tryw3css_navbar_fixed_top.html">Try it Yourself &raquo;</a></p>
+        </div>
+    </div>
+    <div class="width94">
+        <iframe src="tryw3css_navbar_fixed_bottom_ifr.html" style="height:262px;width:100%;border:1px solid #ccc;background:white;"></iframe>
+        <div class="w3-example">
+            <h3>Fixed Bottom</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;div class=&quot;w3-bottom&quot;&gt;<br>&nbsp; &lt;div class=&quot;w3-bar&quot;&gt;<br>&nbsp;&nbsp;&nbsp; ...<br>&nbsp;&nbsp;&nbsp; ...<br>&nbsp; &lt;/div&gt;<br>&lt;/div&gt;
+            </div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_navbar_fixed_bottom.html">Try it Yourself &raquo;</a>
+        </div>
+    </div>
+    <hr>
+    <h2>Vertical Navigation Bar</h2>
+    <p>The <strong>w3-bar-block</strong> class is a container for displaying HTML elements vertically.</p>
+    <div class="w3-bar-block w3-light-grey">
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Головна</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 1</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 2</a>
+        <a class="w3-bar-item w3-button" href="javascript:void(0)">Посилання 3</a>
+    </div>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;div class=&quot;w3-bar-block w3-black&quot;&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Home&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 1&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 2&lt;/a&gt;<br>&nbsp; &lt;a href=&quot;#&quot; class=&quot;w3-bar-item w3-button&quot;&gt;Link 3&lt;/a&gt;<br>&lt;/div&gt;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../w3csstryit/tryw3css_bar_block.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Collapsing the Navigation Bar</h2>
+    <p>When the navigation bar takes up too much space on a small screen, and you do not want to display it vertically by default, you can use hide and show classes on specific links in the navigation bar.</p>
+    <p>In the example below, the navigation bar is replaced with a button (&#9776;) in the top right corner when shown on tablets and mobile devices. When the button is clicked, the links in the navigation bar will vertically stack:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <div class="w3-white">
+            <iframe src="demo_navbar_hide_iframe.html" style="height:230px;width:100%;border:none;background:white;"></iframe>
+        </div>
+        <a class="w3-btn w3-margin-bottom w3-margin-top" href="../w3csstryit/tryw3css_navbar_hide.html" target="_blank">Try It Yourself &raquo;</a>
+    </div>
+    <hr>
+    <h2>Side Navigation</h2>
+    <p>The <strong>w3-sidebar</strong> class creates a side navigation:</p>
+    <iframe src="demo_ifr_sidebar.html" style="height:350px;width:100%;border:none;" class="w3-border"></iframe>
+    <p>Go to the <a href="w3css_sidebar.html">next chapter</a> to learn more about the side navigation.</p>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="w3css_accordions.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="w3css_sidebar.html">Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">ПІДРУЧНИКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../html/index.html' class='btn-rightbar'>HTML</a>
+            <a href='../css/index.html' class='btn-rightbar'>CSS</a>
+            <a href='../css/css_rwd_intro.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index.html' class='btn-rightbar'>Кольори</a>
+            <a href='../icons/index.html' class='btn-rightbar'>Іконки</a>
+            <a href='../graphics/index.html' class='btn-rightbar'>Графіка</a>
+            <a href='../graphics/svg_intro.html' class='btn-rightbar'>Графіка SVG</a>
+            <a href='../graphics/canvas_intro.html' class='btn-rightbar'>Графіка Canvas</a>
+            <a href='../howto/index.html' class='btn-rightbar'>Як зробити?</a>
+            <a href='../sass/index.html' class='btn-rightbar'>Sass</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-довідники на сайті">ДОВІДНИКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../tags/index.html' class='btn-rightbar'>HTML-теги</a>
+            <a href='../tags/ref_html_browsersupport.html' class='btn-rightbar'>Підтримка браузерами</a>
+            <a href='../tags/ref_attributes.html' class='btn-rightbar'>HTML-атрибути</a>
+            <a href='../tags/ref_standardattributes.html' class='btn-rightbar'>Глобальні атрибути</a>
+            <a href='../tags/ref_eventattributes.html' class='btn-rightbar'>Атрибути подій</a>
+            <a href='../tags/ref_colornames.html' class='btn-rightbar'>HTML-кольори</a>
+            <a href='../tags/ref_canvas.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom.html' class='btn-rightbar'>Аудіо-Відео</a>
+            <a href='../tags/ref_charactersets.html' class='btn-rightbar'>Набори символів</a>
+            <a href='../tags/ref_html_dtd.html' class='btn-rightbar'>DOCTYPE</a>
+            <a href='../tags/ref_urlencode.html' class='btn-rightbar'>URL-кодування</a>
+            <a href='../tags/ref_language_codes.html' class='btn-rightbar'>Коди мов</a>
+            <a href='../tags/ref_country_codes.html' class='btn-rightbar'>Коди країн</a>
+            <a href='../tags/ref_httpmessages.html' class='btn-rightbar'>HTTP повідомлення</a>
+            <a href='../tags/ref_httpmethods.html' class='btn-rightbar'>HTTP методи</a>
+            <a href='../tags/ref_pxtoemconversion.html' class='btn-rightbar'>Конвертер Px в Em</a>
+            <a href='../tags/ref_keyboardshortcuts.html' class='btn-rightbar'>Гарячі клавіші</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб-Сертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+    Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
