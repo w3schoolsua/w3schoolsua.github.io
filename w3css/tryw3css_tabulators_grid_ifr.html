@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<title>W3.CSS Приклад. Вкладки в сітці</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="4/w3.css">
+<style>
+  .city {display:none;}
+</style>
+<body>
+<div class="w3-panel">
+  <div class="w3-row">
+    <a href="javascript:void(0)" id="testbtn" onclick="openCity(event, 'London');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Лондон</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Париж</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Токіо</div>
+    </a>
+  </div>
+  <div id="London" class="w3-container city">
+    <h2>Лондон</h2>
+    <p>Лондон - це столиця Великої Британії.</p>
+  </div>
+  <div id="Paris" class="w3-container city">
+    <h2>Париж</h2>
+    <p>Париж - це столиця Франції.</p>
+  </div>
+  <div id="Tokyo" class="w3-container city">
+    <h2>Токіо</h2>
+    <p>Токіо - це столиця Японії.</p>
+  </div>
+</div>
+
+<script>
+  function openCity(evt, cityName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-border-red";
+  }
+</script>
+<script>
+  var mybtn = document.getElementById("testbtn");
+  mybtn.click();
+</script>
+</body>
+</html>
