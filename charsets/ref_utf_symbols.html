@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'><title>HTML UTF-8 Різні символи. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='HTML UTF-8 Різні символи. Діапазон: десятковий 9728-9983. Шістнадцятковий 2600-26FF. Якщо ви хочете, щоб будь-який із цих символів відображався в HTML, ви можете використати об&#8217;єкт HTML, який можна знайти в таблиці нижче. Таблиці. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<style>
+    .ws-table-all td:first-child {font-size:22px; padding-top:0; padding-bottom:0;}
+</style>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Підручник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>ЯК ЗРОБИТИ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Підручник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Підручник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index.html'>Вивчити PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class='left'><span class='left_h2'>HTML</span> Набори символів</h2>
+            <a target='_top' href='index.html'>HTML Набір символів</a>
+            <a target='_top' href='ref_html_ascii.html'>HTML ASCII</a>
+            <a target='_top' href='ref_html_ansi.html'>HTML WIN-1252</a>
+            <a target='_top' href='ref_html_8859.html'>HTML ISO-8859</a>
+            <a target='_top' href='ref_html_symbols.html'>HTML Символи</a>
+            <a target='_top' href='ref_html_utf8.html'>HTML UTF-8</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>HTML</span> UTF-8</h2>
+            <a target='_top' href='ref_utf_basic_latin.html'>Latin Основний</a>
+            <a target='_top' href='ref_utf_latin1_supplement.html'>Latin Додатковий</a>
+            <a target='_top' href='ref_utf_latin_extended_a.html'>Latin Розширений A</a>
+            <a target='_top' href='ref_utf_latin_extended_b.html'>Latin Розширений B</a>
+            <a target='_top' href='ref_utf_modifiers.html'>Модифіковані літери</a>
+            <a target='_top' href='ref_utf_diacritical.html'>Діакритичні мітки</a>
+            <a target='_top' href='ref_utf_greek.html'>Грецька і коптська мови</a>
+            <a target='_top' href='ref_utf_cyrillic.html'>Кирилична основна</a>
+            <a target='_top' href='ref_utf_cyrillic_supplement.html'>Кирилична додаткова</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>HTML</span> Символи</h2>
+            <a target='_top' href='ref_utf_punctuation.html'>Загальна пунктуація</a>
+            <a target='_top' href='ref_utf_currency.html'>Валютні символи</a>
+            <a target='_top' href='ref_utf_letterlike.html'>Букви подібні до символів</a>
+            <a target='_top' href='ref_utf_arrows.html'>Стрілки</a>
+            <a target='_top' href='ref_utf_math.html'>Математичні оператори</a>
+            <a target='_top' href='ref_utf_box.html'>Блокові малюнки</a>
+            <a target='_top' href='ref_utf_block.html'>Блокові елементи</a>
+            <a target='_top' href='ref_utf_geometric.html'>Геометричні фігури</a>
+            <a target='_top' href='ref_utf_symbols.html'>Різні символи</a>
+            <a target='_top' href='ref_utf_dingbats.html'>Дінгбати</a>
+            <a target='_top' href='ref_emoji.html'>Емодзі</a>
+            <a target='_top' href='ref_emoji_smileys.html'>Емодзі смайли</a>
+            <a target='_top' href='ref_emoji_skin_tones.html'>Емодзі скінтони</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>HTML</span> Сутності</h2>
+            <a target='_top' href='ref_html_entities_4.html'>HTML4 Сутності</a>
+            <a target='_top' href='ref_html_entities_a.html'>HTML5 Сутності A</a>
+            <a target='_top' href='ref_html_entities_b.html'>HTML5 Сутності B</a>
+            <a target='_top' href='ref_html_entities_c.html'>HTML5 Сутності C</a>
+            <a target='_top' href='ref_html_entities_d.html'>HTML5 Сутності D</a>
+            <a target='_top' href='ref_html_entities_e.html'>HTML5 Сутності E</a>
+            <a target='_top' href='ref_html_entities_f.html'>HTML5 Сутності F</a>
+            <a target='_top' href='ref_html_entities_g.html'>HTML5 Сутності G</a>
+            <a target='_top' href='ref_html_entities_h.html'>HTML5 Сутності H</a>
+            <a target='_top' href='ref_html_entities_i.html'>HTML5 Сутності I</a>
+            <a target='_top' href='ref_html_entities_j.html'>HTML5 Сутності J</a>
+            <a target='_top' href='ref_html_entities_k.html'>HTML5 Сутності K</a>
+            <a target='_top' href='ref_html_entities_l.html'>HTML5 Сутності L</a>
+            <a target='_top' href='ref_html_entities_m.html'>HTML5 Сутності M</a>
+            <a target='_top' href='ref_html_entities_n.html'>HTML5 Сутності N</a>
+            <a target='_top' href='ref_html_entities_o.html'>HTML5 Сутності O</a>
+            <a target='_top' href='ref_html_entities_p.html'>HTML5 Сутності P</a>
+            <a target='_top' href='ref_html_entities_q.html'>HTML5 Сутності Q</a>
+            <a target='_top' href='ref_html_entities_r.html'>HTML5 Сутності R</a>
+            <a target='_top' href='ref_html_entities_s.html'>HTML5 Сутності S</a>
+            <a target='_top' href='ref_html_entities_t.html'>HTML5 Сутності T</a>
+            <a target='_top' href='ref_html_entities_u.html'>HTML5 Сутності U</a>
+            <a target='_top' href='ref_html_entities_v.html'>HTML5 Сутності V</a>
+            <a target='_top' href='ref_html_entities_w.html'>HTML5 Сутності W</a>
+            <a target='_top' href='ref_html_entities_x.html'>HTML5 Сутності X</a>
+            <a target='_top' href='ref_html_entities_y.html'>HTML5 Сутності Y</a>
+            <a target='_top' href='ref_html_entities_z.html'>HTML5 Сутності Z</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/trophy.svg' alt='HTML Набори символів. Уроки W3Schools українською для початківців' class='w3-left w3-padding' title='HTML Наборі символів. W3Schools українською' style='width: 120px'></a><p class='w3-right'>
+    <a href="ref_utf_symbols_en.html" title='Перейти на англійську мову'>En</a>
+</p>
+<article>
+    <h1>UTF-8 <span class="color_h1">Різні символи</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="ref_utf_geometric.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="ref_utf_dingbats.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <h2>Діапазон: десятковий 9728-9983. Шістнадцятковий 2600-26FF.</h2>
+    <p>Якщо ви хочете, щоб будь-який із цих символів відображався в HTML, ви можете використати об&#8217;єкт HTML, наведений у таблиці нижче.</p>
+    <p>Якщо символ не має сутності HTML, ви можете використовувати десяткове (dec) або шістнадцяткове (hex) посилання.</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;p&gt;Я буду відображати &amp;spades;&lt;/p&gt;<br>
+            &lt;p&gt;Я буду відображати &amp;#9824;&lt;/p&gt;<br>
+            &lt;p&gt;Я буду відображати &amp;#x2660;&lt;/p&gt;
+        </div>
+        <h3>Відобразиться як:</h3>
+        <div class="w3-code notranslate">
+            Я буду відображати &spades;<br><br>
+            Я буду відображати &#9824;<br><br>
+            Я буду відображати &#x2660;
+        </div>
+        <a class="w3-btn w3-margin-bottom" href="../charsetstryit/tryutf_spades.html" target="_blank">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-panel w3-note">
+        <p>Старіші веббраузери можуть не підтримувати всі сутності HTML5 у таблиці нижче.<br>Chrome і Opera мають гарну підтримку, а IE 11+ і Firefox 35+ підтримують усі сутності.</p>
+    </div>
+    <div class="w3-responsive">
+        <table class="ws-table-all charset-tryit">
+            <tr>
+                <th style="width:7%">Символ</th>
+                <th style="width:7%">Dec</th>
+                <th style="width:7%">Hex</th>
+                <th style="width:15%">Сутність</th>
+                <th>Назва</th>
+            <tr><td>&#9728;</td><td>9728</td><td>2600</td><td>&nbsp;</td><td>BLACK SUN WITH RAYS</td></tr>
+            <tr><td>&#9729;</td><td>9729</td><td>2601</td><td>&nbsp;</td><td>CLOUD</td></tr>
+            <tr><td>&#9730;</td><td>9730</td><td>2602</td><td>&nbsp;</td><td>UMBRELLA</td></tr>
+            <tr><td>&#9731;</td><td>9731</td><td>2603</td><td>&nbsp;</td><td>SNOWMAN</td></tr>
+            <tr><td>&#9732;</td><td>9732</td><td>2604</td><td>&nbsp;</td><td>COMET</td></tr>
+            <tr><td>&#9733;</td><td>9733</td><td>2605</td><td>&nbsp;</td><td>BLACK STAR</td></tr>
+            <tr><td>&#9734;</td><td>9734</td><td>2606</td><td>&nbsp;</td><td>WHITE STAR</td></tr>
+            <tr><td>&#9735;</td><td>9735</td><td>2607</td><td>&nbsp;</td><td>LIGHTNING</td></tr>
+            <tr><td>&#9736;</td><td>9736</td><td>2608</td><td>&nbsp;</td><td>THUNDERSTORM</td></tr>
+            <tr><td>&#9737;</td><td>9737</td><td>2609</td><td>&nbsp;</td><td>SUN</td></tr>
+            <tr><td>&#9738;</td><td>9738</td><td>260A</td><td>&nbsp;</td><td>ASCENDING NODE</td></tr>
+            <tr><td>&#9739;</td><td>9739</td><td>260B</td><td>&nbsp;</td><td>DESCENDING NODE</td></tr>
+            <tr><td>&#9740;</td><td>9740</td><td>260C</td><td>&nbsp;</td><td>CONJUNCTION</td></tr>
+            <tr><td>&#9741;</td><td>9741</td><td>260D</td><td>&nbsp;</td><td>OPPOSITION</td></tr>
+            <tr><td>&#9742;</td><td>9742</td><td>260E</td><td>&nbsp;</td><td>BLACK TELEPHONE</td></tr>
+            <tr><td>&#9743;</td><td>9743</td><td>260F</td><td>&nbsp;</td><td>WHITE TELEPHONE</td></tr>
+            <tr><td>&#9744;</td><td>9744</td><td>2610</td><td>&nbsp;</td><td>BALLOT BOX</td></tr>
+            <tr><td>&#9745;</td><td>9745</td><td>2611</td><td>&nbsp;</td><td>BALLOT BOX WITH CHECK</td></tr>
+            <tr><td>&#9746;</td><td>9746</td><td>2612</td><td>&nbsp;</td><td>BALLOT BOX WITH X</td></tr>
+            <tr><td>&#9747;</td><td>9747</td><td>2613</td><td>&nbsp;</td><td>SALTIRE</td></tr>
+            <tr><td>&#9748;</td><td>9748</td><td>2614</td><td>&nbsp;</td><td>UMBRELLA WITH RAIN DROPS</td></tr>
+            <tr><td>&#9749;</td><td>9749</td><td>2615</td><td>&nbsp;</td><td>HOT BEVERAGE</td></tr>
+            <tr><td>&#9750;</td><td>9750</td><td>2616</td><td>&nbsp;</td><td>WHITE SHOGI PIECE</td></tr>
+            <tr><td>&#9751;</td><td>9751</td><td>2617</td><td>&nbsp;</td><td>BLACK SHOGI PIECE</td></tr>
+            <tr><td>&#9752;</td><td>9752</td><td>2618</td><td>&nbsp;</td><td>SHAMROCK</td></tr>
+            <tr><td>&#9753;</td><td>9753</td><td>2619</td><td>&nbsp;</td><td>REVERSED ROTATED FLORAL HEART BULLET</td></tr>
+            <tr><td>&#9754;</td><td>9754</td><td>261A</td><td>&nbsp;</td><td>BLACK LEFT POINTING INDEX</td></tr>
+            <tr><td>&#9755;</td><td>9755</td><td>261B</td><td>&nbsp;</td><td>BLACK RIGHT POINTING INDEX</td></tr>
+            <tr><td>&#9756;</td><td>9756</td><td>261C</td><td>&nbsp;</td><td>WHITE LEFT POINTING INDEX</td></tr>
+            <tr><td>&#9757;</td><td>9757</td><td>261D</td><td>&nbsp;</td><td>WHITE UP POINTING INDEX</td></tr>
+            <tr><td>&#9758;</td><td>9758</td><td>261E</td><td>&nbsp;</td><td>WHITE RIGHT POINTING INDEX</td></tr>
+            <tr><td>&#9759;</td><td>9759</td><td>261F</td><td>&nbsp;</td><td>WHITE DOWN POINTING INDEX</td></tr>
+            <tr><td>&#9760;</td><td>9760</td><td>2620</td><td>&nbsp;</td><td>SKULL AND CROSSBONES</td></tr>
+            <tr><td>&#9761;</td><td>9761</td><td>2621</td><td>&nbsp;</td><td>CAUTION SIGN</td></tr>
+            <tr><td>&#9762;</td><td>9762</td><td>2622</td><td>&nbsp;</td><td>RADIOACTIVE SIGN</td></tr>
+            <tr><td>&#9763;</td><td>9763</td><td>2623</td><td>&nbsp;</td><td>BIOHAZARD SIGN</td></tr>
+            <tr><td>&#9764;</td><td>9764</td><td>2624</td><td>&nbsp;</td><td>CADUCEUS</td></tr>
+            <tr><td>&#9765;</td><td>9765</td><td>2625</td><td>&nbsp;</td><td>ANKH</td></tr>
+            <tr><td>&#9766;</td><td>9766</td><td>2626</td><td>&nbsp;</td><td>ORTHODOX CROSS</td></tr>
+            <tr><td>&#9767;</td><td>9767</td><td>2627</td><td>&nbsp;</td><td>CHI RHO</td></tr>
+            <tr><td>&#9768;</td><td>9768</td><td>2628</td><td>&nbsp;</td><td>CROSS OF LORRAINE</td></tr>
+            <tr><td>&#9769;</td><td>9769</td><td>2629</td><td>&nbsp;</td><td>CROSS OF JERUSALEM</td></tr>
+            <tr><td>&#9770;</td><td>9770</td><td>262A</td><td>&nbsp;</td><td>STAR AND CRESCENT</td></tr>
+            <tr><td>&#9771;</td><td>9771</td><td>262B</td><td>&nbsp;</td><td>FARSI SYMBOL</td></tr>
+            <tr><td>&#9772;</td><td>9772</td><td>262C</td><td>&nbsp;</td><td>KHANDA</td></tr>
+            <tr><td>&#9773;</td><td>9773</td><td>262D</td><td>&nbsp;</td><td>HAMMER AND SICKLE</td></tr>
+            <tr><td>&#9774;</td><td>9774</td><td>262E</td><td>&nbsp;</td><td>PEACE SYMBOL</td></tr>
+            <tr><td>&#9775;</td><td>9775</td><td>262F</td><td>&nbsp;</td><td>YIN YANG</td></tr>
+            <tr><td>&#9776;</td><td>9776</td><td>2630</td><td>&nbsp;</td><td>TRIGRAM FOR HEAVEN</td></tr>
+            <tr><td>&#9777;</td><td>9777</td><td>2631</td><td>&nbsp;</td><td>TRIGRAM FOR LAKE</td></tr>
+            <tr><td>&#9778;</td><td>9778</td><td>2632</td><td>&nbsp;</td><td>TRIGRAM FOR FIRE</td></tr>
+            <tr><td>&#9779;</td><td>9779</td><td>2633</td><td>&nbsp;</td><td>TRIGRAM FOR THUNDER</td></tr>
+            <tr><td>&#9780;</td><td>9780</td><td>2634</td><td>&nbsp;</td><td>TRIGRAM FOR WIND</td></tr>
+            <tr><td>&#9781;</td><td>9781</td><td>2635</td><td>&nbsp;</td><td>TRIGRAM FOR WATER</td></tr>
+            <tr><td>&#9782;</td><td>9782</td><td>2636</td><td>&nbsp;</td><td>TRIGRAM FOR MOUNTAIN</td></tr>
+            <tr><td>&#9783;</td><td>9783</td><td>2637</td><td>&nbsp;</td><td>TRIGRAM FOR EARTH</td></tr>
+            <tr><td>&#9784;</td><td>9784</td><td>2638</td><td>&nbsp;</td><td>WHEEL OF DHARMA</td></tr>
+            <tr><td>&#9785;</td><td>9785</td><td>2639</td><td>&nbsp;</td><td>WHITE FROWNING FACE</td></tr>
+            <tr><td>&#9786;</td><td>9786</td><td>263A</td><td>&nbsp;</td><td>WHITE SMILING FACE</td></tr>
+            <tr><td>&#9787;</td><td>9787</td><td>263B</td><td>&nbsp;</td><td>BLACK SMILING FACE</td></tr>
+            <tr><td>&#9788;</td><td>9788</td><td>263C</td><td>&nbsp;</td><td>WHITE SUN WITH RAYS</td></tr>
+            <tr><td>&#9789;</td><td>9789</td><td>263D</td><td>&nbsp;</td><td>FIRST QUARTER MOON</td></tr>
+            <tr><td>&#9790;</td><td>9790</td><td>263E</td><td>&nbsp;</td><td>LAST QUARTER MOON</td></tr>
+            <tr><td>&#9791;</td><td>9791</td><td>263F</td><td>&nbsp;</td><td>MERCURY</td></tr>
+            <tr><td>&#9792;</td><td>9792</td><td>2640</td><td>&nbsp;</td><td>FEMALE SIGN</td></tr>
+            <tr><td>&#9793;</td><td>9793</td><td>2641</td><td>&nbsp;</td><td>EARTH</td></tr>
+            <tr><td>&#9794;</td><td>9794</td><td>2642</td><td>&nbsp;</td><td>MALE SIGN</td></tr>
+            <tr><td>&#9795;</td><td>9795</td><td>2643</td><td>&nbsp;</td><td>JUPITER</td></tr>
+            <tr><td>&#9796;</td><td>9796</td><td>2644</td><td>&nbsp;</td><td>SATURN</td></tr>
+            <tr><td>&#9797;</td><td>9797</td><td>2645</td><td>&nbsp;</td><td>URANUS</td></tr>
+            <tr><td>&#9798;</td><td>9798</td><td>2646</td><td>&nbsp;</td><td>NEPTUNE</td></tr>
+            <tr><td>&#9799;</td><td>9799</td><td>2647</td><td>&nbsp;</td><td>PLUTO</td></tr>
+            <tr><td>&#9800;</td><td>9800</td><td>2648</td><td>&nbsp;</td><td>ARIES</td></tr>
+            <tr><td>&#9801;</td><td>9801</td><td>2649</td><td>&nbsp;</td><td>TAURUS</td></tr>
+            <tr><td>&#9802;</td><td>9802</td><td>264A</td><td>&nbsp;</td><td>GEMINI</td></tr>
+            <tr><td>&#9803;</td><td>9803</td><td>264B</td><td>&nbsp;</td><td>CANCER</td></tr>
+            <tr><td>&#9804;</td><td>9804</td><td>264C</td><td>&nbsp;</td><td>LEO</td></tr>
+            <tr><td>&#9805;</td><td>9805</td><td>264D</td><td>&nbsp;</td><td>VIRGO</td></tr>
+            <tr><td>&#9806;</td><td>9806</td><td>264E</td><td>&nbsp;</td><td>LIBRA</td></tr>
+            <tr><td>&#9807;</td><td>9807</td><td>264F</td><td>&nbsp;</td><td>SCORPIUS</td></tr>
+            <tr><td>&#9808;</td><td>9808</td><td>2650</td><td>&nbsp;</td><td>SAGITTARIUS</td></tr>
+            <tr><td>&#9809;</td><td>9809</td><td>2651</td><td>&nbsp;</td><td>CAPRICORN</td></tr>
+            <tr><td>&#9810;</td><td>9810</td><td>2652</td><td>&nbsp;</td><td>AQUARIUS</td></tr>
+            <tr><td>&#9811;</td><td>9811</td><td>2653</td><td>&nbsp;</td><td>PISCES</td></tr>
+            <tr><td>&#9812;</td><td>9812</td><td>2654</td><td>&nbsp;</td><td>WHITE CHESS KING</td></tr>
+            <tr><td>&#9813;</td><td>9813</td><td>2655</td><td>&nbsp;</td><td>WHITE CHESS QUEEN</td></tr>
+            <tr><td>&#9814;</td><td>9814</td><td>2656</td><td>&nbsp;</td><td>WHITE CHESS ROOK</td></tr>
+            <tr><td>&#9815;</td><td>9815</td><td>2657</td><td>&nbsp;</td><td>WHITE CHESS BISHOP</td></tr>
+            <tr><td>&#9816;</td><td>9816</td><td>2658</td><td>&nbsp;</td><td>WHITE CHESS KNIGHT</td></tr>
+            <tr><td>&#9817;</td><td>9817</td><td>2659</td><td>&nbsp;</td><td>WHITE CHESS PAWN</td></tr>
+            <tr><td>&#9818;</td><td>9818</td><td>265A</td><td>&nbsp;</td><td>BLACK CHESS KING</td></tr>
+            <tr><td>&#9819;</td><td>9819</td><td>265B</td><td>&nbsp;</td><td>BLACK CHESS QUEEN</td></tr>
+            <tr><td>&#9820;</td><td>9820</td><td>265C</td><td>&nbsp;</td><td>BLACK CHESS ROOK</td></tr>
+            <tr><td>&#9821;</td><td>9821</td><td>265D</td><td>&nbsp;</td><td>BLACK CHESS BISHOP</td></tr>
+            <tr><td>&#9822;</td><td>9822</td><td>265E</td><td>&nbsp;</td><td>BLACK CHESS KNIGHT</td></tr>
+            <tr><td>&#9823;</td><td>9823</td><td>265F</td><td>&nbsp;</td><td>BLACK CHESS PAWN</td></tr>
+            <tr><td>&#9824;</td><td>9824</td><td>2660</td><td>&amp;spades;<td>BLACK SPADE SUIT</td></tr>
+            <tr><td>&#9825;</td><td>9825</td><td>2661</td><td>&nbsp;</td><td>WHITE HEART SUIT</td></tr>
+            <tr><td>&#9826;</td><td>9826</td><td>2662</td><td>&nbsp;</td><td>WHITE DIAMOND SUIT</td></tr>
+            <tr><td>&#9827;</td><td>9827</td><td>2663</td><td>&amp;clubs;<td>BLACK CLUB SUIT</td></tr>
+            <tr><td>&#9828;</td><td>9828</td><td>2664</td><td>&nbsp;</td><td>WHITE SPADE SUIT</td></tr>
+            <tr><td>&#9829;</td><td>9829</td><td>2665</td><td>&amp;hearts;<td>BLACK HEART SUIT</td></tr>
+            <tr><td>&#9830;</td><td>9830</td><td>2666</td><td>&amp;diams;<td>BLACK DIAMOND SUIT</td></tr>
+            <tr><td>&#9831;</td><td>9831</td><td>2667</td><td>&nbsp;</td><td>WHITE CLUB SUIT</td></tr>
+            <tr><td>&#9832;</td><td>9832</td><td>2668</td><td>&nbsp;</td><td>HOT SPRINGS</td></tr>
+            <tr><td>&#9833;</td><td>9833</td><td>2669</td><td>&nbsp;</td><td>QUARTER NOTE</td></tr>
+            <tr><td>&#9834;</td><td>9834</td><td>266A</td><td>&nbsp;</td><td>EIGHTH NOTE</td></tr>
+            <tr><td>&#9835;</td><td>9835</td><td>266B</td><td>&nbsp;</td><td>BEAMED EIGHTH NOTES</td></tr>
+            <tr><td>&#9836;</td><td>9836</td><td>266C</td><td>&nbsp;</td><td>BEAMED SIXTEENTH NOTES</td></tr>
+            <tr><td>&#9837;</td><td>9837</td><td>266D</td><td>&nbsp;</td><td>MUSIC FLAT SIGN</td></tr>
+            <tr><td>&#9838;</td><td>9838</td><td>266E</td><td>&nbsp;</td><td>MUSIC NATURAL SIGN</td></tr>
+            <tr><td>&#9839;</td><td>9839</td><td>266F</td><td>&nbsp;</td><td>MUSIC SHARP SIGN</td></tr>
+            <tr><td>&#9840;</td><td>9840</td><td>2670</td><td>&nbsp;</td><td>WEST SYRIAC CROSS</td></tr>
+            <tr><td>&#9841;</td><td>9841</td><td>2671</td><td>&nbsp;</td><td>EAST SYRIAC CROSS</td></tr>
+            <tr><td>&#9842;</td><td>9842</td><td>2672</td><td>&nbsp;</td><td>UNIVERSAL RECYCLING SYMBOL</td></tr>
+            <tr><td>&#9843;</td><td>9843</td><td>2673</td><td>&nbsp;</td><td>RECYCLING SYMBOL FOR TYPE-1 PLASTICS</td></tr>
+            <tr><td>&#9844;</td><td>9844</td><td>2674</td><td>&nbsp;</td><td>RECYCLING SYMBOL FOR TYPE-2 PLASTICS</td></tr>
+            <tr><td>&#9845;</td><td>9845</td><td>2675</td><td>&nbsp;</td><td>RECYCLING SYMBOL FOR TYPE-3 PLASTICS</td></tr>
+            <tr><td>&#9846;</td><td>9846</td><td>2676</td><td>&nbsp;</td><td>RECYCLING SYMBOL FOR TYPE-4 PLASTICS</td></tr>
+            <tr><td>&#9847;</td><td>9847</td><td>2677</td><td>&nbsp;</td><td>RECYCLING SYMBOL FOR TYPE-5 PLASTICS</td></tr>
+            <tr><td>&#9848;</td><td>9848</td><td>2678</td><td>&nbsp;</td><td>RECYCLING SYMBOL FOR TYPE-6 PLASTICS</td></tr>
+            <tr><td>&#9849;</td><td>9849</td><td>2679</td><td>&nbsp;</td><td>RECYCLING SYMBOL FOR TYPE-7 PLASTICS</td></tr>
+            <tr><td>&#9850;</td><td>9850</td><td>267A</td><td>&nbsp;</td><td>RECYCLING SYMBOL FOR GENERIC MATERIALS</td></tr>
+            <tr><td>&#9851;</td><td>9851</td><td>267B</td><td>&nbsp;</td><td>BLACK UNIVERSAL RECYCLING SYMBOL</td></tr>
+            <tr><td>&#9852;</td><td>9852</td><td>267C</td><td>&nbsp;</td><td>RECYCLED PAPER SYMBOL</td></tr>
+            <tr><td>&#9853;</td><td>9853</td><td>267D</td><td>&nbsp;</td><td>PARTIALLY-RECYCLED PAPER SYMBOL</td></tr>
+            <tr><td>&#9854;</td><td>9854</td><td>267E</td><td>&nbsp;</td><td>PERMANENT PAPER SIGN</td></tr>
+            <tr><td>&#9855;</td><td>9855</td><td>267F</td><td>&nbsp;</td><td>WHEELCHAIR SYMBOL</td></tr>
+            <tr><td>&#9856;</td><td>9856</td><td>2680</td><td>&nbsp;</td><td>DIE FACE-1</td></tr>
+            <tr><td>&#9857;</td><td>9857</td><td>2681</td><td>&nbsp;</td><td>DIE FACE-2</td></tr>
+            <tr><td>&#9858;</td><td>9858</td><td>2682</td><td>&nbsp;</td><td>DIE FACE-3</td></tr>
+            <tr><td>&#9859;</td><td>9859</td><td>2683</td><td>&nbsp;</td><td>DIE FACE-4</td></tr>
+            <tr><td>&#9860;</td><td>9860</td><td>2684</td><td>&nbsp;</td><td>DIE FACE-5</td></tr>
+            <tr><td>&#9861;</td><td>9861</td><td>2685</td><td>&nbsp;</td><td>DIE FACE-6</td></tr>
+            <tr><td>&#9862;</td><td>9862</td><td>2686</td><td>&nbsp;</td><td>WHITE CIRCLE WITH DOT RIGHT</td></tr>
+            <tr><td>&#9863;</td><td>9863</td><td>2687</td><td>&nbsp;</td><td>WHITE CIRCLE WITH TWO DOTS</td></tr>
+            <tr><td>&#9864;</td><td>9864</td><td>2688</td><td>&nbsp;</td><td>BLACK CIRCLE WITH WHITE DOT RIGHT</td></tr>
+            <tr><td>&#9865;</td><td>9865</td><td>2689</td><td>&nbsp;</td><td>BLACK CIRCLE WITH TWO WHITE DOTS</td></tr>
+            <tr><td>&#9866;</td><td>9866</td><td>268A</td><td>&nbsp;</td><td>MONOGRAM FOR YANG</td></tr>
+            <tr><td>&#9867;</td><td>9867</td><td>268B</td><td>&nbsp;</td><td>MONOGRAM FOR YIN</td></tr>
+            <tr><td>&#9868;</td><td>9868</td><td>268C</td><td>&nbsp;</td><td>DIGRAM FOR GREATER YANG</td></tr>
+            <tr><td>&#9869;</td><td>9869</td><td>268D</td><td>&nbsp;</td><td>DIGRAM FOR LESSER YIN</td></tr>
+            <tr><td>&#9870;</td><td>9870</td><td>268E</td><td>&nbsp;</td><td>DIGRAM FOR LESSER YANG</td></tr>
+            <tr><td>&#9871;</td><td>9871</td><td>268F</td><td>&nbsp;</td><td>DIGRAM FOR GREATER YIN</td></tr>
+            <tr><td>&#9872;</td><td>9872</td><td>2690</td><td>&nbsp;</td><td>WHITE FLAG</td></tr>
+            <tr><td>&#9873;</td><td>9873</td><td>2691</td><td>&nbsp;</td><td>BLACK FLAG</td></tr>
+            <tr><td>&#9874;</td><td>9874</td><td>2692</td><td>&nbsp;</td><td>HAMMER AND PICK</td></tr>
+            <tr><td>&#9875;</td><td>9875</td><td>2693</td><td>&nbsp;</td><td>ANCHOR</td></tr>
+            <tr><td>&#9876;</td><td>9876</td><td>2694</td><td>&nbsp;</td><td>CROSSED SWORDS</td></tr>
+            <tr><td>&#9877;</td><td>9877</td><td>2695</td><td>&nbsp;</td><td>STAFF OF AESCULAPIUS</td></tr>
+            <tr><td>&#9878;</td><td>9878</td><td>2696</td><td>&nbsp;</td><td>SCALES</td></tr>
+            <tr><td>&#9879;</td><td>9879</td><td>2697</td><td>&nbsp;</td><td>ALEMBIC</td></tr>
+            <tr><td>&#9880;</td><td>9880</td><td>2698</td><td>&nbsp;</td><td>FLOWER</td></tr>
+            <tr><td>&#9881;</td><td>9881</td><td>2699</td><td>&nbsp;</td><td>GEAR</td></tr>
+            <tr><td>&#9882;</td><td>9882</td><td>269A</td><td>&nbsp;</td><td>STAFF OF HERMES</td></tr>
+            <tr><td>&#9883;</td><td>9883</td><td>269B</td><td>&nbsp;</td><td>ATOM SYMBOL</td></tr>
+            <tr><td>&#9884;</td><td>9884</td><td>269C</td><td>&nbsp;</td><td>FLEUR-DE-LIS</td></tr>
+            <tr><td>&#9885;</td><td>9885</td><td>269D</td><td>&nbsp;</td><td>OUTLINED WHITE STAR</td></tr>
+            <tr><td>&#9886;</td><td>9886</td><td>269E</td><td>&nbsp;</td><td>THREE LINES CONVERGING RIGHT</td></tr>
+            <tr><td>&#9887;</td><td>9887</td><td>269F</td><td>&nbsp;</td><td>THREE LINES CONVERGING LEFT</td></tr>
+            <tr><td>&#9888;</td><td>9888</td><td>26A0</td><td>&nbsp;</td><td>WARNING SIGN</td></tr>
+            <tr><td>&#9889;</td><td>9889</td><td>26A1</td><td>&nbsp;</td><td>HIGH VOLTAGE SIGN</td></tr>
+            <tr><td>&#9890;</td><td>9890</td><td>26A2</td><td>&nbsp;</td><td>DOUBLED FEMALE SIGN</td></tr>
+            <tr><td>&#9891;</td><td>9891</td><td>26A3</td><td>&nbsp;</td><td>DOUBLED MALE SIGN</td></tr>
+            <tr><td>&#9892;</td><td>9892</td><td>26A4</td><td>&nbsp;</td><td>INTERLOCKED FEMALE AND MALE SIGN</td></tr>
+            <tr><td>&#9893;</td><td>9893</td><td>26A5</td><td>&nbsp;</td><td>MALE AND FEMALE SIGN</td></tr>
+            <tr><td>&#9894;</td><td>9894</td><td>26A6</td><td>&nbsp;</td><td>MALE WITH STROKE SIGN</td></tr>
+            <tr><td>&#9895;</td><td>9895</td><td>26A7</td><td>&nbsp;</td><td>MALE WITH STROKE AND MALE AND FEMALE SIGN</td></tr>
+            <tr><td>&#9896;</td><td>9896</td><td>26A8</td><td>&nbsp;</td><td>VERTICAL MALE WITH STROKE SIGN</td></tr>
+            <tr><td>&#9897;</td><td>9897</td><td>26A9</td><td>&nbsp;</td><td>HORIZONTAL MALE WITH STROKE SIGN</td></tr>
+            <tr><td>&#9898;</td><td>9898</td><td>26AA</td><td>&nbsp;</td><td>MEDIUM WHITE CIRCLE</td></tr>
+            <tr><td>&#9899;</td><td>9899</td><td>26AB</td><td>&nbsp;</td><td>MEDIUM BLACK CIRCLE</td></tr>
+            <tr><td>&#9900;</td><td>9900</td><td>26AC</td><td>&nbsp;</td><td>MEDIUM SMALL WHITE CIRCLE</td></tr>
+            <tr><td>&#9901;</td><td>9901</td><td>26AD</td><td>&nbsp;</td><td>MARRIAGE SYMBOL</td></tr>
+            <tr><td>&#9902;</td><td>9902</td><td>26AE</td><td>&nbsp;</td><td>DIVORCE SYMBOL</td></tr>
+            <tr><td>&#9903;</td><td>9903</td><td>26AF</td><td>&nbsp;</td><td>UNMARRIED PARTNERSHIP SYMBOL</td></tr>
+            <tr><td>&#9904;</td><td>9904</td><td>26B0</td><td>&nbsp;</td><td>COFFIN</td></tr>
+            <tr><td>&#9905;</td><td>9905</td><td>26B1</td><td>&nbsp;</td><td>FUNERAL URN</td></tr>
+            <tr><td>&#9906;</td><td>9906</td><td>26B2</td><td>&nbsp;</td><td>NEUTER</td></tr>
+            <tr><td>&#9907;</td><td>9907</td><td>26B3</td><td>&nbsp;</td><td>CERES</td></tr>
+            <tr><td>&#9908;</td><td>9908</td><td>26B4</td><td>&nbsp;</td><td>PALLAS</td></tr>
+            <tr><td>&#9909;</td><td>9909</td><td>26B5</td><td>&nbsp;</td><td>JUNO</td></tr>
+            <tr><td>&#9910;</td><td>9910</td><td>26B6</td><td>&nbsp;</td><td>VESTA</td></tr>
+            <tr><td>&#9911;</td><td>9911</td><td>26B7</td><td>&nbsp;</td><td>CHIRON</td></tr>
+            <tr><td>&#9912;</td><td>9912</td><td>26B8</td><td>&nbsp;</td><td>BLACK MOON LILITH</td></tr>
+            <tr><td>&#9913;</td><td>9913</td><td>26B9</td><td>&nbsp;</td><td>SEXTILE</td></tr>
+            <tr><td>&#9914;</td><td>9914</td><td>26BA</td><td>&nbsp;</td><td>SEMISEXTILE</td></tr>
+            <tr><td>&#9915;</td><td>9915</td><td>26BB</td><td>&nbsp;</td><td>QUINCUNX</td></tr>
+            <tr><td>&#9916;</td><td>9916</td><td>26BC</td><td>&nbsp;</td><td>SESQUIQUADRATE</td></tr>
+            <tr><td>&#9917;</td><td>9917</td><td>26BD</td><td>&nbsp;</td><td>SOCCER BALL</td></tr>
+            <tr><td>&#9918;</td><td>9918</td><td>26BE</td><td>&nbsp;</td><td>BASEBALL</td></tr>
+            <tr><td>&#9919;</td><td>9919</td><td>26BF</td><td>&nbsp;</td><td>SQUARED KEY</td></tr>
+            <tr><td>&#9920;</td><td>9920</td><td>26C0</td><td>&nbsp;</td><td>WHITE DRAUGHTS MAN</td></tr>
+            <tr><td>&#9921;</td><td>9921</td><td>26C1</td><td>&nbsp;</td><td>WHITE DRAUGHTS KING</td></tr>
+            <tr><td>&#9922;</td><td>9922</td><td>26C2</td><td>&nbsp;</td><td>BLACK DRAUGHTS MAN</td></tr>
+            <tr><td>&#9923;</td><td>9923</td><td>26C3</td><td>&nbsp;</td><td>BLACK DRAUGHTS KING</td></tr>
+            <tr><td>&#9924;</td><td>9924</td><td>26C4</td><td>&nbsp;</td><td>SNOWMAN WITHOUT SNOW</td></tr>
+            <tr><td>&#9925;</td><td>9925</td><td>26C5</td><td>&nbsp;</td><td>SUN BEHIND CLOUD</td></tr>
+            <tr><td>&#9926;</td><td>9926</td><td>26C6</td><td>&nbsp;</td><td>RAIN</td></tr>
+            <tr><td>&#9927;</td><td>9927</td><td>26C7</td><td>&nbsp;</td><td>BLACK SNOWMAN</td></tr>
+            <tr><td>&#9928;</td><td>9928</td><td>26C8</td><td>&nbsp;</td><td>THUNDER CLOUD AND RAIN</td></tr>
+            <tr><td>&#9929;</td><td>9929</td><td>26C9</td><td>&nbsp;</td><td>TURNED WHITE SHOGI PIECE</td></tr>
+            <tr><td>&#9930;</td><td>9930</td><td>26CA</td><td>&nbsp;</td><td>TURNED BLACK SHOGI PIECE</td></tr>
+            <tr><td>&#9931;</td><td>9931</td><td>26CB</td><td>&nbsp;</td><td>WHITE DIAMOND IN SQUARE</td></tr>
+            <tr><td>&#9932;</td><td>9932</td><td>26CC</td><td>&nbsp;</td><td>CROSSING LANES</td></tr>
+            <tr><td>&#9933;</td><td>9933</td><td>26CD</td><td>&nbsp;</td><td>DISABLED CAR</td></tr>
+            <tr><td>&#9934;</td><td>9934</td><td>26CE</td><td>&nbsp;</td><td>OPHIUCHUS</td></tr>
+            <tr><td>&#9935;</td><td>9935</td><td>26CF</td><td>&nbsp;</td><td>PICK</td></tr>
+            <tr><td>&#9936;</td><td>9936</td><td>26D0</td><td>&nbsp;</td><td>CAR SLIDING</td></tr>
+            <tr><td>&#9937;</td><td>9937</td><td>26D1</td><td>&nbsp;</td><td>HELMET WITH WHITE CROSS</td></tr>
+            <tr><td>&#9938;</td><td>9938</td><td>26D2</td><td>&nbsp;</td><td>CIRCLED CROSSING LANES</td></tr>
+            <tr><td>&#9939;</td><td>9939</td><td>26D3</td><td>&nbsp;</td><td>CHAINS</td></tr>
+            <tr><td>&#9940;</td><td>9940</td><td>26D4</td><td>&nbsp;</td><td>NO ENTRY</td></tr>
+            <tr><td>&#9941;</td><td>9941</td><td>26D5</td><td>&nbsp;</td><td>ALTERNATE ONE-WAY LEFT WAY TRAFFIC</td></tr>
+            <tr><td>&#9942;</td><td>9942</td><td>26D6</td><td>&nbsp;</td><td>BLACK TWO-WAY LEFT WAY TRAFFIC</td></tr>
+            <tr><td>&#9943;</td><td>9943</td><td>26D7</td><td>&nbsp;</td><td>WHITE TWO-WAY LEFT WAY TRAFFIC</td></tr>
+            <tr><td>&#9944;</td><td>9944</td><td>26D8</td><td>&nbsp;</td><td>BLACK LEFT LANE MERGE</td></tr>
+            <tr><td>&#9945;</td><td>9945</td><td>26D9</td><td>&nbsp;</td><td>WHITE LEFT LANE MERGE</td></tr>
+            <tr><td>&#9946;</td><td>9946</td><td>26DA</td><td>&nbsp;</td><td>DRIVE SLOW SIGN</td></tr>
+            <tr><td>&#9947;</td><td>9947</td><td>26DB</td><td>&nbsp;</td><td>HEAVY WHITE DOWN-POINTING TRIANGLE</td></tr>
+            <tr><td>&#9948;</td><td>9948</td><td>26DC</td><td>&nbsp;</td><td>LEFT CLOSED ENTRY</td></tr>
+            <tr><td>&#9949;</td><td>9949</td><td>26DD</td><td>&nbsp;</td><td>SQUARED SALTIRE</td></tr>
+            <tr><td>&#9950;</td><td>9950</td><td>26DE</td><td>&nbsp;</td><td>FALLING DIAGONAL IN WHITE CIRCLE IN BLACK SQUARE</td></tr>
+            <tr><td>&#9951;</td><td>9951</td><td>26DF</td><td>&nbsp;</td><td>BLACK TRUCK</td></tr>
+            <tr><td>&#9952;</td><td>9952</td><td>26E0</td><td>&nbsp;</td><td>RESTRICTED LEFT ENTRY-1</td></tr>
+            <tr><td>&#9953;</td><td>9953</td><td>26E1</td><td>&nbsp;</td><td>RESTRICTED LEFT ENTRY-2</td></tr>
+            <tr><td>&#9954;</td><td>9954</td><td>26E2</td><td>&nbsp;</td><td>ASTRONOMICAL SYMBOL FOR URANUS</td></tr>
+            <tr><td>&#9955;</td><td>9955</td><td>26E3</td><td>&nbsp;</td><td>HEAVY CIRCLE WITH STROKE AND TWO DOTS ABOVE</td></tr>
+            <tr><td>&#9956;</td><td>9956</td><td>26E4</td><td>&nbsp;</td><td>PENTAGRAM</td></tr>
+            <tr><td>&#9957;</td><td>9957</td><td>26E5</td><td>&nbsp;</td><td>RIGHT-HANDED INTERLACED PENTAGRAM</td></tr>
+            <tr><td>&#9958;</td><td>9958</td><td>26E6</td><td>&nbsp;</td><td>LEFT-HANDED INTERLACED PENTAGRAM</td></tr>
+            <tr><td>&#9959;</td><td>9959</td><td>26E7</td><td>&nbsp;</td><td>INVERTED PENTAGRAM</td></tr>
+            <tr><td>&#9960;</td><td>9960</td><td>26E8</td><td>&nbsp;</td><td>BLACK CROSS ON SHIELD</td></tr>
+            <tr><td>&#9961;</td><td>9961</td><td>26E9</td><td>&nbsp;</td><td>SHINTO SHRINE</td></tr>
+            <tr><td>&#9962;</td><td>9962</td><td>26EA</td><td>&nbsp;</td><td>CHURCH</td></tr>
+            <tr><td>&#9963;</td><td>9963</td><td>26EB</td><td>&nbsp;</td><td>CASTLE</td></tr>
+            <tr><td>&#9964;</td><td>9964</td><td>26EC</td><td>&nbsp;</td><td>HISTORIC SITE</td></tr>
+            <tr><td>&#9965;</td><td>9965</td><td>26ED</td><td>&nbsp;</td><td>GEAR WITHOUT HUB</td></tr>
+            <tr><td>&#9966;</td><td>9966</td><td>26EE</td><td>&nbsp;</td><td>GEAR WITH HANDLES</td></tr>
+            <tr><td>&#9967;</td><td>9967</td><td>26EF</td><td>&nbsp;</td><td>MAP SYMBOL FOR LIGHTHOUSE</td></tr>
+            <tr><td>&#9968;</td><td>9968</td><td>26F0</td><td>&nbsp;</td><td>MOUNTAIN</td></tr>
+            <tr><td>&#9969;</td><td>9969</td><td>26F1</td><td>&nbsp;</td><td>UMBRELLA ON GROUND</td></tr>
+            <tr><td>&#9970;</td><td>9970</td><td>26F2</td><td>&nbsp;</td><td>FOUNTAIN</td></tr>
+            <tr><td>&#9971;</td><td>9971</td><td>26F3</td><td>&nbsp;</td><td>FLAG IN HOLE</td></tr>
+            <tr><td>&#9972;</td><td>9972</td><td>26F4</td><td>&nbsp;</td><td>FERRY</td></tr>
+            <tr><td>&#9973;</td><td>9973</td><td>26F5</td><td>&nbsp;</td><td>SAILBOAT</td></tr>
+            <tr><td>&#9974;</td><td>9974</td><td>26F6</td><td>&nbsp;</td><td>SQUARE FOUR CORNERS</td></tr>
+            <tr><td>&#9975;</td><td>9975</td><td>26F7</td><td>&nbsp;</td><td>SKIER</td></tr>
+            <tr><td>&#9976;</td><td>9976</td><td>26F8</td><td>&nbsp;</td><td>ICE SKATE</td></tr>
+            <tr><td>&#9977;</td><td>9977</td><td>26F9</td><td>&nbsp;</td><td>PERSON WITH BALL</td></tr>
+            <tr><td>&#9978;</td><td>9978</td><td>26FA</td><td>&nbsp;</td><td>TENT</td></tr>
+            <tr><td>&#9979;</td><td>9979</td><td>26FB</td><td>&nbsp;</td><td>JAPANESE BANK SYMBOL</td></tr>
+            <tr><td>&#9980;</td><td>9980</td><td>26FC</td><td>&nbsp;</td><td>HEADSTONE GRAVEYARD SYMBOL</td></tr>
+            <tr><td>&#9981;</td><td>9981</td><td>26FD</td><td>&nbsp;</td><td>FUEL PUMP</td></tr>
+            <tr><td>&#9982;</td><td>9982</td><td>26FE</td><td>&nbsp;</td><td>CUP ON BLACK SQUARE</td></tr>
+            <tr><td>&#9983;</td><td>9983</td><td>26FF</td><td>&nbsp;</td><td>WHITE FLAG WITH HORIZONTAL MIDDLE BLACK STRIPE</td></tr>
+        </table>
+    </div>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="ref_utf_geometric.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="ref_utf_dingbats.html">Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">ПІДРУЧНИКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../html/index.html' class='btn-rightbar'>HTML</a>
+            <a href='../css/index.html' class='btn-rightbar'>CSS</a>
+            <a href='../css/css_rwd_intro.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index.html' class='btn-rightbar'>Кольори</a>
+            <a href='../icons/index.html' class='btn-rightbar'>Іконки</a>
+            <a href='../graphics/index.html' class='btn-rightbar'>Графіка</a>
+            <a href='../graphics/svg_intro.html' class='btn-rightbar'>Графіка SVG</a>
+            <a href='../graphics/canvas_intro.html' class='btn-rightbar'>Графіка Canvas</a>
+            <a href='../howto/index.html' class='btn-rightbar'>Як зробити?</a>
+            <a href='../sass/index.html' class='btn-rightbar'>Sass</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-довідники на сайті">ДОВІДНИКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../tags/index.html' class='btn-rightbar'>HTML-теги</a>
+            <a href='../tags/ref_html_browsersupport.html' class='btn-rightbar'>Підтримка браузерами</a>
+            <a href='../tags/ref_attributes.html' class='btn-rightbar'>HTML-атрибути</a>
+            <a href='../tags/ref_standardattributes.html' class='btn-rightbar'>Глобальні атрибути</a>
+            <a href='../tags/ref_eventattributes.html' class='btn-rightbar'>Атрибути подій</a>
+            <a href='../tags/ref_colornames.html' class='btn-rightbar'>HTML-кольори</a>
+            <a href='../tags/ref_canvas.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom.html' class='btn-rightbar'>Аудіо-Відео</a>
+            <a href='../tags/ref_charactersets.html' class='btn-rightbar'>Набори символів</a>
+            <a href='../tags/ref_html_dtd.html' class='btn-rightbar'>DOCTYPE</a>
+            <a href='../tags/ref_urlencode.html' class='btn-rightbar'>URL-кодування</a>
+            <a href='../tags/ref_language_codes.html' class='btn-rightbar'>Коди мов</a>
+            <a href='../tags/ref_country_codes.html' class='btn-rightbar'>Коди країн</a>
+            <a href='../tags/ref_httpmessages.html' class='btn-rightbar'>HTTP повідомлення</a>
+            <a href='../tags/ref_httpmethods.html' class='btn-rightbar'>HTTP методи</a>
+            <a href='../tags/ref_pxtoemconversion.html' class='btn-rightbar'>Конвертер Px в Em</a>
+            <a href='../tags/ref_keyboardshortcuts.html' class='btn-rightbar'>Гарячі клавіші</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">HTML Кодування</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../charsets/index.html' class='btn-rightbar'>Набори символів</a>
+            <a href='../charsets/ref_html_ascii.html' class='btn-rightbar'>ASCII Довідник</a>
+            <a href='../charsets/ref_html_ansi.html' class='btn-rightbar'>Win-1252 (ANSI)</a>
+            <a href='../charsets/ref_html_8859.html' class='btn-rightbar'>ISO-8859-1</a>
+            <a href='../charsets/ref_html_symbols.html' class='btn-rightbar'>HTML Символи</a>
+            <a href='../charsets/ref_html_utf8.html' class='btn-rightbar'>Unicode (UTF-8)</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб-Сертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+    Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
