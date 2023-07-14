@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'><title>Назви об&#8217;єктів HTML5 за алфавітом – C. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Повний довідник із сутностей HTML 5. Старіші веббраузери можуть не підтримувати всі сутності HTML5 у таблиці нижче. Chrome і Opera добре підтримують, а IE 11+ і Firefox 35+ підтримують усі об&#8217;єкти. Таблиці. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<style>
+    .ws-table-all td:first-child {font-size:22px; padding-top:0; padding-bottom:0;}
+</style>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Підручник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>ЯК ЗРОБИТИ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Підручник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Підручник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index.html'>Вивчити PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class='left'><span class='left_h2'>HTML</span> Набори символів</h2>
+            <a target='_top' href='index.html'>HTML Набір символів</a>
+            <a target='_top' href='ref_html_ascii.html'>HTML ASCII</a>
+            <a target='_top' href='ref_html_ansi.html'>HTML WIN-1252</a>
+            <a target='_top' href='ref_html_8859.html'>HTML ISO-8859</a>
+            <a target='_top' href='ref_html_symbols.html'>HTML Символи</a>
+            <a target='_top' href='ref_html_utf8.html'>HTML UTF-8</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>HTML</span> UTF-8</h2>
+            <a target='_top' href='ref_utf_basic_latin.html'>Latin Основний</a>
+            <a target='_top' href='ref_utf_latin1_supplement.html'>Latin Додатковий</a>
+            <a target='_top' href='ref_utf_latin_extended_a.html'>Latin Розширений A</a>
+            <a target='_top' href='ref_utf_latin_extended_b.html'>Latin Розширений B</a>
+            <a target='_top' href='ref_utf_modifiers.html'>Модифіковані літери</a>
+            <a target='_top' href='ref_utf_diacritical.html'>Діакритичні мітки</a>
+            <a target='_top' href='ref_utf_greek.html'>Грецька і коптська мови</a>
+            <a target='_top' href='ref_utf_cyrillic.html'>Кирилична основна</a>
+            <a target='_top' href='ref_utf_cyrillic_supplement.html'>Кирилична додаткова</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>HTML</span> Символи</h2>
+            <a target='_top' href='ref_utf_punctuation.html'>Загальна пунктуація</a>
+            <a target='_top' href='ref_utf_currency.html'>Валютні символи</a>
+            <a target='_top' href='ref_utf_letterlike.html'>Букви подібні до символів</a>
+            <a target='_top' href='ref_utf_arrows.html'>Стрілки</a>
+            <a target='_top' href='ref_utf_math.html'>Математичні оператори</a>
+            <a target='_top' href='ref_utf_box.html'>Блокові малюнки</a>
+            <a target='_top' href='ref_utf_block.html'>Блокові елементи</a>
+            <a target='_top' href='ref_utf_geometric.html'>Геометричні фігури</a>
+            <a target='_top' href='ref_utf_symbols.html'>Різні символи</a>
+            <a target='_top' href='ref_utf_dingbats.html'>Дінгбати</a>
+            <a target='_top' href='ref_emoji.html'>Емодзі</a>
+            <a target='_top' href='ref_emoji_smileys.html'>Емодзі смайли</a>
+            <a target='_top' href='ref_emoji_skin_tones.html'>Емодзі скінтони</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>HTML</span> Сутності</h2>
+            <a target='_top' href='ref_html_entities_4.html'>HTML4 Сутності</a>
+            <a target='_top' href='ref_html_entities_a.html'>HTML5 Сутності A</a>
+            <a target='_top' href='ref_html_entities_b.html'>HTML5 Сутності B</a>
+            <a target='_top' href='ref_html_entities_c.html'>HTML5 Сутності C</a>
+            <a target='_top' href='ref_html_entities_d.html'>HTML5 Сутності D</a>
+            <a target='_top' href='ref_html_entities_e.html'>HTML5 Сутності E</a>
+            <a target='_top' href='ref_html_entities_f.html'>HTML5 Сутності F</a>
+            <a target='_top' href='ref_html_entities_g.html'>HTML5 Сутності G</a>
+            <a target='_top' href='ref_html_entities_h.html'>HTML5 Сутності H</a>
+            <a target='_top' href='ref_html_entities_i.html'>HTML5 Сутності I</a>
+            <a target='_top' href='ref_html_entities_j.html'>HTML5 Сутності J</a>
+            <a target='_top' href='ref_html_entities_k.html'>HTML5 Сутності K</a>
+            <a target='_top' href='ref_html_entities_l.html'>HTML5 Сутності L</a>
+            <a target='_top' href='ref_html_entities_m.html'>HTML5 Сутності M</a>
+            <a target='_top' href='ref_html_entities_n.html'>HTML5 Сутності N</a>
+            <a target='_top' href='ref_html_entities_o.html'>HTML5 Сутності O</a>
+            <a target='_top' href='ref_html_entities_p.html'>HTML5 Сутності P</a>
+            <a target='_top' href='ref_html_entities_q.html'>HTML5 Сутності Q</a>
+            <a target='_top' href='ref_html_entities_r.html'>HTML5 Сутності R</a>
+            <a target='_top' href='ref_html_entities_s.html'>HTML5 Сутності S</a>
+            <a target='_top' href='ref_html_entities_t.html'>HTML5 Сутності T</a>
+            <a target='_top' href='ref_html_entities_u.html'>HTML5 Сутності U</a>
+            <a target='_top' href='ref_html_entities_v.html'>HTML5 Сутності V</a>
+            <a target='_top' href='ref_html_entities_w.html'>HTML5 Сутності W</a>
+            <a target='_top' href='ref_html_entities_x.html'>HTML5 Сутності X</a>
+            <a target='_top' href='ref_html_entities_y.html'>HTML5 Сутності Y</a>
+            <a target='_top' href='ref_html_entities_z.html'>HTML5 Сутності Z</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/trophy.svg' alt='HTML Набори символів. Уроки W3Schools українською для початківців' class='w3-left w3-padding' title='HTML Наборі символів. W3Schools українською' style='width: 120px'></a><p class='w3-right'>
+    <a href="ref_html_entities_c_en.html" title='Перейти на англійську мову'>En</a>
+</p>
+<article>
+    <h1>HTML5  <span class="color_h1">Назви об&#8217;єктів за алфавітом – C</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="ref_html_entities_b.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="ref_html_entities_d.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <div class="w3-panel w3-note">
+        <p>Старіші веббраузери можуть не підтримувати всі сутності HTML5 у таблиці нижче. Chrome і Opera добре підтримують, а IE 11+ і Firefox 35+ підтримують усі об&#8217;єкти.</p>
+    </div>
+    <div class="w3-responsive">
+        <table class="ws-table-all charset-tryit">
+            <tr>
+                <th style="width:20%">Символ</th>
+                <th style="width:40%">Назва сутності</th>
+                <th style="width:20%">Hex</th>
+                <th>Dec</th>
+            </tr>
+            <tr><td>&Cacute;</td><td>Cacute</td><td>00106</td><td>262</td></tr>
+            <tr><td>&cacute;</td><td>cacute</td><td>00107</td><td>263</td></tr>
+            <tr><td>&Cap;</td><td>Cap</td><td>022D2</td><td>8914</td></tr>
+            <tr><td>&cap;</td><td>cap</td><td>02229</td><td>8745</td></tr>
+            <tr><td>&capand;</td><td>capand</td><td>02A44</td><td>10820</td></tr>
+            <tr><td>&capbrcup;</td><td>capbrcup</td><td>02A49</td><td>10825</td></tr>
+            <tr><td>&capcap;</td><td>capcap</td><td>02A4B</td><td>10827</td></tr>
+            <tr><td>&capcup;</td><td>capcup</td><td>02A47</td><td>10823</td></tr>
+            <tr><td>&capdot;</td><td>capdot</td><td>02A40</td><td>10816</td></tr>
+            <tr><td>&CapitalDifferentialD;</td><td>CapitalDifferentialD</td><td>02145</td><td>8517</td></tr>
+            <tr><td>&caps;</td><td>caps</td><td>02229 0FE00</td><td>8745</td></tr>
+            <tr><td>&caret;</td><td>caret</td><td>02041</td><td>8257</td></tr>
+            <tr><td>&caron;</td><td>caron</td><td>002C7</td><td>711</td></tr>
+            <tr><td>&Cayleys;</td><td>Cayleys</td><td>0212D</td><td>8493</td></tr>
+            <tr><td>&ccaps;</td><td>ccaps</td><td>02A4D</td><td>10829</td></tr>
+            <tr><td>&Ccaron;</td><td>Ccaron</td><td>0010C</td><td>268</td></tr>
+            <tr><td>&ccaron;</td><td>ccaron</td><td>0010D</td><td>269</td></tr>
+            <tr><td>&Ccedil;</td><td>Ccedil</td><td>000C7</td><td>199</td></tr>
+            <tr><td>&ccedil;</td><td>ccedil</td><td>000E7</td><td>231</td></tr>
+            <tr><td>&Ccirc;</td><td>Ccirc</td><td>00108</td><td>264</td></tr>
+            <tr><td>&ccirc;</td><td>ccirc</td><td>00109</td><td>265</td></tr>
+            <tr><td>&Cconint;</td><td>Cconint</td><td>02230</td><td>8752</td></tr>
+            <tr><td>&ccups;</td><td>ccups</td><td>02A4C</td><td>10828</td></tr>
+            <tr><td>&ccupssm;</td><td>ccupssm</td><td>02A50</td><td>10832</td></tr>
+            <tr><td>&Cdot;</td><td>Cdot</td><td>0010A</td><td>266</td></tr>
+            <tr><td>&cdot;</td><td>cdot</td><td>0010B</td><td>267</td></tr>
+            <tr><td>&cedil;</td><td>cedil</td><td>000B8</td><td>184</td></tr>
+            <tr><td>&Cedilla;</td><td>Cedilla</td><td>000B8</td><td>184</td></tr>
+            <tr><td>&cemptyv;</td><td>cemptyv</td><td>029B2</td><td>10674</td></tr>
+            <tr><td>&cent;</td><td>cent</td><td>000A2</td><td>162</td></tr>
+            <tr><td>&CenterDot;</td><td>CenterDot</td><td>000B7</td><td>183</td></tr>
+            <tr><td>&centerdot;</td><td>centerdot</td><td>000B7</td><td>183</td></tr>
+            <tr><td>&Cfr;</td><td>Cfr</td><td>0212D</td><td>8493</td></tr>
+            <tr><td>&cfr;</td><td>cfr</td><td>1D520</td><td>120096</td></tr>
+            <tr><td>&CHcy;</td><td>CHcy</td><td>00427</td><td>1063</td></tr>
+            <tr><td>&chcy;</td><td>chcy</td><td>00447</td><td>1095</td></tr>
+            <tr><td>&check;</td><td>check</td><td>02713</td><td>10003</td></tr>
+            <tr><td>&checkmark;</td><td>checkmark</td><td>02713</td><td>10003</td></tr>
+            <tr><td>&Chi;</td><td>Chi</td><td>003A7</td><td>935</td></tr>
+            <tr><td>&chi;</td><td>chi</td><td>003C7</td><td>967</td></tr>
+            <tr><td>&cir;</td><td>cir</td><td>025CB</td><td>9675</td></tr>
+            <tr><td>&circ;</td><td>circ</td><td>002C6</td><td>710</td></tr>
+            <tr><td>&circeq;</td><td>circeq</td><td>02257</td><td>8791</td></tr>
+            <tr><td>&circlearrowleft;</td><td>circlearrowleft</td><td>021BA</td><td>8634</td></tr>
+            <tr><td>&circlearrowright;</td><td>circlearrowright</td><td>021BB</td><td>8635</td></tr>
+            <tr><td>&circledast;</td><td>circledast</td><td>0229B</td><td>8859</td></tr>
+            <tr><td>&circledcirc;</td><td>circledcirc</td><td>0229A</td><td>8858</td></tr>
+            <tr><td>&circleddash;</td><td>circleddash</td><td>0229D</td><td>8861</td></tr>
+            <tr><td>&odot;</td><td>CircleDot</td><td>02299</td><td>8857</td></tr>
+            <tr><td>&circledR;</td><td>circledR</td><td>000AE</td><td>174</td></tr>
+            <tr><td>&oS;</td><td>circledS</td><td>024C8</td><td>9416</td></tr>
+            <tr><td>&ominus;</td><td>CircleMinus</td><td>02296</td><td>8854</td></tr>
+            <tr><td>&CirclePlus;</td><td>CirclePlus</td><td>02295</td><td>8853</td></tr>
+            <tr><td>&CircleTimes;</td><td>CircleTimes</td><td>02297</td><td>8855</td></tr>
+            <tr><td>&cirE;</td><td>cirE</td><td>029C3</td><td>10691</td></tr>
+            <tr><td>&cire;</td><td>cire</td><td>02257</td><td>8791</td></tr>
+            <tr><td>&cirfnint;</td><td>cirfnint</td><td>02A10</td><td>10768</td></tr>
+            <tr><td>&cirmid;</td><td>cirmid</td><td>02AEF</td><td>10991</td></tr>
+            <tr><td>&cirscir;</td><td>cirscir</td><td>029C2</td><td>10690</td></tr>
+            <tr><td>&cwconint;</td><td>cwconint</td><td>02232</td><td>8754</td></tr>
+            <tr><td>&ClockwiseContourIntegral;</td><td>ClockwiseContourIntegral</td><td>02232</td><td>8754</td></tr>
+            <tr><td>&CloseCurlyDoubleQuote;</td><td>CloseCurlyDoubleQuote</td><td>0201D</td><td>8221</td></tr>
+            <tr><td>&CloseCurlyQuote;</td><td>CloseCurlyQuote</td><td>02019</td><td>8217</td></tr>
+            <tr><td>&clubs;</td><td>clubs</td><td>02663</td><td>9827</td></tr>
+            <tr><td>&clubsuit;</td><td>clubsuit</td><td>02663</td><td>9827</td></tr>
+            <tr><td>&Colon;</td><td>Colon</td><td>02237</td><td>8759</td></tr>
+            <tr><td>&colon;</td><td>colon</td><td>0003A</td><td>58</td></tr>
+            <tr><td>&Colone;</td><td>Colone</td><td>02A74</td><td>10868</td></tr>
+            <tr><td>&colone;</td><td>colone</td><td>02254</td><td>8788</td></tr>
+            <tr><td>&coloneq;</td><td>coloneq</td><td>02254</td><td>8788</td></tr>
+            <tr><td>&comma;</td><td>comma</td><td>0002C</td><td>44</td></tr>
+            <tr><td>&commat;</td><td>commat</td><td>00040</td><td>64</td></tr>
+            <tr><td>&comp;</td><td>comp</td><td>02201</td><td>8705</td></tr>
+            <tr><td>&compfn;</td><td>compfn</td><td>02218</td><td>8728</td></tr>
+            <tr><td>&complement;</td><td>complement</td><td>02201</td><td>8705</td></tr>
+            <tr><td>&complexes;</td><td>complexes</td><td>02102</td><td>8450</td></tr>
+            <tr><td>&cong;</td><td>cong</td><td>02245</td><td>8773</td></tr>
+            <tr><td>&congdot;</td><td>congdot</td><td>02A6D</td><td>10861</td></tr>
+            <tr><td>&Congruent;</td><td>Congruent</td><td>02261</td><td>8801</td></tr>
+            <tr><td>&Conint;</td><td>Conint</td><td>0222F</td><td>8751</td></tr>
+            <tr><td>&conint;</td><td>conint</td><td>0222E</td><td>8750</td></tr>
+            <tr><td>&ContourIntegral;</td><td>ContourIntegral</td><td>0222E</td><td>8750</td></tr>
+            <tr><td>&Copf;</td><td>Copf</td><td>02102</td><td>8450</td></tr>
+            <tr><td>&copf;</td><td>copf</td><td>1D554</td><td>120148</td></tr>
+            <tr><td>&coprod;</td><td>coprod</td><td>02210</td><td>8720</td></tr>
+            <tr><td>&Coproduct;</td><td>Coproduct</td><td>02210</td><td>8720</td></tr>
+            <tr><td>&copy;</td><td>copy</td><td>000A9</td><td>169</td></tr>
+            <tr><td>&copysr;</td><td>copysr</td><td>02117</td><td>8471</td></tr>
+            <tr><td>&crarr;</td><td>crarr</td><td>021B5</td><td>8629</td></tr>
+            <tr><td>&Cross;</td><td>Cross</td><td>02A2F</td><td>10799</td></tr>
+            <tr><td>&cross;</td><td>cross</td><td>02717</td><td>10007</td></tr>
+            <tr><td>&Cscr;</td><td>Cscr</td><td>1D49E</td><td>119966</td></tr>
+            <tr><td>&cscr;</td><td>cscr</td><td>1D4B8</td><td>119992</td></tr>
+            <tr><td>&csub;</td><td>csub</td><td>02ACF</td><td>10959</td></tr>
+            <tr><td>&csube;</td><td>csube</td><td>02AD1</td><td>10961</td></tr>
+            <tr><td>&csup;</td><td>csup</td><td>02AD0</td><td>10960</td></tr>
+            <tr><td>&csupe;</td><td>csupe</td><td>02AD2</td><td>10962</td></tr>
+            <tr><td>&ctdot;</td><td>ctdot</td><td>022EF</td><td>8943</td></tr>
+            <tr><td>&cudarrl;</td><td>cudarrl</td><td>02938</td><td>10552</td></tr>
+            <tr><td>&cudarrr;</td><td>cudarrr</td><td>02935</td><td>10549</td></tr>
+            <tr><td>&cuepr;</td><td>cuepr</td><td>022DE</td><td>8926</td></tr>
+            <tr><td>&cuesc;</td><td>cuesc</td><td>022DF</td><td>8927</td></tr>
+            <tr><td>&cularr;</td><td>cularr</td><td>021B6</td><td>8630</td></tr>
+            <tr><td>&cularrp;</td><td>cularrp</td><td>0293D</td><td>10557</td></tr>
+            <tr><td>&Cup;</td><td>Cup</td><td>022D3</td><td>8915</td></tr>
+            <tr><td>&cup;</td><td>cup</td><td>0222A</td><td>8746</td></tr>
+            <tr><td>&cupbrcap;</td><td>cupbrcap</td><td>02A48</td><td>10824</td></tr>
+            <tr><td>&CupCap;</td><td>CupCap</td><td>0224D</td><td>8781</td></tr>
+            <tr><td>&cupcap;</td><td>cupcap</td><td>02A46</td><td>10822</td></tr>
+            <tr><td>&cupcup;</td><td>cupcup</td><td>02A4A</td><td>10826</td></tr>
+            <tr><td>&cupdot;</td><td>cupdot</td><td>0228D</td><td>8845</td></tr>
+            <tr><td>&cupor;</td><td>cupor</td><td>02A45</td><td>10821</td></tr>
+            <tr><td>&cups;</td><td>cups</td><td>0222A + 0FE00</td><td>8746</td></tr>
+            <tr><td>&curarr;</td><td>curarr</td><td>021B7</td><td>8631</td></tr>
+            <tr><td>&curarrm;</td><td>curarrm</td><td>0293C</td><td>10556</td></tr>
+            <tr><td>&curlyeqprec;</td><td>curlyeqprec</td><td>022DE</td><td>8926</td></tr>
+            <tr><td>&curlyeqsucc;</td><td>curlyeqsucc</td><td>022DF</td><td>8927</td></tr>
+            <tr><td>&curlyvee;</td><td>curlyvee</td><td>022CE</td><td>8910</td></tr>
+            <tr><td>&curlywedge;</td><td>curlywedge</td><td>022CF</td><td>8911</td></tr>
+            <tr><td>&curren;</td><td>curren</td><td>000A4</td><td>164</td></tr>
+            <tr><td>&curvearrowleft;</td><td>curvearrowleft</td><td>021B6</td><td>8630</td></tr>
+            <tr><td>&curvearrowright;</td><td>curvearrowright</td><td>021B7</td><td>8631</td></tr>
+            <tr><td>&cuvee;</td><td>cuvee</td><td>022CE</td><td>8910</td></tr>
+            <tr><td>&cuwed;</td><td>cuwed</td><td>022CF</td><td>8911</td></tr>
+            <tr><td>&cwconint;</td><td>cwconint</td><td>02232</td><td>8754</td></tr>
+            <tr><td>&cwint;</td><td>cwint</td><td>02231</td><td>8753</td></tr>
+            <tr><td>&cylcty;</td><td>cylcty</td><td>0232D</td><td>9005</td></tr>
+        </table>
+    </div>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="ref_html_entities_b.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="ref_html_entities_d.html">Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">ПІДРУЧНИКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../html/index.html' class='btn-rightbar'>HTML</a>
+            <a href='../css/index.html' class='btn-rightbar'>CSS</a>
+            <a href='../css/css_rwd_intro.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index.html' class='btn-rightbar'>Кольори</a>
+            <a href='../icons/index.html' class='btn-rightbar'>Іконки</a>
+            <a href='../graphics/index.html' class='btn-rightbar'>Графіка</a>
+            <a href='../graphics/svg_intro.html' class='btn-rightbar'>Графіка SVG</a>
+            <a href='../graphics/canvas_intro.html' class='btn-rightbar'>Графіка Canvas</a>
+            <a href='../howto/index.html' class='btn-rightbar'>Як зробити?</a>
+            <a href='../sass/index.html' class='btn-rightbar'>Sass</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-довідники на сайті">ДОВІДНИКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../tags/index.html' class='btn-rightbar'>HTML-теги</a>
+            <a href='../tags/ref_html_browsersupport.html' class='btn-rightbar'>Підтримка браузерами</a>
+            <a href='../tags/ref_attributes.html' class='btn-rightbar'>HTML-атрибути</a>
+            <a href='../tags/ref_standardattributes.html' class='btn-rightbar'>Глобальні атрибути</a>
+            <a href='../tags/ref_eventattributes.html' class='btn-rightbar'>Атрибути подій</a>
+            <a href='../tags/ref_colornames.html' class='btn-rightbar'>HTML-кольори</a>
+            <a href='../tags/ref_canvas.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom.html' class='btn-rightbar'>Аудіо-Відео</a>
+            <a href='../tags/ref_charactersets.html' class='btn-rightbar'>Набори символів</a>
+            <a href='../tags/ref_html_dtd.html' class='btn-rightbar'>DOCTYPE</a>
+            <a href='../tags/ref_urlencode.html' class='btn-rightbar'>URL-кодування</a>
+            <a href='../tags/ref_language_codes.html' class='btn-rightbar'>Коди мов</a>
+            <a href='../tags/ref_country_codes.html' class='btn-rightbar'>Коди країн</a>
+            <a href='../tags/ref_httpmessages.html' class='btn-rightbar'>HTTP повідомлення</a>
+            <a href='../tags/ref_httpmethods.html' class='btn-rightbar'>HTTP методи</a>
+            <a href='../tags/ref_pxtoemconversion.html' class='btn-rightbar'>Конвертер Px в Em</a>
+            <a href='../tags/ref_keyboardshortcuts.html' class='btn-rightbar'>Гарячі клавіші</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">HTML Кодування</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../charsets/index.html' class='btn-rightbar'>Набори символів</a>
+            <a href='../charsets/ref_html_ascii.html' class='btn-rightbar'>ASCII Довідник</a>
+            <a href='../charsets/ref_html_ansi.html' class='btn-rightbar'>Win-1252 (ANSI)</a>
+            <a href='../charsets/ref_html_8859.html' class='btn-rightbar'>ISO-8859-1</a>
+            <a href='../charsets/ref_html_symbols.html' class='btn-rightbar'>HTML Символи</a>
+            <a href='../charsets/ref_html_utf8.html' class='btn-rightbar'>Unicode (UTF-8)</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб-Сертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+    Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
