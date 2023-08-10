@@ -15,7 +15,7 @@
 <link rel='stylesheet' href='../lib/prism1.css'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Java Багатовимірні масиви. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Java Багатовимірні масиви. Синтаксис. Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<meta name='description' content='Java Багатовимірні масиви. Доступ до елементів. Змінити значення елементів. Перебирання багатовимірного масиву. Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -483,18 +483,18 @@
     </div>
     <hr>
     <h2>Багатовимірні масиви</h2>
-    <p>Багатовимірний масив - це масив масивів.</p>
-    <p>Multidimensional arrays are useful when you want to store data as a tabular form, like a table with rows and columns.</p>
-    <p>To create a two-dimensional array, add each array within its own set of <b>curly braces</b>:</p>
+    <p><strong>Багатовимірний масив</strong> - це масив масивів.</p>
+    <p>Багатовимірні масиви корисні, коли ви хочете зберігати дані як табличну форму, наприклад таблицю з рядками та стовпцями.</p>
+    <p>Щоб створити двовимірний масив, додайте кожен масив у власний набір <b>фігурних дужок</b>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
 </code></pre>
     </div>
-    <p><b>myNumbers</b> is now an array with two arrays as its elements.</p>
+    <p><b>myNumbers</b> тепер є масивом з двома масивами як його елементами.</p>
     <hr>
-    <h2>Access Elements</h2>
-    <p>To access the elements of the <b>myNumbers</b> array, specify two indexes: one for the array, and one for the element inside that array. This example accesses the third element (2) in the second array (1) of myNumbers:</p>
+    <h2>Доступ до елементів</h2>
+    <p>Щоб отримати доступ до елементів масиву <b>myNumbers</b>, укажіть два індекси: один для масиву та інший для елемента всередині цього масиву. У цьому прикладі здійснюється доступ до третього елемента (2) у другому масиві (1) myNumbers:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
@@ -502,21 +502,21 @@ System.out.println(myNumbers[1][2]); // Outputs 7</code></pre>
         <a target="_blank" class="w3-btn" href="../javatryit/demo_array_multi.html">Спробуйте самі &raquo;</a>
     </div>
     <div class="w3-note w3-panel">
-        <p><b>Remember that:</b> Array indexes start with 0: [0] is the first element. [1] is the second element, etc.</p>
+        <p><b>Пам&#8217;ятайте, що:</b> індекси масиву починаються з 0: [0] є першим елементом. [1] — другий елемент і т.д.</p>
     </div>
     <hr>
-    <h2>Change Element Values</h2>
-    <p>You can also change the value of an element:</p>
+    <h2>Змінити значення елементів</h2>
+    <p>Ви також можете змінити значення елемента:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
 myNumbers[1][2] = 9;
-System.out.println(myNumbers[1][2]); // Outputs 9 instead of 7</code></pre>
+System.out.println(myNumbers[1][2]); // Виведе 9 замість 7</code></pre>
         <a target="_blank" class="w3-btn" href="../javatryit/demo_array_multi_change.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Loop Through a Multi-Dimensional Array</h2>
-    <p>We can also use a <code class="w3-codespan">for loop</code> inside another <code class="w3-codespan">for loop</code> to get the elements of a two-dimensional array (we still have to point to the two indexes):</p>
+    <h2>Перебирання багатовимірного масиву</h2>
+    <p>Ми також можемо використовувати <code class="w3-codespan">for loop</code> всередині іншого <code class="w3-codespan">for loop</code>, щоб отримати елементи двовимірного масиву (нам все ще потрібно вказати на два індекси):</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>public class Main {
@@ -534,10 +534,10 @@ System.out.println(myNumbers[1][2]); // Outputs 9 instead of 7</code></pre>
     <hr>
     <div>
         <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/java/exercise.asp?filename=exercise_arrays6" method="post" target="_blank">
-            <h2 class="shadow-black-1">Перевірте себе за допомогою вправ</h2>
+            <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
             <div class="exercisewindow">
                 <h2>Вправа:</h2>
-                <p>Insert the missing part to create a two-dimensional array.</p>
+                <p>Вставте відсутню частину, щоб створити двовимірний масив.</p>
                 <div class="exerciseprecontainer">
 <pre style="overflow: auto;">
 <input name="ex1" maxlength="7" style="width: 75px;"> myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
