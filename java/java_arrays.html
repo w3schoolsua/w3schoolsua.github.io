@@ -15,7 +15,7 @@
 <link rel='stylesheet' href='../lib/prism1.css'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Java Масиви. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Java Масиви. Синтаксис. Довжина масиву. Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<meta name='description' content='Java Масиви. Синтаксис. Доступ до елементів масиву. Змінити елемент масиву. Довжина масиву. Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -483,26 +483,26 @@
     </div>
     <hr>
     <h2>Java Масиви</h2>
-    <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
-    <p>To declare an array, define the variable type with <strong>square brackets</strong>:</p>
+    <p>Масиви використовуються для зберігання кількох значень в одній змінній замість оголошення окремих змінних для кожного значення.</p>
+    <p>Щоб оголосити масив, визначте тип змінної за допомогою <b>квадратних дужок</b>:</p>
     <div class="w3-example">
 <pre class="language-java w3-white"><code>String[] cars;
 </code></pre>
     </div>
-    <p>We have now declared a variable that holds an array of strings. To insert values to it, you can place the values in a comma-separated list, inside curly braces:</p>
+    <p>Тепер ми оголосили змінну, яка містить масив рядків. Щоб вставити в нього значення, ви можете розмістити значення в списку, розділеному комами, у фігурних дужках:</p>
     <div class="w3-example">
 <pre class="language-java w3-white"><code>String[] cars = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};
 </code></pre>
     </div>
-    <p>To create an array of integers, you could write:</p>
+    <p>Щоб створити масив цілих чисел, ви можете написати:</p>
     <div class="w3-example">
 <pre class="language-java w3-white"><code>int[] myNum = {10, 20, 30, 40};
 </code></pre>
     </div>
     <hr>
-    <h2>Access the Elements of an Array</h2>
-    <p>You can access an array element by referring to the index number.</p>
-    <p>This statement accesses the value of the first element in cars:</p>
+    <h2>Доступ до елементів масиву</h2>
+    <p>Ви можете отримати доступ до елемента масиву, посилаючись на номер індексу.</p>
+    <p>Ця інструкція отримує доступ до значення першого елемента в автомобілях:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>String[] cars = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};
@@ -512,11 +512,11 @@ System.out.println(cars[0]);
         <a target="_blank" class="w3-btn" href="../javatryit/demo_array.html">Спробуйте самі &raquo;</a>
     </div>
     <div class="w3-note w3-panel">
-        <p><b>Примітка:</b> Array indexes start with 0: [0] is the first element. [1] is the second element, etc.</p>
+        <p><b>Примітка:</b> Індекси масиву починаються з 0: [0] є першим елементом. [1] — другий елемент і т.д.</p>
     </div>
     <hr>
-    <h2>Change an Array Element</h2>
-    <p>To change the value of a specific element, refer to the index number:</p>
+    <h2>Змінити елемент масиву</h2>
+    <p>Щоб змінити значення певного елемента, зверніться до номера індексу:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>cars[0] = &quot;Opel&quot;;
@@ -527,18 +527,18 @@ System.out.println(cars[0]);
         <pre class="language-java w3-white"><code>String[] cars = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};
 cars[0] = &quot;Opel&quot;;
 System.out.println(cars[0]);
-// Now outputs Opel instead of Volvo
+// Тепер виведе Opel замість Volvo
 </code></pre>
         <a target="_blank" class="w3-btn" href="../javatryit/demo_array_change.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Array Length</h2>
-    <p>To find out how many elements an array has, use the <code class="w3-codespan">length</code> property:</p>
+    <h2>Довжина масиву</h2>
+    <p>Щоб дізнатися, скільки елементів має масив, скористайтеся властивістю <code class="w3-codespan">length</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>String[] cars = {&quot;Volvo&quot;, &quot;BMW&quot;, &quot;Ford&quot;, &quot;Mazda&quot;};
 System.out.println(cars.length);
-// Outputs 4
+// Виведе 4
 </code></pre>
         <a target="_blank" class="w3-btn" href="../javatryit/demo_array_length.html">Спробуйте самі &raquo;</a>
     </div>
@@ -548,7 +548,7 @@ System.out.println(cars.length);
             <h2 class="shadow-black-1">Перевірте себе за допомогою вправ</h2>
             <div class="exercisewindow">
                 <h2>Вправа:</h2>
-                <p>Create an array of type <code class="w3-codespan">String</code> called <code class="w3-codespan">cars</code>.</p>
+                <p>Створіть масив типу <code class="w3-codespan">String</code> під назвою <code class="w3-codespan">cars</code>.</p>
                 <div class="exerciseprecontainer">
 <pre style="overflow: auto;">
 <input name="ex1" maxlength="8" style="width: 85px;"> <input name="ex2" maxlength="4" style="width: 45px;"> = {"Volvo", "BMW", "Ford"};
