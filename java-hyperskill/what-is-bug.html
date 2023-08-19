@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Уроки мови програмування Java. W3Schools також пропонує безкоштовні онлайн-уроки, навчальні посібники, довідкові матеріали, завдання та вправи на більшості мов програмування та створення веб-сайтів. Охоплює найпопулярніші технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато іншого'>
+<script src='../lib/prism2.js'></script>
+<link rel='stylesheet' href='../lib/prism1.css'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Що таке баг (помилка)? Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Що таке баг (помилка)? Теорія. Етимологія помилки. Чому в програмах виникають помилки? Уникнення помилок. Налагодження (дебагінг). Висновок. Тестові завдання та відповіді. Підручник із сайту Hyperskill українською мовою. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Підручник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>ЯК ЗРОБИТИ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Підручник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Підручник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index.html'>Вивчити PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <nav>
+            <h2 class='left'><span class='left_h2'>Java</span> Підручник (hyperskill)</h2>
+            <a target='_top' href='index.html'>Початок навчання</a>
+            <a target='_top' href='computer-programming.html'>Введення в програмування</a>
+            <div class='tut_overview'>
+                <a target='_top' href='computer-programming.html'>Комп&#8217;ютерне програмування</a>
+                <a target='_top' href='paradigms.html'>Парадигми</a>
+            </div>
+            <a target='_top' href='oop-intro.html'>Введення в ООП</a>
+            <a target='_top' href='units-of-information.html'>Одиниці інформації</a>
+            <a target='_top' href='operating-systems.html'>Операційні системи</a>
+            <a target='_top' href='what-is-bug.html'>Якість ПЗ</a>
+            <div class='tut_overview'>
+                <a target='_top' href='what-is-bug.html'>Що таке баг?</a>
+                <a target='_top' href='intro-to-logging.html'>Інтро в логінг</a>
+            </div>
+            <a target='_top' href='write-compile-run.html'>JVM Основи</a>
+            <div class='tut_overview'>
+                <a target='_top' href='write-compile-run.html'>Write, compile, run</a>
+                <a target='_top' href='jvm-jre-jdk.html'>JVM, JRE, JDK</a>
+                <a target='_top' href='garbage-collectors.html'>Збирачі сміття</a>
+            </div>
+            <a target='_top' href='intellij-idea.html'>Інструменти розробника</a>
+            <div class='tut_overview'>
+                <a target='_top' href='intellij-idea.html'>IntelliJ IDEA</a>
+                <a target='_top' href='intellij-idea-basics.html'>Основи IntelliJ IDEA</a>
+                <a target='_top' href='jetbrains-academy-plugin.html'>Плагін JetBrains Academy</a>
+            </div>
+            <br>
+            <h2 class='left'><span class='left_h2'>Мови програмування</span></h2>
+            <a target='_top' href='java-intro.html'>Мова Java</a>
+            <div class='tut_overview'>
+                <a target='_top' href='java-intro.html'>Введення в Java</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java-intro.html'>Введення в Java</a>
+                    <a target='_top' href='basic-literals.html'>Базові літерали</a>
+                    <a target='_top' href='overview-of-the-basic-program.html'>Огляд базової програми</a>
+                    <a target='_top' href='printing-data.html'>Друк даних</a>
+                </div>
+                <a target='_top' href='types-and-variables.html'>Типи даних та змінні</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='types-and-variables.html'>Типи та змінні</a>
+                    <a target='_top' href='sizes-and-ranges.html'>Розміри та діапазони</a>
+                    <a target='_top' href='type-casting.html'>Кастинг типів</a>
+                    <a target='_top' href='primitive-and-reference-types.html'>Примітивний та еталонний типи</a>
+                    <a target='_top' href='final-variables.html'>Кінцеві змінні</a>
+                    <a target='_top' href='numeric-literals.html'>Числові літерали</a>
+                    <a target='_top' href='floating-point-types.html'>Типи з плаваючою комою</a>
+                    <a target='_top' href='type-of-references.html'>Типи посилань</a>
+                </div>
+                <a target='_top' href='.html'>Java</a>
+            </div>
+            
+
+            <br><br>
+        </nav>
+    </div>
+  </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/java_icon.svg' alt='Мова програмування Java. W3Schools українською. Уроки для початківців від hyperskill' class="w3-left w3-padding" title='Java для новачків. Уроки W3Schools українською' style='width:120px'></a><p class='w3-right'>
+    <a href='what-is-bug_en.html' title='Перейти на англійську мову'>En</a>
+</p>
+<article>
+    <h1>Якість програмного забезпечення. Що таке баг?</span></h1>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='operating-systems.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='intro-to-logging.html'>Next &#10095;</a>
+    </div>
+    <hr>
+    <h3>Теорія</h3>
+    <p><strong>Помилка програмного забезпечення</strong> – це проблема, яка спричиняє збій програми або видає недійсний результат. Є багато причин для програмних помилок; найпоширенішими з них є людські помилки в розробці програмного забезпечення, кодуванні або розумінні вимог.</p>
+    <p>Програму зазвичай називають <b>стабільною</b>, якщо вона не має багатьох очевидних помилок. Якщо програма має велику кількість помилок, які впливають на функціональність і викликають неправильні результати, вона вважається <b>з помилками</b> або <b>нестабільною</b>. Користувач не може успішно взаємодіяти з таким програмним забезпеченням. Важливо знайти помилки, <b>перш ніж</b> користувачі почнуть взаємодіяти з вашою програмою.</p>
+    <hr>
+    <h2>§1. Етимологія помилки</h2>
+    <img src="../images/bug.jpg" alt="Bug" class="w3-left w3-padding" style="width:240px">
+    <p>Ви, мабуть, уже чули термін &quot;bug&quot; (&quot;жук&quot;) і можете собі уявити, що воно означає. Ось невелика історія про це.</p>
+    <p>Першу комп&#8217;ютерну помилку виявила Грейс Мюррей у Гарвардському університеті в 1947 році, коли вона працювала над комп&#8217;ютером Mark II. Під час розслідування проблеми між контактами реле була виявлена справжня міль. Міль видалили та додали до бортового журналу, який зараз знаходиться в Національному музеї американської історії Смітсонівського інституту у Вашингтоні, округ Колумбія.</p>
+    <p>Отже, комп&#8217;ютерні помилки часто називають помилками (багами). Цей термін використовується для опису будь-якої неправильної поведінки програми, доки не буде визначено конкретний характер помилки.</p>
+    <p class="w3-warning">Деякі Інтернет-джерела подають іншу історію цього терміна. Ви можете погуглити, якщо вам цікаво. Повідомте нас, якщо ви вважаєте якусь історію найбільш вірогідною.</p>
+    <hr>
+    <h2>§2. Чому в програмах є помилки?</h2>
+    <p>Розробники часто кажуть, що програми без помилок не існує. Існує кілька поширених причин помилок у програмному забезпеченні:</p>
+    <ul>
+        <li>проблеми спілкування в команді;</li>
+        <li>нерозуміння вимог;</li>
+        <li>складність програмного забезпечення;</li>
+        <li>помилки програмування (програмісти, як і будь-хто інший, можуть робити помилки);</li>
+        <li>тиск часу;</li>
+        <li>використання незнайомих технологій;</li>
+        <li>помилка в сторонній бібліотеці (так, таке теж трапляється).</li>
+    </ul>
+    <p>Під час цього курсу ви в основному зіткнетеся з помилками, спричиненими неправильним розумінням заданих вимог або помилками програмування.</p>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>§3. Уникнення помилок</h2>
+    <p>Майже неможливо уникнути всіх помилок у великій програмі, але можливо зменшити їх кількість. Тут ми пропонуємо вам п&#8217;ять кроків, які можуть допомогти зробити це в освітніх курсах і промисловому програмуванні.</p>
+    <ol>
+        <li><b>Переконайтеся, що ви знаєте, що робити.</b> Як програміст, ви повинні розуміти вимоги програми, над якою збираєтеся працювати. Якщо у вас є сумніви, ви завжди можете знайти допомогу в Інтернеті чи серед інших розробників.</li>
+        <li><b>Розкладіть програму</b> на невеликі блоки, які легко переглянути та зрозуміти. Хороша архітектура зменшує складність програмного забезпечення і, як наслідок, кількість помилок.</li>
+        <li><b>Пишіть простий для читання код</b> і дотримуйтесь усіх стандартів мови. Це також дозволить вам робити менше помилок.</li>
+        <li><b>Запустіть програму</b> з граничними вхідними значеннями. Не забувайте враховувати різні випадки: 0 або величезне число як вхідне значення, 0 або 1 елемент як вхідну послідовність. Такі випадки часто виявляють помилки.</li>
+        <li><b>Напишіть автоматичні тести</b>, які перевірятимуть програму під час збирання.</li>
+    </ol>
+    <p>Ми не будемо обговорювати автоматичні тести в цій темі, але повернемося до них пізніше. У цей момент ви можете просто створити набір вхідних значень і запустити програму вручну (як описано в кроці 4).</p>
+    <hr>
+    <h2>§4. Налагодження</h2>
+    <p>Припустімо, ви знаєте, що ваша програма не працює належним чином для деяких вхідних значень. Щоб виправити цю помилку, вам потрібно знайти її в коді та внести деякі зміни.</p>
+    <p>Щоб знайти місце помилки, ви можете:</p>
+    <hr>
+    <ul>
+        <li>прочитайте код і спробуйте зрозуміти, що він робить для вхідних значень;</li>
+        <li>запустити налагоджувач (дебаггер) і переглянути поточні значення змінних і потік керування програмою;</li>
+        <li>роздрукувати поточний стан програми в критичних частинах коду (реєстрація), а потім проаналізувати його.</li>
+    </ul>
+    <p>Поєднання наведених вище підходів дозволить вам знайти більшість помилок у вашій програмі.</p>
+    <hr>
+    <h2>§5. Висновок</h2>
+    <p>Давайте підсумуємо цю тему. Помилка - це неправильна поведінка програми. Однак є способи зменшити кількість помилок. Наприклад, розуміння вимог програми, дотримання стандартів мови, побудова чіткої архітектури програми, перевірка програми за допомогою граничних значень і використання автоматизованих тестів.</p>
+    <p>Якщо ви все ще маєте помилку, перш за все, вам потрібно знайти її в коді. Для цього ви можете скористатися налагоджувачем (дебаггером) чи журналюванням (логінгом) або спробувати зрозуміти, що код робить із вхідними значеннями, прочитавши його. Скористайтеся цими порадами, і, швидше за все, ви уникнете написання програм з помилками та витрачання часу на їх налагодження.</p>
+    <p>Ви також можете переглянути <a href="https://hyperskill.org/learn/step/5504" target="_blank" rel="nofollow">Урок на hyperskill.org</a>.</p>
+    <hr>
+    <h2>Практичні завдання та відповіді</h2>
+    <p>Подаються завдання та варіанти відповідей. Правильний варіант виділено <span style="color:blue">синім</span> кольором.</p>
+    <h3>№1. Причина помилки</h3>
+    <p><b>Питання:</b> Групі розробників було доручено написати код, який обробляє вхідні дані на сайті. Вони написали програму, яка може читати паролі у вигляді цифр, імен і логінів.</p>
+    <p>Але вони отримали помилку під час тестування програми. Паролі, крім цифр, повинні містити також букви. Ви вже знаєте, які причини призводять до помилок. Отже, хто з них сприяв тому, що розробники провалилися?</p>
+    <p>Виберіть один або кілька варіантів зі списку:</p>
+    <ul>
+        <li>комп&#8217;ютери в офісі недостатньо хороші</li>
+        <li><span style="color:blue">нерозуміння вимог, оскільки вони були незрозумілими &#x2714;</span></li>
+        <li>слабке підключення до Інтернету</li>
+        <li>поганий настрій клієнта</li>
+    </ul>
+    <p><b>Пояснення.</b> Виходячи з наданої інформації, найбільш вірогідною причиною помилки в програмі є «нерозуміння вимог, оскільки вони були незрозумілими». Можливо, розробники неправильно витлумачили вимоги до паролів і не включили необхідний код, який гарантує, що паролі містять літери на додаток до цифр, імен і логінів. Важливо, щоб вимоги були чіткими та недвозначними, щоб уникнути таких проблем.</p>
+    <hr>
+    <h3>№2. Важливість налагодження</h3>
+    <p><b>Питання:</b> Чому важливо налагоджувати код?</p>
+    <p>Виберіть один варіант зі списку:</p>
+    <ul>
+        <li>тому що кожен у вашій команді так робить</li>
+        <li><span style="color:blue">щоб уникнути помилок у програмах &#x2714;</span></li>
+        <li>тому що так сказав головний розробник</li>
+        <li>просто для розваги (мені більш нічим зайнятись)</li>
+    </ul>
+    <p><b>Пояснення.</b> Важливо налагоджувати код, щоб уникнути помилок у програмах. Налагодження допомагає виявити та виправити проблеми в коді, що може запобігти помилкам і покращити загальну якість програми. Налагодження є важливою частиною процесу розробки програмного забезпечення та допомагає переконатися, що програма функціонує належним чином.</p>
+    <hr>
+    <h3>№3. Помилки програмного забезпечення</h3>
+    <p><b>Питання:</b> Виберіть основні причини програмних помилок:</p>
+    <p>Виберіть один або кілька варіантів зі списку:</p>
+    <ul>
+        <li><span style="color:blue">помилки програмування &#x2714;</span></li>
+        <li>погода на вулиці</li>
+        <li><span style="color:blue">проблема зі спілкуванням у команді (коли ти не працюєш сам) &#x2714;</span></li>
+        <li><span style="color:blue">нерозуміння вимог &#x2714;</span></li>
+    </ul>
+    <p><b>Пояснення.</b> Основними причинами програмних помилок є «програмні помилки» та «нерозуміння вимог». Помилки програмування можуть виникати через помилки, зроблені під час кодування, наприклад синтаксичні помилки, логічні помилки або неправильне використання змінних. Нерозуміння вимог може призвести до помилок, якщо розробники не повністю розуміють, що очікується від програми, або якщо вимоги нечіткі чи неповні. «Погода на вулиці» не є причиною програмних помилок, а «проблема зі спілкуванням у команді» може сприяти проблемам, але не є основною причиною помилок.</p>
+    <hr>
+    <h3>№4. Програма з великою кількістю помилок</h3>
+    <p><b>Питання:</b> Як можна описати програму, якщо в ній є велика кількість помилок, які впливають на функціональність і спричиняють неправильні результати?</p>
+    <p>Виберіть один варіант зі списку:</p>
+    <ul>
+        <li>це взагалі не програма</li>
+        <li>непотріб</li>
+        <li><span style="color:blue">нестабільна &#x2714;</span></li>
+        <li>неприродна</li>
+    </ul>
+    <p><b>Пояснення.</b> Якщо програма має велику кількість помилок, які впливають на її функціональність і спричиняють неправильні результати, її можна описати як "нестабільну". Це означає, що програма ненадійна і може працювати не так, як очікувалося. Важливо виявити та виправити ці помилки, щоб покращити стабільність і функціональність програми.</p>
+    <hr>
+    <h3>№5. Перший баг</h3>
+    <p><b>Питання:</b> У якому році була виявлена перша комп&#8217;ютерна помилка (баг)?</p>
+    <p>Виберіть один варіант зі списку:</p>
+    <ul>
+        <li>1948</li>
+        <li><span style="color:blue">1947 &#x2714;</span></li>
+        <li>1946</li>
+        <li>1945</li>
+    </ul>
+    <hr>
+    <h3>№6. Що таке баг (помилка)?</h3>
+    <p><b>Питання:</b> Баг - це:</p>
+    <p>Виберіть один варіант зі списку:</p>
+    <ul>
+        <li>проблема, яка спричиняє збій комп&#8217;ютера</li>
+        <li>нове завдання, яке програміст не може вирішити</li>
+        <li>нова частина коду, яка спричиняє збій комп&#8217;ютера або створює недійсні результати</li>
+        <li><span style="color:blue">проблема, яка спричиняє збій програми або видає недійсний результат &#x2714;</span></li>
+    </ul>
+    <p><b>Пояснення.</b> Баг - це "проблема, яка спричиняє збій програми або видає недійсний результат". Це помилка або недолік у коді, які можуть спричинити неочікувану поведінку або неправильні результати під час запуску програми. Помилки можуть виникати через помилки програмування, неправильне розуміння вимог або інші проблеми в процесі розробки. Щоб переконатися, що програма функціонує належним чином, важливо виявляти та виправляти помилки.</p>
+    <hr>
+    <h3>№7. Де помилка?</h3>
+    <p><b>Питання:</b> Ви пишете проєкт, використовуючи різні бібліотеки сторонніх розробників. У якийсь момент ви виявляєте, що програма видає неправильні значення. Ви перевірили свій код, але не знайшли жодних помилок. Де, швидше за все, можна знайти помилку?</p>
+    <p>Виберіть один варіант зі списку</p>
+    <ul>
+        <li><span style="color:blue">у бібліотеці третьої сторони &#x2714;</span></li>
+        <li>перевірте ще раз у своєму коді</li>
+        <li>в комп&#8217;ютерній системі</li>
+        <li>в Інтернеті</li>
+    </ul>
+    <p><b>Пояснення.</b> Якщо ви перевірили свій код і не знайшли жодних помилок, найвірогідніше місце для пошуку помилки – бібліотека третьої сторони. Можливо, у коді бібліотеки є помилка, яка спричиняє неправильний вихід. Можливо, вам знадобиться переглянути документацію для бібліотеки або звернутися до розробників бібліотеки, щоб отримати допомогу щодо виявлення та розв&#8217;язання проблеми.</p>
+    <hr>
+    <h3>№8. Як знайти помилку?</h3>
+    <p><b>Питання:</b> Що можна зробити, щоб знайти місце для баггі?</p>
+    <p>Виберіть одну або кілька опцій зі списку:</p>
+    <ul>
+        <li><span style="color:blue">запустити налагоджувач &#x2714;</span> </li>
+        <li><span style="color:blue">проаналізувати код &#x2714;</span></li>
+        <li><span style="color:blue">надрукувати поточний стан програми &#x2714;</span></li>
+        <li>переписати весь код</li>
+        <li>просто запустити код ще раз (а потім ще раз... ще раз... ще раз...)</li>
+    </ul>
+    <p><b>Пояснення.</b> Щоб знайти місце з помилками, можна почати з аналізу коду, щоб виявити потенційні помилки чи проблеми. Крім того, використання налагоджувача може допомогти покроково пройти через код і визначити конкретне місце, де виникає помилка. Друк поточного стану програми в різних точках коду також може бути корисним для визначення місця виникнення помилки. Переписувати весь код не потрібно, і це, як правило, неефективне рішення. Просто повторний запуск коду без внесення змін навряд чи розв&#8217;яже проблему.</p>
+    <hr>
+    <h3>№9. Зменшення кількості помилок</h3>
+    <p><b>Питання:</b> Яка з наведених нижче рекомендацій може зменшити кількість помилок у вашій програмі?</p>
+    <p>Виберіть один або кілька варіантів зі списку:</p>
+    <ul>
+        <li>написати весь код в одному місці (тобто файл, клас, метод)</li>
+        <li><span style="color:blue">запустити програму з граничними вхідними значеннями &#x2714;</span></li>
+        <li><span style="color:blue">зрозуміти, що вам потрібно для розвитку &#x2714;</span></li>
+        <li>написати складний і неочевидний код</li>
+    </ul>
+    <p><b>Пояснення.</b> Наступні рекомендації можуть зменшити кількість помилок у вашій програмі:</p>
+    <ul>
+        <li>Запустіть програму з граничними вхідними значеннями: це може допомогти виявити будь-які проблеми з обробкою програмою граничних випадків або неочікуваних вхідних даних.</li>
+        <li>Зрозумійте, що вам потрібно розробити: чітке розуміння вимог програми та очікуваної поведінки може допомогти уникнути непорозумінь і помилок у коді.</li>
+        <li>Уникайте написання складного та неочевидного коду: написання чіткого, простого та легкого для розуміння коду може зменшити ймовірність помилок і полегшити виявлення та вирішення будь-яких проблем, які виникають.</li>
+    </ul>
+    <p>Не рекомендується писати весь код в одному місці, оскільки це може ускладнити читання, розуміння та підтримку коду. Як правило, код краще організувати в окремі файли, класи або методи на основі їх функціональних можливостей.</p>
+    <hr>
+    <h3>№10. Як позбутися багів?</h3>
+    <p><b>Питання:</b> Уявіть, що ви написали код, і він не працює належним чином через помилки. Що ви можете зробити, щоб виправити код? Виберіть кілька можливих дій нижче:</p>
+    <p>Виберіть один або кілька варіантів зі списку:</p>
+    <ul>
+        <li><span style="color:blue">написати автоматизовані тести &#x2714;</span></li>
+        <li><span style="color:blue">створити набір вхідних значень і запустити програму вручну &#x2714;</span></li>
+        <li>сподіваюся, що все добре</li>
+        <li>переглянути програму та вгадати, чи вона правильна</li>
+    </ul>
+    <p><b>Пояснення.</b> Якщо ваш код не працює належним чином через помилки, такі дії можуть допомогти виправити код:</p>
+    <ul>
+        <li>Напишіть автоматичні тести: це може допомогти виявити конкретні проблеми в коді та переконатися, що вони виправлені перед розгортанням коду.</li>
+        <li>Створіть набір вхідних значень і запустіть програму вручну: це може допомогти виявити проблеми з обробкою програмою певних вхідних даних або граничних випадків.</li>
+        <li>Перегляньте програму та визначте потенційні проблеми: це може допомогти визначити конкретні області коду, які можуть спричиняти проблеми, і дозволить вам зосередити свої зусилля налагодження.</li>
+    </ul>
+    <p>Сподіватися, що все гаразд, не рекомендується, оскільки це навряд чи допоможе вирішити будь-які проблеми та може призвести до подальших проблем. Також не рекомендується вгадувати, чи програма правильна, оскільки це навряд чи буде ефективною стратегією налагодження.</p>
+    <hr>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='operating-systems.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='intro-to-logging.html'>Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">ПРОГРАМУВАННЯ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../python/index.html' class='btn-rightbar'>Python</a>
+            <a href='../java/index.html' class='btn-rightbar'>Java</a>
+            <a href='../c/index.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index.html' class='btn-rightbar'>R</a>
+            <a href='../kotlin/index.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../go/index.html' class='btn-rightbar'>Go</a>
+            <a href='../django/index.html' class='btn-rightbar'>Django</a>
+            <a href='../typescript/index.html' class='btn-rightbar'>TypeScript</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-довідники на сайті">СЕРВЕРНА СТОРОНА</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index.html' class='btn-rightbar'>ASP та ASP.NET</a>
+            <a href='../nodejs/index.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index.html' class='btn-rightbar'>Github Pages</a>
+            <a href='../mongodb/index.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб-Сертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+    Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
