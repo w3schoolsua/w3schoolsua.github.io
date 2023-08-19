@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Java programming language lessons. W3Schools also offers free online lessons, tutorials, reference materials, challenges and exercises in most programming and website building languages. Covers the most popular technologies such as HTML, CSS, JavaScript, PHP, Python, SQL, C++, C#, Kotlin, Go, Bootstrap frameworks, W3.CSS and many more'>
+<script src='../lib/prism2.js'></script>
+<link rel='stylesheet' href='../lib/prism1.css'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Standards and formats. Units of information. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='Units of information. Theory. Bit: the smallest unit of information. Byte: a sequence of eight bits. Large units of information. Measurement units conversion. Conclusion. Test tasks and answers. Tutorial from the Hyperskill website. Lessons for beginners. W3Schools in English'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src='https://cse.google.com/cse.js?cx=751c3d18bb8a64f00'></script><div class='gcse-search'></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_en.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_en.html' title='HTML Tutorial'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_en.html' title='CSS Tutorial'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_en.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_en.html' title='SQL Tutorial'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index_en.html' title='Python Tutorial'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index_en.html' title='PHP Tutorial'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_en.html' title='How To'>HOW TO</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_en.html' title='W3.CSS Tutorial'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index_en.html' title='jQuery Tutorial'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index_en.html' title='XML Tutorial'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index_en.html' title='Java Tutorial'>JAVA</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='More tutorials'>More <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Search'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Dark theme'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Download books for free from Google drive'>Books</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML & CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_en.html'>Learn HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_en.html'>Learn CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_en.html'>Learn RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html'>Learn Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_en.html'>Learn W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>Learn Colors</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_en.html'>Learn Icons</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_en.html'>Learn Graphics</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_en.html'>Learn SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_en.html'>Learn Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_en.html'>Learn How To</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_en.html'>Learn Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Data Analytics</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index_en.html'>Learn AI</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index_en.html'>Learn Generative AI</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_en.html'>Learn ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index_en.html'>Learn ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index_en.html'>Learn Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_en.html'>Learn JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_en.html'>Learn React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_en.html'>Learn jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index_en.html'>Learn Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_en.html'>Learn AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_en.html'>Learn JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_en.html'>Learn AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_en.html'>Learn AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_en.html'>Learn W3.JS</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index_en.html'>Learn Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_en.html'>Learn Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_en.html'>Learn C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_en.html'>Learn C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_en.html'>Learn C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_en.html'>Learn R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_en.html'>Learn Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_en.html'>Learn Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_en.html'>Learn Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_en.html'>Learn TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_en.html'>Learn SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_en.html'>Learn MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index_en.html'>Learn PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_en.html'>Learn PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_en.html'>Learn ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_en.html'>Learn Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_en.html'>Learn Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_en.html'>Learn Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_en.html'>Learn GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_en.html'>Learn MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_en.html'>Learn AWS Cloud</a>
+                    <h3>Web Building</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_en.html'>Where To Start</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_en.html'>Web Templates</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_en.html'>Web Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_en.html'>Code Editor</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_en.html'>Web Development</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_en.html'>Cyber Security</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_en.html'>Accessibility</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow'>Typing Speeds Test</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow'>Code Game</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Data Analytics</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_en.html'>Learn AI</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index_en.html'>Learn Generative AI</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_en.html'>Learn ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index_en.html'>Learn ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index_en.html'>Learn Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_en.html'>HTML Tag Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_en.html'>HTML Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_en.html'>HTML Event Reference</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>HTML Color Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_en.html'>HTML Attribute Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_en.html'>HTML Canvas Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_en.html'>HTML SVG Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_en.html'>Google Maps Reference</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_en.html'>CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_en.html'>CSS Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_en.html'>CSS Selector Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_en.html'>W3.CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_en.html'>Icons Reference</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_en.html'>Sass Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>JavaScript Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>HTML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_en.html'>AngularJS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_en.html'>AppML Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_en.html'>W3.JS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_en.html'>JS Ready Scripts</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_en.html'>Python Reference</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_en.html'>Java Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_en.html'>SQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_en.html'>MySQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_en.html'>PHP Reference</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_en.html'>ASP Reference</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_en.html'>XML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_en.html'>XML Http Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_en.html'>XSLT Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_en.html'>XML Schema Reference</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Character Sets</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_en.html'>HTML Character Sets</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_en.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_en.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_en.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_en.html'>HTML Symbols</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_en.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Exercises</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_en.html'>HTML Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_en.html'>CSS Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_en.html'>JavaScript Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_en.html'>SQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_en.html'>MySQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_en.html'>PHP Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_en.html'>Python Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_en.html'>NumPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_en.html'>Pandas Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_en.html'>SciPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_en.html'>jQuery Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_en.html'>Java Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_en.html'>Bootstrap Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_en.html'>Bootstrap 4 Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_en.html'>C++ Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_en.html'>C# Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_en.html'>R Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_en.html'>Kotlin Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_en.html'>Go Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_en.html'>Git Exercises</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Quizzes</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_en.html' target='_top'>HTML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_en.html' target='_top'>CSS Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_en.html' target='_top'>JavaScript Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_en.html' target='_top'>SQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_en.html' target='_top'>MySQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_en.html' target='_top'>PHP Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_en.html' target='_top'>Python Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_en.html' target='_top'>NumPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_en.html' target='_top'>Pandas Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_en.html' target='_top'>SciPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_en.html' target='_top'>jQuery Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_en.html' target='_top'>Java Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_en.html' target='_top'>Bootstrap Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_en.html' target='_top'>Bootstrap 4 Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_en.html' target='_top'>C++ Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_en.html' target='_top'>C# Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_en.html' target='_top'>R Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_en.html' target='_top'>XML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_en.html' target='_top'>Cyber Security Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_en.html' target='_top'>Accessibility Quiz</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Certificates</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_en.html' target='_top'>HTML Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_en.html' target='_top'>CSS Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_en.html' target='_top'>JavaScript Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_en.html' target='_top'>SQL Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_en.html' target='_top'>PHP Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_en.html' target='_top'>Python Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_en.html' target='_top'>jQuery Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_en.html' target='_top'>Bootstrap Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_en.html' target='_top'>XML Certificate</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu sidebar-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <nav>
+            <h2 class='left'><span class='left_h2'>Tutorial</span> (from hyperskill)</h2>
+            <a target='_top' href='index_en.html'>Start learning</a>
+            <a target='_top' href='computer-programming_en.html'>Intro to programming</a>
+            <div class='tut_overview'>
+                <a target='_top' href='computer-programming_en.html'>Computer programming</a>
+                <a target='_top' href='paradigms_en.html'>Paradigms</a>
+            </div>
+            <a target='_top' href='oop-intro_en.html'>Introduction to OOP</a>
+            <a target='_top' href='units-of-information_en.html'>Units of information</a>
+            <a target='_top' href='operating-systems_en.html'>Operating systems</a>
+            <a target='_top' href='what-is-bug_en.html'>Software quality</a>
+            <div class='tut_overview'>
+                <a target='_top' href='what-is-bug_en.html'>What is bug?</a>
+                <a target='_top' href='intro-to-logging_en.html'>Intro to logging</a>
+            </div>
+            <a target='_top' href='write-compile-run_en.html'>JVM Basics</a>
+            <div class='tut_overview'>
+                <a target='_top' href='write-compile-run_en.html'>Write, compile, run</a>
+                <a target='_top' href='jvm-jre-jdk_en.html'>JVM, JRE, JDK</a>
+                <a target='_top' href='garbage-collectors_en.html'>Garbage Collectors</a>
+            </div>
+            <a target='_top' href='intellij-idea_en.html'>Dev Tools</a>
+            <div class='tut_overview'>
+                <a target='_top' href='intellij-idea_en.html'>IntelliJ IDEA</a>
+                <a target='_top' href='intellij-idea-basics_en.html'>IntelliJ IDEA basics</a>
+                <a target='_top' href='jetbrains-academy-plugin_en.html'>JetBrains Academy plugin</a>
+            </div>
+            <br>
+            <h2 class='left'><span class='left_h2'>Programming languages</span></h2>
+            <a target='_top' href='java-intro_en.html'>Java Language</a>
+            <div class='tut_overview'>
+                <a target='_top' href='java-intro_en.html'>Introduction to Java</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java-intro_en.html'>Introduction to Java</a>
+                    <a target='_top' href='basic-literals_en.html'>Basic literals</a>
+                    <a target='_top' href='overview-of-the-basic-program_en.html'>Overview of the basic program</a>
+                    <a target='_top' href='printing-data_en.html'>Printing data</a>
+                </div>
+                <a target='_top' href='types-and-variables_en.html'>Data types and variables</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='types-and-variables_en.html'>Types and variables</a>
+                    <a target='_top' href='sizes-and-ranges_en.html'>Sizes and ranges</a>
+                    <a target='_top' href='type-casting_en.html'>Type casting</a>
+                    <a target='_top' href='primitive-and-reference-types_en.html'>Primitive and reference types</a>
+                    <a target='_top' href='final-variables_en.html'>Final variables</a>
+                    <a target='_top' href='numeric-literals_en.html'>Numeric literals</a>
+                    <a target='_top' href='floating-point-types_en.html'>Floating-point types</a>
+                    <a target='_top' href='type-of-references_en.html'>Types of references</a>
+                </div>
+
+
+                <a target='_top' href='_en.html'>Java</a>
+            </div>
+
+
+
+
+
+      <br><br>
+        </nav>
+    </div>
+  </div>
+</div>
+<!--/Left menu sidebar--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index_en.html'><img src='../svg/java_icon.svg' alt='Java programming language. Lessons for beginners from hyperskill' class="w3-left w3-padding" title='Java for Beginners. W3Schools in English' style='width:120px'></a><p class='w3-right'>
+    <a href='units-of-information.html' title='Go to Ukrainian language'>Ua</a>
+</p>
+<article>
+    <h1>Units of information</span></h1>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='oop-intro_en.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='operating-systems_en.html'>Next &#10095;</a>
+    </div>
+    <hr>
+    <h3>Theory</h3>
+    <p>Throughout life, we always find something to measure: the amount of food we need to cook for the family, the length and width of that couch you want to put in the room, our weight and height. The latter is especially exciting: it's really cool to learn that in just one year you grew by a full 2 inches!</p>
+    <p>Each measurement requires an instrument and its own <strong>unit of measurement</strong>. For example, body weight is measured with scales in kilograms (or pounds), time is measured with clocks in seconds, etc. But how does one measure information?</p>
+    <hr>
+    <h2>§1. Bit: the smallest unit of information</h2>
+    <p>The information entered into the computer should be specific and unambiguous. For a long time, people have used ciphers. The simplest and most convenient of them were digital. Any information from the names of flowers to the days of the week can be presented in the form of numbers. When processed using a traditional computer, data is encoded numerically and stored in files, ultimately represented by the electrical signals that dictate the computer's operational speed.</p>
+    <p>For the convenience of distinguishing, signals of two levels are used in classical electronic computers. One of them corresponds to the number <span class="h-codespan">1</span>, and the other to <span class="h-codespan">0</span>. Any letter, sound, or image on a computer is represented by a set of numbers. The numbers <span class="h-codespan">1</span> and <span class="h-codespan">0</span> are called <b>binary</b>. These are the symbols that make up the language understood and used by the computer. Any information on the computer is represented by binary digits: <span class="h-codespan">1</span>, meaning <b>"there is a signal"</b> or <b>"there is a high signal"</b> and <span class="h-codespan">0</span>, meaning <b>"no signal"</b> or <b>"there is a low signal"</b>.</p>
+    <p>The smallest unit of information is the <b>bit (b)</b>.</p>
+    <p>Each digit of the machine binary code carries the amount of information equal to one bit. It can take only one of two values: either <span class="h-codespan">1</span> or <span class="h-codespan">0</span>. It is very inconvenient to measure information in bits because the numbers come out too big.</p>
+    <hr>
+    <h2>§2. Byte: a sequence of eight bits</h2>
+    <p>Like people do not consider the mass of ships in grams, larger and hence more convenient units were invented for measuring information as well.</p>
+    <p>The processing of information takes place in the processor. This is a device that can work with several bits at once (8, 16, 32, 64, ...). Most computers nowadays process 8 bits of information simultaneously, so we needed a new unit of measurement which was called a <b>byte (B)</b>, which means <b>8 bits</b>.</p>
+    <p>Bit marks are easily confused with byte marks. Note that the abbreviations for bit numbers use the lowercase letter <b>"b"</b>, while bytes are denoted using the capital <b>"B"</b>.</p>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>§3. Large units of information</h2>
+    <p>Given the advanced capabilities of modern computers, the storage capacity has expanded to accommodate significantly larger units of information, surpassing the traditional byte scale.</p>
+    <p>The computer industry has historically used the units <b>kilobyte</b>, <b>megabyte</b>, and <b>gigabyte</b> in at least two slightly different measurement systems, which are slightly contradictory to each other.</p>
+    <ul>
+        <li>The first one is a decimal-based system, which uses bytes in powers of ten: <b>kilobyte</b> (10^3 bytes), <b>megabyte</b> (10^6 bytes), <b>gigabyte</b> (10^9 bytes), and so on. These units are used by the <a href="https://en.wikipedia.org/wiki/International_System_of_Units" target="_blank" rel="nofollow">International System of Units</a> (SI).</li>
+        <li>The second one is a binary-based system that uses bytes in powers of two: <b>kibibyte</b> (2^10 bytes), <b>mebibyte</b> (2^20 bytes), <b>gibibyte</b> (2^30 bytes), and so on. This system was actively used to describe computer memory.</li>
+    </ul>
+    <p>To resolve this confusion, the <a href="https://en.wikipedia.org/wiki/International_Electrotechnical_Commission" target="_blank" rel="nofollow">International Electrotechnical Commission</a> (IEC) suggested using prefixes <b>kilo</b>, <b>mega</b>, and <b>giga</b> only for the decimal-based system and using new prefixes <b>kibi</b>, <b>mebi</b>, and <b>gibi</b> for the binary-based system. Here <b>bi</b> means <b>bi</b>nary: <b>kibibyte</b> is <b>ki</b>lo <b>bi</b>nary <b>byte</b>.</p>
+    <p>Here is a table with commonly used units of information according to modern international standards.</p>
+
+    <table class="w3-table-all w3-card-4">
+        <tbody>
+        <tr>
+            <th>SI metric</th>
+            <th>Symbol</th>
+            <th>Powers of ten</th>
+            <th>IEC metric</th>
+            <th>Symbol</th>
+            <th>Powers of two</th>
+        </tr>
+        <tr>
+            <td>Kilobyte</td>
+            <td>kB</td>
+            <td>10^3 B (1000 B)</td>
+            <td>Kibibyte</td>
+            <td>KiB</td>
+            <td>2^10 B (or 1024 B)</td>
+        </tr>
+        <tr>
+            <td>Megabyte</td>
+            <td>MB</td>
+            <td>10^6 B (1000 kB)</td>
+            <td>Mebibyte</td>
+            <td>MiB</td>
+            <td>2^20 B (or 1024 KiB)</td>
+        </tr>
+        <tr>
+            <td>Gigabyte</td>
+            <td>GB</td>
+            <td>10^9 B (1000 MB)</td>
+            <td>Gibibyte</td>
+            <td>GiB</td>
+            <td>2^30 B (or 1024 MiB)</td>
+        </tr>
+        <tr>
+            <td>Terabyte</td>
+            <td>TB</td>
+            <td>10^12 B (1000 GB)</td>
+            <td>Tebibyte</td>
+            <td>TiB</td>
+            <td>2^40 B (or 1024 GiB)</td>
+        </tr>
+        <tr>
+            <td>Petabyte</td>
+            <td>PB</td>
+            <td>10^15 B (1000 TB)</td>
+            <td>Pebibyte</td>
+            <td>PiB</td>
+            <td>2^50 B (or 1024 TiB)</td>
+        </tr>
+        </tbody>
+    </table>
+    <p>Of course, not all units of measurement are listed here. We hope this classification will not confuse you.</p>
+    <p>Note that some people and organizations still prefer <b>kilo</b>, <b>mega</b>, and <b>giga</b> to describe powers of two. In this course, we follow the recommendations of the IEC and use the modern prefixes <b>kibi</b>, <b>mebi</b>, and <b>gibi</b>.</p>
+    <hr>
+    <h2>§4. Measurement units conversion</h2>
+    <p>To strengthen your newly obtained knowledge, let's look at the solution of a rather typical problem where you need to convert 1 GiB to KiB. When we convert bigger units into smaller ones, we need to resort to an arithmetic operation called multiplication:</p>
+    <p class="h-codespan">1 GiB = 1KiB * 1024 * 1024 = 1048576 KiB</p>
+    <p>Accordingly, when you need to convert small units into big ones, you use division. Let's try to convert <b>16384</b> bits to <b>KiB</b>:</p>
+    <p class="h-codespan">16384 bits = (16384 / 8) / 1024 = 2 KiB</p>
+    <p>If you want to convert <b>1 GB</b> to <b>kB</b>, you should multiply the number by a thousand twice:</p>
+    <p class="h-codespan">1 GB = 1kB * 1000 * 1000 = 1000000 kB</p>
+    <p>Congratulations, now you have studied one of the basic topics of computer science and are ready to reach new dizzying heights of knowledge.</p>
+    <hr>
+    <h2>§5. Conclusion</h2>
+    <p>To wrap-up:</p>
+    <ul>
+        <li>The smallest unit of information is a bit.</li>
+        <li>One byte consists of 8 bits.</li>
+        <li>For convenience in computer science, we use binary-based units of information such as bytes, kibibytes, mebibytes, etc.</li>
+        <li>To convert one kibibyte to bytes, we need to multiply 1 by <b>2<sup>10</sup></b> to convert one mebibyte, we need to multiply 1 by <b>2<sup>20</sup></b>, etc.</li>
+    </ul>
+    <hr>
+    <p>You can also view <a href="https://hyperskill.org/learn/step/6865" target="_blank" rel="nofollow">Lesson on hyperskill.org</a>.</p>
+    <hr>
+    <h2>Practical tasks and answers</h2>
+    <p>Tasks and answer options are given. The correct option is highlighted in <span style="color:blue">blue</span> color.</p>
+    <h3>№1. Convert bytes into bits</h3>
+    <p><b>Question:</b> How many bits are there in 12 bytes?</p>
+    <p>How many bits are there in 12 bytes? If the answer is a decimal fraction, separate the parts with the dot symbol:</p>
+    <p>Answer: Enter a short text: 96</p>
+    <hr>
+    <h3>№2. From smallest to largest</h3>
+    <p><b>Question:</b> Sort the units of information from the smallest to the largest. The largest unit should be at the bottom of the list.</p>
+    <p>Put the items in the correct order:</p>
+    <ul>
+        <li>bit</li>
+        <li>byte</li>
+        <li>kilobyte</li>
+        <li>megabyte</li>
+    </ul>
+    <hr>
+    <h3>№3. Convert bits into bytes</h3>
+    <p><b>Question:</b> How many bytes are in 256 bits? If the answer is a decimal fraction, separate the parts with the dot symbol.</p>
+    <p>Enter a short text: 32</p>
+    <hr>
+    <h3>№4.  The smallest unit of information</h3>
+    <p><b>Question:</b> What is the smallest unit of information called?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>kilobyte</li>
+        <li>byte</li>
+        <li>microbyte</li>
+        <li><span style="color:blue">bit &#x2714;</span></li>
+        <li>microbit</li>
+        <li>bite</li>
+        <li>minibit</li>
+    </ul>
+    <hr>
+    <h3>№5. Statements</h3>
+    <p><b>Question:</b> Choose the right statements about decimal-based and binary-based systems.</p>
+    <p>Select one or more options from the list:</p>
+    <ul>
+        <li>decimal-based system uses kibibyte, mebibyte, gibibyte</li>
+        <li><span style="color:blue">decimal-based system uses kilobyte, megabyte, gigabyte &#x2714;</span></li>
+        <li><span style="color:blue">binary-based system uses kibibyte, mebibyte, gibibyte &#x2714;</span></li>
+        <li>binary-based system uses kilobyte, megabyte, gigabyte</li>
+    </ul>
+    <hr>
+    <h3>№6. Convert bytes into kibibytes</h3>
+    <p><b>Question:</b> How many KiB are there in 1536 B? If the answer is a decimal fraction, separate the parts with the dot symbol. [HINT]Remember the difference between KiB and KB.[/HINT]</p>
+    <p>Enter a short text: 1.5</p>
+    <hr>
+    <h3>№7. Convert GiB into MiB</h3>
+    <p><b>Question:</b> How many MiB are there in 0.5 GiB?</p>
+    <p>Enter a short text: 512</p>
+    <hr>
+    <h3>№8. 1 and 0</h3>
+    <p><b>Question:</b> Any information in a classical computer is represented by binary digits: 1 and 0. But what do they mean? Select all correct statements.</p>
+    <p>Select one or more options from the list:</p>
+    <ul>
+        <li>1 is not used for presentation of information</li>
+        <li><span style="color:blue">0 means "no signal" &#x2714;</span></li>
+        <li>0 is not used for presentation of information</li>
+        <li>0 means "there is a signal"</li>
+        <li>1 means "no signal"</li>
+        <li><span style="color:blue">1 means "there is a signal" &#x2714;</span></li>
+    </ul>
+    <hr>
+    <h3>№9. The units of information</h3>
+    <p><b>Question:</b> Match the units of information with their values:</p>
+    <p>Match the items from left and right columns:</p>
+    <ul>
+        <li>1 kilobyte = 1000 bytes</li>
+        <li>1 megabyte = 1000 kilobytes</li>
+        <li>1 gigabyte = 1000 megabytes</li>
+        <li>1 terabyte = 1000 gigabytes</li>
+        <li>1 petabyte = 1000 terabytes</li>
+    </ul>
+    <hr>
+    <h3>№10. Convert bytes to kilobytes in a function</h3>
+    <p class="w3-warning">Hey there! This problem might be a bit unpredictable, but give it a go and let us know how you do!</p>
+    <p><b>Question:</b> Given a certain number of bytes, your task is to convert them to kilobytes. However, the function to do so appears to be unfinished. Your task is to fill in the blanks in the provided Python function to accurately convert the given amount of bytes to kilobytes. This function takes an integer as an argument, representing the number of bytes, and returns a formatted string representation of the kilobytes value.</p>
+    <div class="w3-example">
+        <p>Fill in the gaps with the relevant code elements:</p>
+        <div class="w3-code notranslate pythonHigh">
+            def bytes_to_kilobytes(bytes):<br>
+            &nbsp;&nbsp;&nbsp;return f"{bytes / 1024} Kilobytes"<br><br>
+            print(bytes_to_kilobytes(5000))
+        </div>
+        <p>Variants: bytes, 1024, kilobytes.</p>
+    </div>
+    <hr>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='oop-intro_en.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='operating-systems_en.html'>Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker_en.html'>COLOR PICKER</a></h4>
+        <a href='../colors/colors_picker_en.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">PROGRAMMING</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../python/index_en.html' class='btn-rightbar'>Python</a>
+            <a href='../java/index_en.html' class='btn-rightbar'>Java</a>
+            <a href='../c/index_en.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index_en.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index_en.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index_en.html' class='btn-rightbar'>R</a>
+            <a href='../kotlin/index_en.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../go/index_en.html' class='btn-rightbar'>Go</a>
+            <a href='../django/index_en.html' class='btn-rightbar'>Django</a>
+            <a href='../typescript/index_en.html' class='btn-rightbar'>TypeScript</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online guides on the site">SERVER-SIDE</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index_en.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index_en.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index_en.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index_en.html' class='btn-rightbar'>ASP та ASP.NET</a>
+            <a href='../nodejs/index_en.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi_en.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index_en.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index_en.html' class='btn-rightbar'>Github Pages</a>
+            <a href='../mongodb/index_en.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index_en.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>CONTACTS</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>PRINT PAGE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>BLOG</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index_en.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ABOUT</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Contacts</h2>
+      <p>If you want to report a bug, as well as make an offer for the site, add an ad or advertisement on the site, do not hesitate to send an email to the admin:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Tutorial</h4>
+        <a href='../html/index_en.html'>HTML Tutorial</a><br>
+        <a href='../css/index_en.html'>CSS Tutorial</a><br>
+        <a href='../js/index_en.html'>JavaScript Tutorial</a><br>
+        <a href='../sql/index_en.html'>SQL Tutorial</a><br>
+        <a href='../python/index_en.html'>Python Tutorial</a><br>
+        <a href='../php/index_en.html'>PHP Tutorial</a><br>
+        <a href='../bootstrap/bootstrap_ver_en.html'>Bootstrap Tutorial</a><br>
+        <a href='../w3css/index_en.html'>W3.CSS Tutorial</a><br>
+        <a href='../appml/index_en.html'>AppML Tutorial</a><br>
+        <a href='../jquery/index_en.html'>jQuery Tutorial</a><br>
+        <a href='../angular/index_en.html'>Angular Tutorial</a><br>
+        <a href='../sass/index_en.html'>Sass Tutorial</a><br>
+        <a href='../java/index_en.html'>Java Tutorial</a><br>
+        <a href='../cpp/index_en.html'>C++ Tutorial</a><br>
+        <a href='../cs/index_en.html'>C# Tutorial</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top References</h4>
+        <a href='../tags/index_en.html'>HTML Reference</a><br>
+        <a href='../cssref/index_en.html'>CSS Reference</a><br>
+        <a href='../jsref/index_en.html'>JavaScript Reference</a><br>
+        <a href='../sql/sql_ref_keywords_en.html'>SQL Reference</a><br>
+        <a href='../python/python_reference_en.html'>Python Reference</a><br>
+        <a href='../php/php_ref_overview_en.html'>PHP Reference</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a><br>
+        <a href='../w3css/w3css_references_en.html'>W3.CSS Reference</a><br>
+        <a href='../appml/appml_reference_en.html'>Appml Reference</a><br>
+        <a href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a><br>
+        <a href='../angular/angular_ref_directives_en.html'>Angular Reference</a><br>
+        <a href='../sass/sass_functions_string_en.html'>Sass Reference</a><br>
+        <a href='../java/java_ref_keywords_en.html'>Java Reference</a><br>
+        <a href='../colors/colors_names_en.html'>Colors Reference</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Examples</h4>
+        <a href='../html/html_examples_en.html'>HTML Examples</a><br>
+        <a href='../css/css_examples_en.html'>CSS Examples</a><br>
+        <a href='../js/js_examples_en.html'>JavaScript Examples</a><br>
+        <a href='../sql/sql_examples_en.html'>SQL Examples</a><br>
+        <a href='../python/python_examples_en.html'>Python Examples</a><br>
+        <a href='../php/php_examples_en.html'>PHP Examples</a><br>
+        <a href='../bootstrap/bootstrap_examples_en.html'>Bootstrap Examples</a><br>
+        <a href='../w3css/w3css_examples_en.html'>W3.CSS Examples</a><br>
+        <a href='../jquery/jquery_examples_en.html'>jQuery Examples</a><br>
+        <a href='../angular/angular_examples_en.html'>Angular Examples</a><br>
+        <a href='../java/java_examples_en.html'>Java Examples</a><br>
+        <a href='../cpp/cpp_examples_en.html'>C++ Examples</a><br>
+        <a href='../cs/cs_examples_en.html'>C# Examples</a><br>
+        <a href='../xml/xml_examples_en.html'>XML Examples</a><br>
+        <a href='../howto/index_en.html'>How To Examples</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_en.html'>Web Certificates</a></h4>
+        <a href='../cert/cert_html_en.html'>HTML Certificate</a><br>
+        <a href='../cert/cert_css_en.html'>CSS Certificate</a><br>
+        <a href='../cert/cert_javascript_en.html'>JavaScript Certificate</a><br>
+        <a href='../cert/cert_frontend_en.html'>Front End Certificate</a><br>
+        <a href='../cert/cert_python_en.html'>Python Certificate</a><br>
+        <a href='../cert/cert_datascience_en.html'>Data Science Certificate</a><br>
+        <a href='../cert/cert_jquery_en.html'>jQuery Certificate</a><br>
+        <a href='../cert/cert_sql_en.html'>SQL Certificate</a><br>
+        <a href='../cert/cert_php_en.html'>PHP Certificate</a><br>
+        <a href='../cert/cert_java_en.html'>Java Certificate</a><br>
+        <a href='../cert/cert_bootstrap_en.html'>Bootstrap Certificate</a><br>
+        <a href='../cert/cert_xml_en.html'>XML Certificate</a><br>
+        <a href='../cert/career_tips_en.html'>Career planning</a><br>
+        <a href='../cert/career_cv_en.html'>Writing a resume</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>This site is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our <a href='../about/about_copyright_en.html'>terms of use</a>, <a href='../about/about_privacy_en.html'>cookie and privacy policy</a>.<br>
+You can also use the Ukrainian version of the site <a href='../index.html'><strong>W3Schools українською</strong></a>.<br>
+    <a href='../about/about_copyright_en.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index_en.html'>W3Schools is Powered by W3.CSS</a>.<br><br>
+    <a href='../index_en.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
