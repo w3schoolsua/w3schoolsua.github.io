@@ -576,6 +576,33 @@
         <p>Variants: bytes, 1024, kilobytes.</p>
     </div>
     <hr>
+    <h3>№11. Completing a function for file size conversion</h3>
+    <p>Hey there! This problem might be a bit unpredictable, but give it a go and let us know how you do!</p>
+    <p><b>Question:</b> You have received a code snippet that is intended to convert a file size from bytes to kilobytes and print the result. However, some parts of the code are missing. Your task is to determine what values or code statements will correctly fill the blanks in the code (marked with '▭'), so the function operates properly. Remember that 1 Kilobyte equals 1024 bytes:</p>
+    <div class="w3-example">
+        <p>Fill in the gaps with the relevant code elements:</p>
+        <div class="w3-code notranslate pythonHigh">
+        def convert_bytes_to_kilobytes():<br>
+        &nbsp; &nbsp; &nbsp;kilobytes = bytes /<br>
+        &nbsp; &nbsp; &nbsp;return str(kilobytes) + " "<br><br>
+        bytes_size = 5120<br>
+        print(convert_bytes_to_kilobytes(bytes_size))
+        </div>
+        <p>Variants: KB, bytes, 1024.</p>
+    </div>
+    <p>Solution:</p>
+    <div class="w3-example">
+    <p>The correct code to fill in the gaps would be:</p>
+        <div class="w3-code notranslate pythonHigh">
+            def convert_bytes_to_kilobytes(bytes):<br>
+            &nbsp; &nbsp; &nbsp;kilobytes = bytes / 1024<br>
+            &nbsp; &nbsp; &nbsp;return str(kilobytes) + " KB"<br><br>
+            bytes_size = 5120<br>
+            print(convert_bytes_to_kilobytes(bytes_size))
+        </div>
+    </div>
+    <p><b>Explanation.</b> This will define a function convert_bytes_to_kilobytes() that takes a bytes argument and returns the size in kilobytes as a string with "KB" appended. The function calculates the size in kilobytes by dividing the number of bytes by 1024. The bytes_size variable is set to 5120, which is the number of bytes to be converted to kilobytes. Finally, the print() function is used to call convert_bytes_to_kilobytes() with the bytes_size argument and print the result.</p>
+    <hr>
     <div class='w3-clear nextprev'>
         <a class='w3-left w3-btn' href='oop-intro_en.html'>&#10094; Prev</a>
         <a class='w3-right w3-btn' href='operating-systems_en.html'>Next &#10095;</a>

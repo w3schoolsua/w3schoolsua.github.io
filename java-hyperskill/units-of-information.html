@@ -573,6 +573,33 @@
         <p>Варіанти: bytes, 1024, kilobytes.</p>
     </div>
     <hr>
+    <h3>№11. Завершення функції для перетворення розміру файлу</h3>
+    <p>Привіт! Ця проблема може бути дещо непередбачуваною, але спробуйте її та повідомте нам, як у вас справи!</p>
+    <p><b>Питання:</b> Ви отримали фрагмент коду, призначений для перетворення розміру файлу з байтів на кілобайти та друку результату. Однак деякі частини коду відсутні. Ваше завдання полягає в тому, щоб визначити, які значення або оператори коду правильно заповнять пробіли в коді (позначені «▭»), щоб функція працювала належним чином. Пам’ятайте, що 1 кілобайт дорівнює 1024 байтам:</p>
+    <div class="w3-example">
+        <p>Заповніть пропуски відповідними елементами коду:</p>
+        <div class="w3-code notranslate pythonHigh">
+            def convert_bytes_to_kilobytes():<br>
+            &nbsp; &nbsp; &nbsp;kilobytes = bytes /<br>
+            &nbsp; &nbsp; &nbsp;return str(kilobytes) + " "<br><br>
+            bytes_size = 5120<br>
+            print(convert_bytes_to_kilobytes(bytes_size))
+        </div>
+        <p>Варіанти: KB, bytes, 1024.</p>
+    </div>
+    <p>Рішення:</p>
+    <div class="w3-example">
+        <p>Правильним кодом для заповнення прогалин буде:</p>
+        <div class="w3-code notranslate pythonHigh">
+            def convert_bytes_to_kilobytes(bytes):<br>
+            &nbsp; &nbsp; &nbsp;kilobytes = bytes / 1024<br>
+            &nbsp; &nbsp; &nbsp;return str(kilobytes) + " KB"<br><br>
+            bytes_size = 5120<br>
+            print(convert_bytes_to_kilobytes(bytes_size))
+        </div>
+    </div>
+    <p><b>Пояснення.</b> Це визначить функцію convert_bytes_to_kilobytes(), яка приймає аргумент bytes і повертає розмір у кілобайтах у вигляді рядка з додаванням "KB". Функція обчислює розмір у кілобайтах шляхом ділення кількості байтів на 1024. Змінна bytes_size має значення 5120, тобто кількість байтів, яку потрібно перетворити на кілобайти. Нарешті, функція print() використовується для виклику convert_bytes_to_kilobytes() з аргументом bytes_size і друку результату.</p>
+    <hr>
     <div class='w3-clear nextprev'>
         <a class='w3-left w3-btn' href='oop-intro.html'>&#10094; Prev</a>
         <a class='w3-right w3-btn' href='operating-systems.html'>Next &#10095;</a>
