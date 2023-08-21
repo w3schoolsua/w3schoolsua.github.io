@@ -437,122 +437,153 @@
     <p>So, we've figured out what logs are and what they are for. We've also learned what types of logs there are and how we can issue a log message. Now you can start using logs to monitor the operation of your system at any given time.</p>
     <hr>
     <p>You can also view <a href="https://hyperskill.org/learn/step/5538" target="_blank" rel="nofollow">Lesson on hyperskill.org</a>.</p>
-
-<!--
+    <hr>
     <h2>Practical tasks and answers</h2>
     <p>Tasks and answer options are given. The correct option is highlighted in <span style="color:blue">blue</span> color.</p>
-
-
-    <h3>№1. Kernels</h3>
-    <p><b>Question:</b> Find the correct definitions.</p>
-    <p>Match the items from left and right columns:</p>
-    <ul>
-        <li>Monolithic kernel - is a program that performs most of the OS functions;</li>
-        <li>Microkernel - performs a smaller subset of the OS functions, can be extended with additional modules - drivers;</li>
-        <li>Kernel -  is a mandatory part of any OS, it's core.</li>
-    </ul>
-    <hr>
-    <h3>№2. GUI</h3>
-    <p><b>Question:</b> What does GUI stand for?</p>
+    <h3>№1. Unexpected results</h3>
+    <p><b>Question:</b> Which log level would you use to write a message stating that there was a mistake in the program, and thus the result does not coincide with the expected?</p>
     <p>Select one option from the list:</p>
     <ul>
-        <li><span style="color:blue">Graphical User Interface</span></li>
-        <li>General User Interface</li>
-        <li>Get Updated Information</li>
-        <li>Graphical User Instruction</li>
+        <li>Debug</li>
+        <li><span style="color:blue">Error &#x2714;</span></li>
+        <li>Fatal</li>
+        <li>Info</li>
     </ul>
+    <p><b>Explanation.</b> The appropriate log level to write a message stating that there was a mistake in the program and the result does not coincide with the expected is Error.</p>
     <hr>
-    <h3>№3. Terms</h3>
-    <p><b>Question:</b> Match the terms with their definitions:</p>
-    <p>Match the items from left and right columns:</p>
-    <ul>
-        <li>OS - Manages computer hardware, software resources, and provides common services for computer programs;</li>
-        <li>Kernel - The main part of any operating system providing programs with coordinated access to computer resources;</li>
-        <li>CLI - Text-based interface in which a person interacts with a computer with commands;</li>
-        <li>GUI - User interface that allows users to interact with the device using graphical icons.</li>
-    </ul>
+    <h3>№2. Adding debug logs for a math operation script</h3>
+    <p><b>Question:</b> Fill the blanks in the following Python script to add logging for debugging purposes. The script aims to perform a simple math operation (division), but it is failing due to an unhandled exception. Your task is to fill the blanks to complete the logging configuration.</p>
+    <div class="w3-example">
+        <p>Fill in the gaps with the relevant code elements:</p>
+        <div class="w3-code notranslate pythonHigh">
+            import<br><br>
+            def example_function():<br>
+            &nbsp; &nbsp;logging.basicConfig(level=logging.INFO)<br>
+            &nbsp; &nbsp; &nbsp; &nbsp;('This is an example info log')<br>
+            &nbsp; &nbsp;try:<br>
+            &nbsp; &nbsp; &nbsp; &nbsp;print(5/0)<br>
+            &nbsp; &nbsp;except Exception as e:<br>
+            &nbsp; &nbsp; &nbsp; &nbsp;('Exception occurred', exc_info=True)<br><br>
+            example_function()
+        </div>
+        <p>Variants: logging, logging.info, logging.error.</p>
+    </div>
+    <p>Solution:</p>
+    <div class="w3-example">
+        <p>Here is the completed Python script with logging added:</p>
+        <div class="w3-code notranslate pythonHigh">
+            import logging<br><br>
+            def example_function():<br>
+            &nbsp; &nbsp;logging.basicConfig(level=logging.INFO)<br>
+            &nbsp; &nbsp;logging.info('This is an example info log')<br>
+            &nbsp; &nbsp;try:<br>
+            &nbsp; &nbsp; &nbsp; &nbsp;print(5/0)<br>
+            &nbsp; &nbsp;except Exception as e:<br>
+            &nbsp; &nbsp;logging.error('Exception occurred', exc_info=True)<br><br>
+            example_function()
+        </div>
+    </div>
+    <p><b>Explanation.</b> In this updated script, we have imported the logging module. We then configure the logging level to INFO using basicConfig. We then add an info log message to indicate that the function is running. Inside the try block, we attempt to perform a math operation that will raise an exception. If an exception is raised, we log an error message with exc_info=True, which will include the stack trace in the log output.</p>
     <hr>
-    <h3>№4. Main function</h3>
-    <p><b>Question:</b> What is the main function of an OS?</p>
-    <p>Select one option from the list:</p>
-    <ul>
-        <li>It secures access to the user data with logins and passwords</li>
-        <li>It performs all the arithmetic and logic operations</li>
-        <li><span style="color:blue">It controls the communication between all the computer software and hardware</span></li>
-        <li>It supplies power to all components of a computer</li>
-    </ul>
-    <hr>
-    <h3>№5. Match concepts</h3>
-    <p><b>Question:</b> Try to guess and find correct matches between the concepts on the left with what corresponds to the concepts on the right based on the theory.</p>
-    <p>Match the items from left and right columns:</p>
-    <ul>
-        <li>User space - Application and Libraries;</li>
-        <li>Hardware - Processor, Memory and Device management;</li>
-        <li>Operating System - Processor, Memory, Devices;</li>
-    </ul>
-    <hr>
-    <h3>№6. OS</h3>
-    <p><b>Question:</b> Select all operating systems:</p>
-    <p>Select one or more options from the list</p>
-    <ul>
-        <li><span style="color:blue">iOS</span></li>
-        <li><span style="color:blue">macOS</span></li>
-        <li><span style="color:blue">Android</span></li>
-        <li>GUI</li>
-        <li><span style="color:blue">Microsoft Windows</span></li>
-        <li>Kernel</li>
-        <li>CLI</li>
-    </ul>
-    <hr>
-    <h3>№7. CLI</h3>
-    <p><b>Question:</b> What does CLI stand for?</p>
-    <p>Select one option from the list </p>
-    <ul>
-        <li>Command Language Interpreter</li>
-        <li>Command-Line Interpreter</li>
-        <li>Common Linux Interface</li>
-        <li><span style="color:blue">Command-Line Interface</span></li>
-        <li>Call-Level Interface</li>
-    </ul>
-    <hr>
-    <h3>№8. Riddle from Sphinx</h3>
-    <p><b>Question:</b> Now, based on the theory try to answer a riddle from the famous Sphinx:</p>
-        <p>&quot;A thing there is whose types are two:<br>
-        Large one of them and many things can do,<br>
-        Small second one and do a few,<br>
-        Important both are from any point of view.<br>
-        When you turn your computer on<br>
-        It loads early, one of the first&quot;.</p>
-    <p>Select one option from the list:</p>
-    <ul>
-        <li><span style="color:blue">kernel</span></li>
-        <li>operating system</li>
-        <li>BIOS</li>
-        <li>driver</li>
-    </ul>
-    <hr>
-    <h3>№9. Interaction</h3>
-    <p><b>Question:</b> What are the interfaces that allow users to interact with the device?</p>
+    <h3>№3. Log format</h3>
+    <p><b>Question:</b> What are the basic things to be mentioned in a log according to the examples from the topic?</p>
     <p>Select one or more options from the list:</p>
     <ul>
-        <li>User Space Interface</li>
-        <li><span style="color:blue">Graphical User Interface</span></li>
-        <li><span style="color:blue">Command Line Interface</span></li>
-        <li>OS Process Management</li>
+        <li><span style="color:blue">date &#x2714;</span></li>
+        <li><span style="color:blue">log level &#x2714;</span></li>
+        <li><span style="color:blue">time &#x2714;</span></li>
+        <li>developer's facebook status</li>
+        <li>user's phone number</li>
+        <li><span style="color:blue">log message &#x2714;</span></li>
     </ul>
+    <p><b>Explanation.</b> It is important to include a clear and concise log message that describes what happened, along with the date and time of the event and the log level to indicate the severity of the event. Developer's Facebook status or user's phone number are not relevant information to be included in a log.</p>
     <hr>
-    <h3>№10. OS features</h3>
-    <p><b>Question:</b> Select the features that relate directly to the operating system:</p>
+    <h3>№4. Common reasons</h3>
+    <p><b>Question:</b> What are the common reasons for generating a log? Choose several answers.</p>
     <p>Select one or more options from the list:</p>
     <ul>
-        <li><span style="color:blue">File management</span></li>
-        <li>Playing audio and video files</li>
-        <li><span style="color:blue">Communication between hardware and peripherals</span></li>
-        <li><span style="color:blue">Resource management</span></li>
-        <li>Retrieving and displaying the content of the websites</li>
-        <li><span style="color:blue">Data protection and secure access</span></li>
+        <li>downloading a website</li>
+        <li><span style="color:blue">finding a problem &#x2714;</span></li>
+        <li>ordering pizza online</li>
+        <li><span style="color:blue">statistics &#x2714;</span></li>
     </ul>
-    -->
+    <p><b>Explanation.</b> Logs are often used to troubleshoot issues or identify bugs in software. They can also be used to gather statistics or other information about how a system is performing. Downloading a website or ordering pizza online are not common reasons for generating a log.</p>
+    <hr>
+    <h3>№5. Termination of the program</h3>
+    <p><b>Question:</b> Suppose your program encountered a problem that caused it to stop working completely. What log level can you use to log this issue?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>Debug</li>
+        <li>Info</li>
+        <li>Warn</li>
+        <li>Error</li>
+        <li><span style="color:blue">Fatal &#x2714;</span></li>
+    </ul>
+    <p><b>Explanation.</b> The appropriate log level to use when a program encounters an issue that causes it to stop working completely is Fatal. The Fatal log level indicates that the application has encountered a severe error and is unable to continue running. This log level should be used when the application is in an unrecoverable state and must be terminated immediately.</p>
+    <hr>
+    <h3>№6. Connecting to a database server</h3>
+    <p><b>Question:</b> Your application is going to connect to a database server. You want to log configuration data of the database server. Which log level is more appropriate for that?</p>
+    <p>Select one option from the list</p>
+    <ul>
+        <li>Debug</li>
+        <li><span style="color:blue">Info &#x2714;</span></li>
+        <li>Warn</li>
+        <li>Error</li>
+        <li>Fatal</li>
+    </ul>
+    <p><b>Explanation.</b> The appropriate log level to use when logging configuration data of a database server is Info. The Info log level is used to provide information about the application's state and behavior, and is appropriate for logging details such as configuration data. This log level indicates that the application is functioning normally and provides useful information for troubleshooting and debugging.</p>
+    <hr>
+    <h3>№7. Not a good practice</h3>
+    <p><b>Question:</b> Which of the following is NOT a good practice for logging?</p>
+    <p>Select one option from the list</p>
+    <ul>
+        <li>Doing structural logging</li>
+        <li>Do contextual logging</li>
+        <li><span style="color:blue">Logging every function call &#x2714;</span></li>
+        <li>Use logging instance for each class</li>
+    </ul>
+    <p><b>Explanation.</b> Logging every function call is NOT a good practice for logging. While logging can be a useful tool for troubleshooting and debugging, it is important to use it judiciously to avoid cluttering the log with unnecessary information. Logging every function call can quickly lead to an overwhelming amount of log data, making it difficult to identify relevant information. Instead, it is better to focus on doing structural logging and contextual logging, and to use a logging instance for each class to organize log messages and make them easier to manage.</p>
+    <hr>
+    <h3>№8. Creating a simple logging functionality</h3>
+    <p><b>Question:</b> Suppose you've been tasked with creating a simple logging functionality in a Python application. Your alloted task includes setting the log level to INFO and logging a message 'Intro to logging in Python'. Fill the blanks in the provided code to complete this function:</p>
+    <div class="w3-example">
+        <p>Fill in the gaps with the relevant code elements:</p>
+        <div class="w3-code notranslate pythonHigh">
+            import&nbsp;&nbsp;<br>
+            <br>
+            def intro_to_logging():<br>
+            &nbsp; &nbsp;logging.&nbsp;&nbsp;(level=logging.INFO)<br>
+            &nbsp; &nbsp;logging.&nbsp;&nbsp;("Intro to logging in Python")<br>
+            <br>
+            intro_to_logging()
+        </div>
+        <p>Variants: info, logging, basicConfig.</p>
+    </div>
+    <p>Solution:</p>
+    <div class="w3-example">
+        <p>Here is the completed Python script with logging added:</p>
+        <div class="w3-code notranslate pythonHigh">
+            import logging<br>
+            <br>
+            def intro_to_logging():<br>
+            &nbsp; &nbsp;logging.basicConfig(level=logging.INFO)<br>
+            &nbsp; &nbsp;logging.info("Intro to logging in Python")<br>
+            <br>
+            intro_to_logging()
+        </div>
+        <p><b>Explanation.</b> In this updated script, we have imported the logging module. We then configure the logging level to INFO using basicConfig. We then add an info log message to indicate that the function is running. The log message "Intro to logging in Python" will be displayed in the console output.</p>
+    </div>
+    <hr>
+    <h3>№9. The order of logging based on severity</h3>
+    <p><b>Question:</b> What is the ORDER of Log Level based on Severity? Reorder the following log levels from least severity (top) to highest severity (bottom).</p>
+    <p>Put the items in the correct order:</p>
+    <ul>
+        <li>Debug (least severe)</li>
+        <li>Info</li>
+        <li>Warn</li>
+        <li>Error</li>
+        <li>Fatal (most severe)</li>
+    </ul>
     <hr>
     <div class='w3-clear nextprev'>
         <a class='w3-left w3-btn' href='what-is-bug_en.html'>&#10094; Prev</a>
