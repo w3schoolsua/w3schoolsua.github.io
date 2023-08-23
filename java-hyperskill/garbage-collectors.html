@@ -434,95 +434,95 @@
     <hr>
     <h2>Практичні завдання та відповіді</h2>
     <p>Подаються завдання та варіанти відповідей. Правильний варіант виділено <span style="color:blue">синім</span> кольором.</p>
-    <h3>№1. Invoking GC using Runtime</h3>
-    <p><b>Question:</b> Select the statement that describes what the following line of code does to the garbage collector:</p>
+    <h3>№1. Виклик GC за допомогою середовища виконання</h3>
+    <p><b>Питання:</b> Виберіть інструкцію, яка описує, що робить наступний рядок коду зі збирачем сміття:</p>
     <span class="h-codespan">Runtime.getRuntime().gc()</span>
-    <p>Select one option from the list:</p>
+    <p>Виберіть один варіант зі списку:</p>
     <ul>
-        <li>It does not affect the behavior of the GC</li>
-        <li>Forces the GC to be executed immediately</li>
-        <li><span style="color:blue">Requests the GC to be executed, but it doesn't necessarily happen &#x2714;</span></li>
-        <li>Forces the GC to be executed exactly one second later</li>
+        <li>Це не впливає на поведінку GC</li>
+        <li>Примусово негайно виконується GC</li>
+        <li><span style="color:blue">Запитує на виконання GC, але це не обов&#8217;язково відбувається &#x2714;</span></li>
+        <li>Примусово виконується GC рівно через одну секунду</li>
     </ul>
-    <p><b>Explanation.</b> The statement "Runtime.getRuntime().gc()" requests the GC to be executed, but it doesn't necessarily happen.</p>
+    <p><b>Пояснення.</b> Інструкція "Runtime.getRuntime().gc()" вимагає виконання GC, але це не обов&#8217;язково відбувається.</p>
     <hr>
-    <h3>№2. Why do we need it</h3>
-    <p><b>Question:</b> What's the purpose of the garbage collection process?</p>
-    <p>Select one option from the list:</p>
+    <h3>№2. Навіщо нам це</h3>
+    <p><b>Питання:</b> Яка мета процесу збору сміття?</p>
+    <p>Виберіть один варіант зі списку:</p>
     <ul>
-        <li>To reduce the number of required variables</li>
-        <li>To create new objects</li>
-        <li><span style="color:blue">To clean the memory from unused objects &#x2714;</span></li>
-        <li>To terminate a program</li>
+        <li>Щоб зменшити кількість необхідних змінних</li>
+        <li>Щоб створити нові об&#8217;єкти</li>
+        <li><span style="color:blue">Щоб очистити пам&#8217;ять від невикористаних об&#8217;єктів &#x2714;</span></li>
+        <li>Щоб завершити роботу програми</li>
     </ul>
-    <p><b>Explanation.</b> The purpose of the garbage collection process is to clean the memory from unused objects.</p>
+    <p><b>Пояснення.</b> Метою процесу збирання сміття є очищення пам&#8217;яті від невикористаних об&#8217;єктів.</p>
     <hr>
-    <h3>№3. Getting the used memory using Runtime</h3>
-    <p><b>Question:</b> How can you get the currently used memory size in bytes with the following calls?</p>
+    <h3>№3. Отримання використаної пам&#8217;яті за допомогою середовища виконання</h3>
+    <p><b>Питання:</b> Як можна отримати поточний обсяг використаної пам&#8217;яті в байтах за допомогою наступних викликів?</p>
     <ol>
-        <li><span class="h-codespan">Runtime.getRuntime().totalMemory()</span>, which returns the amount of memory (in bytes) available for created and future objects.</li>
-        <li><span class="h-codespan">Runtime.getRuntime().freeMemory()</span>, which returns the amount of memory (in bytes) available for future objects.</li>
+        <li><span class="h-codespan">Runtime.getRuntime().totalMemory()</span>, який повертає обсяг пам&#8217;яті (у байтах), доступний для створених і майбутніх об&#8217;єктів.</li>
+        <li><span class="h-codespan">Runtime.getRuntime().freeMemory()</span>, який повертає обсяг пам&#8217;яті (у байтах), доступний для майбутніх об&#8217;єктів.</li>
     </ol>
-    <p>Select one option from the list:</p>
+    <p>Виберіть один варіант зі списку:</p>
     <ul>
         <li><span style="color:blue">Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory() &#x2714;</span></li>
         <li>(Runtime.getRuntime().totalMemory() + Runtime.getRuntime().freeMemory()) / 1024</li>
         <li>Runtime.getRuntime().freeMemory() - Runtime.getRuntime().totalMemory()</li>
         <li>Runtime.getRuntime().totalMemory() / 1024</li>
     </ul>
-    <p><b>Explanation.</b> The currently used memory size in bytes can be obtained by subtracting the amount of free memory from the total memory available, like this: Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory().</p>
+    <p><b>Пояснення.</b> Поточний обсяг використовуваної пам&#8217;яті в байтах можна отримати шляхом віднімання обсягу вільної пам&#8217;яті від загальної доступної пам&#8217;яті, наприклад: Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory( ).</p>
     <hr>
-    <h3>№4. Save resources</h3>
-    <p><b>Question:</b> What does the garbage collector save?</p>
-    <p>Select one option from the list:</p>
+    <h3>№4. Економте ресурси</h3>
+    <p><b>Питання:</b> Що економить збирач сміття?</p>
+    <p>Виберіть один варіант зі списку:</p>
     <ul>
-        <li>CPU</li>
-        <li>Disk memory</li>
-        <li>Network traffic</li>
+        <li>ЦП</li>
+        <li>Дискова пам&#8217;ять</li>
+        <li>Мережевий трафік</li>
         <li><span style="color:blue">RAM &#x2714;</span></li>
     </ul>
-    <p><b>Explanation.</b> The garbage collector saves RAM (Random Access Memory) by freeing up memory occupied by unused objects.</p>
+    <p><b>Пояснення.</b> Збирач сміття зберігає RAM (оперативну пам&#8217;ять), звільняючи пам&#8217;ять, зайняту невикористаними об&#8217;єктами.</p>
     <hr>
-    <h3>№5. What can be collected</h3>
-    <p><b>Question:</b> Consider code that does the following:</p>
+    <h3>№5. Що можна збирати</h3>
+    <p><b>Питання.</b> Розглянемо код, який робить наступне:</p>
     <ol>
-        <li>Creates a string array bookNames and an integer array bookPages, both of length 1000.</li>
-        <li>Creates 1000 objects of the class Book with a string member bookInfo composed using bookNames and bookPages values of the same index.</li>
-        <li>Prints bookInfo of all created book objects.</li>
+        <li>Створює рядковий масив bookNames і цілий масив bookPages, обидва довжиною 1000.</li>
+        <li>Створює 1000 об&#8217;єктів класу Book із рядковим членом bookInfo, складеним із використанням значень bookNames і bookPages з тим самим індексом.</li>
+        <li>Друкує bookInfo усіх створених об&#8217;єктів книги.</li>
     </ol>
-    <p>What can be cleaned up during the garbage collection process after each of the steps above? Assume that the program starts right before step 1 and terminates right after step 3 without performing any additional operations.</p>
-    <p>Match the items from left and right columns:</p>
+    <p>Що можна очистити під час процесу збирання сміття після кожного з кроків, наведених вище? Припустімо, що програма запускається безпосередньо перед кроком 1 і завершується відразу після кроку 3 без виконання будь-яких додаткових операцій.</p>
+    <p>Установіть відповідність між елементами лівого та правого стовпців:</p>
     <ul>
-        <li>After step 1 - None of the mentioned objects</li>
-        <li>After step 2 - bookNames and bookPages arrays</li>
-        <li>After step 3 - Objects of the Book class</li>
+        <li>Після кроку 1 – Жоден зі згаданих об&#8217;єктів</li>
+        <li>Після кроку 2 – масиви bookNames і bookPages</li>
+        <li>Після кроку 3 - Об&#8217;єкти класу Book</li>
     </ul>
-    <p><b>Explanation.</b> 1. Creation time no destruction and expulsion; 2. GC time for small parts; 3. GC time for whole objects.</p>
+    <p><b>Пояснення.</b> 1. Час створення без руйнування та вигнання; 2. Час GC для дрібних деталей; 3. Час GC для цілих об&#8217;єктів.</p>
     <hr>
-    <h3>№6. GC behavior</h3>
-    <p><b>Question:</b> Select one correct statement about the garbage collector.</p>
-    <p>Select one option from the list:</p>
+    <h3>№6. Поведінка GC</h3>
+    <p><b>Запитання:</b> Виберіть одне правильне твердження про збирач сміття.</p>
+    <p>Виберіть один варіант зі списку:</p>
     <ul>
-        <li>Programmers should manually call the GC before stopping the program to avoid memory leaks</li>
-        <li>The GC cleans memory only when there is no free memory left</li>
-        <li>The GC automatically cleans memory only before program termination</li>
-        <li><span style="color:blue">The GC works automatically while a program is running &#x2714;</span></li>
+        <li>Програмісти повинні вручну викликати GC перед зупинкою програми, щоб уникнути витоку пам&#8217;яті</li>
+        <li>GC очищає пам&#8217;ять лише тоді, коли вільної пам&#8217;яті немає</li>
+        <li>GC автоматично очищає пам&#8217;ять лише перед завершенням програми</li>
+        <li><span style="color:blue">GC працює автоматично під час виконання програми &#x2714;</span></li>
     </ul>
-    <p><b>Explanation.</b> The GC works automatically while a program is running.</p>
+    <p><b>Пояснення.</b> GC працює автоматично під час виконання програми.</p>
     <hr>
-    <h3>№7. Invoking GC</h3>
-    <p><b>Question:</b> How can you request the garbage collector to perform cleaning?</p>
-    <p>Select one or more options from the list:</p>
+    <h3>№7. Виклик GC</h3>
+    <p><b>Питання:</b> Як ви можете попросити збирача сміття виконати очищення?</p>
+    <p>Виберіть один або кілька варіантів зі списку:</p>
     <ul>
         <li>System.out.println("need gc")</li>
         <li>GC.clean()</li>
         <li><span style="color:blue">Runtime.getRuntime().gc() &#x2714;</span></li>
         <li><span style="color:blue">System.gc() &#x2714;</span></li>
     </ul>
-    <p><b>Explanation.</b> You can request the garbage collector to perform cleaning using Runtime.getRuntime().gc() or System.gc().</p>
+    <p><b>Пояснення.</b> Ви можете попросити збирача сміття виконати очищення за допомогою Runtime.getRuntime().gc() або System.gc().</p>
     <hr>
     <div class="w3-info">
-        <h3>Що таке збирання сміття?</h3>
+        <h3>Що таке збирання сміття в Java?</h3>
         <p>Збирання сміття – це процес, під час якого віртуальна машина Java (JVM) автоматично звільняє пам&#8217;ять, яка більше не використовується об&#8217;єктами в програмі. Коли програма Java створює об&#8217;єкти, JVM виділяє пам&#8217;ять для зберігання цих об&#8217;єктів. Однак, коли об&#8217;єкт більше не потрібен, він стає придатним для збору сміття. Збирач сміття ідентифікує та видаляє ці невикористані об&#8217;єкти, звільняючи пам&#8217;ять для використання іншими об&#8217;єктами. Цей процес допомагає запобігти витокам пам&#8217;яті та покращує продуктивність програми, зменшуючи обсяг пам&#8217;яті, якою має керувати сама програма. У Java розробникам не потрібно вручну звільняти пам&#8217;ять, оскільки JVM піклується про це через автоматичне збирання сміття.</p>
     </div>
     <hr>
