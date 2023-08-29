@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Java programming language lessons. W3Schools also offers free online lessons, tutorials, reference materials, challenges and exercises in most programming and website building languages. Covers the most popular technologies such as HTML, CSS, JavaScript, PHP, Python, SQL, C++, C#, Kotlin, Go, Bootstrap frameworks, W3.CSS and many more'>
+<script src='../lib/prism2.js'></script>
+<link rel='stylesheet' href='../lib/prism1.css'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Dev tools. Integrated Development Environment (IDE). Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='Dev tools.  Integrated Development Environment (IDE). Theory. Use keyboard shortcuts. Go to the dark side. Local Terminal. Conclusion. Practical tasks and answers. Tutorial from the Hyperskill website. Lessons for beginners. W3Schools in English'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src='https://cse.google.com/cse.js?cx=751c3d18bb8a64f00'></script><div class='gcse-search'></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_en.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_en.html' title='HTML Tutorial'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_en.html' title='CSS Tutorial'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_en.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_en.html' title='SQL Tutorial'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index_en.html' title='Python Tutorial'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index_en.html' title='PHP Tutorial'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_en.html' title='How To'>HOW TO</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_en.html' title='W3.CSS Tutorial'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index_en.html' title='jQuery Tutorial'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index_en.html' title='XML Tutorial'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index_en.html' title='Java Tutorial'>JAVA</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='More tutorials'>More <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Search'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Dark theme'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Download books for free from Google drive'>Books</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML & CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_en.html'>Learn HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_en.html'>Learn CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_en.html'>Learn RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html'>Learn Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_en.html'>Learn W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>Learn Colors</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_en.html'>Learn Icons</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_en.html'>Learn Graphics</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_en.html'>Learn SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_en.html'>Learn Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_en.html'>Learn How To</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_en.html'>Learn Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Data Analytics</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index_en.html'>Learn AI</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index_en.html'>Learn Generative AI</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_en.html'>Learn ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index_en.html'>Learn ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index_en.html'>Learn Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_en.html'>Learn JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_en.html'>Learn React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_en.html'>Learn jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index_en.html'>Learn Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_en.html'>Learn AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_en.html'>Learn JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_en.html'>Learn AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_en.html'>Learn AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_en.html'>Learn W3.JS</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index_en.html'>Learn Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_en.html'>Learn Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_en.html'>Learn C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_en.html'>Learn C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_en.html'>Learn C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_en.html'>Learn R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_en.html'>Learn Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_en.html'>Learn Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_en.html'>Learn Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_en.html'>Learn TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_en.html'>Learn SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_en.html'>Learn MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index_en.html'>Learn PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_en.html'>Learn PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_en.html'>Learn ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_en.html'>Learn Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_en.html'>Learn Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_en.html'>Learn Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_en.html'>Learn GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_en.html'>Learn MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_en.html'>Learn AWS Cloud</a>
+                    <h3>Web Building</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_en.html'>Where To Start</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_en.html'>Web Templates</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_en.html'>Web Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_en.html'>Code Editor</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_en.html'>Web Development</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_en.html'>Cyber Security</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_en.html'>Accessibility</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow'>Typing Speeds Test</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow'>Code Game</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Data Analytics</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_en.html'>Learn AI</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index_en.html'>Learn Generative AI</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_en.html'>Learn ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index_en.html'>Learn ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index_en.html'>Learn Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_en.html'>HTML Tag Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_en.html'>HTML Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_en.html'>HTML Event Reference</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>HTML Color Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_en.html'>HTML Attribute Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_en.html'>HTML Canvas Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_en.html'>HTML SVG Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_en.html'>Google Maps Reference</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_en.html'>CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_en.html'>CSS Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_en.html'>CSS Selector Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_en.html'>W3.CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_en.html'>Icons Reference</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_en.html'>Sass Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>JavaScript Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>HTML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_en.html'>AngularJS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_en.html'>AppML Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_en.html'>W3.JS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_en.html'>JS Ready Scripts</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_en.html'>Python Reference</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_en.html'>Java Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_en.html'>SQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_en.html'>MySQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_en.html'>PHP Reference</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_en.html'>ASP Reference</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_en.html'>XML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_en.html'>XML Http Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_en.html'>XSLT Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_en.html'>XML Schema Reference</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Character Sets</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_en.html'>HTML Character Sets</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_en.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_en.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_en.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_en.html'>HTML Symbols</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_en.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Exercises</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_en.html'>HTML Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_en.html'>CSS Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_en.html'>JavaScript Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_en.html'>SQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_en.html'>MySQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_en.html'>PHP Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_en.html'>Python Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_en.html'>NumPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_en.html'>Pandas Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_en.html'>SciPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_en.html'>jQuery Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_en.html'>Java Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_en.html'>Bootstrap Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_en.html'>Bootstrap 4 Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_en.html'>C++ Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_en.html'>C# Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_en.html'>R Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_en.html'>Kotlin Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_en.html'>Go Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_en.html'>Git Exercises</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Quizzes</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_en.html' target='_top'>HTML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_en.html' target='_top'>CSS Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_en.html' target='_top'>JavaScript Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_en.html' target='_top'>SQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_en.html' target='_top'>MySQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_en.html' target='_top'>PHP Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_en.html' target='_top'>Python Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_en.html' target='_top'>NumPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_en.html' target='_top'>Pandas Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_en.html' target='_top'>SciPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_en.html' target='_top'>jQuery Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_en.html' target='_top'>Java Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_en.html' target='_top'>Bootstrap Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_en.html' target='_top'>Bootstrap 4 Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_en.html' target='_top'>C++ Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_en.html' target='_top'>C# Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_en.html' target='_top'>R Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_en.html' target='_top'>XML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_en.html' target='_top'>Cyber Security Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_en.html' target='_top'>Accessibility Quiz</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Certificates</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_en.html' target='_top'>HTML Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_en.html' target='_top'>CSS Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_en.html' target='_top'>JavaScript Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_en.html' target='_top'>SQL Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_en.html' target='_top'>PHP Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_en.html' target='_top'>Python Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_en.html' target='_top'>jQuery Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_en.html' target='_top'>Bootstrap Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_en.html' target='_top'>XML Certificate</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu sidebar-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <nav>
+            <h2 class='left'><span class='left_h2'>Tutorial</span> (from hyperskill)</h2>
+            <a target='_top' href='index_en.html'>Start learning</a>
+            <a target='_top' href='computer-programming_en.html'>Intro to programming</a>
+            <div class='tut_overview'>
+                <a target='_top' href='computer-programming_en.html'>Computer programming</a>
+                <a target='_top' href='paradigms_en.html'>Paradigms</a>
+            </div>
+            <a target='_top' href='oop-intro_en.html'>Introduction to OOP</a>
+            <a target='_top' href='units-of-information_en.html'>Units of information</a>
+            <a target='_top' href='operating-systems_en.html'>Operating systems</a>
+            <a target='_top' href='what-is-bug_en.html'>Software quality</a>
+            <div class='tut_overview'>
+                <a target='_top' href='what-is-bug_en.html'>What is bug?</a>
+                <a target='_top' href='intro-to-logging_en.html'>Intro to logging</a>
+            </div>
+            <a target='_top' href='write-compile-run_en.html'>JVM Basics</a>
+            <div class='tut_overview'>
+                <a target='_top' href='write-compile-run_en.html'>Write, compile, run</a>
+                <a target='_top' href='jvm-jre-jdk_en.html'>JVM, JRE, JDK</a>
+                <a target='_top' href='garbage-collectors_en.html'>Garbage Collectors</a>
+            </div>
+            <a target='_top' href='ide_en.html'>Dev Tools</a>
+            <div class='tut_overview'>
+                <a target='_top' href='ide_en.html'>IDE</a>
+                <a target='_top' href='intellij-idea_en.html'>IntelliJ IDEA</a>
+                <a target='_top' href='intellij-idea-basics_en.html'>IntelliJ IDEA basics</a>
+                <a target='_top' href='jetbrains-academy-plugin_en.html'>JetBrains Academy plugin</a>
+                <a target='_top' href='intellij-idea-run-configurations_en.html'>IntelliJ IDEA run configurations</a>
+                <a target='_top' href='navigation-through-code_en.html'>Navigation through code</a>
+                <a target='_top' href='android-studio-basics_en.html'>Android studio basics</a>
+                <a target='_top' href='pycharm-basics_en.html'>PyCharm basics</a>
+                <a target='_top' href='goland-basics_en.html'>GoLand basics</a>
+            </div>
+            <br>
+            <h2 class='left'><span class='left_h2'>Programming languages</span></h2>
+            <a target='_top' href='java-intro_en.html'>Java Language</a>
+            <div class='tut_overview'>
+                <a target='_top' href='java-intro_en.html'>Introduction to Java</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java-intro_en.html'>Introduction to Java</a>
+                    <a target='_top' href='basic-literals_en.html'>Basic literals</a>
+                    <a target='_top' href='overview-of-the-basic-program_en.html'>Overview of the basic program</a>
+                    <a target='_top' href='printing-data_en.html'>Printing data</a>
+                </div>
+                <a target='_top' href='types-and-variables_en.html'>Data types and variables</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='types-and-variables_en.html'>Types and variables</a>
+                    <a target='_top' href='sizes-and-ranges_en.html'>Sizes and ranges</a>
+                    <a target='_top' href='type-casting_en.html'>Type casting</a>
+                    <a target='_top' href='primitive-and-reference-types_en.html'>Primitive and reference types</a>
+                    <a target='_top' href='final-variables_en.html'>Final variables</a>
+                    <a target='_top' href='numeric-literals_en.html'>Numeric literals</a>
+                    <a target='_top' href='floating-point-types_en.html'>Floating-point types</a>
+                    <a target='_top' href='type-of-references_en.html'>Types of references</a>
+                </div>
+
+                <a target='_top' href='_en.html'>Java</a>
+            </div>
+      <br><br>
+        </nav>
+    </div>
+  </div>
+</div>
+<!--/Left menu sidebar--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index_en.html'><img src='../svg/java_icon.svg' alt='Java programming language. Lessons for beginners from hyperskill' class="w3-left w3-padding" title='Java for Beginners. W3Schools in English' style='width:120px'></a><p class='w3-right'>
+    <a href='ide.html' title='Go to Ukrainian language'>Ua</a>
+</p>
+<article>
+    <h1>Integrated Development Environment (IDE)</span></h1>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='garbage-collectors_en.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='intellij-idea_en.html'>Next &#10095;</a>
+    </div>
+    <hr>
+    <h3>Theory</h3>
+    <p>Writing just one program involves a whole variety of tasks: you write the code, find and fix errors that inevitably arise, then the code has to be compiled, run, and documented. And guess what, all of this has to be done over and over again (well, that's just great). With small programs like <b>Hello World</b>, you can perform these tasks using a simple text editor to write your source code and a set of tools to translate and start the programs. Some text editors can even highlight the syntax, which simplifies the writing process, but this may not suffice for working on something larger and more complex.</p>
+    <p>As a professional developer, you need a specialized tool to navigate through your multiple-file programs, modify, compile, run, and debug them, display syntax errors, and so on. An <b>Integrated Development Environment (IDE)</b> is precisely that: it offers a single program in which developers can deal with all these common tasks.</p>
+    <hr>
+    <h2>§1. Brief historical background</h2>
+    <p>Most modern IDEs are graphical, though the first ones were used back in the era when no one dreamed of graphics. They were built on a text-based interface and could only be operated using function keys and hotkeys to invoke various functions. This was, for example, Turbo Pascal, created by Borland:</p>
+    <img src="../images/turbo-pascal7-1.jpg" alt="JetBrains academy plugin" class="w3-image" style="width: 640px">
+    <p>The first IDEs were designed to be operated via a console or terminal, which were new in themselves. Indeed, before that, programs were generally created on paper and entered into the machine using pre-prepared paper media such as punched cards or punched tapes.</p>
+    <p>Here are some specific historical examples. Dartmouth BASIC was the first language designed to run in a console or terminal. This ancient IDE was controlled by commands, not even using menus and hotkeys. However, it did allow you to edit source code, manage files, compile, debug, and run programs in a manner fundamentally similar to modern IDEs.</p>
+    <p>Then it was time for Maestro I. It was a product from Softlab Munich that was the world's first integrated development environment for software. Can you believe it held a leading position in its niche for almost twenty years? Today, though, Maestro I belong to history.</p>
+    <p>As you see, humanity did not immediately come to multifunctional IDEs.</p>
+    <hr>
+    <h2>§2. What is a modern IDE?</h2>
+    <p>IDEs were created to maximize programmer productivity through tightly coupled components with simple user interfaces. This allows the developer to do fewer steps to switch between different modes, as opposed to discrete development programs. However, modern graphical IDEs are complex software packages. That means one can achieve the necessary acceleration of the work process only after training. Anyway, there are no big difficulties here either: many IDEs are quite interactive, and the interfaces of different manufacturers are often very similar, so it is not too hard to switch from one IDE to another.</p>
+    <p>There are a lot of IDEs for different programming languages. Some support only a single language, while others support multiple or can be extended with plugins. For instance, IDEs that support multiple languages are
+        <a href="https://www.jetbrains.com/help/idea/installation-guide.html" target="_blank" rel="nofollow">IntelliJ IDEA</a>, <a href="https://www.eclipse.org/downloads/packages/installer" target="_blank" rel="nofollow">Eclipse</a>, <a href="https://netbeans.apache.org/download/index.html" target="_blank" rel="nofollow">NetBeans</a>, <a href="https://developer.android.com/studio" target="_blank" rel="nofollow">Android Studio</a>, and <a href="https://code.visualstudio.com/" target="_blank" rel="nofollow">Visual Studio Code</a>. IDEs for one specific programming language are <a href="https://www.embarcadero.com/products/delphi/starter/free-download" target="_blank" rel="nofollow">Delphi</a>, <a href="https://sourceforge.net/projects/orwelldevcpp/" target="_blank" rel="nofollow">Dev-C++</a>, <a href="https://en.wikipedia.org/wiki/IDLE" target="_blank" rel="nofollow">IDLE for Python</a>, and <a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="nofollow">PyCharm</a>.</p>
+    <p>As an example, this is what the IntelliJ IDEA IDE looks like:</p>
+    <img src="../images/intellij-idea-ide.jpg" alt="IntelliJ IDEA IDE" class="w3-image" style="width: 640px">
+    <p>All of these environments can be run on Windows, macOS, or GNU/Linux.</p>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>§3. IDE components</h2>
+    <p>In general, the development environment includes:</p>
+    <ol>
+        <li>A <strong>text editor</strong>, which is designed to work with text files interactively. It allows you to view the contents of text files and perform various actions like inserting, deleting, and copying text, contextual search, replacement, sorting strings, viewing character codes and converting encodings, printing. They often contain additional functionality, such as syntax highlighting.</li>
+        <li>A <strong>translator (compiler and/or interpreter)</strong>, which translates a text written in a programming language into machine code and does this either immediately before starting the program (compilation) or line by line (interpretation).</li>
+        <li><strong>Build automation tools</strong>, which get the code ready and put everything together.</li>
+        <li>A <strong>Debugger</strong>, which looks for errors in the code and immediately reports them.</li>
+    </ol>
+    <img src="../svg/ide-all.svg" alt="IntelliJ IDEA IDE" class="w3-image" style="width: 640px">
+    <p>By and large, using an IDE makes you a more productive developer because an IDE provides tight-knit components with a similar user interface. It also automates some routine tasks and even gives you advice and feedback. That's all because the purpose of the integrated environment is to combine various utilities into one product. This approach allows developers to focus on solving their core problems, while common and standard operations are taken care of by an IDE.</p>
+    <hr>
+    <h2>§4. Conclusion</h2>
+    <p>To sum up,</p>
+    <ul>
+        <li>an IDE is a specialized tool that navigates through your multiple-file programs, modifies, compiles, runs, debugs them, and also displays syntax errors;</li>
+        <li>modern IDEs are graphical and interactive;</li>
+        <li>some IDEs support only a single language, while others support multiple languages.</li>
+    </ul>
+    <hr>
+    <p>You can also view <a href="https://hyperskill.org/learn/step/10996" target="_blank" rel="nofollow">Lesson on hyperskill.org</a>.</p>
+    <hr>
+    <h2>Practical tasks and answers</h2>
+    <p>Tasks and answer options are given. The correct option is highlighted in <span style="color:blue">blue</span> color.</p>
+    <h3>№1. Properties</h3>
+    <p><b>Question:</b> Select one incorrect statement about the typical properties of an IDE.</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>An IDE helps you find errors.</li>
+        <li>An IDE automates some routine tasks.</li>
+        <li>An IDE provides a set of components under the same interface.</li>
+        <li><span style="color:blue">An IDE supports only Java. &#x2714;</span></li>
+    </ul>
+    <p><b>Explanation.</b> An IDE supports only Java is an incorrect statement about the typical properties of an IDE. An IDE can support multiple programming languages depending on the tool and its configuration.</p>
+    <hr>
+    <h3>№2. Finding code errors</h3>
+    <p><b>Question:</b> What IDE component should you use to find code errors?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>translator</li>
+        <li>text editor</li>
+        <li>search</li>
+        <li><span style="color:blue">debugger &#x2714;</span></li>
+    </ul>
+    <p><b>Explanation.</b> The answer is debugger. A debugger is a tool that helps you find and fix errors in your code. It allows you to step through your code line by line, inspect variables, and see how your code is executing. This can be very helpful for finding errors that are difficult to track down. The other options are not as useful for finding code errors. A translator converts code from one language to another. A text editor is a tool for editing text, but it does not have any special features for debugging code. A search tool can help you find specific text in your code, but it cannot help you find errors.</p>
+    <hr>
+    <h3>№3. Fixing code errors</h3>
+    <p><b>Question:</b> Where can you fix your code error when working in an IDE?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>translator</li>
+        <li><span style="color:blue">text editor &#x2714;</span></li>
+        <li>compiler</li>
+        <li>debugger</li>
+    </ul>
+    <p><b>Explanation.</b> The answer is text editor. A text editor is a tool for editing text, and it is the primary place where you will fix your code errors when working in an IDE. The other options are not as useful for fixing code errors. A translator converts code from one language to another. A compiler converts code from a high-level language to a low-level language. A debugger can help you find code errors, but it is not used for fixing them.</p>
+    <hr>
+    <h3>№4. What tasks to do?</h3>
+    <p><b>Question:</b> What do programmers mainly use modern IDEs for?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>debugging code</li>
+        <li>compiling programs</li>
+        <li><span style="color:blue">writing programs, solving code problems &#x2714;</span></li>
+        <li>drinking tea</li>
+    </ul>
+    <p><b>Explanation.</b> The answer is writing programs, solving code problems. Modern IDEs provide a wide range of features that can help programmers write and debug code more effectively. These features include:</p>
+    <ul>
+        <li>Code editors: Modern IDEs have powerful code editors that provide features such as syntax highlighting, autocompletion, and linting.</li>
+        <li>Debuggers: Modern IDEs have powerful debuggers that can help programmers step through their code line by line, inspect variables, and set breakpoints.</li>
+        <li>Integrated version control: Modern IDEs often integrate with version control systems such as Git and Mercurial, making it easy for programmers to track changes to their code.</li>
+        <li>Code analysis tools: Modern IDEs often include code analysis tools that can help programmers find potential errors in their code.</li>
+        <li>Other productivity features: Modern IDEs often include other productivity features such as code folding, code snippets, and project templates.</li>
+    </ul>
+    <p>These features can help programmers write code more quickly and accurately, and they can also help programmers find and fix errors more easily. As a result, modern IDEs are an essential tool for any programmer.</p>
+    <p>The other options are not as commonly used by programmers in modern IDEs. Compiling programs can be done using a compiler, and drinking tea is not typically done in an IDE.</p>
+    <hr>
+    <h3>№5. IDEs</h3>
+    <p><b>Question:</b> Which of these are IDEs?</p>
+    <p>Select one or more options from the list:</p>
+    <ul>
+        <li><span style="color:blue">IntelliJ IDEA &#x2714;</span></li>
+        <li><span style="color:blue">Android Studio &#x2714;</span></li>
+        <li><span style="color:blue">PyCharm &#x2714;</span></li>
+        <li>Chrome</li>
+    </ul>
+    <p><b>Explanation.</b> The IDEs in the list are IntelliJ IDEA, Android Studio, and PyCharm. Chrome is not an IDE. An IDE, or integrated development environment, is a software application that provides comprehensive facilities for software development. IDEs normally consist of at least a source-code editor, build automation tools, and a debugger.</p>
+    <p>IntelliJ IDEA is an IDE for Java, Kotlin, Python, JavaScript, and other programming languages. It is developed by JetBrains. Android Studio is an IDE for Android development. It is developed by Google. PyCharm is an IDE for Python development. It is developed by JetBrains. Chrome is a web browser developed by Google. It is not an IDE.</p>
+    <p>Here are some other popular IDEs:</p>
+    <ul>
+        <li><strong>Eclipse</strong>: An IDE for Java, JavaScript, PHP, and other programming languages.</li>
+        <li><strong>Visual Studio</strong>: An IDE for Windows development.</li>
+        <li><strong>Xcode</strong>: An IDE for macOS development.</li>
+        <li><strong>NetBeans</strong>: An IDE for Java development.</li>
+    </ul>
+    <p>IDEs can be a valuable tool for programmers of all levels of experience. They can help programmers write code more quickly and accurately, and they can also help programmers find and fix errors more easily.</p>
+    <hr>
+    <h3>№6. OS support</h3>
+    <p><b>Question:</b> On which systems can you run IDEs?</p>
+    <p>Select one or more options from the list:</p>
+    <ul>
+        <li><span style="color:blue">macOS &#x2714;</span></li>
+        <li><span style="color:blue">Linux &#x2714;</span></li>
+        <li><span style="color:blue">Windows &#x2714;</span></li>
+    </ul>
+    <p><b>Explanation.</b> You can run IDEs on macOS, Linux, and Windows.</p>
+    <p>Here are some popular IDEs and the systems they support:</p>
+    <ul>
+        <li>IntelliJ IDEA, PyCharm, WebStorm, PHPStorm, etc.: Supports macOS, Linux, and Windows.</li>
+        <li>Android Studio: Supports macOS, Linux, and Windows.</li>
+        <li>Eclipse: Supports macOS, Linux, and Windows.</li>
+        <li>Visual Studio: Supports Windows.</li>
+        <li>Xcode: Supports macOS.</li>
+        <li>NetBeans: Supports macOS, Linux, and Windows.</li>
+    </ul>
+    <p>Some IDEs are only available for specific systems. For example, Xcode is only available for macOS, and Visual Studio is only available for Windows.</p>
+    <p>When choosing an IDE, it is important to consider the system that you will be using it on. If you are not sure which system you will be using, it is best to choose an IDE that supports all three systems.</p>
+    <hr>
+    <h3>№7. What components does an IDE have?</h3>
+    <p><b>Question:</b> Choose all the basic components of an IDE:</p>
+    <p>Select one or more options from the list:</p>
+    <ul>
+        <li><span style="color:blue">debugger &#x2714;</span></li>
+        <li><span style="color:blue">text editor &#x2714;</span></li>
+        <li><span style="color:blue">translator (compiler and/or interpreter) &#x2714;</span></li>
+        <li><span style="color:blue">build automation tools &#x2714;</span></li>
+    </ul>
+    <p><b>Explanation.</b> The basic components of an IDE are:</p>
+    <ul>
+        <li>Text editor: This is where you will write your code. The text editor should have features such as syntax highlighting, autocompletion, and linting.</li>
+        <li>Debugger: This is a tool that helps you find and fix errors in your code. The debugger should allow you to step through your code line by line, inspect variables, and set breakpoints.</li>
+        <li>Build automation tools: These tools help you automate the process of building your code. This can save you time and help you avoid errors.</li>
+    </ul>
+    <p>The translator (compiler and/or interpreter) is not always included in an IDE. It is a separate tool that converts your code from a high-level language to a low-level language that the computer can understand.</p>
+    <p>Here are some other components that may be included in an IDE:</p>
+    <ul>
+        <li>Version control integration: This allows you to track changes to your code and collaborate with other developers.</li>
+        <li>Integrated documentation: This provides access to documentation for the programming language and libraries that you are using.</li>
+        <li>Code analysis tools: These tools can help you find potential errors in your code.</li>
+        <li>Other productivity features: These features can help you write code more quickly and accurately, such as code folding, code snippets, and project templates.</li>
+    </ul>
+    <p>The specific components that are included in an IDE vary depending on the IDE and the programming language that it is designed for.</p>
+    <hr>
+    <h3>№8. What about text editor?</h3>
+    <p><b>Question:</b> Choose two situations where you would rather use a text editor than an IDE</p>
+    <p>Select one or more options from the list:</p>
+    <ul>
+        <li>You are writing a massive application</li>
+        <li><span style="color:blue">You want to make a tiny change to the file &#x2714;</span></li>
+        <li>You need to debug a lot</li>
+        <li><span style="color:blue">You need to write your code on an ancient computer &#x2714;</span></li>
+        <li>You are designing a program with a graphical user interface</li>
+    </ul>
+    <p><b>Explanation.</b> Here are two situations where you might rather use a text editor than an IDE:</p>
+    <ul>
+        <li>You want to make a tiny change to the file. IDEs can be great for large projects, but they can be overkilled for small changes. A text editor is often a better choice for making quick edits.</li>
+        <li>You need to write your code on a really ancient computer. IDEs can be resource-intensive, so they might not run well on older computers. A text editor is a lightweight alternative that can still be used to write high-quality code.</li>
+    </ul>
+    <p>Here are two other situations where you might choose to use a text editor:</p>
+    <ul>
+        <li>You are comfortable using a text editor. If you are already familiar with a text editor, you might prefer to use it instead of an IDE. This is especially true if you are working on a project that does not require all of the features of an IDE.</li>
+        <li>You want a simpler development environment. IDEs can be complex and overwhelming, especially for beginners. If you are looking for a simpler development environment, a text editor is a good option.</li>
+    </ul>
+    <p>Ultimately, the best choice of editor depends on your specific needs and preferences. If you are not sure which type of editor to use, recommend trying both a text editor and an IDE to see which one you prefer.</p>
+    <hr>
+    <h3>№9. What does IDE stand for?</h3>
+    <p><b>Question:</b> What does the IDE abbreviation stand for?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>Interlanguage Development Environment</li>
+        <li>Ideal Development Environment</li>
+        <li>Intellectual Development Environment</li>
+        <li><span style="color:blue">Integrated Development Environment &#x2714;</span></li>
+    </ul>
+    <p><b>Explanation.</b> The IDE abbreviation stands for Integrated Development Environment.</p>
+    <hr>
+    <h3>№10. What can we do in IDE</h3>
+    <p><b>Question:</b> Usually, an IDE allows us to:</p>
+    <p>Select one or more options from the list:</p>
+    <ul>
+        <li>write machine code in binary</li>
+        <li><span style="color:blue">build programs &#x2714;</span></li>
+        <li><span style="color:blue">run programs &#x2714;</span></li>
+        <li><span style="color:blue">view the structure of the project &#x2714;</span></li>
+    </ul>
+    <p><b>Explanation.</b> An IDE usually allows us to: Build programs, Run programs, View the structure of the project.</p>
+    <hr>
+    <div class="w3-info">
+        <h3>What is a modern IDE? What are IDEs?</h3>
+        <p>An IDE (Integrated Development Environment) is a software application that provides comprehensive tools and features to assist developers in writing, debugging, and testing code. It typically includes a code editor, build automation tools, a debugger, and a compiler.</p>
+        <p>A modern IDE goes beyond these core features and often includes additional functionalities like version control integration, code refactoring tools, intelligent code completion, code navigation, and project management capabilities. These advancements aim to enhance productivity and streamline the development process for software engineers.</p>
+    </div>
+    <hr>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='garbage-collectors_en.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='intellij-idea_en.html'>Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker_en.html'>COLOR PICKER</a></h4>
+        <a href='../colors/colors_picker_en.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">PROGRAMMING</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../python/index_en.html' class='btn-rightbar'>Python</a>
+            <a href='../java/index_en.html' class='btn-rightbar'>Java</a>
+            <a href='../c/index_en.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index_en.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index_en.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index_en.html' class='btn-rightbar'>R</a>
+            <a href='../kotlin/index_en.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../go/index_en.html' class='btn-rightbar'>Go</a>
+            <a href='../django/index_en.html' class='btn-rightbar'>Django</a>
+            <a href='../typescript/index_en.html' class='btn-rightbar'>TypeScript</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online guides on the site">SERVER-SIDE</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index_en.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index_en.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index_en.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index_en.html' class='btn-rightbar'>ASP та ASP.NET</a>
+            <a href='../nodejs/index_en.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi_en.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index_en.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index_en.html' class='btn-rightbar'>Github Pages</a>
+            <a href='../mongodb/index_en.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index_en.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>CONTACTS</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>PRINT PAGE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>BLOG</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index_en.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ABOUT</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Contacts</h2>
+      <p>If you want to report a bug, as well as make an offer for the site, add an ad or advertisement on the site, do not hesitate to send an email to the admin:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Tutorial</h4>
+        <a href='../html/index_en.html'>HTML Tutorial</a><br>
+        <a href='../css/index_en.html'>CSS Tutorial</a><br>
+        <a href='../js/index_en.html'>JavaScript Tutorial</a><br>
+        <a href='../sql/index_en.html'>SQL Tutorial</a><br>
+        <a href='../python/index_en.html'>Python Tutorial</a><br>
+        <a href='../php/index_en.html'>PHP Tutorial</a><br>
+        <a href='../bootstrap/bootstrap_ver_en.html'>Bootstrap Tutorial</a><br>
+        <a href='../w3css/index_en.html'>W3.CSS Tutorial</a><br>
+        <a href='../appml/index_en.html'>AppML Tutorial</a><br>
+        <a href='../jquery/index_en.html'>jQuery Tutorial</a><br>
+        <a href='../angular/index_en.html'>Angular Tutorial</a><br>
+        <a href='../sass/index_en.html'>Sass Tutorial</a><br>
+        <a href='../java/index_en.html'>Java Tutorial</a><br>
+        <a href='../cpp/index_en.html'>C++ Tutorial</a><br>
+        <a href='../cs/index_en.html'>C# Tutorial</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top References</h4>
+        <a href='../tags/index_en.html'>HTML Reference</a><br>
+        <a href='../cssref/index_en.html'>CSS Reference</a><br>
+        <a href='../jsref/index_en.html'>JavaScript Reference</a><br>
+        <a href='../sql/sql_ref_keywords_en.html'>SQL Reference</a><br>
+        <a href='../python/python_reference_en.html'>Python Reference</a><br>
+        <a href='../php/php_ref_overview_en.html'>PHP Reference</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a><br>
+        <a href='../w3css/w3css_references_en.html'>W3.CSS Reference</a><br>
+        <a href='../appml/appml_reference_en.html'>Appml Reference</a><br>
+        <a href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a><br>
+        <a href='../angular/angular_ref_directives_en.html'>Angular Reference</a><br>
+        <a href='../sass/sass_functions_string_en.html'>Sass Reference</a><br>
+        <a href='../java/java_ref_keywords_en.html'>Java Reference</a><br>
+        <a href='../colors/colors_names_en.html'>Colors Reference</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Examples</h4>
+        <a href='../html/html_examples_en.html'>HTML Examples</a><br>
+        <a href='../css/css_examples_en.html'>CSS Examples</a><br>
+        <a href='../js/js_examples_en.html'>JavaScript Examples</a><br>
+        <a href='../sql/sql_examples_en.html'>SQL Examples</a><br>
+        <a href='../python/python_examples_en.html'>Python Examples</a><br>
+        <a href='../php/php_examples_en.html'>PHP Examples</a><br>
+        <a href='../bootstrap/bootstrap_examples_en.html'>Bootstrap Examples</a><br>
+        <a href='../w3css/w3css_examples_en.html'>W3.CSS Examples</a><br>
+        <a href='../jquery/jquery_examples_en.html'>jQuery Examples</a><br>
+        <a href='../angular/angular_examples_en.html'>Angular Examples</a><br>
+        <a href='../java/java_examples_en.html'>Java Examples</a><br>
+        <a href='../cpp/cpp_examples_en.html'>C++ Examples</a><br>
+        <a href='../cs/cs_examples_en.html'>C# Examples</a><br>
+        <a href='../xml/xml_examples_en.html'>XML Examples</a><br>
+        <a href='../howto/index_en.html'>How To Examples</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_en.html'>Web Certificates</a></h4>
+        <a href='../cert/cert_html_en.html'>HTML Certificate</a><br>
+        <a href='../cert/cert_css_en.html'>CSS Certificate</a><br>
+        <a href='../cert/cert_javascript_en.html'>JavaScript Certificate</a><br>
+        <a href='../cert/cert_frontend_en.html'>Front End Certificate</a><br>
+        <a href='../cert/cert_python_en.html'>Python Certificate</a><br>
+        <a href='../cert/cert_datascience_en.html'>Data Science Certificate</a><br>
+        <a href='../cert/cert_jquery_en.html'>jQuery Certificate</a><br>
+        <a href='../cert/cert_sql_en.html'>SQL Certificate</a><br>
+        <a href='../cert/cert_php_en.html'>PHP Certificate</a><br>
+        <a href='../cert/cert_java_en.html'>Java Certificate</a><br>
+        <a href='../cert/cert_bootstrap_en.html'>Bootstrap Certificate</a><br>
+        <a href='../cert/cert_xml_en.html'>XML Certificate</a><br>
+        <a href='../cert/career_tips_en.html'>Career planning</a><br>
+        <a href='../cert/career_cv_en.html'>Writing a resume</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>This site is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our <a href='../about/about_copyright_en.html'>terms of use</a>, <a href='../about/about_privacy_en.html'>cookie and privacy policy</a>.<br>
+You can also use the Ukrainian version of the site <a href='../index.html'><strong>W3Schools українською</strong></a>.<br>
+    <a href='../about/about_copyright_en.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index_en.html'>W3Schools is Powered by W3.CSS</a>.<br><br>
+    <a href='../index_en.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
