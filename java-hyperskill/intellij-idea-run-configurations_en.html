@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Java programming language lessons. W3Schools also offers free online lessons, tutorials, reference materials, challenges and exercises in most programming and website building languages. Covers the most popular technologies such as HTML, CSS, JavaScript, PHP, Python, SQL, C++, C#, Kotlin, Go, Bootstrap frameworks, W3.CSS and many more'>
+<script src='../lib/prism2.js'></script>
+<link rel='stylesheet' href='../lib/prism1.css'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Java IntelliJ IDEA run configurations. Lessons for beginners. W3Schools in English</title>
+<meta name='description' content='Java IntelliJ IDEA run configurations. Theory. Run/Debug configurations dialog. Passing arguments in configuration. Rules for passing arguments. Conclusion. Practical tasks and answers. Tutorial from the Hyperskill website. Lessons for beginners. W3Schools in English'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src='https://cse.google.com/cse.js?cx=751c3d18bb8a64f00'></script><div class='gcse-search'></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_en.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_en.html' title='HTML Tutorial'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_en.html' title='CSS Tutorial'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_en.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_en.html' title='SQL Tutorial'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index_en.html' title='Python Tutorial'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index_en.html' title='PHP Tutorial'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html' title='Bootstrap Tutorial'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_en.html' title='How To'>HOW TO</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_en.html' title='W3.CSS Tutorial'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index_en.html' title='jQuery Tutorial'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index_en.html' title='XML Tutorial'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index_en.html' title='Java Tutorial'>JAVA</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='More tutorials'>More <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Search'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Dark theme'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Download books for free from Google drive'>Books</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML & CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_en.html'>Learn HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_en.html'>Learn CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_en.html'>Learn RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html'>Learn Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_en.html'>Learn W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>Learn Colors</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_en.html'>Learn Icons</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_en.html'>Learn Graphics</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_en.html'>Learn SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_en.html'>Learn Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_en.html'>Learn How To</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_en.html'>Learn Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Data Analytics</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index_en.html'>Learn AI</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index_en.html'>Learn Generative AI</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_en.html'>Learn ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index_en.html'>Learn ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index_en.html'>Learn Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_en.html'>Learn JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_en.html'>Learn React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_en.html'>Learn jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index_en.html'>Learn Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_en.html'>Learn AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_en.html'>Learn JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_en.html'>Learn AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_en.html'>Learn AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_en.html'>Learn W3.JS</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index_en.html'>Learn Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_en.html'>Learn Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_en.html'>Learn C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_en.html'>Learn C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_en.html'>Learn C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_en.html'>Learn R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_en.html'>Learn Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_en.html'>Learn Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_en.html'>Learn Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_en.html'>Learn TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_en.html'>Learn SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_en.html'>Learn MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index_en.html'>Learn PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_en.html'>Learn PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_en.html'>Learn ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_en.html'>Learn Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_en.html'>Learn Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_en.html'>Learn Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_en.html'>Learn GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_en.html'>Learn MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_en.html'>Learn AWS Cloud</a>
+                    <h3>Web Building</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_en.html'>Where To Start</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_en.html'>Web Templates</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_en.html'>Web Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_en.html'>Code Editor</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_en.html'>Web Development</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_en.html'>Cyber Security</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_en.html'>Accessibility</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow'>Typing Speeds Test</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow'>Code Game</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Data Analytics</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_en.html'>Learn AI</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index_en.html'>Learn Generative AI</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_en.html'>Learn ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index_en.html'>Learn ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index_en.html'>Learn Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_en.html'>HTML Tag Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_en.html'>HTML Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_en.html'>HTML Event Reference</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>HTML Color Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_en.html'>HTML Attribute Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_en.html'>HTML Canvas Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_en.html'>HTML SVG Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_en.html'>Google Maps Reference</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_en.html'>CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_en.html'>CSS Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_en.html'>CSS Selector Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_en.html'>W3.CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_en.html'>Icons Reference</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_en.html'>Sass Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>JavaScript Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>HTML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_en.html'>AngularJS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_en.html'>AppML Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_en.html'>W3.JS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_en.html'>JS Ready Scripts</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_en.html'>Python Reference</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_en.html'>Java Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_en.html'>SQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_en.html'>MySQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_en.html'>PHP Reference</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_en.html'>ASP Reference</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_en.html'>XML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_en.html'>XML Http Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_en.html'>XSLT Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_en.html'>XML Schema Reference</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Character Sets</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_en.html'>HTML Character Sets</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_en.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_en.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_en.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_en.html'>HTML Symbols</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_en.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Exercises</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_en.html'>HTML Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_en.html'>CSS Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_en.html'>JavaScript Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_en.html'>SQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_en.html'>MySQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_en.html'>PHP Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_en.html'>Python Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_en.html'>NumPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_en.html'>Pandas Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_en.html'>SciPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_en.html'>jQuery Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_en.html'>Java Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_en.html'>Bootstrap Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_en.html'>Bootstrap 4 Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_en.html'>C++ Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_en.html'>C# Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_en.html'>R Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_en.html'>Kotlin Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_en.html'>Go Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_en.html'>Git Exercises</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Quizzes</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_en.html' target='_top'>HTML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_en.html' target='_top'>CSS Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_en.html' target='_top'>JavaScript Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_en.html' target='_top'>SQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_en.html' target='_top'>MySQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_en.html' target='_top'>PHP Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_en.html' target='_top'>Python Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_en.html' target='_top'>NumPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_en.html' target='_top'>Pandas Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_en.html' target='_top'>SciPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_en.html' target='_top'>jQuery Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_en.html' target='_top'>Java Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_en.html' target='_top'>Bootstrap Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_en.html' target='_top'>Bootstrap 4 Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_en.html' target='_top'>C++ Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_en.html' target='_top'>C# Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_en.html' target='_top'>R Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_en.html' target='_top'>XML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_en.html' target='_top'>Cyber Security Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_en.html' target='_top'>Accessibility Quiz</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Certificates</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_en.html' target='_top'>HTML Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_en.html' target='_top'>CSS Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_en.html' target='_top'>JavaScript Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_en.html' target='_top'>SQL Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_en.html' target='_top'>PHP Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_en.html' target='_top'>Python Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_en.html' target='_top'>jQuery Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_en.html' target='_top'>Bootstrap Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_en.html' target='_top'>XML Certificate</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu sidebar-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <nav>
+            <h2 class='left'><span class='left_h2'>Tutorial</span> (from hyperskill)</h2>
+            <a target='_top' href='index_en.html'>Start learning</a>
+            <a target='_top' href='computer-programming_en.html'>Intro to programming</a>
+            <div class='tut_overview'>
+                <a target='_top' href='computer-programming_en.html'>Computer programming</a>
+                <a target='_top' href='paradigms_en.html'>Paradigms</a>
+            </div>
+            <a target='_top' href='oop-intro_en.html'>Introduction to OOP</a>
+            <a target='_top' href='units-of-information_en.html'>Units of information</a>
+            <a target='_top' href='operating-systems_en.html'>Operating systems</a>
+            <a target='_top' href='what-is-bug_en.html'>Software quality</a>
+            <div class='tut_overview'>
+                <a target='_top' href='what-is-bug_en.html'>What is bug?</a>
+                <a target='_top' href='intro-to-logging_en.html'>Intro to logging</a>
+            </div>
+            <a target='_top' href='write-compile-run_en.html'>JVM Basics</a>
+            <div class='tut_overview'>
+                <a target='_top' href='write-compile-run_en.html'>Write, compile, run</a>
+                <a target='_top' href='jvm-jre-jdk_en.html'>JVM, JRE, JDK</a>
+                <a target='_top' href='garbage-collectors_en.html'>Garbage Collectors</a>
+            </div>
+            <a target='_top' href='ide_en.html'>Dev Tools</a>
+            <div class='tut_overview'>
+                <a target='_top' href='ide_en.html'>IDE</a>
+                <a target='_top' href='intellij-idea_en.html'>IntelliJ IDEA</a>
+                <a target='_top' href='intellij-idea-basics_en.html'>IntelliJ IDEA basics</a>
+                <a target='_top' href='jetbrains-academy-plugin_en.html'>JetBrains Academy plugin</a>
+                <a target='_top' href='intellij-idea-run-configurations_en.html'>IntelliJ IDEA run configurations</a>
+                <a target='_top' href='navigation-through-code_en.html'>Navigation through code</a>
+                <a target='_top' href='android-studio-basics_en.html'>Android studio basics</a>
+                <a target='_top' href='pycharm-basics_en.html'>PyCharm basics</a>
+                <a target='_top' href='goland-basics_en.html'>GoLand basics</a>
+            </div>
+            <br>
+            <h2 class='left'><span class='left_h2'>Programming languages</span></h2>
+            <a target='_top' href='java-intro_en.html'>Java Language</a>
+            <div class='tut_overview'>
+                <a target='_top' href='java-intro_en.html'>Introduction to Java</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java-intro_en.html'>Introduction to Java</a>
+                    <a target='_top' href='basic-literals_en.html'>Basic literals</a>
+                    <a target='_top' href='overview-of-the-basic-program_en.html'>Overview of the basic program</a>
+                    <a target='_top' href='printing-data_en.html'>Printing data</a>
+                </div>
+                <a target='_top' href='types-and-variables_en.html'>Data types and variables</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='types-and-variables_en.html'>Types and variables</a>
+                    <a target='_top' href='sizes-and-ranges_en.html'>Sizes and ranges</a>
+                    <a target='_top' href='type-casting_en.html'>Type casting</a>
+                    <a target='_top' href='primitive-and-reference-types_en.html'>Primitive and reference types</a>
+                    <a target='_top' href='final-variables_en.html'>Final variables</a>
+                    <a target='_top' href='numeric-literals_en.html'>Numeric literals</a>
+                    <a target='_top' href='floating-point-types_en.html'>Floating-point types</a>
+                    <a target='_top' href='type-of-references_en.html'>Types of references</a>
+                </div>
+
+                <a target='_top' href='_en.html'>Java</a>
+            </div>
+      <br><br>
+        </nav>
+    </div>
+  </div>
+</div>
+<!--/Left menu sidebar--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index_en.html'><img src='../svg/java_icon.svg' alt='Java programming language. Lessons for beginners from hyperskill' class="w3-left w3-padding" title='Java for Beginners. W3Schools in English' style='width:120px'></a><p class='w3-right'>
+    <a href='intellij-idea-run-configurations.html' title='Go to Ukrainian language'>Ua</a>
+</p>
+<article>
+    <h1>IntelliJ IDEA run configurations</span></h1>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='jetbrains-academy-plugin_en.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='navigation-through-code_en.html'>Next &#10095;</a>
+    </div>
+    <hr>
+    <h3>Theory</h3>
+    <p>IntelliJ IDEA uses run/debug configurations to run, debug, and test applications. A run/debug configuration represents a set of startup properties, such as VM or JRE options, that are used to run the program. It also contains information about command-line arguments you pass to the program on startup.</p>
+    <hr>
+    <h2>§1. Run/Debug configurations dialog</h2>
+    <p>The application run/debug configuration enables you to run or debug applications via the main method. To set up a configuration, open the <i>Edit Configurations</i> dialog.</p>
+    <img src="../images/edit-config.png" alt="Edit Configurations dialog" class="w3-image" style="width: 100%">
+    <p>The command-line arguments to pass at the startup of the program are configured at the Build and run section in the <i>Program arguments</i> field.</p>
+    <img src="../images/program-arguments.png" alt="Program arguments field" class="w3-image" style="width: 100%">
+    <p>The arguments are passed as a sequence of strings separated by whitespaces. While running a program, the strings would be the command-line arguments passed to its entry points. The delimiters between command-line elements are whitespace characters, and the end-of-line delimiter is the newline character.</p>
+    <hr>
+    <h2>§2. Passing arguments in configuration</h2>
+    <p>To pass arguments to a program, you should type a list of them in the format you would use on the command line. The whitespaces will be parsed as delimiters, separating one argument from another. These arguments will be passed to the entry point of the program as an array.</p>
+    <p>It is important to remember that all the command-line arguments are passed as strings, so if they are supposed to be treated as, for example, integers, you should convert them explicitly inside the program.</p>
+    <p>To pass the arguments correctly, you should use a list of rules in the following paragraph.</p>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>§3. Rules for passing arguments</h2>
+    <p>When specifying arguments, follow these rules:</p>
+    <ul>
+        <li>Use spaces to separate individual arguments, for example, <span class="h-codespan">--data text.txt</span>.</li>
+        <li>If an argument includes spaces, enclose the spaces or the argument that contains spaces in double quotes, for example, <span class="h-codespan">some" "arg</span> or <span class="h-codespan">"some arg"</span>.</li>
+        <li>If an argument includes double quotes (as part of the argument), escape the double quotes using backslashes, for example, <span class="h-codespan">\"quoted_value\"</span>.</li>
+    </ul>
+    <p>For example, if you want to pass two arguments, <span class="h-codespan">--data</span> and <span class="h-codespan">text.txt</span>, you should insert them as in the following example using the rules above:</p>
+    <img src="../images/using-rules.png" alt="Using the rules" class="w3-image" style="width: 100%">
+    <hr>
+    <h2>§4. Conclusion</h2>
+    <p>Let's remind ourselves what we have learned in this topic:</p>
+    <ul>
+        <li>To pass command-line arguments for your application in IntelliJ IDEA, go to <i>Run/Debug configurations</i> dialog and set the <i>Program arguments</i> field.</li>
+        <li>For a correct specification of command-line arguments, follow the rules from the third paragraph.</li>
+    </ul>
+    <hr>
+    <p>You can also view <a href="https://hyperskill.org/learn/step/10630" target="_blank" rel="nofollow">Lesson on hyperskill.org</a>.</p>
+    <hr>
+    <h2>Practical tasks and answers</h2>
+    <p>Tasks and answer options are given. The correct option is highlighted in <span style="color:blue">blue</span> color.</p>
+    <h3>№1. Pay attention to the rules</h3>
+    <p><b>Question:</b> Match the passing line of arguments and what would be actual arguments. We have indicated them in square brackets.</p>
+    <p>Match the items from left and right columns:</p>
+    <ul>
+        <li>--data "Commander Android" Soong - [--data] [Commander Android] [Soong]</li>
+        <li>--data" "Commander Android Soong - [--data Commander] [Android] [Soong]</li>
+        <li>--data Commander Android \"Soong\" - [--data] [Commander] [Android] ["Soong"]</li>
+        <li>--data "Commander" Android Soong - [--data] [Commander] [Android] [Soon]</li>
+    </ul>
+    <p><b>Explanation.</b> The correct matching for the passing line of arguments and actual arguments is:</p>
+    <p>Passing line of arguments | Actual arguments</p>
+    <ul>
+        <li>--data "Commander Android" Soong | --data, Commander, Android, Soong</li>
+        <li>--data" "Commander Android Soong | --data, Commander, Android, Soong</li>
+        <li>--data Commander Android \"Soong\" | --data, Commander Android, Soong</li>
+        <li>--data "Commander" Android Soong | --data, Commander, Android, "Soong"</li>
+    </ul>
+    <p>The --data option takes a string as its argument. The string can contain any characters, including spaces, commas, and quotation marks. If the string contains spaces or commas, they must be escaped using double quotation marks.</p>
+    <p>For example, the following two lines of arguments are equivalent:</p>
+    <ul>
+        <li>--data "Commander Android Soong"</li>
+        <li>--data Commander Android \"Soong\"</li>
+    </ul>
+    <p>In the first line, the space between "Commander" and "Android" is escaped using double quotation marks. In the second line, the space is not escaped, but the quotation marks are.</p>
+    <p>The following two lines of arguments are not equivalent:</p>
+    <ul>
+        <li>--data Commander Android Soong</li>
+        <li>--data Commander, Android, Soong</li>
+    </ul>
+    <p>The first line only has three arguments, while the second line has four arguments. The fourth argument in the second line is the comma between "Android" and "Soong".</p>
+    <hr>
+    <h3>№2. Which tab?</h3>
+    <p><b>Question:</b> Where can you find the Program command-line arguments in the Run/Debug configuration dialog?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>Logs tab</li>
+        <li>Before launch window</li>
+        <li>Code Coverage tab</li>
+        <li><span style="color:blue">Configuration tab &#x2714;</span></li>
+    </ul>
+    <p><b>Explanation.</b> The correct option is Configuration tab. In the Run/Debug configuration dialog, the Program command-line arguments are located in the Configuration tab, under the Program arguments field. The Logs tab displays the output of the program, including any errors or warnings. The Before launch window allows you to run custom commands before the program launches. The Code Coverage tab shows you how much of your code is being executed when the program runs.</p>
+    <hr>
+    <h3>№3. Pass some arguments</h3>
+    <p><b>Question:</b> Imagine you have a program reading the content of text files and writing it into the console. It accepts the file names via command-line arguments. What would be the arguments passed to the program in case you need to output the content of files example.txt and implementation.txt lying in the program root folder, and the example.txt file content should go first?</p>
+    <p>Enter a short text: <span class="w3-blue-gray w3-padding">example.txt implementation.txt</span> <span style="color:blue">&#x2714;</span></p>
+    <p><b>Explanation.</b> The arguments that you would need to pass to the program to output the content of files example.txt and implementation.txt lying in the program root folder, with example.txt file content going first, would be:</p>
+    <p class="h-codespan">example.txt implementation.txt</p>
+    <p>You would need to separate the file names by spaces. The program would then read the contents of the files in the order that you specified, and write them to the console. The content of example.txt would go first, followed by the content of implementation.txt.</p>
+    <p>Here is an example of how you would run the program on a Unix-based system:</p>
+    <p class="h-codespan">$ ./program example.txt implementation.txt</p>
+    <p>This would run the program called program, and pass the file names example.txt and implementation.txt as command-line arguments. The program would then read the contents of the files and write them to the console.</p>
+    <hr>
+    <h3>№4. Determine the arguments</h3>
+    <p><b>Question:</b> You pass the following line to the program as an argument list: "sys\"\" \"path" What would be the arguments?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>"sys path</li>
+        <li>" sys path</li>
+        <li>sys "path</li>
+        <li><span style="color:blue">sys"" "path &#x2714;</span></li>
+    </ul>
+    <p><b>Explanation.</b> The correct answer is sys"" "path. The string "sys"" "path" is enclosed in double quotes. This means that the spaces between the words "sys", """, "path" are interpreted as literal spaces, not as separators between arguments. Therefore, the arguments that are passed to the program are "sys", """, and "path". The other options are incorrect because they do not take into account the spaces between the words in the string. For example, the option "sys path" would split the string into two arguments: "sys" and "path". The option "sys "path" would also split the string into two arguments, but the first argument would be "sys ", which is not a valid argument. The option "sys" "path" would split the string into three arguments: "sys", """, and "path". However, the second argument would be """, which is not a valid argument.</p>
+    <hr>
+    <h3>№5. Count arguments</h3>
+    <p><b>Question:</b>How many arguments are passed to the program via the line below?</p>
+    <p class="h-codespan">--text-files task.txt output_for"Task"_lines.txt --folder-name "My topics"</p>
+    <p>Enter a number: <span style="color:blue">5 &#x2714;</span></p>
+    <p><b>Explanation.</b> There are five arguments passed to the program via the line below:</p>
+    <p class="h-codespan">--text-files task.txt output_for"Task"_lines.txt --folder-name "My topics"</p>
+    <p>The arguments are:</p>
+    <ol>
+        <li>--text-files: This is the option that specifies the text files that the program should process.</li>
+        <li>task.txt: This is the name of the first text file.</li>
+        <li>output_for"Task"_lines.txt: This is the name of the output file for the first text file.</li>
+        <li>--folder-name: This is the option that specifies the folder that contains the text files.</li>
+        <li>"My topics": This is the name of the folder that contains the text files.</li>
+    </ol>
+    <p>The first argument, --text-files, is followed by a list of text files. The list of text files is enclosed in double quotes. This means that the spaces between the file names are interpreted as literal spaces, not as separators between arguments. Therefore, the first argument is actually 4 arguments in one.</p>
+    <p>The correct conclusion is that there are 5 arguments passed to the program.</p>
+    <hr>
+    <h3>№6. The output</h3>
+    <p><b>Question:</b> You are passing arguments <span class="h-codespan">1</span> <span class="h-codespan">2</span> to the following program:</p>
+    <div class="w3-example">
+        <h4>Java:</h4>
+        <pre class="language-java w3-white"><code>public static void main(String[] args) {
+    System.out.println(args[0] + args[1]);
+}
+</code></pre>
+    </div>
+    <div class="w3-example">
+        <h4>Kotlin:</h4>
+        <pre class="language-kotlin w3-white"><code>fun main(args: Array&lt;String&gt;) {
+    print(args[0] + args[1])
+}
+</code></pre>
+    </div>
+    <p>What would be the output?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li><span style="color:blue">12 &#x2714;</span></li>
+        <li>An IOException will occur</li>
+        <li>1+2</li>
+        <li>3</li>
+    </ul>
+    <p><b>Explanation.</b> Concatenation takes place, not addition!</p>
+    <hr>
+    <h3>№7. Charle's mistakes</h3>
+    <p><b>Question:</b> Your colleague Charles is trying to pass these arguments: <span class="h-codespan">--data Emma Rodolphe "Leon"</span> to a program like this:</p>
+    <p class="h-codespan">--data" "Emma, Rodolphe, /"Leon/"</p>
+    <p>But he's not succeeding, and he's getting sad. Help him find and correct his mistakes, and make Charles happy.</p>
+    <p>Select one or more options from the list:</p>
+    <ul>
+        <li><span style="color:blue">unnecessary double quotes between --data and Emma &#x2714;</span></li>
+        <li><span style="color:blue">forward slashes instead of backslashes around Leon &#x2714;</span></li>
+        <li><span style="color:blue">superfluous comma after Emma and Rodolphe &#x2714;</span></li>
+        <li>unnecessary backslashes around Leon</li>
+        <li>no comma after --data</li>
+    </ul>
+    <p><b>Explanation.</b> The following are the mistakes Charles made in his command:</p>
+    <ul>
+        <li>He used double quotes instead of single quotes around "Leon". Single quotes are used to pass arguments that contain spaces or special characters, such as quotation marks.</li>
+        <li>He used forward slashes instead of backslashes around "Leon". Backslashes are used to escape special characters in Windows command prompts.</li>
+        <li>He put a comma after "Rodolphe". Commas are not allowed in command arguments.</li>
+    </ul>
+    <p>To correct his mistakes, Charles should use the following command:</p>
+    <p class="h-codespan">--data "Emma, Rodolphe, \"Leon\""</p>
+    <p>This command will correctly pass the arguments "Emma", "Rodolphe", and "Leon" to the program.</p>
+    <p>Here is a breakdown of the command:</p>
+    <ul>
+        <li>The --data option tells the program that the following arguments are data.</li>
+        <li>The double quotes around "Emma, Rodolphe, and "Leon"" are used to pass the arguments as a single string.</li>
+        <li>The backslashes around "Leon" are used to escape the quotation mark in the string.</li>
+        <li>The comma after "Rodolphe" is not allowed, so it should be removed.</li>
+    </ul>
+    <hr>
+    <h3>№8. Configuration-in-itself</h3>
+    <p><b>Question:</b> What represents run/debug configuration?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>only command-line arguments you pass to the program on startup</li>
+        <li>Java Virtual Machine options for better performance and debugging</li>
+        <li><span style="color:blue">set of startup properties: JVM or JRE options, command-line arguments &#x2714;</span></li>
+        <li>commands for "run" and "debug"</li>
+    </ul>
+    <p><b>Explanation.</b> A run/debug configuration is a set of startup properties that includes JVM or JRE options, command-line arguments, and other configuration settings that define how a program should be run or debugged. It is used to specify the environment in which an application should be launched, and can include options such as the main class to be executed, program arguments, and environment variables. This configuration can also include Java Virtual Machine options for better performance and debugging. Therefore, the correct answer is:</p>
+    <p class="h-codespan">set of startup properties: JVM or JRE options, command-line arguments</p>
+    <hr>
+    <!--
+    <h3>№9. Tough question</h3>
+    <p><b>Question:</b> Pass argument "Bolek_and_Lolek" to the program.</p>
+    <p>Enter a short text: </p>
+-->
+    <div class="w3-info">
+        <h3>What are IntelliJ IDEA run configurations?</h3>
+        <p>IntelliJ IDEA run configurations are a set of settings that define how to run a project. The settings can include the following:</p>
+        <ul>
+            <li>The program to be run</li>
+            <li>The command-line arguments</li>
+            <li>The environment variables</li>
+            <li>Other settings, such as the debugger</li>
+        </ul>
+        <p>Run configurations can be used to run projects on a local computer, a remote server, or in a Docker container. They can also be used to run projects in different environments, such as development, testing, and production.</p>
+        <p>To create a new run configuration, open the Run/Debug Configurations dialog (Ctrl+Shift+F10) and click the "+" button. In the "New Run Configuration" dialog, select the type of program you want to run.</p>
+        <p>Once you have created a run configuration, you can edit it by double-clicking on it in the Run/Debug Configurations dialog. You can also run a project from a run configuration by clicking on the green arrow next to it.</p>
+        <p>Here are some examples of how you can use run configurations in IntelliJ IDEA:</p>
+        <ul>
+            <li>You can create a run configuration to run a Java program with specific command-line arguments.</li>
+            <li>You can create a run configuration to run a web application on a local web server.</li>
+            <li>You can create a run configuration to run a Python program in a Docker container.</li>
+        </ul>
+        <p>Run configurations are a powerful tool that can be used to run projects on different platforms and in different environments.</p>
+        <p>Here are some additional things to know about run configurations in IntelliJ IDEA:</p>
+        <ul>
+            <li>You can create multiple run configurations for the same project. This can be useful if you want to run the project in different ways, such as with different command-line arguments or environment variables.</li>
+            <li>You can save run configurations as project files. This allows you to share them with other developers or import them into other projects.</li>
+            <li>You can run a run configuration from a keyboard shortcut. This can be useful if you run the same run configuration frequently.</li>
+        </ul>
+        <p>Here are some of the different types of run configurations available in IntelliJ IDEA:</p>
+        <ul>
+            <li>Application: This type of run configuration is used to run a standalone application.</li>
+            <li>JUnit: This type of run configuration is used to run JUnit tests.</li>
+            <li>TestNG: This type of run configuration is used to run TestNG tests.</li>
+            <li>Spring Boot: This type of run configuration is used to run a Spring Boot application.</li>
+            <li>Docker: This type of run configuration is used to run a Docker container.</li>
+        </ul>
+    </div>
+    <hr>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='jetbrains-academy-plugin_en.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='navigation-through-code_en.html'>Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker_en.html'>COLOR PICKER</a></h4>
+        <a href='../colors/colors_picker_en.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">PROGRAMMING</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../python/index_en.html' class='btn-rightbar'>Python</a>
+            <a href='../java/index_en.html' class='btn-rightbar'>Java</a>
+            <a href='../c/index_en.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index_en.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index_en.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index_en.html' class='btn-rightbar'>R</a>
+            <a href='../kotlin/index_en.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../go/index_en.html' class='btn-rightbar'>Go</a>
+            <a href='../django/index_en.html' class='btn-rightbar'>Django</a>
+            <a href='../typescript/index_en.html' class='btn-rightbar'>TypeScript</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online guides on the site">SERVER-SIDE</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index_en.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index_en.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index_en.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index_en.html' class='btn-rightbar'>ASP та ASP.NET</a>
+            <a href='../nodejs/index_en.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi_en.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index_en.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index_en.html' class='btn-rightbar'>Github Pages</a>
+            <a href='../mongodb/index_en.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index_en.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>CONTACTS</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>PRINT PAGE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>BLOG</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index_en.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ABOUT</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Contacts</h2>
+      <p>If you want to report a bug, as well as make an offer for the site, add an ad or advertisement on the site, do not hesitate to send an email to the admin:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Tutorial</h4>
+        <a href='../html/index_en.html'>HTML Tutorial</a><br>
+        <a href='../css/index_en.html'>CSS Tutorial</a><br>
+        <a href='../js/index_en.html'>JavaScript Tutorial</a><br>
+        <a href='../sql/index_en.html'>SQL Tutorial</a><br>
+        <a href='../python/index_en.html'>Python Tutorial</a><br>
+        <a href='../php/index_en.html'>PHP Tutorial</a><br>
+        <a href='../bootstrap/bootstrap_ver_en.html'>Bootstrap Tutorial</a><br>
+        <a href='../w3css/index_en.html'>W3.CSS Tutorial</a><br>
+        <a href='../appml/index_en.html'>AppML Tutorial</a><br>
+        <a href='../jquery/index_en.html'>jQuery Tutorial</a><br>
+        <a href='../angular/index_en.html'>Angular Tutorial</a><br>
+        <a href='../sass/index_en.html'>Sass Tutorial</a><br>
+        <a href='../java/index_en.html'>Java Tutorial</a><br>
+        <a href='../cpp/index_en.html'>C++ Tutorial</a><br>
+        <a href='../cs/index_en.html'>C# Tutorial</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top References</h4>
+        <a href='../tags/index_en.html'>HTML Reference</a><br>
+        <a href='../cssref/index_en.html'>CSS Reference</a><br>
+        <a href='../jsref/index_en.html'>JavaScript Reference</a><br>
+        <a href='../sql/sql_ref_keywords_en.html'>SQL Reference</a><br>
+        <a href='../python/python_reference_en.html'>Python Reference</a><br>
+        <a href='../php/php_ref_overview_en.html'>PHP Reference</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a><br>
+        <a href='../w3css/w3css_references_en.html'>W3.CSS Reference</a><br>
+        <a href='../appml/appml_reference_en.html'>Appml Reference</a><br>
+        <a href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a><br>
+        <a href='../angular/angular_ref_directives_en.html'>Angular Reference</a><br>
+        <a href='../sass/sass_functions_string_en.html'>Sass Reference</a><br>
+        <a href='../java/java_ref_keywords_en.html'>Java Reference</a><br>
+        <a href='../colors/colors_names_en.html'>Colors Reference</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Examples</h4>
+        <a href='../html/html_examples_en.html'>HTML Examples</a><br>
+        <a href='../css/css_examples_en.html'>CSS Examples</a><br>
+        <a href='../js/js_examples_en.html'>JavaScript Examples</a><br>
+        <a href='../sql/sql_examples_en.html'>SQL Examples</a><br>
+        <a href='../python/python_examples_en.html'>Python Examples</a><br>
+        <a href='../php/php_examples_en.html'>PHP Examples</a><br>
+        <a href='../bootstrap/bootstrap_examples_en.html'>Bootstrap Examples</a><br>
+        <a href='../w3css/w3css_examples_en.html'>W3.CSS Examples</a><br>
+        <a href='../jquery/jquery_examples_en.html'>jQuery Examples</a><br>
+        <a href='../angular/angular_examples_en.html'>Angular Examples</a><br>
+        <a href='../java/java_examples_en.html'>Java Examples</a><br>
+        <a href='../cpp/cpp_examples_en.html'>C++ Examples</a><br>
+        <a href='../cs/cs_examples_en.html'>C# Examples</a><br>
+        <a href='../xml/xml_examples_en.html'>XML Examples</a><br>
+        <a href='../howto/index_en.html'>How To Examples</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_en.html'>Web Certificates</a></h4>
+        <a href='../cert/cert_html_en.html'>HTML Certificate</a><br>
+        <a href='../cert/cert_css_en.html'>CSS Certificate</a><br>
+        <a href='../cert/cert_javascript_en.html'>JavaScript Certificate</a><br>
+        <a href='../cert/cert_frontend_en.html'>Front End Certificate</a><br>
+        <a href='../cert/cert_python_en.html'>Python Certificate</a><br>
+        <a href='../cert/cert_datascience_en.html'>Data Science Certificate</a><br>
+        <a href='../cert/cert_jquery_en.html'>jQuery Certificate</a><br>
+        <a href='../cert/cert_sql_en.html'>SQL Certificate</a><br>
+        <a href='../cert/cert_php_en.html'>PHP Certificate</a><br>
+        <a href='../cert/cert_java_en.html'>Java Certificate</a><br>
+        <a href='../cert/cert_bootstrap_en.html'>Bootstrap Certificate</a><br>
+        <a href='../cert/cert_xml_en.html'>XML Certificate</a><br>
+        <a href='../cert/career_tips_en.html'>Career planning</a><br>
+        <a href='../cert/career_cv_en.html'>Writing a resume</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>This site is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our <a href='../about/about_copyright_en.html'>terms of use</a>, <a href='../about/about_privacy_en.html'>cookie and privacy policy</a>.<br>
+You can also use the Ukrainian version of the site <a href='../index.html'><strong>W3Schools українською</strong></a>.<br>
+    <a href='../about/about_copyright_en.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index_en.html'>W3Schools is Powered by W3.CSS</a>.<br><br>
+    <a href='../index_en.html'><img style='width:150px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
