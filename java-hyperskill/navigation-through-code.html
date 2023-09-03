@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Уроки мови програмування Java. W3Schools також пропонує безкоштовні онлайн-уроки, навчальні посібники, довідкові матеріали, завдання та вправи на більшості мов програмування та створення веб-сайтів. Охоплює найпопулярніші технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато іншого'>
+<script src='../lib/prism2.js'></script>
+<link rel='stylesheet' href='../lib/prism1.css'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Java Навігація по коду. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Java Навігація по коду. Теорія. Висновок. Практичні завдання та відповіді. Підручник із сайту Hyperskill українською мовою. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Підручник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>ЯК ЗРОБИТИ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Підручник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Підручник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index.html'>Вивчити PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <nav>
+            <h2 class='left'><span class='left_h2'>Java</span> Підручник (hyperskill)</h2>
+            <a target='_top' href='index.html'>Початок навчання</a>
+            <a target='_top' href='computer-programming.html'>Введення в програмування</a>
+            <div class='tut_overview'>
+                <a target='_top' href='computer-programming.html'>Комп&#8217;ютерне програмування</a>
+                <a target='_top' href='paradigms.html'>Парадигми</a>
+            </div>
+            <a target='_top' href='oop-intro.html'>Введення в ООП</a>
+            <a target='_top' href='units-of-information.html'>Одиниці інформації</a>
+            <a target='_top' href='operating-systems.html'>Операційні системи</a>
+            <a target='_top' href='what-is-bug.html'>Якість ПЗ</a>
+            <div class='tut_overview'>
+                <a target='_top' href='what-is-bug.html'>Що таке баг?</a>
+                <a target='_top' href='intro-to-logging.html'>Інтро в логінг</a>
+            </div>
+            <a target='_top' href='write-compile-run.html'>JVM Основи</a>
+            <div class='tut_overview'>
+                <a target='_top' href='write-compile-run.html'>Write, compile, run</a>
+                <a target='_top' href='jvm-jre-jdk.html'>JVM, JRE, JDK</a>
+                <a target='_top' href='garbage-collectors.html'>Збирачі сміття</a>
+            </div>
+            <a target='_top' href='ide.html'>Інструменти розробника</a>
+            <div class='tut_overview'>
+                <a target='_top' href='ide.html'>IDE</a>
+                <a target='_top' href='intellij-idea.html'>IntelliJ IDEA</a>
+                <a target='_top' href='intellij-idea-basics.html'>Основи IntelliJ IDEA</a>
+                <a target='_top' href='jetbrains-academy-plugin.html'>Плагін JetBrains Academy</a>
+                <a target='_top' href='intellij-idea-run-configurations.html'>Конфігурації запуску IntelliJ IDEA</a>
+                <a target='_top' href='navigation-through-code.html'>Навігація по коду</a>
+                <a target='_top' href='android-studio-basics.html'>Основи Android studio</a>
+                <a target='_top' href='pycharm-basics.html'>Основи PyCharm</a>
+                <a target='_top' href='goland-basics.html'>Основи GoLand</a>
+            </div>
+            <br>
+            <h2 class='left'><span class='left_h2'>Мови програмування</span></h2>
+            <a target='_top' href='java-intro.html'>Мова Java</a>
+            <div class='tut_overview'>
+                <a target='_top' href='java-intro.html'>Введення в Java</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java-intro.html'>Введення в Java</a>
+                    <a target='_top' href='basic-literals.html'>Базові літерали</a>
+                    <a target='_top' href='overview-of-the-basic-program.html'>Огляд базової програми</a>
+                    <a target='_top' href='printing-data.html'>Друк даних</a>
+                </div>
+                <a target='_top' href='types-and-variables.html'>Типи даних та змінні</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='types-and-variables.html'>Типи та змінні</a>
+                    <a target='_top' href='sizes-and-ranges.html'>Розміри та діапазони</a>
+                    <a target='_top' href='type-casting.html'>Кастинг типів</a>
+                    <a target='_top' href='primitive-and-reference-types.html'>Примітивний та еталонний типи</a>
+                    <a target='_top' href='final-variables.html'>Кінцеві змінні</a>
+                    <a target='_top' href='numeric-literals.html'>Числові літерали</a>
+                    <a target='_top' href='floating-point-types.html'>Типи з плаваючою комою</a>
+                    <a target='_top' href='type-of-references.html'>Типи посилань</a>
+                </div>
+                <a target='_top' href='.html'>Java</a>
+            </div>
+            
+
+            <br><br>
+        </nav>
+    </div>
+  </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/java_icon.svg' alt='Мова програмування Java. W3Schools українською. Уроки для початківців від hyperskill' class="w3-left w3-padding" title='Java для новачків. Уроки W3Schools українською' style='width:120px'></a><p class='w3-right'>
+    <a href='navigation-through-code_en.html' title='Перейти на англійську мову'>En</a>
+</p>
+<article>
+    <h1>Навігація по коду</span></h1>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='intellij-idea-run-configurations.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='android-studio-basics.html'>Next &#10095;</a>
+    </div>
+    <hr>
+    <h3>Теорія</h3>
+    <p>It is pretty hard to remember all the shortcuts, and all the actions and productivity boosters IntelliJ IDEA has. However, don't worry about that. All you need to remember is the one action that rules them all, <b>Help | Find Action</b> command (<span class="h-codespan">⌘ ⇧ A</span> / <span class="h-codespan">Ctrl + Shift + A</span>). Just start typing the action you need, and you will get the list:</p>
+    <img src="../images/navigation01.png" alt="Help | Find Action command" class="w3-image" style="width: 640px">
+    <hr>
+    <h2>§1. Code search</h2>
+    <p>IntelliJ IDEA lets you find and replace text strings in an active editor.</p>
+    <p><b>Search through the current file</b></p>
+    <ul>
+        <li>From the main menu, choose <b>Edit | Find | Find</b>, or press <span class="h-codespan">⌘ F</span> / <span class="h-codespan">Ctrl + F</span>. The search panel appears at the top of the active editor.</li>
+        <li>If necessary, specify the search options.</li>
+        <li>In the search field, start typing the search string:</li>
+    </ul>
+    <img src="../images/navigation02.png" alt="Code search" class="w3-image" style="width: 640px">
+    <p>As you type, the first occurrence of the search string after the current cursor position is selected; the other occurrences are highlighted in the editor. In addition, the matching occurrences are marked in the right gutter with stripes.</p>
+    <ul>
+        <li>To search for a multi-line fragment, click in the search box.</li>
+        <li>Explore the search results.</li>
+    </ul>
+    <p><b>Replace in the current file</b></p>
+    <ul>
+        <li>From the main menu, choose <b>Edit | Find | Replace</b>, or press <span class="h-codespan">⌘ R</span> / <span class="h-codespan">Ctrl + R</span>. The search and replace pane appears on top of the active editor.</li>
+        <li>If necessary, specify the search and replace options.</li>
+        <li>In the search field, start typing the search string. As you type, the matching occurrences are highlighted in the editor, and a Replace pop-up dialog box opens at the first occurrence, suggesting to replace the current occurrence, or all of them, with an empty string.</li>
+        <li>Start typing the replacing string.</li>
+        <li>Explore the search results, and, using the buttons of the replace dialog box, replace occurrences as required.</li>
+    </ul>
+    <p>See <a href="https://www.jetbrains.com/help/idea/finding-and-replacing-text-in-file.html#work_with_search_results" target="_blank" rel="nofollow">Manage your search</a> page for the detailed description of search and replace options.</p>
+    <hr>
+    <h2>§2. Navigating to Class, File, or Symbol by Name</h2>
+    <p><b>Navigate</b> commands enable you to quickly jump to the desired classes, files, or symbols specified by names. IntelliJ IDEA suggests a look-up list of matching names, from which you can select the desired one, and open it in the editor. This navigation honors <b>CamelCase</b> and <b>snake_case</b> capitalization. Refer to the tips for the detailed list of available techniques.</p>
+    <p><b>Declaration and list of usages</b></p>
+    <p>Programming is much more about understanding and reading existing code than about writing some new code. While learning, it is also quite important to see your code as a whole and to understand how it works.</p>
+    <p>When you use any variable, function, or method and need a tip on how it works, let the code speak for itself. Take a look at the definition with <span class="h-codespan">⌘ Y</span> / <span class="h-codespan">Ctrl + Shift + I</span>:</p>
+    <img src="../images/navigation03.png" alt="Declaration and list of usages" class="w3-image" style="width: 640px">
+    <p>There's one more option: press <span class="h-codespan">⌘ B</span> / <span class="h-codespan">Ctrl + B</span> to navigate to the declaration of an entity; use it one more time on the declaration to see the list of usages:</p>
+    <img src="../images/navigation04.png" alt="To navigate to the declaration of an entity" class="w3-image" style="width: 640px">
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>§3. Navigating by name</h2>
+    <p>On the main menu, point to Navigate, and then choose Class, File, or Symbol respectively, or use the following shortcuts:</p>
+    <ul>
+        <li>Class: <span class="h-codespan">⌘ O</span> / <span class="h-codespan">Ctrl + N</span></li>
+        <li>File (directory): <span class="h-codespan">⌘ ⇧ O</span> / <span class="h-codespan">Ctrl + Shift + N</span></li>
+        <li>Symbol: <span class="h-codespan">⌘ ⌥ O</span> / <span class="h-codespan">Ctrl + Shift + Alt + N</span></li>
+        <li>In the pop-up window, start typing the desired name. So, you can enter characters located anywhere inside the desired name. As you type, the suggestion list shrinks, displaying the matching names only.</li>
+    </ul>
+    <p>&nbsp; &nbsp; &nbsp;- Class:</p>
+    <img src="../images/navigation05.png" alt="Class" class="w3-image" style="width: 640px">
+    <p>You can also navigate directly to a specified anonymous class. It is enough to specify the class name and the anonymous class number, delimited with $ character:</p>
+    <img src="../images/navigation06.png" alt="Class" class="w3-image" style="width: 640px">
+    <p>&nbsp; &nbsp; &nbsp;- File:</p>
+    <img src="../images/navigation07.png" alt="File" class="w3-image" style="width: 640px">
+    <p>&nbsp; &nbsp; &nbsp;- Directory: use the same shortcut as for file navigation, and type the name of the directory you are looking for, the pattern name ending with / or \:</p>
+    <img src="../images/navigation08.png" alt="Directory" class="w3-image" style="width: 640px">
+    <p>&nbsp; &nbsp; &nbsp;- Symbol:</p>
+    <img src="../images/navigation09.png" alt="Symbol" class="w3-image" style="width: 640px">
+    <ul>
+        <li>Click the desired entry in the suggestion list, or select it using the arrow keys, and press <span class="h-codespan">Enter</span>.</li>
+    </ul>
+    <hr>
+    <h2>§4. Conclusion</h2>
+    <p>You can easily find and replace text strings as well as navigate through your code using these simple commands and hotkeys. Don’t forget this feature while using IntelliJ IDEA to boost your efficiency and save time.</p>
+    <hr>
+    <p>You can also view <a href="https://hyperskill.org/learn/step/5824" target="_blank" rel="nofollow">Lesson on hyperskill.org</a>.</p>
+    <hr>
+    <h2>Practical tasks and answers</h2>
+    <p>Tasks and answer options are given. The correct option is highlighted in <span style="color:blue">blue</span> color.</p>
+    <h3>№1. The goal</h3>
+    <p><b>Question:</b> What can you find with Navigate commands?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>Any button on the IDEA control panel</li>
+        <li>Any line of code in any file</li>
+        <li><span style="color:blue">Classes, files, or symbols specified by names &#x2714;</span></li>
+        <li>Public classes</li>
+    </ul>
+    <p><b>Explanation.</b> The correct answer is Classes, files, or symbols specified by names.</p>
+    <p>Navigate commands in IntelliJ IDEA allow you to quickly find classes, files, or symbols specified by names. You can use these commands to navigate to the declaration of a symbol, the usages of a symbol, or the definition of a class.</p>
+    <p>You can also use navigate commands to find any line of code in any file. However, this is not as efficient as using the search feature. The IDEA control panel does not have any buttons that can be navigated to using navigate commands. Public classes are a subset of classes. You can use navigate commands to find public classes, but you can also find other types of classes.</p>
+    <p>Here are some of the most commonly used navigate commands in IntelliJ IDEA:</p>
+    <ul>
+        <li>Navigate to declaration (<span class="h-codespan">Ctrl+B</span> or <span class="h-codespan">⌘B</span>): This command navigates to the declaration of the symbol under the caret.</li>
+        <li>Navigate to usages (<span class="h-codespan">Alt+F7</span> or <span class="h-codespan">⌥F7</span>): This command navigates to all the places where the symbol under the caret is used.</li>
+        <li>Navigate to definition (<span class="h-codespan">Ctrl+Alt+B</span> or <span class="h-codespan">⇧⌘B</span>): This command navigates to the definition of the class or method under the caret.</li>
+        <li>Find in a path (<span class="h-codespan">Ctrl+Shift+F</span> or <span class="h-codespan">⇧⌘F</span>): This command allows you to search for a symbol in the current project or in a specific path.</li>
+        <li>Recent files (<span class="h-codespan">Ctrl+E</span> or <span class="h-codespan">⌘E</span>): This command opens a list of the most recently opened files.</li>
+    </ul>
+    <hr>
+    <h3>№2. Looking for action</h3>
+    <p><b>Question:</b> What action can you find using the "Find Action" command?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li><span style="color:blue">All the actions in IntelliJ IDEA &#x2714;</span></li>
+        <li>All the actions on your computer</li>
+        <li>Only actions you define manually</li>
+        <li>Only actions you have programmed</li>
+    </ul>
+    <p><b>Explanation.</b> The correct answer is All the actions in IntelliJ IDEA.</p>
+    <p>The "Find Action" command in IntelliJ IDEA allows you to search for any action, regardless of whether it is a built-in action or a custom action. This includes actions that are available in the menus, actions that are available in the toolbars, and actions that are available through keyboard shortcuts.</p>
+    <p>You can also use the "Find Action" command to find actions that are not currently visible. For example, if you have a custom action that is hidden, you can use the "Find Action" command to find it and make it visible. The "Find Action" command is a powerful tool that can help you learn about all the actions that are available in IntelliJ IDEA. It can also help you find the action that you need to perform a specific task.</p>
+    <p>Here are the steps on how to find an action using the "Find Action" command:</p>
+    <ul>
+        <li>Press <span class="h-codespan">Ctrl+Shift+A</span> (or <span class="h-codespan">⇧⌘A</span> on macOS).</li>
+        <li>In the search field, type the name of the action that you are looking for.</li>
+        <li>IntelliJ IDEA will display a list of actions that match your search criteria.</li>
+        <li>Select the action that you want to use.</li>
+    </ul>
+    <hr>
+    <h3>№3. Find and replace</h3>
+    <p><b>Question:</b> What can you find and replace in an active editor?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>Commented lines</li>
+        <li><span style="color:blue">Text strings &#x2714;</span></li>
+        <li>Anything, but you cannot replace it in the active editor</li>
+        <li>Reserved language literals</li>
+    </ul>
+    <p><b>Explanation.</b> The correct answer is Text strings.</p>
+    <p>You can find and replace text strings in an active editor in IntelliJ IDEA. You can also find and replace commented lines, but you cannot replace reserved language literals.</p>
+    <p>To find and replace text strings, you can use the following steps:</p>
+    <ol>
+        <li>Click on the Find icon in the toolbar.</li>
+        <li>In the Find dialog, enter the text string that you want to find.</li>
+        <li>Click on the Replace tab.</li>
+        <li>Enter the text string that you want to replace the found text string with.</li>
+        <li>Click on the Replace button.</li>
+        <li>IntelliJ IDEA will find all the occurrences of the text string that you are looking for and replace them with the new text string.</li>
+    </ol>
+    <p>You can also use regular expressions to find and replace text strings. Regular expressions are a powerful tool that can be used to find and replace text strings that match a specific pattern.</p>
+    <p>To learn more about regular expressions, you can refer to the IntelliJ IDEA documentation:</p>
+    <p>Regular Expressions: <a href="https://www.jetbrains.com/help/idea/regular-expressions.html" target="_blank" rel="nofollow">https://www.jetbrains.com/help/idea/regular-expressions.html</a></p>
+    <hr>
+    <h3>№4. Start the navigation</h3>
+    <p><b>Question:</b> Open "Navigate - Class" and type in "itera". What is the first result (from the top) that appears in the window?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li><span style="color:blue">Iterable &#x2714;</span></li>
+        <li>IterableNodeType</li>
+        <li>Iteration</li>
+        <li>Iterator</li>
+    </ul>
+    <p><b>Explanation.</b> The answer is Iterable.</p>
+    <p>Iterable is an interface that defines a set of methods that must be implemented by any container that can be iterated over. IterableNodeType is an abstract class that is used to represent the type of element in an iterable container. Iteration is a generic term for the process of traversing the elements of a container.</p>
+    <hr>
+    <h3>№5. IntelliJ IDEA search</h3>
+    <p><b>Question:</b> Let's summarize the commands with which we can navigate through code in IntelliJ IDEA. Match the commands' names with the search they perform.</p>
+    <p>Match the items from left and right columns:</p>
+    <ul>
+        <li>Edit | Find | Replace - Replaces something in the current file</li>
+        <li>Edit | Find | Find - Searches through the current file</li>
+        <li>Help | Find Action - Searches for actions </li>
+        <li>Navigate commands - Search for classes, files, and symbols</li>
+    </ul>
+    <p><b>Explanation.</b> The Edit | Find | Replace command allows you to find and replace a specific text pattern in the current file. The Help | Find Action command allows you to search for actions in IntelliJ IDEA, such as refactorings, inspections, and code templates. The Navigate commands are a set of keyboard shortcuts that allow you to quickly navigate to different parts of your code, such as the declaration of a symbol, the usages of a symbol, or the definition of a class.</p>
+    <p>Here are some other navigation commands in IntelliJ IDEA:</p>
+    <ul>
+        <li><span class="h-codespan">Ctrl+B</span> (or <span class="h-codespan">⌘B</span> on macOS): Go to the declaration of the symbol under the cursor.</li>
+        <li><span class="h-codespan">Ctrl+Alt+Left</span> (or <span class="h-codespan">⌘[</span> on macOS): Go to the previous location in the editor.</li>
+        <li><span class="h-codespan">Ctrl+Alt+Right</span> (or <span class="h-codespan">⌘]</span> on macOS): Go to the next location in the editor.</li>
+        <li><span class="h-codespan">Ctrl+E</span> (or <span class="h-codespan">⌘E</span> on macOS): Open the recent files list.</li>
+        <li><span class="h-codespan">Ctrl+Shift+E</span> (or <span class="h-codespan">⌘⇧E</span> on macOS): Open the recent locations list.</li>
+    </ul>
+    <hr>
+    <h3>№6. Navigate commands</h3>
+    <p><b>Question:</b> Using navigate commands, one can quickly jump to.</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>any project file specified by name or numbers</li>
+        <li>the desired classes, files, or folders specified by ids</li>
+        <li>any project documentation specified by name</li>
+        <li><span style="color:blue">the desired classes, files, or symbols specified by names &#x2714;</span></li>
+    </ul>
+    <p><b>Explanation.</b> The answer is the desired classes, files, or symbols specified by names.</p>
+    <p>The navigate commands in IntelliJ IDEA allow you to quickly jump to the desired classes, files, or symbols specified by names. For example, you can use the Ctrl+B (or ⌘B on macOS) shortcut to go to the declaration of the symbol under the cursor. You can also use the Navigate | Symbol menu to search for a symbol by name.</p>
+    <p>You cannot use the navigate commands to jump to project files specified by name or numbers, or to project documentation specified by name.</p>
+    <hr>
+    <h3>№7. Replace the target</h3>
+    <p><b>Question:</b> Look at the <a href="https://www.jetbrains.com/help/idea/finding-and-replacing-text-in-file.html#work_with_search_results" target="_blank" rel="nofollow">Manage your search</a> page and find out which shortcut you should use to quickly replace the target of your search in the file?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li><span style="color:blue">Ctrl+Alt+Shift+J &#x2714;</span></li>
+        <li>Ctrl+Alt+Shift</li>
+        <li>Ctrl+Alt</li>
+        <li>Ctrl+Alt+Shift+G</li>
+    </ul>
+    <p><b>Explanation.</b> The answer is Ctrl+Alt+Shift+J.</p>
+    <p>According to the IntelliJ IDEA documentation, the shortcut for quickly replacing the target of your search in the file is Ctrl+Alt+Shift+J. This shortcut will open the Replace in File dialog, where you can specify the search string and the replacement string. You can then click the Replace all button to replace all occurrences of the search string in the file.</p>
+    <p>The other options are not shortcuts for replacing text in IntelliJ IDEA.</p>
+    <hr>
+    <div class="w3-info">
+        <h3>What is navigation through code?</h3>
+        <p>Navigation through code is the process of moving around a codebase to find the information you need. This can be done using a variety of techniques, such as:</p>
+        <ul>
+            <li>Using the IDE's navigation features: Most IDEs (Integrated Development Environments) have a variety of features that can help you navigate through code, such as:</li>
+            <ul>
+                <li>Go to definition: This will take you to the declaration of the symbol under the cursor.</li>
+                <li>Find all references: This will show you all the places where the symbol under the cursor is used.</li>
+                <li>Navigate back and forth: This will allow you to move back and forth between previously visited locations.</li>
+                <li>Show usages: This will show you all the places where a symbol is used.</li>
+            </ul>
+            <li>Using text search: You can also use text search to find specific lines of code or patterns of text.</li>
+            <li>Using a debugger: A debugger can be used to step through code line by line, which can be helpful for understanding how a particular piece of code works.</li>
+        </ul>
+        <p>The best navigation technique to use will depend on the specific task you are trying to accomplish. For example, if you are trying to find the definition of a symbol, you would use the Go to definition feature. If you are trying to find all the places where a symbol is used, you would use the Find all references feature.</p>
+        <p>Navigation through code is an essential skill for any programmer. By mastering the techniques of navigation, you can save time and frustration when working with code.</p>
+        <p>Here are some additional tips for navigating through code:</p>
+        <ul>
+            <li>Use descriptive variable and function names. This will make it easier to find the code you are looking for.</li>
+            <li>Use comments to document your code. This will also make it easier to understand what the code is doing.</li>
+            <li>Use a consistent coding style. This will make it easier to scan through code quickly.</li>
+            <li>Use a good IDE. A good IDE will have a variety of features that can help you navigate through code.</li>
+        </ul>
+    </div>
+    <hr>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='intellij-idea-run-configurations_en.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='android-studio-basics_en.html'>Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">ПРОГРАМУВАННЯ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../python/index.html' class='btn-rightbar'>Python</a>
+            <a href='../java/index.html' class='btn-rightbar'>Java</a>
+            <a href='../c/index.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index.html' class='btn-rightbar'>R</a>
+            <a href='../kotlin/index.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../go/index.html' class='btn-rightbar'>Go</a>
+            <a href='../django/index.html' class='btn-rightbar'>Django</a>
+            <a href='../typescript/index.html' class='btn-rightbar'>TypeScript</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-довідники на сайті">СЕРВЕРНА СТОРОНА</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index.html' class='btn-rightbar'>ASP та ASP.NET</a>
+            <a href='../nodejs/index.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index.html' class='btn-rightbar'>Github Pages</a>
+            <a href='../mongodb/index.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб-Сертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+    Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
