@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Уроки мови програмування Java. W3Schools також пропонує безкоштовні онлайн-уроки, навчальні посібники, довідкові матеріали, завдання та вправи на більшості мов програмування та створення веб-сайтів. Охоплює найпопулярніші технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато іншого'>
+<script src='../lib/prism2.js'></script>
+<link rel='stylesheet' href='../lib/prism1.css'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Основи Pycharm. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='Основи Pycharm. Теорія. Огляд. Встановлення та запуск PyCharm. Перегляд проєкту. Висновок. Практичні завдання та відповіді. Підручник із сайту Hyperskill українською мовою. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html' title='Bootstrap Підручник'>BOOTSTRAP</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>ЯК ЗРОБИТИ</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../jquery/index.html' title='jQuery Підручник'>JQUERY</a>
+            <a class='w3-bar-item w3-button' href='../xml/index.html' title='XML Підручник'>XML</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index.html'>Вивчити PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <nav>
+            <h2 class='left'><span class='left_h2'>Java</span> Підручник (hyperskill)</h2>
+            <a target='_top' href='index.html'>Початок навчання</a>
+            <a target='_top' href='computer-programming.html'>Введення в програмування</a>
+            <div class='tut_overview'>
+                <a target='_top' href='computer-programming.html'>Комп&#8217;ютерне програмування</a>
+                <a target='_top' href='paradigms.html'>Парадигми</a>
+            </div>
+            <a target='_top' href='oop-intro.html'>Введення в ООП</a>
+            <a target='_top' href='units-of-information.html'>Одиниці інформації</a>
+            <a target='_top' href='operating-systems.html'>Операційні системи</a>
+            <a target='_top' href='what-is-bug.html'>Якість ПЗ</a>
+            <div class='tut_overview'>
+                <a target='_top' href='what-is-bug.html'>Що таке баг?</a>
+                <a target='_top' href='intro-to-logging.html'>Інтро в логінг</a>
+            </div>
+            <a target='_top' href='write-compile-run.html'>JVM Основи</a>
+            <div class='tut_overview'>
+                <a target='_top' href='write-compile-run.html'>Write, compile, run</a>
+                <a target='_top' href='jvm-jre-jdk.html'>JVM, JRE, JDK</a>
+                <a target='_top' href='garbage-collectors.html'>Збирачі сміття</a>
+            </div>
+            <a target='_top' href='ide.html'>Інструменти розробника</a>
+            <div class='tut_overview'>
+                <a target='_top' href='ide.html'>IDE</a>
+                <a target='_top' href='intellij-idea.html'>IntelliJ IDEA</a>
+                <a target='_top' href='intellij-idea-basics.html'>Основи IntelliJ IDEA</a>
+                <a target='_top' href='jetbrains-academy-plugin.html'>Плагін JetBrains Academy</a>
+                <a target='_top' href='intellij-idea-run-configurations.html'>Конфігурації запуску IntelliJ IDEA</a>
+                <a target='_top' href='navigation-through-code.html'>Навігація по коду</a>
+                <a target='_top' href='android-studio-basics.html'>Основи Android studio</a>
+                <a target='_top' href='pycharm-basics.html'>Основи PyCharm</a>
+                <a target='_top' href='goland-basics.html'>Основи GoLand</a>
+            </div>
+            <br>
+            <h2 class='left'><span class='left_h2'>Мови програмування</span></h2>
+            <a target='_top' href='java-intro.html'>Мова Java</a>
+            <div class='tut_overview'>
+                <a target='_top' href='java-intro.html'>Введення в Java</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java-intro.html'>Введення в Java</a>
+                    <a target='_top' href='basic-literals.html'>Базові літерали</a>
+                    <a target='_top' href='overview-of-the-basic-program.html'>Огляд базової програми</a>
+                    <a target='_top' href='printing-data.html'>Друк даних</a>
+                </div>
+                <a target='_top' href='types-and-variables.html'>Типи даних та змінні</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='types-and-variables.html'>Типи та змінні</a>
+                    <a target='_top' href='sizes-and-ranges.html'>Розміри та діапазони</a>
+                    <a target='_top' href='type-casting.html'>Кастинг типів</a>
+                    <a target='_top' href='primitive-and-reference-types.html'>Примітивний та еталонний типи</a>
+                    <a target='_top' href='final-variables.html'>Кінцеві змінні</a>
+                    <a target='_top' href='numeric-literals.html'>Числові літерали</a>
+                    <a target='_top' href='floating-point-types.html'>Типи з плаваючою комою</a>
+                    <a target='_top' href='type-of-references.html'>Типи посилань</a>
+                </div>
+                <a target='_top' href='.html'>Java</a>
+            </div>
+            
+
+            <br><br>
+        </nav>
+    </div>
+  </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/java_icon.svg' alt='Мова програмування Java. W3Schools українською. Уроки для початківців від hyperskill' class="w3-left w3-padding" title='Java для новачків. Уроки W3Schools українською' style='width:120px'></a><p class='w3-right'>
+    <a href='pycharm-basics_en.html' title='Перейти на англійську мову'>En</a>
+</p>
+<article>
+    <h1>Основи Pycharm</span></h1>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='android-studio-basics.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='goland-basics.html'>Next &#10095;</a>
+    </div>
+    <hr>
+    <h3>Теорія</h3>
+    <p>When you start programming, an <strong>Integrated Development Environment (IDE)</strong> can help with the main developer workflows allowing you to keep focusing on the language specifics. We encourage you to use <strong>PyCharm</strong> for your Python projects. <strong>PyCharm</strong> is a dedicated Python IDE that provides a variety of useful features like code completion, code inspections, project navigation, and refactorings.</p>
+    <hr>
+    <h2>§1. Огляд</h2>
+    <p>PyCharm is available in two editions: <strong>Community and Professional</strong>. The Community edition is free and
+        <a href="https://github.com/JetBrains/intellij-community/tree/master/python" target="_blank" rel="nofollow">open-sourced</a>. It comes with everything you need for smart and intelligent Python development, including code assistance, refactorings, visual debugging, and version control integration. PyCharm Professional is a paid version of PyCharm that is aimed at professional Python, web, and data science development. With PyCharm Professional, you can create web framework applications, develop remotely, analyze big data, and work with Jupyter notebooks. See more details about each edition on the <a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="nofollow">PyCharm product</a> page.</p>
+    <hr>
+    <h2>§2. Встановлення та запуск PyCharm</h2>
+    <p>Before you start, check the requirements for memory and operating systems in the <a href="https://www.jetbrains.com/help/pycharm/installation-guide.html#requirements" target="_blank" rel="nofollow">PyCharm System Requirements</a>.</p>
+    <h3>Встановити Python</h3>
+    <p>PyCharm is a Python-specific IDE, so you need some Python to start your work. Download it from <a href="https://www.python.org/" target="_blank" rel="nofollow">python.org</a>, then install it according to your operating system requirements.</p>
+    <h3>Завантажити та встановити PyCharm</h3>
+    <ol>
+        <li>Download PyCharm Community from <a href="https://www.jetbrains.com/pycharm/download" target="_blank" rel="nofollow">https://www.jetbrains.com/pycharm/download</a>.</li>
+        <li>Run the installer and follow the wizard steps. See more details in the <a href="https://www.jetbrains.com/help/pycharm/installation-guide.html" target="_blank" rel="nofollow">PyCharm Installation Guide</a>.</li>
+    </ol>
+    <p>Note that you can opt for a standalone installation or <a href="https://www.jetbrains.com/help/pycharm/installation-guide.html#toolbox" target="_blank" rel="nofollow">Toolbox App</a> that is helpful when you need to install several JetBrains IDEs or handle multiple versions of PyCharm.</p>
+    <h3>Запустити PyCharm</h3>
+    <p>To launch PyCharm, perform the following action depending on your operating system:</p>
+    <ul>
+        <li>Windows: Run PyCharm using the Windows Start menu or the desktop shortcut</li>
+        <li>macOS: Run the PyCharm app from the <i>Applications</i> directory</li>
+        <li>Linux: Run the <span class="h-codespan">pycharm.sh</span> shell script in the installation directory under bin</li>
+    </ul>
+    <h3>Екран привітання</h3>
+    <p>Once you launch PyCharm, you will see the Welcome screen:</p>
+    <img src="../images/pycharm01.png" alt="Pycharm Basics. Welcome screen" class="w3-image" style="width: 720px">
+    <p>On the Welcome screen, you can find all options and settings to start your work in PyCharm. The quickest way is to create a new project from scratch or open an existing project from a local drive or a repository.</p>
+    <p>The start page also contains a link to the <strong>PyCharm onboarding tour</strong> that will help you get acquainted with the main developer's workflow in just 7 minutes. Take the tour to make your start even smoother.</p>
+    <h3>Швидкий старт</h3>
+    <p>You can begin your work in the IDE without setting anything beforehand because PyCharm provides almost all features out-of-the-box. Nevertheless, whatever you do in PyCharm, you do in the context of a project. A project is an organizational unit that serves as a basis for coding assistance, bulk refactoring, and coding style consistency. So, you need to start with a project setup. You have the following options:</p>
+    <ul>
+        <li><a href="https://www.jetbrains.com/help/pycharm/creating-and-running-your-first-python-project.html" target="_blank" rel="nofollow">Create a new project</a> — create a new project in your file system and configure a Python environment using your Python installation.</li>
+        <li><a href="https://www.jetbrains.com/help/pycharm/open-projects.html#open-local-project" target="_blank" rel="nofollow">Open an existing project</a> — open an existing PyCharm project. You can also open any folder in your file system, and PyCharm will detect any previously configured Python environment.</li>
+        <li><a href="https://www.jetbrains.com/help/pycharm/open-projects.html#git" target="_blank" rel="nofollow">Get a project from a version control system</a> — clone a project from a Git, Mercurial, or Subversion repository.</li>
+    </ul>
+    <h3>Customized start</h3>
+    <p>On the Welcome screen, you can adjust the IDE default settings. Click <b>Customize</b> and select another color theme or select the <b>Sync with OS</b> checkbox to use your system's default theme. Here you can also configure accessibility settings or select another keymap.</p>
+    <img src="../images/pycharm02.png" alt="Pycharm Basics. Customized start" class="w3-image" style="width: 720px">
+    <p>You can also click <b>All settings</b> to open the settings dialog. The settings that you modify at this moment will become the new default configuration for your projects and the IDE.</p>
+    <p>Although PyCharm Community comes with all main features, you can extend them by installing plugins. Click <b>Plugins</b> in the left-hand pane of the Welcome screen, then download and install the required plugins from the <a href="https://plugins.jetbrains.com/pycharm" target="_blank" rel="nofollow">PyCharm plugins repository</a>.</p>
+    <img src="../images/pycharm03.png" alt="Pycharm Basics. PyCharm plugins repository" class="w3-image" style="width: 720px">
+    <p>With this, you're ready to create your first Python application.</p>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>§3. Створити Python проєкт в PyCharm</h2>
+    <p>To create a new Python project, perform the following steps:</p>
+    <ol>
+        <li>On the Welcome screen, select New Project:</li>
+        <img src="../images/pycharm04.png" alt="Pycharm Basics. Welcome screen, select New Project" class="w3-image" style="width: 720px">
+        <li>In the New Project dialog, PyCharm fills all the required fields for you. The IDE will create a Python virtual environment, an isolated "quasi-" Python distribution with its available libraries, and the Python built-in package manager, which allows you to install external libraries. The Base interpreter list indicates the path to the actual Python, which you download and install on your computer.</li>
+        <img src="../images/pycharm05.png" alt="Pycharm Basics. New Project dialog" class="w3-image" style="width: 720px">
+        <p>So, at this point, you can select one type of environment: Virtual Environment (default), Conda, Pipenv, or Poetry, and create it using one of the Python interpreters installed in your system. Refer to Creating Python Projects for more details about other project options.</p>
+        <li>Mind the Create a main.py welcome script checkbox. It is selected by default. With this option enabled, PyCharm creates a Python file with some basic code that can be a good starting point for your application.</li>
+        <li>Click Create to complete the task.</li>
+    </ol>
+    <p>When the project is created, the main.py file is opened in the editor. This file shows the basic script and provides useful hints so that you can start editing code in PyCharm. For the time being, remember one of the most
+        <a href="https://www.jetbrains.com/help/pycharm/searching-everywhere.html" target="_blank" rel="nofollow">helpful shortcuts</a> <span class="h-codespan">Shift + Shift</span>. It opens a dialog where you can find any command, setting, code construct, or project file. Refer to
+        <a href="https://www.jetbrains.com/help/pycharm/working-with-source-code.html" target="_blank" rel="nofollow">Working with Source Code in PyCharm</a> for more detail on available coding assistance.</p>
+    <p>You can add more files of various types to your project, as well as directories and Python packages. They are all listed in the Project tool window. Refer to the following PyCharm web help topic for more details about adding files and directories to a project:
+        <a href="https://www.jetbrains.com/help/pycharm/populating-projects.html" target="_blank" rel="nofollow">Populating PyCharm Projects</a>.</p>
+    <p>You have already learned about the PyCharm editor and Project tool window. Let's look at the entire PyCharm user interface:</p>
+    <img src="../images/pycharm06.png" alt="Pycharm Basics. PyCharm user interface" class="w3-image" style="width: 720px">
+    <p>The main elements of the IDE UI are:</p>
+    <ol>
+        <li>Main menu. Its position is OS-specific;</li>
+        <li>The navigation bar and main toolbar;</li>
+        <li>Project tool window;</li>
+        <li>Editor;</li>
+        <li>Tool windows that include the Python Console and Python Packages windows;</li>
+        <li>Python interpreter selector. It shows the environment that is currently configured for the project.</li>
+    </ol>
+    <p>After doing this, you have created a PyCharm project and configured a Python interpreter for it. You can create more Python interpreters if you need various environments to run your scripts (for example, when you want to execute them on different Python versions).</p>
+    <hr>
+    <h2>§4. Create Python interpreters</h2>
+    <p>The easiest way to open the Python interpreter settings is to click the <strong>Python Interpreter</strong> selector located in the lowest part of the PyCharm window, on its Status Bar.</p>
+    <ol>
+        <li>Click the interpreter selector. You should be able to see all the interpreters that have been configured to be used by all projects.</li>
+        <p></p>
+        <img src="../images/pycharm07.png" alt="Pycharm Basics. Python Interpreter" class="w3-image" style="width: 720px">
+        <p></p>
+        <li>Select <b>Add New Interpreter &gt; Add Local Interpreter</b> from the menu.</li>
+        <li>You can see various types of interpreters in the <b>Add Interpreter</b> dialog:</li>
+        <img src="../images/pycharm08.png" alt="Pycharm Basics. Add Interpreter" class="w3-image" style="width: 720px">
+        <li>You can create a new interpreter or continue to use an existing one.</li>
+        <p>For a new interpreter, select <b>Base interpreter</b> from the list, or click "<span class="h-codespan">...</span>" and find a Python executable in your file system. For an existing interpreter, select <b>Interpreter</b>, or, similarly, click "<span class="h-codespan">...</span>" to discover a Python executable.</p>
+    </ol>
+    <p>If PyCharm is not able to detect Python on your machine, it provides two options: download the latest Python versions from
+        <a href="https://www.python.org/" target="_blank" rel="nofollow">python.org</a> or specify a path to the Python executable (in case of non-standard installation). See more information and related procedures in <a href="https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html" target="_blank" rel="nofollow">Configure a Python Interpreter in PyCharm</a>.</p>
+    <p>When you save the changes, the newly created interpreter is set for the current project.</p>
+    <p>The key point for creating different isolated environments is to keep different sets of Python packages. So, let's learn how to install packages in PyCharm.</p>
+    <hr>
+    <h2>§5. Install Python packages</h2>
+    <p>The Python Packages tool window provides the quickest and neat way to preview and install packages for the currently selected Python interpreter.</p>
+    <img src="../images/pycharm09.png" alt="Pycharm Basics. Install Python packages" class="w3-image" style="width: 720px">
+    <p>To install a package from the default repository:</p>
+    <ol>
+        <li>Type the package name in the <b>Search</b> field of the Python Packages tool window.</li>
+        <li>Locate the package in the list of the default repository</li>
+        <li>Click the <b>Install</b> button in the upper-right corner of the tool window</li>
+    </ol>
+    <p>For more details about installing Python packages, see <a href="https://www.jetbrains.com/help/pycharm/installing-uninstalling-and-upgrading-packages.html" target="_blank" rel="nofollow">Install, Uninstall, and Upgrade Packages in PyCharm</a>.</p>
+    <hr>
+    <h2>§6. Висновок</h2>
+    <p>Підсумовуючи:</p>
+    <ul>
+        <li>PyCharm is a Python-specific IDE. It has two editions: Community (free) and Professional (30-day free trial).</li>
+        <li>To install PyCharm, download an installer from <a href="https://www.jetbrains.com/pycharm/download" target="_blank" rel="nofollow">https://www.jetbrains.com/pycharm/download</a>.</li>
+        <li>The Welcome screen provides a quick way to create, open, or clone a Python project.</li>
+        <li>You can customize your IDE with PyCharm settings.</li>
+        <li>To start your way in PyCharm, you need to create a project, configure a Python virtual environment (Python interpreter), and add your Python code to the <span class="h-codespan">main.py</span> file or to other Python files.</li>
+        <li>PyCharm allows you to configure various Python interpreters depending on your operating system and edition of PyCharm.</li>
+        <li>With the Python Packages tools window, you can quickly install packages on the selected Python interpreter.</li>
+        <li>Find more details and specific procedures in the <a href="https://www.jetbrains.com/help/pycharm/" target="_blank" rel="nofollow">PyCharm Web Help</a>.</li>
+    </ul>
+    <hr>
+    <p>Ви також можете переглянути <a href="https://hyperskill.org/learn/step/6193" target="_blank" rel="nofollow">Урок на hyperskill.org</a>.</p>
+    <hr>
+    <div class='w3-clear nextprev'>
+        <a class='w3-left w3-btn' href='android-studio-basics.html'>&#10094; Prev</a>
+        <a class='w3-right w3-btn' href='goland-basics.html'>Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">ПРОГРАМУВАННЯ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../python/index.html' class='btn-rightbar'>Python</a>
+            <a href='../java/index.html' class='btn-rightbar'>Java</a>
+            <a href='../c/index.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index.html' class='btn-rightbar'>R</a>
+            <a href='../kotlin/index.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../go/index.html' class='btn-rightbar'>Go</a>
+            <a href='../django/index.html' class='btn-rightbar'>Django</a>
+            <a href='../typescript/index.html' class='btn-rightbar'>TypeScript</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-довідники на сайті">СЕРВЕРНА СТОРОНА</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index.html' class='btn-rightbar'>ASP та ASP.NET</a>
+            <a href='../nodejs/index.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index.html' class='btn-rightbar'>Github Pages</a>
+            <a href='../mongodb/index.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Веб-Сертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>
+    Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
+    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
+    <a href='../index.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools.com'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
