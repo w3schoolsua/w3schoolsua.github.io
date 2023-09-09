@@ -15,7 +15,7 @@
 <link rel='stylesheet' href='../lib/prism1.css'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Java Інкапсуляція. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Java Інкапсуляція. Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<meta name='description' content='Java Інкапсуляція. Отримати та встановити. Публічні методи get і set. Чому саме інкапсуляція? Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -483,20 +483,20 @@
     </div>
     <hr>
     <h2>Інкапсуляція</h2>
-    <p>The meaning of <strong>Encapsulation</strong>, is to make sure that "sensitive" data is hidden from users. To achieve this, you must:</p>
+    <p>Значення <strong>інкапсуляції</strong> полягає в тому, щоб переконатися, що "конфіденційні" дані приховані від користувачів. Для цього ви повинні:</p>
     <ul>
-        <li>declare class variables/attributes as <code class="w3-codespan">private</code></li>
-        <li>provide public <strong>get</strong> and <strong>set</strong> methods to access and update the value of a <code class="w3-codespan">private</code> variable</li>
+        <li>оголосити змінні/атрибути класу як <code class="w3-codespan">private</code> (приватні)</li>
+        <li>надати публічні методи <strong>get</strong> і <strong>set</strong> для доступу та оновлення значення <code class="w3-codespan">private</code> змінної</li>
     </ul>
     <hr>
-    <h2>Get and Set</h2>
-    <p>You learned from the previous chapter that <code class="w3-codespan">private</code> variables can only be accessed within the same class (an outside class has no access to it). However, it is possible to access them if we provide public <strong>get</strong> and <strong>set</strong> methods.</p>
-    <p>The <code class="w3-codespan">get</code> method returns the variable value, and the <code class="w3-codespan">set</code> method sets the value.</p>
-    <p>Syntax for both is that they start with either <code class="w3-codespan">get</code> or <code class="w3-codespan">set</code>, followed by the name of the variable, with the first letter in upper case:</p>
+    <h2>Отримати та встановити</h2>
+    <p>З попереднього розділу ви дізналися, що до <code class="w3-codespan">private</code> змінних можна отримати доступ лише в межах одного класу (зовнішній клас не має до них доступу). Однак доступ до них можливий, якщо ми надамо публічні методи <strong>get</strong> і <strong>set</strong>.</p>
+    <p>Метод <code class="w3-codespan">get</code> повертає значення змінної, а метод <code class="w3-codespan">set</code> встановлює значення.</p>
+    <p>Синтаксис для обох полягає в тому, що вони починаються з <code class="w3-codespan">get</code> або <code class="w3-codespan">set</code>, після чого йде назва змінної, з першою літерою у верхньому регістрі:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white" data-line="5,10"><code>public class Person {
-&nbsp; private String name; // private = restricted access
+&nbsp; private String name; // private = обмежений доступ
 
 &nbsp; // Getter
 &nbsp; public String getName() {
@@ -511,28 +511,28 @@
 </code></pre>
     </div>
     <h4>Пояснення прикладу</h4>
-    <p>The <code class="w3-codespan">get</code> method returns the value of the variable <code class="w3-codespan">name</code>.</p>
-    <p>The <code class="w3-codespan">set</code> method takes a parameter (<code class="w3-codespan">newName</code>) and assigns it to the <code class="w3-codespan">name</code> variable. The <code class="w3-codespan">this</code> keyword is used to refer to the current object.</p>
-    <p>However, as the <code class="w3-codespan">name</code> variable is declared as <code class="w3-codespan">private</code>, we <b>cannot</b> access it from outside this class:</p>
+    <p>Метод <code class="w3-codespan">get</code> повертає значення змінної <code class="w3-codespan">name</code>.</p>
+    <p>Метод <code class="w3-codespan">set</code> приймає параметр (<code class="w3-codespan">newName</code>) і призначає йому змінну <code class="w3-codespan">name</code>. Ключове слово <code class="w3-codespan">this</code> використовується для посилання на поточний об&#8217;єкт.</p>
+    <p>Однак, оскільки змінну <code class="w3-codespan">name</code> оголошено як <code class="w3-codespan">private</code>, ми <b>не можемо</b> мати доступ до неї поза цим класом:</p>
     <div class="w3-example w3-pale-red">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>public class Main {
 &nbsp; public static void main(String[] args) {
 &nbsp;&nbsp;&nbsp; Person myObj = new Person();
-&nbsp;&nbsp;&nbsp; myObj.name = &quot;John&quot;;&nbsp; // error
+&nbsp;&nbsp;&nbsp; myObj.name = &quot;John&quot;;&nbsp; // помилка
 &nbsp;&nbsp;&nbsp; System.out.println(myObj.name); // помилка
 &nbsp; }
 }
 </code></pre>
         <a target="_blank" class="w3-btn" href="../javatryit/demo_getset_error.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>If the variable was declared as <code class="w3-codespan">public</code>, we would expect the following output:</p>
+    <p>Якби змінну було оголошено як <code class="w3-codespan">public</code> (публічна), ми очікували б такий результат:</p>
     <div class="w3-example">
         <div class="w3-padding notranslate w3-black w3-margin-top w3-margin-bottom">
             <code>John</code>
         </div>
     </div>
-    <p>However, as we try to access a <code class="w3-codespan">private</code> variable, we get an error:</p>
+    <p>Тому, коли ми намагаємося отримати доступ до <code class="w3-codespan">private</code> змінної, ми отримуємо помилку:</p>
     <div class="w3-example">
         <div class="w3-padding notranslate w3-black w3-margin-top w3-margin-bottom">
             <code>
@@ -546,28 +546,28 @@
             </code>
         </div>
     </div>
-    <p>Instead, we use the <code class="w3-codespan">getName()</code> and <code class="w3-codespan">setName()</code> methods to access and update the variable:</p>
+    <p>Замість цього ми використовуємо методи <code class="w3-codespan">getName()</code> і <code class="w3-codespan">setName()</code> для доступу та оновлення змінної:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white" data-line="4,5"><code>public class Main {
 &nbsp; public static void main(String[] args) {
 &nbsp;&nbsp;&nbsp; Person myObj = new Person();
-&nbsp;&nbsp;&nbsp; myObj.setName(&quot;John&quot;); // Set the value of the name variable to &quot;John&quot;
+&nbsp;&nbsp;&nbsp; myObj.setName(&quot;John&quot;); // Встановити значення назви змінної на &quot;John&quot;
 &nbsp;&nbsp;&nbsp; System.out.println(myObj.getName());
 &nbsp; }
 }
 
 // Виведе &quot;John&quot;
 </code></pre>
-        <a target="_blank" class="w3-btn" href="../javatryit/demo_getset.html">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn" href="../javatryit/demo_getset.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Why Encapsulation?</h2>
+    <h2>Чому саме інкапсуляція?</h2>
     <ul>
-        <li>Better control of class attributes and methods</li>
-        <li>Class attributes can be made <strong>read-only</strong> (if you only use the <code class="w3-codespan">get</code> method), or <strong>write-only</strong> (if you only use the <code class="w3-codespan">set</code> method)</li>
-        <li>Flexible: the programmer can change one part of the code without affecting other parts</li>
-        <li>Increased security of data</li>
+        <li>Кращий контроль над атрибутами та методами класу</li>
+        <li>Атрибути класу можна зробити <strong>лише для читання</strong> (якщо ви використовуєте лише метод <code class="w3-codespan">get</code>) або <strong>лише для запису</strong> (якщо ви використовуєте лише метод <code class="w3-codespan">set</code>)</li>
+        <li>Гнучкий: програміст може змінити одну частину коду, не впливаючи на інші частини</li>
+        <li>Підвищена безпека даних</li>
     </ul>
     <hr>
     <div class="w3-clear nextprev">
