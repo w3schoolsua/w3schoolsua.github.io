@@ -15,7 +15,7 @@
 <link rel='stylesheet' href='../lib/prism1.css'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Java Наслідування (Спадкування). Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Java Наслідування. (Субклас та Суперклас). Ключове слово final. Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<meta name='description' content='Java Наслідування (Спадкування) (Субклас та Суперклас). Ключове слово final. Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -476,40 +476,40 @@
     <a href='java_inheritance_en.html' title='Перейти на англійську мову'>En</a>
 </p>
 <article>
-    <h1>Java <span class="color_h1">Наслідування</span></h1>
+    <h1>Java <span class="color_h1">Спадкування (Наслідування)</span></h1>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="java_packages.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="java_polymorphism.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Java Наслідування (Субклас та Суперклас)</h2>
-    <p>In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:</p>
+    <h2>Java Спадкування (Субклас та Суперклас)</h2>
+    <p>У Java є можливість успадковувати атрибути та методи від одного класу до іншого. Ми групуємо «концепцію успадкування» у дві категорії:</p>
     <ul>
-        <li><strong>subclass</strong> (child) - the class that inherits from another class</li>
-        <li><strong>superclass</strong> (parent) - the class being inherited from</li>
+        <li><strong>підклас</strong> (дочірній) – клас, який успадковує інший клас</li>
+        <li><strong>суперклас</strong> (батьківський) – клас, який успадковується від</li>
     </ul>
-    <p>To inherit from a class, use the <code class="w3-codespan">extends</code> keyword.</p>
-    <p>In the example below, the <code class="w3-codespan">Car</code> class (subclass) inherits the attributes and methods from the <code class="w3-codespan">Vehicle</code> class (superclass):</p>
+    <p>Щоб успадкувати від класу, використовуйте ключове слово <code class="w3-codespan">extends</code>.</p>
+    <p>У прикладі нижче клас (підклас) <code class="w3-codespan">Car</code> успадковує атрибути та методи від <code class="w3-codespan">Vehicle</code> клас (надклас):</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white" data-line="8"><code>class Vehicle {
-&nbsp; protected String brand = &quot;Ford&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; // Vehicle attribute
-&nbsp; public void honk() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Vehicle method
+&nbsp; protected String brand = &quot;Ford&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; // Vehicle атрибут
+&nbsp; public void honk() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Vehicle метод
 &nbsp;&nbsp;&nbsp; System.out.println(&quot;Tuut, tuut!&quot;);
 &nbsp; }
 }
 
 class Car extends Vehicle {
-&nbsp; private String modelName = &quot;Mustang&quot;;&nbsp;&nbsp;&nbsp; // Car attribute
+&nbsp; private String modelName = &quot;Mustang&quot;;&nbsp;&nbsp;&nbsp; // Атрибут Car
 &nbsp; public static void main(String[] args) {
 
-&nbsp;&nbsp;&nbsp; // Create a myCar object
+&nbsp;&nbsp;&nbsp; // Створити об&#8217;єкт myCar
 &nbsp;&nbsp;&nbsp; Car myCar = new Car();
 
-&nbsp;&nbsp;&nbsp; // Call the honk() method (from the Vehicle class) on the myCar object
+&nbsp;&nbsp;&nbsp; // Викличте метод honk() (з класу Vehicle) для об&#8217;єкта myCar
 &nbsp;&nbsp;&nbsp; myCar.honk();
 
-&nbsp;&nbsp;&nbsp; // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class
+&nbsp;&nbsp;&nbsp; // Відобразити значення атрибута brand (з класу Vehicle) і значення modelName з класу Car
 &nbsp;&nbsp;&nbsp; System.out.println(myCar.brand + &quot; &quot; + myCar.modelName);
 &nbsp; }
 }
@@ -517,11 +517,11 @@ class Car extends Vehicle {
         <a target="_blank" class="w3-btn" href="../javatryit/demo_inherit.html">Спробуйте самі &raquo;</a>
     </div>
     <div class="w3-note w3-panel">
-        <p>Did you notice the <code class="w3-codespan">protected</code> modifier in Vehicle?</p>
-        <p>We set the <strong>brand</strong> attribute in <strong>Vehicle</strong> to a <code class="w3-codespan">protected</code> <a href="java_modifiers_en.html">access modifier</a>. If it was set to <code class="w3-codespan">private</code>, the Car class would not be able to access it.</p>
-        <h4>Why And When To Use "Inheritance"?</h4>
-        <p>- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.</p>
-        <p><b>Tip:</b> Also take a look at the next chapter, <a href="java_polymorphism.html">Polymorphism</a>, which uses inherited methods to perform different tasks.</p>
+        <p>Ви помітили модифікатор <code class="w3-codespan">protected</code> у Vehicle?</p>
+        <p>Ми встановили атрибут <strong>brand</strong> у <strong>Vehicle</strong> як <code class="w3-codespan">protected</code> <a href="java_modifiers_en.html" >модифікатор доступу</a>. Якщо для нього встановлено <code class="w3-codespan">private</code>, клас Car не матиме до нього доступу.</p>
+        <h4>Чому і коли використовувати «Спадок»?</h4>
+        <p>- Це корисно для багаторазового використання коду: повторно використовуйте атрибути та методи існуючого класу під час створення нового класу.</p>
+        <p><b>Порада:</b> також перегляньте наступний розділ, <a href="java_polymorphism.html">Поліморфізм</a>, який використовує успадковані методи для виконання різних завдань.</p>
     </div>
     <hr>
     <div class="adver_adinfeed">
@@ -529,9 +529,9 @@ class Car extends Vehicle {
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>Ключове слово <code class="w3-codespan">final</code></h2>
-    <p>If you don't want other classes to inherit from a class, use the <code class="w3-codespan">final</code> keyword:</p>
+    <p>Якщо ви не хочете, щоб інші класи успадковували клас, використовуйте ключове слово <code class="w3-codespan">final</code>:</p>
     <div class="w3-example w3-pale-red">
-        <p>If you try to access a <code class="w3-codespan">final</code> class, Java will generate an error:</p>
+        <p>Якщо ви спробуєте отримати доступ до класу <code class="w3-codespan">final</code>, Java видасть помилку:</p>
         <pre class="language-java w3-white w3-border-red"><code>final class Vehicle {
 ...
 }
@@ -540,7 +540,7 @@ class Car extends Vehicle {
 ...
 }
 </code></pre>
-        <p>The output will be something like this:</p>
+        <p>Виведення буде приблизно таким:</p>
         <div class="w3-padding notranslate w3-black">
             <code>
                 Main.java:9: error: cannot inherit from final Vehicle<br>class Main extends Vehicle {
