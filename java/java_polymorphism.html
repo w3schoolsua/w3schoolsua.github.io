@@ -483,60 +483,60 @@
     </div>
     <hr>
     <h2>Java Поліморфізм</h2>
-    <p>Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.</p>
-    <p>Like we specified in the previous chapter; <a href="java_inheritance_en.html"><strong>Inheritance</strong></a> lets us inherit attributes and methods from another class. <strong>Polymorphism</strong> uses those methods to perform different tasks. This allows us to perform a single action in different ways.</p>
-    <p>For example, think of a superclass called <code class="w3-codespan">Animal</code> that has a method called <code class="w3-codespan">animalSound()</code>. Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):</p>
-    <p>In the following example, we create an Animal class with an animalSound() method. Then we create two subclasses of the Animal: Pig and Cat that inherit from the Animal class. The subclasses also have their own implementation of the animalSound() method:</p>
+    <p>Поліморфізм означає «багато форм», і він виникає, коли ми маємо багато класів, пов&#8217;язаних один з одним успадкуванням.</p>
+    <p>Як ми вказали в попередньому розділі; <a href="java_inheritance.html"><strong>Спадкування</strong></a> дозволяє нам успадковувати атрибути та методи з іншого класу. <strong>Поліморфізм</strong> використовує ці методи для виконання різних завдань. Це дозволяє нам виконувати одну дію різними способами.</p>
+    <p>Наприклад, подумайте про суперклас під назвою <code class="w3-codespan">Animal</code>, який має метод під назвою <code class="w3-codespan">animalSound()</code>. Підкласами тварин можуть бути свині, коти, собаки, птахи. Вони також мають власну реалізацію звуку тварин (свиня хрюкає, а кіт нявкає тощо):</p>
+    <p>У наступному прикладі ми створюємо клас Animal за допомогою методу animalSound(). Потім ми створюємо два підкласи Animal: Pig та Cat, які успадковують клас Animal. Підкласи також мають власну реалізацію методу animalSound():</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>class Animal {
 &nbsp; public void animalSound() {
-&nbsp;&nbsp;&nbsp; System.out.println(&quot;The animal makes a sound&quot;);
+&nbsp;&nbsp;&nbsp; System.out.println(&quot;Тварина створює звук&quot;);
 &nbsp; }
 }
 
 class Pig extends Animal {
 &nbsp; public void animalSound() {
-&nbsp;&nbsp;&nbsp; System.out.println(&quot;The pig says: wee wee&quot;);
+&nbsp;&nbsp;&nbsp; System.out.println(&quot;Свиня: хрю-хрю&quot;);
 &nbsp; }
 }
 
 class Dog extends Animal {
 &nbsp; public void animalSound() {
-&nbsp;&nbsp;&nbsp; System.out.println(&quot;The dog says: bow wow&quot;);
+&nbsp;&nbsp;&nbsp; System.out.println(&quot;Собака: гав-гав&quot;);
 &nbsp; }
 }
 </code></pre>
     </div>
     <div class="w3-note w3-panel">
-        <p>Remember from the <a href="java_inheritance_en.html">Inheritance chapter</a> that we use the <code class="w3-codespan">extends</code> keyword to inherit from a class.</p>
+        <p>Пам&#8217;ятайте з розділу <a href="java_inheritance.html">Java Успадкування</a>, що ми використовуємо ключове слово <code class="w3-codespan">extends</code> для успадкування від класу.</p>
     </div>
-    <p>Now we can create <code class="w3-codespan">Pig</code> and <code class="w3-codespan">Dog</code> objects and call the <code class="w3-codespan">animalSound()</code> method on both of them:</p>
+    <p>Тепер ми можемо створити об&#8217;єкти <code class="w3-codespan">Pig</code> та <code class="w3-codespan">Dog</code> і викликати <code class="w3-codespan">animalSound()</code> для обох методів:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>class Animal {
 &nbsp; public void animalSound() {
-&nbsp;&nbsp;&nbsp; System.out.println(&quot;The animal makes a sound&quot;);
+&nbsp;&nbsp;&nbsp; System.out.println(&quot;Тварина створює звук&quot;);
 &nbsp; }
 }
 
 class Pig extends Animal {
 &nbsp; public void animalSound() {
-&nbsp;&nbsp;&nbsp; System.out.println(&quot;The pig says: wee wee&quot;);
+&nbsp;&nbsp;&nbsp; System.out.println(&quot;Свиня: хрю-хрю&quot;);
 &nbsp; }
 }
 
 class Dog extends Animal {
 &nbsp; public void animalSound() {
-&nbsp;&nbsp;&nbsp; System.out.println(&quot;The dog says: bow wow&quot;);
+&nbsp;&nbsp;&nbsp; System.out.println(&quot;Собака: гав-гав&quot;);
 &nbsp; }
 }
 
 class Main {
 &nbsp; public static void main(String[] args) {
-&nbsp;&nbsp;&nbsp; Animal myAnimal = new Animal();&nbsp; // Create a Animal object
-&nbsp;&nbsp;&nbsp; Animal myPig = new Pig();&nbsp; // Create a Pig object
-&nbsp;&nbsp;&nbsp; Animal myDog = new Dog();&nbsp; // Create a Dog object
+&nbsp;&nbsp;&nbsp; Animal myAnimal = new Animal();&nbsp; // Створити об&#8217;єкт Animal
+&nbsp;&nbsp;&nbsp; Animal myPig = new Pig();&nbsp; // Створити об&#8217;єкт Pig
+&nbsp;&nbsp;&nbsp; Animal myDog = new Dog();&nbsp; // Створити об&#8217;єкт Dog
 &nbsp;&nbsp;&nbsp; myAnimal.animalSound();
 &nbsp;&nbsp;&nbsp; myPig.animalSound();
 &nbsp;&nbsp;&nbsp; myDog.animalSound();
@@ -546,8 +546,8 @@ class Main {
         <a target="_blank" class="w3-btn" href="../javatryit/demo_polymorphism.html">Спробуйте самі &raquo;</a>
     </div>
     <div class="w3-note w3-panel">
-        <h4>Чому і де використовувати "Наслідування" та "Поліморфізм"?</h4>
-        <p>- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.</p>
+        <h4>Чому і де використовувати "Спадкування" та "Поліморфізм"?</h4>
+        <p>- Це корисно для повторного використання коду: повторно використовуйте атрибути та методи існуючого класу під час створення нового класу.</p>
     </div>
     <hr>
     <div class="w3-clear nextprev">
