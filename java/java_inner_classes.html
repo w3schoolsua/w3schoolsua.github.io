@@ -15,7 +15,7 @@
 <link rel='stylesheet' href='../lib/prism1.css'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Java Внутрішні класи. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Java Внутрішні класи. Приватний внутрішній клас. Статичний внутрішній клас. Access Outer Class From Inner Class. Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<meta name='description' content='Java Внутрішні класи. Приватний внутрішній клас. Статичний внутрішній клас. Доступ до зовнішнього класу з внутрішнього класу. Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -483,8 +483,8 @@
     </div>
     <hr>
     <h2>Java Внутрішні класи</h2>
-    <p>In Java, it is also possible to nest classes (a class within a class). The purpose of nested classes is to group classes that belong together, which makes your code more readable and maintainable.</p>
-    <p>To access the inner class, create an object of the outer class, and then create an object of the inner class:</p>
+    <p>У Java також можливо вкладати класи (клас у класі). Метою вкладених класів є групування класів, які належать один одному, що робить ваш код більш читабельним і придатним для обслуговування.</p>
+    <p>Щоб отримати доступ до внутрішнього класу, створіть об&#8217;єкт зовнішнього класу, а потім – об&#8217;єкт внутрішнього класу:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white" data-line="4"><code>class OuterClass {
@@ -509,7 +509,7 @@ public class Main {
     </div>
     <hr>
     <h2>Приватний внутрішній клас</h2>
-    <p>Unlike a &quot;regular&quot; class, an inner class can be <code class="w3-codespan">private</code> or <code class="w3-codespan">protected</code>. If you don't want outside objects to access the inner class, declare the class as <code class="w3-codespan">private</code>:</p>
+    <p>На відміну від «звичайного» класу, внутрішній клас може бути <code class="w3-codespan">private</code> (приватним) або <code class="w3-codespan">protected</code> (захищеним). Якщо ви не хочете, щоб зовнішні об&#8217;єкти отримували доступ до внутрішнього класу, оголосите клас як <code class="w3-codespan">private</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white" data-line="4"><code>class OuterClass {
@@ -528,7 +528,7 @@ public class Main {
 &nbsp; }
 }
 </code></pre>
-        <p>If you try to access a private inner class from an outside class, an error occurs:</p>
+        <p>Якщо ви намагаєтесь отримати доступ до приватного внутрішнього класу із зовнішнього класу, виникає помилка:</p>
         <div class="w3-padding notranslate w3-black w3-margin-top">
             <code>Main.java:13: error: OuterClass.InnerClass has private access in OuterClass<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;OuterClass.InnerClass myInner = myOuter.new InnerClass();<br>
@@ -542,7 +542,7 @@ public class Main {
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <h2>Статичний внутрішній клас</h2>
-    <p>An inner class can also be <code class="w3-codespan">static</code>, which means that you can access it without creating an object of the outer class:</p>
+    <p>Внутрішній клас також може бути <code class="w3-codespan">static</code>, що означає, що ви можете отримати доступ до нього без створення об&#8217;єкта зовнішнього класу:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white" data-line="4"><code>class OuterClass {
@@ -565,11 +565,11 @@ public class Main {
         <a target="_blank" class="w3-btn" href="../javatryit/demo_class_inner3.html">Спробуйте самі &raquo;</a>
     </div>
     <div class="w3-note w3-panel">
-        <p><b>Примітка:</b> just like <code class="w3-codespan">static</code> attributes and methods, a <code class="w3-codespan">static</code> inner class does not have access to members of the outer class.</p>
+        <p><b>Примітка:</b> Подібно до атрибутів і методів <code class="w3-codespan">static</code>, внутрішній клас <code class="w3-codespan">static</code> не має доступу до членів зовнішнього класу.</p>
     </div>
     <hr>
-    <h2>Access Outer Class From Inner Class</h2>
-    <p>One advantage of inner classes, is that they can access attributes and methods of the outer class:</p>
+    <h2>Доступ до зовнішнього класу з внутрішнього класу</h2>
+    <p>Однією з переваг внутрішніх класів є те, що вони можуть отримати доступ до атрибутів і методів зовнішнього класу:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white"><code>class OuterClass {
