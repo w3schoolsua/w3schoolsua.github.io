@@ -15,7 +15,7 @@
 <link rel='stylesheet' href='../lib/prism1.css'>
 <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
 <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3--><title>Java Абстракція. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Java Абстракція. Абстрактні класи та методи. Чому і коли використовуються абстрактні класи та методи? Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<meta name='description' content='Java Абстракція. Абстрактні класи та методи. Ключове слово abstract є модифікатором доступу, який використовується для класів і методів. Чому і коли використовуються абстрактні класи та методи? Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -483,13 +483,13 @@
     </div>
     <hr>
     <h2>Абстрактні класи та методи</h2>
-    <p>Data <strong>abstraction</strong> is the process of hiding certain details and showing only essential information to the user.<br>Abstraction can be achieved with either <strong>abstract classes</strong> or <a href="java_interface.html"><strong>interfaces</strong></a> (which you will learn more about in the next chapter).</p>
-    <p>The <code class="w3-codespan">abstract</code> keyword is a non-access modifier, used for classes and methods:</p>
+    <p><strong>Абстракція</strong> (абстрагування) даних – це процес приховування певних деталей і відображення лише важливої інформації для користувача.<br>Абстракції можна досягти за допомогою <strong>абстрактних класів</strong> або <a href="java_interface .html"><strong>інтерфейсів</strong></a> (про які ви дізнаєтеся більше в наступному розділі).</p>
+    <p>Ключове слово <code class="w3-codespan">abstract</code> є модифікатором доступу, який використовується для класів і методів:</p>
     <ul>
-        <li><strong>Абстрактний клас:</strong> is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).</li>
-        <li><strong>Абстрактний метод:</strong> can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).</li>
+        <li><strong>Абстрактний клас:</strong> це обмежений клас, який не можна використовувати для створення об&#8217;єктів (щоб отримати до нього доступ, його потрібно успадкувати від іншого класу).</li>
+        <li><strong>Абстрактний метод:</strong> можна використовувати лише в абстрактному класі, і він не має тіла. Тіло надається підкласом (успадковується від).</li>
     </ul>
-    <p>An abstract class can have both abstract and regular methods:</p>
+    <p>Абстрактний клас може мати як абстрактні, так і звичайні методи:</p>
     <div class="w3-example">
 <pre class="language-java w3-white" data-line="1,2"><code>abstract class Animal {
 &nbsp; public abstract void animalSound();
@@ -498,38 +498,38 @@
 &nbsp; }
 }</code></pre>
     </div>
-    <p>From the example above, it is not possible to create an object of the Animal class:</p>
+    <p>З наведеного вище прикладу неможливо створити об&#8217;єкт класу Animal:</p>
     <div class="w3-example w3-pale-red">
 <pre class="language-java w3-white w3-border-red"><code>Animal myObj = new Animal(); // згенерує помилку
 </code></pre>
     </div>
-    <p>To access the abstract class, it must be inherited from another class. Let's convert the Animal class we used in the <a href="java_polymorphism.html">Polymorphism</a> chapter to an abstract class:</p>
+    <p>Щоб отримати доступ до абстрактного класу, його потрібно успадкувати від іншого класу. Давайте перетворимо клас Animal, який ми використовували в розділі <a href="java_polymorphism.html">Поліморфізм</a>, на абстрактний клас:</p>
     <div class="w3-note w3-panel">
-        <p>Remember from the <a href="java_inheritance.html">Inheritance chapter</a> that we use the <code class="w3-codespan">extends</code> keyword to inherit from a class.</p>
+        <p>Пам&#8217;ятайте з розділу про <a href="java_inheritance.html">успадкування</a>, що ми використовуємо ключове слово <code class="w3-codespan">extends</code> для успадкування від класу.</p>
     </div>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-java w3-white" data-line="2,4,13"><code>// Абстрактний клас
 abstract class Animal {
-&nbsp; // Abstract method (does not have a body)
+&nbsp; // Абстрактний метод (не має тіла)
 &nbsp; public abstract void animalSound();
-&nbsp; // Regular method
+&nbsp; // Звичайний метод
 &nbsp; public void sleep() {
 &nbsp;&nbsp;&nbsp; System.out.println(&quot;Zzz&quot;);
 &nbsp; }
 }
 
-// Subclass (inherit from Animal)
+// Підклас (успадковано від Animal)
 class Pig extends Animal {
 &nbsp; public void animalSound() {
-&nbsp;&nbsp;&nbsp; // The body of animalSound() is provided here
+&nbsp;&nbsp;&nbsp; // Тіло animalSound() надається тут
 &nbsp;&nbsp;&nbsp; System.out.println(&quot;The pig says: wee wee&quot;);
 &nbsp; }
 }
 
 class Main {
 &nbsp; public static void main(String[] args) {
-&nbsp;&nbsp;&nbsp; Pig myPig = new Pig(); // Create a Pig object
+&nbsp;&nbsp;&nbsp; Pig myPig = new Pig(); // Створити об&#8217;єкт Pig
 &nbsp;&nbsp;&nbsp; myPig.animalSound();
 &nbsp;&nbsp;&nbsp; myPig.sleep();
 &nbsp; }
@@ -538,8 +538,8 @@ class Main {
     </div>
     <div class="w3-note w3-panel">
         <h4>Чому і коли використовуються абстрактні класи та методи?</h4>
-        <p>To achieve security - hide certain details and only show the important details of an object.</p>
-        <p><b>Примітка:</b> Abstraction can also be achieved with <a href="java_interface.html">Interfaces</a>, which you will learn more about in the next chapter.</p>
+        <p>Щоб забезпечити безпеку, приховайте певні деталі та показуйте лише важливі деталі об&#8217;єкта.</p>
+        <p><b>Примітка:</b> абстракції також можна досягти за допомогою <a href="java_interface.html">інтерфейсів</a>, про які ви дізнаєтеся більше в наступному розділі.</p>
     </div>
     <hr>
     <div class="w3-clear nextprev">
