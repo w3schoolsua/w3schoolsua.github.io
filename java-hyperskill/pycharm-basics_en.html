@@ -505,293 +505,260 @@
     <hr>
     <p>You can also view <a href="https://hyperskill.org/learn/step/6193" target="_blank" rel="nofollow">Lesson on hyperskill.org</a>.</p>
     <hr>
-    <!--
     <h2>Practical tasks and answers</h2>
     <p>Tasks and answer options are given. The correct option is highlighted in <span style="color:blue">blue</span> color.</p>
-    <h3>№1. Android Studio feature</h3>
-    <p><b>Question:</b> Write a program that reads a sequence of numbers from the first line and the number x from the second line. Then it should output all positions of x in the numerical sequence.</p>
-    <p>The position count starts from 0. In case x is not in the sequence, print the line "not found" (quotes omitted, lowercased).</p>
-    <p>Positions should be displayed in one line, in ascending order of the value.</p>
-    <div class="w3-warning">Here is a brief outline: read the input, then create a new list for the positions and, when iterating over the list of numbers, append all the indices of the found occurrences of x to that list (e.g., you can use a counter variable to find them). Finally, join the list of indexes or print the message "not found".</div>
-    <p>Select one option from the list:</p>
+    <h3>№1. Launch PyCharm</h3>
+    <p><b>Question:</b> Although you might have a preferred OS at home or the one you're required to work with at work, sometimes in programming practice, there is a need to switch at some point to another OS for checking or verification. You have to be prepared, so match the OS to the corresponding PyCharm launch method.</p>
+    <p>Match the items from left and right columns:</p>
     <ul>
-        <li>LogCat</li>
-        <li>Android Profiler</li>
-        <li><span style="color:blue">Android Project Wizard &#x2714;</span></li>
-        <li>Android Virtual Device</li>
+        <li>Windows - Start menu\desktop shortcut</li>
+        <li>macOS - Run the app from <span class="h-codespan">Applications</span> directory</li>
+        <li>Linux - Run <span class="h-codespan">pycharm.sh</span> script in installation directory</li>
     </ul>
-    <p><b>Explanation.</b> Here is the Python code for the problem:</p>
-    <div class="w3-example">
-        <h3>Example on Python</h3>
-        <div class="w3-code notranslate pythonHigh">
-            def find_positions(numbers, x):<br>
-            &nbsp; &nbsp;positions = []<br>
-            &nbsp; &nbsp;for i, number in enumerate(numbers):<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;if number == x:<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;positions.append(i)<br>
-            &nbsp; &nbsp;return positions<br>
-            <br>
-            numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]<br>
-            x = 5<br>
-            <br>
-            positions = find_positions(numbers, x)<br>
-            <br>
-            if positions:<br>
-            &nbsp; &nbsp;print(" ".join(map(str, positions)))<br>
-            else:<br>
-            &nbsp; &nbsp;print("not found")
-        </div>
-    </div>
-    <p>This code first defines a function called find_positions(), which takes two lists as input: a list of numbers and a number x. The function then iterates over the list of numbers and checks if each number is equal to x. If it is, the function appends the index of the number to a list called positions. The function then returns the position list.</p>
-    <p>The main function then defines the list numbers and x. The number list contains the numbers 1, 2, 3, 4, 5, 6, 7, 8, 9, and 10. The x variable is assigned value 5.</p>
-    <p>The main function then calls the find_positions() function, passing the numbers and x lists as input. The find_positions() function returns the position list, which is then printed to the console.</p>
-    <p>In this case, the position list will contain value 4, because the number 5 is found at index 4 in the number list. Therefore, the output of the program will be: 4.</p>
-    <p>If the number x is not found in the number list, the find_positions() function will return an empty list. In this case, the main function will print the message "not found" to the console.</p>
-    <p>As for the option you need to select, it depends on what you want to do with the program. If you want to debug the program, you can select LogCat. If you want to profile the program, you can select Android Profiler. If you want to create a new Android project, you can select Android Project Wizard. And if you want to create an Android Virtual Device, you can select Android Virtual Device.</p>
-    <p>The best option for you will depend on your specific needs.</p>
-    <p>Here is the Java code for the problem:</p>
-    <div class="w3-example">
-        <h3>Example 1 on Java</h3>
-        <div class="w3-code notranslate javaHigh">
-            import java.util.Scanner;<br>
-            <br>
-            public class FindPositions {<br>
-            <br>
-            &nbsp; &nbsp;public static void main(String[] args) {<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;Scanner scanner = new Scanner(System.in);<br>
-            <br>
-            &nbsp; &nbsp;&nbsp; &nbsp;// Read the sequence of numbers<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;String[] numbersStr = scanner.nextLine().split(" ");<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;int[] numbers = new int[numbersStr.length];<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;for (int i = 0; i < numbersStr.length; i++) {<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;numbers[i] = Integer.parseInt(numbersStr[i]);<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;}<br>
-            <br>
-            &nbsp; &nbsp;// Read the number x<br>
-            &nbsp; &nbsp;int x = Integer.parseInt(scanner.nextLine());<br>
-            <br>
-            &nbsp; &nbsp;// Find the positions of x in the sequence<br>
-            &nbsp; &nbsp;List&lt;Integer&gt; positions = new ArrayList<>();<br>
-            &nbsp; &nbsp;for (int i = 0; i < numbers.length; i++) {<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;if (numbers[i] == x) {<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;positions.add(i);<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;}<br>
-            &nbsp; &nbsp;}<br>
-            <br>
-            &nbsp; &nbsp;// Print the positions<br>
-            &nbsp; &nbsp;if (positions.isEmpty()) {<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;System.out.println("not found");<br>
-            &nbsp; &nbsp;} else {<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;for (int i = 0; i < positions.size(); i++) {<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if (i > 0) {<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;System.out.print(" ");<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;System.out.print(positions.get(i));<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;}<br>
-            &nbsp; &nbsp;}<br>
-            }
-        </div>
-    </div>
-    <p>This code first creates a Scanner object to read input from the console. Then, it reads the sequence of numbers and the number x from the console.</p>
-    <p>Next, it creates a list called positions to store the positions of x in the sequence. Then, it iterates over the sequence of numbers and checks if each number is equal to x. If it is, the number is added to the position list.</p>
-    <p>Finally, the code prints the positions of x. If the number x is not found in the sequence, the position list will be empty and the code will print the message "not found".</p>
-    <div class="w3-example">
-        <h3>Example 2 on Java</h3>
-        <div class="w3-code notranslate javaHigh">
-            import java.util.*;<br>
-            <br>
-            public class Main {<br>
-            &nbsp; &nbsp;public static void main(String[] args) {<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;Scanner scanner = new Scanner(System.in);<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;String[] numbers = scanner.nextLine().split(" ");<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;String x = scanner.nextLine();<br>
-            &nbsp; &nbsp;&nbsp; &nbsp;List&lt;String&gt; positions = new ArrayList<>();
-        </div>
-    </div>
+    <p><b>Explanation.</b> Here are the explanations:</p>
+    <ul>
+        <li>Windows: PyCharm can be launched from the Start menu or by using the desktop shortcut that is created during installation.</li>
+        <li>macOS: PyCharm can be launched by running the pycharm.sh shell script in the installation directory. This script is located in the bin directory of the PyCharm installation.</li>
+        <li>Linux: PyCharm can be launched by running the pycharm.sh shell script in the installation directory. This script is also located in the bin directory of the PyCharm installation.</li>
+    </ul>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>    <hr>
-    <h3>№2. Android Studio</h3>
-    <p><b>Question:</b> What does this button in the toolbar do?</p>
-    <img src="../images/ucarecdn.png" alt="What does this button in the toolbar do Android Studio" class="w3-image" style="width: 60px">
+    <h3>№2. Functionality</h3>
+    <p><b>Question:</b> Take a look at the two lists below and match each PyCharm edition with a description of its functionality. Note that though their features are different, all editions are suitable for completing our projects.</p>
+    <p>Match the items from left and right columns:</p>
+    <ul>
+        <li>PyCharm Community - Free and open-sourced; comes with everything you need for smart and intelligent Python development, including code assistance, refactorings, visual debugging, and version control integration.</li>
+        <li>PyCharm Professional - Paid version of PyCharm that is aimed at professional Python, web, and data science development. With it you can create web framework applications, develop remotely, analyze big data, and work with Jupiter notebooks.</li>
+    </ul>
+    <hr>
+    <h3>№3. Know how to find!</h3>
+    <p><b>Question:</b> To change the UI theme, you would go to...</p>
     <p>Select one option from the list:</p>
     <ul>
-        <li><span style="color:blue">Build the project &#x2714;</span></li>
-        <li>Run the app</li>
-        <li>Open SDK Manager</li>
-        <li>Debug the app</li>
+        <li>View | Appearance</li>
+        <li>File | File Properties</li>
+        <li><span style="color:blue">File | Settings/Preferences | Appearance & Behavior &#x2714;</span></li>
+        <li>File | Manage IDE Settings</li>
     </ul>
-    <p><b>Explanation.</b> Correct answer is Build the project.</p>
+    <p><b>Explanation.</b> The correct answer is File | Settings/Preferences | Appearance & Behavior.</p>
+    <p>To change the UI theme in PyCharm, follow these steps:</p>
+    <ol>
+        <li>Open the Settings/Preferences dialog (Ctrl+Alt+S).</li>
+        <li>In the left sidebar, expand the Appearance & Behavior section.</li>
+        <li>Click the Appearance tab.</li>
+        <li>In the Theme list, select the desired theme.</li>
+        <li>Click the Apply button.</li>
+    </ol>
+    <p>The new theme will be applied to the IDE. The other options are not correct.</p>
+    <ul>
+        <li>View | Appearance only allows you to change the font size and line spacing.</li>
+        <li>File | File Properties is used to set the properties of a file.</li>
+        <li>File | Manage IDE Settings is used to manage the IDE settings, such as the keymap and the shortcuts.</li>
+    </ul>
     <hr>
-    <h3>№3. Old versions</h3>
-    <p><b>Question:</b> We briefly discussed what possible problems can arise if you choose an old version of Android while creating your project. So, what exactly is wrong with it?</p>
+    <h3>№4. General working algorithm</h3>
+    <p><b>Question:</b> We have discussed how to start working in PyCharm. What are the general steps you need to follow in order to make your first project?</p>
+    <p>Put the items in the correct order:</p>
+    <ul>
+        <li>Download and install PyCharm;</li>
+        <li>Launch PyCharm;</li>
+        <li>Create a new project;</li>
+        <li>Write the code;</li>
+        <li>Run the program;</li>
+    </ul>
+    <p><b>Explanation.</b> The correct order of the steps to create your first project in PyCharm is:</p>
+    <ol>
+        <li>Create a new project.</li>
+        <li>Write the code.</li>
+        <li>Run the program.</li>
+    </ol>
+    <p>The following are the steps in detail:</p>
+    <ol>
+        <li>Launch PyCharm.</li>
+        <li>In the Welcome screen, click Create New Project.</li>
+        <li>In the New Project dialog, specify the project name and its location.</li>
+        <li>Click Create.</li>
+        <li>In the project window, right-click the project name and select New | Python File.</li>
+        <li>Enter a filename for the file and click OK.</li>
+        <li>Write the code in the Python file.</li>
+        <li>Click the Run button in the toolbar or press Shift+F10 to run the program.</li>
+    </ol>
+    <p>The <b>Download and install PyCharm</b> step is not necessary if you have already installed PyCharm.</p>
+    <p>The <b>Write the code</b> step can be done in any order, but it is usually done after they <b>Create a new project</b> step.</p>
+    <p>The <b>Run the program</b> step is the last step, and it is what executes the code that you have written.</p>
+    <p>Here is the code that you can use for your first project:</p>
+    <div class="w3-example">
+        <h3>Python:</h3>
+        <div class="w3-code notranslate pythonHigh">
+            print("Hello, world!")
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../pythontryit/demo_default.html">Спробуйте самі &raquo;</a>
+    </div>
+    <p>This code simply prints the text "Hello, world!" to the console.</p>
+    <p>To run this code, follow the steps above and then click the Run button in the toolbar or press Shift+F10. You should see the text "Hello, world!" printed on the console.</p>
+    <hr>
+
+    <h3>№5.  Installing new packages</h3>
+    <p><b>Question:</b> How can you install new packages in PyCharm?</p>
+    <p>Put the items in the correct order:</p>
+    <ul>
+        <li>Type the package name in the Search field of the Python Packages tool window;</li>
+        <li>Locate the package in the list of the default repository;</li>
+        <li>Click the installation button in the upper-right corner of the tool window;</li>
+    </ul>
+    <p><b>Explanation.</b> The following are the steps in detail:</p>
+    <ol>
+        <li>Open the Python Packages tool window (Ctrl+Alt+S).</li>
+        <li>In the Search field, type the name of the package that you want to install.</li>
+        <li>The package will be listed in the results. Click the Install button next to the package name.</li>
+        <li>The package will be installed in the project interpreter.</li>
+    </ol>
+    <p>You can also install packages from a local file or from a remote repository. To do this, follow these steps:</p>
+    <ol>
+        <li>Click the Add Package link on the toolbar.</li>
+        <li>Select the source of the package.</li>
+        <li>In the Package name field, type the name of the package.</li>
+        <li>Click the Install button:</li>
+    </ol>
+    <hr>
+    <h3>№6. No way</h3>
+    <p><b>Question:</b> What option is NOT given to you when creating a new project?</p>
     <p>Select one option from the list:</p>
     <ul>
-        <li>Nobody uses old devices, so there's no need to support them.</li>
-        <li><span style="color:blue">It is hard to support old versions of Android. &#x2714;</span></li>
-        <li>You can't run old apps on new devices.</li>
-        <li>Old devices don't support apps written in Kotlin.</li>
+        <li>Open an existing project</li>
+        <li>Create a new project</li>
+        <li><span style="color:blue">Import it from your working email &#x2714;</span></li>
+        <li>Get a project from a version control sytem</li>
     </ul>
-    <p><b>Explanation.</b> The correct answer is It is hard to support old versions of Android.</p>
-    <p>Here are some of the reasons why it is hard to support old versions of Android:</p>
-    <ul>
-        <li>Old versions of Android are no longer supported by Google. This means that they will not receive security updates, which can leave your app vulnerable to attack.</li>
-        <li>Old versions of Android may not have the same features or capabilities as newer versions. This can make it difficult to develop an app that works on both old and new devices.</li>
-        <li>The market share of old versions of Android is declining. This means that you will be targeting a smaller and smaller audience if you choose to support old versions.</li>
-    </ul>
-    <p>Here are some of the problems that can arise if you choose an old version of Android for your project:</p>
-    <ul>
-        <li>Your app may not work properly on old devices. This could be due to incompatibility issues, security vulnerabilities, or lack of features.</li>
-        <li>You may have to spend more time and resources supporting old versions of your app. This could include testing, debugging, and fixing bugs.</li>
-        <li>You may lose users who are using old devices. This could hurt your app's overall user base and revenue.</li>
-    </ul>
-    <p>So, if you are considering choosing an old version of Android for your project, it is important to weigh the risks and benefits carefully. In most cases, it is better to choose a newer version of Android that is still supported by Google and has a larger market share.</p>
+    <p><b>Explanation.</b> The option "Import it from your working email" is NOT given to you when creating a new project in PyCharm. The available options are "Create New Project", "Open", "Check out from Version Control".</p>
     <hr>
-    <h3>№4. Virtual device categories</h3>
-    <p><b>Question:</b> Let's review the virtual device creation process. What categories are present in the <i>Virtual Device Configuration</i>?</p>
+    <h3>№7. The main unit</h3>
+    <p><b>Question:</b> What is the main organizational unit called in PyCharm?</p>
     <p>Select one option from the list:</p>
     <ul>
-        <li>Auto | Tablet | iPhone</li>
-        <li><span style="color:blue">TV | Phone | Wear OS | Tablet &#x2714;</span></li>
-        <li>Huawei | Samsung | Xiaomi | Honor</li>
-        <li>Apple | Google | Amazon | Tesla</li>
+        <li>Module</li>
+        <li>Distribution</li>
+        <li>Package</li>
+        <li><span style="color:blue">Project &#x2714;</span></li>
     </ul>
-    <p><b>Explanation.</b> The correct answer is TV | Phone | Wear OS | Tablet.</p>
-    <p>The Virtual Device Configuration (VDC) is a dialog in Android Studio that allows you to create and manage Android Virtual Devices (AVDs). The VDC is divided into four categories:</p>
+    <p><b>Explanation.</b> The main organizational unit in PyCharm is called a project. A project is a collection of files and folders that are related to a specific Python application. It can contain source code, configuration files, test files, and other resources.</p>
+    <p>A project is created by opening the New Project dialog (Ctrl+Shift+N). In the dialog, you can specify the project name, location, and interpreter. Once a project is created, you can start working on your Python application. You can create files, edit files, run the application, and debug the application.</p>
+    <p>The other options are not correct.</p>
     <ul>
-        <li>Phone: This category contains AVDs that emulate Android phones.</li>
-        <li>TV: This category contains AVDs that emulate Android TVs.</li>
-        <li>Wear OS: This category contains AVDs that emulate Android Wear smartwatches.</li>
-        <li>Tablet: This category contains AVDs that emulate Android tablets.</li>
-    </ul>
-    <p>The specific AVDs that are available in each category will vary depending on the Android SDK that you have installed.</p>
-    <p>The other options in your question are not categories in the Virtual Device Configuration.</p>
-    <hr>
-    <h3>№5. Matching</h3>
-    <p><b>Question:</b> Match each abbreviation with the correct description.</p>
-    <ul>
-        <li>SDK - A set of tools to create applications on a specific platform</li>
-        <li>AVD - A tool to simulate a real device</li>
-        <li>IDE - An application that helps you write and test software</li>
-    </ul>
-    <p><b>Explanation.</b> The correct matching for the abbreviations is:</p>
-    <ul>
-        <li>SDK - A software development kit (SDK) is a set of tools and libraries that allows developers to create applications for a particular platform.</li>
-        <li>AVD - An Android Virtual Device (AVD) is a software emulation of an Android device that can be used to test and develop Android apps.</li>
-        <li>IDE - An integrated development environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development.</li>
+        <li>Module: A module is a Python file that contains definitions of functions, classes, and variables.</li>
+        <li>Distribution: A distribution is a collection of modules that are packaged together for distribution.</li>
+        <li>Package: A package is a collection of modules that are organized in a hierarchical structure.</li>
     </ul>
     <hr>
-    <h3>№6. File location</h3>
-    <p><b>Question:</b> Where do files with extensions like <i>.jpg</i>, <i>.mov</i>, <i>.gif</i>, or <i>.txt</i> belong?</p>
+    <h3>№8. Find the action</h3>
+    <p><b>Question:</b> What shortcut will prompt a dialog where you can find any command, setting, code construct, or a project file?</p>
     <p>Select one option from the list:</p>
     <ul>
-        <li>java</li>
-        <li>Android Manifest</li>
-        <li>Gradle Scripts</li>
-        <li><span style="color:blue">res &#x2714;</span></li>
+        <li>Ctrl + E</li>
+        <li>Ctrl + Shift + Enter
+        <li>Shift + F2</li>
+        <li><span style="color:blue">Shift + Shift &#x2714;</span></li>
     </ul>
-    <p><b>Explanation.</b> The correct answer is <b>res</b>.</p>
-    <p>The res folder in an Android project contains all of the resources for the app, including images, audio files, and text files. The file extensions that you mentioned are all common image and animation file formats, so they would all belong in the res folder.</p>
-    <p>The other options in your question are not folders that are typically used to store resources.</p>
+    <p><b>Explanation.</b> The shortcut that will prompt a dialog where you can find any command, setting, code construct, or a project file is Shift + Shift.</p>
+    <p>This shortcut opens the Find Action dialog, which allows you to search for anything in PyCharm. You can search for commands, settings, code constructs, files, and even text in files.</p>
+    <p>The other options are not correct.</p>
     <ul>
-        <li>The java folder contains the Java source code for the app.</li>
-        <li>The AndroidManifest.xml file contains the manifest for the app, which defines the app's components and permissions.</li>
-        <li>The Gradle Scripts folder contains the Gradle scripts that are used to build the app.</li>
+        <li>Ctrl + E opens the Recent Files dialog.</li>
+        <li>Ctrl + Shift + Enter executes the current line of code or the current selection.</li>
+        <li>Shift + F2 renames the current file or the current selection.</li>
     </ul>
     <hr>
-    <h3>№7. IDE window</h3>
-    <p><b>Question:</b> Previously we talked about the elements of the main window. Name a part of the screen that lets you access your resources, code, and build files.</p>
+    <h3>№9. Expending the project</h3>
+    <p><b>Question:</b> How can you add more files, directories, and Python packages to your project?</p>
     <p>Select one option from the list:</p>
     <ul>
-        <li>Editor Window</li>
-        <li>Project Structure</li>
-        <li>Status bar</li>
-        <li><span style="color:blue">Project View &#x2714;</span></li>
+        <li>By changing a virtual environment.</li>
+        <li>By deleting the current project, creating it anew, and adding everything at the very beginning.</li>
+        <li>By using plugins.</li>
+        <li><span style="color:blue">By using the Project tool window. &#x2714;</span></li>
     </ul>
-    <p><b>Explanation.</b> The correct answer is Project View.</p>
-    <p>The Project View is a pane in the main window of Android Studio that shows the structure of your project, including your resources, code, and build files. You can use the Project View to navigate your project, open files, and manage your project's dependencies.</p>
-    <p>The Editor Window is where you write and edit your code. The Project Structure is a dialog that allows you to configure the structure of your project, such as the modules that it contains and the libraries that it uses. The Status bar is located at the bottom of the main window and displays information about the current state of your project, such as the line number and column number of the cursor, the current build configuration, and the number of errors and warnings in your code.</p>
-    <p>Here is a screenshot of the Project View in Android Studio:</p>
-    <img src="../images/project-view.jpeg" alt="Project View in Android Studio" class="w3-image" style="width: 250px">
-    <p>As you can see, the Project View is divided into two main sections: the Project Tree and the Project Files. The Project Tree shows the structure of your project, with each node representing a folder or file. The Project Files shows the contents of the selected folder or file.</p>
-    <p>You can use the Project View to navigate your project by expanding and collapsing the nodes in the Project Tree. You can also double-click on a node to open the corresponding file in the Editor Window.</p>
-    <p>The Project View is a powerful tool that can help you manage your Android projects. I recommend that you familiarize yourself with it if you are new to Android development.</p>
-    <hr>
-    <h3>№8. Package name</h3>
-    <p><b>Question:</b> Lucy loves coffee. She decided to create her own app with the best ways to make coffee. She already has a website "lucylovescoffee.com", and her app is called Barista. What should Lucy's app package name be?</p>
-    <p>Keep in mind that everything should be written in lower case.</p>
-    <p>Enter a short text: <span class="h-codespan">com.lucylovescoffee.barista</span> &#x2714;</span></p>
-    <p><b>Explanation.</b> Lucy's app package name should be "com.lucylovescoffee.barista".</p>
-    <p>The package name is a unique identifier for an Android app. It is used to identify the app on the Google Play Store and to prevent conflicts with other apps. The package name must be written in lower case, and it can only contain letters, numbers, and underscores.</p>
-    <p>In Lucy's case, she could use her website domain name as the base for her package name. This would make it easy for users to find her app on the Play Store. She could then add the name of her app to the end of the package name.</p>
-    <p>So, the package name com.lucylovescoffee.barista would be a good choice for Lucy's app. It is unique, easy to remember, and relevant to the app's content.</p>
-    <p>Here are some other factors that Lucy could consider when choosing an app package name:</p>
+    <p><b>Explanation.</b> The correct option is By using the Project tool window.</p>
+    <p>You can add more files, directories, and Python packages to your project by using the Project tool window.</p>
+    <p>To do this, follow these steps:</p>
+    <ol>
+        <li>Open the Project tool window (Ctrl+1).</li>
+        <li>Right-click the directory or package where you want to add the new files or directories.</li>
+        <li>Select New.</li>
+        <li>Select the type of file or directory that you want to create.</li>
+        <li>Enter a name for the new file or directory.</li>
+    </ol>
+    <p>You can also drag and drop files and directories from the file system into the Project tool window.</p>
+    <p>To add Python packages to your project, you can use the Python Packages tool window.</p>
+    <p>To do this, follow these steps:</p>
+    <ol>
+        <li>Open the Python Packages tool window (Ctrl+Alt+S).</li>
+        <li>Click the Add Package link on the toolbar.</li>
+        <li>Select the source of the package.</li>
+        <li>In the Package name field, type the name of the package.</li>
+        <li>Click the Install button.</li>
+    </ol>
+    <p>The other options are not correct.</p>
     <ul>
-        <li>The length of the name. The shorter the name, the easier it will be to remember and type.</li>
-        <li>The availability of the name. The name should be available as an app package name on both the Google Play Store and Apple App Store.</li>
-        <li>The uniqueness of the name. The name should be unique enough so that it is not easily confused with other apps.</li>
-        <li>The memorability of the name. The name should be memorable so that users can easily find it when they are searching for coffee apps.</li>
+        <li>Changing a virtual environment will not add files or directories to your project. It will only change the Python interpreter that is used to run your project.</li>
+        <li>Deleting the current project and creating a new one is a drastic measure that should only be taken if you are sure that you do not need the old project anymore.</li>
+        <li>Using plugins can be used to add functionality to PyCharm, but they cannot add files or directories to your project.</li>
     </ul>
-    <p>Ultimately, the best app package name for Lucy's coffee app is the one that she feels is most relevant, easy to remember, and available.</p>
+    <hr>
+    <h3>№10. Developer's tools</h3>
+    <p><b>Question:</b> What are the specific settings for every project provided by the virtual environment?</p>
+    <p>Select one or more options from the list:</p>
+    <ul>
+        <li><span style="color:blue">Python built-in package manager to install external libraries &#x2714;</span></li>
+        <li><span style="color:blue">Python version with its available libraries &#x2714;</span></li>
+        <li>Code style</li>
+        <li>UI themes</li>
+        <li>Shortcuts</li>
+    </ul>
+    <p><b>Explanation.</b> The specific settings for every project provided by the virtual environment are:</p>
+    <ul>
+        <li> Python version with its available libraries: A virtual environment allows you to install different Python versions and libraries for different projects. This prevents conflicts between different projects that require different versions of Python or libraries.</li>
+        <li>Python built-in package manager to install external libraries: The Python built-in package manager, pip, can be used to install external libraries in a virtual environment. This is useful for projects that require specific libraries that are not installed in the system Python.</li>
+    </ul>
+    <p>The other options are not specific to virtual environments.</p>
+    <ul>
+        <li>Code style: Code style is a set of rules that govern the formatting of code. It is usually defined in a style guide. Code style can be configured for a project, but it is not specific to virtual environments.</li>
+        <li>UI themes: UI themes are used to change the appearance of the IDE. They can be configured for a project, but they are not specific to virtual environments.</li>
+        <li>Shortcuts: Shortcuts are keyboard combinations that are used to perform actions in the IDE. They can be configured for a project, but they are not specific to virtual environments.</li>
+    </ul>
+    <p>Here are some additional benefits of using virtual environments:</p>
+    <ul>
+        <li>They can help to isolate problems caused by incompatible library versions.</li>
+        <li>They can help to keep your system Python clean and uncluttered.</li>
+        <li>They can make it easier to share projects with others.</li>
+    </ul>
+    <p>If you are working on multiple projects that require different Python versions or libraries, I recommend using virtual environments. They can help to make your development process more efficient and organized.</p>
     <hr>
     <div class="w3-info">
-        <h3>What is Android Studio? Basic using Android Studio</h3>
-        <p>Android Studio is an integrated development environment (IDE) used for developing Android applications. It provides a comprehensive set of tools and features that streamline the app development process, including a code editor, visual layout editor, debugging tools, and more.</p>
-        <p>To start using Android Studio, you can follow these basic steps:</p>
-        <ol>
-            <li>Download and install Android Studio from the official website.</li>
-            <li>Launch Android Studio and create a new project.</li>
-            <li>Choose a project template, such as "Empty Activity" or "Basic Activity".</li>
-            <li>Configure the project settings, such as the project name, package name, and minimum SDK version.</li>
-            <li>Use the code editor to write the app's code, or use the visual layout editor to design the app's user interface.</li>
-            <li>Run the app on a virtual device or physical device to test it.</li>
-            <li>Debug any issues that arise during testing using the debugging tools provided by Android Studio.</li>
-        </ol>
-        <p>These are just the basics, but Android Studio offers many more advanced features that can help you develop high-quality Android applications.</p>
-        <hr>
-        <p>Android Studio is the official integrated development environment (IDE) for Android app development. It is built on JetBrains' IntelliJ IDEA software and designed specifically for Android development. It is available for download on Windows, macOS and Linux based operating systems.</p>
-        <p>Android Studio provides a number of features that make it a powerful tool for Android development, including:</p>
+        <h3>What is PyCharm IDE? Briefly explain the basic usage of PyCharm.</h3>
+        <p><strong>PyCharm</strong> is an integrated development environment (IDE) used for programming in Python. It is developed by JetBrains and is available for Windows, macOS, and Linux.</p>
+        <p>PyCharm provides a variety of features to help programmers write, debug, and test Python code. These features include:</p>
         <ul>
             <li>A code editor with syntax highlighting, code completion, and linting</li>
-            <li>A graphical layout editor</li>
-            <li>A debugger</li>
-            <li>A profiler</li>
-            <li>A built-in emulator</li>
+            <li>A debugger with breakpoints, step-by-step execution, and variable inspection</li>
+            <li>A built-in terminal for running Python commands</li>
+            <li>A version control system integration</li>
             <li>A testing framework</li>
-            <li>A variety of plugins</li>
         </ul>
-        <p>To write basic code using Android Studio, you can follow these steps:</p>
-        <ol>
-            <li>Create a new project.</li>
-            <li>Choose a template for your project.</li>
-            <li>Add some code to your project.</li>
-            <li>Run your project in the emulator or on a physical device.</li>
-        </ol>
-        <p>Here is an example of a simple Android app that you can write using Android Studio:</p>
-        <div class="w3-example">
-            <div class="w3-code notranslate javaHigh">
-                public class MainActivity extends AppCompatActivity {<br>
-                <br>
-                &nbsp; &nbsp;@Override<br>
-                &nbsp; &nbsp;protected void onCreate(Bundle savedInstanceState) {<br>
-                &nbsp; &nbsp;&nbsp; &nbsp;super.onCreate(savedInstanceState);<br>
-                &nbsp; &nbsp;&nbsp; &nbsp;setContentView(R.layout.activity_main);<br>
-                &nbsp; &nbsp;}<br>
-                }
-            </div>
-        </div>
-        <p>This code creates a simple activity that displays a blank screen. You can customize the look and feel of your app by adding more code to this file.</p>
-        <p>For more information on how to write code using Android Studio, you can refer to the following resources:</p>
+        <p>To use PyCharm, you first need to create a new project. You can do this by going to File > New > Project. In the New Project dialog, select the type of project that you want to create and specify the project name and location.</p>
+        <p>Once you have created a project, you can start writing code. PyCharm provides a code editor with syntax highlighting, code completion, and linting. This means that PyCharm will highlight errors in your code, suggest completions for words that you are typing, and warn you about potential problems.</p>
+        <p>To run your code, you can click the Run button in the toolbar or press Shift+F10. PyCharm will compile and run your code in the Python interpreter. If you want to debug your code, you can use the debugger. The debugger allows you to step through your code line by line and inspect the values of variables.</p>
+        <p>PyCharm also comes with a variety of other features, such as a built-in terminal, a version control system integration, and a testing framework. To learn more about PyCharm, you can refer to the documentation or watch the tutorials on the JetBrains website.</p>
+        <p>Here are some additional tips for using PyCharm:</p>
         <ul>
-            <li>Android Studio documentation: <a href="https://developer.android.com/studio/" target="_blank" rel="nofollow">https://developer.android.com/studio/</a></li>
-            <li>Android development tutorials: <a href="https://developer.android.com/training/" target="_blank" rel="nofollow">https://developer.android.com/training/</a></li>
-            <li>Android code samples: <a href="https://developer.android.com/samples/" target="_blank" rel="nofollow">https://developer.android.com/samples/</a></li>
+            <li>Use the keyboard shortcuts to save time. PyCharm has a variety of keyboard shortcuts that can be used to perform common tasks.</li>
+            <li>Explore the settings to customize PyCharm to your liking. PyCharm has a variety of settings that can be customized to your liking.</li>
+            <li>Use the documentation and community resources. PyCharm has a comprehensive documentation and a large community of users who can help you if you get stuck.</li>
         </ul>
     </div>
-    <hr>-->
+    <hr>
     <div class='w3-clear nextprev'>
         <a class='w3-left w3-btn' href='android-studio-basics_en.html'>&#10094; Prev</a>
         <a class='w3-right w3-btn' href='goland-basics_en.html'>Next &#10095;</a>
