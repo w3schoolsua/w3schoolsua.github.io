@@ -571,11 +571,47 @@
     <p><b>Explanation.</b> A run/debug configuration is a set of startup properties that includes JVM or JRE options, command-line arguments, and other configuration settings that define how a program should be run or debugged. It is used to specify the environment in which an application should be launched, and can include options such as the main class to be executed, program arguments, and environment variables. This configuration can also include Java Virtual Machine options for better performance and debugging. Therefore, the correct answer is:</p>
     <p class="h-codespan">set of startup properties: JVM or JRE options, command-line arguments</p>
     <hr>
-    <!--
-    <h3>№9. Tough question</h3>
+    <h3>№9. War and peace</h3>
+    <p><b>Question:</b> Consider you need to pass to a program the following three arguments: L. Tolstoy, "War and peace", 1867. What would be the correct way to write them in the argument field?</p>
+    <p>Select one option from the list:</p>
+    <ul>
+        <li>L. Tolstoy \"War and peace\" 1867</li>
+        <li>L. Tolstoy "\"War" and "peace"\" 1867</li>
+        <li><span style="color:blue">"L. Tolstoy" "\"War and peace\"" 1867 &#x2714;</span></li>
+        <li>L. Tolstoy "War and peace" 1867</li>
+    </ul>
+    <p><b>Explanation.</b> The correct way to write the arguments in the argument field is:</p>
+    <p class="h-codespan">L. Tolstoy "\"War and peace\"" 1867</p>
+    <p>The string literal for the book title needs to be enclosed in double quotes. Single quotes would not work because the space between the words "War" and "and" would be interpreted as a delimiter.</p>
+    <p>The code you provided outputs the following:</p>
+    <p class="h-codespan">L. Tolstoy "War and peace" 1867</p>
+    <p>This is incorrect because the book title is not enclosed in double quotes.</p>
+    <p>Here is an example of how you can use the arguments in a Java program:</p>
+    <div class="w3-example">
+        <h3>Example</h3>
+        <pre class="language-java w3-white" data-line="3"><code>public class PrintArguments {
+
+  public static void main(String[] args) {
+    printArguments("L. Tolstoy", "\"War and peace\"", 1867);
+  }
+
+  public static void printArguments(String author, String book, int year) {
+    System.out.println(author);
+    System.out.println(book);
+    System.out.println(year);
+  }
+}
+</code></pre>
+    </div>
+    <p>This code defines a function called print_arguments(), which takes three arguments: the author name, the book title, and the year of publication. The function then prints these arguments to the console.</p>
+    <p>When this code is executed, it will print the following output to the console:</p>
+    <p class="h-codespan">L. Tolstoy War and peace 1867</p>
+    <hr>
+    <h3>№10. Tough question</h3>
     <p><b>Question:</b> Pass argument "Bolek_and_Lolek" to the program.</p>
-    <p>Enter a short text: </p>
--->
+    <p>Hint: Everything is part of parameter including double quotes.</p>
+    <p>Enter a short text: <span style="color:blue">\&quot;Bolek_and_Lolek\&quot; &#x2714;</span></p>
+    <hr>
     <div class="w3-info">
         <h3>What are IntelliJ IDEA run configurations?</h3>
         <p>IntelliJ IDEA run configurations are a set of settings that define how to run a project. The settings can include the following:</p>
