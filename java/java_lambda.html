@@ -488,32 +488,32 @@
         </div>
         <hr>
         <h2>Java Лямбда-вирази</h2>
-        <p>Lambda Expressions were added in Java 8.</p>
-        <p>A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name, and they can be implemented right in the body of a method.</p>
+        <p>Лямбда-вирази додано в Java 8.</p>
+        <p><strong>Лямбда-вираз</strong> — це короткий блок коду, який приймає параметри та повертає значення. Лямбда-вирази подібні до методів, але їм не потрібні назви, і їх можна реалізувати прямо в тілі методу.</p>
         <hr>
         <h2>Синтаксис</h2>
-        <p>The simplest lambda expression contains a single parameter and an expression:</p>
+        <p>Найпростіший лямбда-вираз містить один параметр і вираз:</p>
         <div class="w3-example">
-            <pre class="language-java w3-white"><code><em>parameter</em> -&gt; <em>expression</em></code></pre>
+            <pre class="language-java w3-white"><code><em>параметр</em> -&gt; <em>вираз</em></code></pre>
         </div>
-        <p>To use more than one parameter, wrap them in parentheses:</p>
+        <p>Щоб використовувати більше одного параметра, візьміть їх у дужки:</p>
         <div class="w3-example">
-            <pre class="language-java w3-white"><code><em>(parameter1, parameter2)</em> -&gt; <em>expression</em></code></pre>
+            <pre class="language-java w3-white"><code><em>(параметр1, параметр2)</em> -&gt; <em>вираз</em></code></pre>
         </div>
-        <p>Expressions are limited. They have to immediately return a value, and they cannot contain variables, assignments or statements such as <code class="w3-codespan">if</code> or <code class="w3-codespan">for</code>. In order to do more complex operations, a code block can be used with curly braces. If the lambda expression needs to return a value, then the code block should have a <code class="w3-codespan">return</code> statement.</p>
+        <p>Вирази обмежені. Вони мають негайно повертати значення та не можуть містити змінні, призначення чи інструкції, такі як <code class="w3-codespan">if</code> або <code class="w3-codespan">for</code>. Щоб виконувати більш складні операції, блок коду можна використовувати з фігурними дужками. Якщо лямбда-вираз повинен повернути значення, тоді блок коду повинен мати інструкцію <code class="w3-codespan">return</code>.</p>
         <div class="w3-example">
-            <pre class="language-java w3-white"><code><em>(parameter1, parameter2)</em> -&gt; { <em>code block</em> }</code></pre>
+            <pre class="language-java w3-white"><code><em>(параметр1, парметр2)</em> -&gt; { <em>блок коду</em> }</code></pre>
         </div>
         <hr>
         <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Using Lambda Expressions</h2>
-        <p>Lambda expressions are usually passed as parameters to a function:</p>
+</div>        <h2>Використання лямбда-виразів</h2>
+        <p>Лямбда-вирази зазвичай передаються як параметри функції:</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Use a lambda expression in the <code class="w3-codespan">ArrayList</code>'s <code class="w3-codespan">forEach()</code> method to print every item in the list:</p>
+            <h3>Приклад</h3>
+            <p>Використовуйте лямбда-вираз у методі <code class="w3-codespan">forEach()</code> <code class="w3-codespan">ArrayList</code>, щоб надрукувати кожен елемент у списку:</p>
             <pre class="language-java w3-white"><code>import java.util.ArrayList;
 
 public class Main {
@@ -526,12 +526,12 @@ public class Main {
     numbers.forEach( (n) -&gt; { System.out.println(n); } );
   }
 }</code></pre>
-            <a target="_blank" class="w3-btn" href="../javatryit/demo_lambda.html">Try it Yourself &raquo;</a>
+            <a target="_blank" class="w3-btn" href="../javatryit/demo_lambda.html">Спробуйте самі &raquo;</a>
         </div>
-        <p>Lambda expressions can be stored in variables if the variable's type is an interface which has only one method. The lambda expression should have the same number of parameters and the same return type as that method. Java has many of these kinds of interfaces built in, such as the <code class="w3-codespan">Consumer</code> interface (found in the <code class="w3-codespan">java.util</code> package) used by lists.</p>
+        <p>Лямбда-вирази можна зберігати у змінних, якщо тип змінної є інтерфейсом, який має лише один метод. Лямбда-вираз повинен мати таку ж кількість параметрів і той самий тип повернення, що й цей метод. У Java є багато таких вбудованих інтерфейсів, як-от інтерфейс <code class="w3-codespan">Consumer</code> (знаходиться в <code class="w3-codespan">java.util</code> package), що використовується списками.</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Use Java's <code class="w3-codespan">Consumer</code> interface to store a lambda expression in a variable:</p>
+            <h3>Приклад</h3>
+            <p>Використовуйте інтерфейс Java <code class="w3-codespan">Consumer</code> для збереження лямбда-виразу в змінній:</p>
             <pre class="language-java w3-white"><code>import java.util.ArrayList;
 import java.util.function.Consumer;
 
@@ -546,12 +546,12 @@ public class Main {
     numbers.forEach( method );
   }
 }</code></pre>
-            <a target="_blank" class="w3-btn" href="../javatryit/demo_lambda2.html">Try it Yourself &raquo;</a>
+            <a target="_blank" class="w3-btn" href="../javatryit/demo_lambda2.html">Спробуйте самі &raquo;</a>
         </div>
-        <p>To use a lambda expression in a method, the method should have a parameter with a single-method interface as its type. Calling the interface's method will run the lambda expression:</p>
+        <p>Щоб використовувати лямбда-вираз у методі, цей метод повинен мати параметр із інтерфейсом одного методу як тип. Виклик методу інтерфейсу запустить лямбда-вираз:</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Create a method which takes a lambda expression as a parameter:</p>
+            <h3>Приклад</h3>
+            <p>Створіть метод, який приймає лямбда-вираз як параметр:</p>
             <pre class="language-java w3-white"><code>interface StringFunction {
   String run(String str);
 </code>}<code>
@@ -568,20 +568,21 @@ public class Main {
     System.out.println(result);
   </code>}<code>
 </code>}</pre>
-            <a target="_blank" class="w3-btn" href="../javatryit/demo_lambda3.html">Try it Yourself &raquo;</a>
+            <a target="_blank" class="w3-btn" href="../javatryit/demo_lambda3.html">Спробуйте самі &raquo;</a>
         </div>
         <hr>
+        <h3>УВАГА! Статті нижче &#8595; створені за допомогою штучного інтелекту!</h3>
         <div class="w3-info">
-            <details><summary>Lesson from Monika (ChatGPT)</summary>
-                <p>Lambda expressions are a powerful feature in the Java programming language that allow for functional programming. In this article, we will explore what lambda expressions are, how they are used, and their benefits.</p>
-                <h2>What are Lambda Expressions?</h2>
-                <p>Lambda expressions are a way to define small, anonymous functions in Java. They are similar to methods, but do not require a name, return type, or modifiers. Instead, they are defined using a syntax that is more concise and easier to read.</p>
-                <p>Here is an example of a lambda expression that takes two integers and returns their sum:</p>
+            <details><summary>Урок від Monika (ChatGPT)</summary>
+                <p>Лямбда-вирази є потужною функцією мови програмування Java, яка дозволяє функціональне програмування. У цій статті ми розглянемо, що таке лямбда-вирази, як вони використовуються та які їхні переваги.</p>
+                <h2>Що таке лямбда-вирази?</h2>
+                <p><strong>Лямбда-вирази</strong> — це спосіб визначення невеликих анонімних функцій у Java. Вони подібні до методів, але не вимагають імені, типу повернення чи модифікаторів. Натомість вони визначені за допомогою синтаксису, який є більш лаконічним і легшим для читання.</p>
+                <p>Ось приклад лямбда-виразу, який приймає два цілі числа та повертає їх суму:</p>
                 <p class="h-codespan">(int a, int b) -> a + b</p>
-                <p>This lambda expression defines a function that takes two integers (<b>a</b> and <b>b</b>) and returns their sum. The arrow (<b>-></b>) separates the function's parameters from its body.</p>
-                <h3>How are Lambda Expressions Used?</h3>
-                <p>Lambda expressions are often used in functional interfaces, which are interfaces that have only one abstract method. These interfaces can be implemented using lambda expressions, which makes the code cleaner and more concise.</p>
-                <p>Here is an example of a functional interface called <b>Calculator</b>:</p>
+                <p>Цей лямбда-вираз визначає функцію, яка приймає два цілі числа (<b>a</b> та <b>b</b>) і повертає їх суму. Стрілка (<b>-></b>) відокремлює параметри функції від її тіла.</p>
+                <h3>Як використовуються лямбда-вирази?</h3>
+                <p>Лямбда-вирази часто використовуються у функціональних інтерфейсах, які мають лише один абстрактний метод. Ці інтерфейси можна реалізувати за допомогою лямбда-виразів, що робить код чистішим і лаконічнішим.</p>
+                <p>Ось приклад функціонального інтерфейсу під назвою <b>Калькулятор</b>:</p>
                 <div class="w3-example">
                 <pre class="language-java w3-white"><code>@FunctionalInterface
 interface Calculator {
@@ -589,66 +590,66 @@ interface Calculator {
 }
 </code></pre>
                 </div>
-                <p>This interface has only one abstract method called <b>calculate</b>, which takes two integers and returns an integer. The <span class="h-codespan">@FunctionalInterface</span> annotation is optional, but it is good practice to include it to indicate that the interface is intended to be used with lambda expressions.</p>
-                <p>Now, we can create an instance of this interface using a lambda expression:</p>
+                <p>Цей інтерфейс має лише один абстрактний метод під назвою <b>calculate</b>, який приймає два цілих числа та повертає ціле число. Анотація <span class="h-codespan">@FunctionalInterface</span> необов&#8217;язкова, але доцільно включити її, щоб вказати, що інтерфейс призначений для використання з лямбда-виразами.</p>
+                <p>Тепер ми можемо створити екземпляр цього інтерфейсу за допомогою лямбда-виразу:</p>
                 <p class="h-codespan">Calculator add = (a, b) -> a + b;</p>
-                <p>This creates a <b>Calculator</b> instance called <b>add</b> that adds two integers together. We can then use this instance to perform calculations:</p>
-                <p class="h-codespan">int result = add.calculate(2, 3); // result = 5</p>
-                <p>Lambda expressions can also be used with built-in functional interfaces in Java, such as <b>Predicate</b>, <b>Consumer</b>, and <b>Supplier</b>. These interfaces provide a standard way to perform common operations on collections and streams of data.</p>
-                <h3>Benefits of Lambda Expressions</h3>
-                <p>Lambda expressions provide several benefits over traditional Java methods:</p>
+                <p>Це створює екземпляр <b>калькулятора</b> під назвою <b>add</b>, який додає два цілі числа. Потім ми можемо використовувати цей екземпляр для виконання обчислень:</p>
+                <p class="h-codespan">int result = add.calculate(2, 3); // результат = 5</p>
+                <p>Лямбда-вирази також можна використовувати з вбудованими функціональними інтерфейсами в Java, такими як <b>Predicate</b>, <b>Consumer</b> і <b>Supplier</b>. Ці інтерфейси забезпечують стандартний спосіб виконання типових операцій над колекціями та потоками даних.</p>
+                <h3>Переваги лямбда-виразів</h3>
+                <p>Лямбда-вирази надають кілька переваг порівняно з традиційними методами Java:</p>
                 <ol>
-                    <li><strong>Conciseness</strong>: Lambda expressions are more concise than traditional methods, which makes the code easier to read and write.</li>
-                    <li><strong>Readability</strong>: Lambda expressions can make the code more readable by reducing the amount of boilerplate code needed for simple operations.</li>
-                    <li><strong>Functional Programming</strong>: Lambda expressions enable functional programming in Java, which allows for more expressive and powerful code.</li>
-                    <li><strong>Parallelism</strong>: Lambda expressions can be used with parallel streams to perform operations on large datasets more quickly and efficiently.</li>
+                    <li><strong>Стислість</strong>: Лямбда-вирази більш стислі, ніж традиційні методи, що полегшує читання та написання коду.</li>
+                    <li><strong>Читабельність</strong>: Лямбда-вирази можуть зробити код більш читабельним, зменшивши кількість шаблонного коду, необхідного для простих операцій.</li>
+                    <li><strong>Функціональне програмування</strong>: Лямбда-вирази дозволяють функціональне програмування на Java, що дозволяє створювати більш виразний і потужний код.</li>
+                    <li><strong>Паралелізм</strong>: лямбда-вирази можна використовувати з паралельними потоками, щоб швидше й ефективніше виконувати операції з великими наборами даних.</li>
                 </ol>
-                <h3>Conclusion</h3>
-                <p>Lambda expressions are a powerful feature in the Java programming language that enables functional programming and makes code more concise and readable. They are often used with functional interfaces to perform operations on collections and streams of data. By understanding lambda expressions, beginner programmers can write more expressive and powerful code in Java.</p>
+                <h3>Висновок</h3>
+                <p>Лямбда-вирази — це потужна функція мови програмування Java, яка дозволяє функціональне програмування та робить код більш лаконічним і читабельним. Вони часто використовуються з функціональними інтерфейсами для виконання операцій над колекціями та потоками даних. Розуміючи лямбда-вирази, програмісти-початківці можуть писати більш виразний і потужний код на Java.</p>
             </details>
-            <details><summary>Lesson from Bard (Google)</summary>
-                <h2>Lambda Expressions in Java</h2>
-                <h3>Introduction</h3>
-                <p>Lambda expressions, also known as anonymous functions, were introduced in Java 8. They are a concise and powerful way to write code that can be used in a variety of situations.</p>
-                <h3>What is a lambda expression?</h3>
-                <p>A lambda expression is a function that is defined without a name. It consists of a list of parameters, an arrow token (->), and a body. The body can be a single expression or a block of code.</p>
-                <h3>How to write a lambda expression</h3>
-                <p>The syntax for a lambda expression is as follows:</p>
-                <p class="h-codespan">(parameters) -> expression</p>
-                <p>For example, the following lambda expression takes a single parameter of type <span class="h-codespan">int</span> and returns the square of the parameter:</p>
+            <details><summary>Урок від Bard (Google)</summary>
+                <h2>Лямбда-вирази в Java</h2>
+                <h3>Вступ</h3>
+                <p><strong>Лямбда-вирази</strong>, також відомі як анонімні функції, були представлені в Java 8. Вони є лаконічним і потужним способом написання коду, який можна використовувати в різних ситуаціях.</p>
+                <h3>Що таке лямбда-вираз?</h3>
+                <p><strong>Лямбда-вираз</strong> — це функція, визначена без імені. Він складається зі списку параметрів, маркера зі стрілкою (->) і тіла. Тіло може бути одним виразом або блоком коду.</p>
+                <h3>Як написати лямбда-вираз</h3>
+                <p>Синтаксис лямбда-виразу такий:</p>
+                <p class="h-codespan">(параметри) -> вираз</p>
+                <p>Наприклад, такий лямбда-вираз приймає один параметр типу <span class="h-codespan">int</span> і повертає квадрат параметра:</p>
                 <p class="h-codespan">(int x) -> x * x</p>
-                <p>The following lambda expression takes two parameters of type int and returns the sum of the parameters:</p>
+                <p>Наступний лямбда-вираз приймає два параметри типу <span class="h-codespan">int</span> і повертає суму параметрів:</p>
                 <p class="h-codespan">(int x, int y) -> x + y</p>
-                <h3>How to use lambda expressions</h3>
-                <p>Lambda expressions can be used anywhere in your code where a function is expected. For example, you can pass a lambda expression to a method parameter, or use it to initialize a variable.</p>
-                <p>Here is an example of how to pass a lambda expression to a method parameter:</p>
+                <h3>Як використовувати лямбда-вирази</h3>
+                <p>Лямбда-вирази можна використовувати будь-де у вашому коді, де очікується функція. Наприклад, ви можете передати лямбда-вираз у параметр методу або використати його для ініціалізації змінної.</p>
+                <p>Ось приклад того, як передати лямбда-вираз у параметр методу:</p>
                 <div class="w3-example">
                 <pre class="language-java w3-white"><code>public void printSquares(List&lt;Integer&gt; numbers) {
   numbers.forEach(x -> System.out.println(x * x));
 }
 </code></pre>
                 </div>
-                <p>This code will print the square of each number in the <b>numbers</b> list.</p>
-                <p>Here is an example of how to use a lambda expression to initialize a variable:</p>
+                <p>Цей код надрукує квадрат кожного числа в списку <b>чисел</b>.</p>
+                <p>Ось приклад використання лямбда-виразу для ініціалізації змінної:</p>
                 <p class="h-codespan">Comparator&lt;Integer&gt; naturalOrderComparator = (x, y) -> x - y;</p>
-                <p>This code initializes a variable called <span class="h-codespan">naturalOrderComparator</span> with a lambda expression that compares two integers in ascending order.</p>
-                <h3>Benefits of using lambda expressions</h3>
-                <p>Lambda expressions offer a number of benefits over traditional methods, including:</p>
+                <p>Цей код ініціалізує змінну під назвою <span class="h-codespan">naturalOrderComparator</span> лямбда-виразом, який порівнює два цілі числа в порядку зростання.</p>
+                <h3>Переваги використання лямбда-виразів</h3>
+                <p>Лямбда-вирази пропонують низку переваг порівняно з традиційними методами, зокрема:</p>
                 <ul>
-                    <li><b>Conciseness</b>: Lambda expressions can be much more concise than traditional methods. This can make your code more readable and easier to maintain.</li>
-                    <li><b>Flexibility</b>: Lambda expressions can be used in a variety of situations where traditional methods would not be suitable. For example, lambda expressions can be used to pass functions as parameters to other functions, or to create anonymous inner classes.</li>
-                    <li><b>Performance</b>: In some cases, lambda expressions can be more performant than traditional methods. This is because the compiler can often inline lambda expressions, which can reduce the overhead of calling methods.</li>
+                    <li><b>Стислість</b>: лямбда-вирази можуть бути набагато лаконічнішими, ніж традиційні методи. Це може зробити ваш код більш читабельним і легшим для обслуговування.</li>
+                    <li><b>Гнучкість</b>: лямбда-вирази можна використовувати в різноманітних ситуаціях, де традиційні методи не підходять. Наприклад, лямбда-вирази можна використовувати для передачі функцій як параметрів іншим функціям або для створення анонімних внутрішніх класів.</li>
+                    <li><b>Продуктивність</b>: у деяких випадках лямбда-вирази можуть бути ефективнішими, ніж традиційні методи. Це пояснюється тим, що компілятор часто може вбудовувати лямбда-вирази, що може зменшити накладні витрати на виклик методів.</li>
                 </ul>
-                <h3>Examples of using lambda expressions</h3>
-                <p>Here are a few examples of how lambda expressions can be used in Java:</p>
-                <p>Sorting a list of numbers:</p>
+                <h3>Приклади використання лямбда-виразів</h3>
+                <p>Ось кілька прикладів використання лямбда-виразів у Java:</p>
+                <p>Сортування списку чисел:</p>
                 <div class="w3-example">
                 <pre class="language-java w3-white"><code>List&lt;Integer&gt; numbers = Arrays.asList(1, 3, 5, 2, 4);
 numbers.sort((x, y) -> x - y);
 </code></pre>
                 </div>
-                <p>This code will sort the <b>numbers</b> list in ascending order.</p>
-                <p>Filtering a list of elements:</p>
+                <p>Цей код відсортує список <b>чисел</b> у порядку зростання.</p>
+                <p>Фільтрація списку елементів:</p>
                 <div class="w3-example">
                 <pre class="language-java w3-white"><code>List&lt;String&gt; names = Arrays.asList("Alice", "Bob", "Carol", "David");
 List&lt;String&gt; shortNames = names.stream()
@@ -656,25 +657,25 @@ List&lt;String&gt; shortNames = names.stream()
   .collect(Collectors.toList());
 </code></pre>
                 </div>
-                <p>This code will create a new list called <span class="h-codespan">shortNames</span> that contains all the names in the <b>names</b> list that are less than 5 characters long.</p>
-                <p>Creating a callback function:</p>
+                <p>Цей код створить новий список під назвою <span class="h-codespan">shortNames</span>, який містить усі імена в списку <b>імен</b>, довжина яких не перевищує 5 символів.</p>
+                <p>Створення функції зворотного виклику (callback):</p>
                 <div class="w3-example">
                 <pre class="language-java w3-white"><code>public interface Callback {
   void callback();
 }
 
 public void doSomething(Callback callback) {
-  // Do something...
+  // Робити щось...
   callback.callback();
 }
 </code></pre>
                 </div>
-                <p>This code defines an interface called <b>Callback</b> that has a single method called <span class="h-codespan">callback()</span>. The <span class="h-codespan">doSomething()</span> method takes a <b>Callback</b> object as a parameter and calls the <span class="h-codespan">callback()</span> method on that object when it is finished doing something.</p>
-                <p>The following code shows how to use the <span class="h-codespan">doSomething()</span> method with a lambda expression:</p>
+                <p>Цей код визначає інтерфейс під назвою <b>Callback</b>, який має один метод під назвою <span class="h-codespan">callback()</span>. Метод <span class="h-codespan">doSomething()</span> приймає об&#8217;єкт <b>Callback</b> як параметр і викликає <span class="h-codespan">callback()</span> для цього об&#8217;єкта, коли він щось виконує.</p>
+                <p>У наступному коді показано, як використовувати метод <span class="h-codespan">doSomething()</span> із лямбда-виразом:</p>
                 <p class="h-codespan">doSomething(() -> System.out.println("Hello, world!"));</p>
-                <p>This code will print the message "Hello, world!" to the console.</p>
-                <h3>Conclusion</h3>
-                <p>Lambda expressions are a powerful and flexible tool that can be used to write more concise, readable, and efficient code. If you are programming in Java, I encourage you to learn how to use lambda expressions.</p>
+                <p>Цей код надрукує повідомлення "Hello, world!" на консоль.</p>
+                <h3>Висновок</h3>
+                <p><strong>Лямбда-вирази</strong> — це потужний і гнучкий інструмент, який можна використовувати для написання більш лаконічного, читабельного та ефективного коду. Якщо ви програмуєте на Java, рекомендується навчитися використовувати лямбда-вирази.</p>
             </details>
         </div>
         <hr>
