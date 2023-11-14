@@ -42,7 +42,7 @@
         ]
     }
 </script><title>SQL Ін&#8217;єкція. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='SQL Ін&#8217;єкція. SQL на вебсторінках. Ін&#8217;єкція на основі 1=1 завжди True. Ін&#8217;єкція на основі ""="" завжди True. Ін&#8217;єкція на основі пакетних SQL інструкцій. Використовуйте параметри SQL для захисту. Приклади. Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
+<meta name='description' content='SQL Ін&#8217;єкція. SQL на вебсторінках. Ін&#8217;єкція на основі 1=1 завжди True. Ін&#8217;єкція на основі &quot;&quot;=&quot;&quot; завжди True. Ін&#8217;єкція на основі пакетних SQL інструкцій. Використовуйте параметри SQL для захисту. Приклади. Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -825,111 +825,111 @@
     </div>
     <hr>
     <h2>SQL Ін&#8217;єкція</h2>
-    <p>SQL injection is a code injection technique that might destroy your database.</p>
-    <p>SQL injection is one of the most common web hacking techniques.</p>
-    <p>SQL injection is the placement of malicious code in SQL statements, via web page input.</p>
+    <p>SQL-ін&#8217;єкція – це техніка впровадження коду, яка може знищити вашу базу даних.</p>
+    <p>Впровадження SQL є одним із найпоширеніших методів веб-злому.</p>
+    <p>Впровадження SQL – це розміщення зловмисного коду в SQL інструкціях за допомогою введення вебсторінки.</p>
     <hr>
-    <h2>SQL in Web Pages</h2>
-    <p>SQL injection usually occurs when you ask a user for input, like their username/userid, and instead of a name/id, the user gives you an SQL statement that you will <strong>unknowingly</strong> run on your database.</p>
-    <p>Look at the following example which creates a <code class="w3-codespan">SELECT</code> statement by adding a variable (txtUserId) to a select string. The variable is fetched from user input (getRequestString):</p>
+    <h2>SQL на вебсторінках</h2>
+    <p>SQL Ін&#8217;єкція зазвичай відбувається, коли ви просите користувача ввести дані, як-от ім&#8217;я користувача/ідентифікатор користувача, і замість імені/ідентифікатора користувач дає вам SQL інструкцію, яку ви <b>неусвідомлено</b> запустите у своїй базі даних.</p>
+    <p>Погляньте на наступний приклад, у якому створюється інструкція <code class="w3-codespan">SELECT</code> шляхом додавання змінної (txtUserId) до рядка вибору. Змінна отримується з введення користувача (getRequestString):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate">
             txtUserId = getRequestString(&quot;UserId&quot;);<br>txtSQL = &quot;SELECT * FROM Users WHERE UserId = &quot; + txtUserId;
         </div>
     </div>
-    <p>The rest of this chapter describes the potential dangers of using user input in SQL statements.</p>
+    <p>Решта цієї глави описує потенційні небезпеки використання введених користувачем даних у SQL інструкціях.</p>
     <hr>
-    <h2>SQL Injection Based on 1=1 is Always True</h2>
-    <p>Look at the example above again. The original purpose of the code was to create an SQL statement to select a user, with a given user id.</p>
-    <p>If there is nothing to prevent a user from entering &quot;wrong&quot; input, the user can enter some &quot;smart&quot; input like this:</p>
+    <h2>SQL Ін&#8217;єкція на основі 1=1 завжди True</h2>
+    <p>Подивіться на приклад вище ще раз. Початковою метою коду було створити оператор SQL для вибору користувача з заданим ідентифікатором (id) користувача.</p>
+    <p>Якщо ніщо не заважає користувачеві ввести &quot;неправильний&quot; input, користувач може ввести якийсь &quot;розумний&quot; input, як це:</p>
     <p>UserId: <input type="text" name="UserId" aria-label="User Id" value="105 OR 1=1"></p>
-    <p>Then, the SQL statement will look like this:</p>
+    <p>Тоді SQL інструкція виглядатиме так:</p>
     <div class="w3-example">
         <div class="w3-code notranslate sqlHigh">
             SELECT * FROM Users WHERE UserId = 105 OR 1=1;
         </div>
     </div>
-    <p>The SQL above is valid and will return ALL rows from the &quot;Users&quot; table, since <b>OR 1=1</b> is always TRUE.</p>
-    <p>Does the example above look dangerous? What if the &quot;Users&quot; table contains names and passwords?</p>
-    <p>The SQL statement above is much the same as this:</p>
+    <p>Наведений вище SQL дійсний і поверне ВСІ рядки з таблиці &quot;Users&quot;, оскільки <b>OR 1=1</b> завжди TRUE.</p>
+    <p>Чи виглядає наведений вище приклад небезпечним? Що робити, якщо таблиця &quot;Users&quot; містить імена та паролі?</p>
+    <p>Наведена вище SQL інструкція майже така сама:</p>
     <div class="w3-example">
         <div class="w3-code notranslate sqlHigh">
             SELECT UserId, Name, Password FROM Users WHERE UserId = 105 or 1=1;
         </div>
     </div>
-    <p>A hacker might get access to all the usernames and passwords in a database, by simply inserting 105 OR 1=1 into the input field.</p>
+    <p>Хакер може отримати доступ до всіх імен користувачів і паролів у базі даних, просто вставивши 105 АБО 1=1 у поле введення.</p>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>SQL Injection Based on&nbsp;&quot;&quot;=&quot;&quot; is Always True</h2>
-    <p>Here is an example of a user login on a website:</p>
+</div>    <h2>SQL Ін&#8217;єкція на основі &quot;&quot;=&quot;&quot; завжди True</h2>
+    <p>Ось приклад входу користувача на веб-сайт:</p>
     <p>Username:<br><input style="padding:4px" type="text" name="uName" aria-label="User Name" value="John Doe"></p>
     <p>Password:<br><input style="padding:4px" type="text" name="uPass" aria-label="User pass" value="myPass"></p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate">
             uName = getRequestString(&quot;username&quot;);<br>uPass = getRequestString(&quot;userpassword&quot;);<br><br>sql = 'SELECT * FROM Users WHERE Name =&quot;' + uName + '&quot; AND Pass =&quot;' + uPass + '&quot;'
         </div>
     </div>
     <div class="w3-example">
-        <h3>Result</h3>
+        <h3>Результат</h3>
         <div class="w3-code notranslate sqlHigh">
             SELECT * FROM Users WHERE Name =&quot;John Doe&quot; AND Pass =&quot;myPass&quot;
         </div>
     </div>
-    <p>A hacker might get access to usernames and passwords&nbsp;in a database by simply inserting &quot; OR &quot;&quot;=&quot; into the username or password text box:</p>
+    <p>Хакер може отримати доступ до імен користувачів і паролів у базі даних, просто вставивши &quot; OR &quot;&quot;=&quot; у текстове поле імені користувача (User Name) чи пароля (Password):</p>
     <p>User Name:<br><input style="padding:4px" type="text" name="uName" aria-label="User Name" value='" or ""="'></p>
     <p>Password:<br><input style="padding:4px" type="text" name="uPass" aria-label="User Pass" value='" or ""="'></p>
-    <p>The code at the server will create a valid SQL statement like this:</p>
+    <p>Код на сервері створить таку валідну (дійсну) SQL інструкцію:</p>
     <div class="w3-example">
-        <h3>Result</h3>
+        <h3>Результат</h3>
         <div class="w3-code notranslate sqlHigh">
             SELECT * FROM Users WHERE Name =&quot;&quot; or &quot;&quot;=&quot;&quot; AND Pass =&quot;&quot; or &quot;&quot;=&quot;&quot;
         </div>
     </div>
-    <p>The SQL above is valid and will return all rows from the &quot;Users&quot; table, since <b>OR &quot;&quot;=&quot;&quot;</b> is always TRUE.</p>
+    <p>Наведений вище SQL валідний і повертатиме всі рядки з таблиці &quot;Users&quot;, оскільки <b>OR &quot;&quot;=&quot;&quot;</b>  завжди має значення TRUE.</p>
     <hr>
-    <h2>SQL Injection Based on Batched SQL Statements</h2>
-    <p>Most databases support batched SQL statement.</p>
-    <p>A batch of SQL statements is a group of two or more SQL statements, separated by semicolons.</p>
-    <p>The SQL statement below will return all rows from the &quot;Users&quot; table, then delete the &quot;Suppliers&quot; table.</p>
+    <h2>SQL Ін&#8217;єкція на основі пакетних SQL інструкцій</h2>
+    <p>Більшість баз даних підтримують групову SQL інструкцію.</p>
+    <p>Пакет інструкцій SQL – це група з двох або більше інструкцій SQL, розділених крапкою з комою.</p>
+    <p>Наведена нижче SQL інструкція поверне всі рядки з таблиці &quot;Users&quot; (&quot;Користувачі&quot;), а потім видалить таблицю &quot;Suppliers&quot; (&quot;Постачальники&quot;).</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate sqlHigh">SELECT * FROM Users; DROP TABLE Suppliers</div>
     </div>
-    <p>Look at the following example:</p>
+    <p>Подивіться на наступний приклад:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <div class="w3-code notranslate">
             txtUserId = getRequestString(&quot;UserId&quot;);<br>txtSQL = &quot;SELECT * FROM Users WHERE UserId = &quot; + txtUserId;
         </div>
     </div>
-    <p>And the following input:</p>
+    <p>І наступний input (введення):</p>
     <p>User id: <input type="text" style="width:250px" name="UserId" aria-label="User Id" value="105; DROP TABLE Suppliers"></p>
-    <p>The valid SQL statement would look like this:</p>
+    <p>Валідна SQL інструкція виглядатиме так:</p>
     <div class="w3-example">
-        <h3>Result</h3>
+        <h3>Результат</h3>
         <div class="w3-code notranslate sqlHigh">
             SELECT * FROM Users WHERE UserId = 105; DROP TABLE Suppliers;
         </div>
     </div>
     <hr>
-    <h2>Use SQL Parameters for Protection</h2>
-    <p>To protect a website from SQL injection, you can use SQL parameters.</p>
-    <p>SQL parameters are values that are added to an SQL query at execution time, in a controlled manner.</p>
+    <h2>Використовуйте параметри SQL для захисту</h2>
+    <p>Щоб захистити вебсайт від впровадження SQL, ви можете використовувати параметри SQL.</p>
+    <p>Параметри SQL – це значення, які контрольованим чином додаються до запиту SQL під час виконання.</p>
     <div class="w3-example">
-        <h3>ASP.NET Razor Example</h3>
+        <h3>ASP.NET Razor Приклад</h3>
         <div class="w3-code notranslate">
             txtUserId = getRequestString(&quot;UserId&quot;);<br>txtSQL = &quot;SELECT * FROM Users WHERE UserId = @0&quot;;<br>db.Execute(txtSQL,txtUserId);
         </div>
     </div>
-    <p>Note that parameters are represented in the SQL statement by a @ marker.</p>
-    <p>The SQL engine checks each parameter to ensure that it is correct for its column and is treated literally, and not as part of the SQL to be executed.</p>
+    <p>Зверніть увагу, що параметри представлені в інструкції SQL маркером @.</p>
+    <p>Програма SQL перевіряє кожен параметр, щоб переконатися, що він правильний для відповідного стовпця та розглядається буквально, а не як частина SQL, який потрібно виконати.</p>
     <div class="w3-example">
-        <h3>Another Example</h3>
+        <h3>Інший приклад</h3>
         <div class="w3-code notranslate">
             txtNam = getRequestString(&quot;CustomerName&quot;);<br>txtAdd = getRequestString(&quot;Address&quot;);<br>txtCit = getRequestString(&quot;City&quot;);<br>txtSQL = &quot;INSERT INTO Customers (CustomerName,Address,City) Values(@0,@1,@2)&quot;;<br>db.Execute(txtSQL,txtNam,txtAdd,txtCit);
         </div>
@@ -939,21 +939,21 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Examples</h2>
-    <p>The following examples show how to build parameterized queries in some common web languages.</p>
-    <p>SELECT STATEMENT IN ASP.NET:</p>
+</div>    <h2>Приклади</h2>
+    <p>У наведених нижче прикладах показано, як створювати параметризовані запити деякими поширеними веб-мовами.</p>
+    <p>SELECT інструкція в ASP.NET:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">
             txtUserId = getRequestString(&quot;UserId&quot;);<br>sql = &quot;SELECT * FROM Customers WHERE CustomerId = @0&quot;;<br>command = new SqlCommand(sql);<br>command.Parameters.AddWithValue(&quot;@0&quot;,txtUserId);<br>command.ExecuteReader();
         </div>
     </div>
-    <p>INSERT INTO STATEMENT IN ASP.NET:</p>
+    <p>INSERT INTO інструкція в ASP.NET:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">
             txtNam = getRequestString(&quot;CustomerName&quot;);<br>txtAdd = getRequestString(&quot;Address&quot;);<br>txtCit = getRequestString(&quot;City&quot;);<br>txtSQL = &quot;INSERT INTO Customers (CustomerName,Address,City) Values(@0,@1,@2)&quot;;<br>command = new SqlCommand(txtSQL);<br>command.Parameters.AddWithValue(&quot;@0&quot;,txtNam);<br>command.Parameters.AddWithValue(&quot;@1&quot;,txtAdd);<br>command.Parameters.AddWithValue(&quot;@2&quot;,txtCit);<br>command.ExecuteNonQuery();
         </div>
     </div>
-    <p>INSERT INTO STATEMENT IN PHP:</p>
+    <p>INSERT INTO інструкція в PHP:</p>
     <div class="w3-example">
         <div class="w3-code notranslate">
             $stmt = $dbh-&gt;prepare(&quot;INSERT INTO Customers (CustomerName,Address,City)<br>VALUES (:nam, :add, :cit)&quot;);<br>$stmt-&gt;bindParam(':nam', $txtNam);<br>$stmt-&gt;bindParam(':add', $txtAdd);<br>$stmt-&gt;bindParam(':cit', $txtCit);<br>$stmt-&gt;execute();
