@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang='es'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='apple-touch-icon' sizes='180x180' href='../apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='../favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='../favicon-16x16.png'>
+<link rel='manifest' href='../manifest.json'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:title' content='W3SchoolsES El mejor'>
+<meta property='og:description' content='Tutoriales de creación web bien organizados y fáciles de entender con muchos ejemplos de cómo usar HTML, CSS, JavaScript, SQL, PHP, Python, Java, C++, C#, Go y más'>
+<meta property='og:locale' content='es' />
+<meta property='og:type' content='website'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:url' content='https://w3schoolsua.github.io/index_es.html'>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "W3SchoolsES El mejor",
+        "url": "https://w3schoolsua.github.io/index_es.html",
+        "description": "W3Schools en español. Conceptos básicos de programación y desarrollo web. Lecciones para principiantes",
+        "image": "https://w3schoolsua.github.io/images/logo_w3s.gif",
+        "keywords": ["Lecciones", "W3Schools", "para principiantes", "HTML", "CSS", "JavaScript", "PHP", "SQL", "Python", "Java"],
+        "author": {
+            "@type": "Person",
+            "name": "W3SchoolsES El mejor",
+            "url": "https://w3schoolsua.github.io/blog/index_es.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "W3SchoolsES El mejor",
+            "url": "https://w3schoolsua.github.io/"
+        },
+        "inLanguage": "es-ES",
+        "sameAs": [
+            "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
+        ]
+    }
+</script><title>Python Borrar archivo. Lecciones para principiantes. W3Schools en español</title>
+<meta name='description' content='Python Borrar archivo. Compruebe si el archivo existe. Eliminar carpeta. Para eliminar una carpeta completa, utilice el método os.rmdir(). Ejemplos. Lecciones para principiantes. W3Escuelas en español'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_es.html'>W3schoolsES<span class='dotcom w3-hide-small'>. en español</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">MEJOR SITIO PARA DESARROLLADORES WEB</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src='https://cse.google.com/cse.js?cx=751c3d18bb8a64f00'></script><div class='gcse-search'></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Menu' aria-label='Menú abierto'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_es.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_es.html' title='HTML Tutorial'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_es.html' title='CSS Tutorial'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_es.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_es.html' title='SQL Tutorial'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index_es.html' title='Python Tutorial'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index_es.html' title='PHP Tutorial'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../java/index_es.html' title='Java Tutorial'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index_es.html' title='Kotlin Tutorial'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index_es.html' title='Go Tutorial'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index_es.html' title='C Tutorial'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index_es.html' title='C++ Tutorial'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index_es.html' title='C# Tutorial'>C#</a>
+            <a class='w3-bar-item w3-button' href='../django/index_es.html' title='Django Tutorial'>Django</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_es.html' title='How To'>CÓMO</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_es.html' title='W3.CSS Tutorial'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../ai/index_es.html' title='AI Tutorial'>AI</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Más tutoriales' aria-label='ver más tutoriales'>Más <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Buscar' aria-label='Búsqueda de sitio'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='tema oscuro' aria-label='Habilitar el tema oscuro'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' rel="noopener" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Descargar libros gratis desde Google Drive' aria-label="Descargar libros gratis desde Google Drive">Libros</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Referencias' aria-label='Ir a Referencias'>REFERENCIAS <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Ejercicios' aria-label='Ir a Ejercicios'>EJERCICIOS <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML & CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_es.html'>Aprende HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_es.html'>Aprende CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_es.html'>Aprende RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_es.html'>Aprende Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_es.html'>Aprende W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_es.html'>Aprende Colores</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_es.html'>Aprende Iconos</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_es.html'>Aprende Gráficos</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_es.html'>Aprende SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_es.html'>Aprende Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_es.html'>Aprende Cómo</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_es.html'>Aprende Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Análisis de datos</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index_es.html'>Aprende IA</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index_es.html'>Aprende IA generativa</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_es.html'>Aprende ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index_es.html'>Aprende ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index_es.html'>Aprende Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_es.html'>Aprende Aprendizaje automático</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_es.html'>Aprende Ciencia de los datos</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_es.html'>Aprende NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_es.html'>Aprende Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_es.html'>Aprende SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_es.html'>Aprende Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_es.html'>Aprende Estadísticas</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_es.html'>Aprende Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_es.html'>Aprende Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_es.html'>Aprende XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_es.html'>Aprende XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_es.html'>Aprende XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_es.html'>Aprende XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_es.html'>Aprende XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_es.html'>Aprende XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_es.html'>Aprende XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_es.html'>Aprende XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_es.html'>Aprende JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_es.html'>Aprende React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_es.html'>Aprende jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index_es.html'>Aprende Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_es.html'>Aprende AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_es.html'>Aprende JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_es.html'>Aprende AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_es.html'>Aprende AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_es.html'>Aprende W3.JS</a>
+                    <h3>Programación</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index_es.html'>Aprende Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_es.html'>Aprende Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_es.html'>Aprende C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_es.html'>Aprende C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_es.html'>Aprende C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_es.html'>Aprende R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_es.html'>Aprende Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_es.html'>Aprende Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_es.html'>Aprende Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_es.html'>Aprende TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Lado del servidor</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_es.html'>Aprende SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_es.html'>Aprende MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index_es.html'>Aprende PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_es.html'>Aprende PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_es.html'>Aprende ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_es.html'>Aprende Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_es.html'>Aprende Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_es.html'>Aprende Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_es.html'>Aprende GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_es.html'>Aprende MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_es.html'>Aprende AWS Cloud</a>
+                    <h3>Construcción web</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_es.html'>Donde empezar</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_es.html'>Plantillas web</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_es.html'>Estadísticas web</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_es.html'>Editor de código</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_es.html'>Desarrollo web</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_es.html'>La seguridad cibernética</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_es.html'>Accesibilidad</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Prueba de velocidad de escritura</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Juego de código</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Análisis de datos</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_es.html'>Aprende IA</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index_es.html'>Aprende IA generativa</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_es.html'>Aprende ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index_es.html'>Aprende ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index_es.html'>Aprende Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_es.html'>Aprende Aprendizaje automático</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_es.html'>Aprende Ciencia de los datos</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_es.html'>Aprende NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_es.html'>Aprende Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_es.html'>Aprende SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_es.html'>Aprende Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_es.html'>Aprende Estadísticas</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_es.html'>Aprende Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_es.html'>Aprende Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_es.html'>Aprende XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_es.html'>Aprende XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_es.html'>Aprende XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_es.html'>Aprende XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_es.html'>Aprende XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_es.html'>Aprende XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_es.html'>Aprende XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_es.html'>Aprende XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_es.html'>HTML Referencia de etiqueta</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_es.html'>HTML Soporte del navegador</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_es.html'>HTML Referencia de evento</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_es.html'>HTML Referencia de color</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_es.html'>HTML Referencia de atributos</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_es.html'>HTML Canvas Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_es.html'>HTML SVG Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_es.html'>Google Maps Referencia</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_es.html'>CSS Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_es.html'>CSS Soporte del navegador</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_es.html'>CSS Referencia de selectores</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_es.html'>Bootstrap 3 Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_es.html'>Bootstrap 4 Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_es.html'>W3.CSS Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_es.html'>Referencia de iconos</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_es.html'>Sass Referencia</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_es.html'>JavaScript Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_es.html'>HTML DOM Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_es.html'>jQuery Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_es.html'>AngularJS Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_es.html'>AppML Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_es.html'>W3.JS Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_es.html'>JS Guiones listos</a>
+                    <h3>Programación</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_es.html'>Python Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_es.html'>Java Referencia</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Lado del servidor</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_es.html'>SQL Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_es.html'>MySQL Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_es.html'>PHP Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_es.html'>ASP Referencia</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_es.html'>XML DOM Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_es.html'>XML Http Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_es.html'>XSLT Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_es.html'>XML Schema Referencia</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Conjuntos de caracteres</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_es.html'>HTML Conjuntos de caracteres</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_es.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_es.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_es.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_es.html'>HTML Símbolos</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_es.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Ejercicios</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_es.html'>HTML Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_es.html'>CSS Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_es.html'>JavaScript Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_es.html'>SQL Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_es.html'>MySQL Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_es.html'>PHP Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_es.html'>Python Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_es.html'>NumPy Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_es.html'>Pandas Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_es.html'>SciPy Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_es.html'>jQuery Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_es.html'>Java Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_es.html'>Bootstrap Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_es.html'>Bootstrap 4 Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_es.html'>C++ Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_es.html'>C# Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_es.html'>R Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_es.html'>Kotlin Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_es.html'>Go Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_es.html'>Git Ejercicios</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Cuestionarios</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_es.html' target='_top'>HTML Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_es.html' target='_top'>CSS Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_es.html' target='_top'>JavaScript Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_es.html' target='_top'>SQL Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_es.html' target='_top'>MySQL Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_es.html' target='_top'>PHP Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_es.html' target='_top'>Python Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_es.html' target='_top'>NumPy Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_es.html' target='_top'>Pandas Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_es.html' target='_top'>SciPy Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_es.html' target='_top'>jQuery Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_es.html' target='_top'>Java Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_es.html' target='_top'>Bootstrap Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_es.html' target='_top'>Bootstrap 4 Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_es.html' target='_top'>C++ Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_es.html' target='_top'>C# Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_es.html' target='_top'>R Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_es.html' target='_top'>XML Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_es.html' target='_top'>La seguridad cibernética Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_es.html' target='_top'>Accesibilidad Prueba</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Certificados</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_es.html' target='_top'>HTML Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_es.html' target='_top'>CSS Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_es.html' target='_top'>JavaScript Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_es.html' target='_top'>SQL Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_es.html' target='_top'>PHP Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_es.html' target='_top'>Python Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_es.html' target='_top'>jQuery Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_es.html' target='_top'>Bootstrap Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_es.html' target='_top'>XML Certificado</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class='left'><span class='left_h2'>Python</span> Tutorial</h2>
+            <a target='_top' href='index_es.html'>Python HOGAR</a>
+            <a target='_top' href='python_intro_es.html'>Python Intro</a>
+            <a target='_top' href='python_getstarted_es.html'>Python Empezar</a>
+            <a target='_top' href='python_syntax_es.html'>Python Sintaxis</a>
+            <a target='_top' href='python_comments_es.html'>Python Comentarios</a>
+            <a target='_top' href='python_variables_es.html'>Python Variables</a>
+            <div class='tut_overview'>
+                <a target='_top' href='python_variables_es.html'>Python Variables</a>
+                <a target='_top' href='python_variables_names_es.html'>Variable Nombres</a>
+                <a target='_top' href='python_variables_multiple_es.html'>Asignar múltiples valores</a>
+                <a target='_top' href='python_variables_output_es.html'>Variables de salida</a>
+                <a target='_top' href='python_variables_global_es.html'>Variables globales</a>
+                <a target='_top' href='python_variables_exercises_es.html'>Ejercicios variables</a>
+            </div>
+            <a target='_top' href='python_datatypes_es.html'>Python Tipos de datos</a>
+            <a target='_top' href='python_numbers_es.html'>Python Números</a>
+            <a target='_top' href='python_casting_es.html'>Python Fundición</a>
+            <a target='_top' href='python_strings_es.html'>Python Instrumentos de cuerda</a>
+            <div class='tut_overview'>
+                <a target='_top' href='python_strings_es.html'>Python Instrumentos de cuerda</a>
+                <a target='_top' href='python_strings_slicing_es.html'>Cortar cuerdas</a>
+                <a target='_top' href='python_strings_modify_es.html'>Modificar cadenas</a>
+                <a target='_top' href='python_strings_concatenate_es.html'>Concatenar cadenas</a>
+                <a target='_top' href='python_strings_format_es.html'>Formatear cadenas</a>
+                <a target='_top' href='python_strings_escape_es.html'>Personajes de escape</a>
+                <a target='_top' href='python_strings_methods_es.html'>Métodos de cadena</a>
+                <a target='_top' href='python_strings_exercises_es.html'>Ejercicios de cuerdas</a>
+            </div>
+            <a target='_top' href='python_booleans_es.html'>Python Booleanos</a>
+            <a target='_top' href='python_operators_es.html'>Python Operadores</a>
+            <a target='_top' href='python_lists_es.html'>Python Liza</a>
+            <div class='tut_overview'>
+                <a target='_top' href='python_lists_es.html'>Python Liza</a>
+                <a target='_top' href='python_lists_access_es.html'>Elementos de la lista de acceso</a>
+                <a target='_top' href='python_lists_change_es.html'>Cambiar elementos de la lista</a>
+                <a target='_top' href='python_lists_add_es.html'>Agregar elementos de la lista</a>
+                <a target='_top' href='python_lists_remove_es.html'>Eliminar elementos de la lista</a>
+                <a target='_top' href='python_lists_loop_es.html'>Listas de bucles</a>
+                <a target='_top' href='python_lists_comprehension_es.html'>Comprensión de listas</a>
+                <a target='_top' href='python_lists_sort_es.html'>Ordenar listas</a>
+                <a target='_top' href='python_lists_copy_es.html'>Copiar listas</a>
+                <a target='_top' href='python_lists_join_es.html'>Unirse a listas</a>
+                <a target='_top' href='python_lists_methods_es.html'>Métodos de lista</a>
+                <a target='_top' href='python_lists_exercises_es.html'>Lista de ejercicios</a>
+            </div>
+            <a target='_top' href='python_tuples_es.html'>Python Tuplas</a>
+            <div class='tut_overview'>
+                <a target='_top' href='python_tuples_es.html'>Python Tuplas</a>
+                <a target='_top' href='python_tuples_access_es.html'>Acceso a tuplas</a>
+                <a target='_top' href='python_tuples_update_es.html'>Actualizar tuplas</a>
+                <a target='_top' href='python_tuples_unpack_es.html'>Desempaquetar tuplas</a>
+                <a target='_top' href='python_tuples_loop_es.html'>Tuplas de bucle</a>
+                <a target='_top' href='python_tuples_join_es.html'>Unirse a tuplas</a>
+                <a target='_top' href='python_tuples_methods_es.html'>Métodos de tupla</a>
+                <a target='_top' href='python_tuples_exercises_es.html'>Ejercicios de tupla</a>
+            </div>
+            <a target='_top' href='python_sets_es.html'>Python Conjuntos</a>
+            <div class='tut_overview'>
+                <a target='_top' href='python_sets_es.html'>Python Conjuntos</a>
+                <a target='_top' href='python_sets_access_es.html'>Acceder a elementos del conjunto</a>
+                <a target='_top' href='python_sets_add_es.html'>Agregar elementos del conjunto</a>
+                <a target='_top' href='python_sets_remove_es.html'>Eliminar elementos establecidos</a>
+                <a target='_top' href='python_sets_loop_es.html'>Conjuntos de bucles</a>
+                <a target='_top' href='python_sets_join_es.html'>Unir conjuntos</a>
+                <a target='_top' href='python_sets_methods_es.html'>Establecer métodos</a>
+                <a target='_top' href='python_sets_exercises_es.html'>Establecer ejercicios</a>
+            </div>
+            <a target='_top' href='python_dictionaries_es.html'>Python Diccionarios</a>
+            <div class='tut_overview'>
+                <a target='_top' href='python_dictionaries_es.html'>Python Diccionarios</a>
+                <a target='_top' href='python_dictionaries_access_es.html'>Acceder a elementos</a>
+                <a target='_top' href='python_dictionaries_change_es.html'>Cambiar elementos</a>
+                <a target='_top' href='python_dictionaries_add_es.html'>Agregar elementos</a>
+                <a target='_top' href='python_dictionaries_remove_es.html'>Eliminar elementos</a>
+                <a target='_top' href='python_dictionaries_loop_es.html'>Diccionarios en bucle</a>
+                <a target='_top' href='python_dictionaries_copy_es.html'>Copiar diccionarios</a>
+                <a target='_top' href='python_dictionaries_nested_es.html'>Diccionarios anidados</a>
+                <a target='_top' href='python_dictionaries_methods_es.html'>Métodos de diccionario</a>
+                <a target='_top' href='python_dictionaries_exercises_es.html'>Ejercicio de diccionario</a>
+            </div>
+            <a target='_top' href='python_conditions_es.html'>Python If...Else</a>
+            <a target='_top' href='python_while_loops_es.html'>Python While Bucles</a>
+            <a target='_top' href='python_for_loops_es.html'>Python For Bucles</a>
+            <a target='_top' href='python_functions_es.html'>Python Funciones</a>
+            <a target='_top' href='python_lambda_es.html'>Python Lambda</a>
+            <a target='_top' href='python_arrays_es.html'>Python Matrices</a>
+            <a target='_top' href='python_classes_es.html'>Python Clases/Objetos</a>
+            <a target='_top' href='python_inheritance_es.html'>Python Herencia</a>
+            <a target='_top' href='python_iterators_es.html'>Python Iteradores</a>
+            <a target='_top' href='python_polymorphism_es.html'>Python Polimorfismo</a>
+            <a target='_top' href='python_scope_es.html'>Python Alcance</a>
+            <a target='_top' href='python_modules_es.html'>Python Módulos</a>
+            <a target='_top' href='python_datetime_es.html'>Python Fechas</a>
+            <a target='_top' href='python_math_es.html'>Python Math</a>
+            <a target='_top' href='python_json_es.html'>Python JSON</a>
+            <a target='_top' href='python_regex_es.html'>Python RegEx</a>
+            <a target='_top' href='python_pip_es.html'>Python PIP</a>
+            <a target='_top' href='python_try_except_es.html'>Python Try...Except</a>
+            <a target='_top' href='python_user_input_es.html'>Python Entrada del usuario</a>
+            <a target='_top' href='python_string_formatting_es.html'>Python Formato de cadena</a>
+            <br>
+            <h2 class='left'>Manejo de archivos</h2>
+            <a target='_top' href='python_file_handling_es.html'>Python Manejo de archivos</a>
+            <a target='_top' href='python_file_open_es.html'>Python Leer archivos</a>
+            <a target='_top' href='python_file_write_es.html'>Python Escribir/Crear Archivos</a>
+            <a target='_top' href='python_file_remove_es.html'>Python Borrar archivos</a>
+            <br>
+            <h2 class='left'>Python Módulos</h2>
+            <a target='_top' href='numpy/index_es.html'>NumPy Tutorial</a>
+            <a target='_top' href='pandas/index_es.html'>Pandas Tutorial</a>
+            <a target='_top' href='scipy/index_es.html'>SciPy Tutorial</a>
+            <a target='_top' href='django/index_es.html'>Django Tutorial</a>
+            <br>
+            <h2 class='left'>Python Matplotlib</h2>
+            <a target='_top' href='matplotlib_intro_es.html'>Matplotlib Intro</a>
+            <a target='_top' href='matplotlib_getting_started_es.html'>Matplotlib Empezar</a>
+            <a target='_top' href='matplotlib_pyplot_es.html'>Matplotlib Pyplot</a>
+            <a target='_top' href='matplotlib_plotting_es.html'>Matplotlib Graficado</a>
+            <a target='_top' href='matplotlib_markers_es.html'>Matplotlib Marcadores</a>
+            <a target='_top' href='matplotlib_line_es.html'>Matplotlib Línea</a>
+            <a target='_top' href='matplotlib_labels_es.html'>Matplotlib Etiquetas</a>
+            <a target='_top' href='matplotlib_grid_es.html'>Matplotlib Red</a>
+            <a target='_top' href='matplotlib_subplots_es.html'>Matplotlib Subtramas</a>
+            <a target='_top' href='matplotlib_scatter_es.html'>Matplotlib Dispersión</a>
+            <a target='_top' href='matplotlib_bars_es.html'>Matplotlib Barras</a>
+            <a target='_top' href='matplotlib_histograms_es.html'>Matplotlib Histogramas</a>
+            <a target='_top' href='matplotlib_pie_charts_es.html'>Matplotlib Gráficos circulares</a>
+            <br>
+            <h2 class='left'>Aprendizaje automático</h2>
+            <a target='_top' href='python_ml_getting_started_es.html'>Empezando</a>
+            <a target='_top' href='python_ml_mean_median_mode_es.html'>Modo Mediana Media</a>
+            <a target='_top' href='python_ml_standard_deviation_es.html'>Desviación Estándar</a>
+            <a target='_top' href='python_ml_percentile_es.html'>Percentil</a>
+            <a target='_top' href='python_ml_data_distribution_es.html'>Distribución de datos</a>
+            <a target='_top' href='python_ml_normal_data_distribution_es.html'>Distribución normal de datos</a>
+            <a target='_top' href='python_ml_scatterplot_es.html'>Gráfico de dispersión</a>
+            <a target='_top' href='python_ml_linear_regression_es.html'>Regresión lineal</a>
+            <a target='_top' href='python_ml_polynomial_regression_es.html'>Regresión polinómica</a>
+            <a target='_top' href='python_ml_multiple_regression_es.html'>Regresión múltiple</a>
+            <a target='_top' href='python_ml_scale_es.html'>Escala</a>
+            <a target='_top' href='python_ml_train_test_es.html'>Entrenar/Prueba</a>
+            <a target='_top' href='python_ml_decision_tree_es.html'>Árbol de decisión</a>
+            <a target='_top' href='python_ml_confusion_matrix_es.html'>Matriz de confusión</a>
+            <a target='_top' href='python_ml_hierarchial_clustering_es.html'>Agrupación jerárquica</a>
+            <a target='_top' href='python_ml_logistic_regression_es.html'>Regresión logística</a>
+            <a target='_top' href='python_ml_grid_search_es.html'>Búsqueda de cuadrícula</a>
+            <a target='_top' href='python_ml_preprocessing_es.html'>Datos categóricos</a>
+            <a target='_top' href='python_ml_k-means_es.html'>K-medias</a>
+            <a target='_top' href='python_ml_bagging_es.html'>Agregación de arranque</a>
+            <a target='_top' href='python_ml_cross_validation_es.html'>Validación cruzada</a>
+            <a target='_top' href='python_ml_auc_roc_es.html'>AUC - ROC Curva</a>
+            <a target='_top' href='python_ml_knn_es.html'>K-vecinos más cercanos</a>
+            <br>
+            <h2 class='left'>Python MySQL</h2>
+            <a target='_top' href='python_mysql_getstarted_es.html'>MySQL Empezar</a>
+            <a target='_top' href='python_mysql_create_db_es.html'>MySQL Crear base de datos</a>
+            <a target='_top' href='python_mysql_create_table_es.html'>MySQL Crear mesa</a>
+            <a target='_top' href='python_mysql_insert_es.html'>MySQL Insertar</a>
+            <a target='_top' href='python_mysql_select_es.html'>MySQL Seleccionar</a>
+            <a target='_top' href='python_mysql_where_es.html'>MySQL Dónde</a>
+            <a target='_top' href='python_mysql_orderby_es.html'>MySQL Ordenar por</a>
+            <a target='_top' href='python_mysql_delete_es.html'>MySQL Borrar</a>
+            <a target='_top' href='python_mysql_drop_table_es.html'>MySQL Mesa plegable</a>
+            <a target='_top' href='python_mysql_update_es.html'>MySQL Actualizar</a>
+            <a target='_top' href='python_mysql_limit_es.html'>MySQL Límite</a>
+            <a target='_top' href='python_mysql_join_es.html'>MySQL Unirse</a>
+            <br>
+            <h2 class='left'>Python MongoDB</h2>
+            <a target='_top' href='python_mongodb_getstarted_es.html'>MongoDB Empezar</a>
+            <a target='_top' href='python_mongodb_create_db_es.html'>MongoDB Crear base de datos</a>
+            <a target='_top' href='python_mongodb_create_collection_es.html'>MongoDB Crear colección</a>
+            <a target='_top' href='python_mongodb_insert_es.html'>MongoDB Insertar</a>
+            <a target='_top' href='python_mongodb_find_es.html'>MongoDB Encontrar</a>
+            <a target='_top' href='python_mongodb_query_es.html'>MongoDB Consulta</a>
+            <a target='_top' href='python_mongodb_sort_es.html'>MongoDB Clasificar</a>
+            <a target='_top' href='python_mongodb_delete_es.html'>MongoDB Borrar</a>
+            <a target='_top' href='python_mongodb_drop_collection_es.html'>MongoDB Colección de gotas</a>
+            <a target='_top' href='python_mongodb_update_es.html'>MongoDB Actualizar</a>
+            <a target='_top' href='python_mongodb_limit_es.html'>MongoDB Límite</a>
+            <br>
+            <h2 class='left'>Python Referencia</h2>
+            <a target='_top' href='python_reference_es.html'>Python Descripción general</a>
+            <a target='_top' href='python_ref_functions_es.html'>Python Funciones integradas</a>
+            <a target='_top' href='python_ref_string_es.html'>Python Métodos de cadena</a>
+            <a target='_top' href='python_ref_list_es.html'>Python Métodos de lista</a>
+            <a target='_top' href='python_ref_dictionary_es.html'>Python Métodos de diccionario</a>
+            <a target='_top' href='python_ref_tuple_es.html'>Python Métodos de tupla</a>
+            <a target='_top' href='python_ref_set_es.html'>Python Establecer métodos</a>
+            <a target='_top' href='python_ref_file_es.html'>Python Métodos de archivo</a>
+            <a target='_top' href='python_ref_keywords_es.html'>Python Palabras clave</a>
+            <a target='_top' href='python_ref_exceptions_es.html'>Python Excepciones</a>
+            <a target='_top' href='python_ref_glossary_es.html'>Python Glosario</a>
+            <br>
+            <h2 class='left'>Referencia del módulo</h2>
+            <a target='_top' href='module_random_es.html'>Módulo aleatorio</a>
+            <a target='_top' href='module_requests_es.html'>Módulo de Solicitudes</a>
+            <a target='_top' href='module_statistics_es.html'>Módulo de Estadísticas</a>
+            <a target='_top' href='module_math_es.html'>Módulo de Matemáticas</a>
+            <a target='_top' href='module_cmath_es.html'>cMath Módulo</a>
+            <br>
+            <h2 class='left'>Python Cómo</h2>
+            <a target='_top' href='python_howto_remove_duplicates_es.html'>Eliminar lista duplicada</a>
+            <a target='_top' href='python_howto_reverse_string_es.html'>Invertir una cadena</a>
+            <a target='_top' href='python_howto_add_two_numbers_es.html'>Suma dos números</a>
+            <br>
+            <h2 class='left'>Python Ejemplos</h2>
+            <a target='_top' href='python_examples_es.html'>Python Ejemplos</a>
+            <a target='_top' href='python_compiler_es.html'>Python Compilador</a>
+            <a target='_top' href='python_exercises_es.html'>Python Ejercicios</a>
+            <a target='_top' href='python_quiz_es.html'>Python Prueba</a>
+            <a target='_top' href='python_bootcamp_es.html'>Python Campo de entrenamiento</a>
+            <a target='_top' href='python_exam_es.html'>Python Certificado</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT Python-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index_es.html'><img src='../svg/python_icon1.svg' alt='Python. Lecciones para principiantes' class='w3-left w3-padding' title='Python Lecciones para principiantes. W3Schools en español' style="width: 100px"></a><p class='w3-right'>
+    <a href="python_file_remove.html" title='Cambiar a ucraniano'>Ua</a>
+    <a href="python_file_remove_en.html" title='Cambiar a inglés'>En</a>
+</p>
+<article>
+    <h1>Python <span class="color_h1">Borrar archivo</span></h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="python_file_write_es.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="matplotlib_intro_es.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <h2>Eliminar un archivo</h2>
+    <p>Para eliminar un archivo, debe importar el módulo del sistema operativo y ejecutar su función <code class="w3-codespan">os.remove()</code>:</p>
+    <div class="w3-example">
+        <h3>Ejemplo</h3>
+        <p>Eliminar el archivo "demofile.txt":</p>
+        <div class="w3-code notranslate pythonHigh">import os<br>os.remove(&quot;demofile.txt&quot;)</div>
+    </div>
+    <hr>
+    <h2>Compruebe si el archivo existe:</h2>
+    <p>Para evitar recibir un error, es posible que desees comprobar si el archivo existe antes de intentar eliminarlo:</p>
+    <div class="w3-example">
+        <h3>Ejemplo</h3>
+        <p>Compruebe si el archivo existe, <i>luego</i> elimínelo:</p>
+        <div class="w3-code notranslate pythonHigh">import os<br>if os.path.exists(&quot;demofile.txt&quot;):<br>&nbsp; os.remove(&quot;demofile.txt&quot;)<br>else:<br>&nbsp; print(&quot;El archivo no existe&quot;)</div>
+    </div>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Eliminar carpeta</h2>
+    <p>Para eliminar una carpeta completa, utilice el método <code class="w3-codespan">os.rmdir()</code>:</p>
+    <div class="w3-example">
+        <h3>Ejemplo</h3>
+        <p>Quitar la carpeta &quot;myfolder&quot;:</p>
+        <div class="w3-code notranslate pythonHigh">import os<br>os.rmdir(&quot;myfolder&quot;)</div>
+    </div>
+    <div class="w3-panel w3-note">
+        <p><b>Nota:</b> Solo puedes eliminar carpetas <em>vacías</em>.</p>
+    </div>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="python_file_write_es.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="matplotlib_intro_es.html">Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker_es.html'>SELECTOR DE COLOR</a></h4>
+        <a href='../colors/colors_picker_es.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">PROGRAMACIÓN</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../python/index_es.html' class='btn-rightbar'>Python</a>
+            <a href='../java/index_es.html' class='btn-rightbar'>Java</a>
+            <a href='../c/index_es.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index_es.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index_es.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index_es.html' class='btn-rightbar'>R</a>
+            <a href='../kotlin/index_es.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../go/index_es.html' class='btn-rightbar'>Go</a>
+            <a href='../django/index_es.html' class='btn-rightbar'>Django</a>
+            <a href='../typescript/index_es.html' class='btn-rightbar'>TypeScript</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="All online guides on the site">LADO DEL SERVIDOR</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index_es.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index_es.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index_es.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index_es.html' class='btn-rightbar'>ASP & ASP.NET</a>
+            <a href='../nodejs/index_es.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi_es.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index_es.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index_es.html' class='btn-rightbar'>Github Pages</a>
+            <a href='../mongodb/index_es.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index_es.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>¡Lugar para tu anuncio!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>CONTACTOS</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>IMPRIMIR PÁGINA</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>BLOG</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='w3-button w3-light-grey w3-block' href='../about/index_es.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ACERCA DE</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Contactos</h2>
+      <p>Si desea informar un error, así como hacer una oferta para el sitio, agregar un anuncio o publicidad en el sitio, no dude en enviar un correo electrónico al administrador:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Tutorial superior</h4>
+        <a href='../html/index_es.html'>HTML Tutorial</a><br>
+        <a href='../css/index_es.html'>CSS Tutorial</a><br>
+        <a href='../js/index_es.html'>JavaScript Tutorial</a><br>
+        <a href='../sql/index_es.html'>SQL Tutorial</a><br>
+        <a href='../python/index_es.html'>Python Tutorial</a><br>
+        <a href='../php/index_es.html'>PHP Tutorial</a><br>
+        <a href='../bootstrap/bootstrap_ver_es.html'>Bootstrap Tutorial</a><br>
+        <a href='../w3css/index_es.html'>W3.CSS Tutorial</a><br>
+        <a href='../appml/index_es.html'>AppML Tutorial</a><br>
+        <a href='../jquery/index_es.html'>jQuery Tutorial</a><br>
+        <a href='../angular/index_es.html'>Angular Tutorial</a><br>
+        <a href='../sass/index_es.html'>Sass Tutorial</a><br>
+        <a href='../java/index_es.html'>Java Tutorial</a><br>
+        <a href='../cpp/index_es.html'>C++ Tutorial</a><br>
+        <a href='../cs/index_es.html'>C# Tutorial</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Referencias principales</h4>
+        <a href='../tags/index_es.html'>HTML Referencia</a><br>
+        <a href='../cssref/index_es.html'>CSS Referencia</a><br>
+        <a href='../jsref/index_es.html'>JavaScript Referencia</a><br>
+        <a href='../sql/sql_ref_keywords_es.html'>SQL Referencia</a><br>
+        <a href='../python/python_reference_es.html'>Python Referencia</a><br>
+        <a href='../php/php_ref_overview_es.html'>PHP Referencia</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_es.html'>Bootstrap 3 Referencia</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_es.html'>Bootstrap 4 Referencia</a><br>
+        <a href='../w3css/w3css_references_es.html'>W3.CSS Referencia</a><br>
+        <a href='../appml/appml_reference_es.html'>Appml Referencia</a><br>
+        <a href='../jquery/jquery_ref_overview_es.html'>jQuery Referencia</a><br>
+        <a href='../angular/angular_ref_directives_es.html'>Angular Referencia</a><br>
+        <a href='../sass/sass_functions_string_es.html'>Sass Referencia</a><br>
+        <a href='../java/java_ref_keywords_es.html'>Java Referencia</a><br>
+        <a href='../colors/colors_names_es.html'>Colors Referencia</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Ejemplos principales</h4>
+        <a href='../html/html_examples_es.html'>HTML Ejemplos</a><br>
+        <a href='../css/css_examples_es.html'>CSS Ejemplos</a><br>
+        <a href='../js/js_examples_es.html'>JavaScript Ejemplos</a><br>
+        <a href='../sql/sql_examples_es.html'>SQL Ejemplos</a><br>
+        <a href='../python/python_examples_es.html'>Python Ejemplos</a><br>
+        <a href='../php/php_examples_es.html'>PHP Ejemplos</a><br>
+        <a href='../bootstrap/bootstrap_examples_es.html'>Bootstrap Ejemplos</a><br>
+        <a href='../w3css/w3css_examples_es.html'>W3.CSS Ejemplos</a><br>
+        <a href='../jquery/jquery_examples_es.html'>jQuery Ejemplos</a><br>
+        <a href='../angular/angular_examples_es.html'>Angular Ejemplos</a><br>
+        <a href='../java/java_examples_es.html'>Java Ejemplos</a><br>
+        <a href='../cpp/cpp_examples_es.html'>C++ Ejemplos</a><br>
+        <a href='../cs/cs_examples_es.html'>C# Ejemplos</a><br>
+        <a href='../xml/xml_examples_es.html'>XML Ejemplos</a><br>
+        <a href='../howto/index_es.html'>Cómo Ejemplos</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_es.html'>Certificados Web</a></h4>
+        <a href='../cert/cert_html_es.html'>HTML Certificado</a><br>
+        <a href='../cert/cert_css_es.html'>CSS Certificado</a><br>
+        <a href='../cert/cert_javascript_es.html'>JavaScript Certificado</a><br>
+        <a href='../cert/cert_frontend_es.html'>Front End Certificado</a><br>
+        <a href='../cert/cert_python_es.html'>Python Certificado</a><br>
+        <a href='../cert/cert_datascience_es.html'>Data Science Certificado</a><br>
+        <a href='../cert/cert_jquery_es.html'>jQuery Certificado</a><br>
+        <a href='../cert/cert_sql_es.html'>SQL Certificado</a><br>
+        <a href='../cert/cert_php_es.html'>PHP Certificado</a><br>
+        <a href='../cert/cert_java_es.html'>Java Certificado</a><br>
+        <a href='../cert/cert_bootstrap_es.html'>Bootstrap Certificado</a><br>
+        <a href='../cert/cert_xml_es.html'>XML Certificado</a><br>
+        <a href='../cert/career_tips_es.html'>Planificación de la carrera</a><br>
+        <a href='../cert/career_cv_es.html'>Escribir un resumen</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Este sitio está optimizado para el aprendizaje y la formación. Los ejemplos podrían simplificarse para mejorar la lectura y el aprendizaje. Los tutoriales, referencias y ejemplos se revisan constantemente para evitar errores, pero no podemos garantizar la total corrección de todo el contenido. Al utilizar W3Schools, usted acepta haber leído y aceptado nuestros <a href='../about/about_copyright_es.html'>términos de uso</a>, <a href='../about/about_privacy_es.html'> política de cookies y privacidad</a>.<br>
+      También puedes utilizar la versión ucraniana del sitio <a href='../index.html'><strong>W3Schools українською</strong></a>.<br>
+    <a href='../about/about_copyright_es.html'>Derechos de autor 1999-2024</a> por Refsnes Data. Reservados todos los derechos.<br>
+    <a href='../w3css/index_es.html'>W3Schools funciona con W3.CSS</a>.<br>
+      Puede utilizar otros recursos de aprendizaje de programación y desarrollo web de buena reputación:<br>
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;<a href='https://developer.mozilla.org/en-US/?retiredLocale=uk' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;<a href='https://learn.microsoft.com/uk-ua/' target='_blank' rel='noopener'>MicrosoftLearn</a>&nbsp;|&nbsp;<a href='https://hyperskill.org/' target='_blank' rel='noopener'>HyperSkill</a>&nbsp;|&nbsp;<a href='https://www.codecademy.com/' target='_blank' rel='noopener'>Codecademy</a>&nbsp;|&nbsp;<a href='https://www.freecodecamp.org/' target='_blank' rel='noopener'>FreeCodeCamp</a>&nbsp;|&nbsp;<a href='https://www.coursera.org/' target='_blank' rel='noopener'>Coursera</a>&nbsp;|&nbsp;<a href='https://www.udacity.com/' target='_blank' rel='noopener'>Udacity</a>&nbsp;|&nbsp;<a href='https://code.org/' target='_blank' rel='noopener'>Code.org</a>&nbsp;|&nbsp;<a href='https://www.sololearn.com/' target='_blank' rel='noopener'>SoloLearn</a>&nbsp;|&nbsp;<a href='https://developer.ibm.com/' target='_blank' rel='noopener'>IBMDeveloper</a>&nbsp;|&nbsp;<a href='https://www.codewars.com/' target='_blank' rel='noopener'>CodeWars</a>&nbsp;|&nbsp;<a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;<a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>&nbsp;|&nbsp;<a href='https://prometheus.org.ua/' target='_blank' rel='noopener'>Prometheus</a>
+      <br><br>
+    <a href='../index_es.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
