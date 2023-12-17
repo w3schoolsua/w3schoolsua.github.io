@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title>Как сделать страницу - Продолжение следует. W3schools на русском</title>
+<style>
+    body, html {
+        height: 100%
+    }
+    .bgimg {
+        background-image: url('../images/forestbridge.jpg');
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+    }
+    .topleft {
+        position: absolute;
+        top: 0;
+        left: 16px;
+    }
+    .bottomleft {
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+    }
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+</style>
+<body>
+
+<div class="bgimg">
+    <div class="topleft">
+        <p>Лого</p>
+    </div>
+    <div class="middle">
+        <h1>ПРОДОЛЖЕНИЕ СЛЕДУЕТ</h1>
+        <hr style="margin:auto;width:40%">
+        <p id="demo" style="font-size:30px"></p>
+    </div>
+    <div class="bottomleft">
+        <p>Какой-то текст</p>
+    </div>
+</div>
+
+<script>
+    // Установите дату, до которой мы ведём обратный отсчет
+    var countDownDate = new Date("Jan 1, 2025 12:00:00").getTime();
+
+    // Обновляйте обратный отсчет каждую секунду
+    var countdownfunction = setInterval(function() {
+
+        // Получить сегодняшнюю дату и время
+        var now = new Date().getTime();
+
+        // Найдите расстояние между настоящим моментом и датой обратного отсчета
+        var distance = countDownDate - now;
+
+        // Расчет времени в днях, часах, минутах и секундах
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Выведите результат в элементе с id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+        // Если обратный отсчет закончился, напишите текст
+        if (distance < 0) {
+            clearInterval(countdownfunction);
+            document.getElementById("demo").innerHTML = "ВАШЕ ВРЕМЯ ИСТЕКЛО";
+        }
+    }, 10);
+</script>
+
+</body>
+</html>

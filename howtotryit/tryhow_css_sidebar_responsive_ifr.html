@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><title>Как сделать - Адаптивную боковую панель навигации. W3Schools на русском</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+        }
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        .sidebar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+        div.content {
+            margin-left: 200px;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {float: left;}
+            div.content {margin-left: 0;}
+        }
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <a class="active" href="#home">Главная</a>
+    <a href="#news">Новости</a>
+    <a href="#contact">Контакты</a>
+    <a href="#about">Про нас</a>
+</div>
+
+<div class="content">
+    <h2>Пример адаптивного сайдбара</h2>
+    <p>В этом примере используются медиа-запросы для преобразования боковой панели в верхнюю панель навигации, когда размер экрана составляет 700 пикселей или меньше.</p>
+    <p>Мы также добавили медиа-запрос для экранов размером 400 пикселей или меньше, которые будут располагаться вертикально и центрировать навигационные ссылки.</p>
+    <h3>Измените размер окна браузера, чтобы увидеть эффект</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A corporis rem repellat sequi soluta vel vitae? Id magnam numquam sequi ut voluptate? Alias aut fugit nostrum temporibus totam unde vero.</p>
+</div>
+
+</body>
+</html>

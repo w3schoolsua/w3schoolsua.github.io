@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><title>Как сделать - Скрыть меню при прокрутке. W3schools на русском</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            background-color: #f1f1f1;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #navbar {
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: block;
+            transition: top 0.3s;
+        }
+        #navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar">
+    <a href="#home">Главная</a>
+    <a href="#news">Новости</a>
+    <a href="#contact">Контакты</a>
+</div>
+
+<div style="padding:15px 15px 2500px;font-size:30px;margin-top:30px;">
+    <p><b>В этом примере показано, как скрыть панель навигации, когда пользователь начинает прокручивать страницу.</b></p>
+    <p>Прокрутите этот фрейм, чтобы увидеть эффект!</p>
+    <p>Прокрутите вверх, чтобы отобразить панель навигации.</p>
+    <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
+
+</body>
+</html>

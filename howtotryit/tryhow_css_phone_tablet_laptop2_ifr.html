@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Внешний вид устройства. Пример. W3Schools на русском</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #f1f1f1;
+        }
+        /* tablet */
+        .tablet {
+            left:50%;
+            position:absolute;
+            transform: translate(-50%);
+            width: 120px;
+            height: 160px;
+            border: 5px black solid;
+            border-top-width: 15px;
+            border-bottom-width: 20px;
+            border-radius: 10px;
+        }
+        .tablet:before {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 3px;
+            margin: -9px auto;
+            background: white;
+            border-radius: 4px;
+        }
+        .tablet:after {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            margin: 4px auto;
+            background: white;
+            border-radius: 10px;
+        }
+        .tablet .content {
+            width: 120px;
+            height: 160px;
+            margin: 15px 0 0 0;
+            background: white;
+            overflow: hidden;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="tablet">
+    <div class="content">
+        <p style="font-size:10px;padding-top:58px;text-align:center">Какой-то контент...</p>
+    </div>
+</div>
+
+</body>
+</html>

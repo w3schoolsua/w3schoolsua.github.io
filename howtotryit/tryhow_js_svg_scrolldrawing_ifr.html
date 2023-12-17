@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><title>Прокрутка рисования. Пример. W3schools на русском</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            height: 2000px;
+            background: #f1f1f1;
+        }
+        #mySVG {
+            position: fixed;
+            top: 15%;
+            width: 400px;
+            height: 210px;
+            margin-left:-50px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Прокрутите это окно вниз, чтобы нарисовать треугольник</h2>
+<p>Прокрутите назад, чтобы перевернуть рисунок.</p>
+
+<svg id="mySVG">
+    <path fill="none" stroke="red" stroke-width="3" id="triangle" d="M150 0 L75 200 L225 200 Z" />
+    К сожалению, ваш браузер не поддерживает встроенный SVG.
+</svg>
+
+<script>
+    // Get the id of the <path> element and the length of <path>
+    var triangle = document.getElementById("triangle");
+    var length = triangle.getTotalLength();
+
+    // The start position of the drawing
+    triangle.style.strokeDasharray = length;
+
+    // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+    triangle.style.strokeDashoffset = length;
+
+    // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+    window.addEventListener("scroll", myFunction);
+
+    function myFunction() {
+        var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+        var draw = length * scrollpercent;
+
+        // Reverse the drawing (when scrolling upwards)
+        triangle.style.strokeDashoffset = length - draw;
+    }
+</script>
+
+</body>
+</html>
