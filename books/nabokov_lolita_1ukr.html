@@ -5,7 +5,7 @@
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3_books.css'>
-<link rel='stylesheet' href='../styles/external_books.css'>
+<link rel='stylesheet' href='../styles/external.css'>
 <meta property='og:image' content='../images/w3schools_logo_436_2.png'>
 <meta property='og:image:type' content='image/png'>
 <meta property='og:image:width' content='436'>
@@ -31,8 +31,9 @@
             <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='W3Schools українською'></a>
             <a class='w3-bar-item w3-button' href='../books/index.html' title='Читати книги онлайн'>Книги онлайн</a>
             <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>ПІДРУЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
-            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
-            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті' aria-label='Пошук по сайту'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темну тему' aria-label='Увімкнути темну тему'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' rel="noopener" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску' aria-label='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
         </div>
         <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
             <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
@@ -54,6 +55,10 @@
                     <div class='w3-hide-large w3-hide-small'>
                         <h3>Аналітика даних</h3>
                         <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
                         <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
                         <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
                         <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
@@ -77,8 +82,9 @@
                 <div class='w3-col l3 m6'>
                     <h3>JavaScript</h3>
                     <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
-                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
                     <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
                     <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
                     <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
                     <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
@@ -107,21 +113,26 @@
                     <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
                     <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
                     <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
                     <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
                     <h3>Веб-будівництво</h3>
                     <a class='w3-bar-item w3-button' href='where_to_start.html'>З чого почати</a>
-                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
-                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
-                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
-                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Вебшаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Вебстатистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Вебредактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веброзробка</a>
                     <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
                     <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
-                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
-                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Кодова гра</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow noopener'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow noopener'>Кодова гра</a>
                 </div>
                 <div class='w3-col l3 m6 w3-hide-medium'>
                     <h3>Аналітика даних</h3>
                     <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
                     <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
                     <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
                     <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
@@ -151,7 +162,7 @@
 <!--/Top menu--><!--Left menu-->
 <div class='w3-sidebar w3-collapse' id='sidenav'>
     <div id='leftmenuinner'>
-        <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <div id='leftmenuinnerinner'>
             <h2 class='left'><span class='left_h2'>Лоліта</span> (роман)</h2>
             <a target='_top' href='#p00'>Передмова</a>
             <a target='_top' href='#p01'>Розділ 1</a>
@@ -228,9 +239,9 @@
     <p>Перший український переклад «Лоліти» вийшов друком у травні 2008 року. Здійснив його Петро Таращук. На вимогу власника авторського права, сина автора «Лоліти» Д. Набокова, український переклад був виконаний з російської версії роману. Він супроводжується примітками П. Бабая, де, зокрема, пояснюються деякі алюзії у творі.</p>
     <p>У січні 2018 у видавництві КСД мав вийти переклад українською відомого перекладача Дмитра Дроздовського, зроблений з оригіналу англійською, а не з автоперекладу автора російською. За незрозумілих обставин КСД згодом перенесла реліз українського перекладу на жовтень 2018 року, одночасно змінивши перекладача з Дмитра Дроздовського на Єлену Даскал.</p>
     <ul>
-        <li><a href="https://chtyvo.org.ua/authors/Nabokov_Vladimir/Lolita_by_Taraschuk/" target="_blank" rel="nofollow">Владімір Набоков: Лоліта (2008). Переклад з російської: Петро Таращук</a>. Передмова та примітки Павла Бабая. Художники: Б. Бублик, В. Мурликін. Харків: Фоліо. 412 с. ISBN 978-966-03-4128-9</li>
+        <li><a href="https://chtyvo.org.ua/authors/Nabokov_Vladimir/Lolita_by_Taraschuk/" target="_blank" rel="nofollow noopener">Владімір Набоков: Лоліта (2008). Переклад з російської: Петро Таращук</a>. Передмова та примітки Павла Бабая. Художники: Б. Бублик, В. Мурликін. Харків: Фоліо. 412 с. ISBN 978-966-03-4128-9</li>
         <li>Володимир Набоков. Лоліта (2018). Переклад з англійської: Єлена Даскал. Харків: КСД. 432 стор. 2018. ISBN 978-617-12-4560-0</li>
-        <li><a href="https://chtyvo.org.ua/authors/Nabokov_Vladimir/Lolita/" target="_blank" rel="nofollow">Володимир Набоков. Лоліта. Переклад з російської: Кирило Васюков</a>.</li>
+        <li><a href="https://chtyvo.org.ua/authors/Nabokov_Vladimir/Lolita/" target="_blank" rel="nofollow noopener">Володимир Набоков. Лоліта. Переклад з російської: Кирило Васюков</a>.</li>
     </ul>
     <hr>
     <a href="images/lolita_cover_small.jpg" target="_blank"><img src="images/lolita_cover_small.jpg" class="img-responsive" style="width: 150px; padding-right: 15px; float: left" alt="Володимир Набоков. Книга 'Лоліта'"></a>
@@ -265,7 +276,7 @@
     <p>Батькові належав розкішний готель на Рив’єрі. Його батько та обидва діди торгували вином, діамантами й шовками (визначайте самі). У тридцять років він побрався з англійкою, донькою альпініста Джерома Дунна, онукою двох дорсетських пасторів, експертів з вигадливих предметів: палеопедології та еолових арф (визначайте самі). Обставини і причина смерті моєї досить фотогенічної матері були вельми оригінальні (пікнік, блискавка), а я тоді мав лише три роки, і, крім якогось теплого глухого закутка в найтемнішій минувшині, у мене нічого не лишилося від неї в улоговинах і западинах пам’яті, за якими — якщо ви ще здатні витримувати мій стиль (пишу під наглядом) — сідає сонце моїх малечих літ: усі ви, напевне, знаєте ці запашні рештки дня, що зависають разом з комашнею десь над квітучим живоплотом, і ти раптом опиняєшся в них на прогулянці, проминаєш їх попід пагорком у літніх сутінках — глуха теплінь, золотава комашня.</p>
     <p>Старша материна сестра, Сибілла, що була вийшла заміж за двоюрідного брата мого батька, — а втім, чоловік невдовзі кинув її, — жила в нас чи то як безкоштовна гувернантка, чи то як економка. Згодом я чув, що вона була закохана в мого батька й одного разу, дощової днини, він легковажно скористався її почуттям — але забув геть усе, тільки-но розпогодилось. Я дуже любив її, незважаючи на суворість — фатальну суворість — деяких її правил. Можливо, їй хотілося, щоб я був доброчеснішим удівцем, аніж батько. Тітка Сибілла мала лазурові, обведені рожевим очі й жовте, мов віск, обличчя. Вона писала вірші. Була поетично забобонна. Казала, ніби знає, коли помре, а саме: коли мені виповниться шістнадцять років, — і так воно й сталося. Її чоловік, випробуваний вояжер від парфумерної фірми, крутився здебільшого в Америці, де зрештою заснував власне підприємство й придбав якесь майно.</p>
     <p>Я ріс щасливою, здоровою дитиною в яскравому світі книжок з малюнками, чистого піску, помаранчевих дерев, приязних псів, морської далечіні й усміхнених облич. Пишний готель «Мірана Палас» обертався навколо мене, неначе приватний всесвіт, вибілений крейдою космос, посеред іншого, блакитного й неозорого, що іскрився зовні. Від кухонного служки у фартуху до короля в літньому костюмі — всі любили, всі бестили мене. Літні американки, зіпершись на тростину, нахилялися наді мною, ніби пізанські вежі. Позбавлені статків російські княгині не мали змоги заплатити моєму батькові, а мені купували дорогі цукерки. А він, mon cher petit papa (мій любий татусь), брав мене кататися на човні та їздити на велосипеді, вчив мене плавати, пірнати, ковзати на водяних лижвах, читав мені
-        <a href="https://chtyvo.org.ua/authors/Servantes/Don_Kikhot_z_lamanchi_Knyha1/" target="_blank" rel="nofollow">«Дон Кіхота»</a> й «Les Miserables» (<a href="https://chtyvo.org.ua/authors/Hugo_Victor/Znedoleni_vyd_2015/" target="_blank" rel="nofollow">«Знедолені»</a>, роман В.Гюґо), і я обожнював і шанував його, й радів за нього, коли траплялося підслухати, як слуги обговорюють його розмаїтих коханок — ласкавих красунь, що ревно піклувалися про мене, воркуючи наді мною і ллючи неоціненні сльози над моєю досить веселою безматірністю.</p>
+        <a href="https://chtyvo.org.ua/authors/Servantes/Don_Kikhot_z_lamanchi_Knyha1/" target="_blank" rel="nofollow noopener">«Дон Кіхота»</a> й «Les Miserables» (<a href="https://chtyvo.org.ua/authors/Hugo_Victor/Znedoleni_vyd_2015/" target="_blank" rel="nofollow noopener">«Знедолені»</a>, роман В.Гюґо), і я обожнював і шанував його, й радів за нього, коли траплялося підслухати, як слуги обговорюють його розмаїтих коханок — ласкавих красунь, що ревно піклувалися про мене, воркуючи наді мною і ллючи неоціненні сльози над моєю досить веселою безматірністю.</p>
     <p>Я навчався в англійській школі, що була за кілька кілометрів від дому; там я грав у «rackets» («ракетки») і «fives» («п’ятірки», гра в м’яч) (б’ючи м’ячем об стіну ракеткою чи долонею), отримував відмінні оцінки й чудово ладив і з товаришами, і з наставниками. До тринадцяти років (тобто до зустрічі з моєю маленькою Аннабеллою) мені трапилось, як пригадую, пережити тільки два епізоди безперечно сексуального характеру: врочисту, добропорядну й суто теоретичну розмову про деякі несподівані явища підліткового віку, що відбулася в шкільному розарії з американським хлопчиком, сином відомої тоді кінематографічної актриси, яку він рідко бачив у тривимірному світі; і досить цікаву реакцію з боку мого організму на перлисто-матові знімки з безкінечно ніжними тіньовими заглибинами в розкішному альбомі Пішона «La beaute humaine» («Людська краса»), який одного разу я нишком витяг з-під купи мармуристих томів лондонського часопису «Graphic» у готельній бібліотеці. Згодом батько з властивою йому благодушністю розповів мені дещо, повідомивши про речі, які, на його думку, могли стати мені в нагоді; це було восени 1923 року, перед моїм вступом до гімназії в Ліоні (де я мав провести три зими), але якраз улітку того року батько мій, на жаль, був відсутній, — їздив по Італії разом з Mme de R. (Пані Р.) та її донькою, — тож я не мав кому поскаржитись, не мав з ким порадитися.</p>
     <hr>
     <h3 id="p03">3.</h3>
@@ -1005,20 +1016,32 @@
 </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
-    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
-        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
-        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
-    </div>
-    <div class='sidesection'>
-        <h4>ПРИЄДНУЙТЕСЬ!</h4>
-        <div class='w3-text-grey sharethis'>
-            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook сторінка' title='Перейти на Facebook сторінку' style='width:35px; height:35px'></a>
-            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
-            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
-            <a href='https://www.youtube.com/channel/UCzJZhVkn5O609CaWXupIqpw' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+    <div class='sidesection w3-border' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">Е-БІБЛІОТЕКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href="https://elib.nlu.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">Культура України</a>
+            <a href="https://chtyvo.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">Чтиво</a>
+            <a href="https://www.ukrlib.com.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">УкрЛіб</a>
+            <a href="https://sites.google.com/site/openbookclassic/home" class='btn-rightbar' target="_blank" rel="nofollow noopener">Відкрита книга</a>
+            <a href="https://nbuv.gov.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">Бібліотека<br> В.І.Вернадського</a>
+            <a href="https://chytanka.com.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">Читанка</a>
+            <a href="https://book-online.com.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">book-online.com.ua</a>
+            <a href="https://javalibre.com.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">javalibre.com.ua</a>
+            <a href="https://www.pysar.net/" class='btn-rightbar' target="_blank" rel="nofollow noopener">pysar.net</a>
+            <a href="https://diasporiana.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">diasporiana.org.ua</a>
+            <a href="https://e-bookua.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">e-bookua.org.ua</a>
+            <a href="https://izbornyk.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">izbornyk.org.ua</a>
+            <a href="https://onlyart.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">onlyart.org.ua</a>
+            <a href="https://flibusta.is/" class='btn-rightbar' target="_blank" rel="nofollow noopener">flibusta.is</a>
+            <a href="https://ukrclassic.com.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">ukrclassic.com.ua</a>
+            <a href="https://openlibrary.org/" class='btn-rightbar' target="_blank" rel="nofollow noopener">openlibrary.org</a>
+            <a href="https://manybooks.net/" class='btn-rightbar' target="_blank" rel="nofollow noopener">manybooks.net</a>
+            <a href="https://www.gutenberg.org/" class='btn-rightbar' target="_blank" rel="nofollow noopener">Project Gutenberg</a>
         </div>
     </div>
-  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
 <div class="adver2">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- admedia_vertical_rightbar -->
@@ -1037,33 +1060,34 @@
   <hr>
   <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
     </div>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
     </div>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+      <a class='btn-footer' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
     </div>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+      <a class='btn-footer' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
     </div>
   </div>
   <hr>
-  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
-    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
-      <h2>Зв&rsquo;язок з адміном</h2>
-      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
-      <p>w3schoolsua@gmail.com</p>
-  </div>
+    <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+        <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+        <h2>Зв&rsquo;язок з адміном</h2>
+        <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+        <p>w3schoolsua@gmail.com</p>
+    </div>
    <div class='w3-center w3-small w3-opacity'>
-      Права на всі книги, представлені на даному сайті, належать авторам або їх правовласникам. Тексти з книг надаються лише для ознайомлення. Навчальні посібники по веброзробці та програмуванню взяті із сайту <a href='../index.html'><strong>W3Schools українською</strong></a>, і можуть використовуватись для навчання та поглиблення знань в IT-сфері та сучасних вебтехнологій. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і приняли <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+      Права на всі книги, представлені на даному сайті, належать авторам або їх правовласникам. Тексти з книг надаються лише для ознайомлення. Навчальні посібники по веброзробці та програмуванню взяті із сайту <a href='../index.html'><strong>W3Schools українською</strong></a>, і можуть використовуватись для навчання та поглиблення знань в IT-сфері та сучасних вебтехнологій. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали та прийняли <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
     <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
-    <a href='../index.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools'></a>
+       <a href='../index.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
   </div>
     <br><br>
     <div class="adver_adfooter">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
     <!-- addown_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>

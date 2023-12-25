@@ -5,7 +5,7 @@
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
 <link rel='stylesheet' href='../styles/w3_books.css'>
-<link rel='stylesheet' href='../styles/external_books.css'>
+<link rel='stylesheet' href='../styles/external.css'>
 <meta property='og:image' content='../images/w3schools_logo_436_2.png'>
 <meta property='og:image:type' content='image/png'>
 <meta property='og:image:width' content='436'>
@@ -31,8 +31,9 @@
             <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='W3Schools українською'></a>
             <a class='w3-bar-item w3-button' href='../books/index.html' title='Читати книги онлайн'>Книги онлайн</a>
             <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>ПІДРУЧНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
-            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
-            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті' aria-label='Пошук по сайту'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темну тему' aria-label='Увімкнути темну тему'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' rel="noopener" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску' aria-label='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
         </div>
         <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
             <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
@@ -54,6 +55,10 @@
                     <div class='w3-hide-large w3-hide-small'>
                         <h3>Аналітика даних</h3>
                         <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
                         <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
                         <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
                         <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
@@ -77,8 +82,9 @@
                 <div class='w3-col l3 m6'>
                     <h3>JavaScript</h3>
                     <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
-                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
                     <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
                     <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
                     <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
                     <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
@@ -107,21 +113,26 @@
                     <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
                     <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
                     <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
                     <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
                     <h3>Веб-будівництво</h3>
                     <a class='w3-bar-item w3-button' href='where_to_start.html'>З чого почати</a>
-                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
-                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
-                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
-                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Вебшаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Вебстатистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Вебредактор</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веброзробка</a>
                     <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
                     <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
-                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
-                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow'>Кодова гра</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/default.html' target='_blank' rel='nofollow noopener'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/index.html' target='_blank' rel='nofollow noopener'>Кодова гра</a>
                 </div>
                 <div class='w3-col l3 m6 w3-hide-medium'>
                     <h3>Аналітика даних</h3>
                     <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
                     <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
                     <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
                     <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
@@ -151,7 +162,7 @@
 <!--/Top menu--><!--Left menu-->
 <div class='w3-sidebar w3-collapse' id='sidenav'>
     <div id='leftmenuinner'>
-        <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <div id='leftmenuinnerinner'>
             <h2 class='left'><span class='left_h2'>Лоліта</span> (роман), ч.2</h2>
             <a target='_top' href='#p01'>Розділ 1</a>
             <a target='_top' href='#p02'>Розділ 2</a>
@@ -202,14 +213,13 @@
     <!-- adup_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-            <a href='index.html'><img src='../images/books_icon.png' alt='Книги онлайн українською мовою' class='w3-left w3-padding' title='Читати книги онлайн українською' style='width: 120px'></a>
+</div>            <a href='index.html'><img src='../images/books_icon.png' alt='Книги онлайн українською мовою' class='w3-left w3-padding' title='Читати книги онлайн українською' style='width: 120px'></a>
 <article>
     <h3><a href="nabokov-volodymyr.html">НАБОКОВ Володимир Володимирович</a></h3>
     <h1>Лоліта (роман), 1955</h1>
     <hr>
     <div class='w3-clear nextprev'>
-        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
+        <a class='w3-left w3-btn' href='nabokov-volodymyr.html'>&#10094; Author</a>
         <a class='w3-right w3-btn' href='naumov-volodymyr.html'>Next &#10095;</a>
     </div>
     <hr>
@@ -378,8 +388,8 @@
     <p>Сiчень видався вогким та погiдним, а лютий ошукав кущi форсiтiї, якi вкрились раптом золотими квiтами. Старожили не могли пригадати такої погоди! Посипалися й iншi дарунки. На її чотирнадцяте народження, першого дня 1949-го року, я подарував їй ровер - оту чарiвливу механiчну газель, яку я раз якось вже згадував, й до цього додав Iсторiю Сучасного Американського Живопису; менi чомусь достачало дивне задоволення поводження її з ровером, тобто пiдхiд до нього, рух стегенця при влiзаннi й тому подiбне; та мої спроби вшляхетнити її художнiй смак скiнчились невдачею: вона хотiла знати, чи треба їй вважати фермера, що куняв опiвднi на сiнi (пензля Дорiди Лi), батьком вiдвертої ласолюбки на передньому планi, й не могла збагнути, чому я стверджую, що Грант Вуд i Пiтер Гурд є талановитi, а Реджинальд Марш i Фредерiк Уо бездарнi.</p>
     <hr>
     <h3 id="p13">13.</h3>
-    На той час, коли весна забарвила вулицю Теєра жовтими, зеленими й рожевими мазками, Лолiта вже незворотно закохалась в театр. Мiс Пратт, котру я раз якось у недiлю помiтив за снiданком з якимись дамами у Вальтона, вловила здаля мiй погляд i - поки Лолiта не дивилась - сердечно й стримано нагородила мене беззвучними оплесками. Я не зношу театр, бачу в ньому, в iсторичнiй перспективi, примiтивну й пiдгнилу форму мистецтва, яка вiдлунює обрядами кам'яного вiку й усяким комунальним глупоттям, попри iндивiдуальнi iн'єкцiї генiя, як, скажiмо, поезiя Шекспiра чи Бен Джонсона, яку, в себе замкнувшись i не потребуючи акторiв, читач автоматично вилучає з драматургiї. Будучи на той час надто зайнятим власними лiтературними трудами, я не знайшов можливим ознайомитись iз повним текстом "Зачарованих Мисливцiв" - тiєї п'єси, в якiй Долорес Гейз отримала роль дочки фермера, яка в'явила себе чи то лiсовою чарiвницею, чи то Дiаною: ця дрiада, якимсь чином добувши пiдручник з гiпнозу, пiддає заблуканих мисливцiв рiзним забавним трансам, та врештi-решт пiдпадає сама пiд чарування бродяги-поета (Мона Даль). От суттю все, що я вичитав з зiм'ятих уривкiв нехлюйно настуканого тексту, якi Лолiта розсипала по всьому дому. Менi було i приємно i сумно, що заголовок п'єси випадком збiгається з назвою незабутнього готелю, та я втомлено сказав собi, що нема чого нагадувати про це моїй власнiй чарiвницi, вiд остраху, що безстидний докiр у сентиментальностi принесе менi ще бiльше страждання, нiж її зневажлива забудькуватiсть. Менi здалося, що п'єса - один з багатьох анонiмних переказiв якоїсь банальної легенди. Так само добре, звичайно, я мiг би подумати, що в гонитвi за гожою назвою, засновник готелю пiдпав, безпосередньо й винятково, пiд вплив слiпої фантазiї ним найнятого другосортного маляра й що в подальшому шильд готелю пiдказав назву п'єси. Та я зi своїм довiрливим, простим i доброзичним розумом неждано повернув усе це в iнший бiк i машинально припустив, що фрески, вивiски й заголовок пiшли вiд спiльного джерела, з мiсцевого чи то переказу, який я, чужий новоанглiйському фольклору, мiг i не знати. Внаслiдок цього в мене склалась думка (така ж випадкова й позбавлена всякого значення), що клята п'єса належить до типу примхливих пустощiв для дитячої аудиторiї, пристосованих i перероблених тисячу разiв, як, примiром, "Гензель i Гретель" такогось або "Спляча Красуня" такоїсь або "Нове вбрання короля" котрихось Морiса Вермонта та Марiони Румпельмеєр (все це можна знайти в будь-якiй збiрцi, подiбнiй до "Шкiльної Сцени" або "Зiграймо п'єсу!"). Iншими словами, я не знав, - а якби знав, то було б менi в тi днi однаково - що насправдi п'єса "Зачарованi Мисливцi" - нещодавно написаний i в технiчному сенсi самобутнiй твiр, вперше поставлений лише три-чотири мiсяцi тому в фасончастiй ново-йоркськiй студiї. Наскiльки я мiг судити з ролi моєї привабницi, дещиця була гнiтюче мудрована, з вiдзвуками вiд Ленормана та Метерлiнка й розмаїтих безбарвних англiйських химерникiв. Мисливцi були в п'єсi, як то треба в Америцi, зодягненi всi однаково, в однаковi червонi кепки, й тiльки вирiзнялись якiстю озброєння. Один був банкiр, другий водопровiдник, третiй полiцiянт, четвертий трунар, п'ятий страхувальник, а шостий - збiглий в'язень (драматичнi ефекти тут самоочевиднi); всi вони внутрiшньо перемiнились, потрапивши в Дольчин Дiл, i вже пам'ятали справжнє своє життя тiльки як певне видiння або дурний сон, вiд якого їх пробудила маленька моя Дiана; та сьомий мисливець (не в червонiй, а в зеленiй кепцi - який вiн ґава!) був молодий Поет, i вiн почав твердити, на велику досаду Дiанiти, що i вона сама, й iншi учасники дивертисменту (танцюючi нiмфи, ельфи, лiсовики), лишень його, поетове, створення. Наскiльки я зрозумiв, скiнчалось тим, що, обурена його самовпевненiстю, боса Долорес приводила свого поета, тобто Мону, зодягнену в клiтчастi штанцi зi штрипками, на батькiвську ферму за глушиною, щоб довести хвальковi, що вона-бо сама зовсiм не його вимисел, а селянська, мiцно вперта в чорнозем дiвчина; й цiлунок пiд завiсу закрiплював глибоку iдею п'єси, яка повчала нас, що мрiя й дiйснiсть зливаються в коханнi. Помiркованiсть радила менi облишити критику в розмовах з Лолiтою: вона так гарно захопилась "проблемами образностi", так чудовно складала в одне свої вузькi флорентiйськi долонi, хляпаючи вiями й заклинаючи мене не бути присутнiм на репетицiях у школi, як робили це декотрi доволi смiшнi батьки! Їй хтiлось, казала вона, заслiпити мене цiлком гладкою першою виставою, а крiм того я, бачте, якось завше втручаюсь не в свою справу, не то кажу й сутужу її в присутностi її знайомих.</p>
-    Серед репетицiй трапилась одна надзвичайна... о серце, серце!... був у травнi один надзвичайний день, весь iз радiсної метушнi - та все це якось пройшло повз, поза моїм сприйняттям, не затримуючись у мене в пам'ятi, i коли вже пiсля, надвечiр, я знову побачив Лолiту (вона сидiла на роверi, балансуючи, притиснувши руку до вогкої кори молодої берези на краю нашої галявки), мене так оголомшила сяюча нiжнiсть її усмiху, що я на мить привiтав себе з закiнченням усiх своїх журбот. "Скажи", спитала вона, "ти, може, пам'ятаєш, як зветься готель - ах, ти знаєш, який готель (нiс в неї зморщився), ну, скажи - ти знаєш, - там, де були цi бiлi колони й мармуровий лебiдь у холi? Ну, як це ти не знаєш (вона шумно видихнула) - той готель, де ти мене зґвалтував? Гаразд, не в тому рiч, геть. Я просто хочу спитати, чи не називався вiн (майже пошепки) - "Зачарованi Мисливцi"? Ах, так (мрiйливо), насправдi?" I раптом, з дрiбним звизгом закоханого весняного смiху, вона шльопнула долонею об глянсовий стовбур i помчала вгору, до кiнця вулицi, й за тим покотила назад, у позi цiлковитого супокою, тримаючи ступнi, одну вище, другу нижче, на нерухомих педалях й забувши одну руку на колiнi, не прикритому ситцевою спiдницею.</p>
+    <p>На той час, коли весна забарвила вулицю Теєра жовтими, зеленими й рожевими мазками, Лолiта вже незворотно закохалась в театр. Мiс Пратт, котру я раз якось у недiлю помiтив за снiданком з якимись дамами у Вальтона, вловила здаля мiй погляд i - поки Лолiта не дивилась - сердечно й стримано нагородила мене беззвучними оплесками. Я не зношу театр, бачу в ньому, в iсторичнiй перспективi, примiтивну й пiдгнилу форму мистецтва, яка вiдлунює обрядами кам'яного вiку й усяким комунальним глупоттям, попри iндивiдуальнi iн'єкцiї генiя, як, скажiмо, поезiя Шекспiра чи Бен Джонсона, яку, в себе замкнувшись i не потребуючи акторiв, читач автоматично вилучає з драматургiї. Будучи на той час надто зайнятим власними лiтературними трудами, я не знайшов можливим ознайомитись iз повним текстом "Зачарованих Мисливцiв" - тiєї п'єси, в якiй Долорес Гейз отримала роль дочки фермера, яка в'явила себе чи то лiсовою чарiвницею, чи то Дiаною: ця дрiада, якимсь чином добувши пiдручник з гiпнозу, пiддає заблуканих мисливцiв рiзним забавним трансам, та врештi-решт пiдпадає сама пiд чарування бродяги-поета (Мона Даль). От суттю все, що я вичитав з зiм'ятих уривкiв нехлюйно настуканого тексту, якi Лолiта розсипала по всьому дому. Менi було i приємно i сумно, що заголовок п'єси випадком збiгається з назвою незабутнього готелю, та я втомлено сказав собi, що нема чого нагадувати про це моїй власнiй чарiвницi, вiд остраху, що безстидний докiр у сентиментальностi принесе менi ще бiльше страждання, нiж її зневажлива забудькуватiсть. Менi здалося, що п'єса - один з багатьох анонiмних переказiв якоїсь банальної легенди. Так само добре, звичайно, я мiг би подумати, що в гонитвi за гожою назвою, засновник готелю пiдпав, безпосередньо й винятково, пiд вплив слiпої фантазiї ним найнятого другосортного маляра й що в подальшому шильд готелю пiдказав назву п'єси. Та я зi своїм довiрливим, простим i доброзичним розумом неждано повернув усе це в iнший бiк i машинально припустив, що фрески, вивiски й заголовок пiшли вiд спiльного джерела, з мiсцевого чи то переказу, який я, чужий новоанглiйському фольклору, мiг i не знати. Внаслiдок цього в мене склалась думка (така ж випадкова й позбавлена всякого значення), що клята п'єса належить до типу примхливих пустощiв для дитячої аудиторiї, пристосованих i перероблених тисячу разiв, як, примiром, "Гензель i Гретель" такогось або "Спляча Красуня" такоїсь або "Нове вбрання короля" котрихось Морiса Вермонта та Марiони Румпельмеєр (все це можна знайти в будь-якiй збiрцi, подiбнiй до "Шкiльної Сцени" або "Зiграймо п'єсу!"). Iншими словами, я не знав, - а якби знав, то було б менi в тi днi однаково - що насправдi п'єса "Зачарованi Мисливцi" - нещодавно написаний i в технiчному сенсi самобутнiй твiр, вперше поставлений лише три-чотири мiсяцi тому в фасончастiй ново-йоркськiй студiї. Наскiльки я мiг судити з ролi моєї привабницi, дещиця була гнiтюче мудрована, з вiдзвуками вiд Ленормана та Метерлiнка й розмаїтих безбарвних англiйських химерникiв. Мисливцi були в п'єсi, як то треба в Америцi, зодягненi всi однаково, в однаковi червонi кепки, й тiльки вирiзнялись якiстю озброєння. Один був банкiр, другий водопровiдник, третiй полiцiянт, четвертий трунар, п'ятий страхувальник, а шостий - збiглий в'язень (драматичнi ефекти тут самоочевиднi); всi вони внутрiшньо перемiнились, потрапивши в Дольчин Дiл, i вже пам'ятали справжнє своє життя тiльки як певне видiння або дурний сон, вiд якого їх пробудила маленька моя Дiана; та сьомий мисливець (не в червонiй, а в зеленiй кепцi - який вiн ґава!) був молодий Поет, i вiн почав твердити, на велику досаду Дiанiти, що i вона сама, й iншi учасники дивертисменту (танцюючi нiмфи, ельфи, лiсовики), лишень його, поетове, створення. Наскiльки я зрозумiв, скiнчалось тим, що, обурена його самовпевненiстю, боса Долорес приводила свого поета, тобто Мону, зодягнену в клiтчастi штанцi зi штрипками, на батькiвську ферму за глушиною, щоб довести хвальковi, що вона-бо сама зовсiм не його вимисел, а селянська, мiцно вперта в чорнозем дiвчина; й цiлунок пiд завiсу закрiплював глибоку iдею п'єси, яка повчала нас, що мрiя й дiйснiсть зливаються в коханнi. Помiркованiсть радила менi облишити критику в розмовах з Лолiтою: вона так гарно захопилась "проблемами образностi", так чудовно складала в одне свої вузькi флорентiйськi долонi, хляпаючи вiями й заклинаючи мене не бути присутнiм на репетицiях у школi, як робили це декотрi доволi смiшнi батьки! Їй хтiлось, казала вона, заслiпити мене цiлком гладкою першою виставою, а крiм того я, бачте, якось завше втручаюсь не в свою справу, не то кажу й сутужу її в присутностi її знайомих.</p>
+    <p>Серед репетицiй трапилась одна надзвичайна... о серце, серце!... був у травнi один надзвичайний день, весь iз радiсної метушнi - та все це якось пройшло повз, поза моїм сприйняттям, не затримуючись у мене в пам'ятi, i коли вже пiсля, надвечiр, я знову побачив Лолiту (вона сидiла на роверi, балансуючи, притиснувши руку до вогкої кори молодої берези на краю нашої галявки), мене так оголомшила сяюча нiжнiсть її усмiху, що я на мить привiтав себе з закiнченням усiх своїх журбот. "Скажи", спитала вона, "ти, може, пам'ятаєш, як зветься готель - ах, ти знаєш, який готель (нiс в неї зморщився), ну, скажи - ти знаєш, - там, де були цi бiлi колони й мармуровий лебiдь у холi? Ну, як це ти не знаєш (вона шумно видихнула) - той готель, де ти мене зґвалтував? Гаразд, не в тому рiч, геть. Я просто хочу спитати, чи не називався вiн (майже пошепки) - "Зачарованi Мисливцi"? Ах, так (мрiйливо), насправдi?" I раптом, з дрiбним звизгом закоханого весняного смiху, вона шльопнула долонею об глянсовий стовбур i помчала вгору, до кiнця вулицi, й за тим покотила назад, у позi цiлковитого супокою, тримаючи ступнi, одну вище, другу нижче, на нерухомих педалях й забувши одну руку на колiнi, не прикритому ситцевою спiдницею.</p>
     <hr>
     <h3 id="p14">14.</h3>
     <p>Оскiльки йшлося, що музика пов'язана з захопленням балетом та сценою, я дозволив Лолiтi брати уроки рояля з мiс Ламперер (як ми, знавцi Флобера, можемо її для зручностi називати), до бiлого з блакитними вiконницями будиночка якої, за двi милi вiд Бердслея, Лолiта котила двiчi на тиждень. Якось, у п'ятницю вечором, в останнiх числах травня (й близько тижня пiсля тiєї особливої репетицiї, на яку, як i на iншi, я не був допущений), задзвонив телефон у кабiнетi, де я скiнчав пiдчищати королiвський фланг Гастона, й голос мiс Ламперер спитав, чи приїде моя Емма - тобто Лолiта - наступного вiвторка: вона пропустила два уроки поспiль - минулий вiвторок i тепер. Я сказав: "так, звичайно, приїде -" й вiв далi гру. Як легко повiрить читач, мої здiбностi тепер похитнулись i через два-три ходи я раптом помiтив, крiзь муляву позашахового страждання, що Гастон - хiд був його - може заволодiти моїм ферзем; вiн це помiтив також, та прочуваючи пастку з боку коверзястого противника, довго не наважувався, i вiддувався, i сопiв, i трусив брилами, й навiть зиркав на мене тишком, непевно пiдсуваючи й знов прибираючи пухлi, зiбранi в жмутик пальцi - безумно хотiв узяти цю соковиту штуку, але не смiв - i зненацька вхопив її (чи не навчив його цей випадок тiєї грiзної смiливостi, яку вiн потiм став виказувати в iншiй галузi?), i я провiв марудну годину, поки добився нiчиєї. Вiн допив свiй коньяк i, трохи згодом, пiшов перехильцем, задоволений результатом (mon pauvre ami, je ne vous ai jamais revu et quoiqui'il y ait bien peu de chance que vous voyiez mon livre, permettez-moi de vous dire que vous serre la main bien cordialement, et que toutes mes fillettes vous saluent). Я знайшов Долорес Гейз за кухонним столом, яка лигала клин торта й не вiдривала очей вiд аркуша з роллю. Вона пiдняла їх на зустрiч моєму погляду, - в них була якась небесна порожнеча. Коли я заявив їй про своє вiдкриття, вона лишилась напрочуд спокiйною й тiльки сказала d'un petit air faussement contrit, що вона, звичайно, дуже капосна дiвчинка, та було цiлком неможливо противитися спокусi, й ось вона витратила цi години музики - о читачу! - на те, щоби розучувати з Моною в мiському парку чарiвно-лiсовi сцени п'єси. Я сказав: "Пречудово", й покрокував до телефону. Матiр Мони вiдповiла: "так, вона вдома" i, з материнським нейтральним ввiчливо-радiсним смiшком вiддалилась, горлаючи вже за сценою: "Тебе просить Рой", i за хвилину пiдшелеснула Мона й одразу ж, низьким, монотонним, та не позбавленим ласкавостi голосом, взялась гудити Роя через якусь-там ним зроблену або сказану капость, i я урвав її, i ось уже Мона, спокiйно переключившись, говорила своїм смиреннiшим, найсексуальнiшим контральто: "так, сер", "звiсно, сер", "Я одна винна, сер, в цiй нещаснiй iсторiї" (яка плавнiсть! яка свiтськiсть!), "правда, я дуже шкодую" - й так далi й тому подiбне, як говорять цi повiйки.</p>
@@ -1046,7 +1056,7 @@
     <h4 style="text-align: center">Кiнець</h4>
     <hr>
     <div class='w3-clear nextprev'>
-        <a class='w3-left w3-btn' href='../index.html'>&#10094; Home</a>
+        <a class='w3-left w3-btn' href='nabokov-volodymyr.html'>&#10094; Author</a>
         <a class='w3-right w3-btn' href='naumov-volodymyr.html'>Next &#10095;</a>
     </div>
 </article>
@@ -1059,20 +1069,32 @@
 </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
-    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
-        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
-        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
-    </div>
-    <div class='sidesection'>
-        <h4>ПРИЄДНУЙТЕСЬ!</h4>
-        <div class='w3-text-grey sharethis'>
-            <a href='https://www.facebook.com/websunsay' target='_blank'><img src='../svg/facebook_icon.svg' alt='Facebook сторінка' title='Перейти на Facebook сторінку' style='width:35px; height:35px'></a>
-            <a href='https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg' target='_blank'><img src='../svg/youtube_icon.svg' alt='Канал на YouTube' title='Перейти на 1-й YouTube канал' style='width:35px; height:35px'></a>
-            <a href='https://t.me/websunsey' target='_blank'><img src='../svg/telegram_icon.svg' alt='Telegram канал' title='Перейти на Telegram канал' style='width:35px;height:35px'></a>
-            <a href='https://www.youtube.com/channel/UCzJZhVkn5O609CaWXupIqpw' target='_blank'><img src='../svg/youtube_icon2.svg' alt='Канал на YouTube' title='Перейти на 2-й YouTube канал' style='width:60px; height:30px'></a>
+    <div class='sidesection w3-border' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">Е-БІБЛІОТЕКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href="https://elib.nlu.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">Культура України</a>
+            <a href="https://chtyvo.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">Чтиво</a>
+            <a href="https://www.ukrlib.com.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">УкрЛіб</a>
+            <a href="https://sites.google.com/site/openbookclassic/home" class='btn-rightbar' target="_blank" rel="nofollow noopener">Відкрита книга</a>
+            <a href="https://nbuv.gov.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">Бібліотека<br> В.І.Вернадського</a>
+            <a href="https://chytanka.com.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">Читанка</a>
+            <a href="https://book-online.com.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">book-online.com.ua</a>
+            <a href="https://javalibre.com.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">javalibre.com.ua</a>
+            <a href="https://www.pysar.net/" class='btn-rightbar' target="_blank" rel="nofollow noopener">pysar.net</a>
+            <a href="https://diasporiana.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">diasporiana.org.ua</a>
+            <a href="https://e-bookua.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">e-bookua.org.ua</a>
+            <a href="https://izbornyk.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">izbornyk.org.ua</a>
+            <a href="https://onlyart.org.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">onlyart.org.ua</a>
+            <a href="https://flibusta.is/" class='btn-rightbar' target="_blank" rel="nofollow noopener">flibusta.is</a>
+            <a href="https://ukrclassic.com.ua/" class='btn-rightbar' target="_blank" rel="nofollow noopener">ukrclassic.com.ua</a>
+            <a href="https://openlibrary.org/" class='btn-rightbar' target="_blank" rel="nofollow noopener">openlibrary.org</a>
+            <a href="https://manybooks.net/" class='btn-rightbar' target="_blank" rel="nofollow noopener">manybooks.net</a>
+            <a href="https://www.gutenberg.org/" class='btn-rightbar' target="_blank" rel="nofollow noopener">Project Gutenberg</a>
         </div>
     </div>
-  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Place for your advertisement!</div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
 <div class="adver2">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- admedia_vertical_rightbar -->
@@ -1091,33 +1113,34 @@
   <hr>
   <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
     </div>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
     </div>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+      <a class='btn-footer' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
     </div>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+      <a class='btn-footer' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
     </div>
   </div>
   <hr>
-  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
-    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
-      <h2>Зв&rsquo;язок з адміном</h2>
-      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
-      <p>w3schoolsua@gmail.com</p>
-  </div>
+    <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+        <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+        <h2>Зв&rsquo;язок з адміном</h2>
+        <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+        <p>w3schoolsua@gmail.com</p>
+    </div>
    <div class='w3-center w3-small w3-opacity'>
-      Права на всі книги, представлені на даному сайті, належать авторам або їх правовласникам. Тексти з книг надаються лише для ознайомлення. Навчальні посібники по веброзробці та програмуванню взяті із сайту <a href='../index.html'><strong>W3Schools українською</strong></a>, і можуть використовуватись для навчання та поглиблення знань в IT-сфері та сучасних вебтехнологій. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і приняли <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+      Права на всі книги, представлені на даному сайті, належать авторам або їх правовласникам. Тексти з книг надаються лише для ознайомлення. Навчальні посібники по веброзробці та програмуванню взяті із сайту <a href='../index.html'><strong>W3Schools українською</strong></a>, і можуть використовуватись для навчання та поглиблення знань в IT-сфері та сучасних вебтехнологій. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали та прийняли <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
     <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
-    <a href='../index.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools'></a>
+       <a href='../index.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
   </div>
     <br><br>
     <div class="adver_adfooter">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
     <!-- addown_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
