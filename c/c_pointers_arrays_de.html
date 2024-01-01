@@ -433,55 +433,55 @@
         <a class="w3-right w3-btn" href="c_functions_de.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Pointers & Arrays</h2>
-    <p>You can also use pointers to access <a href="c_arrays_en.html">arrays</a>.</p>
-    <p>Consider the following array of integers:</p>
+    <h2>Zeiger und Arrays</h2>
+    <p>Sie können auch Zeiger verwenden, um auf <a href="c_arrays_de.html">Arrays</a> zuzugreifen.</p>
+    <p>Betrachten Sie das folgende Array von Ganzzahlen:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">int myNumbers[4] = {25, 50, 75, 100};</div>
     </div>
-    <p>You learned from the chapter <a href="c_arrays_en.html">arrays</a> that you can loop through the array elements with a <code class="w3-codespan">for</code> loop:</p>
+    <p>Aus dem Kapitel <a href="c_arrays_de.html">Arrays</a> haben Sie gelernt, dass Sie die Array-Elemente mit einer <code class="w3-codespan">for</code>-Schleife durchlaufen können:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
             int myNumbers[4] = {25, 50, 75, 100};<br>int i;<br><br>for (i = 0; i &lt; 4; i++) {<br>&nbsp; printf(&quot;%d\n&quot;, myNumbers[i]);<br>}
         </div>
-        <p>Result:</p>
+        <p>Ergebnis:</p>
         <div class="w3-black w3-padding">
             <code>25<br>50<br>75<br>100</code>
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/demo_pointers_arrays.html">Try it Yourself &raquo;</a>
     </div>
-    <p>Instead of printing the value of each array element, let's print the memory address of each array element:</p>
+    <p>Anstatt den Wert jedes Array-Elements auszudrucken, drucken wir die Speicheradresse jedes Array-Elements aus:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
             int myNumbers[4] = {25, 50, 75, 100};<br>int i;<br><br>for (i = 0; i &lt; 4; i++) {<br>&nbsp; printf(&quot;%p\n&quot;, &amp;myNumbers[i]);<br>}
         </div>
-        <p>Result:</p>
+        <p>Ergebnis:</p>
         <div class="w3-black w3-padding">
             <code>0x7ffe70f9d8f0<br>0x7ffe70f9d8f4<br>0x7ffe70f9d8f8<br>0x7ffe70f9d8fc</code>
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/demo_pointers_arrays2.html">Try it Yourself &raquo;</a>
     </div>
-    <p>Note that the last number of each of the elements' memory addresses is different, with an addition of 4.</p>
-    <p>It is because the size of an <code class="w3-codespan">int</code> type is typically 4 bytes, remember:</p>
+    <p>Beachten Sie, dass die letzte Zahl der Speicheradressen der einzelnen Elemente unterschiedlich ist und 4 hinzufügt.</p>
+    <p>Das liegt daran, dass die Größe eines <code class="w3-codespan">int</code>-Typs normalerweise 4 Byte beträgt. Denken Sie daran:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            // Create an int variable<br>int myInt;<br><br>// Get the memory size of an int<br>printf(&quot;%lu&quot;, sizeof(myInt));
+            // Erstellen Sie eine int-Variable<br>int myInt;<br><br>// Ermitteln Sie die Speichergröße eines int<br>printf(&quot;%lu&quot;, sizeof(myInt));
         </div>
-        <p>Result:</p>
+        <p>Ergebnis:</p>
         <div class="w3-black w3-padding"><code>4</code></div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/demo_pointers_arrays_int.html">Try it Yourself &raquo;</a>
     </div>
-    <p>So from the &quot;memory address example&quot; above, you can see that the compiler reserves 4 bytes of memory for each array element, which means that the entire array takes up 16 bytes (4 * 4) of memory storage:</p>
+    <p>Aus dem „Speicheradressen-Beispiel“ oben können Sie also ersehen, dass der Compiler 4 Byte Speicher für jedes Array-Element reserviert, was bedeutet, dass das gesamte Array 16 Byte (4 * 4) Speicher belegt:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            int myNumbers[4] = {25, 50, 75, 100};<br><br>// Get the size of the myNumbers array<br>printf(&quot;%lu&quot;, sizeof(myNumbers));
+            int myNumbers[4] = {25, 50, 75, 100};<br><br>// Ermitteln Sie die Größe des myNumbers-Arrays<br>printf(&quot;%lu&quot;, sizeof(myNumbers));
         </div>
-        <p>Result:</p>
+        <p>Ergebnis:</p>
         <div class="w3-black w3-padding"><code>16</code></div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/demo_pointers_arrays_size.html">Try it Yourself &raquo;</a>
     </div>
@@ -490,65 +490,65 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>How Are Pointers Related to Arrays?</h2>
-    <p>Ok, so what's the relationship between pointers and arrays? Well, in C, the <b>name of an array</b>, is actually a <strong>pointer</strong> to the <b>first element</b> of the array.</p>
-    <p>Confused? Let's try to understand this better, and use our &quot;memory address example&quot; above again.</p>
-    <p>The <b>memory address</b> of the <b>first element</b> is the same as the <b>name of the array</b>:</p>
+</div>    <h2>Wie hängen Zeiger mit Arrays zusammen?</h2>
+    <p>Ok, wie ist also die Beziehung zwischen Zeigern und Arrays? Nun, in C ist der <b>Name eines Arrays</b> tatsächlich ein <strong>Zeiger</strong> auf das <b>erste Element</b> des Arrays.</p>
+    <p>Verwirrt? Versuchen wir, dies besser zu verstehen, und verwenden wir noch einmal unser „Beispiel für Speicheradressen“ oben.</p>
+    <p>Die <b>Speicheradresse</b> des <b>ersten Elements</b> ist dieselbe wie der <b>Name des Arrays</b>:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            int myNumbers[4] = {25, 50, 75, 100};<br><br>// Get the memory address of the myNumbers array<br>printf(&quot;%p\n&quot;, myNumbers);<br><br>// Get the memory address of the first array element<br>printf(&quot;%p\n&quot;, &amp;myNumbers[0]);
+            int myNumbers[4] = {25, 50, 75, 100};<br><br>// Rufen Sie die Speicheradresse des myNumbers-Arrays ab<br>printf(&quot;%p\n&quot;, myNumbers);<br><br>// Rufen Sie die Speicheradresse des ersten Array-Elements ab<br>printf(&quot;%p\n&quot;, &amp;myNumbers[0]);
         </div>
-        <p>Result:</p>
+        <p>Ergebnis:</p>
         <div class="w3-black w3-padding"><code>0x7ffe70f9d8f0<br>0x7ffe70f9d8f0</code></div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/demo_pointers_arrays_first.html">Try it Yourself &raquo;</a>
     </div>
-    <p>This basically means that we can work with arrays through pointers!</p>
-    <p>How? Since myNumbers is a pointer to the first element in myNumbers, you can use the <code class="w3-codespan">*</code> operator to access it:</p>
+    <p>Das bedeutet im Grunde, dass wir mit Arrays über Zeiger arbeiten können!</p>
+    <p>Wie? Da myNumbers ein Zeiger auf das erste Element in myNumbers ist, können Sie den Operator <code class="w3-codespan">*</code> verwenden, um darauf zuzugreifen:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            int myNumbers[4] = {25, 50, 75, 100};<br><br>// Get the value of the first element in myNumbers<br>printf(&quot;%d&quot;, *myNumbers);
+            int myNumbers[4] = {25, 50, 75, 100};<br><br>// Rufen Sie den Wert des ersten Elements in myNumbers ab<br>printf(&quot;%d&quot;, *myNumbers);
         </div>
-        <p>Result:</p>
+        <p>Ergebnis:</p>
         <div class="w3-black w3-padding"><code>25</code></div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/demo_pointers_arrays_access.html">Try it Yourself &raquo;</a>
     </div>
-    <p>To access the rest of the elements in myNumbers, you can increment the pointer/array (+1, +2, etc):</p>
+    <p>Um auf die restlichen Elemente in myNumbers zuzugreifen, können Sie den Zeiger/das Array erhöhen (+1, +2 usw.):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            int myNumbers[4] = {25, 50, 75, 100};<br><br>// Get the value of the second element in myNumbers<br>printf(&quot;%d\n&quot;, *(myNumbers + 1));<br><br>// Get the value of the third element in myNumbers<br>printf(&quot;%d&quot;, *(myNumbers + 2));<br><br>// and so on
+            int myNumbers[4] = {25, 50, 75, 100};<br><br>// Rufen Sie den Wert des zweiten Elements in myNumbers ab<br>printf(&quot;%d\n&quot;, *(myNumbers + 1));<br><br>// Rufen Sie den Wert des dritten Elements in myNumbers ab<br>printf(&quot;%d&quot;, *(myNumbers + 2));<br><br>// und so weiter
         </div>
-        <p>Result:</p>
+        <p>Ergebnis:</p>
         <div class="w3-black w3-padding"><code>50<br>75</code></div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/demo_pointers_arrays_access2.html">Try it Yourself &raquo;</a>
     </div>
-    <p>Or loop through it:</p>
+    <p>Oder durchschleifen:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
             int myNumbers[4] = {25, 50, 75, 100};<br>int *ptr = myNumbers;<br>int i;<br><br>for (i = 0; i &lt; 4; i++) {<br>&nbsp; printf(&quot;%d\n&quot;, *(ptr + i));<br>}
         </div>
-        <p>Result:</p>
+        <p>Ergebnis:</p>
         <div class="w3-black w3-padding"><code>25<br>50<br>75<br>100</code></div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/demo_pointers_arrays_loop.html">Try it Yourself &raquo;</a>
     </div>
-    <p>It is also possible to change the value of array elements with pointers:</p>
+    <p>Es ist auch möglich, den Wert von Array-Elementen mit Zeigern zu ändern:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            int myNumbers[4] = {25, 50, 75, 100};<br><br>// Change the value of the first element to 13<br>*myNumbers = 13;<br><br>// Change the value of the second element to 17<br>*(myNumbers +1) = 17;<br><br>// Get the value of the first element<br>printf(&quot;%d\n&quot;, *myNumbers);<br><br>// Get the value of the second element<br>printf(&quot;%d\n&quot;, *(myNumbers + 1));
+            int myNumbers[4] = {25, 50, 75, 100};<br><br>// Ändern Sie den Wert des ersten Elements auf 13<br>*myNumbers = 13;<br><br>// Ändern Sie den Wert des zweiten Elements auf 17<br>*(myNumbers +1) = 17;<br><br>// Ermitteln Sie den Wert des ersten Elements<br>printf(&quot;%d\n&quot;, *myNumbers);<br><br>// Ermitteln Sie den Wert des zweiten Elements<br>printf(&quot;%d\n&quot;, *(myNumbers + 1));
         </div>
-        <p>Result:</p>
+        <p>Ergebnis:</p>
         <div class="w3-black w3-padding"><code>13<br>17</code></div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/demo_pointers_arrays_change.html">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-note w3-panel">
-        <p>This way of working with arrays might seem a bit excessive. Especially with simple arrays like in the examples above. However, for large arrays, it can be much more efficient to access and manipulate arrays with pointers.</p>
-        <p>It is also considered faster and easier to access <a href="c_arrays_multi_en.html">two-dimensional arrays</a> with pointers.</p>
-        <p>And since strings are actually arrays, you can also use pointers to access <a href="c_strings_en.html">strings</a>.</p>
-        <p>For now, it's great that you know how this works. But like we specified in the previous chapter; <b>pointers must be handled with care</b>, since it is possible to overwrite other data stored in memory.</p>
+        <p>Diese Art der Arbeit mit Arrays könnte etwas übertrieben erscheinen. Besonders bei einfachen Arrays wie in den obigen Beispielen. Bei großen Arrays kann es jedoch wesentlich effizienter sein, mit Zeigern auf Arrays zuzugreifen und diese zu bearbeiten.</p>
+        <p>Es gilt auch als schneller und einfacher, mit Zeigern auf <a href="c_arrays_multi_de.html">zweidimensionale Arrays</a> zuzugreifen.</p>
+        <p>Und da Strings eigentlich Arrays sind, können Sie auch Zeiger verwenden, um auf <a href="c_strings_de.html">Strings</a> zuzugreifen.</p>
+        <p>Im Moment ist es großartig, dass Sie wissen, wie das funktioniert. Aber wie wir im vorherigen Kapitel angegeben haben; <b>Zeiger müssen mit Vorsicht behandelt werden</b>, da es möglich ist, andere im Speicher gespeicherte Daten zu überschreiben.</p>
     </div>
     <hr>
     <div class="w3-clear nextprev">
