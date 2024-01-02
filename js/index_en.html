@@ -658,27 +658,7 @@ var <input name="ex1" aria-label='Example' maxlength="7" style="width: 75px;"> =
     <div class="w3-panel" id="getdiploma">
         <h2>Kickstart your career</h2>
         <p>Get certified by completing <span id="hey">the</span> <span id="coursetopic"></span> course</p>
-        <script>
-            var foldername;
-            function getCourseFolder() {
-                var pathname = window.location.pathname;
-                if (pathname.substr(0,1) == "/") {pathname = pathname.substr(1);}
-                pos = pathname.indexOf("/");
-                foldername = pathname.substr(0, pos);
-                foldername = foldername.toUpperCase();
-                if (foldername == "JS") foldername = "JavaScript";
-                if (foldername == "QUIZTEST" || foldername == "EXERCISES") {
-                    document.getElementById("hey").innerText = "a";
-                }
-                if (foldername == "QUIZTEST" || foldername == "EXERCISES") foldername = "";
-                if (foldername == "CS") foldername = "C#";
-                if (foldername == "CYBERSECURITY") foldername = "Cyber Security";
-                if (foldername == "CPP") foldername = "C++";
-                document.getElementById("coursetopic").innerText = foldername;
-            }
-            getCourseFolder();
-        </script>
-        <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/" target="_blank" rel="nofollow noopener" onclick="ga('send', 'event', 'Courses' , 'Clicked on ' + foldername + ' course banner in tutorial');">Get certified</a>
+        <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/" target="_blank" rel="nofollow noopener">Get certified</a>
         <svg id="w3_cert_arrow" viewBox="0 0 170 143" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.7747 42.7064C9.7747 42.7064 19.5575 77.2951 44.4558 84.8113C62.0225 90.1142 81.0061 80.1196 77.791 68.3309C76.0904 62.0955 69.0574 62.4735 65.5106 65.8444C59.1003 71.9368 67.8591 89.7423 77.9205 96.1324C112.816 118.295 161.943 84.5867 161.943 84.5867" stroke="white" stroke-width="2" stroke-linecap="round"/>
             <path d="M159.804 93.8429L162.704 84.4917L152.715 80.8293" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
