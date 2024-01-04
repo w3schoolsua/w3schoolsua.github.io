@@ -439,80 +439,80 @@
     </div>
     <hr>
     <h2>Eine Datei lesen</h2>
-    <p>In the previous chapter, we wrote to a file using <code class="w3-codespan">w</code> and <code class="w3-codespan">a</code> modes inside the <code class="w3-codespan">fopen()</code> function.</p>
-    <p>To <strong>read</strong> from a file, you can use the <code class="w3-codespan">r</code> mode:</p>
+    <p>Im vorherigen Kapitel haben wir mit den Modi <code class="w3-codespan">w</code> und <code class="w3-codespan">a</code> innerhalb der <code class=" w3-codespan">fopen()</code>-Funktion.</p>
+    <p>Zum <strong>Lesen (read)</strong> aus einer Datei können Sie den <code class="w3-codespan">r</code>-Modus verwenden:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate javaHigh">FILE *fptr;<br><br>// Open a file in read mode<br>fptr = fopen(&quot;filename.txt&quot;, &quot;r&quot;);</div>
+        <h3>Beispiel</h3>
+        <div class="w3-code notranslate javaHigh">FILE *fptr;<br><br>// Öffnen Sie eine Datei im Lesemodus<br>fptr = fopen(&quot;filename.txt&quot;, &quot;r&quot;);</div>
     </div>
-    <p>This will make the <code class="w3-codespan">filename.txt</code> opened for reading.</p>
+    <p>Dadurch wird die <code class="w3-codespan">filename.txt</code> zum Lesen geöffnet.</p>
     <div class="w3-note w3-panel">
-        <p>It requires a little bit of work to read a file in C. Hang in there! We will guide you step-by-step.</p>
+        <p>Es erfordert ein wenig Arbeit, eine Datei in C zu lesen. Bleiben Sie dran! Wir begleiten Sie Schritt für Schritt.</p>
     </div>
-    <p>Next, we need to create a string that should be big enough to store the content of the file.</p>
-    <p>For example, let's create a string that can store up to 100 characters:</p>
+    <p>Als Nächstes müssen wir eine Zeichenfolge erstellen, die groß genug sein sollte, um den Inhalt der Datei zu speichern.</p>
+    <p>Lassen Sie uns beispielsweise eine Zeichenfolge erstellen, die bis zu 100 Zeichen speichern kann:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            FILE *fptr;<br><br>// Open a file in read mode<br>fptr = fopen(&quot;filename.txt&quot;, &quot;r&quot;);<br><br>// Store the content of the file<br>char myString[100];
+            FILE *fptr;<br><br>// Öffnen Sie eine Datei im Lesemodus<br>fptr = fopen(&quot;filename.txt&quot;, &quot;r&quot;);<br><br>// Speichern Sie den Inhalt der Datei<br>char myString[100];
         </div>
     </div>
-    <p>In order to read the content of <code class="w3-codespan">filename.txt</code>, we can use the <code class="w3-codespan">fgets()</code> function.</p>
-    <p>The <code class="w3-codespan">fgets()</code> function takes three parameters:</p>
+    <p>Um den Inhalt zu lesen <code class="w3-codespan">filename.txt</code>, Wir können die Funktion <code class="w3-codespan">fgets()</code> verwenden.</p>
+    <p>Die Funktion <code class="w3-codespan">fgets()</code> benötigt drei Parameter:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">fgets(myString, 100, fptr);</div>
     </div>
     <ol>
-        <li>The first parameter specifies where to store the file content, which will be in the <code class="w3-codespan">myString</code> array we just created.</li>
-        <li>The second parameter specifies the maximum size of data to read, which should match the size of <code class="w3-codespan">myString</code> (<code class="w3-codespan">100</code>).</li>
-        <li>The third parameter requires a file pointer that is used to read the file (<code class="w3-codespan">fptr</code> in our example).</li>
+        <li>Der erste Parameter gibt an, wo der Dateiinhalt gespeichert werden soll, der sich im soeben erstellten Array <code class="w3-codespan">myString</code> befindet.</li>
+        <li>Der zweite Parameter gibt die maximale Größe der zu lesenden Daten an, die mit der Größe von übereinstimmen sollte <code class="w3-codespan">myString</code> (<code class="w3-codespan">100</code>).</li>
+        <li>Der dritte Parameter erfordert einen Dateizeiger, der zum Lesen der Datei verwendet wird (in unserem Beispiel <code class="w3-codespan">fptr</code>).</li>
     </ol>
-    <p>Now, we can print the string, which will output the content of the file:</p>
+    <p>Jetzt können wir die Zeichenfolge drucken, die den Inhalt der Datei ausgibt:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            FILE *fptr;<br><br>// Open a file in read mode<br>fptr = fopen(&quot;filename.txt&quot;, &quot;r&quot;);<br><br>// Store the content of the file<br>char myString[100];<br><br>// Read the content and store it inside myString<br>fgets(myString, 100, fptr);<br><br>// Print the file content<br>printf("%s", myString);<br><br>// Close the file<br>fclose(fptr);
+            FILE *fptr;<br><br>// Öffnen Sie eine Datei im Lesemodus<br>fptr = fopen(&quot;filename.txt&quot;, &quot;r&quot;);<br><br>// Speichern Sie den Inhalt der Datei<br>char myString[100];<br><br>// Lesen Sie den Inhalt und bewahren Sie ihn darin auf myString<br>fgets(myString, 100, fptr);<br><br>// Drucken Sie den Dateiinhalt aus<br>printf("%s", myString);<br><br>// Schließen Sie die Datei<br>fclose(fptr);
         </div>
         <div class="ws-black w3-padding"><p><code>Hello World!</code></p></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/c_demo_files_read.html">Run example &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/c_demo_files_read.html">Beispiel ausführen &raquo;</a>
     </div>
-    <p><b>Note:</b> The <code class="w3-codespan">fgets</code> function only reads the first line of the file. If you remember, there were two lines of text in <code class="w3-codespan">filename.txt</code>.</p>
-    <p>To read every line of the file, you can use a <code class="w3-codespan"><a href="c_while_loop_en.html">while</a></code> loop:</p>
+    <p><b>Notiz:</b> Die Funktion <code class="w3-codespan">fgets</code> liest nur die erste Zeile der Datei. Wenn Sie sich erinnern, waren darin zwei Textzeilen <code class="w3-codespan">filename.txt</code>.</p>
+    <p>Um jede Zeile der Datei zu lesen, können Sie eine <code class="w3-codespan"><a href="c_while_loop_de.html">while</a></code>-Schleife verwenden:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            FILE *fptr;<br><br>// Open a file in read mode<br>fptr = fopen(&quot;filename.txt&quot;, &quot;r&quot;);<br><br>// Store the content of the file<br>char myString[100];<br><br>// Read the content and print it<br>while(fgets(myString, 100, fptr)) {<br>&nbsp; printf(&quot;%s&quot;, myString);<br>}<br><br>// Close the file<br>fclose(fptr);
+            FILE *fptr;<br><br>// Öffnen Sie eine Datei im Lesemodus<br>fptr = fopen(&quot;filename.txt&quot;, &quot;r&quot;);<br><br>// Speichern Sie den Inhalt der Datei<br>char myString[100];<br><br>// Lesen Sie den Inhalt und drucken Sie ihn aus<br>while(fgets(myString, 100, fptr)) {<br>&nbsp; printf(&quot;%s&quot;, myString);<br>}<br><br>// Schließen Sie die Datei<br>fclose(fptr);
         </div>
         <div class="ws-black w3-padding"><p><code>Hello World!<br>Hi everybody!</code></p></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/c_demo_files_read_while.html">Run example &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/c_demo_files_read_while.html">Beispiel ausführen &raquo;</a>
     </div>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Good Practice</h2>
-    <p>If you try to open a file for reading that does not exist, the <code class="w3-codespan">fopen()</code> function will return <code class="w3-codespan">NULL</code>.</p>
-    <p><b>Tip:</b> As a good practice, we can use an <code class="w3-codespan"><a href="c_conditions_de.html">if</a></code> statement to test for <code class="w3-codespan">NULL</code>, and print some text instead (when the file does not exist):</p>
+</div>    <h2>Gute Übung</h2>
+    <p>Wenn Sie versuchen, eine Datei zum Lesen zu öffnen, die nicht existiert, wird die Funktion <code class="w3-codespan">fopen()</code> zurückgegeben <code class="w3-codespan">NULL</code>.</p>
+    <p><b>Tipp:</b> Als bewährte Vorgehensweise können wir zum Testen eine <code class="w3-codespan"><a href="c_conditions_de.html">if</a></code>-Anweisung verwenden <code class="w3-codespan">NULL</code>, und stattdessen etwas Text ausgeben (wenn die Datei nicht existiert):</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            FILE *fptr;<br><br>// Open a file in read mode<br>fptr = fopen(&quot;loremipsum.txt&quot;, &quot;r&quot;);<br><br>// Print some text if the file does not exist<br>if(fptr == NULL) {<br>&nbsp; printf(&quot;Not able to open the file.&quot;);<br>}<br><br>// Close the file<br>fclose(fptr);
+            FILE *fptr;<br><br>// Öffnen Sie eine Datei im Lesemodus<br>fptr = fopen(&quot;loremipsum.txt&quot;, &quot;r&quot;);<br><br>// Geben Sie Text aus, wenn die Datei nicht vorhanden ist<br>if(fptr == NULL) {<br>&nbsp; printf(&quot;Die Datei kann nicht geöffnet werden.&quot;);<br>}<br><br>// Schließen Sie die Datei<br>fclose(fptr);
         </div>
-        <p>If the file does not exist, the following text is printed:</p>
+        <p>Wenn die Datei nicht vorhanden ist, wird der folgende Text gedruckt:</p>
         <div class="ws-black w3-padding"><p><code>Not able to open the file.</code></p></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/c_demo_files_null.html">Run example &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/c_demo_files_null.html">Beispiel ausführen &raquo;</a>
     </div>
-    <p>With this in mind, we can create a more sustainable code if we use our &quot;read a file&quot; example above again:</p>
+    <p>Vor diesem Hintergrund können wir einen nachhaltigeren Code erstellen, wenn wir unser obiges Beispiel „Eine Datei lesen“ noch einmal verwenden:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>If the file exists, read the content and print it. If the file does not exist, print a message:</p>
+        <h3>Beispiel</h3>
+        <p>Wenn die Datei vorhanden ist, lesen Sie den Inhalt und drucken Sie ihn aus. Wenn die Datei nicht vorhanden ist, drucken Sie eine Meldung aus:</p>
         <div class="w3-code notranslate javaHigh">
-            FILE *fptr;<br><br>// Open a file in read mode<br>fptr = fopen(&quot;filename.txt&quot;, &quot;r&quot;);<br><br>// Store the content of the file<br>char myString[100];<br><br>// If the file exists<br>if(fptr != NULL) {<br><br>&nbsp;// Read the content and print it<br>&nbsp; while(fgets(myString, 100, fptr)) {<br>&nbsp;&nbsp;&nbsp; printf(&quot;%s&quot;, myString);<br>&nbsp; }<br><br>// If the file does not exist <br>} else {<br>&nbsp; printf(&quot;Not able to open the file.&quot;);<br>}<br><br>// Close the file<br>fclose(fptr);
+            FILE *fptr;<br><br>// Öffnen Sie eine Datei im Lesemodus<br>fptr = fopen(&quot;filename.txt&quot;, &quot;r&quot;);<br><br>// Speichern Sie den Inhalt der Datei<br>char myString[100];<br><br>// Wenn die Datei vorhanden ist<br>if(fptr != NULL) {<br><br>&nbsp;// Lesen Sie den Inhalt und drucken Sie ihn aus<br>&nbsp; while(fgets(myString, 100, fptr)) {<br>&nbsp;&nbsp;&nbsp; printf(&quot;%s&quot;, myString);<br>&nbsp; }<br><br>// Wenn die Datei nicht existiert<br>} else {<br>&nbsp; printf(&quot;Die Datei kann nicht geöffnet werden.&quot;);<br>}<br><br>// Schließen Sie die Datei<br>fclose(fptr);
         </div>
         <div class="ws-black w3-padding"><p><code>Hello World!<br>Hi everybody!</code></p></div>
-        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/c_demo_files_null2.html">Run example &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../ctryit/c_demo_files_null2.html">Beispiel ausführen &raquo;</a>
     </div>
     <hr>
     <div class="w3-clear nextprev">
