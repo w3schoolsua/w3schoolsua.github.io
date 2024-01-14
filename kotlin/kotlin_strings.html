@@ -404,19 +404,19 @@
         <pre class="language-kotlin notranslate w3-white"><code>var greeting = &quot;Hello&quot;</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings.html">Спробуйте самі &raquo;</a>
     </div>
-    <p>Unlike <a href="../java/index_en.html">Java</a>, you do not have to specify that the variable should be a <code class="w3-codespan">String</code>. Kotlin is smart enough to understand that the greeting variable in the example above is a <code class="w3-codespan">String</code> because of the double quotes.</p>
-    <p>However, just like with other data types, you can specify the type if you insist:</p>
+    <p>На відміну від <a href="../java/index.html">Java</a>, вам не потрібно вказувати, що змінна має бути <code class="w3-codespan">String</code> (рядком). Kotlin достатньо розумний, щоб зрозуміти, що змінна <i>greeting</i> у наведеному вище прикладі є <code class="w3-codespan">String</code> через подвійні лапки.</p>
+    <p>Однак, як і з іншими типами даних, ви можете вказати тип, якщо вважаєте за потрібне:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-kotlin notranslate w3-white"><code>var greeting: String = &quot;Hello&quot;</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings2.html">Спробуйте самі &raquo;</a>
     </div>
-    <p><b>Примітка:</b> If you want to create a <code class="w3-codespan">String</code> without assigning the value (and assign the value later), you must specify the type while declaring the variable:</p>
+    <p><b>Примітка:</b> Якщо ви хочете створити <code class="w3-codespan">String</code> без призначення значення (і призначити значення пізніше), ви повинні вказати тип під час оголошення змінної:</p>
     <div class="w3-row-padding" style="margin:-16px">
         <div class="w3-half">
             <div class="w3-example">
                 <h3>Приклад</h3>
-                <p>This works fine:</p>
+                <p>Це добре працює:</p>
                 <pre class="language-kotlin notranslate w3-white"><code>var name: String
 name = &quot;John&quot;
 println(name)</code></pre>
@@ -426,7 +426,7 @@ println(name)</code></pre>
         <div class="w3-half">
             <div class="w3-example w3-pale-red">
                 <h3>Приклад</h3>
-                <p>This will generate an error:</p>
+                <p>Це призведе до помилки:</p>
                 <pre class="language-kotlin notranslate w3-white w3-border-red"><code>var name
 name = &quot;John&quot;
 println(name)</code></pre>
@@ -435,24 +435,24 @@ println(name)</code></pre>
         </div>
     </div>
     <hr>
-    <h2>Access a String</h2>
-    <p>To access the characters (elements) of a string, you must refer to the <b>index number</b> inside <b>square brackets.</b></p>
-    <p>String indexes start with 0. In the example below, we access the first and third element in <code class="w3-codespan">txt</code>:</p>
+    <h2>Доступ до рядка</h2>
+    <p>Щоб отримати доступ до символів (елементів) рядка, потрібно звернутися до <b>номера індексу</b> всередині <b>квадратних дужок</b>.</p>
+    <p>Рядкові індекси починаються з 0. У прикладі нижче ми отримуємо доступ до першого та третього елементів <code class="w3-codespan">txt</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-kotlin notranslate w3-white"><code>var txt = &quot;Hello World&quot;
-println(txt[0]) // first element (H)
-println(txt[2]) // third element (l)</code></pre>
+println(txt[0]) // перший елемент (H)
+println(txt[2]) // третій елемент (l)</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings_access.html">Спробуйте самі &raquo;</a>
     </div>
-    <div class="w3-panel w3-note"><p>[0] is the first element. [1] is the second element, [2] is the third element, etc.</p></div>
+    <div class="w3-panel w3-note"><p>[0] є першим елементом. [1] — другий елемент, [2] — третій елемент тощо.</p></div>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>String Length</h2>
-    <p>A String in Kotlin is an object, which contain properties and functions that can perform certain operations on strings, by writing a dot character (<code class="w3-codespan">.</code>) after the specific string variable. For example, the length of a string can be found with the <code class="w3-codespan">length</code> property:</p>
+</div>    <h2>Довжина рядка</h2>
+    <p>Рядок у Kotlin — це об&#8217;єкт, який містить властивості та функції, які можуть виконувати певні операції над рядками шляхом написання символу крапки (<code class="w3-codespan">.</code>) після певного рядка змінної. Наприклад, довжину рядка можна знайти за допомогою властивості <code class="w3-codespan">length</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-kotlin notranslate w3-white"><code>var txt = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
@@ -460,39 +460,39 @@ println(&quot;The length of the txt string is: &quot; + txt.length)</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings_length.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>String Functions</h2>
-    <p>There are many string functions available, for example <code class="w3-codespan">toUpperCase()</code> and <code class="w3-codespan">toLowerCase()</code>:</p>
+    <h2>Рядкові функції</h2>
+    <p>Доступно багато рядкових функцій, наприклад <code class="w3-codespan">toUpperCase()</code> та <code class="w3-codespan">toLowerCase()</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-kotlin notranslate w3-white"><code>var txt = &quot;Hello World&quot;
-println(txt.toUpperCase())&nbsp;&nbsp; // Outputs &quot;HELLO WORLD&quot;
-println(txt.toLowerCase())&nbsp;&nbsp; // Outputs &quot;hello world&quot;</code></pre>
+println(txt.toUpperCase())&nbsp;&nbsp; // Виведе &quot;HELLO WORLD&quot;
+println(txt.toLowerCase())&nbsp;&nbsp; // Виведе &quot;hello world&quot;</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings_touppercase.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Comparing Strings</h2>
-    <p>The <code class="w3-codespan">compareTo(<em>string</em>)</code> function compares two strings and returns 0 if both are equal:</p>
+    <h2>Порівняння рядків</h2>
+    <p>Функція <code class="w3-codespan">compareTo(<em>string</em>)</code> порівнює два рядки та повертає 0, якщо обидва рівні:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-kotlin notranslate w3-white"><code>var txt1 = &quot;Hello World&quot;<br>var txt2 = &quot;Hello World&quot;
-println(txt1.compareTo(txt2))&nbsp; // Outputs 0 (they are equal)</code></pre>
+println(txt1.compareTo(txt2))&nbsp; // Виведе 0 (вони рівні)</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings_compareto.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Finding a String in a String</h2>
-    <p>The <code class="w3-codespan">indexOf()</code> function returns the <strong>index</strong> (the position) of the first occurrence of a specified text in a string (including whitespace):</p>
+    <h2>Пошук рядка в рядку</h2>
+    <p>Функція <code class="w3-codespan">indexOf()</code> повертає <strong>індекс</strong> (позицію) першого входження вказаного тексту в рядку (включаючи пробіли):</p>
     <div class="w3-example">
         <h3>Приклад</h3>
-        <pre class="language-kotlin notranslate w3-white"><code>var txt = "Please locate where 'locate' occurs!"
-println(txt.indexOf("locate"))&nbsp; // Outputs 7</code></pre>
+        <pre class="language-kotlin notranslate w3-white"><code>var txt = "Будь ласка, знайдіть місце, де зустрічається 'locate'!"
+println(txt.indexOf("locate"))&nbsp; // Виведе 7</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings_indexof.html">Спробуйте самі &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p>Remember that Kotlin counts positions from zero.<br>0 is the first position in a string, 1 is the second, 2 is the third ...</p>
+        <p>Пам&#8217;ятайте, що Kotlin підраховує позиції з нуля.<br>0 – перша позиція в рядку, 1 – друга, 2 – третя ...</p>
     </div>
     <hr>
-    <h2>Quotes Inside a String</h2>
-    <p>To use quotes inside a string, use single quotes (<code class="w3-codespan">'</code>):</p>
+    <h2>Лапки всередині рядка</h2>
+    <p>Щоб використовувати лапки всередині рядка, використовуйте одинарні лапки (<code class="w3-codespan">'</code>):</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-kotlin notranslate w3-white"><code>var txt1 = &quot;It's alright&quot;
@@ -500,8 +500,8 @@ var txt2 = &quot;That's great&quot;</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings_quotes.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>String Concatenation</h2>
-    <p>The <code class="w3-codespan">+</code> operator can be used between strings to add them together to make a new string. This is called <strong>concatenation</strong>:</p>
+    <h2>Конкатенація рядків</h2>
+    <p>Оператор <code class="w3-codespan">+</code> можна використовувати між рядками, щоб додати їх разом і створити новий рядок. Це називається <strong>конкатенацією</strong>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-kotlin notranslate w3-white"><code>var firstName = "John"
@@ -509,8 +509,8 @@ var lastName = "Doe"
 println(firstName + " " + lastName)</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings_conc.html">Спробуйте самі &raquo;</a>
     </div>
-    <div class="w3-note w3-panel"><p>Note that we have added an empty text (" ") to create a space between firstName and lastName on print.</p></div>
-    <p>You can also use the <code class="w3-codespan">plus()</code> function to concatenate two strings:</p>
+    <div class="w3-note w3-panel"><p>Зверніть увагу, що ми додали порожній текст (" "), щоб створити пробіл між ім&#8217;ям і прізвищем під час друку.</p></div>
+    <p>Ви також можете використовувати функцію <code class="w3-codespan">plus()</code>, щоб об&#8217;єднати два рядки:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-kotlin notranslate w3-white"><code>var firstName = "John "
@@ -519,18 +519,18 @@ println(firstName.plus(lastName))</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings_conc2.html">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>String Templates/Interpolation</h2>
-    <p>Instead of concatenation, you can also use &quot;string templates&quot;, which is an easy way to add variables and expressions inside a string.</p>
-    <p>Just refer to the variable with the <code class="w3-codespan">$</code> symbol:</p>
+    <h2>Шаблони рядків/інтерполяція</h2>
+    <p>Замість конкатенації ви також можете використовувати &quot;шаблони рядків&quot;, що є простим способом додавання змінних і виразів у рядок.</p>
+    <p>Просто зверніться до змінної з символом <code class="w3-codespan">$</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <pre class="language-kotlin notranslate w3-white"><code>var firstName = &quot;John&quot;
 var lastName = &quot;Doe&quot;
-println(&quot;My name is $firstName $lastName&quot;)</code></pre>
+println(&quot;Мене звати $firstName $lastName&quot;)</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../kotlintryit/demo_strings_template.html">Спробуйте самі &raquo;</a>
     </div>
     <div class="w3-note w3-panel">
-        <p>&quot;String Templates&quot; is a popular feature of Kotlin, as it reduces the amount of code. For example, you do not have to specify a whitespace between firstName and lastName, like we did in the concatenation example.</p>
+        <p>&quot;Шаблони рядків&quot; є популярною функцією Kotlin, оскільки вона зменшує обсяг коду. Наприклад, вам не потрібно вказувати пробіл між ім&#8217;я та прізвищем, як ми робили у прикладі конкатенації.</p>
     </div>
     <hr>
     <div class="w3-clear nextprev">
