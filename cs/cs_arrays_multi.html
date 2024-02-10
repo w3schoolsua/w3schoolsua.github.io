@@ -465,78 +465,73 @@
     </div>
     <hr>
     <h2>Багатовимірні масиви</h2>
-    <p>In the previous chapter, you learned about <a href="cs_arrays_en.html">arrays</a>, which is also known as <strong>single dimension arrays</strong>. These are great, and something you will use a lot while programming in C#. However, if you want to store data as a tabular form, like a table with rows and columns, you need to get familiar with <strong>multidimensional arrays</strong>.</p>
-    <p>A multidimensional array is basically an array of arrays.</p>
-    <p>Arrays can have any number of dimensions. The most common are two-dimensional arrays (2D).</p>
+    <p>У попередньому розділі ви дізналися про <a href="cs_arrays.html">масиви</a>, які також називаються <strong>одновимірними масивами</strong>. Це чудово, і це те, що ви часто будете використовувати під час програмування на C#. Однак, якщо ви хочете зберігати дані як табличну форму, наприклад таблицю з рядками та стовпцями, вам потрібно ознайомитися з <strong>багатовимірними масивами</strong>.</p>
+    <p><strong>Багатовимірний масив</strong> – це в основному масив масивів.</p>
+    <p>Масиви можуть мати будь-яку кількість розмірів. Найпоширенішими є двовимірні масиви (2D).</p>
     <hr>
-    <h2>Two-Dimensional Arrays</h2>
-    <p>To create a 2D array, add each array within its own set of curly braces, and insert a comma (<code class="w3-codespan">,</code>) inside the square brackets:</p>
+    <h2>Двовимірні масиви</h2>
+    <p>Щоб створити 2D-масив, додайте кожен масив у власний набір фігурних дужок і вставте кому (<code class="w3-codespan">,</code>) у квадратні дужки:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <pre class="language-csharp w3-white"><code>int[,] numbers = { {1, 4, 2}, {3, 6, 8} };</code></pre>
     </div>
     <div class="w3-note w3-panel">
-        <p><b>Good to know:</b> The single comma <code class="w3-codespan">[,]</code> specifies that the array is two-dimensional. A three-dimensional array would have two commas: <code class="w3-codespan">int[,,]</code>.</p>
+        <p><b>Корисно знати:</b> одна кома <code class="w3-codespan">[,]</code> вказує на те, що масив є двовимірним. Тривимірний масив матиме дві коми: <code class="w3-codespan">int[,,]</code>.</p>
     </div>
-    <p><code class="w3-codespan">numbers</code> is now an array with two arrays as its elements. The first array element contains three elements: 1, 4 and 2, while the second array element contains 3, 6 and 8. To visualize it, think of the array as a table with rows and columns:</p>
+    <p><code class="w3-codespan">numbers</code> тепер є масивом з двома масивами як його елементами. Перший елемент масиву містить три елементи: 1, 4 та 2, тоді як другий елемент масиву містить 3, 6 та 8. Щоб візуалізувати це, уявіть масив як таблицю з рядками та стовпцями:</p>
     <table class="ws-table-all">
         <tr>
             <th>&nbsp;</th>
-            <th>COLUMN 0</th>
-            <th>COLUMN 1</th>
-            <th>COLUMN 2</th>
+            <th>СТОВПЕЦЬ 0</th>
+            <th>СТОВПЕЦЬ 1</th>
+            <th>СТОВПЕЦЬ 2</th>
         </tr>
         <tr>
-            <td>ROW 0</td>
+            <td>РЯДОК 0</td>
             <td>1</td>
             <td>4</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>ROW 1</td>
+            <td>РЯДОК 1</td>
             <td>3</td>
             <td>6</td>
             <td>8</td>
         </tr>
     </table>
-    <!--
-    <div class="ws-light-green w3-round" style="padding:30px 10px">
-        <img src="../images1/col-row.png" alt="" style="max-width:100%;margin:auto;display:block;">
-    </div>
-    -->
     <hr>
-    <h2>Access Elements of a 2D Array</h2>
-    <p>To access an element of a two-dimensional array, you must specify two indexes: one for the array, and one for the element inside that array. Or better yet, with the table visualization in mind; one for the row and one for the column (see example below).</p>
-    <p>This statement accesses the value of the element in the <b>first row (0)</b> and <b>third column (2)</b> of the <code class="w3-codespan">numbers</code> array:</p>
+    <h2>Доступ до елементів двовимірного масиву</h2>
+    <p>Щоб отримати доступ до елемента двовимірного масиву, ви повинні вказати два індекси: один для масиву, а інший для елемента всередині цього масиву. Або ще краще, маючи на увазі візуалізацію таблиці; один для рядка та один для стовпця (див. приклад нижче).</p>
+    <p>Ця інструкція отримує доступ до значення елемента в <b>першому рядку (0)</b> і <b>третьому стовпці (2)</b> масиву <code class="w3-codespan">numbers</code>:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <pre class="language-csharp w3-white"><code>int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
-Console.WriteLine(numbers[0, 2]);  // Outputs 2</code></pre>
+Console.WriteLine(numbers[0, 2]);  // Виведе 2</code></pre>
         <p><a target="_blank" class="w3-btn" href="../cstryit/demo_array_multi.html">Спробуйте самі &raquo;</a></p>
     </div>
     <div class="w3-note w3-panel">
-        <p><b>Remember that:</b> Array indexes start with 0: [0] is the first element. [1] is the second element, etc.</p>
+        <p><b>Пам&#8217;ятайте, що:</b> індекси масиву починаються з 0: [0] є першим елементом. [1] — другий елемент і т.д.</p>
     </div>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Change Elements of a 2D Array</h2>
-    <p>You can also change the value of an element.</p>
-    <p>The following example will change the value of the element in the <b>first row (0)</b> and <b>first column (0)</b>:</p>
+</div>    <h2>Зміна елементів двовимірного масиву</h2>
+    <p>Ви також можете змінити значення елемента.</p>
+    <p>У наступному прикладі буде змінено значення елемента в <b>першому рядку (0)</b> і <b>першому стовпці (0)</b>:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <pre class="language-csharp w3-white"><code>int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
-numbers[0, 0] = 5;  // Change value to 5
-Console.WriteLine(numbers[0, 0]); // Outputs 5 instead of 1</code></pre>
+numbers[0, 0] = 5;  // Змініть значення на 5
+Console.WriteLine(numbers[0, 0]); // Виведе 5 замість 1</code></pre>
         <p><a target="_blank" class="w3-btn" href="../cstryit/demo_array_multi_change.html">Спробуйте самі &raquo;</a></p>
     </div>
     <hr>
-    <h2>Loop Through a 2D Array</h2>
-    <p>You can easily loop through the elements of a two-dimensional array with a <code class="w3-codespan">foreach</code> loop:</p>
+    <h2>Перебирання двовимірного масиву</h2>
+    <p>Ви можете легко перебрати елементи двовимірного масиву за допомогою циклу <code class="w3-codespan">foreach</code>:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <pre class="language-csharp w3-white"><code>int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
 foreach (int i in numbers)
 {
@@ -544,10 +539,10 @@ foreach (int i in numbers)
 } </code></pre>
         <p><a target="_blank" class="w3-btn" href="../cstryit/demo_array_multi_loop.html">Спробуйте самі &raquo;</a></p>
     </div>
-    <p>You can also use a <a href="cs_for_loop_en.html">for loop</a>. For multidimensional arrays, you need one loop for each of the array's dimensions.</p>
-    <p>Also note that we have to use <code class="w3-codespan">GetLength()</code> instead of <code class="w3-codespan">Length</code> to specify how many times the loop should run:</p>
+    <p>Ви також можете використовувати <a href="cs_for_loop.html">цикл for</a>. Для багатовимірних масивів вам потрібен один цикл для кожного виміру масиву.</p>
+    <p>Також зауважте, що нам потрібно використовувати <code class="w3-codespan">GetLength()</code> замість <code class="w3-codespan">Length</code>, щоб указати, скільки разів цикл повинен працювати:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Приклад</h3>
         <pre class="language-csharp w3-white"><code>int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
 for (int i = 0; i &lt; numbers.GetLength(0); i++)
 {
