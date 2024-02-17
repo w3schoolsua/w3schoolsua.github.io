@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<head>
+  <meta charset='utf-8'>
+  <title>Редактор C# коду. W3Schools українською - Tryit - v3.6</title>
+  <meta name='description' content='Онлайн C# (C-Sharp) редактор коду. Приклад. Основи мови програмування C#. W3Schools українською. Безкоштовні уроки для початківців'>
+  <meta name='viewport' content='width=device-width'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo_436_2.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="436">
+  <meta property="og:image:height" content="228">
+  <meta property="og:title" content="W3Schools онлайн C-Sharp редактор коду">
+  <meta property="og:description" content="Онлайн-редактор коду W3Schools дозволяє редагувати код і переглядати результат у вашому браузері">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="mask-icon" href="../svg/safari-pinned-tab.svg" color="#04aa6d">
+  <meta name="msapplication-TileColor" content="#00a300">
+  <meta name="theme-color" content="#fff">
+  <!--<link rel='stylesheet' href='../styles/w3.css'>-->
+  <link rel="stylesheet" href="../lib/w3schools31.css">
+  <link rel='stylesheet' href='../lib/codemirror_multi.css'>
+  <link rel='stylesheet' href='../styles/tryitstyle_cs.css'>
+  <script src='../lib/codemirror_multi.js'></script>
+  <script src='../lib/codemirror_clike.js'></script>
+  <!--[if lt IE 8]>
+  <style>
+    #textareacontainer, #iframecontainer {width:48%;}
+    #container {height:500px;}
+    #textarea, #iframe {width:90%;height:450px;}
+    #textareaCode, #textareaCode2, .iframeResult, .codewindow {height:450px;}
+    .stack {display:none;}
+  </style>
+  <![endif]-->
+  <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+  <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+</head>
+
+<body>
+<div class="trytopnav">
+  <div class="w3-bar" style="overflow:auto">
+    <a id="tryhome" href="../index.html" target="_blank" title="W3Schools Головна" class="w3-button w3-bar-item topnav-icons fa fa-home ga-tryit"></a>
+    <a href="javascript:void(0);" onclick="openMenu()" id="menuButton" title="Відкрити меню" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu ga-tryit"></a>
+    <a href="javascript:void(0);" onclick="restack(currentStack)" title="Змінити орієнтацію" class="w3-button w3-bar-item w3-hide-small topnav-icons fa fa-rotate ga-tryit"></a>
+    <a href="javascript:void(0);" onclick="retheme()" title="Змінити тему" class="w3-button w3-bar-item topnav-icons fa fa-adjust ga-tryit"></a>
+    <button id="runbtn" class="w3-button w3-bar-item w3-hover-white w3-hover-text-green ga-tryit" onclick="submitTryit(1);">Run &#10095;</button>
+    <span class="w3-right w3-hide-small" style="padding:8px 16px 8px 0;display:block;float:right;font-size:16px;margin-top:4px"><span id="framesize"></span></span>
+  </div>
+</div>
+
+<div id="shield"></div>
+
+<a href="javascript:void(0)" id="dragbar"></a>
+<div id="container">
+  <div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
+    <span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent ws-hover-black" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
+    <div class="w3-bar-block">
+      <a class="w3-bar-item w3-button ga-tryit" href='javascript:void(0);' title="Змінити орієнтацію" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:28px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Змінити орієнтацію</span></a>
+      <a class="w3-bar-item w3-button ga-tryit" href='javascript:void(0);' title="Змінити тему" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Змінити тему, Темна/Світла</span></a>
+      <a class="w3-bar-item w3-button ga-tryit" style="height: 62px;padding-top: 18px;" href='https://www.programiz.com/csharp-programming/online-compiler/' target="_blank" rel="nofollow noopener" title="Go to C# online-compiler"><img style="margin-left:9px;margin-right:15px;margin-bottom: 8px; width: 25px" alt="S# Compiler" src="../svg/cs_icon.svg"/><span style="position:relative;top:-4px;left:2px;">Go to C# online-compiler</span></a>
+    </div>
+    <footer class="w3-container w3-small ws-grey">
+      <p><a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green ga-tryit">Політика конфіденційності</a> та <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green ga-tryit">Copyright 1999-2025</a></p>
+    </footer>
+  </div>
+  <div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
+  <div id="textareacontainer">
+    <div id="textarea">
+      <div id="textareawrapper">
+        <textarea autocomplete="off" aria-label='Приклад' id="textareaCode" wrap="soft" spellcheck="false" class="language-csharp w3-white">using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Hello World!");
+    }
+  }
+}</textarea>
+        <form id="codeForm" autocomplete="off" style="margin:0;display:none;">
+          <input type="hidden" name="code" id="code" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="iframecontainer">
+    <div id="iframe">
+      <div id="runloadercontainer"><div id="runloader"></div></div>
+      <div id="iframewrapper">
+        <div class='iframeResult' style='position:relative;white-space:nowrap;overflow:auto;' id='resultdiv_0'>
+          <div>Hello World!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src='../scripts/tryit_cs_end.js'></script>
+</body>
+</html>
