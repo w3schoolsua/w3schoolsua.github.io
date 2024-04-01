@@ -44,7 +44,7 @@
 </script>
 <script src='../lib/prism2.js'></script>
 <link rel='stylesheet' href='../lib/prism1.css'><title>Видалити учасників. Інструмент Admin в Django. Онлайн підручник безкоштовно. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Django Admin - Видалити учасників. Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
+<meta name='description' content='Django Admin - Видалити учасників. Щоб видалити нового учасника, ви можете вибрати учасника та вибрати дію Видалити вибраних учасників. Або ви можете відкрити учасника для редагування та натиснути червону кнопку ВИДАЛИТИ внизу. Приклади. Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -441,7 +441,59 @@
     <a href='django_admin_delete_members_es.html' title='Перейти на іспанську мову'>Es</a>
     <a href='django_admin_delete_members_de.html' title='Перейти на німецьку мову'>De</a>
 </p>
-
+<article>
+    <h1>Django Admin - Видалити учасників</h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="django_admin_add_members.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="django_template_variables.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <h2>Видалити учасників</h2>
+    <p>Щоб видалити нового учасника, ви можете вибрати учасника та вибрати дію "Видалити вибраних учасників", як тут:</p>
+    <p><button id="run_video_btn1" class="ws-btn" onclick="show_delete_video(this, 1)">Виконати Demo</button></p>
+    <div id="django_delete_video1">
+        <img src="../images1/screenshot_django_admin13.png" alt="Django Admin" style="max-width:100%;z-index:1">
+        <img src="../images1/screenvideo_django_admin1.gif" alt="Django Admin" style="max-width:100%;z-index:1;display:none">
+        <img src="../images1/screenshot_django_admin15.png" alt="Django Admin" style="max-width:100%;z-index:1;display:none">
+    </div>
+    <p>Або ви можете відкрити учасника для редагування та натиснути червону кнопку DELETE (ВИДАЛИТИ) внизу, ось так:</p>
+    <p><button class="ws-btn" onclick="show_delete_video(this, 2)">Виконати Demo</button></p>
+    <div id="django_delete_video2">
+        <img src="../images1/screenshot_django_admin13.png" alt="Django Admin" style="max-width:100%;z-index:1">
+        <img src="../images1/screenvideo_django_admin2.gif" alt="Django Admin" style="max-width:100%;z-index:1;display:none">
+        <img src="../images1/screenshot_django_admin14.png" alt="Django Admin" style="max-width:100%;z-index:1;display:none">
+    </div>
+    <script>
+        window.setTimeout(function () {
+            show_delete_video(document.getElementById("run_video_btn1"), 1);
+        }, 1000);
+        function show_delete_video(elmnt, n) {
+            var still1, still2, vid
+            elmnt.style.cursor = "default";
+            elmnt.style.opacity = "0.5";
+            elmnt.disabled = true;
+            still1 = document.getElementById("django_delete_video" + n).getElementsByTagName("IMG")[0];
+            still2 = document.getElementById("django_delete_video" + n).getElementsByTagName("IMG")[2];
+            vid = document.getElementById("django_delete_video" + n).getElementsByTagName("IMG")[1];
+            still1.style.display = "none";
+            still2.style.display = "none";
+            vid.style.display = "inline";
+            window.setTimeout(function () {
+                vid.style.display = "none";
+                still1.style.display = "none";
+                still2.style.display = "inline";
+                elmnt.style.opacity = "1";
+                elmnt.style.cursor = "pointer";
+                elmnt.disabled = false;
+            }, 11000);
+        }
+    </script>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="django_admin_add_members.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="django_template_variables.html">Next &#10095;</a>
+    </div>
+</article>
 <hr>
 <div class="disqus">
     <h4><span class="predisqus-comment">&#x270D;</span> Коментарі</h4>
