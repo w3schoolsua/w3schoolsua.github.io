@@ -44,7 +44,7 @@
 </script>
 <script src='../lib/prism2.js'></script>
 <link rel='stylesheet' href='../lib/prism1.css'><title>Змінні шаблону в Django. Онлайн підручник безкоштовно. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Django Змінні шаблону. У шаблонах Django ви можете відобразити змінні, помістивши їх у дужки {{ }}. Створити змінну в режимі перегляду. Створення змінних у шаблоні. Дані з моделі. Приклади. Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
+<meta name='description' content='Django Змінні шаблону. У шаблонах Django ви можете відобразити змінні, помістивши їх у дужки {{ }}. Створити змінну в режимі представлення. Створення змінних у шаблоні. Дані з моделі. Приклади. Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -458,8 +458,8 @@
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../djangotryit/demo_variables.html">Виконати Приклад &raquo;</a>
     </div>
     <hr>
-    <h2>Create Variable in View</h2>
-    <p>The variable <code class="w3-codespan">firstname</code> in the example above was sent to the template via a view:</p>
+    <h2>Створити змінну в режимі представлення</h2>
+    <p>Змінну <code class="w3-codespan">firstname</code> у прикладі вище було надіслано до шаблону через представлення:</p>
     <div class="w3-example">
         <p><code class="w3-codespan">views.py</code>:</p>
         <pre class="language-jsx notranslate w3-white"><code>from django.http import HttpResponse
@@ -473,11 +473,11 @@ def testing(request):
   return HttpResponse(template.render(context, request))</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../djangotryit/demo_variables2.html">Виконати Приклад &raquo;</a>
     </div>
-    <p>As you can see in the view above, we create an object named context and fill it with data, and send it as the first parameter in the <code class="w3-codespan">template.render()</code> function.</p>
+    <p>Як ви можете бачити в поданні вище, ми створюємо об&#8217;єкт під назвою context, заповнюємо його даними та надсилаємо його як перший параметр у функції <code class="w3-codespan">template.render()</code>.</p>
     <hr>
-    <h2>Create Variables in Template</h2>
-    <p>You can also create variables directly in the template, by using the <code class="w3-codespan">{% with %}</code> template tag.</p>
-    <p>The variable is available until the <code class="w3-codespan">{% endwith %}</code> tag appears:</p>
+    <h2>Створення змінних у шаблоні</h2>
+    <p>Ви також можете створювати змінні безпосередньо в шаблоні, використовуючи тег шаблону <code class="w3-codespan">{% with %}</code>.</p>
+    <p>Змінна доступна, доки не з&#8217;явиться тег <code class="w3-codespan">{% endwith %}</code>:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <p><code class="w3-codespan">templates/template.html</code>:</p>
@@ -487,13 +487,13 @@ def testing(request):
 </code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../djangotryit/demo_variables3.html">Виконати Приклад &raquo;</a>
     </div>
-    <p>You will learn more about <a href="django_template_tags_en.html">template tags</a> in the next chapter.</p>
+    <p>Ви дізнаєтесь більше про <a href="django_template_tags.html">теги шаблонів</a> у наступному розділі.</p>
     <hr>
-    <h2>Data From a Model</h2>
-    <p>The example above showed an easy approach on how to create and use variables in a template.</p>
-    <p>Normally, most of the external data you want to use in a template, comes from a model.</p>
-    <p>We have created a model in the previous chapters, called <code class="w3-codespan">Member</code>, which we will use in many examples in the next chapters of this tutorial.</p>
-    <p>To get data from the <code class="w3-codespan">Member</code> model, we will have to import it in the <code class="w3-codespan">views.py</code> file, and extract data from it in the view:</p>
+    <h2>Дані з моделі</h2>
+    <p>Наведений вище приклад продемонстрував простий підхід до створення та використання змінних у шаблоні.</p>
+    <p>Зазвичай більшість зовнішніх даних, які ви хочете використовувати в шаблоні, надходять із моделі.</p>
+    <p>У попередніх розділах ми створили модель під назвою <code class="w3-codespan">Member</code>, яку ми будемо використовувати в багатьох прикладах у наступних розділах цього посібника.</p>
+    <p>Щоб отримати дані з моделі <code class="w3-codespan">Member</code>, нам доведеться імпортувати їх у <code class="w3-codespan">views.py</code> файл і витягти дані з нього в представленні:</p>
     <div class="w3-example">
         <p><code class="w3-codespan">members/views.py</code>:</p>
         <pre class="language-jsx notranslate w3-white"><code>from django.http import HttpResponse, HttpResponseRedirect
@@ -508,7 +508,7 @@ def testing(request):
   }
   return HttpResponse(template.render(context, request))</code></pre>
     </div>
-    <p>Now we can use the data in the template:</p>
+    <p>Тепер ми можемо використовувати дані в шаблоні:</p>
     <div class="w3-example">
         <p><code class="w3-codespan">templates/template.html</code>:</p>
         <pre class="language-django notranslate w3-white"><code>&lt;ul&gt;
@@ -518,12 +518,12 @@ def testing(request):
 &lt;/ul&gt;</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../djangotryit/demo_variables4.html">Виконати Приклад &raquo;</a>
     </div>
-    <p>We use the Django template tag <code class="w3-codespan">{% for %}</code> to loop through the members.</p>
-    <p>You will learn more about <a href="django_template_tags_en.html">template tags</a> in the next chapter.</p>
+    <p>Ми використовуємо тег шаблону Django <code class="w3-codespan">{% for %}</code> для циклічного перегляду учасників.</p>
+    <p>Ви дізнаєтеся більше про <a href="django_template_tags.html">теги шаблонів</a> у наступному розділі.</p>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="django_admin_delete_members_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="django_template_tags_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="django_admin_delete_members.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="django_template_tags.html">Next &#10095;</a>
     </div>
 </article>
 <hr>
