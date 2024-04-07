@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang='uk'>
 <meta charset='utf-8'>
@@ -44,7 +43,7 @@
     }
 </script>
 <script src='../lib/prism2.js'></script>
-<link rel='stylesheet' href='../lib/prism1.css'><title>Додати статичний файл в Django. Онлайн підручник безкоштовно. Уроки для початківців. W3Schools українською</title>
+<link rel='stylesheet' href='../lib/prism1.css'><title>Встановлення WhiteNoise в Django. Онлайн підручник безкоштовно. Уроки для початківців. W3Schools українською</title>
 <meta name='description' content='Django Встановлення WhiteNoise. Django не має вбудованого рішення для обслуговування статичних файлів, принаймні не у виробництві, коли DEBUG має бути False. Змінити налаштування. Збирати статичні файли. Приклади. Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
@@ -443,23 +442,23 @@
     <a href='django_static_whitenoise_de.html' title='Перейти на німецьку мову'>De</a>
 </p>
 <article>
-    <h1>Django - Installing WhiteNoise</h1>
+    <h1>Django - Встановлення WhiteNoise</h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="django_add_static_files_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="django_collect_static_files_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="django_add_static_files.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="django_collect_static_files.html">Next &#10095;</a>
     </div>
     <hr>
     <h2>WhiteNoise</h2>
-    <p>Django does not have a built-in solution for serving static files, at least not in production when <code class="w3-codespan">DEBUG</code> has to be <code class="w3-codespan">False</code>.</p>
-    <p>We have to use a third-party solution to accomplish this.</p>
-    <p>In this Tutorial, we will use WhiteNoise, which is a Python library, built for serving static files.</p>
+    <p>Django не має вбудованого рішення для обслуговування статичних файлів, принаймні не у виробництві, коли <code class="w3-codespan">DEBUG</code> має бути <code class="w3-codespan">False</code>.</p>
+    <p>Для цього нам потрібно використовувати стороннє рішення.</p>
+    <p>У цьому посібнику ми будемо використовувати WhiteNoise, бібліотеку Python, створену для обслуговування статичних файлів.</p>
     <hr>
-    <h2>Install WhiteNoise</h2>
-    <p>To install WhiteNoise in your virtual environment, type the command below:</p>
+    <h2>Встановити WhiteNoise</h2>
+    <p>Щоб установити WhiteNoise у вашому віртуальному середовищі, введіть команду нижче:</p>
     <div class="w3-example">
         <div class="w3-code notranslate w3-black">pip install whitenoise</div>
     </div>
-    <p>The result should be something like this:</p>
+    <p>У результаті повинно вийти приблизно так:</p>
     <div class="w3-example">
         <div class="w3-code notranslate w3-black">
             Collecting whitenoise<br>&nbsp;&nbsp;Downloading whitenoise-6.2.0-py3-none-any.whl (19 kB)<br>Installing collected packages: whitenoise<br>Successfully installed whitenoise-6.2.0<br><span style="color:orange">WARNING: You are using pip version 20.2.3; however, version 22.3.1 is available.<br>You should consider upgrading via the 'c:\users\<em>Your Name</em>\myworld\scripts\python.exe -m pip install --upgrade pip' command.</span>
@@ -470,8 +469,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Modify Settings</h2>
-    <p>To make Django aware of you wanting to run WhitNoise, you have to specify it in the <code class="w3-codespan">MIDDLEWARE</code> list in <code class="w3-codespan">settings.py</code> file:</p>
+</div>    <h2>Змінити налаштування</h2>
+    <p>Щоб повідомити Django про те, що ви хочете запустити WhitNoise, вам потрібно вказати його в списку <code class="w3-codespan">MIDDLEWARE</code> у файлі <code class="w3-codespan">settings.py</code>:</p>
     <div class="w3-example">
         <p><code class="w3-codespan">my_tennis_club/my_tennis_club/settings.py</code>:</p>
         <pre class="language-jsx notranslate w3-white" data-line="11"><code>.
@@ -489,12 +488,12 @@ MIDDLEWARE = [
 .</code></pre>
     </div>
     <hr>
-    <h2>Collect Static Files</h2>
-    <p>There is one more action you have to perform before you can serve the static file from the example in the previous chapter <a href="django_add_static_files_en.html">Static Files</a>. You have to collect all static files and put them into one specified folder. You will learn how in the next chapter <a href="django_collect_static_files_en.html">Collect Static Files</a>.</p>
+    <h2>Збирайте статичні файли</h2>
+    <p>Є ще одна дія, яку вам потрібно виконати, перш ніж ви зможете обслуговувати статичний файл із прикладу в попередньому розділі <a href="django_add_static_files.html">Статичні файли</a>. Ви повинні зібрати всі статичні файли та помістити їх в одну вказану папку. Ви дізнаєтеся про це у наступному розділі <a href="django_collect_static_files.html">Збір статичних файлів</a>.</p>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="django_add_static_files_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="django_collect_static_files_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="django_add_static_files.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="django_collect_static_files.html">Next &#10095;</a>
     </div>
 </article>
 <hr>
