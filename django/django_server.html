@@ -118,7 +118,7 @@
     #scroll_right_btn:hover {background: linear-gradient(to left, #000 95%, transparent 100%)}
     #menubtn_container {position:fixed;left:0;top:56px;border-right:10px solid rgba(40, 42, 53,0.5);height:33px;color:white;font-size:15px}
     #menubtn_container span {background-color:#282A35}
-    #darkmodemenu {position:fixed!important;right:0;!important}
+    #darkmodemenu {position:fixed!important;right:0!important}
     #subtopnav::-webkit-scrollbar {display:none!important}
     #google_translate_element a {font-size:13px!important;line-height: normal}
     #google_translate_element a:hover {background-color:#fff!important;color:#000!important}
@@ -824,7 +824,7 @@
                         <div class="plans-toggle-labels">
                             <span>Щомісяця</span>
                             <label class="plans-toggle-switch">
-                                <input class="plans-toggle-input" type="checkbox" id="plans-toggle-pricing" onChange="togglePricing()" />
+                                <input class="plans-toggle-input" aria-label='Плани. Перемикач. Введення' type="checkbox" id="plans-toggle-pricing" onChange="togglePricing()" />
                                 <span class="plans-toggle-slider"></span>
                             </label>
                             <span>Щорічно</span>
@@ -856,7 +856,7 @@
                             </div>
                             <div class="w3-col l6  w3-round-xxlarge ws-white plan-card is-popular">
                                 <div class="card-header">
-                                    <h5 class="card-title">W3Schools Плюс</h5>
+                                    <h5 class="card-title">W3Schools Plus</h5>
                                     <p class="card-price" id="plus_pricing">$14.99 <span class="card-period">/Місяць</span></p>
                                     <hr>
                                 </div>
@@ -868,32 +868,32 @@
                                         <li class="feature-item">Створіть і розмістіть 1 сервер із повним стеком</li>
                                         <li class="feature-item">Виберіть із 18 фреймворків/мов</li>
                                         <li class="feature-item">Вибирайте з 75+ шаблонів</li>
-                                        <li class="feature-item">50000 кредитів/місяць <span class="feature-item-info" title="Access various AI features like W3Schools kAI coding tutor and intreview prep.">(?)</span>
+                                        <li class="feature-item">50000 кредитів/місяць <span class="feature-item-info" title="Отримайте доступ до різноманітних функцій штучного інтелекту, таких як репетитор із кодування W3Schools kAI та підготовка до співбесіди.">(?)</span>
                                         </li>
                                         <li class="feature-item">Пріоритетна підтримка</li>
                                         <li class="feature-item">Скасувати будь-коли</li>
                                     </ul>
                                 </div>
                                 <div class="w3-center btn">
-                                    <a class="outline-btn" id="plus_pricing_btn" href="https://w3schools.com/" target="_blank" rel="nofollow noopener">Отримати Плюс</a>
+                                    <a class="outline-btn" id="plus_pricing_btn" href="https://w3schools.com/" target="_blank" rel="nofollow noopener">Отримати Plus</a>
                                 </div>
                             </div>
                             <div class="w3-col l6 w3-round-xxlarge ws-white plan-card">
                                 <div class="card-header">
-                                    <h5 class="card-title">W3Schools Classroom</h5>
-                                    <p class="card-price-smaller">Contact us for information</p>
+                                    <h5 class="card-title">W3Schools Класна кімната</h5>
+                                    <p class="card-price-smaller">Зв&#8217;яжіться з нами для отримання інформації</p>
                                     <hr>
                                 </div>
                                 <div class="w3-left-align">
-                                    <p>W3Schools right to use and Plus for educational institutions or enterprise customers</p>
+                                    <p>Право W3Schools на використання та Plus для навчальних закладів або корпоративних клієнтів</p>
                                     <ul class="features-list">
-                                        <li class="feature-item">Everything in W3Schools Plus</li>
-                                        <li class="feature-item">Certification Exams</li>
-                                        <li class="feature-item">And much more!</li>
+                                        <li class="feature-item">Усе в W3Schools Plus</li>
+                                        <li class="feature-item">Сертифікаційні іспити</li>
+                                        <li class="feature-item">І багато іншого!</li>
                                     </ul>
                                 </div>
                                 <div class="w3-center btn">
-                                    <a class="outline-btn" href="https://w3schools.com/" target="_blank" rel="nofollow noopener">Get More Info</a>
+                                    <a class="outline-btn" href="https://w3schools.com/" target="_blank" rel="nofollow noopener">Отримати більше інформації</a>
                                 </div>
                             </div>
                         </div>
@@ -902,11 +902,11 @@
                 <script>
                     function togglePricing(e) {
                         if (document.getElementById('plans-toggle-pricing').checked) {
-                            document.getElementById("plus_pricing").innerHTML = "$149.99<span class='card-period'>/Year</span>";
+                            document.getElementById("plus_pricing").innerHTML = "$149.99<span class='card-period'>/Рік</span>";
                             document.getElementById("plus_pricing_btn").href =
                                 "https://w3schools.com/";
                         } else {
-                            document.getElementById("plus_pricing").innerHTML = "$14.99<span class='card-period'>/Month</span>";
+                            document.getElementById("plus_pricing").innerHTML = "$14.99<span class='card-period'>/Місяць</span>";
                             document.getElementById("plus_pricing_btn").href =
                                 "https://w3schools.com/";
                         }
@@ -917,22 +917,22 @@
                 <div class="ws-black" style="position:relative;padding:18px;border-radius:20px;margin-top:0;margin-left:24px;margin-right:24px;">
                     <div class="w3-row-padding">
                         <div class="w3-col m6">
-                            <h4 style="letter-spacing:1px">NEW SUBSCRIBER DEAL</h4>
-                            <h2 style="color:#ffc0c7;font-weight:700;font-size:50px;margin-top:-18px;margin-bottom:-15px;">25% OFF</h2>
-                            <h4 style="letter-spacing:1px">FOR A YEAR</h4>
+                            <h4 style="letter-spacing:1px">НОВИЙ ПІДПИСНИК</h4>
+                            <h2 style="color:#ffc0c7;font-weight:700;font-size:50px;margin-top:-18px;margin-bottom:-15px;">ЗНИЖКА 25%</h2>
+                            <h4 style="letter-spacing:1px">ВПРОДОВЖ РОКУ</h4>
                         </div>
                         <div class="w3-col m6">
-                            <h4 style="color:#ffc0c7;">USE PROMO CODE:</h4><br>
+                            <h4 style="color:#ffc0c7;">ВИКОРИСТАННЯ ПРОМОКОДУ:</h4><br>
                             <span class="ws-pink" style="border-radius:25px;margin-left:15px;padding:8px 32px;font-size:20px">SPACES25</span>
                             <h4 style="margin-bottom:-10px">&nbsp;</h4>
                         </div>
                     </div>
                 </div>
                 <div class="multiple_users" style="margin-bottom:70px;margin-top:45px">
-                    <h4 style="font-size:21px">Want custom domains?</h4>
-                    <p>You can also buy a domain or connect an existing one.</p>
-                    <h4 style="margin-top:24px;margin-bottom:0">Looking to add multiple users?</h4>
-                    <a href="https://w3schools.com/" target="_blank" rel="nofollow noopener">Read here for how to get in touch</a>
+                    <h4 style="font-size:21px">Хочете власні домени?</h4>
+                    <p>Ви також можете купити домен або підключити вже існуючий.</p>
+                    <h4 style="margin-top:24px;margin-bottom:0">Хочете додати кількох користувачів?</h4>
+                    <a href="https://w3schools.com/" target="_blank" rel="nofollow noopener">Прочитайте тут, як зв&#8217;язатися</a>
                 </div>
             </div>
         </div>
@@ -956,8 +956,8 @@
         <div class="w3-center ws-light-green" style="margin-top: -2px;">
             <div class="w3-content">
                 <div style="padding:40px 25px 90px 25px;">
-                    <h1 style="font-weight: 900; color: #282A35;">Powerful Code Editor</h1>
-                    <h5 class="undertitle" style="color: #282A35;margin-bottom:45px;">Front-end, Back-end or Full-stack - the choice is yours</h5>
+                    <h1 style="font-weight: 900; color: #282A35;">Потужний редактор коду</h1>
+                    <h5 class="undertitle" style="color: #282A35;margin-bottom:45px;">Front-end, Back-end або Full-stack – вибір за вами</h5>
                     <img class="image w3-round window" src="../images1/dynamicspaces.gif" alt="Dynamic Spaces" style="max-width:850px;margin:20px auto;width:100%;height:auto;display:block;" loading="lazy"><br>
                 </div>
             </div>
@@ -972,8 +972,8 @@
 </div>        <div class="w3-center w3-white" id="practice">
             <div class="w3-content">
                 <div style="padding-top:70px; padding-bottom:80px;">
-                    <h1 style="font-weight: 900;">Practice Makes Perfect</h1>
-                    <h4 class="undertitle">Sharpen and Master your development skills with these technologies using <b>Spaces</b>.</h4>
+                    <h1 style="font-weight: 900;">Практика робить досконалим</h1>
+                    <h4 class="undertitle">Відточуйте та вдосконалюйте свої навички розвитку за допомогою цих технологій <b>Spaces</b>.</h4>
                     <img src="../images1/languages.png" class="window" alt="Languages" style="margin-bottom: 20px; margin-top: 30px;width:100%;max-width:550px"><br>
                     <a class="spaces-button w3-button w3-round-xxlarge ws-green ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="margin-top: 20px;">Почати зараз!</a>
                 </div>
@@ -985,30 +985,30 @@
         <div class="w3-center ws-light-green" style="margin-top: -1px;">
             <div class="w3-content">
                 <div style="padding-top:50px; padding-bottom:30px;">
-                    <h2 style="font-weight: 900;">Save Time with Templates</h2>
-                    <h4 class="undertitle">Build powerful websites in just a few clicks</h4>
+                    <h2 style="font-weight: 900;">Економте час за допомогою шаблонів</h2>
+                    <h4 class="undertitle">Створюйте потужні вебсайти всього за кілька кліків</h4>
                 </div>
                 <div class="templates">
                     <div class="templates-item w3-cell" style="flex-direction:row !important;">
                         <img src="../images1/portfolio_template.png" alt="Gamer website template" style="width:95%;height: 220px;"><br>
-                        <a class="spaces-button w3-button w3-round-xxlarge w3-border ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #D9EEE1; border-color: #04AA6D !important; border-width: 1px !important; color: #282A35; padding: 10px 45px; font-size: medium;"><b>Portfolio</b></a><br>
+                        <a class="spaces-button w3-button w3-round-xxlarge w3-border ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #D9EEE1; border-color: #04AA6D !important; border-width: 1px !important; color: #282A35; padding: 10px 45px; font-size: medium;"><b>Портфоліо</b></a><br>
                     </div>
                     <div class="templates-item w3-cell" style="flex-direction:row !important;">
                         <img src="../images1/blog_template.png" alt="Blog website template" style="width:95%;height: 220px;"><br>
-                        <a class="spaces-button w3-button w3-round-xxlarge w3-border ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #D9EEE1; border-color: #04AA6D !important; border-width: 1px !important; color: #282A35; padding: 10px 45px; font-size: medium;"><b>Blog</b></a> <br>
+                        <a class="spaces-button w3-button w3-round-xxlarge w3-border ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #D9EEE1; border-color: #04AA6D !important; border-width: 1px !important; color: #282A35; padding: 10px 45px; font-size: medium;"><b>Блог</b></a> <br>
                     </div>
                 </div>
                 <div class="templates">
                     <div class="templates-item w3-cell" style="flex-direction:row !important;">
                         <img src="../images1/webshop_template.png" alt="AI website template" style="width:95%;height: 220px;"><br>
-                        <a class="spaces-button w3-button w3-round-xxlarge w3-border ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #D9EEE1; border-color: #04AA6D !important; border-width: 1px !important; color: #282A35; padding: 10px 45px; font-size: medium;"><b>Webshop</b></a><br>
+                        <a class="spaces-button w3-button w3-round-xxlarge w3-border ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #D9EEE1; border-color: #04AA6D !important; border-width: 1px !important; color: #282A35; padding: 10px 45px; font-size: medium;"><b>Вебмагазин</b></a><br>
                     </div>
                     <div class="templates-item w3-cell" style="flex-direction:row !important;">
                         <img src="../images1/tutor_template.png" alt="Tutor website template" style="width:95%;height: 220px;"><br>
-                        <a class="spaces-button w3-button w3-round-xxlarge w3-border ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #D9EEE1; border-color: #04AA6D !important; border-width: 1px !important; color: #282A35; padding: 10px 45px; font-size: medium;"><b>Tutor</b></a><br>
+                        <a class="spaces-button w3-button w3-round-xxlarge w3-border ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #D9EEE1; border-color: #04AA6D !important; border-width: 1px !important; color: #282A35; padding: 10px 45px; font-size: medium;"><b>Підручник</b></a><br>
                     </div>
                 </div>
-                <a class="spaces-button w3-button w3-round-xxlarge w3-border ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #D9EEE1; border-color: #04AA6D !important; border-width: 1px !important; color: #282A35; padding: 10px 45px; margin: 20px; font-size: medium;">Explore All Templates</a><br>
+                <a class="spaces-button w3-button w3-round-xxlarge w3-border ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #D9EEE1; border-color: #04AA6D !important; border-width: 1px !important; color: #282A35; padding: 10px 45px; margin: 20px; font-size: medium;">Перегляньте всі шаблони</a><br>
                 <a class="spaces-button w3-button w3-round-xxlarge ws-green ws-hover-green" href="https://w3schools.com/" style="color: #fff; padding: 10px 45px; margin: 20px;">Почати зараз!</a>
             </div>
             <svg style="width: 100%; margin-bottom: -10px;" viewBox="0 0 5950 410" fill="none" xmlns="http://www.w3.org/2000/svg" id="kai-landed">
@@ -1021,8 +1021,8 @@
                     <div class="w3-row-padding">
                         <div class="w3-col kaimq w3-center">
                             <h1 style="font-weight: 900;  background: -webkit-linear-gradient(#D9EEE1, #63ADB9);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-size:85px;margin-bottom:-65px;margin-top:-10px">k<span style="font-size:150px">AI</span></h1>
-                            <p style="font-size:28px;">Just landed in <span style="color:#FFF4A3">Spaces</span></p>
-                            <p style="font-size:16px;line-height:25px;font-weight:400;margin-top:-14px">Learn to code more effectively<br> and intelligently with kAI - AI tutor</p>
+                            <p style="font-size:28px;">Щойно приземлився на <span style="color:#FFF4A3">Spaces</span></p>
+                            <p style="font-size:16px;line-height:25px;font-weight:400;margin-top:-14px">Навчіться програмувати ефективніше<br> та розумніше з kAI - викладачем штучного інтелекту</p>
                             <a class="spaces-button w3-button w3-round-xxlarge ws-green ws-hover-green" style="margin-top: 20px;" href="https://w3schools.com/" target="_blank" rel="nofollow noopener">Почати зараз!</a>
                         </div>
                         <img src="../images1/planet2.png" alt="Planet" class="kai-planet">
@@ -1031,10 +1031,10 @@
                                 <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219V8.062Zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z" />
                                 <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2V1.866ZM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5Z" />
                             </svg>
-                            <p style="color:white;font-size:14px;width:275px;padding:12px 9px;border-radius:10px;border:2px solid #059862;margin:auto;background-color:#383B4B" class="w3-mobile reveal">Hi! I'm kAI, W3Schools AI Tutor...</p>
-                            <p style="color:white;font-size:14px;width:275px;padding:12px 9px;border-radius:10px;border:2px solid #059862;margin:auto;background-color:#383B4B;" class="w3-mobile reveal">Feel free to ask me any coding-related questions, and I'll do my best to assist you.</p>
-                            <p style="color:white;font-size:14px;width:275px;padding:12px 9px;border-radius:10px;border:2px solid #059862;margin:auto;background-color:#383B4B" class="w3-mobile reveal">I can help you to check your code for errors, improve your code's structure, explain coding concepts in a clear and understandable way, and more...</p>
-                            <p style="color:white;font-size:14px;width:275px;padding:12px 9px;border-radius:10px;border:2px solid #059862;margin:auto;background-color:#383B4B" class="w3-mobile reveal">I can even create complete websites for you based on your input, so what are you waiting for?</p>
+                            <p style="color:white;font-size:14px;width:275px;padding:12px 9px;border-radius:10px;border:2px solid #059862;margin:auto;background-color:#383B4B" class="w3-mobile reveal">Привіт! Я kAI, репетитор W3Schools ШІ...</p>
+                            <p style="color:white;font-size:14px;width:275px;padding:12px 9px;border-radius:10px;border:2px solid #059862;margin:auto;background-color:#383B4B;" class="w3-mobile reveal">Не соромтеся ставити мені будь-які запитання, пов&#8217;язані з кодуванням, і я зроблю все можливе, щоб допомогти вам.</p>
+                            <p style="color:white;font-size:14px;width:275px;padding:12px 9px;border-radius:10px;border:2px solid #059862;margin:auto;background-color:#383B4B" class="w3-mobile reveal">Я можу допомогти вам перевірити ваш код на наявність помилок, покращити структуру вашого коду, пояснити концепції кодування чітким і зрозумілим способом тощо...</p>
+                            <p style="color:white;font-size:14px;width:275px;padding:12px 9px;border-radius:10px;border:2px solid #059862;margin:auto;background-color:#383B4B" class="w3-mobile reveal">Я навіть можу створити для вас повніцінні вебсайти на основі вашого введення, тож чого ви чекаєте?</p>
                         </div>
                     </div>
                 </div>
@@ -1043,15 +1043,15 @@
         <div class="w3-center ws-green" style="margin-top: -1px;">
             <div class="w3-content">
                 <div style="padding-top:50px;">
-                    <h2 style="font-weight: 900;">Super Simple to Share</h2>
+                    <h2 style="font-weight: 900;">Дуже просто поділитися</h2>
                     <h4 style="margin-top: -8px;" class="undertitle">Host and Publish Websites in no time</h4><div class="w3-center ws-green">
                         <div class="w3-center w3-content w3-row-padding">
                             <div class="text-content w3-center w3-padding-32 w3-row w3-container" style="margin-bottom: -90px !important;">
                                 <div class="feature-responsive text-domain text-padding w3-col l12 m12 s12">
-                                    <h3 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Included for free in all plans</b></h3>
-                                    <h6 class="rightside-text-padding w3-left-align" style="margin-top: -8px; margin-left: 6px;">W3Schools subdomain, hosting, and SSL certificate.</h6>
-                                    <h3 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Want custom domains?</b></h3>
-                                    <h6 class="rightside-text-padding w3-left-align" style="margin-top: -8px; margin-left: 6px;">Buy a domain or transfer an existing one and connect it to your space.</h6>
+                                    <h3 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Включено безкоштовно в усі плани</b></h3>
+                                    <h6 class="rightside-text-padding w3-left-align" style="margin-top: -8px; margin-left: 6px;">Субдомен W3Schools, хостинг і сертифікат SSL.</h6>
+                                    <h3 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Хочете власні домени?</b></h3>
+                                    <h6 class="rightside-text-padding w3-left-align" style="margin-top: -8px; margin-left: 6px;">Придбайте домен або перенесіть існуючий і підключіть його до свого простору.</h6>
                                 </div>
                                 <img class="feature-responsive image-domain w3-col l12 m12 s12 w3-image w3-center" src="../images1/domain.png" alt="Example domain" style="z-index: 1 !important;max-width:600px;">
                             </div>
@@ -1066,23 +1066,23 @@
             </svg>
             <div class="how-it-works-container row">
                 <div class="how-it-works">
-                    <h2>How it works</h2>
+                    <h2>Як це працює</h2>
                     <div>
-                        <img src="../svg/space.svg" class="window" alt="Join W3Schools - and create a space">
+                        <img src="../svg/space.svg" class="window" alt="Приєднуйтеся до W3Schools - і створіть простір">
                         <br><br>
-                        <div class="step">1. Join W3Schools<br>— and create a space</div>
+                        <div class="step">1. Приєднайтеся до W3Schools<br>— і створіть простір</div>
                         <br><br>
-                        <img src="../svg/templates.svg" class="wtf" alt="Choose a template - or start from scratch">
+                        <img src="../svg/templates.svg" class="wtf" alt="Виберіть шаблон - або почніть з нуля">
                         <br><br>
-                        <div class="step">2. Choose a template<br>— or start from scratch</div>
+                        <div class="step">2. Виберіть шаблон<br>— або почніть з нуля</div>
                         <br><br>
-                        <img src="../svg/editor.svg" class="code-paper" alt="Edit your code and make it yours">
+                        <img src="../svg/editor.svg" class="code-paper" alt="Відредагуйте свій код і зробіть його своїм">
                         <br><br>
-                        <div class="step">3. Edit code directly<br>in your browser</div>
+                        <div class="step">3. Редагуйте код безпосередньо<br>у своєму браузері</div>
                         <br><br>
-                        <img src="../svg/world.svg" class="globe" alt="Share your space with someone">
+                        <img src="../svg/world.svg" class="globe" alt="Поділіться з кимось своїм простором">
                         <br><br>
-                        <div class="step">4. Share your website<br>with the world</div>
+                        <div class="step">4. Поділіться своїм крутим вебсайтом<br>з усім світом</div>
                         <br><br>
                     </div>
                 </div>
@@ -1090,17 +1090,17 @@
         </div>
         <div class="w3-center ws-light-green" style="padding-top:50px; padding-bottom:80px;">
             <div class="w3-center w3-content w3-row-padding">
-                <h2><b>Coding Made Easy</b></h2>
-                <h6>All at your fingertips with our easy-to-use <b>code editor</b></h6>
+                <h2><b>Кодування стало простим</b></h2>
+                <h6>Усе у вас під рукою з нашим простим у використанні <b>редактором коду</b></h6>
                 <div class="w3-content info w3-left-align" style="padding-bottom:30px; padding-top:30px;">
-                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Cloud-based</b></p>
-                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Terminal & Log</b></p>
-                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">How To Libraries</b></p>
-                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Database</b></p>
-                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">File Navigator</b></p>
-                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Package Manager</b></p>
-                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Analytics</b></p>
-                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Environment Manager</b></p>
+                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Хмарний</b></p>
+                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Термінал і журнал</b></p>
+                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Бібліотеки Зробити як</b></p>
+                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">База даних</b></p>
+                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Файловий навігатор</b></p>
+                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Менеджер пакетів</b></p>
+                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Аналітика</b></p>
+                    <p class="info-item w3-cell" style="font-size: large;"><img src="../svg/check.svg" alt="Check" style="margin-bottom: 4px; padding-right: 5px;"><b style="color: #282A35;">Менеджер із середовища</b></p>
                 </div>
             </div>
             <a class="spaces-button w3-button w3-round-xxlarge ws-green ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="padding: 20px 45px">Почати зараз!</a>
@@ -1111,9 +1111,9 @@
                     <div class="public-profile w3-center w3-padding-32 w3-row w3-container">
                         <img class="w3-col l6 w3-image w3-right" src="../images1/spaces.png" alt="Spaces">
                         <div class="w3-col l6">
-                            <h6 class="w3-left-align" style="margin-left: 6px;"><b>Cloud-Based</b></h6>
-                            <h3 class="w3-left-align" style="margin-left: 6px;"><b>Save Time &amp; Money.</b></h3>
-                            <h6 class="w3-left-align text" style="margin-top: -5px; margin-left: 6px;">No installation required. Access everything in your browser. Get started in seconds.</h6>
+                            <h6 class="w3-left-align" style="margin-left: 6px;"><b>Хмарний</b></h6>
+                            <h3 class="w3-left-align" style="margin-left: 6px;"><b>Економте час і гроші.</b></h3>
+                            <h6 class="w3-left-align text" style="margin-top: -5px; margin-left: 6px;">Установка не потрібна. Доступ до всього у вашому браузері. Почніть за лічені секунди.</h6>
                             <a class="spaces-button w3-button w3-round-xxlarge ws-hover-green w3-left" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="background-color: #04AA6D; color: #fff; padding: 20px 45px">Почати зараз!</a>
                         </div>
                     </div>
@@ -1124,12 +1124,12 @@
             <div class="w3-center w3-content w3-row-padding">
                 <div class="text-content w3-center w3-padding-32 w3-row w3-container">
                     <div class="files-image feature-responsive w3-col l6 w3-center w3-auto" style="width: 50%;">
-                        <img class="feature-image w3-col l6 w3-image w3-auto w3-center" src="../images1/files.png" alt="File Navigation" style="margin-bottom: 20px; max-height: 300px; width: auto !important;">
+                        <img class="feature-image w3-col l6 w3-image w3-auto w3-center" src="../images1/files.png" alt="Файлова навігація" style="margin-bottom: 20px; max-height: 300px; width: auto !important;">
                     </div>
                     <div class="feature-responsive text-padding w3-col l6">
-                        <h6 class="rightside-text-padding w3-left-align" style="color: #282A35; margin-left: 6px;"><b>File Navigator</b></h6>
-                        <h3 class="rightside-text-padding w3-left-align" style="color: #282A35; margin-left: 6px;"><b>All Your Files in One Place.</b></h3>
-                        <h6 class="rightside-text-padding w3-left-align" style="color: #282A35; margin-top: -5px; margin-left: 6px;">Find and switch easily between your code files without leaving the code editor.</h6>
+                        <h6 class="rightside-text-padding w3-left-align" style="color: #282A35; margin-left: 6px;"><b>Файловий навігатор</b></h6>
+                        <h3 class="rightside-text-padding w3-left-align" style="color: #282A35; margin-left: 6px;"><b>Усі ваші файли в одному місці.</b></h3>
+                        <h6 class="rightside-text-padding w3-left-align" style="color: #282A35; margin-top: -5px; margin-left: 6px;">Знаходьте та легко перемикайтеся між файлами коду, не виходячи з редактора коду.</h6>
                         <a class="spaces-button w3-button w3-round-xxlarge ws-black ws-hover-black w3-left xws-margin-0-small" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="padding: 20px 45px; margin-top: 20px; margin-left: 36px;">Почати зараз!</a>
                     </div>
                 </div>
@@ -1139,11 +1139,11 @@
             <div class="w3-center w3-content w3-row-padding">
                 <div class="w3-center w3-padding-32 w3-row w3-container">
                     <div class="public-profile w3-center w3-padding-32 w3-row w3-container">
-                        <img class="feature-responsive w3-col l6 w3-image w3-right" src="../images1/debug.png" alt="Debug">
+                        <img class="feature-responsive w3-col l6 w3-image w3-right" src="../images1/debug.png" alt="Дебагінг">
                         <div class="feature-responsive w3-col l6">
-                            <h6 class="w3-left-align" style="margin-left: 6px;"><b>Terminal and Log</b></h6>
-                            <h3 class="w3-left-align" style="margin-left: 6px;"><b>Fix Your Code Faster.</b></h3>
-                            <h6 class="w3-left-align text" style="margin-top: -5px; margin-left: 6px;">Monitor your code, debug and troubleshoot your work during the development process.</h6>
+                            <h6 class="w3-left-align" style="margin-left: 6px;"><b>Термінал і журнал</b></h6>
+                            <h3 class="w3-left-align" style="margin-left: 6px;"><b>Швидше виправляйте код.</b></h3>
+                            <h6 class="w3-left-align text" style="margin-top: -5px; margin-left: 6px;">Слідкуйте за своїм кодом, налагоджуйте та виправляйте неполадки в роботі під час процесу розробки.</h6>
                             <a class="spaces-button w3-button w3-round-xxlarge ws-black ws-hover-black w3-left" href="https://w3schools.com/" style="color: #fff; padding: 10px 45px; margin-top: 20px;">Почати зараз!</a>
                         </div>
                     </div>
@@ -1153,11 +1153,11 @@
         <div class="w3-center ws-light-green" style="padding-top:50px; padding-bottom:50px;">
             <div class="w3-center w3-content w3-row-padding">
                 <div class="text-content w3-center w3-padding-32 w3-row w3-container">
-                    <img class="feature-responsive w3-col l6 w3-image w3-center" src="../images1/database.png" alt="Spaces Built-In Database">
+                    <img class="feature-responsive w3-col l6 w3-image w3-center" src="../images1/database.png" alt="Вбудована база даних Spaces">
                     <div class="feature-responsive text-padding w3-col l6">
-                        <h6 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Database</b></h6>
-                        <h3 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Get Full Data Visibility.</b></h3>
-                        <h6 class="rightside-text-padding w3-left-align" style="margin-top: -5px; margin-left: 6px;">Find and preview all the data stored in your website. Anytime, from anywhere.</h6>
+                        <h6 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>База даних</b></h6>
+                        <h3 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Отримайте повну видимість даних.</b></h3>
+                        <h6 class="rightside-text-padding w3-left-align" style="margin-top: -5px; margin-left: 6px;">Знайдіть і попередньо перегляньте всі дані, що зберігаються на вашому вебсайті. Будь-коли, з будь-якого місця.</h6>
                         <a class="spaces-button w3-button w3-round-xxlarge ws-green ws-hover-green w3-left" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="padding: 10px 45px; margin-top: 20px; margin-left: 36px;">Почати зараз!</a>
                     </div>
                 </div>
@@ -1169,9 +1169,9 @@
                     <div class="public-profile w3-center w3-padding-32 w3-row w3-container">
                         <img class="feature-responsive files-image w3-col l6 w3-image w3-right" src="../images1/env.png" alt="ENV" style="margin-bottom: 20px; max-height: 300px; width: auto !important;">
                         <div class="feature-responsive w3-col l6">
-                            <h6 class="w3-left-align" style="margin-left: 6px;"><b>Environment Manager</b></h6>
-                            <h3 class="w3-left-align" style="margin-left: 6px;"><b>Increased Control and Security.</b></h3>
-                            <h6 class="w3-left-align text" style="margin-top: -5px; margin-left: 6px;">Control your website access points to establish secure connections.</h6>
+                            <h6 class="w3-left-align" style="margin-left: 6px;"><b>Менеджер із середовища</b></h6>
+                            <h3 class="w3-left-align" style="margin-left: 6px;"><b>Покращений контроль і безпека.</b></h3>
+                            <h6 class="w3-left-align text" style="margin-top: -5px; margin-left: 6px;">Контролюйте точки доступу до свого вебсайту для встановлення безпечних з&#8217;єднань.</h6>
                             <a class="spaces-button w3-button w3-round-xxlarge ws-black ws-hover-black w3-left" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="color: #fff; padding: 10px 45px; margin-top: 20px;">Почати зараз!</a>
                         </div>
                     </div>
@@ -1181,11 +1181,11 @@
         <div class="w3-center ws-light-green" style="padding-top:50px; padding-bottom:50px;">
             <div class="w3-center w3-content w3-row-padding">
                 <div class="text-content w3-center w3-padding-32 w3-row w3-container">
-                    <img class="feature-responsive w3-col l6 w3-image w3-center" src="../images1/package.png" alt="Spaces Built-In Database">
+                    <img class="feature-responsive w3-col l6 w3-image w3-center" src="../images1/package.png" alt="Вбудована база даних Spaces">
                     <div class="feature-responsive text-padding w3-col l6">
-                        <h6 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Package Manager</b></h6>
-                        <h3 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Find What You Need Quicker.</b></h3>
-                        <h6 class="rightside-text-padding w3-left-align" style="margin-top: -5px; margin-left: 6px;">Search and install frameworks and libraries in just one click.</h6>
+                        <h6 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Менеджер пакетів</b></h6>
+                        <h3 class="rightside-text-padding w3-left-align" style="margin-left: 6px;"><b>Швидше знайдіть те, що вам потрібно.</b></h3>
+                        <h6 class="rightside-text-padding w3-left-align" style="margin-top: -5px; margin-left: 6px;">Шукайте та встановлюйте фреймворки та бібліотеки одним клацанням миші.</h6>
                         <a class="spaces-button w3-button w3-round-xxlarge ws-green ws-hover-green w3-left" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="padding: 10px 45px; margin-top: 20px; margin-left: 36px;">Почати зараз!</a>
                     </div>
                 </div>
@@ -1195,11 +1195,11 @@
             <div class="w3-center w3-content w3-row-padding">
                 <div class="w3-center w3-padding-32 w3-row w3-container">
                     <div class="public-profile w3-center w3-padding-32 w3-row w3-container">
-                        <img class="feature-responsive w3-col l6 w3-image w3-right" src="../images1/analytics.png" alt="Analytics">
+                        <img class="feature-responsive w3-col l6 w3-image w3-right" src="../images1/analytics.png" alt="Аналітика">
                         <div class="feature-responsive w3-col l6">
-                            <h6 class="w3-left-align" style="margin-left: 6px;"><b>User Analytics</b></h6>
-                            <h3 class="w3-left-align" style="margin-left: 6px;"><b>Get Traffic Insights.</b></h3>
-                            <h6 class="w3-left-align text" style="margin-top: -5px; margin-left: 6px;">Learn from your website visitors to deliver a better user experience.</h6>
+                            <h6 class="w3-left-align" style="margin-left: 6px;"><b>Аналітика користувачів</b></h6>
+                            <h3 class="w3-left-align" style="margin-left: 6px;"><b>Отримайте статистику трафіку.</b></h3>
+                            <h6 class="w3-left-align text" style="margin-top: -5px; margin-left: 6px;">Вчіться у відвідувачів вашого вебсайту, щоб забезпечити кращий досвід користувача.</h6>
                             <a class="spaces-button w3-button w3-round-xxlarge ws-black ws-hover-black w3-left" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="color: #fff; padding: 10px 45px; margin-top: 20px;">Почати зараз!</a>
                         </div>
                     </div>
@@ -1213,8 +1213,8 @@
                 </svg>
                 <div class="w3-content">
                     <div class="title" style="padding-top:160px; padding-bottom: 150px;">
-                        <h2 style="color: #fff;"><b>Get Inspired</b></h2>
-                        <h4 class="undertitle" style="color: #fff;"><b>Connect</b> and <b>share</b> your website with the community to get instant feedback</h4>
+                        <h2 style="color: #fff;"><b>НадихАтись</b></h2>
+                        <h4 class="undertitle" style="color: #fff;"><b>Підключіться</b> та <b>поділіться</b> своїм вебсайтом зі спільнотою, щоб отримати миттєвий відгук</h4>
                         <a class="spaces-button responsive-margin w3-button w3-round-xxlarge ws-green ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="padding: 10px 45px; margin-top: 20px; margin-left: 36px;">Почати зараз!</a>
                     </div>
                 </div>
@@ -1229,31 +1229,31 @@
         <div class="w3-center ws-black" style="margin-top: -1px;">
             <div class="w3-center w3-content">
                 <div class="faq w3-center w3-content" style="padding-top: 55px;">
-                    <h2 style="color: #ffc0c7;"><b>Frequently Asked Questions</b></h2><br>
-                    <button class="accordion" style="display: flex; flex-direction: row;"><img alt="Icon" class="faq-icon" src="../svg/chevron-down.svg"> &nbsp; &nbsp; <b style="padding-top: 2px;">What's the difference between 'Basic' and 'Full Stack' Spaces?</b></button>
+                    <h2 style="color: #ffc0c7;"><b>Питання що часто задаються</b></h2><br>
+                    <button class="accordion" style="display: flex; flex-direction: row;"><img alt="Icon" class="faq-icon" src="../svg/chevron-down.svg"> &nbsp; &nbsp; <b style="padding-top: 2px;">У чому різниця між просторами «Basic» і «Full Stack»?</b></button>
                     <div class="panel">
-                        <p>With Basic Spaces, you can build frontend websites. Whereas with Fullstack Spaces, you can build frontend and backend websites.</p>
+                        <p>За допомогою Basic Spaces ви можете створювати зовнішні вебсайти. Тоді як за допомогою Fullstack Spaces ви можете створювати зовнішні та внутрішні вебсайти.</p>
                     </div>
-                    <button class="accordion" style="display: flex; flex-direction: row;"><img alt="Icon" class="faq-icon" src="../svg/chevron-down.svg"> &nbsp; &nbsp; <b style="padding-top: 2px;">Which programming languages are included in 'Basic' and 'Full Stack' Spaces?</b></button>
+                    <button class="accordion" style="display: flex; flex-direction: row;"><img alt="Icon" class="faq-icon" src="../svg/chevron-down.svg"> &nbsp; &nbsp; <b style="padding-top: 2px;">Які мови програмування входять до просторів «Basic» і «Full Stack»?</b></button>
                     <div class="panel">
-                        <p>Basic Spaces include HTML, CSS, and Javascript. Full Stack Spaces include everything in Basic Spaces plus PHP, Python, React.js, Vue.js, Node.js, Handlebars, and Django.</p>
+                        <p>Базові простори включають HTML, CSS і Javascript. Full Stack Spaces включає все в Basic Spaces, а також PHP, Python, React.js, Vue.js, Node.js, Handlebars та Django.</p>
                     </div>
-                    <button class="accordion" style="display: flex; flex-direction: row;"><img alt="Icon" class="faq-icon" src="../svg/chevron-down.svg"> &nbsp; &nbsp; <b style="padding-top: 2px;">How are subscriptions renewed?</b></button>
+                    <button class="accordion" style="display: flex; flex-direction: row;"><img alt="Icon" class="faq-icon" src="../svg/chevron-down.svg"> &nbsp; &nbsp; <b style="padding-top: 2px;">Як поновлюються підписки?</b></button>
                     <div class="panel">
-                        <p>Your subscription will be automatically renewed every month.</p>
+                        <p>Ваша підписка буде автоматично поновлюватися щомісяця.</p>
                     </div>
-                    <button class="accordion" style="display: flex; flex-direction: row;"><img alt="Icon" class="faq-icon" src="../svg/chevron-down.svg"> &nbsp; &nbsp; <b style="padding-top: 2px;">What happens if I cancel my subscription?</b></button>
+                    <button class="accordion" style="display: flex; flex-direction: row;"><img alt="Icon" class="faq-icon" src="../svg/chevron-down.svg"> &nbsp; &nbsp; <b style="padding-top: 2px;">Що станеться, якщо я скасую свою підписку?</b></button>
                     <div class="panel">
-                        <p>Your access to all the benefits for the paid period of time will continue. However, the subscription will not be renewed automatically.</p>
+                        <p>Ваш доступ до всіх переваг протягом оплаченого періоду часу буде продовжено. Однак підписка не буде продовжена автоматично.</p>
                     </div>
-                    <button class="accordion" style="display: flex; flex-direction: row;"><img alt="Icon" class="faq-icon" src="../svg/chevron-down.svg"> &nbsp; &nbsp; <b style="padding-top: 2px;">Can I subscribe to multiple accounts at once?</b></button>
+                    <button class="accordion" style="display: flex; flex-direction: row;"><img alt="Icon" class="faq-icon" src="../svg/chevron-down.svg"> &nbsp; &nbsp; <b style="padding-top: 2px;">Чи можу я підписатися на кілька акаунтів одночасно?</b></button>
                     <div class="panel">
-                        <p>To subscribe to W3Schools accounts for multiple users, you can contact sales@w3schools.com</p>
+                        <p>Щоб підписатися на облікові записи W3Schools для кількох користувачів, ви можете зв&#8217;язатися за адресою sales@w3schools.com</p>
                     </div>
                 </div>
-                <h4 class="undertitle" style="color: #fff;">Have some other questions? <a href="https://support.w3schools.com/hc/en-gb" target="_blank" rel="nofollow noopener">Visit our support page</a></h4>
-                <a class="spaces-button w3-button w3-round-xxlarge ws-green ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="padding: 10px 45px; margin-top: 20px;margin-bottom:20px">Subscribe for $4.99/month</a>
-                <h6 style="color: #fff;">Cancel anytime.</h6><br>
+                <h4 class="undertitle" style="color: #fff;">Маєте ще запитання? <a href="https://support.w3schools.com/hc/en-gb" target="_blank" rel="nofollow noopener">Відвідайте нашу сторінку підтримки</a></h4>
+                <a class="spaces-button w3-button w3-round-xxlarge ws-green ws-hover-green" href="https://w3schools.com/" target="_blank" rel="nofollow noopener" style="padding: 10px 45px; margin-top: 20px;margin-bottom:20px">Підпишіться за $4,99/міс</a>
+                <h6 style="color: #fff;">Ви можете скасувати підписку будь-коли.</h6><br>
             </div>
         </div>
         <script>
@@ -1286,8 +1286,8 @@
     </div>
     <br>
     <div class="w3-clear nextprev w3-center">
-        <a class="w3-left w3-btn" href="django_quiz_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="django_exam_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="django_quiz.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="django_exam.html">Next &#10095;</a>
     </div>
 </article>
 <hr>
