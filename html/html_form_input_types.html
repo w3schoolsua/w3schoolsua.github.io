@@ -41,8 +41,8 @@
             "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
         ]
     }
-</script><title>HTML Форми. Типи введення. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='HTML Форми. Типи введення. Input type. Які існують типи введення? Як створити форму на сайті? Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
+</script><title>HTML Форми. Типи введення. Приклади. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='HTML Форми. Типи введення. Input type. Які існують типи введення? Як створити форму на сайті? Приклади. Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -484,6 +484,8 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index.html'><img src='../svg/HTML5_icon.svg' alt='HTML5. Уроки для початківців. W3Schools українською' class='w3-left' title='Уроки HTML5 для початківців. W3Schools українською' style='width:90px'></a><p class='w3-right'>
     <a href="html_form_input_types_en.html" title='Перейти на англійську мову'>En</a>
+    <a href='html_form_input_types_es.html' title='Перейти на іспанську мову'>Es</a>
+    <a href='html_form_input_types_de.html' title='Перейти на німецьку мову'>De</a>
 </p>
   <article>
     <h1>HTML <span class="color_h1">Типи введення</span></h1>
@@ -496,7 +498,7 @@
     <p>В перекладі з анг. input - ввод, введення (даних); type - тип (даних).</p>
     <hr>
     <h2>HTML Типи введення</h2>
-    <p>Тут різні <strong>типи вводу</strong>, які ви можете використовувати в <strong>HTML</strong>:</p>
+    <p>Тут різні <strong>типи введення</strong>, які ви можете використовувати в <strong>HTML</strong>:</p>
     <ul>
       <li><code class="w3-codespan">&lt;input type=&quot;button&quot;&gt;</code></li>
       <li><code class="w3-codespan">&lt;input type=&quot;checkbox&quot;&gt;</code></li>
@@ -550,15 +552,19 @@
     </div>
     <p>Ось як HTML-код вище буде відображатись в браузері:</p>
     Ім&rsquo;я користувача:<br>
-    <input type="text"><br>
+      <label>
+          <input type="text">
+      </label><br>
     Пароль користувача:<br>
-    <input type="password">
-    <div class="w3-panel w3-note">
+      <label>
+          <input type="password">
+      </label>
+      <div class="w3-panel w3-note">
       <p>Спробуйте заповнити поля! Символи в полі пароля маскуються (відображаються у вигляді зірочок або кульок).</p>
     </div>
     <hr>
     <h2>Input Type Submit - Тип введення Submit (Надіслати)</h2>
-    <p><code class="w3-codespan">&lt;input type="submit"&gt;</code> визначає кнопку для <strong>відправки</strong> даних форми в <strong>обробник форм</strong>.</p>
+    <p><code class="w3-codespan">&lt;input type="submit"&gt;</code> визначає кнопку для <strong>надсилання</strong> даних форми в <strong>обробник форм</strong>.</p>
     <p>Обробник форм зазвичай являє собою серверну сторінку зі скриптом для обробки вхідних даних.</p>
     <p>Обробник форми вказується в атрибуті <code class="w3-codespan">action</code>:</p>
     <div class="w3-example">
@@ -571,10 +577,14 @@
     <p>Ось як HTML-код вище буде відображатись в браузері:</p>
     <form action="https://www.w3schools.com/action_page.html" target="_blank">
       Ім&rsquo;я:<br>
-      <input type="text" name="firstname" value="Mickey"><br>
+        <label>
+            <input type="text" name="firstname" value="Mickey">
+        </label><br>
       Прізвище:<br>
-      <input type="text" name="lastname" value="Mouse">
-      <br><br>
+        <label>
+            <input type="text" name="lastname" value="Mouse">
+        </label>
+        <br><br>
       <input type="submit" value="Надіслати">
     </form>
     <p>Якщо ви опустите атрибут значення кнопки відправки, кнопка отримає текст за замовчуванням:</p>
@@ -598,10 +608,14 @@
     <p>Ось як HTML-код вище буде відображатись в браузері:</p>
     <form action="https://www.w3schools.com/action_page.html" target="_blank">
       Ім&rsquo;я:<br>
-      <input type="text" name="firstname0" value="Mickey"><br>
+        <label>
+            <input type="text" name="firstname0" value="Mickey">
+        </label><br>
       Прізвище:<br>
-      <input type="text" name="lastname0" value="Mouse">
-      <br><br>
+        <label>
+            <input type="text" name="lastname0" value="Mouse">
+        </label>
+        <br><br>
       <input type="submit" value="Надіслати">
       <input type="reset">
     </form>
@@ -610,8 +624,8 @@
     </div>
     <hr>
     <h2>Input Type Radio - Тип введення Radio (радіо-кнопка)</h2>
-    <p><code class="w3-codespan">&lt;input type=&quot;radio&quot;&gt;</code> визначає <strong>радіо-кнопку</strong>.</p>
-    <p>Перемикачі (радіо-кнопки) дозволяють користувачу обрати ЛИШЕ ОДИН із обмеженої кількості варіантів:</p>
+    <p><code class="w3-codespan">&lt;input type=&quot;radio&quot;&gt;</code> визначає <strong>радіокнопку</strong>.</p>
+    <p>Перемикачі (радіокнопки) дозволяють користувачу обрати ЛИШЕ ОДИН із обмеженої кількості варіантів:</p>
     <div class="w3-example">
       <h3>Приклад</h3>
       <div class="w3-code notranslate htmlHigh">
@@ -620,9 +634,15 @@
       <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml_input_radio.html" target="_blank">Спробуйте самі &raquo;</a>
     </div>
     <p>Ось як HTML-код вище буде відображатись в браузері:</p>
-    <input type="radio" name="gender" value="V1" checked> Чоловік<br>
-    <input type="radio" name="gender" value="V2"> Жінка<br>
-    <input type="radio" name="gender" value="V3"> Інше
+      <label>
+          <input type="radio" name="gender" value="V1" checked>
+      </label> Чоловік<br>
+      <label>
+          <input type="radio" name="gender" value="V2">
+      </label> Жінка<br>
+      <label>
+          <input type="radio" name="gender" value="V3">
+      </label> Інше
     <hr>
     <h2>Input Type Checkbox - Тип введення Checkbox (Прапорець)</h2>
     <p><code class="w3-codespan">&lt;input type=&quot;checkbox&quot;&gt;</code> визначає <strong>прапорець</strong>.</p>
@@ -635,10 +655,18 @@
       <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml_input_checkbox.html" target="_blank">Спробуйте самі &raquo;</a>
     </div>
     <p>Ось як HTML-код вище буде відображатись в браузері:</p>
-    <input type="checkbox" name="vehicle1" value="Bike"> Я маю байк<br>
-    <input type="checkbox" name="vehicle2" value="Car"> Я маю авто
+      <label>
+          <input type="checkbox" name="vehicle1" value="Bike">
+      </label> Я маю байк<br>
+      <label>
+          <input type="checkbox" name="vehicle2" value="Car">
+      </label> Я маю авто
     <hr>
-    <h2>Input Type Button - Тип введення Button (Кнопка)</h2>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Input Type Button - Тип введення Button (Кнопка)</h2>
     <p><code class="w3-codespan">&lt;input type=&quot;button&quot;&gt;</code> визначає <strong>кнопку</strong>:</p>
     <div class="w3-example">
       <h3>Приклад</h3>
@@ -794,7 +822,11 @@
       <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml_input_number.html" target="_blank">Спробуйте самі &raquo;</a>
     </div>
     <hr>
-    <h2>Обмеження на ввод</h2>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Обмеження на ввод</h2>
     <p>Список деяких загальних обмежень вводу:</p>
     <table class="w3-table-all notranslate">
       <tr>
@@ -957,14 +989,14 @@
     <hr>
     <h2>HTML Вправи</h2>
     <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_form_input_types1" method="post" target="_blank">
-      <h2 class="shadow-black-1">Перевірте себе за допомогою вправ</h2>
+      <h2 title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
       <div class="exercisewindow">
         <h2>Вправа:</h2>
         <p>В наведеній нижче формі додайте поле вводу для текста з іменем "username".</p>
         <div class="exerciseprecontainer">
           &lt;form action="/action_page.html"&gt;
           <br>
-          &lt;<input name="ex1" spellcheck="false" maxlength="33" style="width: 333px;">&gt;
+          &lt;<input name="ex1" aria-label='Приклад' spellcheck="false" maxlength="33" style="width: 333px;">&gt;
           <br>
           &lt;/form&gt;
         </div>
@@ -990,13 +1022,34 @@
       <a class="w3-right w3-btn" href="html_form_attributes.html">Next &#10095;</a>
     </div>
   </article>
+<hr>
+<div class="disqus">
+    <h4 title="Прочитайте перед тим, як писати коментар!"><span class="predisqus-comment">&#x270D;</span> Коментарі</h4>
+    <iframe class="predisqus-frame" src="../pages/predisqus.html" title="Прочитайте!"></iframe>
+    <!--Коментарі Disqus-->
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function() {
+            this.page.url = w3schoolsua.github.io; // канонічна URL сторінки
+            this.page.identifier = w3schoolsua.github.io / html / html_form_input_types.html; // унікальний id сторінки
+        };
+        (function() { // Нижче не редагувати
+            var d = document, s = d.createElement('script');
+            s.src = 'https://w3schoolsua-1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Будь ласка, увімкніть JavaScript, щоб переглянути <a href="https://disqus.com/?ref_noscript">коментарі Disqus.</a></noscript>
+    <!--/Коментарі Disqus-->
+</div>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-  </div>
+</div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection w3-border' style='padding-bottom: 5px'>
@@ -1010,11 +1063,16 @@
         <div class='w3-border'>
             <a href='../html/index.html' class='btn-rightbar'>HTML</a>
             <a href='../css/index.html' class='btn-rightbar'>CSS</a>
-            <a href='../js/index.html' class='btn-rightbar'>JavaScript</a>
-            <a href='../css/css_rwd_intro.html' class='btn-rightbar'>Адаптив.веб-дизайн</a>
+            <a href='../css/css_rwd_intro.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index.html' class='btn-rightbar'>Кольори</a>
+            <a href='../icons/index.html' class='btn-rightbar'>Іконки</a>
             <a href='../graphics/index.html' class='btn-rightbar'>Графіка</a>
             <a href='../graphics/svg_intro.html' class='btn-rightbar'>Графіка SVG</a>
             <a href='../graphics/canvas_intro.html' class='btn-rightbar'>Графіка Canvas</a>
+            <a href='../howto/index.html' class='btn-rightbar'>Як зробити?</a>
+            <a href='../sass/index.html' class='btn-rightbar'>Sass</a>
         </div>
     </div>
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
@@ -1023,20 +1081,38 @@
         </div>
         <div class='w3-border'>
             <a href='../tags/index.html' class='btn-rightbar'>HTML-теги</a>
+            <a href='../tags/ref_html_browsersupport.html' class='btn-rightbar'>Підтримка браузерами</a>
             <a href='../tags/ref_attributes.html' class='btn-rightbar'>HTML-атрибути</a>
             <a href='../tags/ref_standardattributes.html' class='btn-rightbar'>Глобальні атрибути</a>
             <a href='../tags/ref_eventattributes.html' class='btn-rightbar'>Атрибути подій</a>
             <a href='../tags/ref_colornames.html' class='btn-rightbar'>HTML-кольори</a>
             <a href='../tags/ref_canvas.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom.html' class='btn-rightbar'>Аудіо-Відео</a>
             <a href='../tags/ref_charactersets.html' class='btn-rightbar'>Набори символів</a>
             <a href='../tags/ref_html_dtd.html' class='btn-rightbar'>DOCTYPE</a>
             <a href='../tags/ref_urlencode.html' class='btn-rightbar'>URL-кодування</a>
             <a href='../tags/ref_language_codes.html' class='btn-rightbar'>Коди мов</a>
             <a href='../tags/ref_country_codes.html' class='btn-rightbar'>Коди країн</a>
+            <a href='../tags/ref_httpmessages.html' class='btn-rightbar'>HTTP повідомлення</a>
+            <a href='../tags/ref_httpmethods.html' class='btn-rightbar'>HTTP методи</a>
             <a href='../tags/ref_pxtoemconversion.html' class='btn-rightbar'>Конвертер Px в Em</a>
+            <a href='../tags/ref_keyboardshortcuts.html' class='btn-rightbar'>Гарячі клавіші</a>
         </div>
     </div>
-  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">HTML Кодування</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../charsets/index.html' class='btn-rightbar'>Набори символів</a>
+            <a href='../charsets/ref_html_ascii.html' class='btn-rightbar'>ASCII Довідник</a>
+            <a href='../charsets/ref_html_ansi.html' class='btn-rightbar'>Win-1252 (ANSI)</a>
+            <a href='../charsets/ref_html_8859.html' class='btn-rightbar'>ISO-8859-1</a>
+            <a href='../charsets/ref_html_symbols.html' class='btn-rightbar'>HTML Символи</a>
+            <a href='../charsets/ref_html_utf8.html' class='btn-rightbar'>Unicode (UTF-8)</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
 <div class="adver2">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- admedia_vertical_rightbar -->
