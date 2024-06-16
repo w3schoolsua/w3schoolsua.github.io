@@ -41,9 +41,13 @@
             "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
         ]
     }
-</script>  <title>HTML5 Server-Sent Events. Події, відправлені сервером. Уроки для початківців. W3Schools українською</title>
-  <meta name='description' content='HTML5 Server-sent events. Події, відправлені сервером. Для чого вони потрібні? Як використовують SSE? Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
-  <link rel='stylesheet' href='../styles/browserref.css'>
+</script><title>HTML5 Server-Sent Events. Події, відправлені сервером. Приклади. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='HTML5 Server-sent events. Події, відправлені сервером. Для чого вони потрібні? Як використовують SSE? Приклади. Основи програмування та веб-розробки. Безплатні курси W3Schools для новачків'>
+<link rel='stylesheet' href='../styles/browserref.css'>
+<style>
+    .spes_asp {color:brown;}
+    body.darktheme .spes_asp {color:#ff9999;}
+</style>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -483,10 +487,12 @@
     <!-- adup_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>            <a href='index.html'><img src='../svg/HTML5_icon.svg' alt='HTML5. Уроки для початківців. W3Schools українською' class='w3-left' title='Уроки HTML5 для початківців. W3Schools українською' style='width:90px'></a>    <p class='w3-right'>
-        <a href="html5_serversentevents_en.html" title='Перейти на англійську мову'>En</a>
-    </p>
-  <article>
+</div>            <a href='index.html'><img src='../svg/HTML5_icon.svg' alt='HTML5. Уроки для початківців. W3Schools українською' class='w3-left' title='Уроки HTML5 для початківців. W3Schools українською' style='width:90px'></a><p class='w3-right'>
+    <a href="html5_serversentevents_en.html" title='Перейти на англійську мову'>En</a>
+    <a href='html5_serversentevents_es.html' title='Перейти на іспанську мову'>Es</a>
+    <a href='html5_serversentevents_de.html' title='Перейти на німецьку мову'>De</a>
+</p>
+<article>
     <h1>HTML5 <span class='color_h1'>Події, відправлені сервером</span></h1>
     <div class='w3-clear nextprev'>
       <a class='w3-left w3-btn' href='html5_webworkers.html'>&#10094; Prev</a>
@@ -522,8 +528,11 @@
       </tr>
     </table>
     <hr>
-
-    <h2>Отримувати сповіщення про відправлені сервером події</h2>
+    <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Отримувати сповіщення про відправлені сервером події</h2>
     <p>Об&#8217;єкт EventSource використовується для отримання повідомлень про події, які відправляються сервером:</p>
     <div class='w3-example'>
       <h3>Приклад</h3>
@@ -551,31 +560,29 @@
       </div>
     </div>
     <hr>
-
-    <h2>Приклад коду на стороні сервера</h2>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Приклад коду на стороні сервера</h2>
     <p>Для наведеного вище прикладу потрібен сервер, який може відправляти оновлення даних (наприклад, PHP або ASP).</p>
     <p>Синтаксис потоку подій на стороні сервера простий. Встановіть заголовок &quot;Content-Type&quot; на &quot;text/event-stream&quot;. Тепер ви можете почати відправляти потоки подій.</p>
     <p>Код на PHP (demo_sse.html):</p>
-    <div class='w3-code w3-border notranslate htmlHigh'><div>
-        &lt;?php<br>header('Content-Type: text/event-stream');<br>
-        header('Cache-Control: no-cache');<br><br>$time = date('r');<br>echo &quot;data: The server time is: {$time}\n\n&quot;;<br>flush();<br>?&gt;
-      </div></div>
-
+    <div class='w3-code w3-border notranslate htmlHigh'>
+        <div>&lt;?php<br>header('Content-Type: text/event-stream');<br>header('Cache-Control: no-cache');<br><br>$time = date('r');<br>echo &quot;data: The server time is: {$time}\n\n&quot;;<br>flush();<br>?&gt;</div>
+    </div>
     <p>Код на ASP (VB) (demo_sse.asp):</p>
-    <div class='w3-code w3-border notranslate' style='color:brown;'><div>
-        &lt;%<br>Response.ContentType = &quot;text/event-stream&quot;<br>Response.Expires = -1<br>
-        Response.Write(&quot;data: The server time is: &quot; &amp; now())<br>Response.Flush()<br>%&gt;
-      </div></div>
-
+      <div class="w3-code w3-border notranslate spes_asp">
+          <div>&lt;%<br>Response.ContentType = "text/event-stream"<br>Response.Expires = -1<br>Response.Write("data: The server time is: " &amp; now())<br>Response.Flush()<br>%&gt;</div>
+      </div>
     <p>Пояснення коду:</p>
     <ul>
       <li>Встановіть заголовок &quot;Content-Type&quot; в &quot;text/event-stream&quot;</li>
       <li>Вкажіть, що сторінка не повинна кешируватись (not cache)</li>
       <li>Виведіть дані, які необхідно відправити. (<b>Завжди</b> потрібно починати з &quot;data: &quot;)</li>
-      <li>Скиньте вихідні дані назад на веб-сторінку</li>
+      <li>Скиньте вихідні дані назад на вебсторінку</li>
     </ul>
     <hr>
-
     <h2>Об&#8217;єкт EventSource</h2>
     <p>В наведених вище прикладах ми використовували подію <em>onmessage</em> для отримання повідомлень. Але доступні й інші події:
     <table class='w3-table-all notranslate'>
@@ -601,14 +608,35 @@
       <a class='w3-left w3-btn' href='html5_webworkers.html'>&#10094; Prev</a>
       <a class='w3-right w3-btn' href='html_examples.html'>Next &#10095;</a>
     </div>
-  </article>
+</article>
+<hr>
+<div class="disqus">
+    <h4 title="Прочитайте перед тим, як писати коментар!"><span class="predisqus-comment">&#x270D;</span> Коментарі</h4>
+    <iframe class="predisqus-frame" src="../pages/predisqus.html" title="Прочитайте!"></iframe>
+    <!--Коментарі Disqus-->
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function() {
+            this.page.url = w3schoolsua.github.io; // канонічна URL сторінки
+            this.page.identifier = w3schoolsua.github.io / html / html5_serversentevents.html; // унікальний id сторінки
+        };
+        (function() { // Нижче не редагувати
+            var d = document, s = d.createElement('script');
+            s.src = 'https://w3schoolsua-1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Будь ласка, увімкніть JavaScript, щоб переглянути <a href="https://disqus.com/?ref_noscript">коментарі Disqus.</a></noscript>
+    <!--/Коментарі Disqus-->
+</div>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-  </div>
+</div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection w3-border' style='padding-bottom: 5px'>
@@ -622,11 +650,16 @@
         <div class='w3-border'>
             <a href='../html/index.html' class='btn-rightbar'>HTML</a>
             <a href='../css/index.html' class='btn-rightbar'>CSS</a>
-            <a href='../js/index.html' class='btn-rightbar'>JavaScript</a>
-            <a href='../css/css_rwd_intro.html' class='btn-rightbar'>Адаптив.веб-дизайн</a>
+            <a href='../css/css_rwd_intro.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index.html' class='btn-rightbar'>Кольори</a>
+            <a href='../icons/index.html' class='btn-rightbar'>Іконки</a>
             <a href='../graphics/index.html' class='btn-rightbar'>Графіка</a>
             <a href='../graphics/svg_intro.html' class='btn-rightbar'>Графіка SVG</a>
             <a href='../graphics/canvas_intro.html' class='btn-rightbar'>Графіка Canvas</a>
+            <a href='../howto/index.html' class='btn-rightbar'>Як зробити?</a>
+            <a href='../sass/index.html' class='btn-rightbar'>Sass</a>
         </div>
     </div>
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
@@ -635,20 +668,38 @@
         </div>
         <div class='w3-border'>
             <a href='../tags/index.html' class='btn-rightbar'>HTML-теги</a>
+            <a href='../tags/ref_html_browsersupport.html' class='btn-rightbar'>Підтримка браузерами</a>
             <a href='../tags/ref_attributes.html' class='btn-rightbar'>HTML-атрибути</a>
             <a href='../tags/ref_standardattributes.html' class='btn-rightbar'>Глобальні атрибути</a>
             <a href='../tags/ref_eventattributes.html' class='btn-rightbar'>Атрибути подій</a>
             <a href='../tags/ref_colornames.html' class='btn-rightbar'>HTML-кольори</a>
             <a href='../tags/ref_canvas.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom.html' class='btn-rightbar'>Аудіо-Відео</a>
             <a href='../tags/ref_charactersets.html' class='btn-rightbar'>Набори символів</a>
             <a href='../tags/ref_html_dtd.html' class='btn-rightbar'>DOCTYPE</a>
             <a href='../tags/ref_urlencode.html' class='btn-rightbar'>URL-кодування</a>
             <a href='../tags/ref_language_codes.html' class='btn-rightbar'>Коди мов</a>
             <a href='../tags/ref_country_codes.html' class='btn-rightbar'>Коди країн</a>
+            <a href='../tags/ref_httpmessages.html' class='btn-rightbar'>HTTP повідомлення</a>
+            <a href='../tags/ref_httpmethods.html' class='btn-rightbar'>HTTP методи</a>
             <a href='../tags/ref_pxtoemconversion.html' class='btn-rightbar'>Конвертер Px в Em</a>
+            <a href='../tags/ref_keyboardshortcuts.html' class='btn-rightbar'>Гарячі клавіші</a>
         </div>
     </div>
-  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">HTML Кодування</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../charsets/index.html' class='btn-rightbar'>Набори символів</a>
+            <a href='../charsets/ref_html_ascii.html' class='btn-rightbar'>ASCII Довідник</a>
+            <a href='../charsets/ref_html_ansi.html' class='btn-rightbar'>Win-1252 (ANSI)</a>
+            <a href='../charsets/ref_html_8859.html' class='btn-rightbar'>ISO-8859-1</a>
+            <a href='../charsets/ref_html_symbols.html' class='btn-rightbar'>HTML Символи</a>
+            <a href='../charsets/ref_html_utf8.html' class='btn-rightbar'>Unicode (UTF-8)</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
 <div class="adver2">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- admedia_vertical_rightbar -->
@@ -784,9 +835,12 @@
   </div>
   <hr>
   <div class='w3-center w3-small w3-opacity'>Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали й прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
-    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
-    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
-    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br>
+    Також доступні версії сайту іншими мовами:
+    <a href='../index_en.html' title='W3Schools англійською'><strong>англійською</strong></a>,
+    <a href='../index_es.html' title='W3Schools іспанською'><strong>іспанською</strong></a>,
+    <a href='../index_de.html' title='W3Schools німецькою'><strong>німецькою</strong></a>.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2025</a> by Refsnes Data. All Rights Reserved.
+    Сайт створений і працює на фреймворку <a href='../w3css/index.html'>W3.CSS</a>.<br>
     Ви можете використовувати інші авторитетні ресурси по навчанню веб-розробці та програмуванню:<br>
       <a href='https://www.udemy.com/' target='_blank' rel='noopener'>Udemy</a>&nbsp;|&nbsp;
       <a href='https://www.codecademy.com/' target='_blank' rel='noopener'>Codecademy</a>&nbsp;|&nbsp;

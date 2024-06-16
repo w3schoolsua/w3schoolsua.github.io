@@ -46,6 +46,10 @@
 </script><title>HTML5 Server-Sent Events - SSE. Lessons for beginners. W3Schools in English</title>
 <meta name='description' content='HTML5 Server-Sent Events - SSE. One Way Messaging. Receive Server-Sent Event Notifications. Check Server-Sent Events Support. Server-Side Code Example. The EventSource Object. Lessons for beginners. W3Schools in English'>
 <link rel='stylesheet' href='../styles/browserref.css'>
+<style>
+    .spes_asp {color:brown;}
+    body.darktheme .spes_asp {color:#ff9999;}
+</style>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
@@ -478,7 +482,9 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index_en.html'><img src='../svg/html5_icon1.svg' alt='HTML5 Lessons for beginners ' class='w3-left' title='HTML5 for beginners. W3Schools in English' style='width: 70px; padding: 10px'></a><p class='w3-right'>
-    <a href='html5_serversentevents.html' title='Go to Ukrainian language'>Ua</a>
+    <a href='html5_serversentevents.html' title='Switch to Ukrainian'>Ua</a>
+    <a href="html5_serversentevents_es.html" title='Switch to Spanish'>Es</a>
+    <a href="html5_serversentevents_de.html" title='Switch to German'>De</a>
 </p>
 <article>
     <h1>HTML <span class="color_h1">SSE API</span></h1>
@@ -489,12 +495,11 @@
     <hr>
     <p class="intro"><strong>Server-Sent Events (SSE)</strong> allow a web page to get updates from a server.</p>
     <hr>
-    <h2>Server-Sent Events - One Way Messaging</h2>
+    <h2>Server-Sent Events — One Way Messaging</h2>
     <p>A server-sent event is when a web page automatically gets updates from a server.</p>
     <p>This was also possible before, but the web page would have to ask if any updates were available. With server-sent events, the updates come automatically.</p>
     <p>Examples: Facebook/Twitter updates, stock price updates, news feeds, sport results, etc.</p>
     <hr>
-
     <h2>Browser Support</h2>
     <p>The numbers in the table specify the first browser version that fully support server-sent events.</p>
     <table class="browserref notranslate">
@@ -516,7 +521,11 @@
         </tr>
     </table>
     <hr>
-    <h2>Receive Server-Sent Event Notifications</h2>
+    <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Receive Server-Sent Event Notifications</h2>
     <p>The EventSource object is used to receive server-sent event notifications:</p>
     <div class="w3-example">
         <h3>Example</h3>
@@ -532,9 +541,8 @@
         <li>When an onmessage event occurs, put the received data into the element with id=&quot;result&quot;</li>
     </ul>
     <hr>
-
     <h2>Check Server-Sent Events Support</h2>
-    <p>In the tryit example above there were some extra lines of code to check browser support for server-sent events:</p>
+    <p>In the tryit example above, there were some extra lines of code to check browser support for server-sent events:</p>
     <div class="w3-code w3-border notranslate jsHigh"><div>
             if(typeof(EventSource) !== &quot;undefined&quot;) {<br>
             &nbsp; // Yes! Server-sent events support!<br>
@@ -543,8 +551,11 @@
         </div>
     </div>
     <hr>
-
-    <h2>Server-Side Code Example</h2>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Server-Side Code Example</h2>
     <p>For the example above to work, you need a server capable of sending data updates (like PHP or ASP).</p>
     <p>The server-side event stream syntax is simple. Set the &quot;Content-Type&quot; header to &quot;text/event-stream&quot;. Now you can start sending event streams.</p>
     <p>Code in PHP (demo_sse.html):</p>
@@ -555,9 +566,8 @@
         </div>
     </div>
     <p>Code in ASP (VB) (demo_sse.asp):</p>
-    <div class="w3-code w3-border notranslate spes_asp"><div>
-            &lt;%<br>Response.ContentType = &quot;text/event-stream&quot;<br>Response.Expires = -1<br>Response.Write(&quot;data: The server time is: &quot; &amp; now())<br>Response.Flush()<br>%&gt;
-        </div>
+    <div class="w3-code w3-border notranslate spes_asp">
+        <div>&lt;%<br>Response.ContentType = "text/event-stream"<br>Response.Expires = -1<br>Response.Write("data: The server time is: " &amp; now())<br>Response.Flush()<br>%&gt;</div>
     </div>
     <p>Code explained:</p>
     <ul>
@@ -568,7 +578,7 @@
     </ul>
     <hr>
     <h2>The EventSource Object</h2>
-    <p>In the examples above we used the onmessage event to get messages. But other events are also available:</p>
+    <p>In the examples above, we used the onmessage event to get messages. But other events are also available:</p>
     <table class="ws-table-all notranslate">
         <tr>
             <th style="width:20%">Events</th>
@@ -593,6 +603,27 @@
         <a class="w3-right w3-btn" href="html_examples_en.html">Next &#10095;</a>
     </div>
 </article>
+<hr>
+<div class="disqus">
+    <h4 title="Read before you write a comment!"><span class="predisqus-comment">&#x270D;</span> Comments</h4>
+    <iframe class="predisqus-frame" src="../pages/predisqus_en.html" title="Read it!"></iframe>
+    <!--Коментарі DisqusEN-->
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function() {
+            this.page.url = w3schoolsua.github.io; // канонічна URL сторінки
+            this.page.identifier = w3schoolsua.github.io / html / html5_serversentevents_en.html; // унікальний id сторінки
+        };
+        (function() { // Нижче не редагувати
+            var d = document, s = d.createElement('script');
+            s.src = 'https://w3schoolsen.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view <a href="https://disqus.com/?ref_noscript">Disqus comments.</a></noscript>
+    <!--/Коментарі DisqusEN-->
+</div>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
@@ -613,11 +644,16 @@
         <div class='w3-border'>
             <a href='../html/index_en.html' class='btn-rightbar'>HTML</a>
             <a href='../css/index_en.html' class='btn-rightbar'>CSS</a>
-            <a href='../js/index_en.html' class='btn-rightbar'>JavaScript</a>
-            <a href='../css/css_rwd_intro_en.html' class='btn-rightbar'>Responsive web design</a>
+            <a href='../css/css_rwd_intro_en.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver_en.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index_en.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index_en.html' class='btn-rightbar'>Colors</a>
+            <a href='../icons/index_en.html' class='btn-rightbar'>Icons</a>
             <a href='../graphics/index_en.html' class='btn-rightbar'>Graphics</a>
             <a href='../graphics/svg_intro_en.html' class='btn-rightbar'>SVG Graphics</a>
             <a href='../graphics/canvas_intro_en.html' class='btn-rightbar'>Canvas Graphics</a>
+            <a href='../howto/index_en.html' class='btn-rightbar'>How To</a>
+            <a href='../sass/index_en.html' class='btn-rightbar'>Sass</a>
         </div>
     </div>
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
@@ -626,17 +662,35 @@
         </div>
         <div class='w3-border'>
             <a href='../tags/index_en.html' class='btn-rightbar'>HTML Tags</a>
+            <a href='../tags/ref_html_browsersupport_en.html' class='btn-rightbar'>Browser Support</a>
             <a href='../tags/ref_attributes_en.html' class='btn-rightbar'>HTML Attributes</a>
             <a href='../tags/ref_standardattributes_en.html' class='btn-rightbar'>Global Attributes</a>
             <a href='../tags/ref_eventattributes_en.html' class='btn-rightbar'>Event Attributes</a>
             <a href='../tags/ref_colornames_en.html' class='btn-rightbar'>HTML Color Names</a>
             <a href='../tags/ref_canvas_en.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom_en.html' class='btn-rightbar'>Audio/Video DOM</a>
             <a href='../tags/ref_charactersets_en.html' class='btn-rightbar'>Character Sets</a>
             <a href='../tags/ref_html_dtd_en.html' class='btn-rightbar'>DOCTYPE</a>
             <a href='../tags/ref_urlencode_en.html' class='btn-rightbar'>URL Encoding</a>
             <a href='../tags/ref_language_codes_en.html' class='btn-rightbar'>Language Code</a>
             <a href='../tags/ref_country_codes_en.html' class='btn-rightbar'>ISO Country Codes</a>
+            <a href='../tags/ref_httpmessages_en.html' class='btn-rightbar'>HTTP Status Messages</a>
+            <a href='../tags/ref_httpmethods_en.html' class='btn-rightbar'>HTTP Request Methods</a>
             <a href='../tags/ref_pxtoemconversion_en.html' class='btn-rightbar'>Pixel to Em Converter</a>
+            <a href='../tags/ref_keyboardshortcuts_en.html' class='btn-rightbar'>Keyboard Shortcuts</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">HTML Charsets</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../charsets/index_en.html' class='btn-rightbar'>Character Sets</a>
+            <a href='../charsets/ref_html_ascii_en.html' class='btn-rightbar'>ASCII Reference</a>
+            <a href='../charsets/ref_html_ansi_en.html' class='btn-rightbar'>Win-1252 (ANSI)</a>
+            <a href='../charsets/ref_html_8859_en.html' class='btn-rightbar'>ISO-8859-1</a>
+            <a href='../charsets/ref_html_symbols_en.html' class='btn-rightbar'>HTML Symbols</a>
+            <a href='../charsets/ref_html_utf8_en.html' class='btn-rightbar'>Unicode (UTF-8)</a>
         </div>
     </div>
   <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Place for your advertisement!</div>
@@ -775,9 +829,11 @@
   </div>
   <hr>
   <div class='w3-center w3-small w3-opacity'>This site is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our <a href='../about/about_copyright_en.html'>terms of use</a>, <a href='../about/about_privacy_en.html'>cookie and privacy policy</a>.<br>
-You can also use the Ukrainian version of the site <a href='../index.html'><strong>W3Schools українською</strong></a>.<br>
-    <a href='../about/about_copyright_en.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
-    <a href='../w3css/index_en.html'>W3Schools is Powered by W3.CSS</a>.<br>
+   Versions of the site in other languages are also available:
+   <a href='../index.html' title='W3Schools in Ukrainian'><strong>Ukrainian</strong></a>,
+   <a href='../index_es.html' title='W3Schools in Spanish'><strong>Spanish</strong></a>,
+   <a href='../index_de.html' title='W3Schools in German'><strong>German</strong></a>.<br>
+    <a href='../about/about_copyright_en.html'>Copyright 1999-2025</a> by Refsnes Data. All Rights Reserved. <a href='../w3css/index_en.html'>W3Schools is Powered by W3.CSS</a>.<br>
       You can use other reputable web development and programming learning resources:<br>
       <a href='https://www.udemy.com/' target='_blank' rel='noopener'>Udemy</a>&nbsp;|&nbsp;
       <a href='https://www.codecademy.com/' target='_blank' rel='noopener'>Codecademy</a>&nbsp;|&nbsp;
@@ -794,6 +850,7 @@ You can also use the Ukrainian version of the site <a href='../index.html'><stro
       <a href='https://developer.ibm.com/' target='_blank' rel='noopener'>IBMDeveloper</a>&nbsp;|&nbsp;
       <a href='https://www.codewars.com/' target='_blank' rel='noopener'>CodeWars</a>&nbsp;|&nbsp;
       <a href='https://ed-era.com/' target='_blank' rel='noopener'>Ed-Era</a>&nbsp;|&nbsp;
+      <a href='https://www.theodinproject.com/' target='_blank' rel='noopener'>TheOdinProject</a>&nbsp;|&nbsp;
       <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
       <a href='https://developer.mozilla.org/en-US/' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
       <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
