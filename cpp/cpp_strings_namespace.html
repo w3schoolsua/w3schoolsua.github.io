@@ -41,8 +41,8 @@
             "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
         ]
     }
-</script><title>Рядки введення користувача. Приклади. Мова C++. Підручник онлайн. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='C++ Рядки - Введення користувача. Для збереження рядка, введеного користувачем, можна використовувати оператор вилучення &gt;&gt; на cin. Часто використовуйте функцію getline(), щоб прочитати рядок тексту. Вправи. Приклади. Відеоуроки. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
+</script><title>Рядковий простір імен. Приклади. Мова C++. Підручник онлайн. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='C++ Рядковий простір імен. Пропуск простору імен. Ви можете побачити деякі програми C++, які працюють без стандартної бібліотеки простору імен. Рядок using namespace std можна опустити та замінити ключовим словом std, після якого йде оператор :: для об&#8217;єктів string (та cout). Вправи. Приклади. Відеоуроки. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -501,45 +501,38 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index.html'><img src='../svg/cpp_icon.svg' alt='Мова програмування C++. Уроки W3Schools для початківців українською мовою' class="w3-left w3-padding" title='C++ для початківців. W3Schools українською' style='width:90px'></a><p class='w3-right'>
-    <a href='cpp_strings_input_en.html' title='Перейти на англійську мову'>En</a>
-    <a href='cpp_strings_input_es.html' title='Перейти на іспанську мову'>Es</a>
-    <a href='cpp_strings_input_de.html' title='Перейти на німецьку мову'>De</a>
+    <a href='cpp_strings_namespace_en.html' title='Перейти на англійську мову'>En</a>
+    <a href='cpp_strings_namespace_es.html' title='Перейти на іспанську мову'>Es</a>
+    <a href='cpp_strings_namespace_de.html' title='Перейти на німецьку мову'>De</a>
 </p>
 <article>
-    <h1>C++ <span class="color_h1">Рядки введення користувача</span></h1>
+    <h1>C++ <span class="color_h1">Рядковий простір імен</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="cpp_strings_esc.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="cpp_strings_namespace.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="cpp_strings_input.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="cpp_strings_cstyle.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Рядки введення користувача</h2>
-    <p>Можна використовувати оператор вилучення <code class="w3-codespan">&gt;&gt;</code> на <code class="w3-codespan">cin</code>, щоб зберегти рядок, введений користувачем:</p>
+    <h2>Пропуск простору імен</h2>
+    <p>Ви можете побачити деякі програми C++, які працюють без стандартної бібліотеки простору імен. Рядок <code class="w3-codespan">using namespace std</code> можна пропустити та замінити ключовим словом <code class="w3-codespan">std</code>, а потім використати оператор <code class="w3-codespan">::</code> для об&#8217;єктів <code class="w3-codespan">string</code> (та <code class="w3-codespan">cout</code>):</p>
     <div class="w3-example">
         <h3>Приклад</h3>
         <div class="w3-code notranslate javaHigh">
-            string firstName;<br>cout &lt;&lt; &quot;Введіть своє ім&#8217;я: &quot;; <br>cin &gt;&gt; firstName; // отримувати дані користувача з клавіатури<br>cout &lt;&lt; &quot;Ваше ім&#8217;я: &quot; &lt;&lt; firstName;<br><br><b>// Введіть своє ім&#8217;я: John</b><br><b>// Ваше ім&#8217;я: John</b></div>
-    </div>
-    <p>Однак <code class="w3-codespan">cin</code> розглядає пробіл (пробіл, табуляцію тощо) як кінцевий символ, що означає, що він може зберігати лише одне слово (навіть якщо ви вводите багато слів):</p>
-    <div class="w3-example w3-pale-red">
-        <h3>Приклад</h3>
-        <div class="w3-code notranslate javaHigh w3-border-red">
-            string fullName;<br>cout &lt;&lt; &quot;Введіть своє повне ім&#8217;я: &quot;; <br>cin &gt;&gt; fullName;<br>cout &lt;&lt; &quot;Ваше ім&#8217;я: &quot; &lt;&lt; fullName;<br><br><b>// Введіть своє повне ім&#8217;я: John Doe<br>// Ваше ім&#8217;я: John</b></div>
+            #include &lt;iostream&gt;<br>#include &lt;string&gt;<br>// using namespace std; - Видалити цей рядок<br><br>int main() {<br>&nbsp; <b>std::</b>string greeting = &quot;Hello&quot;;<br>&nbsp; <b>std::</b>cout &lt;&lt; greeting;<br>&nbsp; return 0;<br>}
+        </div>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_strings_std.html">Спробуйте самі &raquo;</a>
     </div>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <p>З наведеного вище прикладу ви очікуєте, що програма надрукує &quot;John Doe&quot;, але вона виведе лише &quot;John&quot;.<br><br>Ось чому під час роботи з рядками ми часто використовуємо <code class="w3-codespan">getline()</code>, щоб прочитати рядок тексту. Він приймає <code class="w3-codespan">cin</code> як перший параметр, а рядкову змінну як другу:</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <div class="w3-code notranslate javaHigh">
-            string fullName;<br>cout &lt;&lt; &quot;Введіть своє повне ім&#8217;я: &quot;;<br>getline (cin, fullName);<br>cout &lt;&lt; &quot;Ваше ім&#8217;я: &quot; &lt;&lt; fullName;<br><br>// Введіть своє повне ім&#8217;я: John Doe<br>// Ваше ім&#8217;я: John Doe</div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_strings_getline.html">Виконати приклад &raquo;</a>
+</div>    <div class="w3-note w3-panel">
+        <p>Ви вирішуєте, чи хочете включити стандартну бібліотеку простору імен чи ні.</p>
+        <p>У нашому посібнику ми продовжимо включати бібліотеку.</p>
     </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="cpp_strings_esc.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="cpp_strings_namespace.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="cpp_strings_input.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="cpp_strings_cstyle.html">Next &#10095;</a>
     </div>
 </article>
 <hr>
@@ -551,7 +544,7 @@
     <script>
         var disqus_config = function() {
             this.page.url = w3schoolsua.github.io; // канонічна URL сторінки
-            this.page.identifier = w3schoolsua.github.io / cpp / cpp_strings_input.html; // унікальний id сторінки
+            this.page.identifier = w3schoolsua.github.io / cpp / cpp_strings_namespace.html; // унікальний id сторінки
         };
         (function() { // Нижче не редагувати
             var d = document, s = d.createElement('script');
