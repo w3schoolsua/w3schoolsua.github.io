@@ -507,76 +507,76 @@
     <a href='cpp_scope_de.html' title='Cambiar al alemán'>De</a>
 </p>
 <article>
-    <h1>C++ <span class="color_h1">Variable Scope</span></h1>
+    <h1>C++ <span class="color_h1">Alcance variable</span></h1>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="cpp_function_overloading_es.html">&#10094; Prev</a>
         <a class="w3-right w3-btn" href="cpp_functions_recursion_es.html">Next &#10095;</a>
     </div>
     <hr>
-    <p class="intro">Now that you understand how functions work, it is important to learn how variables act inside and outside of functions.</p>
-    <p class="intro">In C++, variables are only accessible inside the region they are created. This is called <strong>scope</strong>.</p>
+    <p class="intro">Ahora que comprende cómo funcionan las funciones, es importante aprender cómo actúan las variables dentro y fuera de las funciones.</p>
+    <p class="intro">En C++, solo se puede acceder a las variables dentro de la región en la que se crean. Esto se llama <strong>alcance</strong>.</p>
     <hr>
-    <h2>Local Scope</h2>
-    <p>A variable created inside a function belongs to the <em>local scope</em> of that function, and can only be used inside that function:</p>
+    <h2>Ámbito local</h2>
+    <p>Una variable creada dentro de una función pertenece al <em>alcance local</em> de esa función y solo se puede usar dentro de esa función:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Ejemplo</h3>
         <div class="w3-code notranslate javaHigh">
-            void myFunction() {<br>&nbsp; // Local variable that belongs to myFunction<br>&nbsp; int x = 5;<br><br>&nbsp; // Print the variable x<br>&nbsp; cout &lt;&lt; x;<br>}<br><br>int main() {<br>&nbsp; myFunction();<br>&nbsp; return 0;<br>}
+            void myFunction() {<br>&nbsp; // Variable local que pertenece a myFunction<br>&nbsp; int x = 5;<br><br>&nbsp; // imprimir la variable x<br>&nbsp; cout &lt;&lt; x;<br>}<br><br>int main() {<br>&nbsp; myFunction();<br>&nbsp; return 0;<br>}
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_scope.html">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_scope.html">Inténtalo tú mismo &raquo;</a>
     </div>
-    <p>A <strong>local variable</strong> cannot be used outside the function it belongs to.</p>
-    <p>If you try to access it outside the function, an error occurs:</p>
+    <p>Una <strong>variable local</strong> no se puede utilizar fuera de la función a la que pertenece.</p>
+    <p>Si intentas acceder fuera de la función, se produce un error:</p>
     <div class="w3-example w3-pale-red">
-        <h3>Example</h3>
+        <h3>Ejemplo</h3>
         <div class="w3-code notranslate javaHigh w3-border-red ">
-            void myFunction() {<br>&nbsp; // Local variable that belongs to myFunction<br>&nbsp; int x = 5;<br>}<br><br>int main() {<br>&nbsp; myFunction();<br><br>&nbsp; // Print the variable x in the main function<br>&nbsp; cout &lt;&lt; x;<br>&nbsp; return 0;<br>}
+            void myFunction() {<br>&nbsp; // Variable local que pertenece a myFunction<br>&nbsp; int x = 5;<br>}<br><br>int main() {<br>&nbsp; myFunction();<br><br>&nbsp; // Imprime la variable x en la función principal<br>&nbsp; cout &lt;&lt; x;<br>&nbsp; return 0;<br>}
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_scope_error.html">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_scope_error.html">Inténtalo tú mismo &raquo;</a>
     </div>
     <hr>
     <div class="adver_adinarticle">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Global Scope</h2>
-    <p>A variable created outside a function is called a <strong>global variable</strong> and belongs to the <em>global scope</em>.</p>
-    <p>Global variables are available from within any scope, global and local:</p>
+</div>    <h2>Alcance global</h2>
+    <p>Una variable creada fuera de una función se llama <strong>variable global</strong> y pertenece al <em>alcance global</em>.</p>
+    <p>Las variables globales están disponibles desde cualquier ámbito, global y local:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>A variable created outside a function is global and can therefore be used by anyone:</p>
+        <h3>Ejemplo</h3>
+        <p>Una variable creada fuera de una función es global y, por lo tanto, puede ser utilizada por cualquier persona:</p>
         <div class="w3-code notranslate javaHigh">
-            // Global variable x<br>int x = 5;<br><br>void myFunction() {<br>&nbsp; // We can use x here<br>&nbsp; cout &lt;&lt; x &lt;&lt; &quot;\n&quot;;<br>}<br><br>int main() {<br>&nbsp; myFunction();<br><br>&nbsp; // We can also use x here<br>&nbsp; cout &lt;&lt; x;<br>&nbsp; return 0;<br>}
+            // variable global x<br>int x = 5;<br><br>void myFunction() {<br>&nbsp; // Podemos usar x aquí<br>&nbsp; cout &lt;&lt; x &lt;&lt; &quot;\n&quot;;<br>}<br><br>int main() {<br>&nbsp; myFunction();<br><br>&nbsp; // También podemos usar x aquí<br>&nbsp; cout &lt;&lt; x;<br>&nbsp; return 0;<br>}
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_scope_global.html">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_scope_global.html">Inténtalo tú mismo &raquo;</a>
     </div>
-    <h3>Naming Variables</h3>
-    <p>If you operate with the same variable name inside and outside a function, C++ will treat them as two separate variables; One available in the global scope (outside the function) and one available in the local scope (inside the function):</p>
+    <h3>Nombrar variables</h3>
+    <p>Si opera con el mismo nombre de variable dentro y fuera de una función, C++ las tratará como dos variables separadas; Uno disponible en el ámbito global (fuera de la función) y otro disponible en el ámbito local (dentro de la función):</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>The function will print the local <code class="w3-codespan">x</code>, and then the code will print the global <code class="w3-codespan">x</code>:</p>
+        <h3>Ejemplo</h3>
+        <p>La función imprimirá el <code class="w3-codespan">x</code> local, y luego el código imprimirá el global <code class="w3-codespan">x</code>:</p>
         <div class="w3-code notranslate javaHigh">
-            // Global variable x<br>int x = 5;<br><br>void myFunction() {<br>&nbsp; // Local variable with the same name as the global variable (x)<br>&nbsp; int x = 22;<br>&nbsp; cout &lt;&lt; x &lt;&lt; &quot;\n&quot;; // Refers to the local variable x<br>}<br><br>int main() {<br>&nbsp; myFunction();<br><br>&nbsp; cout &lt;&lt; x; // Refers to the global variable x<br>&nbsp; return 0;<br>}
+            // Variable global x<br>int x = 5;<br><br>void myFunction() {<br>&nbsp; // Variable local con el mismo nombre que la variable global (x)<br>&nbsp; int x = 22;<br>&nbsp; cout &lt;&lt; x &lt;&lt; &quot;\n&quot;; // Se refiere a la variable local x<br>}<br><br>int main() {<br>&nbsp; myFunction();<br><br>&nbsp; cout &lt;&lt; x; // Se refiere a la variable global x<br>&nbsp; return 0;<br>}
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_scope_global2.html">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_scope_global2.html">Inténtalo tú mismo &raquo;</a>
     </div>
-    <p>However, you should avoid using the same variable name for both globally and local variables as it can lead to errors and confusion.</p>
-    <p>In general, you should be careful with global variables since they can be accessed and modified from any function:</p>
+    <p>Sin embargo, debe evitar utilizar el mismo nombre de variable tanto para las variables globales como para las locales, ya que puede generar errores y confusión.</p>
+    <p>En general se debe tener cuidado con las variables globales, ya que se puede acceder a ellas y modificarlas desde cualquier función:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Ejemplo</h3>
         <p>Change the value of <code class="w3-codespan">x</code> from <code class="w3-codespan">myFunction</code>:</p>
         <div class="w3-code notranslate javaHigh">
-            // Global variable x<br>int x = 5;<br><br>void myFunction() { <br>&nbsp; cout &lt;&lt; ++x &lt;&lt; &quot;\n&quot;; // Increment the value of x by 1 and print it<br>}<br><br>int main() {<br>&nbsp; myFunction();<br><br>&nbsp; cout &lt;&lt; x; // Print the global variable x<br>&nbsp; return 0;<br>}<br><br>// The value of x is now 6 (no longer 5)
+            // Variable global x<br>int x = 5;<br><br>void myFunction() { <br>&nbsp; cout &lt;&lt; ++x &lt;&lt; &quot;\n&quot;; // Incrementa el valor de x en 1 e imprimelo<br>}<br><br>int main() {<br>&nbsp; myFunction();<br><br>&nbsp; cout &lt;&lt; x; // Imprime la variable global x<br>&nbsp; return 0;<br>}<br><br>// El valor de x ahora es 6 (ya no es 5)
         </div>
-        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_scope_global3.html">Try it Yourself &raquo;</a>
+        <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_scope_global3.html">Inténtalo tú mismo &raquo;</a>
     </div>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Conclusion</h2>
-    <p>To sum up, use local variables (with good variable names) as much as you can. This will make your code easier to maintain and better to understand. However, you may find global variables when working on existing C++ programs or while collaborating with others. Therefore, it is good to understand how the <strong>scope</strong> works and how to use it effectively to make sure your code is clear and functional.</p>
+</div>    <h2>Conclusión</h2>
+    <p>En resumen, utilice variables locales (con buenos nombres de variable) tanto como pueda. Esto hará que su código sea más fácil de mantener y de comprender mejor. Sin embargo, puede encontrar variables globales cuando trabaja en programas C++ existentes o cuando colabora con otros. Por lo tanto, es bueno comprender cómo funciona el <strong>alcance</strong> y cómo usarlo de manera efectiva para asegurarse de que su código sea claro y funcional.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="cpp_function_overloading_es.html">&#10094; Prev</a>
