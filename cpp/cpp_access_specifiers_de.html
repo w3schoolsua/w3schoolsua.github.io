@@ -507,60 +507,60 @@
     <a href='cpp_access_specifiers_es.html' title='Wechseln Sie zu Spanisch'>Es</a>
 </p>
 <article>
-    <h1>C++ <span class="color_h1">Access Specifiers</span></h1>
+    <h1>C++ <span class="color_h1">Zugriffsspezifizierer</span></h1>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="cpp_constructors_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="cpp_encapsulation_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="cpp_constructors_de.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="cpp_encapsulation_de.html">Next &#10095;</a>
     </div>
     <hr>
-    <h2>Access Specifiers</h2>
-    <p>By now, you are quite familiar with the <code class="w3-codespan">public</code> keyword that appears in all of our class examples:</p>
+    <h2>Zugriffsspezifizierer</h2>
+    <p>Mittlerweile sind Sie mit dem Schlüsselwort <code class="w3-codespan">public</code>, das in allen unseren Klassenbeispielen vorkommt, recht vertraut:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            class MyClass {&nbsp; // The class<br>&nbsp; <strong>public:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Access specifier<br>&nbsp;&nbsp;&nbsp; // class members go here<br>};
+            class MyClass {&nbsp; // Die Klasse<br>&nbsp; <strong>public:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Zugriffsspezifizierer<br>&nbsp;&nbsp;&nbsp; // Die Kursteilnehmer gehen hierher<br>};
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_access_public.html">Try it Yourself &raquo;</a>
     </div>
-    <p>The <code class="w3-codespan">public</code> keyword is an <strong>access specifier</strong>. Access specifiers define how the members (attributes and methods) of a class can be accessed. In the example above, the members are <code class="w3-codespan">public</code> - which means that they can be accessed and modified from outside the code.</p>
-    <p>However, what if we want members to be private and hidden from the outside world?</p>
-    <p>In C++, there are three access specifiers:</p>
+    <p>Das Schlüsselwort <code class="w3-codespan">public</code> ist ein <strong>Zugriffsspezifizierer</strong>. Zugriffsspezifizierer definieren, wie auf die Mitglieder (Attribute und Methoden) einer Klasse zugegriffen werden kann. Im obigen Beispiel sind die Mitglieder <code class="w3-codespan">public</code> – was bedeutet, dass sie von außerhalb des Codes aufgerufen und geändert werden können.</p>
+    <p>Was aber, wenn wir möchten, dass die Mitglieder privat und vor der Außenwelt verborgen bleiben?</p>
+    <p>In C++ gibt es drei Zugriffsspezifizierer:</p>
     <ul>
-        <li><code class="w3-codespan">public</code> - members are accessible from outside the class</li>
-        <li><code class="w3-codespan">private</code> - members cannot be accessed (or viewed) from outside the class</li>
-        <li><code class="w3-codespan">protected</code> - members cannot be accessed from outside the class, however, they can be accessed in inherited classes. You will learn more about <a href="cpp_inheritance_en.html">Inheritance</a> later.</li>
+        <li><code class="w3-codespan">public</code> - Auf die Mitglieder kann von außerhalb der Klasse zugegriffen werden</li>
+        <li><code class="w3-codespan">private</code> - Auf Mitglieder kann von außerhalb der Klasse nicht zugegriffen (oder angezeigt) werden</li>
+        <li><code class="w3-codespan">protected</code> - Auf Mitglieder kann nicht von außerhalb der Klasse zugegriffen werden, jedoch kann auf sie in geerbten Klassen zugegriffen werden. Später erfahren Sie mehr über <a href="cpp_inheritance_de.html">Vererbung</a>.</li>
     </ul>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <p>In the following example, we demonstrate the differences between <code class="w3-codespan">public</code> and <code class="w3-codespan">private</code> members:</p>
+</div>    <p>Im folgenden Beispiel demonstrieren wir die Unterschiede zwischen <code class="w3-codespan">public</code>- und <code class="w3-codespan">private</code>-Mitgliedern:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            class MyClass {<br>&nbsp; <strong>public:</strong>&nbsp;&nbsp;&nbsp; // Public access specifier<br>&nbsp;&nbsp;&nbsp; int x;&nbsp;&nbsp; // Public attribute<br>&nbsp; <strong>private:</strong>&nbsp;&nbsp; // Private access specifier<br>&nbsp;&nbsp;&nbsp; int y;&nbsp;&nbsp; // Private attribute<br>};<br><br>int main() {<br>&nbsp; MyClass myObj;<br>&nbsp; myObj.x = 25;&nbsp; // Allowed (public)<br>&nbsp; myObj.y = 50;&nbsp; // Not allowed (private)<br>&nbsp; return 0;<br>}
+            class MyClass {<br>&nbsp; <strong>public:</strong>&nbsp;&nbsp;&nbsp; // Bezeichner für den öffentlichen Zugriff<br>&nbsp;&nbsp;&nbsp; int x;&nbsp;&nbsp; // Public Attribut<br>&nbsp; <strong>private:</strong>&nbsp;&nbsp; // Privater Zugriffsspezifizierer<br>&nbsp;&nbsp;&nbsp; int y;&nbsp;&nbsp; // Private Attribut<br>};<br><br>int main() {<br>&nbsp; MyClass myObj;<br>&nbsp; myObj.x = 25;&nbsp; // Erlaubt (public)<br>&nbsp; myObj.y = 50;&nbsp; // Nicht erlaubt (private)<br>&nbsp; return 0;<br>}
         </div>
-        <p>If you try to access a private member, an error occurs:</p>
+        <p>Wenn Sie versuchen, auf ein privates Mitglied zuzugreifen, tritt ein Fehler auf:</p>
         <div class="w3-padding notranslate w3-black">
             <code>error: y is private</code>
         </div>
         <a target="_blank" class="w3-btn w3-margin-bottom w3-margin-top" href="../cpptryit/demo_access_private.html">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-note w3-panel">
-        <p><b>Note:</b> It is possible to access private members of a class using a public method inside the same class. See the next chapter (<a href="cpp_encapsulation_en.html">Encapsulation</a>) on how to do this.</p>
-        <p><b>Tip:</b> It is considered good practice to declare your class attributes as private (as often as you can). This will reduce the possibility of yourself (or others) to mess up the code. This is also the main ingredient of the <a href="cpp_encapsulation_en.html">Encapsulation</a> concept, which you will learn more about in the next chapter.</p>
+        <p><b>Hinweis:</b> Es ist möglich, über eine öffentliche Methode innerhalb derselben Klasse auf private Mitglieder einer Klasse zuzugreifen. Weitere Informationen hierzu finden Sie im nächsten Kapitel (<a href="cpp_encapsulation_de.html">Kapselung</a>).</p>
+        <p><b>Tipp:</b> Es gilt als bewährte Vorgehensweise, Ihre Klassenattribute als privat zu deklarieren (so oft wie möglich). Dadurch wird die Wahrscheinlichkeit verringert, dass Sie selbst (oder andere) den Code vermasseln. Dies ist auch der Hauptbestandteil des <a href="cpp_encapsulation_de.html">Kapselungskonzepts</a>, über das Sie im nächsten Kapitel mehr erfahren werden.</p>
     </div>
-    <p><b>Note:</b> By default, all members of a class are <code class="w3-codespan">private</code> if you don't specify an access specifier:</p>
+    <p><b>Hinweis:</b> Standardmäßig sind alle Mitglieder einer Klasse <code class="w3-codespan">privat</code>, wenn Sie keinen Zugriffsbezeichner angeben:</p>
     <div class="w3-example">
-        <h3>Example</h3>
+        <h3>Beispiel</h3>
         <div class="w3-code notranslate javaHigh">
-            class MyClass {<br>&nbsp;&nbsp;int x;&nbsp;&nbsp; // Private attribute<br>&nbsp;&nbsp;int y;&nbsp;&nbsp; // Private attribute<br>};
+            class MyClass {<br>&nbsp;&nbsp;int x;&nbsp;&nbsp; // Private Attribut<br>&nbsp;&nbsp;int y;&nbsp;&nbsp; // Private Attribut<br>};
         </div>
     </div>
     <hr>
     <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="cpp_constructors_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="cpp_encapsulation_en.html">Next &#10095;</a>
+        <a class="w3-left w3-btn" href="cpp_constructors_de.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="cpp_encapsulation_de.html">Next &#10095;</a>
     </div>
 </article>
 <hr>
