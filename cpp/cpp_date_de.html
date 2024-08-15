@@ -517,32 +517,32 @@
     </div>
     <hr>
     <h2>Datum und Uhrzeit (Date und Time)</h2>
-    <p>The <code class="w3-codespan">&lt;ctime&gt;</code> library allows us to work with dates and times.</p>
-    <p>To use it, you must import the <code class="w3-codespan">&lt;ctime&gt;</code> header file:</p>
+    <p>Die <code class="w3-codespan">&lt;ctime&gt;</code>-Bibliothek ermöglicht es uns, mit Datums- und Uhrzeitangaben zu arbeiten.</p>
+    <p>Um es zu verwenden, müssen Sie die Header-Datei <code class="w3-codespan">&lt;ctime&gt;</code> importieren:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <pre class="w3-white language-java"><code>#include &lt;ctime&gt; // Import the ctime library</code></pre>
+        <h3>Beispiel</h3>
+        <pre class="w3-white language-java"><code>#include &lt;ctime&gt; // Importieren Sie die ctime-Bibliothek</code></pre>
     </div>
     <hr>
-    <h2>Display Current Date and Time</h2>
-    <p>The <code class="w3-codespan">&lt;ctime&gt;</code> library has a variety of functions to measure dates and times.</p>
-    <p>The <code class="w3-codespan">time()</code> function gives us a <strong>timestamp</strong> representing the current date and time. We can use the <code class="w3-codespan">ctime()</code> function to show the date and time that a timestamp represents:</p>
+    <h2>Aktuelles Datum und aktuelle Uhrzeit anzeigen</h2>
+    <p>Die <code class="w3-codespan">&lt;ctime&gt;</code>-Bibliothek verfügt über eine Vielzahl von Funktionen zum Messen von Datum und Uhrzeit.</p>
+    <p>Die Funktion <code class="w3-codespan">time()</code> gibt uns einen <strong>Zeitstempel</strong>, der das aktuelle Datum und die aktuelle Uhrzeit darstellt. Wir können die Funktion <code class="w3-codespan">ctime()</code> verwenden, um das Datum und die Uhrzeit anzuzeigen, die ein Zeitstempel darstellt:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>Display the current date:</p>
-        <pre class="w3-white language-java"><code>// Get the timestamp for the current date and time
+        <h3>Beispiel</h3>
+        <p>Aktuelles Datum anzeigen:</p>
+        <pre class="w3-white language-java"><code>// Rufen Sie den Zeitstempel für das aktuelle Datum und die aktuelle Uhrzeit ab
 time_t timestamp;
 time(&amp;timestamp);
 
-// Display the date and time represented by the timestamp
+// Zeigt das durch den Zeitstempel dargestellte Datum und die Uhrzeit an
 cout &lt;&lt; ctime(&amp;timestamp);
 </code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_date_time.html">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <h3>Two ways to use the time() function</h3>
-        <p>The <code class="w3-codespan">time()</code> function writes a timestamp to the memory location given by the parameter, but it also returns the timestamp's value.</p>
-        <p>An alternative way to use the <code class="w3-codespan">time()</code> function is to pass in a NULL pointer and use the return value instead.</p>
+        <h3>Zwei Möglichkeiten, die Funktion time() zu verwenden</h3>
+        <p>Die Funktion <code class="w3-codespan">time()</code> schreibt einen Zeitstempel an den durch den Parameter angegebenen Speicherort, gibt aber auch den Wert des Zeitstempels zurück.</p>
+        <p>Eine alternative Möglichkeit, die Funktion <code class="w3-codespan">time()</code> zu verwenden, besteht darin, einen NULL-Zeiger zu übergeben und stattdessen den Rückgabewert zu verwenden.</p>
         <div class="w3-example">
             <pre class="w3-white language-java"><code>time_t timestamp = time(NULL);</code></pre>
         </div>
@@ -552,47 +552,47 @@ cout &lt;&lt; ctime(&amp;timestamp);
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Data Types</h2>
-    <p>There are two different data types used to store the date and time: <code class="w3-codespan">time_t</code> for <strong>timestamps</strong> and <code class="w3-codespan">struct tm</code> for <strong>datetime structures</strong>.</p>
-    <p><strong>Timestamps</strong> represent a moment in time as a single number, which makes it easier for the computer to do calculations.</p>
-    <p><strong>Datetime structures</strong> are structures that represent different components of the date and time as members. This makes it easier for us to specify dates. Datetime structures have the following members:</p>
+</div>    <h2>Datentypen</h2>
+    <p>Es gibt zwei verschiedene Datentypen, die zum Speichern von Datum und Uhrzeit verwendet werden: <code class="w3-codespan">time_t</code> für <strong>Zeitstempel</strong> und <code class="w3-codespan">struct tm</code> für <strong>datetime-Strukturen</strong>.</p>
+    <p><strong>Zeitstempel</strong> stellen einen Zeitpunkt als einzelne Zahl dar, was dem Computer die Berechnung erleichtert.</p>
+    <p><strong>Datetime-Strukturen</strong> sind Strukturen, die als Mitglieder verschiedene Komponenten des Datums und der Uhrzeit darstellen. Dies erleichtert uns die Angabe von Terminen. Datetime-Strukturen haben die folgenden Mitglieder:</p>
     <ul>
-        <li><code class="w3-codespan">tm_sec</code> - The seconds within a minute</li>
-        <li><code class="w3-codespan">tm_min</code> - The minutes within an hour</li>
-        <li><code class="w3-codespan">tm_hour</code> - The hour within a day (from 0 to 23)</li>
-        <li><code class="w3-codespan">tm_mday</code> - The day of the month</li>
-        <li><code class="w3-codespan">tm_mon</code> - The month (from 0 to 11 starting with January)</li>
-        <li><code class="w3-codespan">tm_year</code> - The number of years since 1900</li>
-        <li><code class="w3-codespan">tm_wday</code> - The weekday (from 0 to 6 starting with Sunday)</li>
-        <li><code class="w3-codespan">tm_yday</code> - The day of the year (from 0 to 365 with 0 being January 1)</li>
-        <li><code class="w3-codespan">tm_isdst</code> - Positive when daylight saving time is in effect, zero when not in effect and negative when unknown</li>
+        <li><code class="w3-codespan">tm_sec</code> – Die Sekunden innerhalb einer Minute</li>
+        <li><code class="w3-codespan">tm_min</code> – Die Minuten innerhalb einer Stunde</li>
+        <li><code class="w3-codespan">tm_hour</code> – Die Stunde innerhalb eines Tages (von 0 bis 23)</li>
+        <li><code class="w3-codespan">tm_mday</code> – Der Tag des Monats</li>
+        <li><code class="w3-codespan">tm_mon</code> – Der Monat (von 0 bis 11, beginnend mit Januar)</li>
+        <li><code class="w3-codespan">tm_year</code> – Die Anzahl der Jahre seit 1900</li>
+        <li><code class="w3-codespan">tm_wday</code> – Der Wochentag (von 0 bis 6, beginnend mit Sonntag)</li>
+        <li><code class="w3-codespan">tm_yday</code> – Der Tag des Jahres (von 0 bis 365, wobei 0 der 1. Januar ist)</li>
+        <li><code class="w3-codespan">tm_isdst</code> – Positiv, wenn die Sommerzeit in Kraft ist, Null, wenn sie nicht in Kraft ist, und negativ, wenn die Sommerzeit unbekannt ist</li>
     </ul>
     <div class="w3-panel w3-note">
-        <p>Always keep in mind the way that date components are represented:</p>
+        <p>Beachten Sie immer die Art und Weise, wie Datumskomponenten dargestellt werden:</p>
         <ul>
-            <li>Hours are represented in 24-hour format. 11pm would be represented as <b>23</b>.</li>
-            <li>The months go from 0 to 11. For example, December would be represented as <b>11</b> rather than 12.</li>
-            <li>Years are represented relative to the year 1900. The year 2024 would be represented as <b>124</b> because 124 years have passed since 1900.</li>
+            <li>Die Stunden werden im 24-Stunden-Format dargestellt. 23 Uhr würde als <b>23</b> dargestellt.</li>
+            <li>Die Monate reichen von 0 bis 11. Beispielsweise würde Dezember als <b>11</b> statt als 12 dargestellt.</li>
+            <li>Jahre werden relativ zum Jahr 1900 dargestellt. Das Jahr 2024 würde als <b>124</b> dargestellt, da seit 1900 124 Jahre vergangen sind.</li>
         </ul>
     </div>
     <hr>
-    <h2>Creating Timestamps</h2>
-    <p>The <code class="w3-codespan">time()</code> function can only create a timestamp for the current date, but we can create a timestamp for any date by using the <code class="w3-codespan">mktime()</code> function.</p>
-    <p>The <code class="w3-codespan">mktime()</code> function converts a datetime structure into a timestamp.</p>
+    <h2>Zeitstempel erstellen</h2>
+    <p>Die Funktion <code class="w3-codespan">time()</code> kann nur einen Zeitstempel für das aktuelle Datum erstellen, aber wir können einen Zeitstempel für jedes Datum erstellen, indem wir die Funktion verwenden <code class="w3-codespan">mktime()</code>.</p>
+    <p>Die Funktion <code class="w3-codespan">mktime()</code> wandelt eine Datetime-Struktur in einen Zeitstempel um.</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>Create a timestamp using the <code class="w3-codespan">mktime()</code> function:</p>
+        <h3>Beispiel</h3>
+        <p>Erstellen Sie einen Zeitstempel mit der Funktion <code class="w3-codespan">mktime()</code>:</p>
         <pre class="w3-white language-java"><code>struct tm datetime;
 time_t timestamp;
 
-datetime.tm_year = 2023 - 1900; // Number of years since 1900
-datetime.tm_mon = 12 - 1; // Number of months since January
+datetime.tm_year = 2023 - 1900; // Anzahl der Jahre seit 1900
+datetime.tm_mon = 12 - 1; // Anzahl der Monate seit Januar
 datetime.tm_mday = 17;
 datetime.tm_hour = 12;
 datetime.tm_min = 30;
 datetime.tm_sec = 1;
-// Daylight Savings must be specified
-// -1 uses the computer's timezone setting
+// Die Sommerzeit muss angegeben werden
+// -1 Verwendet die Zeitzoneneinstellung des Computers
 datetime.tm_isdst = -1;
 
 timestamp = mktime(&amp;datetime);
@@ -602,7 +602,7 @@ cout &lt;&lt; ctime(&amp;timestamp);
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_date_mktime.html">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p><b>Note:</b> The <code class="w3-codespan">mktime()</code> function needs these members to have a value: <code class="w3-codespan">tm_year</code>, <code class="w3-codespan">tm_mon</code>, <code class="w3-codespan">tm_mday</code>, <code class="w3-codespan">tm_hour</code>, <code class="w3-codespan">tm_min</code>, <code class="w3-codespan">tm_sec</code> and <code class="w3-codespan">tm_isdst</code>.
+        <p><b>Hinweis:</b> Für die Funktion <code class="w3-codespan">mktime()</code> müssen diese Mitglieder einen Wert haben: <code class="w3-codespan">tm_year</code>, <code class="w3-codespan">tm_mon</code>, <code class="w3-codespan">tm_mday</code>, <code class="w3-codespan">tm_hour</code>, <code class="w3-codespan">tm_min</code>, <code class="w3-codespan">tm_sec</code> und <code class="w3-codespan">tm_isdst</code>.
         </p>
     </div>
     <hr>
@@ -610,15 +610,15 @@ cout &lt;&lt; ctime(&amp;timestamp);
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Creating Datetime Structures</h2>
-    <p>The <code class="w3-codespan">mktime()</code> function also fills in the <code class="w3-codespan">tm_wday</code> and <code class="w3-codespan">tm_yday</code> members of the datetime structure with the correct values, which completes the structure and gives a valid datetime. It can be used, for example, to find the weekday of a given date:</p>
+</div>    <h2>Erstellen von Datetime-Strukturen</h2>
+    <p>Die Funktion <code class="w3-codespan">mktime()</code> füllt auch <code class="w3-codespan">tm_wday</code> und <code class="w3-codespan">tm_yday</code> aus Mitglieder der datetime-Struktur mit den richtigen Werten, wodurch die Struktur vervollständigt wird und eine gültige datetime-Struktur bereitgestellt wird. Es kann beispielsweise verwendet werden, um den Wochentag eines bestimmten Datums zu ermitteln:</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>Find the weekday of a specified date:</p>
-        <pre class="w3-white language-java"><code>// Create the datetime structure and use mktime to fill in the missing members
+        <h3>Beispiel</h3>
+        <p>Finden Sie den Wochentag eines bestimmten Datums:</p>
+        <pre class="w3-white language-java"><code>// Erstellen Sie die Datetime-Struktur und füllen Sie die fehlenden Elemente mit mktime aus
 struct tm datetime;
-datetime.tm_year = 2023 - 1900; // Number of years since 1900
-datetime.tm_mon = 12 - 1; // Number of months since January
+datetime.tm_year = 2023 - 1900; // Anzahl der Jahre seit 1900
+datetime.tm_mon = 12 - 1; // Anzahl der Monate seit Januar
 datetime.tm_mday = 17;
 datetime.tm_hour = 0; datetime.tm_min = 0; datetime.tm_sec = 0;
 datetime.tm_isdst = -1;
@@ -626,17 +626,17 @@ mktime(&amp;datetime);
 
 string weekdays[] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
-cout &lt;&lt; "The date is on a " &lt;&lt; weekdays[datetime.tm_wday];
+cout &lt;&lt; "Das Datum steht auf " &lt;&lt; weekdays[datetime.tm_wday];
 </code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_date_localtime2.html">Try it Yourself &raquo;</a>
     </div>
-    <p>The <code class="w3-codespan">localtime()</code> and <code class="w3-codespan">gmtime()</code> functions can convert timestamps into datetime structures.</p>
-    <p>The <code class="w3-codespan">localtime()</code> function returns a pointer to a structure representing the time in the computer's time zone.</p>
-    <p>The <code class="w3-codespan">gmtime()</code> function returns a pointer to a structure representing the time in the GMT time zone.</p>
-    <p>These functions return a <strong>pointer</strong> to a datetime structure. If we want to make sure its value does not change unexpectedly, we should make a copy of it by dereferencing the pointer. To learn about dereferencing, see the <a href="cpp_pointers_dereference_en.html">C++ Dereference tutorial</a>.</p>
+    <p>Die Funktionen <code class="w3-codespan">localtime()</code> und <code class="w3-codespan">gmtime()</code> können Zeitstempel in Datetime-Strukturen konvertieren.</p>
+    <p>Die Funktion <code class="w3-codespan">localtime()</code> gibt einen Zeiger auf eine Struktur zurück, die die Zeit in der Zeitzone des Computers darstellt.</p>
+    <p>Die Funktion <code class="w3-codespan">gmtime()</code> gibt einen Zeiger auf eine Struktur zurück, die die Zeit in der GMT-Zeitzone darstellt.</p>
+    <p>Diese Funktionen geben einen <strong>Zeiger</strong> auf eine Datetime-Struktur zurück. Wenn wir sicherstellen möchten, dass sich sein Wert nicht unerwartet ändert, sollten wir eine Kopie davon erstellen, indem wir den Zeiger dereferenzieren. Weitere Informationen zur Dereferenzierung finden Sie auf der Seite <a href="cpp_pointers_dereference_de.html">C++-Dereferenzierung</a>.</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>Get a datetime structure and output the current hour:</p>
+        <h3>Beispiel</h3>
+        <p>Rufen Sie eine Datetime-Struktur ab und geben Sie die aktuelle Stunde aus:</p>
         <pre class="w3-white language-java"><code>time_t timestamp = time(&amp;timestamp);
 struct tm datetime = *localtime(&amp;timestamp);
 
@@ -649,11 +649,11 @@ cout &lt;&lt; datetime.tm_hour;
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Display Dates</h2>
-    <p>So far we have been using the <code class="w3-codespan">ctime()</code> function to display the date contained in a timestamp. To display dates from a datetime structure, we can use the <code class="w3-codespan">asctime()</code> function.</p>
+</div>    <h2>Termine anzeigen</h2>
+    <p>Bisher haben wir die Funktion <code class="w3-codespan">ctime()</code> verwendet, um das in einem Zeitstempel enthaltene Datum anzuzeigen. Um Daten aus einer Datetime-Struktur anzuzeigen, können wir die Funktion <code class="w3-codespan">asctime()</code> verwenden.</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>Display the date represented by a datetime structure:</p>
+        <h3>Beispiel</h3>
+        <p>Zeigt das Datum an, das durch eine Datetime-Struktur dargestellt wird:</p>
         <pre class="w3-white language-java"><code>time_t timestamp = time(NULL);
 struct tm datetime = *localtime(&amp;timestamp);
 
@@ -662,14 +662,14 @@ cout &lt;&lt; asctime(&amp;datetime);
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_date_asctime.html">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p><b>Note:</b> The <code class="w3-codespan">asctime()</code> function does not correct invalid dates. For example, if you set the day of the month to 32, it will display 32. The <code class="w3-codespan">mktime()</code> function can correct these kinds of errors:</p>
+        <p><b>Hinweis:</b> Die Funktion <code class="w3-codespan">asctime()</code> korrigiert keine ungültigen Datumsangaben. Wenn Sie beispielsweise den Tag des Monats auf 32 festlegen, wird 32 angezeigt. Die Funktion <code class="w3-codespan">mktime()</code> kann diese Art von Fehlern korrigieren:</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Correct a date before displaying it:</p>
-            <pre class="w3-white language-java"><code>// Create the datetime structure and use mktime to correct mistakes
+            <h3>Beispiel</h3>
+            <p>Korrigieren Sie ein Datum, bevor Sie es anzeigen:</p>
+            <pre class="w3-white language-java"><code>// Erstellen Sie die Datetime-Struktur und verwenden Sie mktime, um Fehler zu korrigieren
 struct tm datetime;
-datetime.tm_year = 2022 - 1900; // Number of years since 1900
-datetime.tm_mon = 0; // 0 is January
+datetime.tm_year = 2022 - 1900; // Anzahl der Jahre seit 1900
+datetime.tm_mon = 0; // 0 ist Januar
 datetime.tm_mday = 32;
 datetime.tm_hour = 0; datetime.tm_min = 0; datetime.tm_sec = 0;
 datetime.tm_isdst = -1;
@@ -680,11 +680,11 @@ cout &lt;&lt; asctime(&amp;datetime);
             <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_date_asctime2.html">Try it Yourself &raquo;</a>
         </div>
     </div>
-    <p>The <code class="w3-codespan">ctime()</code> and <code class="w3-codespan">asctime()</code> functions allow us to display the date, but they do not allow us to choose how it is displayed.</p>
-    <p>To choose how a date is displayed, we can use the <code class="w3-codespan">strftime()</code> function.</p>
+    <p>Mit den Funktionen <code class="w3-codespan">ctime()</code> und <code class="w3-codespan">asctime()</code> können wir das Datum anzeigen, aber nicht um auszuwählen, wie es angezeigt wird.</p>
+    <p>Um auszuwählen, wie ein Datum angezeigt wird, können wir die Funktion <code class="w3-codespan">strftime()</code> verwenden.</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>Represent the current date in different ways:</p>
+        <h3>Beispiel</h3>
+        <p>Stellen Sie das aktuelle Datum auf unterschiedliche Weise dar:</p>
         <pre class="w3-white language-java"><code>time_t timestamp = time(NULL);
 struct tm datetime = *localtime(&amp;timestamp);
 
@@ -704,78 +704,78 @@ cout &lt;&lt; output &lt;&lt; "\n";
 </code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_date_strftime.html">Try it Yourself &raquo;</a>
     </div>
-    <p>The <code class="w3-codespan">strftime()</code> function formats a date and writes it as a C-style string into a <code class="w3-codespan">char</code> array. It has four parameters:</p>
+    <p>Die Funktion <code class="w3-codespan">strftime()</code> formatiert ein Datum und schreibt es als Zeichenfolge im C-Stil in ein <code class="w3-codespan">char</code>-Array. Es hat vier Parameter:</p>
     <ol>
-        <li>The first parameter points to the char array where the formatted date will be written.</li>
-        <li>The second parameter specifies the space available in the array.</li>
-        <li>The third parameter allows us to choose how the date is formatted using format specifiers.</li>
-        <li>The last parameter is a pointer to the datetime structure which contains the date we want to display.</li>
+        <li>Der erste Parameter zeigt auf das char-Array, in das das formatierte Datum geschrieben wird.</li>
+        <li>Der zweite Parameter gibt den im Array verfügbaren Platz an.</li>
+        <li>Mit dem dritten Parameter können wir mithilfe von Formatbezeichnern auswählen, wie das Datum formatiert wird.</li>
+        <li>Der letzte Parameter ist ein Zeiger auf die Datetime-Struktur, die das Datum enthält, das wir anzeigen möchten.</li>
     </ol>
-    <p>The following table has some useful format specifiers. For a more complete list, look at the <a href="ref_ctime_strftime_en.html">strftime() reference</a> page.</p>
+    <p>Die folgende Tabelle enthält einige nützliche Formatspezifizierer. Eine vollständigere Liste finden Sie auf der Seite <a href="ref_ctime_strftime_de.html">strftime()-Referenz</a>.</p>
     <table class="ws-table-all">
         <tr>
-            <th style="width:10%">Format Specifier</th>
-            <th>Description</th>
-            <th style="width:30%">Example</th>
+            <th style="width:10%">Formatbezeichner</th>
+            <th>Beschreibung</th>
+            <th style="width:30%">Beispiel</th>
         </tr>
         <tr>
             <td><code class="w3-codespan">%a</code></td>
-            <td>Short representation of the weekday</td>
+            <td>Kurze Darstellung des Wochentags</td>
             <td><code>Fri</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%b</code></td>
-            <td>Short representation of the month name</td>
+            <td>Kurze Darstellung des Monatsnamens</td>
             <td><code>Dec</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%B</code></td>
-            <td>Full representation of the month name</td>
+            <td>Vollständige Darstellung des Monatsnamens</td>
             <td><code>December</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%d</code></td>
-            <td>Day of the month with leading zero</td>
+            <td>Tag des Monats mit führender Null</td>
             <td><code>09</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%e</code></td>
-            <td>Day of the month with leading spaces</td>
+            <td>Tag des Monats mit führenden Leerzeichen</td>
             <td><code>&nbsp;9</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%H</code></td>
-            <td>24-hour format of an hour</td>
+            <td>24-Stunden-Format einer Stunde</td>
             <td><code>14</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%I</code></td>
-            <td>12-hour format of an hour</td>
+            <td>12-Stunden-Format einer Stunde</td>
             <td><code>02</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%M</code></td>
-            <td>Minutes within an hour</td>
+            <td>Minuten innerhalb einer Stunde</td>
             <td><code>30</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%p</code></td>
-            <td>AM or PM</td>
+            <td>AM oder PM</td>
             <td><code>PM</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%S</code></td>
-            <td>Seconds within a minute</td>
+            <td>Sekunden innerhalb einer Minute</td>
             <td><code>01</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%y</code></td>
-            <td>2-digit year representation</td>
+            <td>2-stellige Jahresdarstellung</td>
             <td><code>23</code></td>
         </tr>
         <tr>
             <td><code class="w3-codespan">%Y</code></td>
-            <td>4-digit year representation</td>
+            <td>4-stellige Jahresdarstellung</td>
             <td><code>2023</code></td>
         </tr>
     </table>
@@ -784,12 +784,12 @@ cout &lt;&lt; output &lt;&lt; "\n";
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Measuring Time</h2>
-    <p>There are two different functions that can be used to measure differences in time.</p>
-    <p>The <code class="w3-codespan">difftime()</code> function measures the number of seconds that passed between two different time stamps. This is useful when measuring time differences between dates.</p>
+</div>    <h2>Zeit messen</h2>
+    <p>Es gibt zwei verschiedene Funktionen, mit denen Zeitunterschiede gemessen werden können.</p>
+    <p>Die Funktion <code class="w3-codespan">difftime()</code> misst die Anzahl der Sekunden, die zwischen zwei verschiedenen Zeitstempeln verstrichen sind. Dies ist nützlich, wenn Sie Zeitunterschiede zwischen Datumsangaben messen.</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>Measure the time difference between two timestamps</p>
+        <h3>Beispiel</h3>
+        <p>Messen Sie den Zeitunterschied zwischen zwei Zeitstempeln</p>
         <pre class="w3-white language-java"><code>time_t now;
 time_t nextyear;
 struct tm datetime;
@@ -808,11 +808,11 @@ int diff = difftime(nextyear, now);
 cout &lt;&lt; diff &lt;&lt; " seconds until next year";</code></pre>
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_date_difftime.html">Try it Yourself &raquo;</a>
     </div>
-    <p>The <code class="w3-codespan">clock()</code> function is useful for measuring short intervals of time while the program is running. It is more precise than the <code class="w3-codespan">difftime()</code> function.</p>
-    <p>Each call to the clock function returns a special kind of timestamp measured in clocks (a unit of time that depends on how the library was implemented) which has a data type <code class="w3-codespan">clock_t</code>. To measure a time difference, store a timestamp at two different moments in time and then subtract them. The time difference is measured in clocks, but you can convert it into seconds by dividing it by the <code class="w3-codespan">CLOCKS_PER_SEC</code> constant.</p>
+    <p>Die Funktion <code class="w3-codespan">clock()</code> ist nützlich, um kurze Zeitintervalle während der Programmausführung zu messen. Sie ist präziser als die Funktion <code class="w3-codespan">difftime()</code>.</p>
+    <p>Jeder Aufruf der Uhrfunktion gibt einen speziellen Zeitstempel zurück, der in Uhren gemessen wird (eine Zeiteinheit, die davon abhängt, wie die Bibliothek implementiert wurde) und den Datentyp <code class="w3-codespan">clock_t</code> hat. Um einen Zeitunterschied zu messen, speichern Sie einen Zeitstempel zu zwei verschiedenen Zeitpunkten und subtrahieren Sie diese dann. Der Zeitunterschied wird in Uhren gemessen, Sie können ihn jedoch in Sekunden umrechnen, indem Sie ihn durch die Konstante <code class="w3-codespan">CLOCKS_PER_SEC</code> dividieren.</p>
     <div class="w3-example">
-        <h3>Example</h3>
-        <p>Measure how long it takes for the program to run:</p>
+        <h3>Beispiel</h3>
+        <p>Messen Sie, wie lange es dauert, bis das Programm ausgeführt wird:</p>
         <pre class="w3-white language-java"><code>clock_t before = clock();
 int k = 0;
 for(int i = 0; i &lt; 100000; i++) {
@@ -824,15 +824,15 @@ cout &lt;&lt; "Duration: " &lt;&lt; (float)duration / CLOCKS_PER_SEC &lt;&lt; " 
         <a target="_blank" class="w3-btn w3-margin-bottom" href="../cpptryit/demo_date_clock.html">Try it Yourself &raquo;</a>
     </div>
     <div class="w3-panel w3-note">
-        <p><b>Note:</b> Make sure to cast the value to a <code class="w3-codespan">float</code> or <code class="w3-codespan">double</code> type before dividing, otherwise it may result in an integer division which would cause the decimal part to be cut off.</p>
+        <p><b>Hinweis:</b> Stellen Sie sicher, dass Sie den Wert vor der Division in einen Typ <code class="w3-codespan">float</code> oder <code class="w3-codespan">double</code> umwandeln, andernfalls dies kann zu einer ganzzahligen Division führen, die dazu führen würde, dass der Dezimalteil abgeschnitten wird.</p>
     </div>
     <hr>
     <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Complete &lt;ctime&gt; Reference</h2>
-    <p>For a complete reference of &lt;ctime&gt; functions, go to our <a href="cpp_ref_ctime_en.html">C++ ctime Reference</a>.</p>
+</div>    <h2>Vollständige &lt;ctime&gt;Referenz</h2>
+    <p>Eine vollständige Referenz der &lt;ctime&gt;-Funktionen finden Sie in unserer <a href="cpp_ref_ctime_de.html">C++-ctime-Referenz</a>.</p>
     <hr>
     <div class="w3-clear nextprev">
         <a class="w3-left w3-btn" href="cpp_exceptions_de.html">&#10094; Prev</a>
