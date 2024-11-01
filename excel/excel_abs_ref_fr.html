@@ -493,7 +493,98 @@
         <a href='excel_abs_ref_es.html' title='Passer à l&#8217;espagnol'>Es</a>
         <a href='excel_abs_ref_de.html' title='Passer à l&#8217;allemand'>De</a>
     </p>
-    
+    <article>
+        <h1>Excel <span class="color_h1">Références absolues</span></h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="excel_rel_ref_fr.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="excel_addition_fr.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <h2>Références absolues</h2>
+        <p>On parle de référence absolue lorsqu'une référence porte le signe dollar (<code class="w3-codespan">$</code>).</p>
+        <p>Il verrouille une référence dans la formule.</p>
+        <p>Ajoutez <code class="w3-codespan">$</code> à la formule pour utiliser des références absolues.</p>
+        <p>Le signe dollar a trois états différents :</p>
+        <ul>
+            <li>Absolu pour la colonne et la ligne. La référence est absolument verrouillée.<br>
+                Exemple <code class="w3-codespan">=$A$1</code><br></li>
+            <li>Absolu pour la colonne. La référence est verrouillée sur cette colonne. La ligne reste relative.<br>
+                Exemple <code class="w3-codespan">=$A1</code><br></li>
+            <li>Absolu pour le rang. La référence est verrouillée sur cette ligne. La colonne reste relative.<br>
+                Exemple <code class="w3-codespan">=A$1</code></li>
+        </ul>
+        <p>Jetons un coup d'œil à un exemple aidant les entraîneurs Pokémon à calculer les prix des Pokeballs.</p>
+        <p>Tapez ou copiez les données suivantes :</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate">
+                <img src="../images1/abs_ref1.png" alt="Références absolues dans Excel" style="max-width:100%">
+                <textarea id="demo_excel_formulas" aria-label='Exemple' style="display:none">
+Trainers	Pokeballs	Cost
+Iva	2
+Liam	5
+Pablo	10
+Jenny	7
+Iben	6
+Kasper	3
+
+Price	2	</textarea>
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="javascript:void(0);" onclick="copyFormulas('demo_excel_formulas')">Copier les valeurs</a>
+        </div>
+        <p><b>Données expliquées :</b></p>
+        <ul>
+            <li>Il y a 6 formateurs : Iva, Liam, Adora, Jenny, Iben et Kasper</li>
+            <li>Ils ont chacun un nombre différent de Pokeballs dans leur panier</li>
+            <li>Le prix par Pokeball est de 2 pièces</li>
+        </ul>
+        <p><b>Aidez-les à calculer les prix des Pokeballs.</b></p>
+        <p>La référence du prix est <code class="w3-codespan">B11</code>, nous ne voulons pas que la fonction de remplissage change cela, nous la verrouillons donc.</p>
+        <p>La référence est absolument verrouillée en utilisant la formule <code class="w3-codespan">$B$11</code>.</p>
+        <p>Comment procéder, étape par étape :</p>
+        <ol>
+            <li>Tapez <code class="w3-codespan">C2(=)</code></li>
+            <li>Sélectionnez <code class="w3-codespan">B11</code></li>
+            <li>Tapez (<code class="w3-codespan">$</code>) avant le <code class="w3-codespan">B</code> et <code class="w3-codespan">11 </code> (<code class="w3-codespan">11$B$</code>)</li>
+            <li>Tapez (<code class="w3-codespan">*</code>)</li>
+            <li>Sélectionnez <code class="w3-codespan">B2</code></li>
+            <li>Appuyez sur Entrée</li>
+            <li>Remplissage automatique <code class="w3-codespan">C2:C7</code></li>
+        </ol>
+        <img src="../images1/abs_ref2.png" alt="Références absolues dans Excel" style="max-width:100%">
+        <br><br>
+        <img src="../images1/abs_ref3.png" alt="Références absolues dans Excel" style="max-width:100%">
+        <br><br>
+        <img src="../images1/abs_ref4.png" alt="Références absolues dans Excel" style="max-width:100%">
+        <hr>
+        <br><br>
+        <img src="../images1/abs_ref5.png" alt="Références absolues dans Excel" style="max-width:100%">
+        <br><br>
+        <img src="../images1/abs_ref6.png" alt="Références absolues dans Excel" style="max-width:100%">
+        <p><b>Félicitations !</b> Vous avez calculé avec succès les prix des Pokeballs en utilisant une référence absolue.</p>
+        <hr>
+        <div>
+            <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/excel/exercise.html?filename=exercise_rel_ref2" method="post" target="_blank">
+                <h2 title="Les exercices fonctionnent uniquement en ligne">Testez-vous avec des exercices</h2>
+                <div class="exercisewindow">
+                    <h2>Excel Exercice :</h2>
+                    <p>Tapez la référence <code class="w3-codespan">A1</code> comme <strong>absolue</strong> :</p>
+                    <div class="exerciseprecontainer">
+<pre style="overflow: auto;">
+<input name="ex1" aria-label='Exemple' maxlength="1" style="width: 15px;">A$1
+</pre>
+                    </div>
+                    <br>
+                    <button type="submit" class="w3-btn w3-margin-bottom">Soumettre la réponse &raquo;</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="excel_rel_ref_fr.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="excel_addition_fr.html">Next &#10095;</a>
+        </div>
+    </article>
+    <script src="../scripts/excel-copy-formulas.js"></script>
     <hr>
     <div class='disqus'>
         <h4 title='Lisez avant d&#8217;écrire un commentaire!'><span class='predisqus-comment' title='Les commentaires ne fonctionnent qu&#8217;en ligne'>&#x270D; Commentaires</span></h4>
