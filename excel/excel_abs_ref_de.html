@@ -494,7 +494,98 @@
         <a href='excel_abs_ref_es.html' title='Wechseln Sie zu Spanisch'>Es</a>
         <a href='excel_abs_ref_fr.html' title='Wechseln Sie zu Französisch'>Fr</a>
     </p>
-    
+    <article>
+        <h1>Excel <span class="color_h1">Absolute Referenzen</span></h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="excel_rel_ref_de.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="excel_addition_de.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <h2>Absolute Referenzen</h2>
+        <p>Eine absolute Referenz liegt vor, wenn eine Referenz das Dollarzeichen hat (<code class="w3-codespan">$</code>).</p>
+        <p>Es sperrt eine Referenz in der Formel.</p>
+        <p>Fügen Sie <code class="w3-codespan">$</code> zur Formel hinzu, um absolute Bezüge zu verwenden.</p>
+        <p>Das Dollarzeichen hat drei verschiedene Zustände:</p>
+        <ul>
+            <li>Absolut für Spalte und Zeile. Die Referenz ist absolut gesperrt.<br>
+                Beispiel <code class="w3-codespan">=$A$1</code><br></li>
+            <li>Absolut für die Spalte. Der Verweis ist an diese Spalte gebunden. Die Zeile bleibt relativ.<br>
+                Beispiel <code class="w3-codespan">=$A1</code><br></li>
+            <li>Absolut für die Reihe. Der Verweis ist an diese Zeile gebunden. Die Spalte bleibt relativ.<br>
+                Beispiel <code class="w3-codespan">=A$1</code></li>
+        </ul>
+        <p>Schauen wir uns ein Beispiel an, das den Pokemon-Trainern hilft, die Preise für Pokeballs zu berechnen.</p>
+        <p>Geben Sie die folgenden Daten ein oder kopieren Sie sie:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate">
+                <img src="../images1/abs_ref1.png" alt="Absolute Referenzen in Excel" style="max-width:100%">
+                <textarea id="demo_excel_formulas" aria-label='Beispiel' style="display:none">
+Trainers	Pokeballs	Cost
+Iva	2
+Liam	5
+Pablo	10
+Jenny	7
+Iben	6
+Kasper	3
+
+Price	2	</textarea>
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="javascript:void(0);" onclick="copyFormulas('demo_excel_formulas')">Werte kopieren</a>
+        </div>
+        <p><b>Daten erklärt</b></p>
+        <ul>
+            <li>Es gibt 6 Trainer: Iva, Liam, Adora, Jenny, Iben und Kasper</li>
+            <li>Sie haben jeweils eine unterschiedliche Anzahl an Pokeballs in ihrem Warenkorb</li>
+            <li>Der Preis pro Pokeball beträgt 2 Münzen</li>
+        </ul>
+        <p><b>Helfen Sie ihnen, die Preise für die Pokeballs zu berechnen.</b></p>
+        <p>Die Preisreferenz ist <code class="w3-codespan">B11</code>. Wir möchten nicht, dass die Füllfunktion dies ändert, also sperren wir sie.</p>
+        <p>Die Referenz wird durch die Verwendung der Formel <code class="w3-codespan">$B$11</code> absolut gesperrt.</p>
+        <p>Wie es geht, Schritt für Schritt:</p>
+        <ol>
+            <li>Geben Sie <code class="w3-codespan">C2(=)</code> ein</li>
+            <li>Wählen Sie <code class="w3-codespan">B11</code></li>
+            <li>Geben Sie (<code class="w3-codespan">$</code>) vor dem <code class="w3-codespan">B</code> und <code class="w3-codespan">11 ein </code> (<code class="w3-codespan">$B$11</code>)</li>
+            <li>Geben Sie (<code class="w3-codespan">*</code>)</li>
+            <li>Wählen Sie <code class="w3-codespan">B2</code></li>
+            <li>Drücken Sie die Eingabetaste</li>
+            <li><code class="w3-codespan">C2:C7</code> automatisch ausfüllen</li>
+        </ol>
+        <img src="../images1/abs_ref2.png" alt="Absolute Referenzen in Excel" style="max-width:100%">
+        <br><br>
+        <img src="../images1/abs_ref3.png" alt="Absolute Referenzen in Excel" style="max-width:100%">
+        <br><br>
+        <img src="../images1/abs_ref4.png" alt="Absolute Referenzen in Excel" style="max-width:100%">
+        <hr>
+        <br><br>
+        <img src="../images1/abs_ref5.png" alt="Absolute Referenzen in Excel" style="max-width:100%">
+        <br><br>
+        <img src="../images1/abs_ref6.png" alt="Absolute Referenzen in Excel" style="max-width:100%">
+        <p><b>Herzlichen Glückwunsch!</b> Du hast die Preise für die Pokeballs erfolgreich anhand einer absoluten Referenz berechnet.</p>
+        <hr>
+        <div>
+            <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/excel/exercise.html?filename=exercise_rel_ref2" method="post" target="_blank">
+                <h2 title="Übungen funktionieren nur online">Testen Sie sich mit Übungen</h2>
+                <div class="exercisewindow">
+                    <h2>Excel Übung:</h2>
+                    <p>Typreferenz <code class="w3-codespan">A1</code> als <strong>absolut</strong>:</p>
+                    <div class="exerciseprecontainer">
+<pre style="overflow: auto;">
+<input name="ex1" aria-label='Beispiel' maxlength="1" style="width: 15px;">A$1
+</pre>
+                    </div>
+                    <br>
+                    <button type="submit" class="w3-btn w3-margin-bottom">Antwort absenden &raquo;</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="excel_rel_ref_de.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="excel_addition_de.html">Next &#10095;</a>
+        </div>
+    </article>
+    <script src="../scripts/excel-copy-formulas.js"></script>
     <hr>
     <div class='disqus'>
         <h4 title='Lesen Sie, bevor Sie einen Kommentar schreiben!'><span class='predisqus-comment' title='Kommentare funktionieren nur online'>&#x270D; Kommentare</span></h4>
