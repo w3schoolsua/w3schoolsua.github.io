@@ -490,12 +490,12 @@
             <a class="w3-right w3-btn" href="html5_draganddrop_fr.html">Next &#10095;</a>
         </div>
         <hr>
-        <p class="intro">The HTML Geolocation API is used to locate a user's position.</p>
+        <p class="intro">L'API HTML Geolocation est utilisée pour localiser la position d'un utilisateur.</p>
         <hr>
-        <h2>Locate the User's Position</h2>
-        <p>The HTML Geolocation API is used to get the geographical position of a user.</p>
-        <p id="demo">Since this can compromise privacy, the position is not available unless the user approves it.</p>
-        <p><button class="w3-btn w3-blue w3-round" onclick="getLocation()">Try It</button></p>
+        <h2>Localisez la position de l'utilisateur</h2>
+        <p>L'API HTML Geolocation est utilisée pour obtenir la position géographique d'un utilisateur.</p>
+        <p id="demo">Étant donné que cela peut compromettre la confidentialité, le poste n'est pas disponible à moins que l'utilisateur ne l'approuve.</p>
+        <p><button class="w3-btn w3-blue w3-round" onclick="getLocation()">Essayez-le</button></p>
         <div id="mapholder"></div>
         <script src="https://maps.google.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU"></script>
         <script>
@@ -545,11 +545,11 @@
             }
         </script>
         <div class="w3-panel w3-note">
-            <p><b>Note:</b> Geolocation is most accurate for devices with GPS, like smartphones.</p>
+            <p><b>Remarque :</b> La géolocalisation est plus précise pour les appareils équipés d'un GPS, comme les smartphones.</p>
         </div>
         <hr>
-        <h2>Browser Support</h2>
-        <p>The numbers in the table specify the first browser version that fully supports Geolocation.</p>
+        <h2>Prise en charge du navigateur</h2>
+        <p>Les nombres dans le tableau spécifient la première version du navigateur qui prend entièrement en charge la géolocalisation.</p>
         <table class="browserref notranslate">
             <tr>
                 <th style="width:20%;font-size:16px;text-align:left;">API</th>
@@ -560,7 +560,7 @@
                 <th style="width:16%;" class="bsOpera" title="Opera"></th>
             </tr>
             <tr>
-                <td style="text-align:left;">Geolocation</td>
+                <td style="text-align:left;">Géolocalisation</td>
                 <td>5.0 - 49.0 (http)<br>50.0 (https)</td>
                 <td>9.0</td>
                 <td>3.5</td>
@@ -569,40 +569,40 @@
             </tr>
         </table>
         <div class="w3-panel w3-note">
-            <p><b>Note:</b> As of Chrome 50, the Geolocation API will only work on secure contexts such as HTTPS. If your site is hosted on an non-secure origin (such as HTTP) the requests to get the user's location will no longer function.</p>
+            <p><b>Remarque :</b> À partir de Chrome 50, l'API de géolocalisation ne fonctionnera que sur des contextes sécurisés tels que HTTPS. Si votre site est hébergé sur une origine non sécurisée (telle que HTTP) les requêtes pour obtenir la localisation de l'utilisateur ne fonctionneront plus.</p>
         </div>
         <hr>
         <div class="adver_adinarticle">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Using HTML Geolocation</h2>
-        <p>The <code class="w3-codespan">getCurrentPosition()</code> method is used to return the user's position.</p>
-        <p>The example below returns the latitude and longitude of the user's position:</p>
+</div>        <h2>Utiliser la géolocalisation HTML</h2>
+        <p>La méthode <code class="w3-codespan">getCurrentPosition()</code> est utilisée pour renvoyer la position de l'utilisateur.</p>
+        <p>L'exemple ci-dessous renvoie la latitude et la longitude de la position de l'utilisateur :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate htmlHigh">
                 &lt;script&gt;<br>var x = document.getElementById(&quot;demo&quot;);<br>function getLocation() {<br>&nbsp;&nbsp;if (navigator.geolocation) {<br>&nbsp;&nbsp;&nbsp; navigator.geolocation.getCurrentPosition(showPosition);<br>&nbsp;&nbsp;} else {<br> &nbsp;&nbsp;&nbsp; x.innerHTML = &quot;Geolocation is not supported by this browser.&quot;;<br>&nbsp;&nbsp;}<br>}<br><br>function showPosition(position) {<br>&nbsp; x.innerHTML = &quot;Latitude: &quot; + position.coords.latitude + <br>&nbsp;&nbsp;&quot;&lt;br&gt;Longitude: &quot; + position.coords.longitude; <br>}<br>&lt;/script&gt;
             </div>
             <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml5_geolocation.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <p>Example explained:</p>
+        <p>Exemple expliqué :</p>
         <ul>
-            <li>Check if Geolocation is supported</li>
-            <li>If supported, run the getCurrentPosition() method. If not, display a message to the user</li>
-            <li>If the getCurrentPosition() method is successful, it returns a coordinates object to the function specified in the parameter (showPosition)</li>
-            <li>The showPosition() function outputs the Latitude and Longitude</li>
+            <li>Vérifiez si la géolocalisation est prise en charge</li>
+            <li>Si cette fonctionnalité est prise en charge, exécutez la méthode getCurrentPosition(). Sinon, affichez un message à l'utilisateur</li>
+            <li>Si la méthode getCurrentPosition() réussit, elle renvoie un objet coordonnées à la fonction spécifiée dans le paramètre (showPosition)</li>
+            <li>La fonction showPosition() affiche la latitude et la longitude</li>
         </ul>
-        <p>The example above is a very basic Geolocation script, with no error handling.</p>
+        <p>L'exemple ci-dessus est un script de géolocalisation très basique, sans gestion des erreurs.</p>
         <hr>
         <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Handling Errors and Rejections</h2>
-        <p>The second parameter of the <code class="w3-codespan">getCurrentPosition()</code> method is used to handle errors. It specifies a function to run if it fails to get the user's location:</p>
+</div>        <h2>Gestion des erreurs et des rejets</h2>
+        <p>Le deuxième paramètre de la méthode <code class="w3-codespan">getCurrentPosition()</code> est utilisé pour gérer les erreurs. Il spécifie une fonction à exécuter si elle ne parvient pas à obtenir l'emplacement de l'utilisateur :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 function showError(error) {<br>&nbsp;&nbsp;switch(error.code) {<br>&nbsp;&nbsp;&nbsp; case error.PERMISSION_DENIED:<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x.innerHTML = &quot;User denied the request for Geolocation.&quot;<br>
@@ -615,70 +615,69 @@
             <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml5_geolocation_error.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>Location-specific Information</h2>
-        <p>This page has demonstrated how to show a user's position on a map.</p>
-        <p>Geolocation is also very useful for location-specific information, like:</p>
+        <h2>Informations spécifiques à l'emplacement</h2>
+        <p>Cette page a montré comment afficher la position d'un utilisateur sur une carte.</p>
+        <p>La géolocalisation est également très utile pour les informations spécifiques à un emplacement, telles que :</p>
         <ul>
-            <li>Up to date local information</li>
-            <li>Showing Points-of-interest near the user</li>
-            <li>Turn-by-turn navigation (GPS)</li>
+            <li>Informations locales à jour</li>
+            <li>Affichage des points d'intérêt à proximité de l'utilisateur</li>
+            <li>Navigation étape par étape (GPS)</li>
         </ul>
         <hr>
         <div class="adver_admultiplex1">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>The getCurrentPosition() Method - Return Data</h2>
-        <p>The <code class="w3-codespan">getCurrentPosition()</code> method returns an object on success. The latitude, longitude and accuracy properties are always returned. The other properties are returned if available:</p>
+</div>        <h2>La méthode getCurrentPosition() - Renvoie des données</h2>
+        <p>La méthode <code class="w3-codespan">getCurrentPosition()</code> renvoie un objet en cas de succès. Les propriétés de latitude, de longitude et de précision sont toujours renvoyées. Les autres propriétés sont renvoyées si disponibles :</p>
         <table class="ws-table-all notranslate">
             <tr>
-                <th style="width:150px">Property</th>
-                <th>Returns</th>
+                <th style="width:150px">Propriété</th>
+                <th>Retours</th>
             </tr>
             <tr>
                 <td>coords.latitude</td>
-                <td>The latitude as a decimal number (always returned)</td>
+                <td>La latitude sous forme de nombre décimal (toujours renvoyé)</td>
             </tr>
             <tr>
                 <td>coords.longitude</td>
-                <td>The longitude as a decimal number (always returned)</td>
+                <td>La longitude sous forme de nombre décimal (toujours renvoyé)</td>
             </tr>
             <tr>
                 <td>coords.accuracy</td>
-                <td>The accuracy of position (always returned)</td>
+                <td>La précision de la position (toujours renvoyée)</td>
             </tr>
             <tr>
                 <td>coords.altitude</td>
-                <td>The altitude in meters above the mean sea level (returned if available)</td>
+                <td>L'altitude en mètres au-dessus du niveau moyen de la mer (renvoyée si disponible)</td>
             </tr>
             <tr>
                 <td>coords.altitudeAccuracy</td>
-                <td>The altitude accuracy of position (returned if available)</td>
+                <td>La précision de l'altitude de la position (renvoyée si disponible)</td>
             </tr>
             <tr>
                 <td>coords.heading</td>
-                <td>The heading as degrees clockwise from North (returned if available)</td>
+                <td>Le cap en degrés dans le sens des aiguilles d'une montre à partir du nord (renvoyé si disponible)</td>
             </tr>
             <tr>
                 <td>coords.speed</td>
-                <td>The speed in meters per second (returned if available)</td>
+                <td>La vitesse en mètres par seconde (renvoyée si disponible)</td>
             </tr>
             <tr>
                 <td>timestamp</td>
-                <td>The date/time of the response (returned if available)</td>
+                <td>La date/heure de la réponse (renvoyée si disponible)</td>
             </tr>
         </table>
         <hr>
-        <h2>Geolocation Object — Other interesting Methods</h2>
-        <p>The Geolocation object also has other interesting methods:</p>
+        <h2>Objet de géolocalisation — Autres méthodes intéressantes</h2>
+        <p>L'objet Géolocalisation possède également d'autres méthodes intéressantes :</p>
         <ul>
-            <li><code class="w3-codespan">watchPosition()</code> - Returns the current position of the user and continues to return updated position as the user moves (like the GPS in a car).</li>
-            <li><code class="w3-codespan">clearWatch()</code> - Stops the <code class="w3-codespan">watchPosition()</code> method.</li>
+            <li><code class="w3-codespan">watchPosition()</code> - Renvoie la position actuelle de l'utilisateur et continue de renvoyer la position mise à jour à mesure que l'utilisateur se déplace (comme le GPS dans une voiture).</li>
+            <li><code class="w3-codespan">clearWatch()</code> - Arrête la méthode <code class="w3-codespan">watchPosition()</code>.</li>
         </ul>
-        <p>The example below shows the <code class="w3-codespan">watchPosition()</code> method. You need an accurate GPS device to test this (like
-            a smartphone):</p>
+        <p>L'exemple ci-dessous montre la méthode <code class="w3-codespan">watchPosition()</code>. Vous avez besoin d'un appareil GPS précis pour tester cela (comme un smartphone) :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate htmlHigh">
                 &lt;script&gt;<br>var x = document.getElementById(&quot;demo&quot;);<br>function getLocation() {<br>&nbsp; if (navigator.geolocation) {<br>&nbsp;&nbsp;&nbsp; navigator.geolocation.watchPosition(showPosition);<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp; x.innerHTML = &quot;Geolocation is not supported by this browser.&quot;;<br>&nbsp;&nbsp;}<br>}<br>function showPosition(position) {<br>&nbsp; x.innerHTML = &quot;Latitude: &quot; + position.coords.latitude + <br>&nbsp;&nbsp;&quot;&lt;br&gt;Longitude: &quot; + position.coords.longitude;<br>}<br>&lt;/script&gt;
             </div>
