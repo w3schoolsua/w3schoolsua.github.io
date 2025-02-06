@@ -569,22 +569,22 @@
         <hr>
         <p class="intro">Les <strong>méthodes de chaîne</strong> vous aident à travailler avec des chaînes.</p>
         <hr>
-        <h2>String Methods and Properties</h2>
-        <p>Primitive values, like &quot;John Doe&quot;, cannot have properties or methods (because they are not objects).</p>
-        <p>But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.</p>
+        <h2>Méthodes et propriétés de chaîne</h2>
+        <p>Les valeurs primitives, comme « John Doe », ne peuvent pas avoir de propriétés ou de méthodes (car ce ne sont pas des objets).</p>
+        <p>Mais avec JavaScript, les méthodes et les propriétés sont également disponibles pour les valeurs primitives, car JavaScript traite les valeurs primitives comme des objets lors de l'exécution des méthodes et des propriétés.</p>
         <hr>
-        <h2>JavaScript String Length</h2>
-        <p>The <code class="w3-codespan">length</code> property returns the length of a string:</p>
+        <h2>Longueur de la chaîne JavaScript</h2>
+        <p>La propriété <code class="w3-codespan">length</code> renvoie la longueur d'une chaîne :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let txt = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;<br>let length = txt.length;
             </div>
             <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_length.html">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>Extracting String Parts</h2>
-        <p>There are 3 methods for extracting a part of a string:</p>
+        <h2>Extraction de parties de chaîne</h2>
+        <p>Il existe 3 méthodes pour extraire une partie d'une chaîne :</p>
         <ul>
             <li><code class="w3-codespan">slice(<em>start</em>, <em>end</em>)</code></li>
             <li><code class="w3-codespan">substring(<em>start</em>, <em>end</em>)</code></li>
@@ -592,42 +592,42 @@
         </ul>
         <hr>
         <h2>JavaScript String slice()</h2>
-        <p><code class="w3-codespan">slice()</code> extracts a part of a string and returns the extracted part in a new string.</p>
-        <p>The method takes 2 parameters: the start position, and the end position (end not included).</p>
+        <p><code class="w3-codespan">slice()</code> extrait une partie d'une chaîne et renvoie la partie extraite dans une nouvelle chaîne.</p>
+        <p>La méthode prend 2 paramètres : la position de départ et la position de fin (fin non incluse).</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Slice out a portion of a string from position 7 to position 13 (13 not included):</p>
+            <h3>Exemple</h3>
+            <p>Découpez une portion d'une chaîne de la position 7 à la position 13 (13 non incluse) :</p>
             <div class="w3-code notranslate jsHigh">
                 let str = &quot;Apple, Banana, Kiwi&quot;;<br>let part = str.slice(7, 13);
             </div>
             <a target="_blank" href="../jstryit/tryjs_string_slice.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-panel w3-note">
-            <h2>Note</h2>
-            <p>JavaScript counts positions from zero.</p>
-            <p>First position is 0.</p>
-            <p>Second position is 1.</p>
+            <h2>Remarque</h2>
+            <p>JavaScript compte les positions à partir de zéro.</p>
+            <p>La première position est 0.</p>
+            <p>La deuxième position est 1.</p>
         </div>
-        <p>If a parameter is negative, the position is counted from the end of the string.</p>
-        <p>This example slices out a portion of a string from position -12 to position -6:</p>
+        <p>Si un paramètre est négatif, la position est comptée à partir de la fin de la chaîne.</p>
+        <p>Cet exemple découpe une partie d'une chaîne de la position -12 à la position -6 :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let str = &quot;Apple, Banana, Kiwi&quot;;<br>let part = str.slice(-12, -6);
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_slice_negative.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <p>If you omit the second parameter, the method will slice out the rest of the string:</p>
+        <p>Si vous omettez le deuxième paramètre, la méthode découpera le reste de la chaîne :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let part = str.slice(7);
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_slice_rest.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <p>or, counting from the end:</p>
+        <p>ou, en comptant à partir de la fin :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let part = str.slice(-12);
             </div>
@@ -639,131 +639,131 @@
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>        <h2>JavaScript String substring()</h2>
-        <p><code class="w3-codespan">substring()</code> is similar to <code class="w3-codespan">slice()</code>.</p>
-        <p>The difference is that start and end values less than 0 are treated as 0 in <code class="w3-codespan">substring()</code>.</p>
+        <p><code class="w3-codespan">substring()</code> est similaire à <code class="w3-codespan">slice()</code>.</p>
+        <p>La différence est que les valeurs de début et de fin inférieures à 0 sont traitées comme 0 dans <code class="w3-codespan">substring()</code>.</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let str = &quot;Apple, Banana, Kiwi&quot;;<br>let part = str.substring(7, 13);
             </div>
             <a target="_blank" href="../jstryit/tryjs_string_substring.html" class="w3-btn w3-margin-bottom w3-margin-top">Try it Yourself &raquo;</a>
         </div>
-        <p>If you omit the second parameter, <code class="w3-codespan">substring()</code> will slice out the rest of the string.</p>
+        <p>Si vous omettez le deuxième paramètre, <code class="w3-codespan">substring()</code> découpera le reste de la chaîne.</p>
         <hr>
         <h2>JavaScript String substr()</h2>
-        <p><code class="w3-codespan">substr()</code> is similar to <code class="w3-codespan">slice()</code>.</p>
-        <p>The difference is that the second parameter specifies the <b>length</b> of the extracted part.</p>
+        <p><code class="w3-codespan">substr()</code> est similaire à <code class="w3-codespan">slice()</code>.</p>
+        <p>La différence est que le deuxième paramètre spécifie la <b>longueur</b> de la partie extraite.</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let str = &quot;Apple, Banana, Kiwi&quot;;<br>let part = str.substr(7, 6);
             </div>
             <a target="_blank" href="../jstryit/tryjs_string_substr.html" class="w3-btn w3-margin-bottom w3-margin-top">Try it Yourself &raquo;</a>
         </div>
-        <p>If you omit the second parameter, <code class="w3-codespan">substr()</code> will slice out the rest of the string.</p>
+        <p>Si vous omettez le deuxième paramètre, <code class="w3-codespan">substr()</code> découpera le reste de la chaîne.</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let str = &quot;Apple, Banana, Kiwi&quot;;<br>let part = str.substr(7);
             </div>
             <a class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_string_substr1.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <p>If the first parameter is negative, the position counts from the end of the string.</p>
+        <p>Si le premier paramètre est négatif, la position compte à partir de la fin de la chaîne.</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let str = &quot;Apple, Banana, Kiwi&quot;;<br>let part = str.substr(-4);
             </div>
             <a class="w3-btn w3-margin-bottom w3-margin-top" href="../jstryit/tryjs_string_substr2.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>Replacing String Content</h2>
-        <p>The <code class="w3-codespan">replace()</code> method replaces a specified value with another value in a string:</p>
+        <h2>Remplacement du contenu d'une chaîne</h2>
+        <p>La méthode <code class="w3-codespan">replace()</code> remplace une valeur spécifiée par une autre valeur dans une chaîne :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;Please visit Microsoft!&quot;;<br>let newText = text.replace(&quot;Microsoft&quot;, &quot;W3Schools&quot;);
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_replace.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-panel w3-note">
-            <h2>Note</h2>
-            <p>The <code class="w3-codespan">replace()</code> method does not change the string it is called on.</p>
-            <p>The <code class="w3-codespan">replace()</code> method returns a new string.</p>
-            <p>The <code class="w3-codespan">replace()</code> method replaces <strong>only the first</strong> match</p>
-            <p>If you want to replace all matches, use a regular expression with the /g flag set. See examples below.</p>
+            <h2>Remarque</h2>
+            <p>La méthode <code class="w3-codespan">replace()</code> ne modifie pas la chaîne sur laquelle elle est appelée.</p>
+            <p>La méthode <code class="w3-codespan">replace()</code> renvoie une nouvelle chaîne.</p>
+            <p>La méthode <code class="w3-codespan">replace()</code> remplace <strong>uniquement la première</strong> correspondance</p>
+            <p>Si vous souhaitez remplacer toutes les correspondances, utilisez une expression régulière avec l'indicateur /g défini. Voir les exemples ci-dessous.</p>
         </div>
-        <p>By default, the <code class="w3-codespan">replace()</code> method replaces <strong>only the first</strong> match:</p>
+        <p>Par défaut, la méthode <code class="w3-codespan">replace()</code> remplace <strong>uniquement la première</strong> correspondance :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;Please visit Microsoft and Microsoft!&quot;;<br>let newText = text.replace(&quot;Microsoft&quot;, &quot;W3Schools&quot;);
             </div>
             <a class="w3-btn" href="../jstryit/tryjs_string_replace_first.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <p>By default, the <code class="w3-codespan">replace()</code> method is case a sensitive. Writing MICROSOFT (with upper-case) will not work:</p>
+        <p>Par défaut, la méthode <code class="w3-codespan">replace()</code> est sensible à la casse. L'écriture de MICROSOFT (avec des majuscules) ne fonctionnera pas :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;Please visit Microsoft!&quot;;<br>let newText = text.replace(&quot;MICROSOFT&quot;, &quot;W3Schools&quot;);
             </div>
             <a class="w3-btn" href="../jstryit/tryjs_string_replace_case.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <p>To replace case-insensitive, use a <strong>regular expression</strong> with an <code class="w3-codespan">/i</code> flag (insensitive):</p>
+        <p>Pour remplacer l'insensible à la casse, utilisez une <strong>expression régulière</strong> avec un indicateur <code class="w3-codespan">/i</code> (insensible):</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;Please visit Microsoft!&quot;;<br>let newText = text.replace(/MICROSOFT/i, &quot;W3Schools&quot;);
             </div>
             <a class="w3-btn" href="../jstryit/tryjs_string_replace_insensitive.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-panel w3-note">
-            <h2>Note</h2>
-            <p>Regular expressions are written without quotes.</p>
+            <h2>Remarque</h2>
+            <p>Les expressions régulières sont écrites sans guillemets.</p>
         </div>
-        <p>To replace all matches, use a <strong>regular expression</strong> with a <code class="w3-codespan">/g</code> flag (global match):</p>
+        <p>Pour remplacer toutes les correspondances, utilisez une <strong>expression régulière</strong> avec un indicateur <code class="w3-codespan">/g</code> (correspondance globale) :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;Please visit Microsoft and Microsoft!&quot;;<br>let newText = text.replace(/Microsoft/g, &quot;W3Schools&quot;);
             </div>
             <a class="w3-btn" href="../jstryit/tryjs_string_replace_global.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-panel w3-note">
-            <h2>Note</h2>
-            <p>You will learn a lot more about regular expressions in the chapter <a href="js_regexp_fr.html">JavaScript Regular Expressions</a>.</p>
+            <h2>Remarque</h2>
+            <p>Vous en apprendrez beaucoup plus sur les expressions régulières dans le chapitre <a href="js_regexp_fr.html">Expressions régulières JavaScript</a>.</p>
         </div>
         <hr>
         <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Converting to Upper and Lower Case</h2>
-        <p>A string is converted to an upper case with <code class="w3-codespan">toUpperCase()</code>:</p>
-        <p>A string is converted to a lower case with <code class="w3-codespan">toLowerCase()</code>:</p>
+</div>        <h2>Conversion en majuscules et minuscules</h2>
+        <p>Une chaîne est convertie en majuscules avec <code class="w3-codespan">toUpperCase()</code>:</p>
+        <p>Une chaîne est convertie en minuscules avec <code class="w3-codespan">toLowerCase()</code>:</p>
         <hr>
-        <h2>JavaScript String toUpperCase()</h2>
+        <h2>Chaîne JavaScript toUpperCase()</h2>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text1 = &quot;Hello World!";<br>
                 let text2 = text1.toUpperCase();
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_toupper.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <h2>JavaScript String toLowerCase()</h2>
+        <h2>Chaîne JavaScript toLowerCase()</h2>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
-                let text1 = &quot;Hello World!&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // String<br>let text2 = text1.toLowerCase();&nbsp;&nbsp;// text2 is text1 converted to lower
+                let text1 = &quot;Hello World!&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Chaîne<br>let text2 = text1.toLowerCase();&nbsp;&nbsp;// text2 est text1 converti en inférieur
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_tolower.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>JavaScript String concat()</h2>
-        <p><code class="w3-codespan">concat()</code> joins two or more strings:</p>
+        <h2>Concat() de chaîne JavaScript</h2>
+        <p><code class="w3-codespan">concat()</code> joint deux ou plusieurs chaînes :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text1 = &quot;Hello&quot;;<br>
                 let text2 = &quot;World&quot;;<br>
@@ -771,23 +771,23 @@
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_concat.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <p>The <code class="w3-codespan">concat()</code> method can be used instead of the plus operator. These two lines do the same:</p>
+        <p>La méthode <code class="w3-codespan">concat()</code> peut être utilisée à la place de l'opérateur plus. Ces deux lignes font la même chose :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 text = &quot;Hello&quot; + &quot; &quot; + &quot;World!&quot;;<br>text = &quot;Hello&quot;.concat(&quot; &quot;, &quot;World!&quot;);
             </div>
         </div>
         <div class="w3-panel w3-note">
-            <h2>Note</h2>
-            <p>All string methods return a new string. They don't modify the original string.</p>
-            <p>Formally said:</p><p>Strings are immutable: Strings cannot be changed, only replaced.</p>
+            <h2>Remarque</h2>
+            <p>Toutes les méthodes de chaîne renvoient une nouvelle chaîne. Elles ne modifient pas la chaîne d'origine.</p>
+            <p>Formellement dit :</p><p>Les chaînes sont immuables : elles ne peuvent pas être modifiées, mais seulement remplacées.</p>
         </div>
         <hr>
         <h2>JavaScript String trim()</h2>
-        <p>The <code class="w3-codespan">trim()</code> method removes whitespace from both sides of a string:</p>
+        <p>La méthode <code class="w3-codespan">trim()</code> supprime les espaces des deux côtés d'une chaîne :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text1 = &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hello World! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;;<br>let text2 = text1.trim();
             </div>
@@ -799,41 +799,41 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>        <a id="mark_padding"></a>
-        <h2>JavaScript String Padding</h2>
-        <p>ECMAScript 2017 added two String methods: <code class="w3-codespan">padStart()</code> and <code class="w3-codespan">padEnd()</code> to support padding at the beginning and at the end of a string.</p>
+        <h2>Remplissage de chaîne JavaScript</h2>
+        <p>ECMAScript 2017 a ajouté deux méthodes de chaîne : <code class="w3-codespan">padStart()</code> et <code class="w3-codespan">padEnd()</code> pour prendre en charge le remplissage au début et à la fin d'une chaîne.</p>
         <hr>
         <h2>JavaScript String padStart()</h2>
-        <p>The <code class="w3-codespan">padStart()</code> method pads a string with another string:</p>
+        <p>La méthode <code class="w3-codespan">padStart()</code> complète une chaîne avec une autre chaîne :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;5&quot;;<br>let padded = text.padStart(4,"x");
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_padding4.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;5&quot;;<br>let padded = text.padStart(4,"0");
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_padding1.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-note">
-            <h2>Note</h2>
-            <p>The <code class="w3-codespan">padStart()</code> method is a string method.</p>
-            <p>To pad a number, convert the number to a string first.</p>
-            <p>See the example below.</p>
+            <h2>Remarque</h2>
+            <p>La méthode <code class="w3-codespan">padStart()</code> est une méthode de chaîne.</p>
+            <p>Pour compléter un nombre, convertissez d'abord le nombre en chaîne.</p>
+            <p>Voir l'exemple ci-dessous.</p>
         </div>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let numb = 5;<br>let text = numb.toString();<br>let padded = text.padStart(4,"0");
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_padding3.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <h2>Browser Support</h2>
-        <p><code class="w3-codespan">padStart()</code> is an ECMAScript 2017 feature.</p>
-        <p>It is supported in all modern browsers:</p>
+        <h2>Prise en charge du navigateur</h2>
+        <p><code class="w3-codespan">padStart()</code> est une fonctionnalité ECMAScript 2017.</p>
+        <p>Elle est prise en charge dans tous les navigateurs modernes :</p>
         <div class="w3-responsive">
             <table class="browserref notranslate">
                 <tr style="height:60px">
@@ -851,52 +851,52 @@
                     <td>Opera</td>
                 </tr>
                 <tr>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
+                    <td>Oui</td>
+                    <td>Oui</td>
+                    <td>Oui</td>
+                    <td>Oui</td>
+                    <td>Oui</td>
                 </tr>
             </table>
         </div>
-        <p><code class="w3-codespan">padStart()</code> is not supported in Internet Explorer.</p>
+        <p><code class="w3-codespan">padStart()</code> n'est pas pris en charge dans Internet Explorer.</p>
         <hr>
         <div class="adver_adinarticle">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>        <h2>JavaScript String padEnd()</h2>
-        <p>The <code class="w3-codespan">padEnd()</code> method pads a string with another string:</p>
+        <p>La méthode <code class="w3-codespan">padEnd()</code> remplit une chaîne avec une autre chaîne :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;5&quot;;<br>let padded = text.padEnd(4,"x");
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_padding6.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;5&quot;;<br>let padded = text.padEnd(4,"0");
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_padding2.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-note">
-            <h2>Note</h2>
-            <p>The <code class="w3-codespan">padEnd()</code> method is a string method.</p>
-            <p>To pad a number, convert the number to a string first.</p>
-            <p>See the example below.</p>
+            <h2>Remarque</h2>
+            <p>La méthode <code class="w3-codespan">padEnd()</code> est une méthode de chaîne.</p>
+            <p>Pour compléter un nombre, convertissez d'abord le nombre en chaîne.</p>
+            <p>Voir l'exemple ci-dessous.</p>
         </div>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let numb = 5;<br>let text = numb.toString();<br>let padded = text.padEnd(4,"0");
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_padding5.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <h2>Browser Support</h2>
-        <p><code class="w3-codespan">padEnd()</code> is an ECMAScript 2017 feature.</p>
-        <p>It is supported in all modern browsers:</p>
+        <h2>Prise en charge du navigateur</h2>
+        <p><code class="w3-codespan">padEnd()</code> est une fonctionnalité ECMAScript 2017.</p>
+        <p>Elle est prise en charge dans tous les navigateurs modernes :</p>
         <div class="w3-responsive">
             <table class="browserref notranslate">
                 <tr style="height:60px">
@@ -914,71 +914,71 @@
                     <td>Opera</td>
                 </tr>
                 <tr>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
+                    <td>Oui</td>
+                    <td>Oui</td>
+                    <td>Oui</td>
+                    <td>Oui</td>
+                    <td>Oui</td>
                 </tr>
             </table>
         </div>
-        <p><code class="w3-codespan">padEnd()</code> is not supported in Internet Explorer.</p>
+        <p><code class="w3-codespan">padEnd()</code> n'est pas pris en charge dans Internet Explorer.</p>
         <hr>
         <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Extracting String Characters</h2>
-        <p>There are 3 methods for extracting string characters:</p>
+</div>        <h2>Extraction de caractères de chaîne</h2>
+        <p>Il existe 3 méthodes pour extraire des caractères de chaîne :</p>
         <ul>
             <li><code class="w3-codespan">charAt(<em>position</em>)</code></li>
             <li><code class="w3-codespan">charCodeAt(<em>position</em>)</code></li>
-            <li>Property access [ ]</li>
+            <li>Propriété access [ ]</li>
         </ul>
         <hr>
-        <h2>JavaScript String charAt()</h2>
-        <p>The <code class="w3-codespan">charAt()</code> method returns the character at a specified index (position) in a string:</p>
+        <h2>Chaîne JavaScript charAt()</h2>
+        <p>La méthode <code class="w3-codespan">charAt()</code> renvoie le caractère à un index (position) spécifié dans une chaîne :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;HELLO WORLD&quot;;<br>let char = text.charAt(0);
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_charat.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>JavaScript String charCodeAt()</h2>
-        <p>The <code class="w3-codespan">charCodeAt()</code> method returns the unicode of the character at a specified index in a string:</p>
-        <p>The method returns a UTF-16 code (an integer between 0 and 65535).</p>
+        <h2>Chaîne JavaScript charCodeAt()</h2>
+        <p>La méthode <code class="w3-codespan">charCodeAt()</code> renvoie l'Unicode du caractère à un index spécifié dans une chaîne :</p>
+        <p>La méthode renvoie un code UTF-16 (un entier compris entre 0 et 65535).</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;HELLO WORLD&quot;;<br>let char = text.charCodeAt(0);
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_charcodeat.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>Property Access</h2>
-        <p>ECMAScript 5 (2009) allows property access [ ] on strings:</p>
+        <h2>Accès aux propriétés</h2>
+        <p>ECMAScript 5 (2009) permet l'accès aux propriétés [ ] sur les chaînes :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 let text = &quot;HELLO WORLD&quot;;<br>let char = text[0];
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_prop.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-panel w3-note">
-            <h2>Note</h2>
-            <p>Property access might be a little <strong>unpredictable:</strong></p>
+            <h2>Remarque</h2>
+            <p>L'accès à la propriété peut être un peu <strong>imprévisible :</strong></p>
             <ul>
-                <li>It makes strings look like arrays (but they are not)</li>
-                <li>If no character is found, [ ] returns undefined, while charAt() returns an empty string.</li>
-                <li>It is read only. str[0] = &quot;A&quot; gives no error (but does not work!)</li>
+                <li>Cela fait ressembler les chaînes à des tableaux (mais ce n'est pas le cas)</li>
+                <li>Si aucun caractère n'est trouvé, [ ] renvoie undefined, tandis que charAt() renvoie une chaîne vide.</li>
+                <li>Il est en lecture seule. str[0] = &quot;A&quot; ne donne aucune erreur (mais ne fonctionne pas !)</li>
             </ul>
         </div>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
-                let text = &quot;HELLO WORLD&quot;;<br>text[0] = "A";&nbsp;&nbsp;&nbsp;&nbsp;// Gives no error, but does not work
+                let text = &quot;HELLO WORLD&quot;;<br>text[0] = "A";&nbsp;&nbsp;&nbsp;&nbsp;// Ne donne aucune erreur, mais ne fonctionne pas
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_prop2.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
@@ -987,25 +987,25 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Converting a String to an Array</h2>
+</div>        <h2>Conversion d'une chaîne en tableau</h2>
         <div class="w3-panel w3-note">
-            <p>If you want to work with a string as an array, you can convert it to an array.</p>
+            <p>Si vous souhaitez travailler avec une chaîne sous forme de tableau, vous pouvez la convertir en tableau.</p>
         </div>
-        <h2>JavaScript String split()</h2>
-        <p>A string can be converted to an array with the <code class="w3-codespan">split()</code> method:</p>
+        <h2>Chaîne JavaScript split()</h2>
+        <p>Une chaîne peut être convertie en tableau avec la méthode <code class="w3-codespan">split()</code> :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
-                text.split(&quot;,&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Split on commas<br>
-                text.split(&quot; &quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Split on spaces<br>
-                text.split(&quot;|&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Split on pipe
+                text.split(&quot;,&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Séparer par des virgules<br>
+                text.split(&quot; &quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Diviser sur des espaces<br>
+                text.split(&quot;|&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Séparation sur tuyau
             </div>
             <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_string_split.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
-        <p>If the separator is omitted, the returned array will contain the whole string in index [0].</p>
-        <p>If the separator is &quot;&quot;, the returned array will be an array of single characters:</p>
+        <p>Si le séparateur est omis, le tableau renvoyé contiendra la chaîne entière dans l'index [0].</p>
+        <p>Si le séparateur est &quot;&quot;, le tableau renvoyé sera un tableau de caractères uniques :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate jsHigh">
                 text.split(&quot;&quot;)
             </div>
@@ -1013,24 +1013,24 @@
         </div>
         <hr>
         <div class="w3-note">
-            <h2>Complete String Reference</h2>
-            <p>For a complete String reference, go to our:</p>
-            <p><a href="../jsref/jsref_obj_string_fr.html">Complete JavaScript String Reference</a>.</p>
-            <p>The reference contains descriptions and examples of all string properties and methods.</p>
+            <h2>Référence complète des chaînes</h2>
+            <p>Pour une référence complète des chaînes, rendez-vous sur notre :</p>
+            <p><a href="../jsref/jsref_obj_string_fr.html">Référence complète des chaînes JavaScript</a>.</p>
+            <p>La référence contient des descriptions et des exemples de toutes les propriétés et méthodes de chaîne.</p>
         </div>
         <form autocomplete="off" spellcheck="false" id="w3-exerciseform" action="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_string_methods1" method="post" target="_blank">
-            <h2 title="Exercises only work online">Test Yourself With Exercises</h2>
+            <h2 title="Les exercices ne fonctionnent qu'en ligne">Testez-vous avec des exercices</h2>
             <div class="exercisewindow">
-                <h2>Exercise:</h2>
-                <p>Convert the text into an UPPERCASE text:</p>
+                <h2>Exercice :</h2>
+                <p>Convertir le texte en MAJUSCULES :</p>
                 <div class="exerciseprecontainer">
 <pre>
 let txt = "Hello World!";
-txt = txt.<input name="ex1" aria-label='Example' spellcheck="false" maxlength="13" style="width: 136px;">;
+txt = txt.<input name="ex1" aria-label='Exemple' spellcheck="false" maxlength="13" style="width: 136px;">;
 </pre>
                 </div>
                 <br>
-                <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+                <button type="submit" class="w3-btn w3-margin-bottom">Soumettre une réponse &raquo;</button>
             </div>
         </form>
         <hr>
