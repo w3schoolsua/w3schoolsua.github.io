@@ -497,15 +497,17 @@
     <hr>
     <p class="intro"><strong>HWB</strong> (<b>Hue</b> - Відтінок, <b>Whiteness</b> - Білість, <b>Blackness</b> - Чорнота) - рекомендований стандарт для <strong>CSS4</strong>.</p>
     <hr>
+    <h3>Як отримати HWB-колір?</h3>
+    <p>Щоб отримати HWB-колір, можна скористатись HWB-калькулятором.</p>
     <div class="w3-container w3-padding-large ws-grey" style="border-radius:5px;">
-        <h2>HWB Calculator</h2>
+        <h2>HWB Калькулятор</h2>
         <br>
         <div class="w3-row">
             <div class="w3-col m7" id="result01" style="background-color:hsl(0,100%,50%);height:200px"></div>
             <div class="w3-col m1">&nbsp;</div>
             <div class="w3-col m4">
                 <div class="w3-large" style="font-family:Consolas, 'courier new', sans-serif;bottom:10px;">
-                    <input id="hwb01" aria-label='Text' type="text" class="w3-input w3-border" onchange="setFullColor()" onkeydown="submitOnEnter(event)">
+                    <input id="hwb01" aria-label='Текст' type="text" class="w3-input w3-border" onchange="setFullColor()" onkeydown="submitOnEnter(event)">
                     <div id="rgb01" class="w3-margin-top">rgb(255, 0, 0)</div>
                     <div id="hex01" class="w3-margin-top">#ff0000</div>
                     <div id="hsl01" class="w3-margin-top">hsl(0, 100%, 50%)</div>
@@ -517,7 +519,7 @@
         <div class="w3-row">
             <div class="w3-col colorinput">
                 <div style="width:30px;float:left;">H:</div>
-                <input type="number" aria-label='Number' style="padding-left:6px;width:70px;" id="hue01" oninput="setColor(this)" onchange="setColor(this)" value="0">
+                <input type="number" aria-label='Число' style="padding-left:6px;width:70px;" id="hue01" oninput="setColor(this)" onchange="setColor(this)" value="0">
             </div>
             <div class="w3-rest colorslider">
                 <div id="huetable"></div>
@@ -526,7 +528,7 @@
         <div class="w3-row">
             <div class="w3-col colorinput">
                 <div style="width:30px;float:left;">W:</div>
-                <input type="number" aria-label='Number' style="padding-left:6px;width:70px;" id="white01" oninput="setColor(this)" onchange="setColor(this)" value="0">
+                <input type="number" aria-label='Число' style="padding-left:6px;width:70px;" id="white01" oninput="setColor(this)" onchange="setColor(this)" value="0">
             </div>
             <div class="w3-rest colorslider">
                 <div id="whitetable"></div>
@@ -535,7 +537,7 @@
         <div class="w3-row">
             <div class="w3-col colorinput">
                 <div style="width:30px;float:left;">B:</div>
-                <input type="number" aria-label='Number' style="padding-left:6px;width:70px;" id="black01" oninput="setColor(this)" onchange="setColor(this)" value="0">
+                <input type="number" aria-label='Число' style="padding-left:6px;width:70px;" id="black01" oninput="setColor(this)" onchange="setColor(this)" value="0">
             </div>
             <div class="w3-rest colorslider">
                 <div id="blacktable"></div>
@@ -636,7 +638,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Бібліотека кольорів W3Schools</h2>
+</div>    <hr>
+    <h2>Бібліотека кольорів W3Schools</h2>
     <p>Бібліотеку JavaScript, використану у прикладі вище, можна завантажити з:</p>
     <p><strong><a href="https://www.w3schools.com/lib/w3color.js" target="_blank" rel="nofollow noopener">https://www.w3schools.com/lib/w3color.js</a></strong></p>
     <p>Також ви можете скористатись альтернативним завантаженням із нашого сайту <a href='../index.html'><strong>W3Schools українською</strong></a> за посиланням: <a href="../lib/w3color.js" target="_blank">https://w3schoolsua.github.io/lib/w3color.js</a></p>
@@ -672,7 +675,7 @@
             h = document.getElementById("hue01");
             w = document.getElementById("white01");
             b = document.getElementById("black01");
-            elmnt.value = Number(elmnt.value);
+            elmnt.value = Число(elmnt.value);
             if (parseInt(elmnt.value) < 0) {elmnt.value = "0";}
             if (elmnt.id == "hue01") {
                 if (parseInt(elmnt.value) > 360) {elmnt.value = "360";}
