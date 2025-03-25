@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <title>SQL Tryit Editor v1.6</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/w3.css">
+  <link rel="stylesheet" href="../styles/sqltryit.css">
+  <link rel="stylesheet" href="../lib/codemirror.css">
+  <script src="../lib/codemirror.js"></script>
+  <script src="../lib/codemirror_sql.js"></script>
+  <script src="../scripts/w3Database.js"></script>
+  <script src="../scripts/sqltryit_head.js"></script>
+</head>
+<body>
+
+<div class="w3-container">
+  <div class="w3-row">
+    <div class="w3-col l10">
+      <div style="padding:15px;padding-bottom:40px;margin-bottom:40px;background-color:#f1f1f1;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);">
+        <form method="post" target="view" id="tryitform" name="tryitform" onsubmit="validateForm();">
+          <h3>SQL Інструкція:</h3>
+          <textarea id="textareaCodeSQL" aria-label='Example' wrap="soft">
+SELECT * FROM Customers;
+
+        </textarea>
+          <p>Відредагуйте SQL інструкцію та натисніть "Виконати SQL", щоб побачити результат.</p>
+          <input type="hidden" name="code" id="code" />
+          <input type="hidden" id="bt" name="bt" />
+        </form>
+        <button class="w3-green w3-btn" type="button" onclick="w3schoolsSQLSubmit();ga('send', 'event', 'runCodeSQL', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('/', ''); folder = folder.substr(0, folder.indexOf('/')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Виконати SQL &raquo;</button>
+        <h3>Результат:</h3>
+        <div id="resultSQL">
+          <iframe id="iframeResultSQL" name="view"></iframe>
+          <div id="divResultSQL">
+            <div style="margin:10px;margin-bottom:30px;">Клікніть <b>"Виконати SQL"</b> для виконання наведеної вище SQL-інструкції.</div>
+            <div style="margin:10px;">W3Schools створив базу даних SQL у вашому браузері.</div>
+            <div style="margin:10px;">Меню праворуч відображає базу даних і відображатиме всі зміни.</div>
+            <div style="margin:10px;">Не соромтеся експериментувати з будь-якими інструкціями SQL.</div>
+            <div style="margin:10px;">Ви можете відновити базу даних у будь-який час.</div>
+          </div>
+        </div>
+      </div>
+      <h3 style="text-align:center;font-size:16px;">
+        Try-SQL Редактор
+        <span id="buttonshowdesc" class="w3-badge w3-black" style="cursor:pointer;user-select:none" onclick="document.getElementById('descriptionDIV').style.display = 'block';document.getElementById('buttonhidedesc').style.display = '';this.style.display = 'none';">?</span>
+        <span id="buttonhidedesc" class="w3-badge w3-black" style="display:none;cursor:pointer;user-select:none" onclick="document.getElementById('descriptionDIV').style.display = 'none';document.getElementById('buttonshowdesc').style.display = '';this.style.display = 'none';">&times;</span>
+        <br>
+        на <a style="color:#555;" href="https://w3schoolsua.github.io">w3schoolsUA</a>
+      </h3>
+      <div id="descriptionDIV" style="text-align:center;display:none;">
+        <div id="nostatementsupport" style="display:none;">
+          <p>Ця SQL-інструкція не підтримується в базі даних WebSQL.</p>
+          <p>Приклад все ще працює, оскільки він використовує змінену версію SQL.</p>
+        </div>
+        <div id="nobrowsersupport" style="display:none;">
+          <p>Ваш браузер не підтримує WebSQL.</p>
+          <p>Зараз ви використовуєте полегшену версію редактора Try-SQL із базою даних лише для читання.</p>
+          <p>Якщо ви перейдете на браузер з підтримкою WebSQL, ви можете спробувати будь-яку інструкцію SQL і грати з базою даних скільки завгодно. Базу даних також можна відновити в будь-який час.</p>
+        </div>
+        <div id="yesbrowsersupport">
+          <p>Наш редактор Try-SQL використовує WebSQL для демонстрації SQL.</p>
+          <p>Для перевірки у вашому браузері створюється об’єкт бази даних.</p>
+          <p>Ви можете спробувати будь-яку інструкцію SQL і грати з базою даних скільки завгодно. Базу даних можна відновити в будь-який час, просто натиснувши кнопку "Відновити базу даних".</p>
+        </div>
+        <div id="websqlexplain">
+          <h3 style="font-size:16px;">W3C WebSQL</h3>
+          <p>WebSQL зберігає базу даних локально, на комп'ютері користувача. Кожен користувач отримує власний об'єкт бази даних.</p>
+          <h3 style="font-size:16px;">Підтримка веббраузера WebSQL</h3>
+          <div style="width:180px;margin:auto;margin-bottom:10px;">
+            <div class="chromesupport"> </div>
+            <div class="safarisupport"> </div>
+            <div class="firefoxsupport"> </div>
+            <div class="operasupport"> </div>
+            <div class="iesupport"> </div>
+            <div style="clear:both;"></div>
+          </div>
+          <p>WebSQL підтримується в Chrome, Safari, Opera та Edge (79).</p>
+          <div id="yesbrowsersupport2">
+            <p>Якщо ви використовуєте інший браузер, ви все одно зможете користуватися нашим редактором Try-SQL, але іншої версії, використовуючи серверну програму ASP, із базою даних Access, доступною лише для читання, де користувачам не дозволяється вносити зміни до даних.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 w3-padding">
+      <div id="dbInfo">
+        <div style="font-size:16px;">Ваша база даних:
+        </div>
+        <div>
+          <div id="yourDB" style="margin-top:10px;margin-bottom:20px;"></div>
+          <div id="yourRC" style="margin-top:10px;margin-bottom:20px;"></div>
+          <div id="yourIX" style="margin-top:10px;margin-bottom:20px;"></div>
+          <button title="Відновіть базу даних до її початкового вмісту" id="restoreDBBtn" class="w3-btn w3-dark-gray" type="button" onclick="w3schoolsWebSQL1.w3ClearDatabase()" style="display:none;">Відновити базу даних</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<input type="hidden" id="sSupport" value="" />
+<script src="../scripts/sqltryit_end.js"></script>
+</body>
+</html>
