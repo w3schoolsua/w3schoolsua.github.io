@@ -43,8 +43,8 @@
             "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
         ]
     }
-</script><title>SQL INSERT INTO Statement. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='SQL INSERT INTO Statement. Database. Insert Data Only in Specified Columns. The INSERT INTO statement is used to insert new records in a table. Examples. Lessons for beginners. W3Schools in English'>
+</script>    <title>SQL INSERT INTO Statement. Examples. Lessons for beginners. W3Schools in English</title>
+    <meta name='description' content='SQL INSERT INTO Statement. Database. Insert Data Only in Specified Columns. The INSERT INTO statement is used to insert new records in a table. Examples. Video Lesson. Lessons for beginners. W3Schools in English'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
@@ -815,242 +815,357 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index_en.html'><img src='../svg/sql_icon1.svg' alt='SQL. Lessons for beginners' class='w3-left w3-padding' title='SQL for beginners. W3Schools in English' width='100'></a>
-<p class='w3-right'>
-    <a href="sql_insert.html" title='Switch to Ukrainian'>Ua</a>
-</p>
-<article>
-    <h1>SQL <span class="color_h1">INSERT INTO</span> Statement</h1>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_not_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_null_values_en.html">Next &#10095;</a>
-    </div>
-    <hr>
-    <h2>The SQL INSERT INTO Statement</h2>
-    <p>The <code class="w3-codespan">INSERT INTO</code> statement is used to insert new records in a table.</p>
-    <h3>INSERT INTO Syntax</h3>
-    <p>It is possible to write the <code class="w3-codespan">INSERT INTO</code> statement in two ways:</p>
-    <p>1. Specify both the column names and the values to be inserted:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate sqlHigh">
-            INSERT INTO <em>table_name</em> (<em>column1</em>,<em> column2</em>,<em> column3</em>, ...)<br>VALUES (<em>value1</em>,<em> value2</em>,<em> value3</em>, ...);
+    <p class='w3-right'>
+        <a href='sql_insert.html' title='Switch to Ukrainian'>Ua</a>
+        <a href='sql_insert_es.html' title='Switch to Spanish'>Es</a>
+        <a href='sql_insert_de.html' title='Switch to German'>De</a>
+        <a href='sql_insert_fr.html' title='Switch to French'>Fr</a>
+    </p>
+    <article>
+        <h1>SQL <span class="color_h1">INSERT INTO</span> Statement</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_not_en.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_null_values_en.html">Next &#10095;</a>
         </div>
-    </div>
-    <p>2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. Here, the <code class="w3-codespan">INSERT INTO</code> syntax would be as follows:</p>
-    <div class="w3-example">
-        <div class="w3-code notranslate sqlHigh">
-            INSERT INTO <em>table_name</em><br>VALUES (<em>value1</em>,<em> value2</em>,<em> value3</em>, ...);
+        <hr>
+        <h2>The SQL INSERT INTO Statement</h2>
+        <p>The <code class="w3-codespan">INSERT INTO</code> statement is used to insert new records in a table.</p>
+        <hr>
+        <h3>INSERT INTO Syntax</h3>
+        <p>It is possible to write the <code class="w3-codespan">INSERT INTO</code> statement in two ways:</p>
+        <p>1. Specify both the column names and the values to be inserted:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate sqlHigh">
+                INSERT INTO <em>table_name</em> (<em>column1</em>,<em> column2</em>,<em> column3</em>, ...)<br>VALUES (<em>value1</em>,<em> value2</em>,<em> value3</em>, ...);
+            </div>
         </div>
-    </div>
-    <hr>
-    <h2>Demo Database</h2>
-    <p>Below is a selection from the &quot;Customers&quot; table in the Northwind sample database:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tr>
-                <th>CustomerID</th>
-                <th>CustomerName</th>
-                <th>ContactName</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>PostalCode</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>89</td>
-                <td>White Clover Markets</td>
-                <td>Karl Jablonski</td>
-                <td>305 - 14th Ave. S. Suite 3B</td>
-                <td>Seattle</td>
-                <td>98128</td>
-                <td>USA</td>
-            </tr>
-            <tr>
-                <td>90<br><br></td>
-                <td>Wilman Kala</td>
-                <td>Matti Karttunen</td>
-                <td>Keskuskatu 45</td>
-                <td>Helsinki</td>
-                <td>21240</td>
-                <td>Finland</td>
-            </tr>
-            <tr>
-                <td>91<br><br></td>
-                <td>Wolski</td>
-                <td>Zbyszek</td>
-                <td>ul. Filtrowa 68</td>
-                <td>Walla</td>
-                <td>01-012</td>
-                <td>Poland</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <div class="adver_adinfeed">
+        <p>2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. Here, the <code class="w3-codespan">INSERT INTO</code> syntax would be as follows:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate sqlHigh">
+                INSERT INTO <em>table_name</em><br>VALUES (<em>value1</em>,<em> value2</em>,<em> value3</em>, ...);
+            </div>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Demo Database</h2>
+        <p>Below is a selection from the &quot;Customers&quot; table in the Northwind sample database:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>89</td>
+                    <td>White Clover Markets</td>
+                    <td>Karl Jablonski</td>
+                    <td>305 - 14th Ave. S. Suite 3B</td>
+                    <td>Seattle</td>
+                    <td>98128</td>
+                    <td>USA</td>
+                </tr>
+                <tr>
+                    <td>90<br><br></td>
+                    <td>Wilman Kala</td>
+                    <td>Matti Karttunen</td>
+                    <td>Keskuskatu 45</td>
+                    <td>Helsinki</td>
+                    <td>21240</td>
+                    <td>Finland</td>
+                </tr>
+                <tr>
+                    <td>91<br><br></td>
+                    <td>Wolski</td>
+                    <td>Zbyszek</td>
+                    <td>ul. Filtrowa 68</td>
+                    <td>Walla</td>
+                    <td>01-012</td>
+                    <td>Poland</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>INSERT INTO Example</h2>
-    <p>The following SQL statement inserts a new record in the &quot;Customers&quot; table:</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate sqlHigh">
-            INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)<br>VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_insert_colname.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <p>The selection from the &quot;Customers&quot; table will now look like this:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tr>
-                <th>CustomerID</th>
-                <th>CustomerName</th>
-                <th>ContactName</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>PostalCode</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>89</td>
-                <td>White Clover Markets</td>
-                <td>Karl Jablonski</td>
-                <td>305 - 14th Ave. S. Suite 3B</td>
-                <td>Seattle</td>
-                <td>98128</td>
-                <td>USA</td>
-            </tr>
-            <tr>
-                <td>90<br><br></td>
-                <td>Wilman Kala</td>
-                <td>Matti Karttunen</td>
-                <td>Keskuskatu 45</td>
-                <td>Helsinki</td>
-                <td>21240</td>
-                <td>Finland</td>
-            </tr>
-            <tr>
-                <td>91<br><br></td>
-                <td>Wolski</td>
-                <td>Zbyszek</td>
-                <td>ul. Filtrowa 68</td>
-                <td>Walla</td>
-                <td>01-012</td>
-                <td>Poland</td>
-            </tr>
-            <tr>
-                <td>92</td>
-                <td>Cardinal</td>
-                <td>Tom B. Erichsen</td>
-                <td>Skagen 21</td>
-                <td>Stavanger</td>
-                <td>4006</td>
-                <td>Norway</td>
-            </tr>
-        </table>
-    </div>
-    <div class="w3-panel w3-note">
-        <p><strong>Did you notice that we did not insert any number into the CustomerID field?</strong><br>The CustomerID column is an <a href="sql_autoincrement_en.html">auto-increment</a> field and will be generated automatically when a new record is inserted into the table.</p>
-    </div>
-    <hr>
-    <h2>Insert Data Only in Specified Columns</h2>
-    <p>It is also possible to only insert data in specific columns.</p>
-    <p>The following SQL statement will insert a new record, but only insert data in the &quot;CustomerName&quot;, &quot;City&quot;, and &quot;Country&quot; columns (CustomerID will be updated automatically):</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <div class="w3-code notranslate sqlHigh">
-            INSERT INTO Customers (CustomerName, City, Country)<br>VALUES ('Cardinal', 'Stavanger', 'Norway');
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_insert_cols.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <p>The selection from the &quot;Customers&quot; table will now look like this:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tr>
-                <th>CustomerID</th>
-                <th>CustomerName</th>
-                <th>ContactName</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>PostalCode</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>89</td>
-                <td>White Clover Markets</td>
-                <td>Karl Jablonski</td>
-                <td>305 - 14th Ave. S. Suite 3B</td>
-                <td>Seattle</td>
-                <td>98128</td>
-                <td>USA</td>
-            </tr>
-            <tr>
-                <td>90<br><br></td>
-                <td>Wilman Kala</td>
-                <td>Matti Karttunen</td>
-                <td>Keskuskatu 45</td>
-                <td>Helsinki</td>
-                <td>21240</td>
-                <td>Finland</td>
-            </tr>
-            <tr>
-                <td>91<br><br></td>
-                <td>Wolski</td>
-                <td>Zbyszek</td>
-                <td>ul. Filtrowa 68</td>
-                <td>Walla</td>
-                <td>01-012</td>
-                <td>Poland</td>
-            </tr>
-            <tr>
-                <td>92</td>
-                <td>Cardinal</td>
-                <td>null</td>
-                <td>null&nbsp;</td>
-                <td>Stavanger</td>
-                <td>null</td>
-                <td>Norway</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_insert1" method="post" target="_blank">
-        <h2 class="shadow-black-1">Test Yourself With Exercises</h2>
-        <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Insert a new record in the <code class="w3-codespan">Customers</code> table.</p>
-            <div class="exerciseprecontainer">
-<pre>
-<input name="ex1" maxlength="11" style="width: 117px;"> Customers <input name="ex2" maxlength="1" style="width: 12px;">
-CustomerName, 
-Address, 
-City, 
-PostalCode,
-Country<input name="ex3" maxlength="1" style="width: 11px;">
-<input name="ex4" maxlength="6" style="width: 64px;"> <input name="ex5" maxlength="1" style="width: 11px;">
-'Hekkan Burger',
-'Gateveien 15',
-'Sandnes',
-'4306',
-'Norway'<input name="ex6" maxlength="1" style="width: 12px;">;
-</pre>
+</div>        <h2>INSERT INTO Example</h2>
+        <p>The following SQL statement inserts a new record in the &quot;Customers&quot; table:</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate sqlHigh">
+                INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)<br>VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
             </div>
-            <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            <a target="_blank" href="../sqltryit/trysql_insert_colname.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-    </form>
-    <hr>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_not_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_null_values_en.html">Next &#10095;</a>
-    </div>
-</article>
+        <p>The selection from the &quot;Customers&quot; table will now look like this:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>89</td>
+                    <td>White Clover Markets</td>
+                    <td>Karl Jablonski</td>
+                    <td>305 - 14th Ave. S. Suite 3B</td>
+                    <td>Seattle</td>
+                    <td>98128</td>
+                    <td>USA</td>
+                </tr>
+                <tr>
+                    <td>90<br><br></td>
+                    <td>Wilman Kala</td>
+                    <td>Matti Karttunen</td>
+                    <td>Keskuskatu 45</td>
+                    <td>Helsinki</td>
+                    <td>21240</td>
+                    <td>Finland</td>
+                </tr>
+                <tr>
+                    <td>91<br><br></td>
+                    <td>Wolski</td>
+                    <td>Zbyszek</td>
+                    <td>ul. Filtrowa 68</td>
+                    <td>Walla</td>
+                    <td>01-012</td>
+                    <td>Poland</td>
+                </tr>
+                <tr>
+                    <td>92</td>
+                    <td>Cardinal</td>
+                    <td>Tom B. Erichsen</td>
+                    <td>Skagen 21</td>
+                    <td>Stavanger</td>
+                    <td>4006</td>
+                    <td>Norway</td>
+                </tr>
+            </table>
+        </div>
+        <div class="w3-panel w3-note">
+            <p><strong>Did you notice that we did not insert any number into the CustomerID field?</strong><br>The CustomerID column is an <a href="sql_autoincrement_en.html">auto-increment</a> field and will be generated automatically when a new record is inserted into the table.</p>
+        </div>
+        <hr>
+        <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Insert Data Only in Specified Columns</h2>
+        <p>It is also possible to only insert data in specific columns.</p>
+        <p>The following SQL statement will insert a new record, but only insert data in the &quot;CustomerName&quot;, &quot;City&quot;, and &quot;Country&quot; columns (CustomerID will be updated automatically):</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate sqlHigh">
+                INSERT INTO Customers (CustomerName, City, Country)<br>VALUES ('Cardinal', 'Stavanger', 'Norway');
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_insert_cols.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <p>The selection from the &quot;Customers&quot; table will now look like this:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>89</td>
+                    <td>White Clover Markets</td>
+                    <td>Karl Jablonski</td>
+                    <td>305 - 14th Ave. S. Suite 3B</td>
+                    <td>Seattle</td>
+                    <td>98128</td>
+                    <td>USA</td>
+                </tr>
+                <tr>
+                    <td>90<br><br></td>
+                    <td>Wilman Kala</td>
+                    <td>Matti Karttunen</td>
+                    <td>Keskuskatu 45</td>
+                    <td>Helsinki</td>
+                    <td>21240</td>
+                    <td>Finland</td>
+                </tr>
+                <tr>
+                    <td>91<br><br></td>
+                    <td>Wolski</td>
+                    <td>Zbyszek</td>
+                    <td>ul. Filtrowa 68</td>
+                    <td>Walla</td>
+                    <td>01-012</td>
+                    <td>Poland</td>
+                </tr>
+                <tr>
+                    <td>92</td>
+                    <td>Cardinal</td>
+                    <td>null</td>
+                    <td>null&nbsp;</td>
+                    <td>Stavanger</td>
+                    <td>null</td>
+                    <td>Norway</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Insert Multiple Rows</h2>
+        <p>It is also possible to insert multiple rows in one statement.</p>
+        <p>To insert multiple rows of data, we use the same <code class="w3-codespan">INSERT INTO</code> statement, but with multiple values:</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate sqlHigh">
+                INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)<br>VALUES<br>
+                ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),<br>
+                ('Greasy Burger', 'Per Olsen', 'Gateveien 15', 'Sandnes', '4306', 'Norway'),<br>
+                ('Tasty Tee', 'Finn Egan', 'Streetroad 19B', 'Liverpool', 'L1 0AA', 'UK');
+            </div>
+        </div>
+        <p>Make sure you separate each set of values with a comma <code class="w3-codespan">,</code>.</p>
+        <p>The selection from the &quot;Customers&quot; table will now look like this:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>89</td>
+                    <td>White Clover Markets</td>
+                    <td>Karl Jablonski</td>
+                    <td>305 - 14th Ave. S. Suite 3B</td>
+                    <td>Seattle</td>
+                    <td>98128</td>
+                    <td>USA</td>
+                </tr>
+                <tr>
+                    <td>90<br><br></td>
+                    <td>Wilman Kala</td>
+                    <td>Matti Karttunen</td>
+                    <td>Keskuskatu 45</td>
+                    <td>Helsinki</td>
+                    <td>21240</td>
+                    <td>Finland</td>
+                </tr>
+                <tr>
+                    <td>91<br><br></td>
+                    <td>Wolski</td>
+                    <td>Zbyszek</td>
+                    <td>ul. Filtrowa 68</td>
+                    <td>Walla</td>
+                    <td>01-012</td>
+                    <td>Poland</td>
+                </tr>
+                <tr>
+                    <td>92</td>
+                    <td>Cardinal</td>
+                    <td>Tom B. Erichsen</td>
+                    <td>Skagen 21</td>
+                    <td>Stavanger</td>
+                    <td>4006</td>
+                    <td>Norway</td>
+                </tr>
+                <tr>
+                    <td>93</td>
+                    <td>Greasy Burger</td>
+                    <td>Per Olsen</td>
+                    <td>Gateveien 15</td>
+                    <td>Sandnes</td>
+                    <td>4306</td>
+                    <td>Norway</td>
+                </tr>
+                <tr>
+                    <td>94</td>
+                    <td>Tasty Tee</td>
+                    <td>Finn Egan</td>
+                    <td>Streetroad 19B</td>
+                    <td>Liverpool</td>
+                    <td>L1 0AA</td>
+                    <td>UK</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_insert1" method="post" target="_blank">
+            <h2 title="Exercises only work online">Test Yourself With Exercises</h2>
+            <div class="exercisewindow">
+                <h2>Exercise:</h2>
+                <p>Insert a new record in the <code class="w3-codespan">Customers</code> table.</p>
+                <div class="exerciseprecontainer">
+    <pre>
+    <input name="ex1" maxlength="11" aria-label='Example' style="width: 117px;"> Customers <input name="ex2" maxlength="1" aria-label='Example' style="width: 12px;">
+    CustomerName,
+    Address,
+    City,
+    PostalCode,
+    Country<input name="ex3" maxlength="1" aria-label='Example' style="width: 11px;">
+    <input name="ex4" maxlength="6" aria-label='Example' style="width: 64px;"> <input name="ex5" maxlength="1" aria-label='Example' style="width: 11px;">
+    'Hekkan Burger',
+    'Gateveien 15',
+    'Sandnes',
+    '4306',
+    'Norway'<input name="ex6" maxlength="1" aria-label='Example' style="width: 12px;">;
+    </pre>
+                </div>
+                <br>
+                <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            </div>
+        </form>
+        <hr>
+        <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>W3Schools SQL Video Tutorial. INSERT INTO Statement</h2>
+        <div class="videowrap">
+            <div class="videoblock">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Dndsh1dcx-U" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>This video is an introduction to the <strong>INSERT INTO Statement</strong> in SQL.</p>
+            <p>Part of a series of video tutorials to learn <strong>SQL for beginners</strong>!</p>
+        </div>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_not_en.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_null_values_en.html">Next &#10095;</a>
+        </div>
+    </article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-</div>
+    </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
