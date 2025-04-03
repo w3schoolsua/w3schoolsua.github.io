@@ -832,15 +832,15 @@
         <h2>La instrucción SQL INSERT INTO</h2>
         <p>La instrucción <code class="w3-codespan">INSERT INTO</code> se utiliza para insertar nuevos registros en una tabla.</p>
         <hr>
-        <h3>INSERT INTO Syntax</h3>
-        <p>It is possible to write the <code class="w3-codespan">INSERT INTO</code> statement in two ways:</p>
-        <p>1. Specify both the column names and the values to be inserted:</p>
+        <h3>INSERT INTO Sintaxis</h3>
+        <p>Es posible escribir la instrucción <code class="w3-codespan">INSERT INTO</code> de dos maneras:</p>
+        <p>1. Especifique tanto los nombres de las columnas como los valores que se insertarán:</p>
         <div class="w3-example">
             <div class="w3-code notranslate sqlHigh">
                 INSERT INTO <em>table_name</em> (<em>column1</em>,<em> column2</em>,<em> column3</em>, ...)<br>VALUES (<em>value1</em>,<em> value2</em>,<em> value3</em>, ...);
             </div>
         </div>
-        <p>2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. Here, the <code class="w3-codespan">INSERT INTO</code> syntax would be as follows:</p>
+        <p>2. Si agrega valores para todas las columnas de la tabla, no necesita especificar los nombres de las columnas en la consulta SQL. Sin embargo, asegúrese de que los valores estén en el mismo orden que las columnas de la tabla. En este caso, la sintaxis de <code class="w3-codespan">INSERT INTO</code> sería la siguiente:</p>
         <div class="w3-example">
             <div class="w3-code notranslate sqlHigh">
                 INSERT INTO <em>table_name</em><br>VALUES (<em>value1</em>,<em> value2</em>,<em> value3</em>, ...);
@@ -851,8 +851,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Demo Database</h2>
-        <p>Below is a selection from the &quot;Customers&quot; table in the Northwind sample database:</p>
+</div>        <h2>Base de datos de demostración</h2>
+        <p>A continuación se muestra una selección de la tabla &quot;Customers&quot; de la base de datos de muestra de Northwind:</p>
         <div class="w3-responsive">
             <table class="ws-table-all notranslate">
                 <tr>
@@ -898,16 +898,16 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>INSERT INTO Example</h2>
-        <p>The following SQL statement inserts a new record in the &quot;Customers&quot; table:</p>
+</div>        <h2>INSERT INTO Ejemplo</h2>
+        <p>La siguiente declaración SQL inserta un nuevo registro en la tabla &quot;Customers&quot;:</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Ejemplo</h3>
             <div class="w3-code notranslate sqlHigh">
                 INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)<br>VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
             </div>
             <a target="_blank" href="../sqltryit/trysql_insert_colname.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-        <p>The selection from the &quot;Customers&quot; table will now look like this:</p>
+        <p>La selección de la tabla &quot;Customers&quot; ahora se verá así:</p>
         <div class="w3-responsive">
             <table class="ws-table-all notranslate">
                 <tr>
@@ -958,24 +958,24 @@
             </table>
         </div>
         <div class="w3-panel w3-note">
-            <p><strong>Did you notice that we did not insert any number into the CustomerID field?</strong><br>The CustomerID column is an <a href="sql_autoincrement_es.html">auto-increment</a> field and will be generated automatically when a new record is inserted into the table.</p>
+            <p><strong>¿Observaste que no insertamos ningún número en el campo CustomerID?</strong><br>La columna CustomerID es un campo de <a href="sql_autoincrement_es.html">autoincremento</a> y se generará automáticamente cuando se inserte un nuevo registro en la tabla.</p>
         </div>
         <hr>
         <div class="adver_admultiplex1">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Insert Data Only in Specified Columns</h2>
-        <p>It is also possible to only insert data in specific columns.</p>
-        <p>The following SQL statement will insert a new record, but only insert data in the &quot;CustomerName&quot;, &quot;City&quot;, and &quot;Country&quot; columns (CustomerID will be updated automatically):</p>
+</div>        <h2>Insertar datos sólo en las columnas especificadas</h2>
+        <p>También es posible insertar datos únicamente en columnas específicas.</p>
+        <p>La siguiente declaración SQL insertará un nuevo registro, pero solo insertará datos en las columnas &quot;CustomerName&quot;, &quot;City&quot; y &quot;Country&quot; (CustomerID se actualizará automáticamente):</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Ejemplo</h3>
             <div class="w3-code notranslate sqlHigh">
                 INSERT INTO Customers (CustomerName, City, Country)<br>VALUES ('Cardinal', 'Stavanger', 'Norway');
             </div>
             <a target="_blank" href="../sqltryit/trysql_insert_cols.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-        <p>The selection from the &quot;Customers&quot; table will now look like this:</p>
+        <p>La selección de la tabla &quot;Customers&quot; ahora se verá así:</p>
         <div class="w3-responsive">
             <table class="ws-table-all notranslate">
                 <tr>
@@ -1030,11 +1030,11 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Insert Multiple Rows</h2>
-        <p>It is also possible to insert multiple rows in one statement.</p>
-        <p>To insert multiple rows of data, we use the same <code class="w3-codespan">INSERT INTO</code> statement, but with multiple values:</p>
+</div>        <h2>Insertar varias filas</h2>
+        <p>También es posible insertar varias filas en una sola declaración.</p>
+        <p>Para insertar varias filas de datos, utilizamos la misma instrucción <code class="w3-codespan">INSERT INTO</code>, pero con varios valores:</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Ejemplo</h3>
             <div class="w3-code notranslate sqlHigh">
                 INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)<br>VALUES<br>
                 ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),<br>
@@ -1042,8 +1042,8 @@
                 ('Tasty Tee', 'Finn Egan', 'Streetroad 19B', 'Liverpool', 'L1 0AA', 'UK');
             </div>
         </div>
-        <p>Make sure you separate each set of values with a comma <code class="w3-codespan">,</code>.</p>
-        <p>The selection from the &quot;Customers&quot; table will now look like this:</p>
+        <p>Asegúrese de separar cada conjunto de valores con una coma <code class="w3-codespan">,</code>.</p>
+        <p>La selección de la tabla &quot;Customers&quot; ahora se verá así:</p>
         <div class="w3-responsive">
             <table class="ws-table-all notranslate">
                 <tr>
@@ -1117,28 +1117,28 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>        <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_insert1" method="post" target="_blank">
-            <h2 title="Exercises only work online">Test Yourself With Exercises</h2>
+            <h2 title="Los ejercicios solo funcionan en línea">Ponte a prueba con ejercicios</h2>
             <div class="exercisewindow">
-                <h2>Exercise:</h2>
-                <p>Insert a new record in the <code class="w3-codespan">Customers</code> table.</p>
+                <h2>Ejercicio:</h2>
+                <p>Inserte un nuevo registro en la tabla <code class="w3-codespan">Customers</code>.</p>
                 <div class="exerciseprecontainer">
     <pre>
-    <input name="ex1" maxlength="11" aria-label='Example' style="width: 117px;"> Customers <input name="ex2" maxlength="1" aria-label='Example' style="width: 12px;">
+    <input name="ex1" maxlength="11" aria-label='Ejemplo' style="width: 117px;"> Customers <input name="ex2" maxlength="1" aria-label='Ejemplo' style="width: 12px;">
     CustomerName,
     Address,
     City,
     PostalCode,
-    Country<input name="ex3" maxlength="1" aria-label='Example' style="width: 11px;">
-    <input name="ex4" maxlength="6" aria-label='Example' style="width: 64px;"> <input name="ex5" maxlength="1" aria-label='Example' style="width: 11px;">
+    Country<input name="ex3" maxlength="1" aria-label='Ejemplo' style="width: 11px;">
+    <input name="ex4" maxlength="6" aria-label='Ejemplo' style="width: 64px;"> <input name="ex5" maxlength="1" aria-label='Ejemplo' style="width: 11px;">
     'Hekkan Burger',
     'Gateveien 15',
     'Sandnes',
     '4306',
-    'Norway'<input name="ex6" maxlength="1" aria-label='Example' style="width: 12px;">;
+    'Norway'<input name="ex6" maxlength="1" aria-label='Ejemplo' style="width: 12px;">;
     </pre>
                 </div>
                 <br>
-                <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+                <button type="submit" class="w3-btn w3-margin-bottom">Enviar respuesta &raquo;</button>
             </div>
         </form>
         <hr>
@@ -1146,13 +1146,13 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>W3Schools SQL Video Tutorial. INSERT INTO Statement</h2>
+</div>        <h2>W3Schools SQL Videotutorial. INSERT INTO Instrucción</h2>
         <div class="videowrap">
             <div class="videoblock">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Dndsh1dcx-U" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <p>This video is an introduction to the <strong>INSERT INTO Statement</strong> in SQL.</p>
-            <p>Part of a series of video tutorials to learn <strong>SQL for beginners</strong>!</p>
+            <p>Este vídeo es una introducción a la <strong>Instrucción INSERT INTO</strong> en SQL.</p>
+            <p>¡Parte de una serie de videotutoriales para aprender <strong>SQL para principiantes</strong>!</p>
         </div>
         <hr>
         <div class="w3-clear nextprev">
