@@ -42,8 +42,8 @@
             "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
         ]
     }
-</script><title>SQL Значення NULL. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='SQL Значення NULL. Що таке значення NULL? Як перевірити значення NULL? Синтаксис. Демо база даних. Оператори IS NULL та IS NOT NULL. Приклади. Вправи. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
+</script>    <title>SQL Значення NULL. Приклади. Уроки для початківців. W3Schools українською</title>
+    <meta name='description' content='SQL Значення NULL. Що таке значення NULL? Як перевірити значення NULL? Синтаксис. Демонстраційна база даних. Оператори IS NULL та IS NOT NULL. Приклади. Вправи. Відеоурок. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -816,157 +816,177 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index.html'><img src='../svg/sql_icon1.svg' alt='SQL. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='SQL для початківців. W3Schools українською' style='width:100px'></a>
-<p class='w3-right'>
-    <a href="sql_null_values_en.html" title='Перейти на англійську мову'>En</a>
-</p>
-<article>
-    <h1>SQL <span class="color_h1">Значення NULL</span></h1>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_insert.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_update.html">Next &#10095;</a>
-    </div>
-    <hr>
-    <h2>Що таке значення NULL?</h2>
-    <p>Поле зі значенням <strong>NULL</strong> є полем без значення.</p>
-    <p>Якщо поле в таблиці є необов&#8217;язковим, можна вставити новий запис або оновити запис, не додаючи значення до цього поля. Тоді поле буде збережено зі значенням NULL.</p>
-    <div class="w3-panel w3-note">
-        <p><b>Примітка:</b> значення NULL відрізняється від нульового значення або поля, яке містить пробіли. Поле зі значенням NULL – це поле, яке було залишено порожнім під час створення запису!</p>
-    </div>
-    <hr>
-    <h2>Як перевірити значення NULL?</h2>
-    <p>Неможливо перевірити значення NULL за допомогою операторів порівняння, таких як =, &lt;, or &lt;&gt;.</p>
-    <p>Замість цього нам доведеться використовувати оператори <code class="w3-codespan">IS NULL</code> та <code class="w3-codespan">IS NOT NULL</code>.</p>
-    <h3>Синтаксис IS NULL</h3>
-    <div class="w3-example">
-        <div class="w3-code notranslate sqlHigh">
-            SELECT <em>column_names<br></em>FROM <em>table_name</em><br>WHERE <em>column_name</em> IS NULL;
+    <p class='w3-right'>
+        <a href='sql_null_values_en.html' title='Перейти на англійську мову'>En</a>
+        <a href='sql_null_values_es.html' title='Перейти на іспанську мову'>Es</a>
+        <a href='sql_null_values_de.html' title='Перейти на німецьку мову'>De</a>
+        <a href='sql_null_values_fr.html' title='Перейти на французьку мову'>Fr</a>
+    </p>
+    <article>
+        <h1>SQL <span class="color_h1">Значення NULL</span></h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_insert.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_update.html">Next &#10095;</a>
         </div>
-    </div>
-    <h3>Синтаксис IS NOT NULL</h3>
-    <div class="w3-example">
-        <div class="w3-code notranslate sqlHigh">
-            SELECT <em>column_names<br></em>FROM <em>table_name</em><br>WHERE <em>column_name</em> IS NOT NULL;
+        <hr>
+        <h2>Що таке значення NULL?</h2>
+        <p>Поле зі значенням <strong>NULL</strong> є полем без значення.</p>
+        <p>Якщо поле в таблиці є необов&#8217;язковим, можна вставити новий запис або оновити запис, не додаючи значення до цього поля. Тоді поле буде збережено зі значенням NULL.</p>
+        <div class="w3-panel w3-note">
+            <p><b>Примітка:</b> значення NULL відрізняється від нульового значення або поля, яке містить пробіли. Поле зі значенням NULL – це поле, яке було залишено порожнім під час створення запису!</p>
         </div>
-    </div>
-    <hr>
-    <h2>Демо бази даних</h2>
-    <p>Нижче наведено вибірку з таблиці &quot;Customers&quot; зразка бази даних Northwind:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tr>
-                <th>CustomerID</th>
-                <th>CustomerName</th>
-                <th>ContactName</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>PostalCode</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>1<br><br></td>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Obere Str. 57</td>
-                <td>Berlin</td>
-                <td>12209</td>
-                <td>Germany</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Ana Trujillo Emparedados y helados</td>
-                <td>Ana Trujillo</td>
-                <td>Avda. de la Constitución 2222</td>
-                <td>México D.F.</td>
-                <td>05021</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Antonio Moreno Taquería</td>
-                <td>Antonio Moreno</td>
-                <td>Mataderos 2312</td>
-                <td>México D.F.</td>
-                <td>05023</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>4<br><br></td>
-                <td>Around the Horn</td>
-                <td>Thomas Hardy</td>
-                <td>120 Hanover Sq.</td>
-                <td>London</td>
-                <td>WA1 1DP</td>
-                <td>UK</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Berglunds snabbköp</td>
-                <td>Christina Berglund</td>
-                <td>Berguvsvägen 8</td>
-                <td>Luleå</td>
-                <td>S-958 22</td>
-                <td>Sweden</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <div class="adver_adinfeed">
+        <hr>
+        <h2>Як перевірити значення NULL?</h2>
+        <p>Неможливо перевірити значення NULL за допомогою операторів порівняння, таких як =, &lt;, or &lt;&gt;.</p>
+        <p>Замість цього нам доведеться використовувати оператори <code class="w3-codespan">IS NULL</code> та <code class="w3-codespan">IS NOT NULL</code>.</p>
+        <h3>Синтаксис IS NULL</h3>
+        <div class="w3-example">
+            <div class="w3-code notranslate sqlHigh">
+                SELECT <em>column_names<br></em>FROM <em>table_name</em><br>WHERE <em>column_name</em> IS NULL;
+            </div>
+        </div>
+        <h3>Синтаксис IS NOT NULL</h3>
+        <div class="w3-example">
+            <div class="w3-code notranslate sqlHigh">
+                SELECT <em>column_names<br></em>FROM <em>table_name</em><br>WHERE <em>column_name</em> IS NOT NULL;
+            </div>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Демонстраційна база даних</h2>
+        <p>Нижче наведено вибірку з таблиці &quot;Customers&quot; зразка бази даних Northwind:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>1<br><br></td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Obere Str. 57</td>
+                    <td>Berlin</td>
+                    <td>12209</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>Ana Trujillo</td>
+                    <td>Avda. de la Constitución 2222</td>
+                    <td>México D.F.</td>
+                    <td>05021</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>Antonio Moreno</td>
+                    <td>Mataderos 2312</td>
+                    <td>México D.F.</td>
+                    <td>05023</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>4<br><br></td>
+                    <td>Around the Horn</td>
+                    <td>Thomas Hardy</td>
+                    <td>120 Hanover Sq.</td>
+                    <td>London</td>
+                    <td>WA1 1DP</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Berglunds snabbköp</td>
+                    <td>Christina Berglund</td>
+                    <td>Berguvsvägen 8</td>
+                    <td>Luleå</td>
+                    <td>S-958 22</td>
+                    <td>Sweden</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Оператор IS NULL</h2>
-    <p>Оператор <code class="w3-codespan">IS NULL</code> використовується для перевірки порожніх значень (значень NULL).</p>
-    <p>У наступному SQL перелічено всіх клієнтів зі значенням NULL у полі &quot;Address&quot;:</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT CustomerName, ContactName, Address<br>FROM Customers<br>WHERE Address IS NULL;
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_is_null.html" class="w3-btn w3-margin-bottom">Спробуйте самі »</a>
-    </div>
-    <div class="w3-panel w3-note">
-        <p><b>Порада:</b> Завжди використовуйте IS NULL для пошуку значень NULL.</p>
-    </div>
-    <hr>
-    <h2>Оператор IS NOT NULL</h2>
-    <p>Оператор <code class="w3-codespan">IS NOT NULL</code> використовується для перевірки непорожніх значень (NOT NULL значень).</p>
-    <p>У наступному SQL перелічено всіх клієнтів зі значенням у полі &quot;Address&quot;:</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT CustomerName, ContactName, Address<br>FROM Customers<br>WHERE Address IS NOT NULL;
-        </div>
-        <a class="w3-btn w3-margin-bottom" href="../sqltryit/trysql_is_not_null.html" target="_blank">Спробуйте самі »</a>
-    </div>
-    <hr>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_null1" method="post" target="_blank">
-        <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
-        <div class="exercisewindow">
-            <h2>Вправа:</h2>
-            <p>Виберіть усі записи з <code class="w3-codespan">Customers</code>, де стовпець <code class="w3-codespan">PostalCode</code> порожній.</p>
-            <div class="exerciseprecontainer">
-<pre>
-SELECT * FROM Customers
-WHERE <input name="ex1" maxlength="10" style="width: 107px;"> <input name="ex2" maxlength="2" style="width: 22px;"> <input name="ex3" maxlength="4" style="width: 44px;">;
-</pre>
+</div>        <h2>Оператор IS NULL</h2>
+        <p>Оператор <code class="w3-codespan">IS NULL</code> використовується для перевірки порожніх значень (значень NULL).</p>
+        <p>У наступному SQL перелічено всіх клієнтів зі значенням NULL у полі &quot;Address&quot;:</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT CustomerName, ContactName, Address<br>FROM Customers<br>WHERE Address IS NULL;
             </div>
-            <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Надіслати відповідь »</button>
+            <a target="_blank" href="../sqltryit/trysql_is_null.html" class="w3-btn w3-margin-bottom">Спробуйте самі »</a>
         </div>
-    </form>
-    <hr>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_insert.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_update.html">Next &#10095;</a>
-    </div>
-</article>
+        <div class="w3-panel w3-note">
+            <p><b>Порада:</b> Завжди використовуйте IS NULL для пошуку значень NULL.</p>
+        </div>
+        <hr>
+        <h2>Оператор IS NOT NULL</h2>
+        <p>Оператор <code class="w3-codespan">IS NOT NULL</code> використовується для перевірки непорожніх значень (NOT NULL значень).</p>
+        <p>У наступному SQL перелічено всіх клієнтів зі значенням у полі &quot;Address&quot;:</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT CustomerName, ContactName, Address<br>FROM Customers<br>WHERE Address IS NOT NULL;
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="../sqltryit/trysql_is_not_null.html" target="_blank">Спробуйте самі »</a>
+        </div>
+        <hr>
+        <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_null1" method="post" target="_blank">
+            <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
+            <div class="exercisewindow">
+                <h2>Вправа:</h2>
+                <p>Виберіть усі записи з <code class="w3-codespan">Customers</code>, де стовпець <code class="w3-codespan">PostalCode</code> порожній.</p>
+                <div class="exerciseprecontainer">
+    <pre>
+    SELECT * FROM Customers
+    WHERE <input name="ex1" aria-label='Приклад' maxlength="10" style="width: 107px;"> <input name="ex2" aria-label='Приклад' maxlength="2" style="width: 22px;"> <input name="ex3" aria-label='Приклад' maxlength="4" style="width: 44px;">;
+    </pre>
+                </div>
+                <br>
+                <button type="submit" class="w3-btn w3-margin-bottom">Надіслати відповідь »</button>
+            </div>
+        </form>
+        <hr>
+        <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>W3Schools SQL Відеоурок. SQL NULL значення</h2>
+        <div class="videowrap">
+            <div class="videoblock">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RKUYYrmv6gw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p>Це відео є вступом до <strong>NULL-значень</strong> у SQL.</p>
+            <p>Частина серії відеоуроків для вивчення <strong>SQL для початківців</strong>!</p>
+        </div>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_insert.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_update.html">Next &#10095;</a>
+        </div>
+    </article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-</div>
+    </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
