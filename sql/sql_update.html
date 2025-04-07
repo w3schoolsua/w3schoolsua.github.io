@@ -42,8 +42,8 @@
             "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
         ]
     }
-</script><title>SQL Інструкція UPDATE. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='SQL Інструкція UPDATE. Демо бази даних. UPDATE Таблиця. UPDATE Кілька записів. Попередження про Update (Оновлення)! Приклади. Вправи. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
+</script>    <title>SQL Інструкція UPDATE. Приклади. Уроки для початківців. W3Schools українською</title>
+    <meta name='description' content='SQL Інструкція UPDATE. Демо бази даних. UPDATE Таблиця. UPDATE Кілька записів. Попередження про Update (Оновлення)! Приклади. Перевірте себе за допомогою вправ. Відеоурок. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -816,331 +816,342 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index.html'><img src='../svg/sql_icon1.svg' alt='SQL. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='SQL для початківців. W3Schools українською' style='width:100px'></a>
-<p class='w3-right'>
-    <a href="sql_update_en.html" title='Перейти на англійську мову'>En</a>
-</p>
-<article>
-    <h1>SQL Інструкція <span class="color_h1">UPDATE</span></h1>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_null_values.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_delete.html">Next &#10095;</a>
-    </div>
-    <hr>
-    <h2>SQL Інструкція UPDATE</h2>
-    <p>Інструкція <code class="w3-codespan">UPDATE</code> використовується для зміни наявних записів у таблиці.</p>
-    <h3>UPDATE Синтаксис</h3>
-    <div class="w3-example">
-        <div class="w3-code notranslate sqlHigh">
-            UPDATE <em>table_name</em><br>SET <em>column1 </em>=<em> value1</em>,<em> column2 </em>=<em> value2</em>, ...<br>WHERE <em>умова</em>;
+    <p class='w3-right'>
+        <a href='sql_update_en.html' title='Перейти на англійську мову'>En</a>
+        <a href='sql_update_es.html' title='Перейти на іспанську мову'>Es</a>
+        <a href='sql_update_de.html' title='Перейти на німецьку мову'>De</a>
+        <a href='sql_update_fr.html' title='Перейти на французьку мову'>Fr</a>
+    </p>
+    <article>
+        <h1>SQL Інструкція <span class="color_h1">UPDATE</span></h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_null_values.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_delete.html">Next &#10095;</a>
         </div>
-    </div>
-    <div class="w3-panel w3-note">
-        <p><b>Примітка:</b> Будьте уважні при оновленні записів у таблиці! Зверніть увагу на пропозицію <code class="w3-codespan">WHERE</code> в операторі <code class="w3-codespan">UPDATE</code>. Пропозиція <code class="w3-codespan">WHERE</code> визначає, які записи потрібно оновити. Якщо пропустити пропозицію <code class="w3-codespan">WHERE</code>, усі записи в таблиці буде оновлено!</p>
-    </div>
-    <hr>
-    <h2>Демо бази даних</h2>
-    <p>Нижче наведено вибірку з таблиці &quot;Customers&quot; зразка бази даних Northwind:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tr>
-                <th>CustomerID</th>
-                <th>CustomerName</th>
-                <th>ContactName</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>PostalCode</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>1<br><br></td>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Obere Str. 57</td>
-                <td>Berlin</td>
-                <td>12209</td>
-                <td>Germany</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Ana Trujillo Emparedados y helados</td>
-                <td>Ana Trujillo</td>
-                <td>Avda. de la Constitución 2222</td>
-                <td>México D.F.</td>
-                <td>05021</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Antonio Moreno Taquería</td>
-                <td>Antonio Moreno</td>
-                <td>Mataderos 2312</td>
-                <td>México D.F.</td>
-                <td>05023</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>4<br><br></td>
-                <td>Around the Horn</td>
-                <td>Thomas Hardy</td>
-                <td>120 Hanover Sq.</td>
-                <td>London</td>
-                <td>WA1 1DP</td>
-                <td>UK</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Berglunds snabbköp</td>
-                <td>Christina Berglund</td>
-                <td>Berguvsvägen 8</td>
-                <td>Luleå</td>
-                <td>S-958 22</td>
-                <td>Sweden</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <h2>UPDATE Таблиця</h2>
-    <p>Наступний оператор SQL оновлює першого клієнта (CustomerID = 1) новою контактною особою <i>та</i> новим містом (City).</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <div class="w3-code notranslate sqlHigh">
-            UPDATE Customers<br>SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'<br>WHERE CustomerID = 1;
+        <hr>
+        <h2>SQL Інструкція UPDATE</h2>
+        <p>Інструкція <code class="w3-codespan">UPDATE</code> використовується для зміни наявних записів у таблиці.</p>
+        <h3>UPDATE Синтаксис</h3>
+        <div class="w3-example">
+            <div class="w3-code notranslate sqlHigh">
+                UPDATE <em>table_name</em><br>SET <em>column1 </em>=<em> value1</em>,<em> column2 </em>=<em> value2</em>, ...<br>WHERE <em>умова</em>;
+            </div>
         </div>
-        <a target="_blank" href="../sqltryit/trysql_update_2.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-    </div>
-    <p>Вибір із таблиці &quot;Customers&quot; тепер матиме такий вигляд:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tr>
-                <th>CustomerID</th>
-                <th>CustomerName</th>
-                <th>ContactName</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>PostalCode</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>1<br><br></td>
-                <td>Alfreds Futterkiste</td>
-                <td>Alfred Schmidt</td>
-                <td>Obere Str. 57</td>
-                <td>Frankfurt</td>
-                <td>12209</td>
-                <td>Germany</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Ana Trujillo Emparedados y helados</td>
-                <td>Ana Trujillo</td>
-                <td>Avda. de la Constitución 2222</td>
-                <td>México D.F.</td>
-                <td>05021</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Antonio Moreno Taquería</td>
-                <td>Antonio Moreno</td>
-                <td>Mataderos 2312</td>
-                <td>México D.F.</td>
-                <td>05023</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>4<br><br></td>
-                <td>Around the Horn</td>
-                <td>Thomas Hardy</td>
-                <td>120 Hanover Sq.</td>
-                <td>London</td>
-                <td>WA1 1DP</td>
-                <td>UK</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Berglunds snabbköp</td>
-                <td>Christina Berglund</td>
-                <td>Berguvsvägen 8</td>
-                <td>Luleå</td>
-                <td>S-958 22</td>
-                <td>Sweden</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <div class="adver_adinfeed">
+        <div class="w3-panel w3-note">
+            <p><b>Примітка:</b> Будьте уважні при оновленні записів у таблиці! Зверніть увагу на пропозицію <code class="w3-codespan">WHERE</code> в операторі <code class="w3-codespan">UPDATE</code>. Пропозиція <code class="w3-codespan">WHERE</code> визначає, які записи потрібно оновити. Якщо пропустити пропозицію <code class="w3-codespan">WHERE</code>, усі записи в таблиці буде оновлено!</p>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Демо бази даних</h2>
+        <p>Нижче наведено вибірку з таблиці &quot;Customers&quot; зразка бази даних Northwind:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>1<br><br></td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Obere Str. 57</td>
+                    <td>Berlin</td>
+                    <td>12209</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>Ana Trujillo</td>
+                    <td>Avda. de la Constitución 2222</td>
+                    <td>México D.F.</td>
+                    <td>05021</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>Antonio Moreno</td>
+                    <td>Mataderos 2312</td>
+                    <td>México D.F.</td>
+                    <td>05023</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>4<br><br></td>
+                    <td>Around the Horn</td>
+                    <td>Thomas Hardy</td>
+                    <td>120 Hanover Sq.</td>
+                    <td>London</td>
+                    <td>WA1 1DP</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Berglunds snabbköp</td>
+                    <td>Christina Berglund</td>
+                    <td>Berguvsvägen 8</td>
+                    <td>Luleå</td>
+                    <td>S-958 22</td>
+                    <td>Sweden</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <h2>UPDATE Таблиця</h2>
+        <p>Наступний оператор SQL оновлює першого клієнта (CustomerID = 1) новою контактною особою <i>та</i> новим містом (City).</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate sqlHigh">
+                UPDATE Customers<br>SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'<br>WHERE CustomerID = 1;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_update_2.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        </div>
+        <p>Вибір із таблиці &quot;Customers&quot; тепер матиме такий вигляд:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>1<br><br></td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Alfred Schmidt</td>
+                    <td>Obere Str. 57</td>
+                    <td>Frankfurt</td>
+                    <td>12209</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>Ana Trujillo</td>
+                    <td>Avda. de la Constitución 2222</td>
+                    <td>México D.F.</td>
+                    <td>05021</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>Antonio Moreno</td>
+                    <td>Mataderos 2312</td>
+                    <td>México D.F.</td>
+                    <td>05023</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>4<br><br></td>
+                    <td>Around the Horn</td>
+                    <td>Thomas Hardy</td>
+                    <td>120 Hanover Sq.</td>
+                    <td>London</td>
+                    <td>WA1 1DP</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Berglunds snabbköp</td>
+                    <td>Christina Berglund</td>
+                    <td>Berguvsvägen 8</td>
+                    <td>Luleå</td>
+                    <td>S-958 22</td>
+                    <td>Sweden</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>UPDATE Кілька записів</h2>
-    <p>Пропозиція <code class="w3-codespan">WHERE</code> визначає, скільки записів буде оновлено.</p>
-    <p>Наведений нижче оператор SQL оновить ContactName на "Juan" для всіх записів, де країною є "Mexico":</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <div class="w3-code notranslate sqlHigh">
-            UPDATE Customers<br>SET ContactName='Juan'<br>WHERE Country='Mexico';
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_update_3.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-    </div>
-    <p>Вибір із таблиці &quot;Customers&quot; тепер виглядатиме так:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tr>
-                <th>CustomerID</th>
-                <th>CustomerName</th>
-                <th>ContactName</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>PostalCode</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>1<br><br></td>
-                <td>Alfreds Futterkiste</td>
-                <td>Alfred Schmidt</td>
-                <td>Obere Str. 57</td>
-                <td>Frankfurt</td>
-                <td>12209</td>
-                <td>Germany</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Ana Trujillo Emparedados y helados</td>
-                <td>Juan</td>
-                <td>Avda. de la Constitución 2222</td>
-                <td>México D.F.</td>
-                <td>05021</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Antonio Moreno Taquería</td>
-                <td>Juan</td>
-                <td>Mataderos 2312</td>
-                <td>México D.F.</td>
-                <td>05023</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>4<br><br></td>
-                <td>Around the Horn</td>
-                <td>Thomas Hardy</td>
-                <td>120 Hanover Sq.</td>
-                <td>London</td>
-                <td>WA1 1DP</td>
-                <td>UK</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Berglunds snabbköp</td>
-                <td>Christina Berglund</td>
-                <td>Berguvsvägen 8</td>
-                <td>Luleå</td>
-                <td>S-958 22</td>
-                <td>Sweden</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <h2>Попередження про Update (Оновлення)!</h2>
-    <div class="w3-panel w3-note">
-        <p>Будьте обережні при оновленні записів. Якщо ви пропустите пропозицію <code class="w3-codespan">WHERE</code>, ВСІ записи будуть оновлені!</p>
-    </div>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <div class="w3-code notranslate sqlHigh">
-            UPDATE Customers<br>SET ContactName='Juan';
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_update_4.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-    </div>
-    <p>Вибір із таблиці &quot;Customers&quot; тепер матиме такий вигляд:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tr>
-                <th>CustomerID</th>
-                <th>CustomerName</th>
-                <th>ContactName</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>PostalCode</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>1<br><br></td>
-                <td>Alfreds Futterkiste</td>
-                <td>Juan</td>
-                <td>Obere Str. 57</td>
-                <td>Frankfurt</td>
-                <td>12209</td>
-                <td>Germany</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Ana Trujillo Emparedados y helados</td>
-                <td>Juan</td>
-                <td>Avda. de la Constitución 2222</td>
-                <td>México D.F.</td>
-                <td>05021</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Antonio Moreno Taquería</td>
-                <td>Juan</td>
-                <td>Mataderos 2312</td>
-                <td>México D.F.</td>
-                <td>05023</td>
-                <td>Mexico</td>
-            </tr>
-            <tr>
-                <td>4<br><br></td>
-                <td>Around the Horn</td>
-                <td>Juan</td>
-                <td>120 Hanover Sq.</td>
-                <td>London</td>
-                <td>WA1 1DP</td>
-                <td>UK</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Berglunds snabbköp</td>
-                <td>Juan</td>
-                <td>Berguvsvägen 8</td>
-                <td>Luleå</td>
-                <td>S-958 22</td>
-                <td>Sweden</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_update1" method="post" target="_blank">
-        <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
-        <div class="exercisewindow">
-            <h2>Вправа:</h2>
-            <p>Оновіть стовпець <code class="w3-codespan">City</code> всіх записів в таблиці <code class="w3-codespan">Customers</code>.</p>
-            <div class="exerciseprecontainer">
-<pre>
-<input name="ex1" maxlength="6" style="width: 64px;"> Customers
-<input name="ex2" maxlength="3" style="width: 33px;"> City = 'Oslo';
-</pre>
+</div>        <h2>UPDATE Кілька записів</h2>
+        <p>Пропозиція <code class="w3-codespan">WHERE</code> визначає, скільки записів буде оновлено.</p>
+        <p>Наведений нижче оператор SQL оновить ContactName на "Juan" для всіх записів, де країною є "Mexico":</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate sqlHigh">
+                UPDATE Customers<br>SET ContactName='Juan'<br>WHERE Country='Mexico';
             </div>
-            <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Надіслати відповідь &raquo;</button>
+            <a target="_blank" href="../sqltryit/trysql_update_3.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
         </div>
-    </form>
-    <hr>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_null_values.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_delete.html">Next &#10095;</a>
-    </div>
-</article>
+        <p>Вибір із таблиці &quot;Customers&quot; тепер виглядатиме так:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>1<br><br></td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Alfred Schmidt</td>
+                    <td>Obere Str. 57</td>
+                    <td>Frankfurt</td>
+                    <td>12209</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>Juan</td>
+                    <td>Avda. de la Constitución 2222</td>
+                    <td>México D.F.</td>
+                    <td>05021</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>Juan</td>
+                    <td>Mataderos 2312</td>
+                    <td>México D.F.</td>
+                    <td>05023</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>4<br><br></td>
+                    <td>Around the Horn</td>
+                    <td>Thomas Hardy</td>
+                    <td>120 Hanover Sq.</td>
+                    <td>London</td>
+                    <td>WA1 1DP</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Berglunds snabbköp</td>
+                    <td>Christina Berglund</td>
+                    <td>Berguvsvägen 8</td>
+                    <td>Luleå</td>
+                    <td>S-958 22</td>
+                    <td>Sweden</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <h2>Попередження про Update (Оновлення)!</h2>
+        <div class="w3-panel w3-note">
+            <p>Будьте обережні при оновленні записів. Якщо ви пропустите пропозицію <code class="w3-codespan">WHERE</code>, ВСІ записи будуть оновлені!</p>
+        </div>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate sqlHigh">
+                UPDATE Customers<br>SET ContactName='Juan';
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_update_4.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        </div>
+        <p>Вибір із таблиці &quot;Customers&quot; тепер матиме такий вигляд:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>1<br><br></td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Juan</td>
+                    <td>Obere Str. 57</td>
+                    <td>Frankfurt</td>
+                    <td>12209</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>Juan</td>
+                    <td>Avda. de la Constitución 2222</td>
+                    <td>México D.F.</td>
+                    <td>05021</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>Juan</td>
+                    <td>Mataderos 2312</td>
+                    <td>México D.F.</td>
+                    <td>05023</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>4<br><br></td>
+                    <td>Around the Horn</td>
+                    <td>Juan</td>
+                    <td>120 Hanover Sq.</td>
+                    <td>London</td>
+                    <td>WA1 1DP</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Berglunds snabbköp</td>
+                    <td>Juan</td>
+                    <td>Berguvsvägen 8</td>
+                    <td>Luleå</td>
+                    <td>S-958 22</td>
+                    <td>Sweden</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_update1" method="post" target="_blank">
+            <h2 title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
+            <div class="exercisewindow">
+                <h2>Вправа:</h2>
+                <p>Оновіть стовпець <code class="w3-codespan">City</code> всіх записів в таблиці <code class="w3-codespan">Customers</code>.</p>
+                <div class="exerciseprecontainer">
+    <pre>
+    <input name="ex1" aria-label='Приклад' maxlength="6" style="width: 64px;"> Customers
+    <input name="ex2" aria-label='Приклад' maxlength="3" style="width: 33px;"> City = 'Oslo';
+    </pre>
+                </div>
+                <br>
+                <button type="submit" class="w3-btn w3-margin-bottom">Надіслати відповідь &raquo;</button>
+            </div>
+        </form>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_null_values.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_delete.html">Next &#10095;</a>
+        </div>
+    </article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-</div>
+    </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
