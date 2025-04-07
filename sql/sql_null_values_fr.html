@@ -828,23 +828,23 @@
             <a class="w3-right w3-btn" href="sql_update_fr.html">Next &#10095;</a>
         </div>
         <hr>
-        <h2>What is a NULL Value?</h2>
-        <p>A field with a NULL value is a field with no value.</p>
-        <p>If a field in a table is optional, it is possible to insert a new record or update a record without adding a value to this field. Then, the field will be saved with a NULL value.</p>
+        <h2>Qu'est-ce qu'une valeur NULL ?</h2>
+        <p>Un champ avec une valeur NULL est un champ sans valeur.</p>
+        <p>Si un champ d'une table est facultatif, il est possible d'insérer un nouvel enregistrement ou de le mettre à jour sans ajouter de valeur à ce champ. Le champ sera alors enregistré avec une valeur NULL.</p>
         <div class="w3-panel w3-note">
-            <p><b>Note:</b> A NULL value is different from a zero value or a field that contains spaces. A field with a NULL value is one that has been left blank during record creation!</p>
+            <p><b>Remarque :</b> Une valeur NULL est différente d'une valeur nulle ou d'un champ contenant des espaces. Un champ avec une valeur nulle est un champ laissé vide lors de la création de l'enregistrement !</p>
         </div>
         <hr>
-        <h2>How to Test for NULL Values?</h2>
-        <p>It is not possible to test for NULL values with comparison operators, such as =, &lt;, or &lt;&gt;.</p>
-        <p>We will have to use the <code class="w3-codespan">IS NULL</code> and <code class="w3-codespan">IS NOT NULL</code> operators instead.</p>
-        <h3>IS NULL Syntax</h3>
+        <h2>Comment tester les valeurs NULL ?</h2>
+        <p>Il n'est pas possible de tester les valeurs NULL avec des opérateurs de comparaison, tels que =, &lt;, ou &lt;&gt;.</p>
+        <p>Nous devrons utiliser les opérateurs <code class="w3-codespan">IS NULL</code> et <code class="w3-codespan">IS NOT NULL</code> à la place.</p>
+        <h3>IS NULL Syntaxe</h3>
         <div class="w3-example">
             <div class="w3-code notranslate sqlHigh">
                 SELECT <em>column_names<br></em>FROM <em>table_name</em><br>WHERE <em>column_name</em> IS NULL;
             </div>
         </div>
-        <h3>IS NOT NULL Syntax</h3>
+        <h3>IS NOT NULL Syntaxe</h3>
         <div class="w3-example">
             <div class="w3-code notranslate sqlHigh">
                 SELECT <em>column_names<br></em>FROM <em>table_name</em><br>WHERE <em>column_name</em> IS NOT NULL;
@@ -854,8 +854,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Demo Database</h2>
-        <p>Below is a selection from the "Customers" table in the Northwind sample database:</p>
+</div>        <h2>Base de données de démonstration</h2>
+        <p>Voici un extrait de la table "Customers" de la base de données d'exemple Northwind :</p>
         <div class="w3-responsive">
             <table class="ws-table-all notranslate">
                 <tr>
@@ -919,25 +919,25 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>The IS NULL Operator</h2>
-        <p>The <code class="w3-codespan">IS NULL</code> operator is used to test for empty values (NULL values).</p>
-        <p>The following SQL lists all customers with a NULL value in the "Address" field:</p>
+</div>        <h2>L'opérateur IS NULL</h2>
+        <p>L'opérateur <code class="w3-codespan">IS NULL</code> permet de tester les valeurs vides (valeurs NULL).</p>
+        <p>Le code SQL suivant répertorie tous les clients dont le champ "Address" contient une valeur NULL :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate sqlHigh">
                 SELECT CustomerName, ContactName, Address<br>FROM Customers<br>WHERE Address IS NULL;
             </div>
             <a target="_blank" href="../sqltryit/trysql_is_null.html" class="w3-btn w3-margin-bottom">Try it Yourself »</a>
         </div>
         <div class="w3-panel w3-note">
-            <p><b>Tip:</b> Always use IS NULL to look for NULL values.</p>
+            <p><b>Astuce :</b> Utilisez toujours IS NULL pour rechercher les valeurs NULL.</p>
         </div>
         <hr>
-        <h2>The IS NOT NULL Operator</h2>
-        <p>The <code class="w3-codespan">IS NOT NULL</code> operator is used to test for non-empty values (NOT NULL values).</p>
-        <p>The following SQL lists all customers with a value in the "Address" field:</p>
+        <h2>L'opérateur IS NOT NULL</h2>
+        <p>L'opérateur <code class="w3-codespan">IS NOT NULL</code> permet de tester les valeurs non vides (valeurs NOT NULL).</p>
+        <p>La requête SQL suivante répertorie tous les clients dont le champ "Address" contient une valeur :</p>
         <div class="w3-example">
-            <h3>Example</h3>
+            <h3>Exemple</h3>
             <div class="w3-code notranslate sqlHigh">
                 SELECT CustomerName, ContactName, Address<br>FROM Customers<br>WHERE Address IS NOT NULL;
             </div>
@@ -945,18 +945,18 @@
         </div>
         <hr>
         <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_null1" method="post" target="_blank">
-            <h2 title="Exercises only work online">Test Yourself With Exercises</h2>
+            <h2 title="Les exercices ne fonctionnent qu'en ligne">Testez-vous avec des exercices</h2>
             <div class="exercisewindow">
-                <h2>Exercise:</h2>
-                <p>Select all records from the <code class="w3-codespan">Customers</code> where the <code class="w3-codespan">PostalCode</code> column is empty.</p>
+                <h2>Exercice:</h2>
+                <p>Sélectionnez tous les enregistrements de <code class="w3-codespan">Customers</code> où la colonne <code class="w3-codespan">PostalCode</code> est vide.</p>
                 <div class="exerciseprecontainer">
     <pre>
     SELECT * FROM Customers
-    WHERE <input name="ex1" aria-label='Example' maxlength="10" style="width: 107px;"> <input name="ex2" aria-label='Example' maxlength="2" style="width: 22px;"> <input name="ex3" aria-label='Example' maxlength="4" style="width: 44px;">;
+    WHERE <input name="ex1" aria-label='Exemple' maxlength="10" style="width: 107px;"> <input name="ex2" aria-label='Exemple' maxlength="2" style="width: 22px;"> <input name="ex3" aria-label='Exemple' maxlength="4" style="width: 44px;">;
     </pre>
                 </div>
                 <br>
-                <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer »</button>
+                <button type="submit" class="w3-btn w3-margin-bottom">Soumettre une réponse »</button>
             </div>
         </form>
         <hr>
@@ -964,13 +964,13 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>W3Schools SQL Video Tutorial. SQL NULL Values</h2>
+</div>        <h2>W3Schools SQL Tutoriel vidéo. Valeurs NULL SQL</h2>
         <div class="videowrap">
             <div class="videoblock">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/RKUYYrmv6gw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <p>This video is an introduction to the <strong>NULL Values</strong> in SQL.</p>
-            <p>Part of a series of video tutorials to learn <strong>SQL for beginners</strong>!</p>
+            <p>Cette vidéo est une introduction aux <strong>valeurs NULL en SQL</strong>.</p>
+            <p>Cette vidéo fait partie d'une série de tutoriels vidéo pour apprendre <strong>SQL pour les débutants</strong> !</p>
         </div>
         <hr>
         <div class="w3-clear nextprev">
