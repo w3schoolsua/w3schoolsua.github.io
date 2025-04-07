@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang='de'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='apple-touch-icon' sizes='180x180' href='../apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='../favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='../favicon-16x16.png'>
+<link rel='manifest' href='../manifest.json'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:title' content='W3SchoolsDE DerBeste'>
+<meta property='og:description' content='Gut organisierte und leicht verständliche Webbuilding-Tutorials mit vielen Beispielen für die Verwendung von HTML, CSS, JavaScript, SQL, PHP, Python, Java, C++, C#, Go und mehr'>
+<meta property='og:locale' content='de'>
+<meta property='og:type' content='website'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:url' content='https://w3schoolsua.github.io/index_de.html'>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "W3SchoolsDE DerBeste",
+        "url": "https://w3schoolsua.github.io/index_de.html",
+        "description": "W3Schools auf Deutsch. Grundlagen der Programmierung und Webentwicklung. Unterricht für Anfänger",
+        "image": "https://w3schoolsua.github.io/images/logo_w3s.gif",
+        "keywords": ["Unterricht", "W3Schools", "für Anfänger", "HTML", "CSS", "JavaScript", "PHP", "SQL", "Python", "Java"],
+        "author": {
+            "@type": "Person",
+            "name": "W3Schools DerBeste",
+            "url": "https://w3schoolsua.github.io/blog/index_de.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "W3SchoolsDE DerBeste",
+            "url": "https://w3schoolsua.github.io/"
+        },
+        "inLanguage": "de-DE",
+        "sameAs": [
+            "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
+        ]
+    }
+</script>    <title>SQL UPDATE-Anweisung. Beispiele. Unterricht für Anfänger. W3Schools das Beste</title>
+    <meta name='description' content='SQL UPDATE-Anweisung. Demo-Datenbank. Tabelle aktualisieren. Mehrere Datensätze aktualisieren. Update-Warnung! Vorsicht beim Aktualisieren von Datensätzen. Wenn Sie die WHERE-Klausel weglassen, werden ALLE Datensätze aktualisiert! Testen Sie sich selbst mit Übungen. Beispiele. Videolektion. Unterricht für Anfänger. W3Schools auf Deutsch'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_de.html'>W3schoolsDE<span class='dotcom w3-hide-small'>. DasBeste</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BESTE WEBSITE FÜR WEBENTWICKLER</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src='https://cse.google.com/cse.js?cx=751c3d18bb8a64f00'></script><div class='gcse-search'></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Menu' aria-label='Open menu'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_de.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_de.html' title='HTML Tutorial'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_de.html' title='CSS Tutorial'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_de.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_de.html' title='SQL Tutorial'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index_de.html' title='Python Tutorial'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index_de.html' title='PHP Tutorial'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../java/index_de.html' title='Java Tutorial'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index_de.html' title='Kotlin Tutorial'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index_de.html' title='Go Tutorial'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index_de.html' title='C Tutorial'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index_de.html' title='C++ Tutorial'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index_de.html' title='C# Tutorial'>C#</a>
+            <a class='w3-bar-item w3-button' href='../django/index_de.html' title='Django Tutorial'>Django</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_de.html' title='How To'>WIE MAN</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_de.html' title='W3.CSS Tutorial'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../ai/index_de.html' title='AI Tutorial'>AI</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Weitere Tutorials' aria-label='view more tutorials'>Mehr <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Suchen' aria-label='Site search'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Dark theme' aria-label='Aktivieren Sie das dunkle Thema'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' rel="noopener" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Laden Sie Bücher kostenlos von Google Drive herunter' aria-label="Laden Sie Bücher kostenlos von Google Drive herunter">Bücher</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Verweise' aria-label='Gehen Sie zu Referenzen'>VERWEISE <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Übungen' aria-label='Gehen Sie zu Übungen'>ÜBUNGEN <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML & CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_de.html'>Lernen HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_de.html'>Lernen CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_de.html'>Lernen RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_de.html'>Lernen Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_de.html'>Lernen W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_de.html'>Lernen Farben</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_de.html'>Lernen Symbole</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_de.html'>Lernen Grafik</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_de.html'>Lernen SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_de.html'>Lernen Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_de.html'>Lernen Wie man</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_de.html'>Lernen Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Data Analytics</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index_de.html'>Lernen KI</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index_de.html'>Lernen Generative KI</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_de.html'>Lernen ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index_de.html'>Lernen ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index_de.html'>Lernen Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_de.html'>Lernen Maschinelles Lernen</a>
+                        <a class='w3-bar-item w3-button' href='../DSA/index_de.html'>Lernen DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_de.html'>Lernen Datenwissenschaft</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_de.html'>Lernen NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_de.html'>Lernen Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_de.html'>Lernen SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_de.html'>Lernen Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_de.html'>Lernen Statistiken</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_de.html'>Lernen Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_de.html'>Lernen Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_de.html'>Lernen XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_de.html'>Lernen XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_de.html'>Lernen XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_de.html'>Lernen XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_de.html'>Lernen XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_de.html'>Lernen XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_de.html'>Lernen XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_de.html'>Lernen XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_de.html'>Lernen JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_de.html'>Lernen React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_de.html'>Lernen jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index_de.html'>Lernen Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_de.html'>Lernen AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_de.html'>Lernen JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_de.html'>Lernen AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_de.html'>Lernen AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_de.html'>Lernen W3.JS</a>
+                    <h3>Programmierung</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index_de.html'>Lernen Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_de.html'>Lernen Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_de.html'>Lernen C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_de.html'>Lernen C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_de.html'>Lernen C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_de.html'>Lernen R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_de.html'>Lernen Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_de.html'>Lernen Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_de.html'>Lernen Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_de.html'>Lernen TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Serverseitig</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_de.html'>Lernen SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_de.html'>Lernen MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index_de.html'>Lernen PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_de.html'>Lernen PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_de.html'>Lernen ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_de.html'>Lernen Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_de.html'>Lernen Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_de.html'>Lernen Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_de.html'>Lernen GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_de.html'>Lernen MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_de.html'>Lernen AWS Cloud</a>
+                    <h3>Webaufbau</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_de.html'>Wo soll man anfangen</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_de.html'>Webvorlagen</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_de.html'>Webstatistiken</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_de.html'>Code-Editor</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_de.html'>Web Entwicklung</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_de.html'>Internet-Sicherheit</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_de.html'>Barrierefreiheit</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Tippgeschwindigkeitstest</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Code-Spiel</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Datenanalyse</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_de.html'>Lernen KI</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index_de.html'>Lernen Generative KI</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_de.html'>Lernen ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index_de.html'>Lernen ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index_de.html'>Lernen Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_de.html'>Lernen Maschinelles Lernen</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index_de.html'>Lernen DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_de.html'>Lernen Datenwissenschaft</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_de.html'>Lernen NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_de.html'>Lernen Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_de.html'>Lernen SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_de.html'>Lernen Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_de.html'>Lernen Statistiken</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_de.html'>Lernen Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_de.html'>Lernen Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_de.html'>Lernen XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_de.html'>Lernen XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_de.html'>Lernen XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_de.html'>Lernen XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_de.html'>Lernen XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_de.html'>Lernen XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_de.html'>Lernen XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_de.html'>Lernen XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_de.html'>HTML Tag-Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_de.html'>HTML Browser-Unterstützung</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_de.html'>HTML Ereignisreferenz</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_de.html'>HTML Farbreferenz</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_de.html'>HTML Attributreferenz</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_de.html'>HTML Canvas Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_de.html'>HTML SVG Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_de.html'>Google Maps Referenz</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_de.html'>CSS Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_de.html'>CSS Browser-Unterstützung</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_de.html'>CSS Auswahlreferenz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_de.html'>Bootstrap 3 Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_de.html'>Bootstrap 4 Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_de.html'>W3.CSS Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_de.html'>Symbolreferenz</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_de.html'>Sass Referenz</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_de.html'>JavaScript Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_de.html'>HTML DOM Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_de.html'>jQuery Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_de.html'>AngularJS Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_de.html'>AppML Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_de.html'>W3.JS Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_de.html'>JS Ready Scripts</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_de.html'>Python Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_de.html'>Java Referenz</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Serverseitig</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_de.html'>SQL Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_de.html'>MySQL Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_de.html'>PHP Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_de.html'>ASP Referenz</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_de.html'>XML DOM Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_de.html'>XML Http Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_de.html'>XSLT Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_de.html'>XML Schema Referenz</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Zeichensätze</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_de.html'>HTML Zeichensätze</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_de.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_de.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_de.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_de.html'>HTML Symbole</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_de.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Übungen</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_de.html'>HTML Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_de.html'>CSS Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_de.html'>JavaScript Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_de.html'>SQL Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_de.html'>MySQL Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_de.html'>PHP Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_de.html'>Python Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_de.html'>NumPy Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_de.html'>Pandas Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_de.html'>SciPy Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_de.html'>jQuery Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_de.html'>Java Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_de.html'>Bootstrap Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_de.html'>Bootstrap 4 Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_de.html'>C++ Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_de.html'>C# Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_de.html'>R Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_de.html'>Kotlin Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_de.html'>Go Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_de.html'>Git Übungen</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Quiz</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_de.html' target='_top'>HTML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_de.html' target='_top'>CSS Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_de.html' target='_top'>JavaScript Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_de.html' target='_top'>SQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_de.html' target='_top'>MySQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_de.html' target='_top'>PHP Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_de.html' target='_top'>Python Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_de.html' target='_top'>NumPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_de.html' target='_top'>Pandas Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_de.html' target='_top'>SciPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_de.html' target='_top'>jQuery Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_de.html' target='_top'>Java Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_de.html' target='_top'>Bootstrap Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_de.html' target='_top'>Bootstrap 4 Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_de.html' target='_top'>C++ Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_de.html' target='_top'>C# Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_de.html' target='_top'>R Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_de.html' target='_top'>XML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_de.html' target='_top'>Internet-Sicherheit Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_de.html' target='_top'>Barrierefreiheit Quiz</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Zertifikate</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_de.html' target='_top'>HTML Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_de.html' target='_top'>CSS Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_de.html' target='_top'>JavaScript Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_de.html' target='_top'>SQL Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_de.html' target='_top'>PHP Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_de.html' target='_top'>Python Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_de.html' target='_top'>jQuery Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_de.html' target='_top'>Bootstrap Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_de.html' target='_top'>XML Zertifikat</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class='left'><span class='left_h2'>SQL</span> Tutorial</h2>
+            <a target='_top' href='index_de.html'>SQL HEIM</a>
+            <a target='_top' href='sql_intro_de.html'>SQL Intro</a>
+            <a target='_top' href='sql_syntax_de.html'>SQL Syntax</a>
+            <a target='_top' href='sql_select_de.html'>SQL SELECT</a>
+            <a target='_top' href='sql_distinct_de.html'>SQL SELECT DISTINCT</a>
+            <a target='_top' href='sql_where_de.html'>SQL WHERE</a>
+            <a target='_top' href='sql_orderby_de.html'>SQL ORDER BY</a>
+            <a target='_top' href='sql_and_de.html'>SQL AND</a>
+            <a target='_top' href='sql_or_de.html'>SQL OR</a>
+            <a target='_top' href='sql_not_de.html'>SQL NOT</a>
+            <a target='_top' href='sql_insert_de.html'>SQL INSERT INTO</a>
+            <a target='_top' href='sql_null_values_de.html'>SQL NULL Werte</a>
+            <a target='_top' href='sql_update_de.html'>SQL UPDATE</a>
+            <a target='_top' href='sql_delete_de.html'>SQL DELETE</a>
+            <a target='_top' href='sql_top_de.html'>SQL SELECT TOP</a>
+            <a target='_top' href='sql_min_max_de.html'>SQL MIN() und MAX()</a>
+            <a target='_top' href='sql_count_de.html'>SQL COUNT</a>
+            <a target='_top' href='sql_sum_de.html'>SQL SUM</a>
+            <a target='_top' href='sql_avg_de.html'>SQL AVG</a>
+            <a target='_top' href='sql_like_de.html'>SQL LIKE</a>
+            <a target='_top' href='sql_wildcards_de.html'>SQL Wildcards</a>
+            <a target='_top' href='sql_in_de.html'>SQL IN</a>
+            <a target='_top' href='sql_between_de.html'>SQL BETWEEN</a>
+            <a target='_top' href='sql_alias_de.html'>SQL Aliase</a>
+            <a target='_top' href='sql_join_de.html'>SQL JOIN</a>
+            <a target='_top' href='sql_join_inner_de.html'>SQL INNER JOIN</a>
+            <a target='_top' href='sql_join_left_de.html'>SQL LEFT JOIN</a>
+            <a target='_top' href='sql_join_right_de.html'>SQL RIGHT JOIN</a>
+            <a target='_top' href='sql_join_full_de.html'>SQL FULL OUTER JOIN</a>
+            <a target='_top' href='sql_join_self_de.html'>SQL Selbst beitreten</a>
+            <a target='_top' href='sql_union_de.html'>SQL UNION</a>
+            <a target='_top' href='sql_groupby_de.html'>SQL GROUP BY</a>
+            <a target='_top' href='sql_having_de.html'>SQL HAVING</a>
+            <a target='_top' href='sql_exists_de.html'>SQL EXISTS</a>
+            <a target='_top' href='sql_any_all_de.html'>SQL ANY, ALL</a>
+            <a target='_top' href='sql_select_into_de.html'>SQL SELECT INTO</a>
+            <a target='_top' href='sql_insert_into_select_de.html'>SQL INSERT INTO SELECT</a>
+            <a target='_top' href='sql_case_de.html'>SQL CASE</a>
+            <a target='_top' href='sql_isnull_de.html'>SQL NULL Functions</a>
+            <a target='_top' href='sql_stored_procedures_de.html'>SQL Gespeicherte Verfahren</a>
+            <a target='_top' href='sql_comments_de.html'>SQL Kommentare</a>
+            <a target='_top' href='sql_operators_de.html'>SQL Betreiber</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>SQL</span> Datenbank</h2>
+            <a target='_top' href='sql_create_db_de.html'>SQL CREATE DATABASE</a>
+            <a target='_top' href='sql_drop_db_de.html'>SQL DROP DATABASE</a>
+            <a target='_top' href='sql_backup_db_de.html'>SQL BACKUP DATABASE</a>
+            <a target='_top' href='sql_create_table_de.html'>SQL CREATE TABLE</a>
+            <a target='_top' href='sql_drop_table_de.html'>SQL DROP TABLE</a>
+            <a target='_top' href='sql_alter_de.html'>SQL ALTER TABLE</a>
+            <a target='_top' href='sql_constraints_de.html'>SQL Einschränkungen</a>
+            <a target='_top' href='sql_notnull_de.html'>SQL NOT NULL</a>
+            <a target='_top' href='sql_unique_de.html'>SQL UNIQUE</a>
+            <a target='_top' href='sql_primarykey_de.html'>SQL PRIMARY KEY</a>
+            <a target='_top' href='sql_foreignkey_de.html'>SQL FOREIGN KEY</a>
+            <a target='_top' href='sql_check_de.html'>SQL CHECK</a>
+            <a target='_top' href='sql_default_de.html'>SQL DEFAULT</a>
+            <a target='_top' href='sql_create_index_de.html'>SQL CREATE INDEX</a>
+            <a target='_top' href='sql_autoincrement_de.html'>SQL AUTO INCREMENT</a>
+            <a target='_top' href='sql_dates_de.html'>SQL Daten</a>
+            <a target='_top' href='sql_view_de.html'>SQL CREATE VIEW</a>
+            <a target='_top' href='sql_injection_de.html'>SQL Injektion</a>
+            <a target='_top' href='sql_hosting_de.html'>SQL Hosting</a>
+            <a target='_top' href='sql_datatypes_de.html'>SQL Datentypen</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>SQL</span> Referenzen</h2>
+            <a target='_top' href='sql_ref_keywords_de.html'>SQL Schlüsselwörter</a>
+            <div class='ref_overview' style="margin-left:10px;background-color:#ddd">
+                <a target='_top' href='sql_ref_add_de.html'>ADD</a>
+                <a target='_top' href='sql_ref_add_constraint_de.html'>ADD CONSTRAINT</a>
+                <a target='_top' href='sql_ref_alter_de.html'>ALTER</a>
+                <a target='_top' href='sql_ref_alter_column_de.html'>ALTER COLUMN</a>
+                <a target='_top' href='sql_ref_alter_table_de.html'>ALTER TABLE</a>
+                <a target='_top' href='sql_ref_all_de.html'>ALL</a>
+                <a target='_top' href='sql_ref_and_de.html'>AND</a>
+                <a target='_top' href='sql_ref_any_de.html'>ANY</a>
+                <a target='_top' href='sql_ref_as_de.html'>AS</a>
+                <a target='_top' href='sql_ref_asc_de.html'>ASC</a>
+                <a target='_top' href='sql_ref_backup_database_de.html'>BACKUP DATABASE</a>
+                <a target='_top' href='sql_ref_between_de.html'>BETWEEN</a>
+                <a target='_top' href='sql_ref_case_de.html'>CASE</a>
+                <a target='_top' href='sql_ref_check_de.html'>CHECK</a>
+                <a target='_top' href='sql_ref_column_de.html'>COLUMN</a>
+                <a target='_top' href='sql_ref_constraint_de.html'>CONSTRAINT</a>
+                <a target='_top' href='sql_ref_create_de.html'>CREATE</a>
+                <a target='_top' href='sql_ref_create_database_de.html'>CREATE DATABASE</a>
+                <a target='_top' href='sql_ref_create_index_de.html'>CREATE INDEX</a>
+                <a target='_top' href='sql_ref_create_or_replace_view_de.html'>CREATE OR REPLACE VIEW</a>
+                <a target='_top' href='sql_ref_create_table_de.html'>CREATE TABLE</a>
+                <a target='_top' href='sql_ref_create_procedure_de.html'>CREATE PROCEDURE</a>
+                <a target='_top' href='sql_ref_create_unique_index_de.html'>CREATE UNIQUE INDEX</a>
+                <a target='_top' href='sql_ref_create_view_de.html'>CREATE VIEW</a>
+                <a target='_top' href='sql_ref_database_de.html'>DATABASE</a>
+                <a target='_top' href='sql_ref_default_de.html'>DEFAULT</a>
+                <a target='_top' href='sql_ref_delete_de.html'>DELETE</a>
+                <a target='_top' href='sql_ref_desc_de.html'>DESC</a>
+                <a target='_top' href='sql_ref_select_distinct_de.html'>DISTINCT</a>
+                <a target='_top' href='sql_ref_drop_de.html'>DROP</a>
+                <a target='_top' href='sql_ref_drop_column_de.html'>DROP COLUMN</a>
+                <a target='_top' href='sql_ref_drop_constraint_de.html'>DROP CONSTRAINT</a>
+                <a target='_top' href='sql_ref_drop_database_de.html'>DROP DATABASE</a>
+                <a target='_top' href='sql_ref_drop_default_de.html'>DROP DEFAULT</a>
+                <a target='_top' href='sql_ref_drop_index_de.html'>DROP INDEX</a>
+                <a target='_top' href='sql_ref_drop_table_de.html'>DROP TABLE</a>
+                <a target='_top' href='sql_ref_drop_view_de.html'>DROP VIEW</a>
+                <a target='_top' href='sql_ref_exec_de.html'>EXEC</a>
+                <a target='_top' href='sql_ref_exists_de.html'>EXISTS</a>
+                <a target='_top' href='sql_ref_foreign_key_de.html'>FOREIGN KEY</a>
+                <a target='_top' href='sql_ref_from_de.html'>FROM</a>
+                <a target='_top' href='sql_ref_full_outer_join_de.html'>FULL OUTER JOIN</a>
+                <a target='_top' href='sql_ref_group_by_de.html'>GROUP BY</a>
+                <a target='_top' href='sql_ref_having_de.html'>HAVING</a>
+                <a target='_top' href='sql_ref_in_de.html'>IN</a>
+                <a target='_top' href='sql_ref_index_de.html'>INDEX</a>
+                <a target='_top' href='sql_ref_inner_join_de.html'>INNER JOIN</a>
+                <a target='_top' href='sql_ref_insert_into_de.html'>INSERT INTO</a>
+                <a target='_top' href='sql_ref_insert_into_select_de.html'>INSERT INTO SELECT</a>
+                <a target='_top' href='sql_ref_is_null_de.html'>IS NULL</a>
+                <a target='_top' href='sql_ref_is_not_null_de.html'>IS NOT NULL</a>
+                <a target='_top' href='sql_ref_join_de.html'>JOIN</a>
+                <a target='_top' href='sql_ref_left_join_de.html'>LEFT JOIN</a>
+                <a target='_top' href='sql_ref_like_de.html'>LIKE</a>
+                <a target='_top' href='sql_ref_top_de.html'>LIMIT</a>
+                <a target='_top' href='sql_ref_not_de.html'>NOT</a>
+                <a target='_top' href='sql_ref_not_null_de.html'>NOT NULL</a>
+                <a target='_top' href='sql_ref_or_de.html'>OR</a>
+                <a target='_top' href='sql_ref_order_by_de.html'>ORDER BY</a>
+                <a target='_top' href='sql_ref_full_outer_join_de.html'>OUTER JOIN</a>
+                <a target='_top' href='sql_ref_primary_key_de.html'>PRIMARY KEY</a>
+                <a target='_top' href='sql_ref_create_procedure_de.html'>PROCEDURE</a>
+                <a target='_top' href='sql_ref_right_join_de.html'>RIGHT JOIN</a>
+                <a target='_top' href='sql_ref_top_de.html'>ROWNUM</a>
+                <a target='_top' href='sql_ref_select_de.html'>SELECT</a>
+                <a target='_top' href='sql_ref_select_distinct_de.html'>SELECT DISTINCT</a>
+                <a target='_top' href='sql_ref_select_into_de.html'>SELECT INTO</a>
+                <a target='_top' href='sql_ref_top_de.html'>SELECT TOP</a>
+                <a target='_top' href='sql_ref_set_de.html'>SET</a>
+                <a target='_top' href='sql_ref_table_de.html'>TABLE</a>
+                <a target='_top' href='sql_ref_top_de.html'>TOP</a>
+                <a target='_top' href='sql_ref_drop_table_de.html'>TRUNCATE TABLE</a>
+                <a target='_top' href='sql_ref_union_de.html'>UNION</a>
+                <a target='_top' href='sql_ref_union_de.html'>UNION ALL</a>
+                <a target='_top' href='sql_ref_unique_de.html'>UNIQUE</a>
+                <a target='_top' href='sql_ref_update_de.html'>UPDATE</a>
+                <a target='_top' href='sql_ref_values_de.html'>VALUES</a>
+                <a target='_top' href='sql_ref_view_de.html'>VIEW</a>
+                <a target='_top' href='sql_ref_where_de.html'>WHERE</a>
+            </div>
+            <a target='_top' href='sql_ref_mysql_de.html'>MySQL Funktionen</a>
+            <div class='ref_overview' style="margin-left:10px;background-color:#ddd">
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:2px;font-style:italic;">String -Funktionen:</span>
+                <a target='_top' href='func_mysql_ascii_de.html'>ASCII</a>
+                <a target='_top' href='func_mysql_char_length_de.html'>CHAR_LENGTH</a>
+                <a target='_top' href='func_mysql_character_length_de.html'>CHARACTER_LENGTH</a>
+                <a target='_top' href='func_mysql_concat_de.html'>CONCAT</a>
+                <a target='_top' href='func_mysql_concat_ws_de.html'>CONCAT_WS</a>
+                <a target='_top' href='func_mysql_field_de.html'>FIELD</a>
+                <a target='_top' href='func_mysql_find_in_set_de.html'>FIND_IN_SET</a>
+                <a target='_top' href='func_mysql_format_de.html'>FORMAT</a>
+                <a target='_top' href='func_mysql_insert_de.html'>INSERT</a>
+                <a target='_top' href='func_mysql_instr_de.html'>INSTR</a>
+                <a target='_top' href='func_mysql_lcase_de.html'>LCASE</a>
+                <a target='_top' href='func_mysql_left_de.html'>LEFT</a>
+                <a target='_top' href='func_mysql_length_de.html'>LENGTH</a>
+                <a target='_top' href='func_mysql_locate_de.html'>LOCATE</a>
+                <a target='_top' href='func_mysql_lower_de.html'>LOWER</a>
+                <a target='_top' href='func_mysql_lpad_de.html'>LPAD</a>
+                <a target='_top' href='func_mysql_ltrim_de.html'>LTRIM</a>
+                <a target='_top' href='func_mysql_mid_de.html'>MID</a>
+                <a target='_top' href='func_mysql_position_de.html'>POSITION</a>
+                <a target='_top' href='func_mysql_repeat_de.html'>REPEAT</a>
+                <a target='_top' href='func_mysql_replace_de.html'>REPLACE</a>
+                <a target='_top' href='func_mysql_reverse_de.html'>REVERSE</a>
+                <a target='_top' href='func_mysql_right_de.html'>RIGHT</a>
+                <a target='_top' href='func_mysql_rpad_de.html'>RPAD</a>
+                <a target='_top' href='func_mysql_rtrim_de.html'>RTRIM</a>
+                <a target='_top' href='func_mysql_space_de.html'>SPACE</a>
+                <a target='_top' href='func_mysql_strcmp_de.html'>STRCMP</a>
+                <a target='_top' href='func_mysql_substr_de.html'>SUBSTR</a>
+                <a target='_top' href='func_mysql_substring_de.html'>SUBSTRING</a>
+                <a target='_top' href='func_mysql_substring_index_de.html'>SUBSTRING_INDEX</a>
+                <a target='_top' href='func_mysql_trim_de.html'>TRIM</a>
+                <a target='_top' href='func_mysql_ucase_de.html'>UCASE</a>
+                <a target='_top' href='func_mysql_upper_de.html'>UPPER</a>
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Numerische Funktionen:</span>
+                <a target='_top' href='func_mysql_abs_de.html'>ABS</a>
+                <a target='_top' href='func_mysql_acos_de.html'>ACOS</a>
+                <a target='_top' href='func_mysql_asin_de.html'>ASIN</a>
+                <a target='_top' href='func_mysql_atan_de.html'>ATAN</a>
+                <a target='_top' href='func_mysql_atan2_de.html'>ATAN2</a>
+                <a target='_top' href='func_mysql_avg_de.html'>AVG</a>
+                <a target='_top' href='func_mysql_ceil_de.html'>CEIL</a>
+                <a target='_top' href='func_mysql_ceiling_de.html'>CEILING</a>
+                <a target='_top' href='func_mysql_cos_de.html'>COS</a>
+                <a target='_top' href='func_mysql_cot_de.html'>COT</a>
+                <a target='_top' href='func_mysql_count_de.html'>COUNT</a>
+                <a target='_top' href='func_mysql_degrees_de.html'>DEGREES</a>
+                <a target='_top' href='func_mysql_div_de.html'>DIV</a>
+                <a target='_top' href='func_mysql_exp_de.html'>EXP</a>
+                <a target='_top' href='func_mysql_floor_de.html'>FLOOR</a>
+                <a target='_top' href='func_mysql_greatest_de.html'>GREATEST</a>
+                <a target='_top' href='func_mysql_least_de.html'>LEAST</a>
+                <a target='_top' href='func_mysql_ln_de.html'>LN</a>
+                <a target='_top' href='func_mysql_log_de.html'>LOG</a>
+                <a target='_top' href='func_mysql_log10_de.html'>LOG10</a>
+                <a target='_top' href='func_mysql_log2_de.html'>LOG2</a>
+                <a target='_top' href='func_mysql_max_de.html'>MAX</a>
+                <a target='_top' href='func_mysql_min_de.html'>MIN</a>
+                <a target='_top' href='func_mysql_mod_de.html'>MOD</a>
+                <a target='_top' href='func_mysql_pi_de.html'>PI</a>
+                <a target='_top' href='func_mysql_pow_de.html'>POW</a>
+                <a target='_top' href='func_mysql_power_de.html'>POWER</a>
+                <a target='_top' href='func_mysql_radians_de.html'>RADIANS</a>
+                <a target='_top' href='func_mysql_rand_de.html'>RAND</a>
+                <a target='_top' href='func_mysql_round_de.html'>ROUND</a>
+                <a target='_top' href='func_mysql_sign_de.html'>SIGN</a>
+                <a target='_top' href='func_mysql_sin_de.html'>SIN</a>
+                <a target='_top' href='func_mysql_sqrt_de.html'>SQRT</a>
+                <a target='_top' href='func_mysql_sum_de.html'>SUM</a>
+                <a target='_top' href='func_mysql_tan_de.html'>TAN</a>
+                <a target='_top' href='func_mysql_truncate_de.html'>TRUNCATE</a>
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Datumsfunktionen:</span>
+                <a target='_top' href='func_mysql_adddate_de.html'>ADDDATE</a>
+                <a target='_top' href='func_mysql_addtime_de.html'>ADDTIME</a>
+                <a target='_top' href='func_mysql_curdate_de.html'>CURDATE</a>
+                <a target='_top' href='func_mysql_current_date_de.html'>CURRENT_DATE</a>
+                <a target='_top' href='func_mysql_current_time_de.html'>CURRENT_TIME</a>
+                <a target='_top' href='func_mysql_current_timestamp_de.html'>CURRENT_TIMESTAMP</a>
+                <a target='_top' href='func_mysql_curtime_de.html'>CURTIME</a>
+                <a target='_top' href='func_mysql_date_de.html'>DATE</a>
+                <a target='_top' href='func_mysql_datediff_de.html'>DATEDIFF</a>
+                <a target='_top' href='func_mysql_date_add_de.html'>DATE_ADD</a>
+                <a target='_top' href='func_mysql_date_format_de.html'>DATE_FORMAT</a>
+                <a target='_top' href='func_mysql_date_sub_de.html'>DATE_SUB</a>
+                <a target='_top' href='func_mysql_day_de.html'>DAY</a>
+                <a target='_top' href='func_mysql_dayname_de.html'>DAYNAME</a>
+                <a target='_top' href='func_mysql_dayofmonth_de.html'>DAYOFMONTH</a>
+                <a target='_top' href='func_mysql_dayofweek_de.html'>DAYOFWEEK</a>
+                <a target='_top' href='func_mysql_dayofyear_de.html'>DAYOFYEAR</a>
+                <a target='_top' href='func_mysql_extract_de.html'>EXTRACT</a>
+                <a target='_top' href='func_mysql_from_days_de.html'>FROM_DAYS</a>
+                <a target='_top' href='func_mysql_hour_de.html'>HOUR</a>
+                <a target='_top' href='func_mysql_last_day_de.html'>LAST_DAY</a>
+                <a target='_top' href='func_mysql_localtime_de.html'>LOCALTIME</a>
+                <a target='_top' href='func_mysql_localtimestamp_de.html'>LOCALTIMESTAMP</a>
+                <a target='_top' href='func_mysql_makedate_de.html'>MAKEDATE</a>
+                <a target='_top' href='func_mysql_maketime_de.html'>MAKETIME</a>
+                <a target='_top' href='func_mysql_microsecond_de.html'>MICROSECOND</a>
+                <a target='_top' href='func_mysql_minute_de.html'>MINUTE</a>
+                <a target='_top' href='func_mysql_month_de.html'>MONTH</a>
+                <a target='_top' href='func_mysql_monthname_de.html'>MONTHNAME</a>
+                <a target='_top' href='func_mysql_now_de.html'>NOW</a>
+                <a target='_top' href='func_mysql_period_add_de.html'>PERIOD_ADD</a>
+                <a target='_top' href='func_mysql_period_diff_de.html'>PERIOD_DIFF</a>
+                <a target='_top' href='func_mysql_quarter_de.html'>QUARTER</a>
+                <a target='_top' href='func_mysql_second_de.html'>SECOND</a>
+                <a target='_top' href='func_mysql_sec_to_time_de.html'>SEC_TO_TIME</a>
+                <a target='_top' href='func_mysql_str_to_date_de.html'>STR_TO_DATE</a>
+                <a target='_top' href='func_mysql_subdate_de.html'>SUBDATE</a>
+                <a target='_top' href='func_mysql_subtime_de.html'>SUBTIME</a>
+                <a target='_top' href='func_mysql_sysdate_de.html'>SYSDATE</a>
+                <a target='_top' href='func_mysql_time_de.html'>TIME</a>
+                <a target='_top' href='func_mysql_time_format_de.html'>TIME_FORMAT</a>
+                <a target='_top' href='func_mysql_time_to_sec_de.html'>TIME_TO_SEC</a>
+                <a target='_top' href='func_mysql_timediff_de.html'>TIMEDIFF</a>
+                <a target='_top' href='func_mysql_timestamp_de.html'>TIMESTAMP</a>
+                <a target='_top' href='func_mysql_to_days_de.html'>TO_DAYS</a>
+                <a target='_top' href='func_mysql_week_de.html'>WEEK</a>
+                <a target='_top' href='func_mysql_weekday_de.html'>WEEKDAY</a>
+                <a target='_top' href='func_mysql_weekofyear_de.html'>WEEKOFYEAR</a>
+                <a target='_top' href='func_mysql_year_de.html'>YEAR</a>
+                <a target='_top' href='func_mysql_yearweek_de.html'>YEARWEEK</a>
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Erweiterte Funktionen:</span>
+                <a target='_top' href='func_mysql_bin_de.html'>BIN</a>
+                <a target='_top' href='func_mysql_binary_de.html'>BINARY</a>
+                <a target='_top' href='func_mysql_case_de.html'>CASE</a>
+                <a target='_top' href='func_mysql_cast_de.html'>CAST</a>
+                <a target='_top' href='func_mysql_coalesce_de.html'>COALESCE</a>
+                <a target='_top' href='func_mysql_connection_id_de.html'>CONNECTION_ID</a>
+                <a target='_top' href='func_mysql_conv_de.html'>CONV</a>
+                <a target='_top' href='func_mysql_convert_de.html'>CONVERT</a>
+                <a target='_top' href='func_mysql_current_user_de.html'>CURRENT_USER</a>
+                <a target='_top' href='func_mysql_database_de.html'>DATABASE</a>
+                <a target='_top' href='func_mysql_if_de.html'>IF</a>
+                <a target='_top' href='func_mysql_ifnull_de.html'>IFNULL</a>
+                <a target='_top' href='func_mysql_isnull_de.html'>ISNULL</a>
+                <a target='_top' href='func_mysql_last_insert_id_de.html'>LAST_INSERT_ID</a>
+                <a target='_top' href='func_mysql_nullif_de.html'>NULLIF</a>
+                <a target='_top' href='func_mysql_session_user_de.html'>SESSION_USER</a>
+                <a target='_top' href='func_mysql_system_user_de.html'>SYSTEM_USER</a>
+                <a target='_top' href='func_mysql_user_de.html'>USER</a>
+                <a target='_top' href='func_mysql_version_de.html'>VERSION</a>
+            </div>
+            <a target='_top' href='sql_ref_sqlserver_de.html'>SQL Serverfunktionen</a>
+            <div class='ref_overview' style="margin-left:10px;background-color:#ddd">
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:2px;font-style:italic;">String -Funktionen:</span>
+                <a href='func_sqlserver_ascii_de.html'>ASCII</a>
+                <a href='func_sqlserver_char_de.html'>CHAR</a>
+                <a href='func_sqlserver_charindex_de.html'>CHARINDEX</a>
+                <a href='func_sqlserver_concat_de.html'>CONCAT</a>
+                <a href='func_sqlserver_concat_with_plus_de.html'>Concat with +</a>
+                <a href='func_sqlserver_concat_ws_de.html'>CONCAT_WS</a>
+                <a href='func_sqlserver_datalength_de.html'>DATALENGTH</a>
+                <a href='func_sqlserver_difference_de.html'>DIFFERENCE</a>
+                <a href='func_sqlserver_format_de.html'>FORMAT</a>
+                <a href='func_sqlserver_left_de.html'>LEFT</a>
+                <a href='func_sqlserver_len_de.html'>LEN</a>
+                <a href='func_sqlserver_lower_de.html'>LOWER</a>
+                <a href='func_sqlserver_ltrim_de.html'>LTRIM</a>
+                <a href='func_sqlserver_nchar_de.html'>NCHAR</a>
+                <a href='func_sqlserver_patindex_de.html'>PATINDEX</a>
+                <a href='func_sqlserver_quotename_de.html'>QUOTENAME</a>
+                <a href='func_sqlserver_replace_de.html'>REPLACE</a>
+                <a href='func_sqlserver_replicate_de.html'>REPLICATE</a>
+                <a href='func_sqlserver_reverse_de.html'>REVERSE</a>
+                <a href='func_sqlserver_right_de.html'>RIGHT</a>
+                <a href='func_sqlserver_rtrim_de.html'>RTRIM</a>
+                <a href='func_sqlserver_soundex_de.html'>SOUNDEX</a>
+                <a href='func_sqlserver_space_de.html'>SPACE</a>
+                <a href='func_sqlserver_str_de.html'>STR</a>
+                <a href='func_sqlserver_stuff_de.html'>STUFF</a>
+                <a href='func_sqlserver_substring_de.html'>SUBSTRING</a>
+                <a href='func_sqlserver_translate_de.html'>TRANSLATE</a>
+                <a href='func_sqlserver_trim_de.html'>TRIM</a>
+                <a href='func_sqlserver_unicode_de.html'>UNICODE</a>
+                <a href='func_sqlserver_upper_de.html'>UPPER</a>
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Numerische Funktionen:</span>
+                <a href='func_sqlserver_abs_de.html'>ABS</a>
+                <a href='func_sqlserver_acos_de.html'>ACOS</a>
+                <a href='func_sqlserver_asin_de.html'>ASIN</a>
+                <a href='func_sqlserver_atan_de.html'>ATAN</a>
+                <a href='func_sqlserver_atn2_de.html'>ATN2</a>
+                <a href='func_sqlserver_avg_de.html'>AVG</a>
+                <a href='func_sqlserver_ceiling_de.html'>CEILING</a>
+                <a href='func_sqlserver_count_de.html'>COUNT</a>
+                <a href='func_sqlserver_cos_de.html'>COS</a>
+                <a href='func_sqlserver_cot_de.html'>COT</a>
+                <a href='func_sqlserver_degrees_de.html'>DEGREES</a>
+                <a href='func_sqlserver_exp_de.html'>EXP</a>
+                <a href='func_sqlserver_floor_de.html'>FLOOR</a>
+                <a href='func_sqlserver_log_de.html'>LOG</a>
+                <a href='func_sqlserver_log10_de.html'>LOG10</a>
+                <a href='func_sqlserver_max_de.html'>MAX</a>
+                <a href='func_sqlserver_min_de.html'>MIN</a>
+                <a href='func_sqlserver_pi_de.html'>PI</a>
+                <a href='func_sqlserver_power_de.html'>POWER</a>
+                <a href='func_sqlserver_radians_de.html'>RADIANS</a>
+                <a href='func_sqlserver_rand_de.html'>RAND</a>
+                <a href='func_sqlserver_round_de.html'>ROUND</a>
+                <a href='func_sqlserver_sign_de.html'>SIGN</a>
+                <a href='func_sqlserver_sin_de.html'>SIN</a>
+                <a href='func_sqlserver_sqrt_de.html'>SQRT</a>
+                <a href='func_sqlserver_square_de.html'>SQUARE</a>
+                <a href='func_sqlserver_sum_de.html'>SUM</a>
+                <a href='func_sqlserver_tan_de.html'>TAN</a>
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Datumsfunktionen:</span>
+                <a href='func_sqlserver_current_timestamp_de.html'>CURRENT_TIMESTAMP</a>
+                <a href='func_sqlserver_dateadd_de.html'>DATEADD</a>
+                <a href='func_sqlserver_datediff_de.html'>DATEDIFF</a>
+                <a href='func_sqlserver_datefromparts_de.html'>DATEFROMPARTS</a>
+                <a href='func_sqlserver_datename_de.html'>DATENAME</a>
+                <a href='func_sqlserver_datepart_de.html'>DATEPART</a>
+                <a href='func_sqlserver_day_de.html'>DAY</a>
+                <a href='func_sqlserver_getdate_de.html'>GETDATE</a>
+                <a href='func_sqlserver_getutcdate_de.html'>GETUTCDATE</a>
+                <a href='func_sqlserver_isdate_de.html'>ISDATE</a>
+                <a href='func_sqlserver_month_de.html'>MONTH</a>
+                <a href='func_sqlserver_sysdatetime_de.html'>SYSDATETIME</a>
+                <a href='func_sqlserver_year_de.html'>YEAR</a>
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Erweiterte Funktionen</span>
+                <a href='func_sqlserver_cast_de.html'>CAST</a>
+                <a href='func_sqlserver_coalesce_de.html'>COALESCE</a>
+                <a href='func_sqlserver_convert_de.html'>CONVERT</a>
+                <a href='func_sqlserver_current_user_de.html'>CURRENT_USER</a>
+                <a href='func_sqlserver_iif_de.html'>IIF</a>
+                <a href='func_sqlserver_isnull_de.html'>ISNULL</a>
+                <a href='func_sqlserver_isnumeric_de.html'>ISNUMERIC</a>
+                <a href='func_sqlserver_nullif_de.html'>NULLIF</a>
+                <a href='func_sqlserver_session_user_de.html'>SESSION_USER</a>
+                <a href='func_sqlserver_sessionproperty_de.html'>SESSIONPROPERTY</a>
+                <a href='func_sqlserver_system_user_de.html'>SYSTEM_USER</a>
+                <a href='func_sqlserver_user_name_de.html'>USER_NAME</a>
+            </div>
+            <a target='_top' href='sql_ref_msaccess_de.html'>MS Access Funktionen</a>
+            <div class='ref_overview' style="margin-left:10px;background-color:#ddd">
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:2px;font-style:italic;">String -Funktionen:</span>
+                <a href='func_msaccess_asc_de.html'>Asc</a>
+                <a href='func_msaccess_chr_de.html'>Chr</a>
+                <a href='func_msaccess_concat_de.html'>Concat with &amp;</a>
+                <a href='func_msaccess_curdir_de.html'>CurDir</a>
+                <a href='func_msaccess_format_de.html'>Format</a>
+                <a href='func_msaccess_instr_de.html'>InStr</a>
+                <a href='func_msaccess_instrrev_de.html'>InstrRev</a>
+                <a href='func_msaccess_lcase_de.html'>LCase</a>
+                <a href='func_msaccess_left_de.html'>Left</a>
+                <a href='func_msaccess_len_de.html'>Len</a>
+                <a href='func_msaccess_ltrim_de.html'>LTrim</a>
+                <a href='func_msaccess_mid_de.html'>Mid</a>
+                <a href='func_msaccess_replace_de.html'>Replace</a>
+                <a href='func_msaccess_right_de.html'>Right</a>
+                <a href='func_msaccess_rtrim_de.html'>RTrim</a>
+                <a href='func_msaccess_space_de.html'>Space</a>
+                <a href='func_msaccess_split_de.html'>Split</a>
+                <a href='func_msaccess_str_de.html'>Str</a>
+                <a href='func_msaccess_strcomp_de.html'>StrComp</a>
+                <a href='func_msaccess_strconv_de.html'>StrConv</a>
+                <a href='func_msaccess_strreverse_de.html'>StrReverse</a>
+                <a href='func_msaccess_trim_de.html'>Trim</a>
+                <a href='func_msaccess_ucase_de.html'>UCase</a>
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Numerische Funktionen:</span>
+                <a href='func_msaccess_abs_de.html'>Abs</a>
+                <a href='func_msaccess_atn_de.html'>Atn</a>
+                <a href='func_msaccess_avg_de.html'>Avg</a>
+                <a href='func_msaccess_cos_de.html'>Cos</a>
+                <a href='func_msaccess_count_de.html'>Count</a>
+                <a href='func_msaccess_exp_de.html'>Exp</a>
+                <a href='func_msaccess_fix_de.html'>Fix</a>
+                <a href='func_msaccess_format_number_de.html'>Format</a>
+                <a href='func_msaccess_int_de.html'>Int</a>
+                <a href='func_msaccess_max_de.html'>Max</a>
+                <a href='func_msaccess_min_de.html'>Min</a>
+                <a href='func_msaccess_randomize_de.html'>Randomize</a>
+                <a href='func_msaccess_rnd_de.html'>Rnd</a>
+                <a href='func_msaccess_round_de.html'>Round</a>
+                <a href='func_msaccess_sgn_de.html'>Sgn</a>
+                <a href='func_msaccess_sqr_de.html'>Sqr</a>
+                <a href='func_msaccess_sum_de.html'>Sum</a>
+                <a href='func_msaccess_val_de.html'>Val</a>
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Datumsfunktionen:</span>
+                <a href='func_msaccess_date_de.html'>Date</a>
+                <a href='func_msaccess_dateadd_de.html'>DateAdd</a>
+                <a href='func_msaccess_datediff_de.html'>DateDiff</a>
+                <a href='func_msaccess_datepart_de.html'>DatePart</a>
+                <a href='func_msaccess_dateserial_de.html'>DateSerial</a>
+                <a href='func_msaccess_datevalue_de.html'>DateValue</a>
+                <a href='func_msaccess_day_de.html'>Day</a>
+                <a href='func_msaccess_format_date_de.html'>Format</a>
+                <a href='func_msaccess_hour_de.html'>Hour</a>
+                <a href='func_msaccess_minute_de.html'>Minute</a>
+                <a href='func_msaccess_month_de.html'>Month</a>
+                <a href='func_msaccess_monthname_de.html'>MonthName</a>
+                <a href='func_msaccess_now_de.html'>Now</a>
+                <a href='func_msaccess_second_de.html'>Second</a>
+                <a href='func_msaccess_time_de.html'>Time</a>
+                <a href='func_msaccess_timeserial_de.html'>TimeSerial</a>
+                <a href='func_msaccess_timevalue_de.html'>TimeValue</a>
+                <a href='func_msaccess_weekday_de.html'>Weekday</a>
+                <a href='func_msaccess_weekdayname_de.html'>WeekdayName</a>
+                <a href='func_msaccess_year_de.html'>Year</a>
+                <span style="display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic">Andere Funktionen:</span>
+                <a href='func_msaccess_currentuser_de.html'>CurrentUser</a>
+                <a href='func_msaccess_environ_de.html'>Environ</a>
+                <a href='func_msaccess_isdate_de.html'>IsDate</a>
+                <a href='func_msaccess_isnull_de.html'>IsNull</a>
+                <a href='func_msaccess_isnumeric_de.html'>IsNumeric</a>
+            </div>
+            <a target='_top' href='sql_quickref_de.html'>SQL Schneller Ref</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>SQL</span> Beispiele</h2>
+            <a target='_top' href='sql_examples_de.html'>SQL Beispiele</a>
+            <a target='_top' href='sql_editor_de.html'>SQL Editor</a>
+            <a target='_top' href='sql_quiz_de.html'>SQL Quiz</a>
+            <a target='_top' href='sql_exercises_de.html'>SQL Übungen</a>
+            <a target='_top' href='sql_bootcamp_de.html'>SQL Bootcamp</a>
+            <a target='_top' href='sql_exam_de.html'>SQL Zertifikat</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT SQL-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index_de.html'><img src='../svg/sql_icon1.svg' alt='SQL. Lektionen für Anfänger' class='w3-left w3-padding' title='SQL für Anfänger. W3schools auf Deutsch' width='100'></a>
+    <p class='w3-right'>
+        <a href='sql_update.html' title='Wechseln Sie zu Ukrainisch'>Ua</a>
+        <a href='sql_update_en.html' title='Wechseln Sie zu Englisch'>En</a>
+        <a href='sql_update_es.html' title='Wechseln Sie zu Spanisch'>Es</a>
+        <a href='sql_update_fr.html' title='Wechseln Sie zu Französisch'>Fr</a>
+    </p>
+    <article>
+        <h1>SQL <span class="color_h1">UPDATE</span>-Anweisung</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_null_values_de.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_delete_de.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <h2>Die SQL UPDATE-Anweisung</h2>
+        <p>Die Anweisung <code class="w3-codespan">UPDATE</code> wird verwendet, um die vorhandenen Datensätze in einer Tabelle zu ändern.</p>
+        <h3>UPDATE Syntax</h3>
+        <div class="w3-example">
+            <div class="w3-code notranslate sqlHigh">
+                UPDATE <em>table_name</em><br>SET <em>column1 </em>=<em> value1</em>,<em> column2 </em>=<em> value2</em>, ...<br>WHERE <em>condition</em>;
+            </div>
+        </div>
+        <div class="w3-panel w3-note">
+            <p><b>Note:</b> Be careful when updating records in a table! Notice the <code class="w3-codespan">WHERE</code> clause in the <code class="w3-codespan">UPDATE</code> statement. The <code class="w3-codespan">WHERE</code> clause specifies which record(s) that should be updated. If you omit the <code class="w3-codespan">WHERE</code> clause, all records in the table will be updated!</p>
+        </div>
+        <hr>
+        <h2>Demo Database</h2>
+        <p>Below is a selection from the "Customers" table in the Northwind sample database:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>1<br><br></td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Obere Str. 57</td>
+                    <td>Berlin</td>
+                    <td>12209</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>Ana Trujillo</td>
+                    <td>Avda. de la Constitución 2222</td>
+                    <td>México D.F.</td>
+                    <td>05021</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>Antonio Moreno</td>
+                    <td>Mataderos 2312</td>
+                    <td>México D.F.</td>
+                    <td>05023</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>4<br><br></td>
+                    <td>Around the Horn</td>
+                    <td>Thomas Hardy</td>
+                    <td>120 Hanover Sq.</td>
+                    <td>London</td>
+                    <td>WA1 1DP</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Berglunds snabbköp</td>
+                    <td>Christina Berglund</td>
+                    <td>Berguvsvägen 8</td>
+                    <td>Luleå</td>
+                    <td>S-958 22</td>
+                    <td>Sweden</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>UPDATE Table</h2>
+        <p>The following SQL statement updates the first customer (CustomerID = 1) with a new contact person <em>and</em> a new city.</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate sqlHigh">
+                UPDATE Customers<br>SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'<br>WHERE CustomerID = 1;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_update_2.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <p>The selection from the "Customers" table will now look like this:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>1<br><br></td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Alfred Schmidt</td>
+                    <td>Obere Str. 57</td>
+                    <td>Frankfurt</td>
+                    <td>12209</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>Ana Trujillo</td>
+                    <td>Avda. de la Constitución 2222</td>
+                    <td>México D.F.</td>
+                    <td>05021</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>Antonio Moreno</td>
+                    <td>Mataderos 2312</td>
+                    <td>México D.F.</td>
+                    <td>05023</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>4<br><br></td>
+                    <td>Around the Horn</td>
+                    <td>Thomas Hardy</td>
+                    <td>120 Hanover Sq.</td>
+                    <td>London</td>
+                    <td>WA1 1DP</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Berglunds snabbköp</td>
+                    <td>Christina Berglund</td>
+                    <td>Berguvsvägen 8</td>
+                    <td>Luleå</td>
+                    <td>S-958 22</td>
+                    <td>Sweden</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>UPDATE Multiple Records</h2>
+        <p>It is the <code class="w3-codespan">WHERE</code> clause that determines how many records will be updated.</p>
+        <p>The following SQL statement will update the ContactName to "Juan" for all records where country is "Mexico":</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate sqlHigh">
+                UPDATE Customers<br>SET ContactName='Juan'<br>WHERE Country='Mexico';
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_update_3.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <p>The selection from the "Customers" table will now look like this:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>1<br><br></td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Alfred Schmidt</td>
+                    <td>Obere Str. 57</td>
+                    <td>Frankfurt</td>
+                    <td>12209</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>Juan</td>
+                    <td>Avda. de la Constitución 2222</td>
+                    <td>México D.F.</td>
+                    <td>05021</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>Juan</td>
+                    <td>Mataderos 2312</td>
+                    <td>México D.F.</td>
+                    <td>05023</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>4<br><br></td>
+                    <td>Around the Horn</td>
+                    <td>Thomas Hardy</td>
+                    <td>120 Hanover Sq.</td>
+                    <td>London</td>
+                    <td>WA1 1DP</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Berglunds snabbköp</td>
+                    <td>Christina Berglund</td>
+                    <td>Berguvsvägen 8</td>
+                    <td>Luleå</td>
+                    <td>S-958 22</td>
+                    <td>Sweden</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Update Warning!</h2>
+        <div class="w3-panel w3-note">
+            <p>Be careful when updating records. If you omit the <code class="w3-codespan">WHERE</code> clause, ALL records will be updated!</p>
+        </div>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate sqlHigh">
+                UPDATE Customers<br>SET ContactName='Juan';
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_update_4.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <p>The selection from the "Customers" table will now look like this:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>CustomerID</th>
+                    <th>CustomerName</th>
+                    <th>ContactName</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>PostalCode</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>1<br><br></td>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Juan</td>
+                    <td>Obere Str. 57</td>
+                    <td>Frankfurt</td>
+                    <td>12209</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana Trujillo Emparedados y helados</td>
+                    <td>Juan</td>
+                    <td>Avda. de la Constitución 2222</td>
+                    <td>México D.F.</td>
+                    <td>05021</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Antonio Moreno Taquería</td>
+                    <td>Juan</td>
+                    <td>Mataderos 2312</td>
+                    <td>México D.F.</td>
+                    <td>05023</td>
+                    <td>Mexico</td>
+                </tr>
+                <tr>
+                    <td>4<br><br></td>
+                    <td>Around the Horn</td>
+                    <td>Juan</td>
+                    <td>120 Hanover Sq.</td>
+                    <td>London</td>
+                    <td>WA1 1DP</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Berglunds snabbköp</td>
+                    <td>Juan</td>
+                    <td>Berguvsvägen 8</td>
+                    <td>Luleå</td>
+                    <td>S-958 22</td>
+                    <td>Sweden</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_update1" method="post" target="_blank">
+            <h2 title="Exercises only work online">Test Yourself With Exercises</h2>
+            <div class="exercisewindow">
+                <h2>Exercise:</h2>
+                <p>Update the <code class="w3-codespan">City</code> column of all records in the <code class="w3-codespan">Customers</code> table.</p>
+                <div class="exerciseprecontainer">
+    <pre>
+    <input name="ex1" aria-label='Example' maxlength="6" style="width: 64px;"> Customers
+    <input name="ex2" aria-label='Example' maxlength="3" style="width: 33px;"> City = 'Oslo';
+    </pre>
+                </div>
+                <br>
+                <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            </div>
+        </form>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_null_values_de.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_delete_de.html">Next &#10095;</a>
+        </div>
+    </article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    </div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Alle Online-Lehrbücher auf der Website">SERVERSEITE</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index_de.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index_de.html' class='btn-rightbar'>MySQL</a>
+            <a href='../postgresql/css_rwd_intro_de.html' class='btn-rightbar'>PostgreSQL</a>
+            <a href='../php/index_de.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index_de.html' class='btn-rightbar'>ASP</a>
+            <a href='../nodejs/index_de.html' class='btn-rightbar'>Node.js</a>
+            <a href='../nodejs/nodejs_raspberrypi_de.html' class='btn-rightbar'>RaspberryPi</a>
+            <a href='../git/index_de.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index_de.html' class='btn-rightbar'>GitHubPages</a>
+            <a href='../mongodb/index_de.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index_de.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Platz für Ihre Werbung!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>KONTAKTE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none'>SEITE DRUCKEN</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index_de.html' target='_top' style='text-decoration:none'>BLOG</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index_de.html' target='_top' style='text-decoration:none'>ÜBER DIE WEBSITE</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Kontakte</h2>
+      <p>Wenn Sie einen Fehler melden, ein Angebot für die Website abgeben oder eine Anzeige auf der Website hinzufügen möchten, zögern Sie nicht, eine E-Mail an den Administrator zu senden:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top-Tutorial</h4>
+        <a href='../html/index_de.html'>HTML Tutorial</a><br>
+        <a href='../css/index_de.html'>CSS Tutorial</a><br>
+        <a href='../js/index_de.html'>JavaScript Tutorial</a><br>
+        <a href='../sql/index_de.html'>SQL Tutorial</a><br>
+        <a href='../python/index_de.html'>Python Tutorial</a><br>
+        <a href='../php/index_de.html'>PHP Tutorial</a><br>
+        <a href='../w3css/index_de.html'>W3.CSS Tutorial</a><br>
+        <a href='../appml/index_de.html'>AppML Tutorial</a><br>
+        <a href='../jquery/index_de.html'>jQuery Tutorial</a><br>
+        <a href='../angular/index_de.html'>Angular Tutorial</a><br>
+        <a href='../sass/index_de.html'>Sass Tutorial</a><br>
+        <a href='../java/index_de.html'>Java Tutorial</a><br>
+        <a href='../kotlin/index_de.html'>Kotlin Tutorial</a><br>
+        <a href='../c/index_de.html'>C Tutorial</a><br>
+        <a href='../cpp/index_de.html'>C++ Tutorial</a><br>
+        <a href='../cs/index_de.html'>C# Tutorial</a><br>
+        <a href='../chatgpt-3-5/index_de.html'>ChatGPT-3.5 Tutorial</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top-Referenzen</h4>
+        <a href='../tags/index_de.html'>HTML Referenz</a><br>
+        <a href='../cssref/index_de.html'>CSS Referenz</a><br>
+        <a href='../jsref/index_de.html'>JavaScript Referenz</a><br>
+        <a href='../sql/sql_ref_keywords_de.html'>SQL Referenz</a><br>
+        <a href='../python/python_reference_de.html'>Python Referenz</a><br>
+        <a href='../php/php_ref_overview_de.html'>PHP Referenz</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_de.html'>Bootstrap 3 Referenz</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_de.html'>Bootstrap 4 Referenz</a><br>
+        <a href='../w3css/w3css_references_de.html'>W3.CSS Referenz</a><br>
+        <a href='../appml/appml_reference_de.html'>Appml Referenz</a><br>
+        <a href='../jquery/jquery_ref_overview_de.html'>jQuery Referenz</a><br>
+        <a href='../angular/angular_ref_directives_de.html'>Angular Referenz</a><br>
+        <a href='../sass/sass_functions_string_de.html'>Sass Referenz</a><br>
+        <a href='../java/java_ref_keywords_de.html'>Java Referenz</a><br>
+        <a href='../colors/colors_names_de.html'>Colors Referenz</a><br>
+        <a href='../icons/icons_reference_de.html'>Symbole Referenz</a><br>
+        <a href='../graphics/svg_reference_de.html'>SVG Referenz</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top-Beispiele</h4>
+        <a href='../html/html_examples_de.html'>HTML Beispiele</a><br>
+        <a href='../css/css_examples_de.html'>CSS Beispiele</a><br>
+        <a href='../js/js_examples_de.html'>JavaScript Beispiele</a><br>
+        <a href='../sql/sql_examples_de.html'>SQL Beispiele</a><br>
+        <a href='../python/python_examples_de.html'>Python Beispiele</a><br>
+        <a href='../php/php_examples_de.html'>PHP Beispiele</a><br>
+        <a href='../bootstrap/bootstrap_examples_de.html'>Bootstrap Beispiele</a><br>
+        <a href='../w3css/w3css_examples_de.html'>W3.CSS Beispiele</a><br>
+        <a href='../jquery/jquery_examples_de.html'>jQuery Beispiele</a><br>
+        <a href='../angular/angular_examples_de.html'>Angular Beispiele</a><br>
+        <a href='../java/java_examples_de.html'>Java Beispiele</a><br>
+        <a href='../kotlin/kotlin_examples_de.html'>Kotlin Beispiele</a><br>
+        <a href='../c/c_examples_de.html'>C Beispiele</a><br>
+        <a href='../cpp/cpp_examples_de.html'>C++ Beispiele</a><br>
+        <a href='../cs/cs_examples_de.html'>C# Beispiele</a><br>
+        <a href='../xml/xml_examples_de.html'>XML Beispiele</a><br>
+        <a href='../howto/index_de.html'>How To Beispiele</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_de.html'>Web-Zertifikate</a></h4>
+        <a href='../cert/cert_html_de.html'>HTML Zertifikat</a><br>
+        <a href='../cert/cert_css_de.html'>CSS Zertifikat</a><br>
+        <a href='../cert/cert_javascript_de.html'>JavaScript Zertifikat</a><br>
+        <a href='../cert/cert_frontend_de.html'>Front End Zertifikat</a><br>
+        <a href='../cert/cert_python_de.html'>Python Zertifikat</a><br>
+        <a href='../cert/cert_datascience_de.html'>Data Science Zertifikat</a><br>
+        <a href='../cert/cert_jquery_de.html'>jQuery Zertifikat</a><br>
+        <a href='../cert/cert_sql_de.html'>SQL Zertifikat</a><br>
+        <a href='../cert/cert_php_de.html'>PHP Zertifikat</a><br>
+        <a href='../cert/cert_java_de.html'>Java Zertifikat</a><br>
+        <a href='../cert/cert_c_de.html'>C Zertifikat</a><br>
+        <a href='../cert/cert_cpp_de.html'>C++ Zertifikat</a><br>
+        <a href='../cert/cert_cs_de.html'>C# Zertifikat</a><br>
+        <a href='../cert/cert_bootstrap_de.html'>Bootstrap Zertifikat</a><br>
+        <a href='../cert/cert_xml_de.html'>XML Zertifikat</a><br>
+        <a href='../cert/career_tips_de.html'>Karriereplanung</a><br>
+        <a href='../cert/career_cv_de.html'>Eine Zusammenfassung schreiben</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Diese Seite ist für Lernen und Training optimiert. Beispiele könnten vereinfacht werden, um das Lesen und Lernen zu verbessern. Tutorials, Referenzen und Beispiele werden ständig überprüft, um Fehler zu vermeiden. Wir können jedoch nicht die vollständige Richtigkeit aller Inhalte garantieren. Durch die Nutzung von W3Schools erklären Sie sich damit einverstanden, unsere <a href='../about/about_copyright_de.html'>Nutzungsbedingungen</a>, gelesen und akzeptiert zu haben <a href='../about/about_privacy_de.html'>Cookie- und Datenschutzrichtlinie</a>.<br>
+      Es sind auch Versionen der Website in anderen Sprachen verfügbar:
+      <a href='../index.html' title='W3Schools auf Ukrainisch'><strong>Ukrainisch</strong></a>,
+      <a href='../index_en.html' title='W3Schools auf Englisch'><strong>Englisch</strong></a>,
+      <a href='../index_es.html' title='W3Schools auf Spanisch'><strong>Spanisch</strong></a>,
+      <a href='../index_fr.html' title='W3Schools auf Französisch'><strong>Französisch</strong></a>.<br>
+    <a href='../about/about_copyright_de.html'>Urheberrechte © 1999-2025</a> liegt bei Refsnes Data. Alle Rechte vorbehalten. W3Schools wird von <a href='../w3css/index_de.html'>W3.CSS betrieben</a>.<br>
+      Sie können andere seriöse Lernressourcen für Webentwicklung und Programmierung nutzen:<br>
+      <a href='https://www.udemy.com/' target='_blank' rel='noopener'>Udemy</a>&nbsp;|&nbsp;
+      <a href='https://www.codecademy.com/' target='_blank' rel='noopener'>Codecademy</a>&nbsp;|&nbsp;
+      <a href='https://www.coursera.org/' target='_blank' rel='noopener'>Coursera</a>&nbsp;|&nbsp;
+      <a href='https://www.edx.org/' target='_blank' rel='noopener'>edX</a>&nbsp;|&nbsp;
+      <a href='https://www.khanacademy.org/' target='_blank' rel='noopener'>Khan Academy</a>&nbsp;|&nbsp;
+      <a href='https://www.skillshare.com/' target='_blank' rel='noopener'>Skillshare</a>&nbsp;|&nbsp;
+      <a href='https://www.freecodecamp.org/' target='_blank' rel='noopener'>FreeCodeCamp</a>&nbsp;|&nbsp;
+      <a href='https://learn.microsoft.com/de-de/' target='_blank' rel='noopener'>MicrosoftLearn</a>&nbsp;|&nbsp;
+      <a href='https://hyperskill.org/' target='_blank' rel='noopener'>HyperSkill</a>&nbsp;|&nbsp;
+      <a href='https://www.udacity.com/' target='_blank' rel='noopener'>Udacity</a>&nbsp;|&nbsp;
+      <a href='https://code.org/' target='_blank' rel='noopener'>Code.org</a>&nbsp;|&nbsp;
+      <a href='https://www.sololearn.com/' target='_blank' rel='noopener'>SoloLearn</a>&nbsp;|&nbsp;
+      <a href='https://developer.ibm.com/' target='_blank' rel='noopener'>IBMDeveloper</a>&nbsp;|&nbsp;
+      <a href='https://www.codewars.com/' target='_blank' rel='noopener'>CodeWars</a>&nbsp;|&nbsp;
+      <a href='https://ed-era.com/' target='_blank' rel='noopener'>Ed-Era</a>&nbsp;|&nbsp;
+      <a href='https://www.theodinproject.com/' target='_blank' rel='noopener'>TheOdinProject</a>&nbsp;|&nbsp;
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+      <a href='https://developer.mozilla.org/en-US/' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+      <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+      <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+      <br><br>
+      <a href='../index_de.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
