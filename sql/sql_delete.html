@@ -4,18 +4,46 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 <link rel='icon' href='../favicon.ico' type='image/x-icon'>
-<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="manifest" href="../manifest.json">
+<link rel='apple-touch-icon' sizes='180x180' href='../apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='../favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='../favicon-16x16.png'>
+<link rel='manifest' href='../manifest.json'>
 <link rel='stylesheet' href='../styles/w3.css'>
 <link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:title' content='Уроки від W3Schools українською онлайн'>
+<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
+<meta property='og:locale' content='uk'>
+<meta property='og:type' content='website'>
 <meta property='og:image' content='../images/w3schools_logo_436_2.png'>
 <meta property='og:image:type' content='image/png'>
 <meta property='og:image:width' content='436'>
 <meta property='og:image:height' content='228'>
-<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'><title>SQL Інструкція DELETE. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='SQL Інструкція DELETE. Синтаксис. Демо бази даних. Видалити всі записи. Приклади. Вправи. Основи програмування та веб-розробки. Безплатні курси онлайн для новачків, школярів та студентів'>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "W3SchoolsUA",
+        "url": "https://w3schoolsua.github.io/index.html",
+        "description": "W3Schools українською мовою. Основи програмування та веброзробки. Уроки для початківців",
+        "image": "https://w3schoolsua.github.io/images/logo_w3s.gif",
+        "keywords": ["Уроки", "W3Schools", "для початківців", "HTML", "CSS", "JavaScript", "PHP", "SQL", "Python", "Java"],
+        "author": {
+            "@type": "Person",
+            "name": "W3Schools Ukrainian",
+            "url": "https://w3schoolsua.github.io/blog/index.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "W3SchoolsUA",
+            "url": "https://w3schoolsua.github.io/"
+        },
+        "inLanguage": "uk-UA",
+        "sameAs": [
+            "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
+        ]
+    }
+</script><title>SQL Інструкція DELETE. Приклади. Уроки для початківців. W3Schools українською</title>
+<meta name='description' content='SQL Інструкція DELETE. Синтаксис. Демо бази даних. Видалити всі записи. Видалити таблицю. Перевірте себе за допомогою вправ. Приклади. Відеоурок.  Основи програмування та веброзробки. Уроки W3Schools для початківців'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -29,30 +57,29 @@
 <div class='w3-card-2 topnav notranslate' id='topnav'>
     <div style='overflow:auto;'>
         <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
-            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню'></a>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню' aria-label='Відкрити меню'></a>
             <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
             <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
             <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
             <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
             <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
-            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
             <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
             <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
             <a class='w3-bar-item w3-button' href='../kotlin/index.html' title='Kotlin Підручник'>KOTLIN</a>
             <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
             <a class='w3-bar-item w3-button' href='../c/index.html' title='C Підручник'>C</a>
             <a class='w3-bar-item w3-button' href='../cpp/index.html' title='C++ Підручник'>C++</a>
             <a class='w3-bar-item w3-button' href='../cs/index.html' title='C# Підручник'>C#</a>
-            <a class='w3-bar-item w3-button' href='../django/index.html' title='Django Підручник'>Django</a>
-            <a class='w3-bar-item w3-button' href='../howto/index.html' title='How To'>HOW TO</a>
-            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
             <a class='w3-bar-item w3-button' href='../ai/index.html' title='AI Підручник'>AI</a>
-            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
-            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті'>&#128269;</a>
-            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темний код'>&#9681;</a>
-            <a class='w3-bar-item w3-button w3-right' target='_blank' href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Скачати книги безкоштовно з Google-диску'>КНИГИ</a>
-            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
-            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../typescript/index.html' title='TypeScript Підручник'>TypeScript</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='Як зробити'>Як зробити?</a>
+            <a class='w3-bar-item w3-button w3-left' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники' aria-label='Перейти в розділ Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників' aria-label='Переглянути більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті' aria-label='Пошук по сайту'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темну тему' aria-label='Увімкнути темну тему'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи' aria-label='Перейти в розділ Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
         </div>
         <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
             <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
@@ -79,6 +106,7 @@
                         <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
                         <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
                         <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
                         <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
                         <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
                         <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
@@ -140,11 +168,12 @@
                     <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
                     <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
                     <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index.html'>Редактори коду / IDE</a>
                     <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
                     <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
                     <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
-                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow'>Перевірити швидкість друку</a>
-                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow'>Кодова гра</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Кодова гра</a>
                 </div>
                 <div class='w3-col l3 m6 w3-hide-medium'>
                     <h3>Аналітика даних</h3>
@@ -154,6 +183,7 @@
                     <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
                     <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
                     <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
                     <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
                     <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
                     <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
@@ -303,10 +333,10 @@
         </div>
     </div>
 </div>
-<!--/Top menu--><!--Left menu sidebar SQL-->
+<!--/Top menu--><!--Left menu-->
 <div class='w3-sidebar w3-collapse' id='sidenav'>
     <div id='leftmenuinner'>
-        <div class='w3-light-grey' id='leftmenuinnerinner'>
+        <div id='leftmenuinnerinner'>
             <h2 class='left'><span class='left_h2'>SQL</span> Підручник</h2>
             <a target='_top' href='index.html'>SQL СТАРТ</a>
             <a target='_top' href='sql_intro.html'>SQL Інтро</a>
@@ -347,30 +377,30 @@
             <a target='_top' href='sql_insert_into_select.html'>SQL INSERT INTO SELECT</a>
             <a target='_top' href='sql_case.html'>SQL CASE</a>
             <a target='_top' href='sql_isnull.html'>SQL NULL Функції</a>
-            <a target='_top' href='sql_stored_procedures.html'>SQL Зберігаючи процедури</a>
+            <a target='_top' href='sql_stored_procedures.html'>SQL Збережені процедури</a>
             <a target='_top' href='sql_comments.html'>SQL Коментарі</a>
             <a target='_top' href='sql_operators.html'>SQL Оператори</a>
             <br>
             <h2 class='left'><span class='left_h2'>SQL</span> База даних</h2>
-            <a target='_top' href='sql_create_db.html'>SQL Create DB</a>
-            <a target='_top' href='sql_drop_db.html'>SQL Drop DB</a>
-            <a target='_top' href='sql_backup_db.html'>SQL Backup DB</a>
-            <a target='_top' href='sql_create_table.html'>SQL Create Table</a>
-            <a target='_top' href='sql_drop_table.html'>SQL Drop Table</a>
-            <a target='_top' href='sql_alter.html'>SQL Alter Table</a>
+            <a target='_top' href='sql_create_db.html'>SQL CREATE DATABASE</a>
+            <a target='_top' href='sql_drop_db.html'>SQL DROP DATABASE</a>
+            <a target='_top' href='sql_backup_db.html'>SQL BACKUP DATABASE</a>
+            <a target='_top' href='sql_create_table.html'>SQL CREATE TABLE</a>
+            <a target='_top' href='sql_drop_table.html'>SQL DROP TABLE</a>
+            <a target='_top' href='sql_alter.html'>SQL ALTER TABLE</a>
             <a target='_top' href='sql_constraints.html'>SQL Constraints</a>
-            <a target='_top' href='sql_notnull.html'>SQL Not Null</a>
-            <a target='_top' href='sql_unique.html'>SQL Unique</a>
-            <a target='_top' href='sql_primarykey.html'>SQL Primary Key</a>
-            <a target='_top' href='sql_foreignkey.html'>SQL Foreign Key</a>
-            <a target='_top' href='sql_check.html'>SQL Check</a>
-            <a target='_top' href='sql_default.html'>SQL Default</a>
-            <a target='_top' href='sql_create_index.html'>SQL Index</a>
-            <a target='_top' href='sql_autoincrement.html'>SQL Auto Increment</a>
-            <a target='_top' href='sql_dates.html'>SQL Dates</a>
-            <a target='_top' href='sql_view.html'>SQL Views</a>
-            <a target='_top' href='sql_injection.html'>SQL Injection</a>
-            <a target='_top' href='sql_hosting.html'>SQL Hosting</a>
+            <a target='_top' href='sql_notnull.html'>SQL NOT NULL</a>
+            <a target='_top' href='sql_unique.html'>SQL UNIQUE</a>
+            <a target='_top' href='sql_primarykey.html'>SQL PRIMARY KEY</a>
+            <a target='_top' href='sql_foreignkey.html'>SQL FOREIGN KEY</a>
+            <a target='_top' href='sql_check.html'>SQL CHECK</a>
+            <a target='_top' href='sql_default.html'>SQL DEFAULT</a>
+            <a target='_top' href='sql_create_index.html'>SQL CREATE INDEX</a>
+            <a target='_top' href='sql_autoincrement.html'>SQL AUTO INCREMENT</a>
+            <a target='_top' href='sql_dates.html'>SQL Дати</a>
+            <a target='_top' href='sql_view.html'>SQL CREATE VIEW</a>
+            <a target='_top' href='sql_injection.html'>SQL Ін'єкція</a>
+            <a target='_top' href='sql_hosting.html'>SQL Хостинг</a>
             <a target='_top' href='sql_datatypes.html'>SQL Типи даних</a>
             <br>
             <h2 class='left'><span class='left_h2'>SQL</span> Довідники</h2>
@@ -601,7 +631,7 @@
                 <a target='_top' href='func_mysql_user.html'>USER</a>
                 <a target='_top' href='func_mysql_version.html'>VERSION</a>
             </div>
-            <a target='_top' href='sql_ref_sqlserver.html'>SQL Серверні функції</a>
+            <a target='_top' href='sql_ref_sqlserver.html'>SQL Server функції</a>
             <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
                 <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:2px;font-style:italic;'>Рядкові функції</span>
                 <a href='func_sqlserver_ascii.html'>ASCII</a>
@@ -777,7 +807,7 @@
         </div>
     </div>
 </div>
-<!--/Left menu sidebar --><!--CONTENT SQL-->
+<!--/Left menu--><!--CONTENT SQL-->
 <div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
     <div class='w3-row w3-white'>
         <div class='w3-col l10 m12' id='main'>
@@ -788,7 +818,10 @@
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index.html'><img src='../svg/sql_icon1.svg' alt='SQL. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='SQL для початківців. W3Schools українською' style='width:100px'></a>
 <p class='w3-right'>
-    <a href="sql_delete_en.html" title='Перейти на англійську мову'>En</a>
+    <a href='sql_delete_en.html' title='Перейти на англійську мову'>En</a>
+    <a href='sql_delete_es.html' title='Перейти на іспанську мову'>Es</a>
+    <a href='sql_delete_de.html' title='Перейти на німецьку мову'>De</a>
+    <a href='sql_delete_fr.html' title='Перейти на французьку мову'>Fr</a>
 </p>
 <article>
     <h1>SQL <span class="color_h1">Інструкція</span> DELETE</h1>
@@ -809,7 +842,11 @@
         <p><b>Примітка:</b> Будьте обережні при видаленні записів у таблиці! Зверніть увагу на пропозицію <code class="w3-codespan">WHERE</code> в інструкції <code class="w3-codespan">DELETE</code>. Пропозиція <code class="w3-codespan">WHERE</code> визначає, які записи потрібно видалити. Якщо пропустити пропозицію <code class="w3-codespan">WHERE</code>, усі записи в таблиці буде видалено!</p>
     </div>
     <hr>
-    <h2>Демо бази даних</h2>
+    <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Демо бази даних</h2>
     <p>Нижче наведено вибірку з таблиці &quot;Customers&quot; зразка бази даних Northwind:</p>
     <div class="w3-responsive">
         <table class="ws-table-all notranslate">
@@ -870,11 +907,7 @@
         </table>
     </div>
     <hr>
-    <div class="adver_adinfeed">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>SQL DELETE Приклад</h2>
+    <h2>SQL DELETE Приклад</h2>
     <p>Наступна SQL інструкція видаляє клієнта &quot;Alfreds Futterkiste&quot; із таблиці &quot;Customers&quot;:</p>
     <div class="w3-example">
         <h3>Приклад</h3>
@@ -934,7 +967,11 @@
         </table>
     </div>
     <hr>
-    <h2>Видалити всі записи</h2>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Видалити всі записи</h2>
     <p>Можна видалити всі рядки в таблиці, не видаляючи таблицю. Це означає, що структура таблиці, атрибути та індекси залишаться незмінними:</p>
     <div class="w3-example">
         <div class="w3-code notranslate sqlHigh">
@@ -950,15 +987,25 @@
         <a target="_blank" href="../sqltryit/trysql_delete_all.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
     </div>
     <hr>
+    <h2>Видалити таблицю</h2>
+    <p>Щоб повністю видалити таблицю, скористайтеся інструкцією <code class="w3-codespan">DROP TABLE</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>Видалення таблиці Customers:</p>
+        <div class="w3-code notranslate sqlHigh">
+            DROP TABLE Customers;
+        </div>
+    </div>
+    <hr>
     <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_delete1" method="post" target="_blank">
-        <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
+        <h2 title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
         <div class="exercisewindow">
             <h2>Вправа:</h2>
             <p>Видаліть всі записи із таблиці <code class="w3-codespan">Customers</code>, де значення <code class="w3-codespan">Country</code> є 'Norway'.</p>
             <div class="exerciseprecontainer">
 <pre>
-<input name="ex1" maxlength="11" style="width: 117px;"> Customers
-<input name="ex2" maxlength="5" style="width: 54px;"> Country = 'Norway';
+<input name="ex1" aria-label='Приклад' maxlength="11" style="width: 117px;"> Customers
+<input name="ex2" aria-label='Приклад' maxlength="5" style="width: 54px;"> Country = 'Norway';
 </pre>
             </div>
             <br>
@@ -980,12 +1027,8 @@
 </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
-    <div class='sidesection w3-light-gray' style='padding-bottom: 5px'>
-        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
-        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
-    </div>
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
-        <div class='w3-container w3-blue-grey'>
+        <div class='w3-container w3-blue-grey w3-border'>
             <h5 class="shadow-black-1" title="Онлайн-підручники на сайті">НА СЕРВЕРІ</h5>
         </div>
         <div class='w3-border'>
@@ -1002,17 +1045,28 @@
             <a href='../aws/index.html' class='btn-rightbar'>AWS Cloud</a>
         </div>
     </div>
-    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px;background:#eee'>Місце для вашої реклами!</div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
 <div class="adver2">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- admedia_vertical_rightbar -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <div class="adver3">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- admedia_vertical_rightbar2 -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div></div>
 <!--/Right sidebar-->
@@ -1021,20 +1075,20 @@
   <hr>
   <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
     </div>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ДРУК СТОРІНКИ</a>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style="text-decoration:none">ДРУК СТОРІНКИ</a>
     </div>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='../blog/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>БЛОГ</a>
+      <a class='btn-footer' href='../blog/index.html' target='_top' style="text-decoration:none">БЛОГ</a>
     </div>
     <div class='w3-col l3 m3 s12'>
-      <a class='w3-button w3-light-grey w3-block' href='../about/index.html' target='_top' style='text-decoration:none;margin-top:1px;margin-bottom:1px'>ПРО САЙТ</a>
+      <a class='btn-footer' href='../about/index.html' target='_top' style="text-decoration:none">ПРО САЙТ</a>
     </div>
   </div>
   <hr>
-  <div class='w3-padding w3-margin-bottom' id='err_form' style='display:none;position:relative;background-color: #DDE7EA;'>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
     <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
       <h2>Зв&rsquo;язок з адміном</h2>
       <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
@@ -1050,15 +1104,17 @@
         <a href='../sql/index.html'>SQL Підручник</a><br>
         <a href='../python/index.html'>Python Підручник</a><br>
         <a href='../php/index.html'>PHP Підручник</a><br>
-        <a href='../bootstrap/bootstrap_ver.html'>Bootstrap Підручник</a><br>
         <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
         <a href='../appml/index.html'>AppML Підручник</a><br>
         <a href='../jquery/index.html'>jQuery Підручник</a><br>
         <a href='../angular/index.html'>Angular Підручник</a><br>
         <a href='../sass/index.html'>Sass Підручник</a><br>
         <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../kotlin/index.html'>Kotlin Підручник</a><br>
+        <a href='../c/index.html'>C Підручник</a><br>
         <a href='../cpp/index.html'>C++ Підручник</a><br>
         <a href='../cs/index.html'>C# Підручник</a><br>
+        <a href='../chatgpt-3-5/index.html'>ChatGPT-3.5 Підручник</a><br>
       </div>
     </div>
     <div class='w3-col l3 m6 s12'>
@@ -1079,6 +1135,8 @@
         <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
         <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
         <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+        <a href='../icons/icons_reference.html'>Іконки Довідник</a><br>
+        <a href='../graphics/svg_reference.html'>SVG Довідник</a><br>
       </div>
     </div>
     <div class='w3-col l3 m6 s12'>
@@ -1095,6 +1153,8 @@
         <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
         <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
         <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../kotlin/kotlin_examples.html'>Kotlin Приклади</a><br>
+        <a href='../c/c_examples.html'>C Приклади</a><br>
         <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
         <a href='../cs/cs_examples.html'>C# Приклади</a><br>
         <a href='../xml/xml_examples.html'>XML Приклади</a><br>
@@ -1103,7 +1163,7 @@
     </div>
     <div class='w3-col l3 m6 s12'>
       <div class='top10'>
-        <h4><a href='../cert/index.html'>Веб-Сертифікати</a></h4>
+        <h4><a href='../cert/index.html'>Вебсертифікати</a></h4>
         <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
         <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
         <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
@@ -1114,6 +1174,9 @@
         <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
         <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
         <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_c.html'>C Сертифікат</a><br>
+        <a href='../cert/cert_cpp.html'>C++ Сертифікат</a><br>
+        <a href='../cert/cert_cs.html'>C# Сертифікат</a><br>
         <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
         <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
         <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
@@ -1122,11 +1185,37 @@
     </div>
   </div>
   <hr>
-  <div class='w3-center w3-small w3-opacity'>Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали і прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
-    Також доступна версія сайту <a href='../index_en.html' title='W3Schools англійською'><strong>W3Schools англійською</strong></a> мовою.<br>
-    <a href='../about/about_copyright.html'>Copyright 1999-2024</a> by Refsnes Data. All Rights Reserved.<br>
-    <a href='../w3css/index.html'>Сайт створений і працює на фреймворку W3.CSS</a>.<br><br>
-    <a href='../index.html'><img style='width:110px;height:28px;border:0' src='../images/w3schoolscom_gray.gif' alt='W3Schools'></a>
+  <div class='w3-center w3-small w3-opacity'>Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали й прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступні версії сайту іншими мовами:
+    <a href='../index_en.html' title='W3Schools англійською'><strong>англійською</strong></a>,
+    <a href='../index_es.html' title='W3Schools іспанською'><strong>іспанською</strong></a>,
+    <a href='../index_de.html' title='W3Schools німецькою'><strong>німецькою</strong></a>,
+    <a href='../index_fr.html' title='W3Schools французькою'><strong>французькою</strong></a>.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2025</a> by Refsnes Data. All Rights Reserved.
+    Сайт створений і працює на фреймворку <a href='../w3css/index.html'>W3.CSS</a>.<br>
+    Ви можете використовувати інші авторитетні ресурси для навчання веброзробці та програмуванню:<br>
+      <a href='https://www.udemy.com/' target='_blank' rel='noopener'>Udemy</a>&nbsp;|&nbsp;
+      <a href='https://www.codecademy.com/' target='_blank' rel='noopener'>Codecademy</a>&nbsp;|&nbsp;
+      <a href='https://www.coursera.org/' target='_blank' rel='noopener'>Coursera</a>&nbsp;|&nbsp;
+      <a href='https://www.edx.org/' target='_blank' rel='noopener'>edX</a>&nbsp;|&nbsp;
+      <a href='https://www.khanacademy.org/' target='_blank' rel='noopener'>Khan Academy</a>&nbsp;|&nbsp;
+      <a href='https://www.skillshare.com/' target='_blank' rel='noopener'>Skillshare</a>&nbsp;|&nbsp;
+      <a href='https://www.freecodecamp.org/' target='_blank' rel='noopener'>FreeCodeCamp</a>&nbsp;|&nbsp;
+      <a href='https://learn.microsoft.com/uk-ua/' target='_blank' rel='noopener'>MicrosoftLearn</a>&nbsp;|&nbsp;
+      <a href='https://hyperskill.org/' target='_blank' rel='noopener'>HyperSkill</a>&nbsp;|&nbsp;
+      <a href='https://www.udacity.com/' target='_blank' rel='noopener'>Udacity</a>&nbsp;|&nbsp;
+      <a href='https://code.org/' target='_blank' rel='noopener'>Code.org</a>&nbsp;|&nbsp;
+      <a href='https://www.sololearn.com/' target='_blank' rel='noopener'>SoloLearn</a>&nbsp;|&nbsp;
+      <a href='https://developer.ibm.com/' target='_blank' rel='noopener'>IBMDeveloper</a>&nbsp;|&nbsp;
+      <a href='https://www.codewars.com/' target='_blank' rel='noopener'>CodeWars</a>&nbsp;|&nbsp;
+      <a href='https://prometheus.org.ua/' target='_blank' rel='noopener'>Prometheus</a>&nbsp;|&nbsp;
+      <a href='https://ed-era.com/' target='_blank' rel='noopener'>Ed-Era</a>&nbsp;|&nbsp;
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+      <a href='https://developer.mozilla.org/en-US/?retiredLocale=uk' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+      <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+      <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+    <br><br>
+    <a href='../index.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
   </div>
     <br><br>
     <div class="adver_adfooter">
