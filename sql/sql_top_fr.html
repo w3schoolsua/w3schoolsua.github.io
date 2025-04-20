@@ -841,7 +841,7 @@
             <a target="_blank" href="../sqltryit/trysql_select_top.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-panel ws-note">
-            <p><b>Note:</b> Not all database systems support the <code class="w3-codespan">SELECT TOP</code> clause. MySQL supports the <code class="w3-codespan">LIMIT</code> clause to select a limited number of records, while Oracle uses <code class="w3-codespan">FETCH FIRST <em>n</em> ROWS ONLY</code> and <code class="w3-codespan">ROWNUM</code>.</p>
+            <p><b>Note:</b> Tous les systèmes de bases de données ne prennent pas en charge la clause <code class="w3-codespan">SELECT TOP</code>. MySQL prend en charge la clause <code class="w3-codespan">LIMIT</code> pour sélectionner un nombre limité d'enregistrements, tandis qu'Oracle l'utilise <code class="w3-codespan">FETCH FIRST <em>n</em> ROWS ONLY</code> et <code class="w3-codespan">ROWNUM</code>.</p>
         </div>
         <p><strong>SQL Server / MS Access Syntax:</strong></p>
         <div class="w3-example ws-light-grey">
@@ -858,11 +858,11 @@
                     SELECT <em>column_name(s)</em><br>FROM <em>table_name<br></em>ORDER BY <em>column_name(s)</em><br>FETCH FIRST <em>number</em> ROWS ONLY;
                 </code></p>
         </div>
-        <p><strong>Older Oracle Syntax:</strong></p>
+        <p><strong>Ancienne syntaxe Oracle :</strong></p>
         <div class="w3-example ws-light-grey">
             <p><code class="sqlHigh">SELECT <em>column_name(s)</em><br>FROM <em>table_name</em><br>WHERE ROWNUM &lt;= <em>number</em>;</code></p>
         </div>
-        <p><strong>Older Oracle Syntax (with ORDER BY):</strong></p>
+        <p><strong>Ancienne syntaxe Oracle (avec ORDER BY) :</strong></p>
         <div class="w3-example ws-light-grey">
             <p><code class="sqlHigh">
                     SELECT *<br>FROM (SELECT <em>column_name(s) </em>FROM <em>table_name</em>
@@ -874,8 +874,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Demo Database</h2>
-        <p>Below is a selection from the <a href="../sqltryit/trysql_customers.html" target="_blank"><strong>Customers</strong></a> table used in the examples:</p>
+</div>        <h2>Base de données de démonstration</h2>
+        <p>Vous trouverez ci-dessous une sélection de la table <a href="../sqltryit/trysql_customers.html" target="_blank"><strong>Customers</strong></a> utilisée dans les exemples :</p>
         <div class="w3-responsive">
             <table class="ws-table-all notranslate">
                 <tr>
@@ -936,10 +936,10 @@
         </div>
         <hr>
         <h2>LIMIT</h2>
-        <p>The following SQL statement shows the equivalent example for MySQL:</p>
+        <p>L'instruction SQL suivante montre l'exemple équivalent pour MySQL :</p>
         <div class="w3-example">
             <h3>Exemple</h3>
-            <p>Select the first 3 records of the Customers table:</p>
+            <p>Sélectionnez les 3 premiers enregistrements de la table Customers :</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>LIMIT 3;
             </div>
@@ -951,17 +951,17 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>        <h2>FETCH FIRST</h2>
-        <p>The following SQL statement shows the equivalent example for Oracle:</p>
+        <p>L'instruction SQL suivante montre l'exemple équivalent pour Oracle :</p>
         <div class="w3-example">
             <h3>Exemple</h3>
-            <p>Select the first 3 records of the Customers table:</p>
+            <p>Sélectionnez les 3 premiers enregistrements de la table Customers :</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>FETCH FIRST 3 ROWS ONLY;
             </div>
         </div>
         <hr>
         <h2>SQL TOP PERCENT Exemple</h2>
-        <p>The following SQL statement selects the first 50% of the records from the "Customers" table (for SQL Server/MS Access):</p>
+        <p>L'instruction SQL suivante sélectionne les 50 % premiers enregistrements de la table « Customers » (pour SQL Server/MS Access) :</p>
         <div class="w3-example">
             <h3>Exemple</h3>
             <div class="w3-code notranslate sqlHigh">
@@ -969,7 +969,7 @@
             </div>
             <a target="_blank" href="../sqltryit/trysql_select_top_percent.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-        <p>The following SQL statement shows the equivalent example for Oracle:</p>
+        <p>L'instruction SQL suivante montre l'exemple équivalent pour Oracle :</p>
         <div class="w3-example">
             <h3>Exemple</h3>
             <div class="w3-code notranslate sqlHigh">
@@ -977,8 +977,8 @@
             </div>
         </div>
         <hr>
-        <h2>ADD a WHERE CLAUSE</h2>
-        <p>The following SQL statement selects the first three records from the "Customers" table, where the country is "Germany" (for SQL Server/MS Access):</p>
+        <h2>AJOUTER UNE CLAUSE WHERE</h2>
+        <p>L'instruction SQL suivante sélectionne les trois premiers enregistrements de la table "Customers", où le pays est "Germany" (pour SQL Server/MS Access) :</p>
         <div class="w3-example">
             <h3>Exemple</h3>
             <div class="w3-code notranslate sqlHigh">
@@ -986,7 +986,7 @@
             </div>
             <a target="_blank" href="../sqltryit/trysql_select_top_where.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-        <p>The following SQL statement shows the equivalent example for MySQL:</p>
+        <p>L'instruction SQL suivante montre l'exemple équivalent pour MySQL :</p>
         <div class="w3-example">
             <h3>Exemple</h3>
             <div class="w3-code notranslate sqlHigh">
@@ -994,7 +994,7 @@
             </div>
             <a target="_blank" href="../sqltryit/trysql_select_limit_where.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-        <p>The following SQL statement shows the equivalent example for Oracle:</p>
+        <p>L'instruction SQL suivante montre l'exemple équivalent pour Oracle :</p>
         <div class="w3-example">
             <h3>Exemple</h3>
             <div class="w3-code notranslate sqlHigh">
@@ -1006,18 +1006,18 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>ADD the ORDER BY Keyword</h2>
-        <p>Add the <code class="w3-codespan">ORDER BY</code> keyword when you want to sort the result, and return the first 3 records of the sorted result.</p>
-        <p>For SQL Server and MS Access:</p>
+</div>        <h2>AJOUTER le mot-clé ORDER BY</h2>
+        <p>Ajoutez le mot-clé <code class="w3-codespan">ORDER BY</code> lorsque vous souhaitez trier le résultat et renvoyer les 3 premiers enregistrements du résultat trié.</p>
+        <p>Pour SQL Server et MS Access :</p>
         <div class="w3-example">
             <h3>Exemple</h3>
-            <p>Sort the result reverse alphabetically by CustomerName, and return the first 3 records:</p>
+            <p>Triez le résultat par ordre alphabétique inverse par CustomerName et renvoyez les 3 premiers enregistrements :</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT TOP 3 * FROM Customers<br>ORDER BY CustomerName DESC;
             </div>
             <a target="_blank" href="../sqltryit/trysql_select_top_orderby.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-        <p>The following SQL statement shows the equivalent example for MySQL:</p>
+        <p>L'instruction SQL suivante montre l'exemple équivalent pour MySQL :</p>
         <div class="w3-example">
             <h3>Exemple</h3>
             <div class="w3-code notranslate sqlHigh">
@@ -1025,7 +1025,7 @@
             </div>
             <a target="_blank" href="../sqltryit/trysql_select_limit_orderby.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-        <p>The following SQL statement shows the equivalent example for Oracle:</p>
+        <p>L'instruction SQL suivante montre l'exemple équivalent pour Oracle :</p>
         <div class="w3-example">
             <h3>Exemple</h3>
             <div class="w3-code notranslate sqlHigh">
