@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='apple-touch-icon' sizes='180x180' href='../apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='../favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='../favicon-16x16.png'>
+<link rel='manifest' href='../manifest.json'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:title' content='Уроки від W3Schools українською онлайн'>
+<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
+<meta property='og:locale' content='uk'>
+<meta property='og:type' content='website'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "W3SchoolsUA",
+        "url": "https://w3schoolsua.github.io/index.html",
+        "description": "W3Schools українською мовою. Основи програмування та веброзробки. Уроки для початківців",
+        "image": "https://w3schoolsua.github.io/images/logo_w3s.gif",
+        "keywords": ["Уроки", "W3Schools", "для початківців", "HTML", "CSS", "JavaScript", "PHP", "SQL", "Python", "Java"],
+        "author": {
+            "@type": "Person",
+            "name": "W3Schools Ukrainian",
+            "url": "https://w3schoolsua.github.io/blog/index.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "W3SchoolsUA",
+            "url": "https://w3schoolsua.github.io/"
+        },
+        "inLanguage": "uk-UA",
+        "sameAs": [
+            "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
+        ]
+    }
+</script>    <title>SQL Агрегатні функції. Приклади. Уроки для початківців. W3Schools українською</title>
+    <meta name='description' content='SQL Агрегатна функція – це функція, яка виконує обчислення набору значень і повертає одне значення. Приклади. Вправи. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню' aria-label='Відкрити меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index.html' title='Kotlin Підручник'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index.html' title='C Підручник'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index.html' title='C++ Підручник'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index.html' title='C# Підручник'>C#</a>
+            <a class='w3-bar-item w3-button' href='../ai/index.html' title='AI Підручник'>AI</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../typescript/index.html' title='TypeScript Підручник'>TypeScript</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='Як зробити'>Як зробити?</a>
+            <a class='w3-bar-item w3-button w3-left' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники' aria-label='Перейти в розділ Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників' aria-label='Переглянути більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті' aria-label='Пошук по сайту'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темну тему' aria-label='Увімкнути темну тему'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи' aria-label='Перейти в розділ Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index.html'>Вивчити PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index.html'>Редактори коду / IDE</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class='left'><span class='left_h2'>SQL</span> Підручник</h2>
+            <a target='_top' href='index.html'>SQL СТАРТ</a>
+            <a target='_top' href='sql_intro.html'>SQL Інтро</a>
+            <a target='_top' href='sql_syntax.html'>SQL Синтаксис</a>
+            <a target='_top' href='sql_select.html'>SQL SELECT</a>
+            <a target='_top' href='sql_distinct.html'>SQL SELECT DISTINCT</a>
+            <a target='_top' href='sql_where.html'>SQL WHERE</a>
+            <a target='_top' href='sql_orderby.html'>SQL ORDER BY</a>
+            <a target='_top' href='sql_and.html'>SQL AND</a>
+            <a target='_top' href='sql_or.html'>SQL OR</a>
+            <a target='_top' href='sql_not.html'>SQL NOT</a>
+            <a target='_top' href='sql_insert.html'>SQL INSERT INTO</a>
+            <a target='_top' href='sql_null_values.html'>SQL NULL</a>
+            <a target='_top' href='sql_update.html'>SQL UPDATE</a>
+            <a target='_top' href='sql_delete.html'>SQL DELETE</a>
+            <a target='_top' href='sql_top.html'>SQL SELECT TOP</a>
+            <a target='_top' href='sql_aggregate_functions.html'>SQL Агрегатні функції</a>
+            <a target='_top' href='sql_min_max.html'>SQL MIN() та MAX()</a>
+            <a target='_top' href='sql_count.html'>SQL COUNT()</a>
+            <a target='_top' href='sql_sum.html'>SQL SUM()</a>
+            <a target='_top' href='sql_avg.html'>SQL AVG()</a>
+            <a target='_top' href='sql_like.html'>SQL LIKE</a>
+            <a target='_top' href='sql_wildcards.html'>SQL Підстановочні символи</a>
+            <a target='_top' href='sql_in.html'>SQL IN</a>
+            <a target='_top' href='sql_between.html'>SQL BETWEEN</a>
+            <a target='_top' href='sql_alias.html'>SQL Псевдоніми</a>
+            <a target='_top' href='sql_join.html'>SQL JOIN</a>
+            <a target='_top' href='sql_join_inner.html'>SQL INNER JOIN</a>
+            <a target='_top' href='sql_join_left.html'>SQL LEFT JOIN</a>
+            <a target='_top' href='sql_join_right.html'>SQL RIGHT JOIN</a>
+            <a target='_top' href='sql_join_full.html'>SQL FULL OUTER JOIN</a>
+            <a target='_top' href='sql_join_self.html'>SQL Self JOIN</a>
+            <a target='_top' href='sql_union.html'>SQL UNION</a>
+            <a target='_top' href='sql_groupby.html'>SQL GROUP BY</a>
+            <a target='_top' href='sql_having.html'>SQL HAVING</a>
+            <a target='_top' href='sql_exists.html'>SQL EXISTS</a>
+            <a target='_top' href='sql_any_all.html'>SQL ANY, ALL</a>
+            <a target='_top' href='sql_select_into.html'>SQL SELECT INTO</a>
+            <a target='_top' href='sql_insert_into_select.html'>SQL INSERT INTO SELECT</a>
+            <a target='_top' href='sql_case.html'>SQL CASE</a>
+            <a target='_top' href='sql_isnull.html'>SQL NULL Функції</a>
+            <a target='_top' href='sql_stored_procedures.html'>SQL Збережені процедури</a>
+            <a target='_top' href='sql_comments.html'>SQL Коментарі</a>
+            <a target='_top' href='sql_operators.html'>SQL Оператори</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>SQL</span> База даних</h2>
+            <a target='_top' href='sql_create_db.html'>SQL CREATE DATABASE</a>
+            <a target='_top' href='sql_drop_db.html'>SQL DROP DATABASE</a>
+            <a target='_top' href='sql_backup_db.html'>SQL BACKUP DATABASE</a>
+            <a target='_top' href='sql_create_table.html'>SQL CREATE TABLE</a>
+            <a target='_top' href='sql_drop_table.html'>SQL DROP TABLE</a>
+            <a target='_top' href='sql_alter.html'>SQL ALTER TABLE</a>
+            <a target='_top' href='sql_constraints.html'>SQL Constraints</a>
+            <a target='_top' href='sql_notnull.html'>SQL NOT NULL</a>
+            <a target='_top' href='sql_unique.html'>SQL UNIQUE</a>
+            <a target='_top' href='sql_primarykey.html'>SQL PRIMARY KEY</a>
+            <a target='_top' href='sql_foreignkey.html'>SQL FOREIGN KEY</a>
+            <a target='_top' href='sql_check.html'>SQL CHECK</a>
+            <a target='_top' href='sql_default.html'>SQL DEFAULT</a>
+            <a target='_top' href='sql_create_index.html'>SQL CREATE INDEX</a>
+            <a target='_top' href='sql_autoincrement.html'>SQL AUTO INCREMENT</a>
+            <a target='_top' href='sql_dates.html'>SQL Дати</a>
+            <a target='_top' href='sql_view.html'>SQL CREATE VIEW</a>
+            <a target='_top' href='sql_injection.html'>SQL Ін'єкція</a>
+            <a target='_top' href='sql_hosting.html'>SQL Хостинг</a>
+            <a target='_top' href='sql_datatypes.html'>SQL Типи даних</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>SQL</span> Довідники</h2>
+            <a target='_top' href='sql_ref_keywords.html'>SQL Ключові слова</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <a target='_top' href='sql_ref_add.html'>ADD</a>
+                <a target='_top' href='sql_ref_add_constraint.html'>ADD CONSTRAINT</a>
+                <a target='_top' href='sql_ref_alter.html'>ALTER</a>
+                <a target='_top' href='sql_ref_alter_column.html'>ALTER COLUMN</a>
+                <a target='_top' href='sql_ref_alter_table.html'>ALTER TABLE</a>
+                <a target='_top' href='sql_ref_all.html'>ALL</a>
+                <a target='_top' href='sql_ref_and.html'>AND</a>
+                <a target='_top' href='sql_ref_any.html'>ANY</a>
+                <a target='_top' href='sql_ref_as.html'>AS</a>
+                <a target='_top' href='sql_ref_asc.html'>ASC</a>
+                <a target='_top' href='sql_ref_backup_database.html'>BACKUP DATABASE</a>
+                <a target='_top' href='sql_ref_between.html'>BETWEEN</a>
+                <a target='_top' href='sql_ref_case.html'>CASE</a>
+                <a target='_top' href='sql_ref_check.html'>CHECK</a>
+                <a target='_top' href='sql_ref_column.html'>COLUMN</a>
+                <a target='_top' href='sql_ref_constraint.html'>CONSTRAINT</a>
+                <a target='_top' href='sql_ref_create.html'>CREATE</a>
+                <a target='_top' href='sql_ref_create_database.html'>CREATE DATABASE</a>
+                <a target='_top' href='sql_ref_create_index.html'>CREATE INDEX</a>
+                <a target='_top' href='sql_ref_create_or_replace_view.html'>CREATE OR REPLACE VIEW</a>
+                <a target='_top' href='sql_ref_create_table.html'>CREATE TABLE</a>
+                <a target='_top' href='sql_ref_create_procedure.html'>CREATE PROCEDURE</a>
+                <a target='_top' href='sql_ref_create_unique_index.html'>CREATE UNIQUE INDEX</a>
+                <a target='_top' href='sql_ref_create_view.html'>CREATE VIEW</a>
+                <a target='_top' href='sql_ref_database.html'>DATABASE</a>
+                <a target='_top' href='sql_ref_default.html'>DEFAULT</a>
+                <a target='_top' href='sql_ref_delete.html'>DELETE</a>
+                <a target='_top' href='sql_ref_desc.html'>DESC</a>
+                <a target='_top' href='sql_ref_select_distinct.html'>DISTINCT</a>
+                <a target='_top' href='sql_ref_drop.html'>DROP</a>
+                <a target='_top' href='sql_ref_drop_column.html'>DROP COLUMN</a>
+                <a target='_top' href='sql_ref_drop_constraint.html'>DROP CONSTRAINT</a>
+                <a target='_top' href='sql_ref_drop_database.html'>DROP DATABASE</a>
+                <a target='_top' href='sql_ref_drop_default.html'>DROP DEFAULT</a>
+                <a target='_top' href='sql_ref_drop_index.html'>DROP INDEX</a>
+                <a target='_top' href='sql_ref_drop_table.html'>DROP TABLE</a>
+                <a target='_top' href='sql_ref_drop_view.html'>DROP VIEW</a>
+                <a target='_top' href='sql_ref_exec.html'>EXEC</a>
+                <a target='_top' href='sql_ref_exists.html'>EXISTS</a>
+                <a target='_top' href='sql_ref_foreign_key.html'>FOREIGN KEY</a>
+                <a target='_top' href='sql_ref_from.html'>FROM</a>
+                <a target='_top' href='sql_ref_full_outer_join.html'>FULL OUTER JOIN</a>
+                <a target='_top' href='sql_ref_group_by.html'>GROUP BY</a>
+                <a target='_top' href='sql_ref_having.html'>HAVING</a>
+                <a target='_top' href='sql_ref_in.html'>IN</a>
+                <a target='_top' href='sql_ref_index.html'>INDEX</a>
+                <a target='_top' href='sql_ref_inner_join.html'>INNER JOIN</a>
+                <a target='_top' href='sql_ref_insert_into.html'>INSERT INTO</a>
+                <a target='_top' href='sql_ref_insert_into_select.html'>INSERT INTO SELECT</a>
+                <a target='_top' href='sql_ref_is_null.html'>IS NULL</a>
+                <a target='_top' href='sql_ref_is_not_null.html'>IS NOT NULL</a>
+                <a target='_top' href='sql_ref_join.html'>JOIN</a>
+                <a target='_top' href='sql_ref_left_join.html'>LEFT JOIN</a>
+                <a target='_top' href='sql_ref_like.html'>LIKE</a>
+                <a target='_top' href='sql_ref_top.html'>LIMIT</a>
+                <a target='_top' href='sql_ref_not.html'>NOT</a>
+                <a target='_top' href='sql_ref_not_null.html'>NOT NULL</a>
+                <a target='_top' href='sql_ref_or.html'>OR</a>
+                <a target='_top' href='sql_ref_order_by.html'>ORDER BY</a>
+                <a target='_top' href='sql_ref_full_outer_join.html'>OUTER JOIN</a>
+                <a target='_top' href='sql_ref_primary_key.html'>PRIMARY KEY</a>
+                <a target='_top' href='sql_ref_create_procedure.html'>PROCEDURE</a>
+                <a target='_top' href='sql_ref_right_join.html'>RIGHT JOIN</a>
+                <a target='_top' href='sql_ref_top.html'>ROWNUM</a>
+                <a target='_top' href='sql_ref_select.html'>SELECT</a>
+                <a target='_top' href='sql_ref_select_distinct.html'>SELECT DISTINCT</a>
+                <a target='_top' href='sql_ref_select_into.html'>SELECT INTO</a>
+                <a target='_top' href='sql_ref_top.html'>SELECT TOP</a>
+                <a target='_top' href='sql_ref_set.html'>SET</a>
+                <a target='_top' href='sql_ref_table.html'>TABLE</a>
+                <a target='_top' href='sql_ref_top.html'>TOP</a>
+                <a target='_top' href='sql_ref_drop_table.html'>TRUNCATE TABLE</a>
+                <a target='_top' href='sql_ref_union.html'>UNION</a>
+                <a target='_top' href='sql_ref_union.html'>UNION ALL</a>
+                <a target='_top' href='sql_ref_unique.html'>UNIQUE</a>
+                <a target='_top' href='sql_ref_update.html'>UPDATE</a>
+                <a target='_top' href='sql_ref_values.html'>VALUES</a>
+                <a target='_top' href='sql_ref_view.html'>VIEW</a>
+                <a target='_top' href='sql_ref_where.html'>WHERE</a>
+            </div>
+            <a target='_top' href='sql_ref_mysql.html'>MySQL Функції</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:2px;font-style:italic;'>Рядкові функції</span>
+                <a target='_top' href='func_mysql_ascii.html'>ASCII</a>
+                <a target='_top' href='func_mysql_char_length.html'>CHAR_LENGTH</a>
+                <a target='_top' href='func_mysql_character_length.html'>CHARACTER_LENGTH</a>
+                <a target='_top' href='func_mysql_concat.html'>CONCAT</a>
+                <a target='_top' href='func_mysql_concat_ws.html'>CONCAT_WS</a>
+                <a target='_top' href='func_mysql_field.html'>FIELD</a>
+                <a target='_top' href='func_mysql_find_in_set.html'>FIND_IN_SET</a>
+                <a target='_top' href='func_mysql_format.html'>FORMAT</a>
+                <a target='_top' href='func_mysql_insert.html'>INSERT</a>
+                <a target='_top' href='func_mysql_instr.html'>INSTR</a>
+                <a target='_top' href='func_mysql_lcase.html'>LCASE</a>
+                <a target='_top' href='func_mysql_left.html'>LEFT</a>
+                <a target='_top' href='func_mysql_length.html'>LENGTH</a>
+                <a target='_top' href='func_mysql_locate.html'>LOCATE</a>
+                <a target='_top' href='func_mysql_lower.html'>LOWER</a>
+                <a target='_top' href='func_mysql_lpad.html'>LPAD</a>
+                <a target='_top' href='func_mysql_ltrim.html'>LTRIM</a>
+                <a target='_top' href='func_mysql_mid.html'>MID</a>
+                <a target='_top' href='func_mysql_position.html'>POSITION</a>
+                <a target='_top' href='func_mysql_repeat.html'>REPEAT</a>
+                <a target='_top' href='func_mysql_replace.html'>REPLACE</a>
+                <a target='_top' href='func_mysql_reverse.html'>REVERSE</a>
+                <a target='_top' href='func_mysql_right.html'>RIGHT</a>
+                <a target='_top' href='func_mysql_rpad.html'>RPAD</a>
+                <a target='_top' href='func_mysql_rtrim.html'>RTRIM</a>
+                <a target='_top' href='func_mysql_space.html'>SPACE</a>
+                <a target='_top' href='func_mysql_strcmp.html'>STRCMP</a>
+                <a target='_top' href='func_mysql_substr.html'>SUBSTR</a>
+                <a target='_top' href='func_mysql_substring.html'>SUBSTRING</a>
+                <a target='_top' href='func_mysql_substring_index.html'>SUBSTRING_INDEX</a>
+                <a target='_top' href='func_mysql_trim.html'>TRIM</a>
+                <a target='_top' href='func_mysql_ucase.html'>UCASE</a>
+                <a target='_top' href='func_mysql_upper.html'>UPPER</a>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic'>Числові функції</span>
+                <a target='_top' href='func_mysql_abs.html'>ABS</a>
+                <a target='_top' href='func_mysql_acos.html'>ACOS</a>
+                <a target='_top' href='func_mysql_asin.html'>ASIN</a>
+                <a target='_top' href='func_mysql_atan.html'>ATAN</a>
+                <a target='_top' href='func_mysql_atan2.html'>ATAN2</a>
+                <a target='_top' href='func_mysql_avg.html'>AVG</a>
+                <a target='_top' href='func_mysql_ceil.html'>CEIL</a>
+                <a target='_top' href='func_mysql_ceiling.html'>CEILING</a>
+                <a target='_top' href='func_mysql_cos.html'>COS</a>
+                <a target='_top' href='func_mysql_cot.html'>COT</a>
+                <a target='_top' href='func_mysql_count.html'>COUNT</a>
+                <a target='_top' href='func_mysql_degrees.html'>DEGREES</a>
+                <a target='_top' href='func_mysql_div.html'>DIV</a>
+                <a target='_top' href='func_mysql_exp.html'>EXP</a>
+                <a target='_top' href='func_mysql_floor.html'>FLOOR</a>
+                <a target='_top' href='func_mysql_greatest.html'>GREATEST</a>
+                <a target='_top' href='func_mysql_least.html'>LEAST</a>
+                <a target='_top' href='func_mysql_ln.html'>LN</a>
+                <a target='_top' href='func_mysql_log.html'>LOG</a>
+                <a target='_top' href='func_mysql_log10.html'>LOG10</a>
+                <a target='_top' href='func_mysql_log2.html'>LOG2</a>
+                <a target='_top' href='func_mysql_max.html'>MAX</a>
+                <a target='_top' href='func_mysql_min.html'>MIN</a>
+                <a target='_top' href='func_mysql_mod.html'>MOD</a>
+                <a target='_top' href='func_mysql_pi.html'>PI</a>
+                <a target='_top' href='func_mysql_pow.html'>POW</a>
+                <a target='_top' href='func_mysql_power.html'>POWER</a>
+                <a target='_top' href='func_mysql_radians.html'>RADIANS</a>
+                <a target='_top' href='func_mysql_rand.html'>RAND</a>
+                <a target='_top' href='func_mysql_round.html'>ROUND</a>
+                <a target='_top' href='func_mysql_sign.html'>SIGN</a>
+                <a target='_top' href='func_mysql_sin.html'>SIN</a>
+                <a target='_top' href='func_mysql_sqrt.html'>SQRT</a>
+                <a target='_top' href='func_mysql_sum.html'>SUM</a>
+                <a target='_top' href='func_mysql_tan.html'>TAN</a>
+                <a target='_top' href='func_mysql_truncate.html'>TRUNCATE</a>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic'>Функції дати</span>
+                <a target='_top' href='func_mysql_adddate.html'>ADDDATE</a>
+                <a target='_top' href='func_mysql_addtime.html'>ADDTIME</a>
+                <a target='_top' href='func_mysql_curdate.html'>CURDATE</a>
+                <a target='_top' href='func_mysql_current_date.html'>CURRENT_DATE</a>
+                <a target='_top' href='func_mysql_current_time.html'>CURRENT_TIME</a>
+                <a target='_top' href='func_mysql_current_timestamp.html'>CURRENT_TIMESTAMP</a>
+                <a target='_top' href='func_mysql_curtime.html'>CURTIME</a>
+                <a target='_top' href='func_mysql_date.html'>DATE</a>
+                <a target='_top' href='func_mysql_datediff.html'>DATEDIFF</a>
+                <a target='_top' href='func_mysql_date_add.html'>DATE_ADD</a>
+                <a target='_top' href='func_mysql_date_format.html'>DATE_FORMAT</a>
+                <a target='_top' href='func_mysql_date_sub.html'>DATE_SUB</a>
+                <a target='_top' href='func_mysql_day.html'>DAY</a>
+                <a target='_top' href='func_mysql_dayname.html'>DAYNAME</a>
+                <a target='_top' href='func_mysql_dayofmonth.html'>DAYOFMONTH</a>
+                <a target='_top' href='func_mysql_dayofweek.html'>DAYOFWEEK</a>
+                <a target='_top' href='func_mysql_dayofyear.html'>DAYOFYEAR</a>
+                <a target='_top' href='func_mysql_extract.html'>EXTRACT</a>
+                <a target='_top' href='func_mysql_from_days.html'>FROM_DAYS</a>
+                <a target='_top' href='func_mysql_hour.html'>HOUR</a>
+                <a target='_top' href='func_mysql_last_day.html'>LAST_DAY</a>
+                <a target='_top' href='func_mysql_localtime.html'>LOCALTIME</a>
+                <a target='_top' href='func_mysql_localtimestamp.html'>LOCALTIMESTAMP</a>
+                <a target='_top' href='func_mysql_makedate.html'>MAKEDATE</a>
+                <a target='_top' href='func_mysql_maketime.html'>MAKETIME</a>
+                <a target='_top' href='func_mysql_microsecond.html'>MICROSECOND</a>
+                <a target='_top' href='func_mysql_minute.html'>MINUTE</a>
+                <a target='_top' href='func_mysql_month.html'>MONTH</a>
+                <a target='_top' href='func_mysql_monthname.html'>MONTHNAME</a>
+                <a target='_top' href='func_mysql_now.html'>NOW</a>
+                <a target='_top' href='func_mysql_period_add.html'>PERIOD_ADD</a>
+                <a target='_top' href='func_mysql_period_diff.html'>PERIOD_DIFF</a>
+                <a target='_top' href='func_mysql_quarter.html'>QUARTER</a>
+                <a target='_top' href='func_mysql_second.html'>SECOND</a>
+                <a target='_top' href='func_mysql_sec_to_time.html'>SEC_TO_TIME</a>
+                <a target='_top' href='func_mysql_str_to_date.html'>STR_TO_DATE</a>
+                <a target='_top' href='func_mysql_subdate.html'>SUBDATE</a>
+                <a target='_top' href='func_mysql_subtime.html'>SUBTIME</a>
+                <a target='_top' href='func_mysql_sysdate.html'>SYSDATE</a>
+                <a target='_top' href='func_mysql_time.html'>TIME</a>
+                <a target='_top' href='func_mysql_time_format.html'>TIME_FORMAT</a>
+                <a target='_top' href='func_mysql_time_to_sec.html'>TIME_TO_SEC</a>
+                <a target='_top' href='func_mysql_timediff.html'>TIMEDIFF</a>
+                <a target='_top' href='func_mysql_timestamp.html'>TIMESTAMP</a>
+                <a target='_top' href='func_mysql_to_days.html'>TO_DAYS</a>
+                <a target='_top' href='func_mysql_week.html'>WEEK</a>
+                <a target='_top' href='func_mysql_weekday.html'>WEEKDAY</a>
+                <a target='_top' href='func_mysql_weekofyear.html'>WEEKOFYEAR</a>
+                <a target='_top' href='func_mysql_year.html'>YEAR</a>
+                <a target='_top' href='func_mysql_yearweek.html'>YEARWEEK</a>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic'>Розширені функції</span>
+                <a target='_top' href='func_mysql_bin.html'>BIN</a>
+                <a target='_top' href='func_mysql_binary.html'>BINARY</a>
+                <a target='_top' href='func_mysql_case.html'>CASE</a>
+                <a target='_top' href='func_mysql_cast.html'>CAST</a>
+                <a target='_top' href='func_mysql_coalesce.html'>COALESCE</a>
+                <a target='_top' href='func_mysql_connection_id.html'>CONNECTION_ID</a>
+                <a target='_top' href='func_mysql_conv.html'>CONV</a>
+                <a target='_top' href='func_mysql_convert.html'>CONVERT</a>
+                <a target='_top' href='func_mysql_current_user.html'>CURRENT_USER</a>
+                <a target='_top' href='func_mysql_database.html'>DATABASE</a>
+                <a target='_top' href='func_mysql_if.html'>IF</a>
+                <a target='_top' href='func_mysql_ifnull.html'>IFNULL</a>
+                <a target='_top' href='func_mysql_isnull.html'>ISNULL</a>
+                <a target='_top' href='func_mysql_last_insert_id.html'>LAST_INSERT_ID</a>
+                <a target='_top' href='func_mysql_nullif.html'>NULLIF</a>
+                <a target='_top' href='func_mysql_session_user.html'>SESSION_USER</a>
+                <a target='_top' href='func_mysql_system_user.html'>SYSTEM_USER</a>
+                <a target='_top' href='func_mysql_user.html'>USER</a>
+                <a target='_top' href='func_mysql_version.html'>VERSION</a>
+            </div>
+            <a target='_top' href='sql_ref_sqlserver.html'>SQL Server функції</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:2px;font-style:italic;'>Рядкові функції</span>
+                <a href='func_sqlserver_ascii.html'>ASCII</a>
+                <a href='func_sqlserver_char.html'>CHAR</a>
+                <a href='func_sqlserver_charindex.html'>CHARINDEX</a>
+                <a href='func_sqlserver_concat.html'>CONCAT</a>
+                <a href='func_sqlserver_concat_with_plus.html'>Concat with +</a>
+                <a href='func_sqlserver_concat_ws.html'>CONCAT_WS</a>
+                <a href='func_sqlserver_datalength.html'>DATALENGTH</a>
+                <a href='func_sqlserver_difference.html'>DIFFERENCE</a>
+                <a href='func_sqlserver_format.html'>FORMAT</a>
+                <a href='func_sqlserver_left.html'>LEFT</a>
+                <a href='func_sqlserver_len.html'>LEN</a>
+                <a href='func_sqlserver_lower.html'>LOWER</a>
+                <a href='func_sqlserver_ltrim.html'>LTRIM</a>
+                <a href='func_sqlserver_nchar.html'>NCHAR</a>
+                <a href='func_sqlserver_patindex.html'>PATINDEX</a>
+                <a href='func_sqlserver_quotename.html'>QUOTENAME</a>
+                <a href='func_sqlserver_replace.html'>REPLACE</a>
+                <a href='func_sqlserver_replicate.html'>REPLICATE</a>
+                <a href='func_sqlserver_reverse.html'>REVERSE</a>
+                <a href='func_sqlserver_right.html'>RIGHT</a>
+                <a href='func_sqlserver_rtrim.html'>RTRIM</a>
+                <a href='func_sqlserver_soundex.html'>SOUNDEX</a>
+                <a href='func_sqlserver_space.html'>SPACE</a>
+                <a href='func_sqlserver_str.html'>STR</a>
+                <a href='func_sqlserver_stuff.html'>STUFF</a>
+                <a href='func_sqlserver_substring.html'>SUBSTRING</a>
+                <a href='func_sqlserver_translate.html'>TRANSLATE</a>
+                <a href='func_sqlserver_trim.html'>TRIM</a>
+                <a href='func_sqlserver_unicode.html'>UNICODE</a>
+                <a href='func_sqlserver_upper.html'>UPPER</a>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic'>Числові функції</span>
+                <a href='func_sqlserver_abs.html'>ABS</a>
+                <a href='func_sqlserver_acos.html'>ACOS</a>
+                <a href='func_sqlserver_asin.html'>ASIN</a>
+                <a href='func_sqlserver_atan.html'>ATAN</a>
+                <a href='func_sqlserver_atn2.html'>ATN2</a>
+                <a href='func_sqlserver_avg.html'>AVG</a>
+                <a href='func_sqlserver_ceiling.html'>CEILING</a>
+                <a href='func_sqlserver_count.html'>COUNT</a>
+                <a href='func_sqlserver_cos.html'>COS</a>
+                <a href='func_sqlserver_cot.html'>COT</a>
+                <a href='func_sqlserver_degrees.html'>DEGREES</a>
+                <a href='func_sqlserver_exp.html'>EXP</a>
+                <a href='func_sqlserver_floor.html'>FLOOR</a>
+                <a href='func_sqlserver_log.html'>LOG</a>
+                <a href='func_sqlserver_log10.html'>LOG10</a>
+                <a href='func_sqlserver_max.html'>MAX</a>
+                <a href='func_sqlserver_min.html'>MIN</a>
+                <a href='func_sqlserver_pi.html'>PI</a>
+                <a href='func_sqlserver_power.html'>POWER</a>
+                <a href='func_sqlserver_radians.html'>RADIANS</a>
+                <a href='func_sqlserver_rand.html'>RAND</a>
+                <a href='func_sqlserver_round.html'>ROUND</a>
+                <a href='func_sqlserver_sign.html'>SIGN</a>
+                <a href='func_sqlserver_sin.html'>SIN</a>
+                <a href='func_sqlserver_sqrt.html'>SQRT</a>
+                <a href='func_sqlserver_square.html'>SQUARE</a>
+                <a href='func_sqlserver_sum.html'>SUM</a>
+                <a href='func_sqlserver_tan.html'>TAN</a>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic'>Функції дати</span>
+                <a href='func_sqlserver_current_timestamp.html'>CURRENT_TIMESTAMP</a>
+                <a href='func_sqlserver_dateadd.html'>DATEADD</a>
+                <a href='func_sqlserver_datediff.html'>DATEDIFF</a>
+                <a href='func_sqlserver_datefromparts.html'>DATEFROMPARTS</a>
+                <a href='func_sqlserver_datename.html'>DATENAME</a>
+                <a href='func_sqlserver_datepart.html'>DATEPART</a>
+                <a href='func_sqlserver_day.html'>DAY</a>
+                <a href='func_sqlserver_getdate.html'>GETDATE</a>
+                <a href='func_sqlserver_getutcdate.html'>GETUTCDATE</a>
+                <a href='func_sqlserver_isdate.html'>ISDATE</a>
+                <a href='func_sqlserver_month.html'>MONTH</a>
+                <a href='func_sqlserver_sysdatetime.html'>SYSDATETIME</a>
+                <a href='func_sqlserver_year.html'>YEAR</a>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic'>Розширені функції</span>
+                <a href='func_sqlserver_cast.html'>CAST</a>
+                <a href='func_sqlserver_coalesce.html'>COALESCE</a>
+                <a href='func_sqlserver_convert.html'>CONVERT</a>
+                <a href='func_sqlserver_current_user.html'>CURRENT_USER</a>
+                <a href='func_sqlserver_iif.html'>IIF</a>
+                <a href='func_sqlserver_isnull.html'>ISNULL</a>
+                <a href='func_sqlserver_isnumeric.html'>ISNUMERIC</a>
+                <a href='func_sqlserver_nullif.html'>NULLIF</a>
+                <a href='func_sqlserver_session_user.html'>SESSION_USER</a>
+                <a href='func_sqlserver_sessionproperty.html'>SESSIONPROPERTY</a>
+                <a href='func_sqlserver_system_user.html'>SYSTEM_USER</a>
+                <a href='func_sqlserver_user_name.html'>USER_NAME</a>
+            </div>
+            <a target='_top' href='sql_ref_msaccess.html'>MS Access Функції</a>
+            <div class='ref_overview' style='margin-left:10px;background-color:#ddd'>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:2px;font-style:italic;'>Рядкові функції</span>
+                <a href='func_msaccess_asc.html'>Asc</a>
+                <a href='func_msaccess_chr.html'>Chr</a>
+                <a href='func_msaccess_concat.html'>Concat with &amp;</a>
+                <a href='func_msaccess_curdir.html'>CurDir</a>
+                <a href='func_msaccess_format.html'>Format</a>
+                <a href='func_msaccess_instr.html'>InStr</a>
+                <a href='func_msaccess_instrrev.html'>InstrRev</a>
+                <a href='func_msaccess_lcase.html'>LCase</a>
+                <a href='func_msaccess_left.html'>Left</a>
+                <a href='func_msaccess_len.html'>Len</a>
+                <a href='func_msaccess_ltrim.html'>LTrim</a>
+                <a href='func_msaccess_mid.html'>Mid</a>
+                <a href='func_msaccess_replace.html'>Replace</a>
+                <a href='func_msaccess_right.html'>Right</a>
+                <a href='func_msaccess_rtrim.html'>RTrim</a>
+                <a href='func_msaccess_space.html'>Space</a>
+                <a href='func_msaccess_split.html'>Split</a>
+                <a href='func_msaccess_str.html'>Str</a>
+                <a href='func_msaccess_strcomp.html'>StrComp</a>
+                <a href='func_msaccess_strconv.html'>StrConv</a>
+                <a href='func_msaccess_strreverse.html'>StrReverse</a>
+                <a href='func_msaccess_trim.html'>Trim</a>
+                <a href='func_msaccess_ucase.html'>UCase</a>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic'>Числові функції</span>
+                <a href='func_msaccess_abs.html'>Abs</a>
+                <a href='func_msaccess_atn.html'>Atn</a>
+                <a href='func_msaccess_avg.html'>Avg</a>
+                <a href='func_msaccess_cos.html'>Cos</a>
+                <a href='func_msaccess_count.html'>Count</a>
+                <a href='func_msaccess_exp.html'>Exp</a>
+                <a href='func_msaccess_fix.html'>Fix</a>
+                <a href='func_msaccess_format_number.html'>Format</a>
+                <a href='func_msaccess_int.html'>Int</a>
+                <a href='func_msaccess_max.html'>Max</a>
+                <a href='func_msaccess_min.html'>Min</a>
+                <a href='func_msaccess_randomize.html'>Randomize</a>
+                <a href='func_msaccess_rnd.html'>Rnd</a>
+                <a href='func_msaccess_round.html'>Round</a>
+                <a href='func_msaccess_sgn.html'>Sgn</a>
+                <a href='func_msaccess_sqr.html'>Sqr</a>
+                <a href='func_msaccess_sum.html'>Sum</a>
+                <a href='func_msaccess_val.html'>Val</a>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic'>Функції дати</span>
+                <a href='func_msaccess_date.html'>Date</a>
+                <a href='func_msaccess_dateadd.html'>DateAdd</a>
+                <a href='func_msaccess_datediff.html'>DateDiff</a>
+                <a href='func_msaccess_datepart.html'>DatePart</a>
+                <a href='func_msaccess_dateserial.html'>DateSerial</a>
+                <a href='func_msaccess_datevalue.html'>DateValue</a>
+                <a href='func_msaccess_day.html'>Day</a>
+                <a href='func_msaccess_format_date.html'>Format</a>
+                <a href='func_msaccess_hour.html'>Hour</a>
+                <a href='func_msaccess_minute.html'>Minute</a>
+                <a href='func_msaccess_month.html'>Month</a>
+                <a href='func_msaccess_monthname.html'>MonthName</a>
+                <a href='func_msaccess_now.html'>Now</a>
+                <a href='func_msaccess_second.html'>Second</a>
+                <a href='func_msaccess_time.html'>Time</a>
+                <a href='func_msaccess_timeserial.html'>TimeSerial</a>
+                <a href='func_msaccess_timevalue.html'>TimeValue</a>
+                <a href='func_msaccess_weekday.html'>Weekday</a>
+                <a href='func_msaccess_weekdayname.html'>WeekdayName</a>
+                <a href='func_msaccess_year.html'>Year</a>
+                <span style='display:inline-block;margin-left:10px;padding:5px;margin-top:10px;font-style:italic'>Інші функції</span>
+                <a href='func_msaccess_currentuser.html'>CurrentUser</a>
+                <a href='func_msaccess_environ.html'>Environ</a>
+                <a href='func_msaccess_isdate.html'>IsDate</a>
+                <a href='func_msaccess_isnull.html'>IsNull</a>
+                <a href='func_msaccess_isnumeric.html'>IsNumeric</a>
+            </div>
+            <a target='_top' href='sql_quickref.html'>SQL Швидкий довідник</a>
+            <br>
+            <h2 class='left'><span class='left_h2'>SQL</span> Приклади</h2>
+            <a target='_top' href='sql_examples.html'>SQL Приклади</a>
+            <a target='_top' href='sql_editor.html'>SQL Редактор</a>
+            <a target='_top' href='sql_quiz.html'>SQL Вікторина</a>
+            <a target='_top' href='sql_exercises.html'>SQL Вправи</a>
+            <a target='_top' href='sql_bootcamp.html'>SQL Bootcamp</a>
+            <a target='_top' href='sql_exam.html'>SQL Сертифікат</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT SQL-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/sql_icon1.svg' alt='SQL. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='SQL для початківців. W3Schools українською' style='width:100px'></a>
+    <p class='w3-right'>
+        <a href='sql_aggregate_functions_en.html' title='Перейти на англійську мову'>En</a>
+        <a href='sql_aggregate_functions_es.html' title='Перейти на іспанську мову'>Es</a>
+        <a href='sql_aggregate_functions_de.html' title='Перейти на німецьку мову'>De</a>
+        <a href='sql_aggregate_functions_fr.html' title='Перейти на французьку мову'>Fr</a>
+    </p>
+    <article>
+        <h1>SQL <span class="color_h1">Агрегатні</span> функції</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_top.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_min_max.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <h2>SQL Агрегатні функції</h2>
+        <p><strong>Агрегатна функція</strong> – це функція, яка виконує обчислення набору значень і повертає одне значення.</p>
+        <p>Агрегатні функції часто використовуються з пропозицією <code class="w3-codespan">GROUP BY</code> інструкції <code class="w3-codespan">SELECT</code>. Пропозиція <code class="w3-codespan">GROUP BY</code> розбиває набір результатів на групи значень, а агрегатну функцію можна використовувати для повернення окремого значення для кожної групи.</p>
+        <p>Найпоширенішими агрегатними функціями SQL є:</p>
+        <ul>
+            <li><code class="w3-codespan">MIN()</code> - повертає найменше значення у вибраному стовпці</li>
+            <li><code class="w3-codespan">MAX()</code> - повертає найбільше значення у вибраному стовпці</li>
+            <li><code class="w3-codespan">COUNT()</code> - повертає кількість рядків у наборі</li>
+            <li><code class="w3-codespan">SUM()</code> - повертає загальну суму числового стовпця</li>
+            <li><code class="w3-codespan">AVG()</code> - повертає середнє значення числового стовпця</li>
+        </ul>
+        <p>Агрегатні функції ігнорують нульові значення (за винятком <code class="w3-codespan">COUNT()</code>).</p>
+        <p>У наступних розділах ми розглянемо вищезгадані агрегатні функції.</p>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_top.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_min_max.html">Next &#10095;</a>
+        </div>
+    </article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Онлайн-підручники на сайті">НА СЕРВЕРІ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index.html' class='btn-rightbar'>MySQL</a>
+            <a href='../postgresql/css_rwd_intro.html' class='btn-rightbar'>PostgreSQL</a>
+            <a href='../php/index.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index.html' class='btn-rightbar'>ASP</a>
+            <a href='../nodejs/index.html' class='btn-rightbar'>Node.js</a>
+            <a href='../nodejs/nodejs_raspberrypi.html' class='btn-rightbar'>RaspberryPi</a>
+            <a href='../git/index.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index.html' class='btn-rightbar'>GitHubPages</a>
+            <a href='../mongodb/index.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style="text-decoration:none">ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index.html' target='_top' style="text-decoration:none">БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index.html' target='_top' style="text-decoration:none">ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../kotlin/index.html'>Kotlin Підручник</a><br>
+        <a href='../c/index.html'>C Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+        <a href='../chatgpt-3-5/index.html'>ChatGPT-3.5 Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+        <a href='../icons/icons_reference.html'>Іконки Довідник</a><br>
+        <a href='../graphics/svg_reference.html'>SVG Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../kotlin/kotlin_examples.html'>Kotlin Приклади</a><br>
+        <a href='../c/c_examples.html'>C Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Вебсертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_c.html'>C Сертифікат</a><br>
+        <a href='../cert/cert_cpp.html'>C++ Сертифікат</a><br>
+        <a href='../cert/cert_cs.html'>C# Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали й прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступні версії сайту іншими мовами:
+    <a href='../index_en.html' title='W3Schools англійською'><strong>англійською</strong></a>,
+    <a href='../index_es.html' title='W3Schools іспанською'><strong>іспанською</strong></a>,
+    <a href='../index_de.html' title='W3Schools німецькою'><strong>німецькою</strong></a>,
+    <a href='../index_fr.html' title='W3Schools французькою'><strong>французькою</strong></a>.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2025</a> by Refsnes Data. All Rights Reserved.
+    Сайт створений і працює на фреймворку <a href='../w3css/index.html'>W3.CSS</a>.<br>
+    Ви можете використовувати інші авторитетні ресурси для навчання веброзробці та програмуванню:<br>
+      <a href='https://www.udemy.com/' target='_blank' rel='noopener'>Udemy</a>&nbsp;|&nbsp;
+      <a href='https://www.codecademy.com/' target='_blank' rel='noopener'>Codecademy</a>&nbsp;|&nbsp;
+      <a href='https://www.coursera.org/' target='_blank' rel='noopener'>Coursera</a>&nbsp;|&nbsp;
+      <a href='https://www.edx.org/' target='_blank' rel='noopener'>edX</a>&nbsp;|&nbsp;
+      <a href='https://www.khanacademy.org/' target='_blank' rel='noopener'>Khan Academy</a>&nbsp;|&nbsp;
+      <a href='https://www.skillshare.com/' target='_blank' rel='noopener'>Skillshare</a>&nbsp;|&nbsp;
+      <a href='https://www.freecodecamp.org/' target='_blank' rel='noopener'>FreeCodeCamp</a>&nbsp;|&nbsp;
+      <a href='https://learn.microsoft.com/uk-ua/' target='_blank' rel='noopener'>MicrosoftLearn</a>&nbsp;|&nbsp;
+      <a href='https://hyperskill.org/' target='_blank' rel='noopener'>HyperSkill</a>&nbsp;|&nbsp;
+      <a href='https://www.udacity.com/' target='_blank' rel='noopener'>Udacity</a>&nbsp;|&nbsp;
+      <a href='https://code.org/' target='_blank' rel='noopener'>Code.org</a>&nbsp;|&nbsp;
+      <a href='https://www.sololearn.com/' target='_blank' rel='noopener'>SoloLearn</a>&nbsp;|&nbsp;
+      <a href='https://developer.ibm.com/' target='_blank' rel='noopener'>IBMDeveloper</a>&nbsp;|&nbsp;
+      <a href='https://www.codewars.com/' target='_blank' rel='noopener'>CodeWars</a>&nbsp;|&nbsp;
+      <a href='https://prometheus.org.ua/' target='_blank' rel='noopener'>Prometheus</a>&nbsp;|&nbsp;
+      <a href='https://ed-era.com/' target='_blank' rel='noopener'>Ed-Era</a>&nbsp;|&nbsp;
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+      <a href='https://developer.mozilla.org/en-US/?retiredLocale=uk' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+      <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+      <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+    <br><br>
+    <a href='../index.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
