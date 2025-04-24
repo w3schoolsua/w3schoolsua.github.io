@@ -43,8 +43,8 @@
             "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
         ]
     }
-</script><title>SQL COUNT() Function. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='SQL COUNT() Function. Syntax. Demo Database. Add a Where Clause. Specify Column. Ignore Duplicates. Use an Alias. Test Yourself With Exercises. Lessons for beginners. W3Schools in English'>
+</script>    <title>SQL COUNT() Function. Examples. Lessons for beginners. W3Schools in English</title>
+    <meta name='description' content='SQL COUNT() Function. Syntax. Demo Database. Specify Column. Add a Where Clause. Ignore Duplicates. Use an Alias. Use COUNT() with GROUP BY. Test Yourself With Exercises. Video Lesson. Lessons for beginners. W3Schools in English'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
@@ -817,171 +817,162 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index_en.html'><img src='../svg/sql_icon1.svg' alt='SQL. Lessons for beginners' class='w3-left w3-padding' title='SQL for beginners. W3Schools in English' width='100'></a>
-<p class='w3-right'>
-    <a href="sql_count.html" title='Switch to Ukrainian'>Ua</a>
-</p>
-<article>
-    <h1>SQL <span class="color_h1">COUNT()</span> Function</h1>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_min_max_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_sum_en.html">Next &#10095;</a>
-    </div>
-    <hr>
-    <h2>The SQL COUNT() Function</h2>
-    <p>The <code class="w3-codespan">COUNT()</code> function returns the number of rows that matches a specified criterion.</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Find the total number of products in the <code class="w3-codespan">Products</code> table:</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT COUNT(*)<br>FROM Products;
+    <p class='w3-right'>
+        <a href='sql_count.html' title='Switch to Ukrainian'>Ua</a>
+        <a href='sql_count_es.html' title='Switch to Spanish'>Es</a>
+        <a href='sql_count_de.html' title='Switch to German'>De</a>
+        <a href='sql_count_fr.html' title='Switch to French'>Fr</a>
+    </p>
+    <article>
+        <h1>SQL <span class="color_h1">COUNT()</span> Function</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_min_max_en.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_sum_en.html">Next &#10095;</a>
         </div>
-        <a target="_blank" href="../sqltryit/trysql_select_count.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-    <h2>Syntax</h2>
-    <div class="w3-example ws-light-grey">
-        <p><code class="sqlHigh">SELECT COUNT(<em>column_name</em>)<br>FROM <em>table_name</em><br>WHERE <em>condition</em>;</code></p>
-    </div>
-    <hr>
-    <h2>Demo Database</h2>
-    <p>Below is a selection from the <a href="../sqltryit/trysql_products.html" target="_blank"><b>Products</b></a> table used in the examples:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tbody>
-            <tr>
-                <th>ProductID</th>
-                <th>ProductName</th>
-                <th>SupplierID</th>
-                <th>CategoryID</th>
-                <th>Unit</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Chais</td>
-                <td>1</td>
-                <td>1</td>
-                <td>10 boxes x 20 bags</td>
-                <td>18</td></tr>
-            <tr>
-                <td>2</td>
-                <td>Chang</td>
-                <td>1</td>
-                <td>1</td>
-                <td>24 - 12 oz bottles</td>
-                <td>19</td></tr>
-            <tr>
-                <td>3</td>
-                <td>Aniseed Syrup</td>
-                <td>1</td>
-                <td>2</td>
-                <td>12 - 550 ml bottles</td>
-                <td>10</td></tr>
-            <tr>
-                <td>4</td>
-                <td>Chef Anton's Cajun Seasoning</td>
-                <td>2</td>
-                <td>2</td>
-                <td>48 - 6 oz jars</td>
-                <td>22</td></tr>
-            <tr>
-                <td>5</td>
-                <td>Chef Anton's Gumbo Mix</td>
-                <td>2</td>
-                <td>2</td>
-                <td>36 boxes</td>
-                <td>21.35</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <hr>
-    <div class="adver_adinfeed">
+        <hr>
+        <h2>The SQL COUNT() Function</h2>
+        <p>The <code class="w3-codespan">COUNT()</code> function returns the number of rows that matches a specified criterion.</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Find the total number of products in the <code class="w3-codespan">Products</code> table:</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT COUNT(*)<br>FROM Products;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_count.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <h2>Syntax</h2>
+        <div class="w3-example ws-light-grey">
+            <p><code class="sqlHigh">SELECT COUNT(<em>column_name</em>)<br>FROM <em>table_name</em><br>WHERE <em>condition</em>;</code></p>
+        </div>
+        <hr>
+        <h2>Demo Database</h2>
+        <p>Below is a selection from the <a href="../sqltryit/trysql_products.html" target="_blank"><b>Products</b></a> table used in the examples:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tbody>
+                <tr>
+                    <th>ProductID</th>
+                    <th>ProductName</th>
+                    <th>SupplierID</th>
+                    <th>CategoryID</th>
+                    <th>Unit</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Chais</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>18</td></tr>
+                <tr>
+                    <td>2</td>
+                    <td>Chang</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>24 - 12 oz bottles</td>
+                    <td>19</td></tr>
+                <tr>
+                    <td>3</td>
+                    <td>Aniseed Syrup</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>12 - 550 ml bottles</td>
+                    <td>10</td></tr>
+                <tr>
+                    <td>4</td>
+                    <td>Chef Anton's Cajun Seasoning</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>48 - 6 oz jars</td>
+                    <td>22</td></tr>
+                <tr>
+                    <td>5</td>
+                    <td>Chef Anton's Gumbo Mix</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>36 boxes</td>
+                    <td>21.35</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Specify Column</h2>
+        <p>You can specify a column name instead of the asterix symbol <code class="w3-codespan">(*)</code>.</p>
+        <p>If you specify a column instead of <code class="w3-codespan">(*)</code>, NULL values will not be counted.</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Find the number of products where the <code class="w3-codespan">ProductName</code> is not null:</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT COUNT(ProductName)<br>FROM Products;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_count3.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <h2>Add a Where Clause</h2>
+        <p>You can add a <code class="w3-codespan">WHERE</code> clause to specify conditions:</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Find the number of products where <code class="w3-codespan">Price</code> is higher than 20:</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT COUNT(ProductID)<br>FROM Products<br>WHERE Price &gt; 20;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_count2.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Add a Where Clause</h2>
-    <p>You can add a <code class="w3-codespan">WHERE</code> clause to specify conditions:</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Find the number of products where <code class="w3-codespan">Price</code> is higher than 20:</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT COUNT(ProductID)<br>FROM Products<br>WHERE Price &gt; 20;
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_select_count2.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-    <h2>Specify Column</h2>
-    <p>You can specify a column name instead of the asterix symbol <code class="w3-codespan">(*)</code>.</p>
-    <p>If you specify a column instead of <code class="w3-codespan">(*)</code>, NULL values will not be counted.</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Find the number of products where the <code class="w3-codespan">ProductName</code> is not null:</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT COUNT(ProductName)<br>FROM Products;
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_select_count3.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <div class="w3-panel w3-note">
-        <p><b>Unfortunately</b> the <code class="w3-codespan">Products</code> table does not have any NULL values, but we can fix that. Run the SQL statement below, and re-run the example above to see the result.</p>
-    </div>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Insert a NULL value to better understand the example above:</p>
-        <div class="w3-code notranslate sqlHigh">
-            UPDATE Products<br>SET ProductName = NULL<br>WHERE ProductName = 'Chang';
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_select_count_null.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-    <h2>Ignore Duplicates</h2>
-    <p>You can ignore duplicates by using the <code class="w3-codespan">DISTINCT</code> keyword in the <code class="w3-codespan">COUNT</code> function.</p>
-    <p>If <code class="w3-codespan">DISTINCT</code> is specified, rows with the same value for the specified column will be counted as one.</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>How many <em>different</em> prices are there in the <code class="w3-codespan">Products</code> table:</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT COUNT(DISTINCT Price)<br>FROM Products;
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_select_count_distinct.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-    <h2>Use an Alias</h2>
-    <p>Give the counted column a name by using the <code class="w3-codespan">AS</code> keyword.</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Name the column "number of records":</p>
-        <div class="w3-code notranslate sqlHigh">SELECT COUNT(*) AS [number of records]<br>FROM Products;</div>
-        <a target="_blank" href="../sqltryit/trysql_select_count_as.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_functions3" method="post" target="_blank">
-        <h2 class="shadow-black-1">Test Yourself With Exercises</h2>
-        <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Use the correct function to return the number of records that have the <code class="w3-codespan">Price</code> value set to 18.</p>
-            <div class="exerciseprecontainer">
-<pre>
-SELECT <input name="ex1" maxlength="5" style="width: 54px;">(*)
-FROM Products
-<input name="ex2" maxlength="5" style="width: 54px;"> Price = 18;
-</pre>
+</div>        <h2>Ignore Duplicates</h2>
+        <p>You can ignore duplicates by using the <code class="w3-codespan">DISTINCT</code> keyword in the <code class="w3-codespan">COUNT</code> function.</p>
+        <p>If <code class="w3-codespan">DISTINCT</code> is specified, rows with the same value for the specified column will be counted as one.</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>How many <em>different</em> prices are there in the <code class="w3-codespan">Products</code> table:</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT COUNT(DISTINCT Price)<br>FROM Products;
             </div>
-            <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            <a target="_blank" href="../sqltryit/trysql_select_count_distinct.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-    </form>
-    <hr>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_min_max_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_sum_en.html">Next &#10095;</a>
-    </div>
-</article>
+        <hr>
+        <h2>Use an Alias</h2>
+        <p>Give the counted column a name by using the <code class="w3-codespan">AS</code> keyword.</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Name the column "number of records":</p>
+            <div class="w3-code notranslate sqlHigh">SELECT COUNT(*) AS [number of records]<br>FROM Products;</div>
+            <a target="_blank" href="../sqltryit/trysql_select_count_as.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <h2>Use COUNT() with GROUP BY</h2>
+        <p>Here we use the <code class="w3-codespan">COUNT()</code> function and the <code class="w3-codespan">GROUP BY</code> clause, to return the number of records for each category in the Products table:</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT COUNT(*) AS [Number of records], CategoryID<br>FROM Products<br>GROUP BY CategoryID;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_count_groupby.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <p>You will learn more about the <code class="w3-codespan"><a href="sql_groupby_en.html">GROUP BY</a></code> clause later in this tutorial.</p>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_min_max_en.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_sum_en.html">Next &#10095;</a>
+        </div>
+    </article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-</div>
+    </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>

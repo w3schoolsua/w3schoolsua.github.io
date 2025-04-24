@@ -43,7 +43,7 @@
         ]
     }
 </script><title>SQL COUNT() функція. Уроки для початківців. W3Schools українською</title>
-<meta name='description' content='Функція SQL COUNT(). Синтаксис. Демонстраційна база даних. Додати пропозицію Where. Указати стовпець. Ігнорувати дублікати. Використовуйте псевдонім. Перевірте себе за допомогою вправ. Приклади. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
+<meta name='description' content='Функція SQL COUNT(). Синтаксис. Демонстраційна база даних. Указати стовпець. Додати пропозицію Where. Ігнорувати дублікати. Використовуйте псевдонім. Використовуйте COUNT() із GROUP BY. Перевірте себе за допомогою вправ. Відео урок. Приклади. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -818,171 +818,166 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index.html'><img src='../svg/sql_icon1.svg' alt='SQL. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='SQL для початківців. W3Schools українською' style='width:100px'></a>
-<p class='w3-right'>
-    <a href="sql_count_en.html" title='Перейти на англійську мову'>En</a>
-</p>
-<article>
-    <h1>SQL <span class="color_h1">COUNT()</span> Функція</h1>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_min_max.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_sum.html">Next &#10095;</a>
-    </div>
-    <hr>
-    <h2>SQL COUNT() Функція</h2>
-    <p>Функція <code class="w3-codespan">COUNT()</code> повертає кількість рядків, які відповідають заданому критерію.</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <p>Знайдіть загальну кількість продуктів у таблиці <code class="w3-codespan">Products</code> (Продукти):</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT COUNT(*)<br>FROM Products;
+    <p class='w3-right'>
+        <a href='sql_count_en.html' title='Перейти на англійську мову'>En</a>
+        <a href='sql_count_es.html' title='Перейти на іспанську мову'>Es</a>
+        <a href='sql_count_de.html' title='Перейти на німецьку мову'>De</a>
+        <a href='sql_count_fr.html' title='Перейти на французьку мову'>Fr</a>
+    </p>
+    <article>
+        <h1>SQL <span class="color_h1">COUNT()</span> Функція</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_min_max.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_sum.html">Next &#10095;</a>
         </div>
-        <a target="_blank" href="../sqltryit/trysql_select_count.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-    </div>
-    <hr>
-    <h2>Синтаксис</h2>
-    <div class="w3-example ws-light-grey">
-        <p><code class="sqlHigh">SELECT COUNT(<em>назва_стовпця</em>)<br>FROM <em>назва_таблиці</em><br>WHERE <em>умова</em>;</code></p>
-    </div>
-    <hr>
-    <h2>Демонстраційна база даних</h2>
-    <p>Нижче наведено вибірку з таблиці <a href="../sqltryit/trysql_products.html" target="_blank"><b>Products</b></a>, яка використовується в прикладах:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tbody>
-            <tr>
-                <th>ProductID</th>
-                <th>ProductName</th>
-                <th>SupplierID</th>
-                <th>CategoryID</th>
-                <th>Unit</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Chais</td>
-                <td>1</td>
-                <td>1</td>
-                <td>10 boxes x 20 bags</td>
-                <td>18</td></tr>
-            <tr>
-                <td>2</td>
-                <td>Chang</td>
-                <td>1</td>
-                <td>1</td>
-                <td>24 - 12 oz bottles</td>
-                <td>19</td></tr>
-            <tr>
-                <td>3</td>
-                <td>Aniseed Syrup</td>
-                <td>1</td>
-                <td>2</td>
-                <td>12 - 550 ml bottles</td>
-                <td>10</td></tr>
-            <tr>
-                <td>4</td>
-                <td>Chef Anton's Cajun Seasoning</td>
-                <td>2</td>
-                <td>2</td>
-                <td>48 - 6 oz jars</td>
-                <td>22</td></tr>
-            <tr>
-                <td>5</td>
-                <td>Chef Anton's Gumbo Mix</td>
-                <td>2</td>
-                <td>2</td>
-                <td>36 boxes</td>
-                <td>21.35</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <hr>
-    <div class="adver_adinfeed">
+        <hr>
+        <h2>SQL COUNT() Функція</h2>
+        <p>Функція <code class="w3-codespan">COUNT()</code> повертає кількість рядків, які відповідають заданому критерію.</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Знайдіть загальну кількість продуктів у таблиці <code class="w3-codespan">Products</code> (Продукти):</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT COUNT(*)<br>FROM Products;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_count.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        </div>
+        <hr>
+        <h2>Синтаксис</h2>
+        <div class="w3-example ws-light-grey">
+            <p><code class="sqlHigh">SELECT COUNT(<em>назва_стовпця</em>)<br>FROM <em>назва_таблиці</em><br>WHERE <em>умова</em>;</code></p>
+        </div>
+        <hr>
+        <h2>Демонстраційна база даних</h2>
+        <p>Нижче наведено вибірку з таблиці <a href="../sqltryit/trysql_products.html" target="_blank"><b>Products</b></a>, яка використовується в прикладах:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tbody>
+                <tr>
+                    <th>ProductID</th>
+                    <th>ProductName</th>
+                    <th>SupplierID</th>
+                    <th>CategoryID</th>
+                    <th>Unit</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Chais</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>18</td></tr>
+                <tr>
+                    <td>2</td>
+                    <td>Chang</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>24 - 12 oz bottles</td>
+                    <td>19</td></tr>
+                <tr>
+                    <td>3</td>
+                    <td>Aniseed Syrup</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>12 - 550 ml bottles</td>
+                    <td>10</td></tr>
+                <tr>
+                    <td>4</td>
+                    <td>Chef Anton's Cajun Seasoning</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>48 - 6 oz jars</td>
+                    <td>22</td></tr>
+                <tr>
+                    <td>5</td>
+                    <td>Chef Anton's Gumbo Mix</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>36 boxes</td>
+                    <td>21.35</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Укажіть стовпець</h2>
+        <p>Ви можете вказати назву стовпця замість символу зірочки <code class="w3-codespan">(*)</code>.</p>
+        <p>Якщо ви вкажете стовпець замість <code class="w3-codespan">(*)</code>, значення NULL не будуть зараховані.</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Знайдіть кількість продуктів, де <code class="w3-codespan">ProductName</code> не є нульовим:</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT COUNT(ProductName)<br>FROM Products;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_count3.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        </div>
+        <hr>
+        <h2>Додати пропозицію Where</h2>
+        <p>Ви можете додати пропозицію <code class="w3-codespan">WHERE</code>, щоб визначити умови:</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Знайти кількість продуктів, де <code class="w3-codespan">Price</code> (ціна) перевищує 20:</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT COUNT(ProductID)<br>FROM Products<br>WHERE Price &gt; 20;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_count2.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Додати пропозицію Where</h2>
-    <p>Ви можете додати пропозицію <code class="w3-codespan">WHERE</code>, щоб визначити умови:</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <p>Знайти кількість продуктів, де <code class="w3-codespan">Price</code> (ціна) перевищує 20:</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT COUNT(ProductID)<br>FROM Products<br>WHERE Price &gt; 20;
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_select_count2.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-    </div>
-    <hr>
-    <h2>Укажіть стовпець</h2>
-    <p>Ви можете вказати назву стовпця замість символу зірочки <code class="w3-codespan">(*)</code>.</p>
-    <p>Якщо ви вкажете стовпець замість <code class="w3-codespan">(*)</code>, значення NULL не будуть зараховані.</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <p>Знайдіть кількість продуктів, де <code class="w3-codespan">ProductName</code> не є нульовим:</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT COUNT(ProductName)<br>FROM Products;
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_select_count3.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-    </div>
-    <div class="w3-panel w3-note">
-        <p>На жаль, таблиця <code class="w3-codespan">Products</code> не містить жодних значень NULL, але ми можемо це виправити. Виконайте наведений нижче оператор SQL і повторно запустіть наведений вище приклад, щоб побачити результат.</p>
-    </div>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <p>Вставте значення NULL, щоб краще зрозуміти приклад вище:</p>
-        <div class="w3-code notranslate sqlHigh">
-            UPDATE Products<br>SET ProductName = NULL<br>WHERE ProductName = 'Chang';
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_select_count_null.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-    </div>
-    <hr>
-    <h2>Ігнорувати дублікати</h2>
-    <p>Ви можете ігнорувати дублікати, використовуючи ключове слово <code class="w3-codespan">DISTINCT</code> у функції <code class="w3-codespan">COUNT</code>.</p>
-    <p>Якщо вказано <code class="w3-codespan">DISTINCT</code>, рядки з однаковим значенням у вказаному стовпці вважатимуться одним.</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <p>Скільки <i>різних</i> цін у таблиці <code class="w3-codespan">Products</code>:</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT COUNT(DISTINCT Price)<br>FROM Products;
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_select_count_distinct.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-    </div>
-    <hr>
-    <h2>Використовуйте псевдонім</h2>
-    <p>Дайте назву підрахованому стовпцю за допомогою ключового слова <code class="w3-codespan">AS</code>.</p>
-    <div class="w3-example">
-        <h3>Приклад</h3>
-        <p>Назвіть стовпець "number of records" ("кількість записів"):</p>
-        <div class="w3-code notranslate sqlHigh">SELECT COUNT(*) AS [number of records]<br>FROM Products;</div>
-        <a target="_blank" href="../sqltryit/trysql_select_count_as.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
-    </div>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_functions3" method="post" target="_blank">
-        <h2 class="shadow-black-1" title="Вправи працюють лише онлайн">Перевірте себе за допомогою вправ</h2>
-        <div class="exercisewindow">
-            <h2>Вправа:</h2>
-            <p>Використовуйте правильну функцію, щоб повернути кількість записів, для яких значення <code class="w3-codespan">Price</code> встановлено на 18.</p>
-            <div class="exerciseprecontainer">
-<pre>
-SELECT <input name="ex1" maxlength="5" style="width: 54px;">(*)
-FROM Products
-<input name="ex2" maxlength="5" style="width: 54px;"> Price = 18;
-</pre>
+</div>        <h2>Ігнорувати дублікати</h2>
+        <p>Ви можете ігнорувати дублікати, використовуючи ключове слово <code class="w3-codespan">DISTINCT</code> у функції <code class="w3-codespan">COUNT</code>.</p>
+        <p>Якщо вказано <code class="w3-codespan">DISTINCT</code>, рядки з однаковим значенням у вказаному стовпці вважатимуться одним.</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Скільки <i>різних</i> цін у таблиці <code class="w3-codespan">Products</code>:</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT COUNT(DISTINCT Price)<br>FROM Products;
             </div>
-            <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Надіслати відповідь &raquo;</button>
+            <a target="_blank" href="../sqltryit/trysql_select_count_distinct.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
         </div>
-    </form>
-    <hr>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_min_max.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_sum.html">Next &#10095;</a>
-    </div>
-</article>
+        <hr>
+        <h2>Використовуйте псевдонім</h2>
+        <p>Дайте назву підрахованому стовпцю за допомогою ключового слова <code class="w3-codespan">AS</code>.</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <p>Назвіть стовпець "number of records" ("кількість записів"):</p>
+            <div class="w3-code notranslate sqlHigh">SELECT COUNT(*) AS [number of records]<br>FROM Products;</div>
+            <a target="_blank" href="../sqltryit/trysql_select_count_as.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        </div>
+        <hr>
+        <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Використовуйте COUNT() із GROUP BY</h2>
+        <p>Тут ми використовуємо функцію <code class="w3-codespan">COUNT()</code> і пропозицію <code class="w3-codespan">GROUP BY</code>, щоб повернути кількість записів для кожної категорії в таблиці Products:</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT COUNT(*) AS [Number of records], CategoryID<br>FROM Products<br>GROUP BY CategoryID;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_count_groupby.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        </div>
+        <p>Ви дізнаєтеся більше про пропозицію <code class="w3-codespan"><a href="sql_groupby_en.html">GROUP BY</a></code> пізніше в цьому посібнику.</p>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_min_max.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_sum.html">Next &#10095;</a>
+        </div>
+    </article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-</div>
+    </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
