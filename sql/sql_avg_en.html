@@ -43,8 +43,8 @@
             "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
         ]
     }
-</script><title>SQL AVG() Function. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='SQL AVG() Function. Syntax. Demo Database. Add a Where Clause. Use an Alias. Higher Than Average. Test Yourself With Exercises. Lessons for beginners. W3Schools in English'>
+</script>    <title>SQL AVG() Function. Examples. Lessons for beginners. W3Schools in English</title>
+    <meta name='description' content='SQL AVG() Function. Syntax. Demo Database. Add a Where Clause. Use an Alias. Higher Than Average. Use AVG() with GROUP BY. Exercises. Examples. Video Lesson. Lessons for beginners. W3Schools in English'>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
@@ -817,152 +817,158 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index_en.html'><img src='../svg/sql_icon1.svg' alt='SQL. Lessons for beginners' class='w3-left w3-padding' title='SQL for beginners. W3Schools in English' width='100'></a>
-<p class='w3-right'>
-    <a href="sql_avg.html" title='Switch to Ukrainian'>Ua</a>
-</p>
-<article>
-    <h1>SQL <span class="color_h1">AVG()</span> Function</h1>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_sum_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_like_en.html">Next &#10095;</a>
-    </div>
-    <hr>
-    <h2>The SQL AVG() Function</h2>
-    <p>The <code class="w3-codespan">AVG()</code> function returns the average value of a numeric column.</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Find the average price of all products:</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT AVG(Price)<br>FROM Products;
+    <p class='w3-right'>
+        <a href='sql_avg.html' title='Switch to Ukrainian'>Ua</a>
+        <a href='sql_avg_es.html' title='Switch to Spanish'>Es</a>
+        <a href='sql_avg_de.html' title='Switch to German'>De</a>
+        <a href='sql_avg_fr.html' title='Switch to French'>Fr</a>
+    </p>
+    <article>
+        <h1>SQL <span class="color_h1">AVG()</span> Function</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_sum_en.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_like_en.html">Next &#10095;</a>
         </div>
-        <a target="_blank" href="../sqltryit/trysql_select_avg.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <div class="w3-panel w3-note">
-        <p><b>Note:</b> NULL values are ignored.</p>
-    </div>
-    <hr>
-    <h2>Syntax</h2>
-    <div class="w3-example ws-light-grey">
-        <p><code class="sqlHigh">SELECT AVG(<em>column_name</em>)<br>FROM <em>table_name</em><br>WHERE <em>condition</em>;</code></p>
-    </div>
-    <hr>
-    <h2>Demo Database</h2>
-    <p>Below is a selection from the <a href="../sqltryit/trysql_products.html" target="_blank"><strong>Products</strong></a> table used in the examples:</p>
-    <div class="w3-responsive">
-        <table class="ws-table-all notranslate">
-            <tbody>
-            <tr>
-                <th>ProductID</th>
-                <th>ProductName</th>
-                <th>SupplierID</th>
-                <th>CategoryID</th>
-                <th>Unit</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Chais</td>
-                <td>1</td>
-                <td>1</td>
-                <td>10 boxes x 20 bags</td>
-                <td>18</td></tr>
-            <tr>
-                <td>2</td>
-                <td>Chang</td>
-                <td>1</td>
-                <td>1</td>
-                <td>24 - 12 oz bottles</td>
-                <td>19</td></tr>
-            <tr>
-                <td>3</td>
-                <td>Aniseed Syrup</td>
-                <td>1</td>
-                <td>2</td>
-                <td>12 - 550 ml bottles</td>
-                <td>10</td></tr>
-            <tr>
-                <td>4</td>
-                <td>Chef Anton's Cajun Seasoning</td>
-                <td>2</td>
-                <td>2</td>
-                <td>48 - 6 oz jars</td>
-                <td>22</td></tr>
-            <tr>
-                <td>5</td>
-                <td>Chef Anton's Gumbo Mix</td>
-                <td>2</td>
-                <td>2</td>
-                <td>36 boxes</td>
-                <td>21.35</td></tr>
-            </tbody>
-        </table>
-    </div>
-    <hr>
-    <h2>Add a Where Clause</h2>
-    <p>You can add a <code class="w3-codespan">WHERE</code> clause to specify conditions:</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Return the average price of products in category 1:</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT AVG(Price)<br>FROM Products<br>WHERE CategoryID = 1;
+        <hr>
+        <h2>The SQL AVG() Function</h2>
+        <p>The <code class="w3-codespan">AVG()</code> function returns the average value of a numeric column.</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Find the average price of all products:</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT AVG(Price)<br>FROM Products;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_avg.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-        <a target="_blank" href="../sqltryit/trysql_select_avg_where.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-    <div class="adver_adinfeed">
+        <div class="w3-panel w3-note">
+            <p><b>Note:</b> NULL values are ignored.</p>
+        </div>
+        <hr>
+        <h2>Syntax</h2>
+        <div class="w3-example ws-light-grey">
+            <p><code class="sqlHigh">SELECT AVG(<em>column_name</em>)<br>FROM <em>table_name</em><br>WHERE <em>condition</em>;</code></p>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Demo Database</h2>
+        <p>Below is a selection from the <a href="../sqltryit/trysql_products.html" target="_blank"><strong>Products</strong></a> table used in the examples:</p>
+        <div class="w3-responsive">
+            <table class="ws-table-all notranslate">
+                <tbody>
+                <tr>
+                    <th>ProductID</th>
+                    <th>ProductName</th>
+                    <th>SupplierID</th>
+                    <th>CategoryID</th>
+                    <th>Unit</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Chais</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>18</td></tr>
+                <tr>
+                    <td>2</td>
+                    <td>Chang</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>24 - 12 oz bottles</td>
+                    <td>19</td></tr>
+                <tr>
+                    <td>3</td>
+                    <td>Aniseed Syrup</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>12 - 550 ml bottles</td>
+                    <td>10</td></tr>
+                <tr>
+                    <td>4</td>
+                    <td>Chef Anton's Cajun Seasoning</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>48 - 6 oz jars</td>
+                    <td>22</td></tr>
+                <tr>
+                    <td>5</td>
+                    <td>Chef Anton's Gumbo Mix</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>36 boxes</td>
+                    <td>21.35</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <h2>Add a Where Clause</h2>
+        <p>You can add a <code class="w3-codespan">WHERE</code> clause to specify conditions:</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Return the average price of products in category 1:</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT AVG(Price)<br>FROM Products<br>WHERE CategoryID = 1;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_avg_where.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>Use an Alias</h2>
-    <p>Give the AVG column a name by using the <code class="w3-codespan">AS</code> keyword.</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Name the column "average price":</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT AVG(Price) AS [average price]<br>FROM Products;
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_select_avg_as.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-    <h2>Higher Than Average</h2>
-    <p>To list all records with a higher price than average, we can use the <code class="w3-codespan">AVG()</code> function in a sub query:</p>
-    <div class="w3-example">
-        <h3>Example</h3>
-        <p>Return all products with a higher price than the average price:</p>
-        <div class="w3-code notranslate sqlHigh">
-            SELECT * FROM Products<br>WHERE price &gt; (SELECT AVG(price) FROM Products);
-        </div>
-        <a target="_blank" href="../sqltryit/trysql_select_avg2.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
-    </div>
-    <hr>
-    <form autocomplete="off" id="w3-exerciseform" action="https://www.w3schools.com/sql/exercise.asp?filename=exercise_functions4" method="post" target="_blank">
-        <h2 class="shadow-black-1">Test Yourself With Exercises</h2>
-        <div class="exercisewindow">
-            <h2>Exercise:</h2>
-            <p>Use an SQL function to calculate the average price of all products.</p>
-            <div class="exerciseprecontainer">
-<pre>
-SELECT <input name="ex1" maxlength="10" style="width: 109px;">
-FROM Products;
-</pre>
+</div>        <h2>Use an Alias</h2>
+        <p>Give the AVG column a name by using the <code class="w3-codespan">AS</code> keyword.</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Name the column "average price":</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT AVG(Price) AS [average price]<br>FROM Products;
             </div>
-            <br>
-            <button type="submit" class="w3-btn w3-margin-bottom">Submit Answer &raquo;</button>
+            <a target="_blank" href="../sqltryit/trysql_select_avg_as.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
-    </form>
-    <hr>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="sql_sum_en.html">&#10094; Prev</a>
-        <a class="w3-right w3-btn" href="sql_like_en.html">Next &#10095;</a>
-    </div>
-</article>
+        <hr>
+        <h2>Higher Than Average</h2>
+        <p>To list all records with a higher price than average, we can use the <code class="w3-codespan">AVG()</code> function in a sub query:</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <p>Return all products with a higher price than the average price:</p>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT * FROM Products<br>WHERE price &gt; (SELECT AVG(price) FROM Products);
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_avg2.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Use AVG() with GROUP BY</h2>
+        <p>Here we use the <code class="w3-codespan">AVG()</code> function and the <code class="w3-codespan">GROUP BY</code> clause, to return the average price for each category in the Products table:</p>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code notranslate sqlHigh">
+                SELECT AVG(Price) AS AveragePrice, CategoryID<br>FROM Products<br>GROUP BY CategoryID;
+            </div>
+            <a target="_blank" href="../sqltryit/trysql_select_avg_groupby.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <p>You will learn more about the <code class="w3-codespan"><a href="sql_groupby_en.html">GROUP BY</a></code> clause later in this tutorial.</p>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="sql_sum_en.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="sql_like_en.html">Next &#10095;</a>
+        </div>
+    </article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-</div>
+    </div>
 <!--Right sidebar-->
 <div class='w3-col l2 m12' id='right'>
     <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
