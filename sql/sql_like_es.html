@@ -836,13 +836,13 @@
         <p>El operador <code class="w3-codespan">LIKE</code> se utiliza en una cláusula <code class="w3-codespan">WHERE</code> para buscar un patrón específico en una columna.</p>
         <p>Hay dos comodines que suelen usarse junto con el operador <code class="w3-codespan">LIKE</code>:</p>
         <ul>
-            <li>&nbsp;The percent sign <code class="w3-codespan">%</code> represents zero, one, or multiple characters</li>
-            <li>&nbsp;The underscore sign <code class="w3-codespan">_</code> represents one, single character</li>
+            <li>&nbsp;El signo de porcentaje <code class="w3-codespan">%</code> representa cero, uno o varios caracteres</li>
+            <li>&nbsp;El signo de subrayado <code class="w3-codespan">_</code> representa un solo carácter</li>
         </ul>
-        <p>You will learn more about <a href="sql_wildcards_es.html">wildcards in the next chapter</a>.</p>
+        <p>Aprenderá más sobre los <a href="sql_wildcards_es.html">comodines en el próximo capítulo</a>.</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Select all customers that starts with the letter "a":</p>
+            <h3>Ejemplo</h3>
+            <p>Seleccione todos los clientes que comienzan con la letra "a":</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE CustomerName LIKE 'a%';
@@ -850,7 +850,7 @@
             <a target="_blank" href="../sqltryit/trysql_select_like.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>Syntax</h2>
+        <h2>Sintaxis</h2>
         <div class="w3-example ws-light-grey">
             <p><code class="sqlHigh">
                     SELECT <em>column1, column2, ...</em><br>
@@ -862,8 +862,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Demo Database</h2>
-        <p>Below is a selection from the <a href="../sqltryit/trysql_customers.html" target="_blank"><b>Customers</b></a> table used in the examples:</p>
+</div>        <h2>Base de datos de demostración</h2>
+        <p>A continuación se muestra una selección de la tabla <a href="../sqltryit/trysql_customers.html" target="_blank"><b>Customers</b></a> utilizada en los ejemplos:</p>
         <div class="w3-responsive">
             <table class="ws-table-all notranslate">
                 <tr>
@@ -923,12 +923,12 @@
             </table>
         </div>
         <hr>
-        <h2>The _ Wildcard</h2>
-        <p>The <code class="w3-codespan">_</code> wildcard represents a single character.</p>
-        <p>It can be any character or number, but each <code class="w3-codespan">_</code> represents one, and only one, character.</p>
+        <h2>La _ comodín</h2>
+        <p>El comodín <code class="w3-codespan">_</code> representa un solo carácter.</p>
+        <p>Puede ser cualquier carácter o número, pero cada <code class="w3-codespan">_</code> representa un, y sólo un, carácter.</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Return all customers from a city that starts with 'L' followed by one wildcard character, then 'nd' and then two wildcard characters:</p>
+            <h3>Ejemplo</h3>
+            <p>Devuelve todos los clientes de una ciudad que comienza con 'L' seguido de un carácter comodín, luego 'nd' y luego dos caracteres comodín:</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE city LIKE 'L_nd__';
@@ -940,11 +940,11 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>The % Wildcard</h2>
-        <p>The <code class="w3-codespan">%</code> wildcard represents any number of characters, even zero characters.</p>
+</div>        <h2>El comodín %</h2>
+        <p>El comodín <code class="w3-codespan">%</code> representa cualquier número de caracteres, incluso cero caracteres.</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Return all customers from a city that <em>contains</em> the letter 'L':</p>
+            <h3>Ejemplo</h3>
+            <p>Devolver todos los clientes de una ciudad que <i>contiene</i> la letra 'L':</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE city LIKE '%L%';
@@ -952,11 +952,11 @@
             <a target="_blank" href="../sqltryit/trysql_select_like_l.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>Starts With</h2>
-        <p>To return records that starts with a specific letter or phrase, add the <code class="w3-codespan">%</code> at the end of the letter or phrase.</p>
+        <h2>Comienza con</h2>
+        <p>Para devolver registros que comiencen con una letra o frase específica, agregue <code class="w3-codespan">%</code> al final de la letra o frase.</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Return all customers that starts with 'La':</p>
+            <h3>Ejemplo</h3>
+            <p>Devolver todos los clientes que comienzan con 'La':</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE CustomerName LIKE 'La%';
@@ -964,11 +964,11 @@
             <a target="_blank" href="../sqltryit/trysql_select_like_la.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-panel ws-note">
-            <p><b>Tip:</b> You can also combine any number of conditions using <code class="w3-codespan">AND</code> or <code class="w3-codespan">OR</code> operators.</p>
+            <p><b>Consejo:</b> También puede combinar cualquier cantidad de condiciones utilizando los operadores <code class="w3-codespan">AND</code> o <code class="w3-codespan">OR</code>.</p>
         </div>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Return all customers that starts with 'a' or starts with 'b':</p>
+            <h3>Ejemplo</h3>
+            <p>Devolver todos los clientes que comiencen con 'a' o comiencen con 'b':</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE CustomerName LIKE 'a%' OR CustomerName LIKE 'b%';
@@ -976,11 +976,11 @@
             <a target="_blank" href="../sqltryit/trysql_select_like_ending2.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>Ends With</h2>
-        <p>To return records that ends with a specific letter or phrase, add the <code class="w3-codespan">%</code> at the beginning of the letter or phrase.</p>
+        <h2>Termina con</h2>
+        <p>Para devolver registros que terminen con una letra o frase específica, agregue <code class="w3-codespan">%</code> al comienzo de la letra o frase.</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Return all customers that ends with 'a':</p>
+            <h3>Ejemplo</h3>
+            <p>Devolver todos los clientes que terminan en 'a':</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE CustomerName LIKE '%a';
@@ -988,11 +988,11 @@
             <a target="_blank" href="../sqltryit/trysql_select_like_ending.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-panel ws-note">
-            <p><b>Tip:</b> You can also combine "starts with" and "ends with":</p>
+            <p><b>Consejo:</b> También puedes combinar "empieza con" y "termina con":</p>
         </div>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Return all customers that starts with "b" and ends with "s":</p>
+            <h3>Ejemplo</h3>
+            <p>Devolver todos los clientes que comienzan con "b" y terminan con "s":</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE CustomerName LIKE 'b%s';
@@ -1000,11 +1000,11 @@
             <a target="_blank" href="../sqltryit/trysql_select_like_startend.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>Contains</h2>
-        <p>To return records that contains a specific letter or phrase, add the <code class="w3-codespan">%</code> both before and after the letter or phrase.</p>
+        <h2>Contiene</h2>
+        <p>Para devolver registros que contengan una letra o frase específica, agregue <code class="w3-codespan">%</code> antes y después de la letra o frase.</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Return all customers that contains the phrase 'or'</p>
+            <h3>Ejemplo</h3>
+            <p>Devolver todos los clientes que contienen la frase 'or'</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE CustomerName LIKE '%or%';
@@ -1016,11 +1016,11 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>        <h2>Combine Wildcards</h2>
-        <p>Any wildcard, like <code class="w3-codespan">%</code> and <code class="w3-codespan">_</code> , can be used in combination with other wildcards.</p>
+</div>        <h2>Combinar comodines</h2>
+        <p>Cualquier comodín, como <code class="w3-codespan">%</code> y <code class="w3-codespan">_</code> , se puede utilizar en combinación con otros comodines.</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Return all customers that starts with "a" and are at least 3 characters in length:</p>
+            <h3>Ejemplo</h3>
+            <p>Devolver todos los clientes que comiencen con "a" y tengan al menos 3 caracteres de longitud:</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE CustomerName LIKE 'a__%';
@@ -1028,8 +1028,8 @@
             <a class="w3-btn w3-margin-bottom" href="../sqltryit/trysql_select_like_start_least.html" target="_blank">Try it Yourself &raquo;</a>
         </div>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Return all customers that have "r" in the second position:</p>
+            <h3>Ejemplo</h3>
+            <p>Devuelve todos los clientes que tienen "r" en la segunda posición:</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE CustomerName LIKE '_r%';
@@ -1037,11 +1037,11 @@
             <a target="_blank" href="../sqltryit/trysql_select_like_underscore.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
         </div>
         <hr>
-        <h2>Without Wildcard</h2>
-        <p>If no wildcard is specified, the phrase has to have an exact match to return a result.</p>
+        <h2>Sin comodín</h2>
+        <p>Si no se especifica ningún comodín, la frase debe tener una coincidencia exacta para devolver un resultado.</p>
         <div class="w3-example">
-            <h3>Example</h3>
-            <p>Return all customers from Spain:</p>
+            <h3>Ejemplo</h3>
+            <p>Devolver a todos los clientes de España:</p>
             <div class="w3-code notranslate sqlHigh">
                 SELECT * FROM Customers<br>
                 WHERE Country LIKE 'Spain';
