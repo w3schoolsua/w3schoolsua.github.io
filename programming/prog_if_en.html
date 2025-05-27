@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Programming language lessons. W3Schools also offers free online lessons, tutorials, reference materials, challenges and exercises in most programming and website building languages. Covers the most popular technologies such as HTML, CSS, JavaScript, PHP, Python, SQL, C++, C#, Kotlin, Go, Bootstrap frameworks, W3.CSS and many more'>
+<script src="../lib/vue3.4.21.js"></script>
+<link rel="stylesheet" href="../lib/prism1.css">
+<script src="../lib/prism1.js"></script>
+<link rel="stylesheet" href="../styles/programming.css">
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->    <title>Programming Tutorial. If Statements in Programming. Lessons for beginners. W3Schools in English</title>
+    <meta name='description' content='What is an If Statement? When Should I Use an If Statement? If, Else, and Else If. Nested If Statements. Programming Tutorial. Examples. Lessons for beginners. W3Schools in English'>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        /* Style the track */
+        #vueApp_flowchart_nested input[type='range'] {
+            -webkit-appearance: none; /* Removes default styling */
+            width: 100%; /* Full-width track */
+            height: 8px; /* Height of the track */
+            background: linear-gradient(to right, #059862 0%, #059862 var(--thumb-position), lightgray var(--thumb-position), lightgray 100%);
+            border-radius: 5px; /* Rounded corners */
+            outline: none; /* Removes focus outline */
+            transition: background 0.3s ease; /* Smooth background transition */
+        }
+        /* Style the thumb (slider button) */
+        #vueApp_flowchart_nested input[type='range']::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Removes default thumb styling */
+            appearance: none; /* Ensures cross-browser compatibility */
+            width: 22px; /* Width of the thumb */
+            height: 22px; /* Height of the thumb */
+            background-color: #059862; /* Green thumb */
+            border-radius: 50%; /* Circular thumb */
+            cursor: pointer; /* Pointer cursor on hover */
+            border: 1px solid white; /* Optional border for better visibility */
+        }
+        #vueApp_flowchart_nested input[type='range']::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            background-color: #059862;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #vueApp_flowchart_nested input[type='range']::-ms-thumb {
+            width: 22px;
+            height: 22px;
+            background-color: #059862;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #vueApp_flowchart_nested rect,
+        #vueApp_flowchart_nested text,
+        #vueApp_flowchart_nested path,
+        #vueApp_flowchart_nested line {
+            transition: fill 0.2s ease-in-out, stroke-width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+        }
+        #vueApp_flowchart_nested path {
+            stroke: black;
+        }
+        .darkpagetheme #vueApp_flowchart_nested path {
+            stroke: #ddd;
+        }
+        #vueApp_flowchart_nested rect,
+        #vueApp_flowchart_nested line,
+        #vueApp_flowchart_nested .condition-path {
+            stroke: black;
+            fill: gainsboro;
+        }
+        .darkpagetheme #vueApp_flowchart_nested rect,
+        .darkpagetheme #vueApp_flowchart_nested line,
+        .darkpagetheme #vueApp_flowchart_nested .condition-path {
+            stroke: #ddd;
+            fill: dimgray;
+        }
+        #vueApp_flowchart_nested .arrowhead,
+        #vueApp_flowchart_nested text {
+            fill: black;
+        }
+        .darkpagetheme #vueApp_flowchart_nested .arrowhead,
+        .darkpagetheme #vueApp_flowchart_nested text {
+            fill: #ddd;
+        }
+        #vueApp_flowchart_nested .flow-active {
+            fill: rgb(254, 254, 169);
+        }
+        .darkpagetheme #vueApp_flowchart_nested .flow-active {
+            fill: #193d3d;/*hsl(180,50%,30%);#423a01;*/
+        }
+        .roll-enter-from {
+            opacity: 0;
+            transform: translate(-135px, 0) rotate(-270deg);
+        }
+        .roll-enter-to {
+            opacity: 1;
+            transform: translate(0, 0) rotate(0deg);
+        }
+        .roll-leave-from {
+            opacity: 1;
+        }
+        .roll-leave-to {
+            opacity: 0;
+        }
+        .darkpagetheme #vueApp_ifGame canvas {
+            background-color: transparent;
+        }
+    </style>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BEST SITE FOR WEB DEVELOPERS</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src='https://cse.google.com/cse.js?cx=751c3d18bb8a64f00'></script><div class='gcse-search'></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Menu' aria-label='Open menu'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_en.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_en.html' title='HTML Tutorial'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_en.html' title='CSS Tutorial'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_en.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_en.html' title='SQL Tutorial'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../php/index_en.html' title='PHP Tutorial'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../python/index_en.html' title='Python Tutorial'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../java/index_en.html' title='Java Tutorial'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index_en.html' title='Kotlin Tutorial'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index_en.html' title='Go Tutorial'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index_en.html' title='C Tutorial'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index_en.html' title='C++ Tutorial'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index_en.html' title='C# Tutorial'>C#</a>
+            <a class='w3-bar-item w3-button' href='../ai/index_en.html' title='AI Tutorial'>AI</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_en.html' title='W3.CSS Tutorial'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../typescript/index_en.html' title='TypeScript Tutorial'>TypeScript</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_en.html' title='How To'>HOW TO</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='More tutorials' aria-label='view more tutorials'>More <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Search' aria-label='Site search'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Dark theme' aria-label='Enable the dark theme'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='References' aria-label='Go to References'>REFERENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercises' aria-label='Go to Exercises'>EXERCISES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML & CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_en.html'>Learn HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_en.html'>Learn CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_en.html'>Learn RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_en.html'>Learn Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_en.html'>Learn W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>Learn Colors</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_en.html'>Learn Icons</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_en.html'>Learn Graphics</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_en.html'>Learn SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_en.html'>Learn Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_en.html'>Learn How To</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_en.html'>Learn Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Data Analytics</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index_en.html'>Learn AI</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index_en.html'>Learn Generative AI</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_en.html'>Learn ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index_en.html'>Learn ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index_en.html'>Learn Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                        <a class='w3-bar-item w3-button' href='../dsa/index_en.html'>Learn DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_en.html'>Learn JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_en.html'>Learn React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_en.html'>Learn jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index_en.html'>Learn Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_en.html'>Learn AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_en.html'>Learn JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_en.html'>Learn AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_en.html'>Learn AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_en.html'>Learn W3.JS</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../programming/index_en.html'>Programming Intro</a>
+                    <a class='w3-bar-item w3-button' href='../python/index_en.html'>Learn Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_en.html'>Learn Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_en.html'>Learn C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_en.html'>Learn C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_en.html'>Learn C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_en.html'>Learn R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_en.html'>Learn Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../rust/index_en.html'>Learn Rust</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_en.html'>Learn Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_en.html'>Learn Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_en.html'>Learn TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_en.html'>Learn SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_en.html'>Learn MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index_en.html'>Learn PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_en.html'>Learn PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_en.html'>Learn ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_en.html'>Learn Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_en.html'>Learn Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_en.html'>Learn Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_en.html'>Learn GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../bash/index_en.html'>Learn Bash</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_en.html'>Learn MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_en.html'>Learn AWS Cloud</a>
+                    <h3>Web Building</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_en.html'>Where To Start</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_en.html'>Web Templates</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_en.html'>Web Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_en.html'>Code Editor</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index_en.html'>Code Editors/IDE</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_en.html'>Web Development</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_en.html'>CyberSecurity</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_en.html'>Accessibility</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Typing Speeds Test</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Code Game</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Data Analytics</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_en.html'>Learn AI</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index_en.html'>Learn Generative AI</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_en.html'>Learn ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index_en.html'>Learn ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index_en.html'>Learn Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_en.html'>Learn Machine Learning</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index_en.html'>Learn DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_en.html'>Learn Data Science</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_en.html'>Learn NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_en.html'>Learn Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_en.html'>Learn SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_en.html'>Learn Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_en.html'>Learn Statistics</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_en.html'>Learn Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_en.html'>Learn Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_en.html'>Learn XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_en.html'>Learn XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_en.html'>Learn XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_en.html'>Learn XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_en.html'>Learn XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_en.html'>Learn XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_en.html'>Learn XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_en.html'>Learn XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_en.html'>HTML Tag Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_en.html'>HTML Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_en.html'>HTML Event Reference</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_en.html'>HTML Color Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_en.html'>HTML Attribute Reference</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_en.html'>HTML Canvas Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_en.html'>HTML SVG Reference</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_en.html'>Google Maps Reference</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_en.html'>CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_en.html'>CSS Browser Support</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_en.html'>CSS Selector Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_en.html'>W3.CSS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_en.html'>Icons Reference</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_en.html'>Sass Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>JavaScript Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_en.html'>HTML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_en.html'>AngularJS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_en.html'>AppML Reference</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_en.html'>W3.JS Reference</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_en.html'>JS Ready Scripts</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_en.html'>Python Reference</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_en.html'>Java Reference</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Server Side</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_en.html'>SQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_en.html'>MySQL Reference</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_en.html'>PHP Reference</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_en.html'>ASP Reference</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_en.html'>XML DOM Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_en.html'>XML Http Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_en.html'>XSLT Reference</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_en.html'>XML Schema Reference</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Character Sets</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_en.html'>HTML Character Sets</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_en.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_en.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_en.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_en.html'>HTML Symbols</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_en.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Exercises</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_en.html'>HTML Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_en.html'>CSS Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_en.html'>JavaScript Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_en.html'>SQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_en.html'>MySQL Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_en.html'>PHP Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_en.html'>Python Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_en.html'>NumPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_en.html'>Pandas Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_en.html'>SciPy Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_en.html'>jQuery Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_en.html'>Java Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_en.html'>Bootstrap Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_en.html'>Bootstrap 4 Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_en.html'>C++ Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_en.html'>C# Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_en.html'>R Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_en.html'>Kotlin Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_en.html'>Go Exercises</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_en.html'>Git Exercises</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Quizzes</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_en.html' target='_top'>HTML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_en.html' target='_top'>CSS Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_en.html' target='_top'>JavaScript Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_en.html' target='_top'>SQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_en.html' target='_top'>MySQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_en.html' target='_top'>PHP Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_en.html' target='_top'>Python Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_en.html' target='_top'>NumPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_en.html' target='_top'>Pandas Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_en.html' target='_top'>SciPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_en.html' target='_top'>jQuery Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_en.html' target='_top'>Java Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_en.html' target='_top'>Bootstrap Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_en.html' target='_top'>Bootstrap 4 Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_en.html' target='_top'>C++ Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_en.html' target='_top'>C# Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_en.html' target='_top'>R Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_en.html' target='_top'>XML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_en.html' target='_top'>Cyber Security Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_en.html' target='_top'>Accessibility Quiz</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Certificates</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_en.html' target='_top'>HTML Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_en.html' target='_top'>CSS Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_en.html' target='_top'>JavaScript Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_en.html' target='_top'>SQL Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_en.html' target='_top'>PHP Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_en.html' target='_top'>Python Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_en.html' target='_top'>jQuery Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_en.html' target='_top'>Bootstrap Certificate</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_en.html' target='_top'>XML Certificate</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class="left"><span class="left_h2">Programming</span> Concepts</h2>
+            <a target="_top" href="index_en.html">Intro</a>
+            <a target="_top" href="prog_programming_en.html">Programming</a>
+            <a target="_top" href="prog_variables_en.html">Variables</a>
+            <a target="_top" href="prog_if_en.html">If Statements</a>
+            <a target="_top" href="prog_arrays_en.html">Arrays</a>
+            <a target="_top" href="prog_loops_en.html">Loops</a>
+            <a target="_top" href="prog_functions_en.html">Functions</a>
+            <a target="_top" href="prog_scope_en.html">Scope</a>
+            <a target="_top" href="prog_data_types_en.html">Data Types</a>
+            <a target="_top" href="prog_operators_en.html">Operators</a>
+            <div class="tut_overview">
+                <a target="_top" href="prog_operators_arithmetic_en.html">Arithmetic Operators</a>
+                <a target="_top" href="prog_operators_assignment_en.html">Assignment Operators</a>
+                <a target="_top" href="prog_operators_comparison_en.html">Comparison Operators</a>
+                <a target="_top" href="prog_operators_logical_en.html">Logical Operators</a>
+                <a target="_top" href="prog_operators_bitwise_en.html">Bitwise Operators</a>
+            </div>
+            <a target="_top" href="prog_comments_en.html">Comments</a>
+            <a target="_top" href="prog_bits_and_bytes_en.html">Bits and Bytes</a>
+            <a target="_top" href="prog_binary_numbers_en.html">Binary Numbers</a>
+            <a target="_top" href="prog_hexadecimal_numbers_en.html">Hexadecimal Numbers</a>
+            <a target="_top" href="prog_boolean_algebra_en.html">Boolean Algebra</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index_en.html'><img src='../images1/editors.png' alt='Programming. Lessons for beginners' class='w3-left w3-padding' title='Programming Basic. Lessons for beginners. W3Schools in English' style="width: 100px"></a>    <p class='w3-right'>
+        <a href='prog_if.html' title='Switch to Ukrainian'>Ua</a>
+        <a href='prog_if_es.html' title='Switch to Spanish'>Es</a>
+        <a href='prog_if_de.html' title='Switch to German'>De</a>
+        <a href='prog_if_fr.html' title='Switch to French'>Fr</a>
+    </p>
+    <article>
+        <h1><span class="color_h1">If Statements</span> in Programming</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="prog_variables_en.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="prog_arrays_en.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <div class="ws-info">
+            <p><b>If</b> statements allow your program to make decisions, so it can do different things depending on the situation.</p>
+        </div>
+        <hr>
+        <h2>What is an <b>If</b> Statement?</h2>
+        <p>An <b>if</b> statement runs a block of code if the condition is true.</p>
+        <p>We do similar things in real life, like using an umbrella if it's raining, or wearing a coat if it's cold.</p>
+        <p>See how an <b>if</b> statement works in the simple game below. The goal is to get 6 when you roll the dice.</p>
+        <div id="vueApp_ifGame" style="width: 200px; padding: 30px 20px; position: relative; border: solid black 1px; overflow: hidden;">
+            <canvas id="confettiCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; background-color: transparent;"></canvas>
+            <div style="overflow: visible; height: 47px; display: flex; justify-content: center;">
+                <transition name="roll">
+                    <!--<div v-if="diceResult" style="outline: solid gray 2px; border: solid lightgray 1px; padding: 10px; border-radius: 5px;aspect-ratio: 1; width: 45px; text-align: center; background-color: whitesmoke; overflow: visible; transition: all 0.3s ease-in-out;">{{diceResult}}</div>-->
+                    <img v-if="diceResult" :src="diceImg[diceResult]" alt="Dice" style="width: 45px; height: 45px; transition: opacity 0.1s ease-in-out, transform 0.3s ease-in-out;">
+                </transition>
+            </div>
+            <p v-html="diceText" style="text-align: center; margin: 13px 0;"></p>
+            <div style="display: flex; justify-content: center;">
+                <button @click="rollDice" :disabled="btnDisabled" class="ws-btn">Roll</button>
+            </div>
+        </div>
+        <script>
+            const app_ifGame = Vue.createApp({
+                data() {
+                    return {
+                        diceResult: null,
+                        diceText: "Roll the dice",
+                        diceImg: {
+                            1: "img_dice_1.svg",
+                            2: "img_dice_2.svg",
+                            3: "img_dice_3.svg",
+                            4: "img_dice_4.svg",
+                            5: "img_dice_5.svg",
+                            6: "img_dice_6.svg"
+                        },
+                        btnDisabled: false
+                    }
+                },
+                methods: {
+                    async rollDice() {
+                        this.btnDisabled = true;
+                        this.diceResult = null;
+                        this.diceText = "&nbsp;";
+                        await new Promise(resolve => setTimeout(resolve, 500));
+                        this.diceResult = Math.floor(Math.random() * 6) + 1;
+                        await new Promise(resolve => setTimeout(resolve, 800));
+                        if(this.diceResult === 6) {
+                            this.diceText = "You got 6!🥳";
+                            await new Promise(resolve => setTimeout(resolve, 600));
+                            this.launchConfetti();
+                        } else {
+                            this.diceText = "Try again";
+                        }
+                        this.btnDisabled = false;
+                    },
+                    async launchConfetti() {
+                        const canvas = document.getElementById('confettiCanvas');
+
+                        canvas.confetti = canvas.confetti || (await confetti.create(canvas, { resize: true }));
+
+                        canvas.confetti({
+                            particleCount: 100,
+                            spread: 100,
+                            startVelocity: 25,
+                            origin: { x: 0.5, y: 0.5 },
+                            angle: 90,
+                            decay: 0.9,
+                        });
+                    }
+                }
+            });
+            app_ifGame.mount('#vueApp_ifGame');
+        </script>
+        <p>To make the game do something different depending on the dice result, we use <code class="w3-codespan">if</code> with a condition that checks if the dice result is 6.</p>
+        <p>In case the condition is true, we print "You got 6!" and launch the confetti. And in case the condition is not true, we print "Try again".</p>
+        <p>Here is the flow chart and Python code for the game:</p>
+
+        <div id="vueApp_ifImg" class="vueAppCode" style="width: 100%; overflow: hidden;">
+            <div>
+                <button @click="activeTab = 'flowchart'" :class="['codeTab', { 'codeTab-active': activeTab === 'flowchart' }]" >Flow chart</button>
+                <button @click="activeTab = 'code'" :class="['codeTab', { 'codeTab-active': activeTab === 'code' }]">Code</button>
+            </div>
+            <div class="contentDiv">
+
+                <!-- Flowchart tab -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" width="360" height="300" style="max-width: 100%; height: auto; overflow: visible;" v-show="activeTab === 'flowchart'">
+                    <g transform="translate(147 0)">
+                        <path d="M 15 5 L 50 5 A 1 1 0 0 1 50 30 L 15 30 A 1 1 0 0 1 15 5"
+                              stroke-width="1" fill="gainsboro" class="flowbox"/>
+                        <text x="33" y="22" text-anchor="middle">start</text>
+                    </g>
+
+                    <g transform="translate(-35 0)">
+                        <line x1="215" x2="215" y1="30" y2="60" stroke-width="1" class="arrow" />
+                        <path transform="translate(208 49)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
+                    </g>
+
+                    <g transform="translate(30 60)">
+                        <rect x="55" y="0" width="185" height="30"
+                              stroke-width="1"
+                              fill="gainsboro" class="flowbox" />
+                        <text x="150" y="20" text-anchor="middle" class="svgCode">dice = random(1,6)</text>
+                    </g>
+
+                    <g transform="translate(-35 0)">
+                        <line x1="215" x2="215" y1="90" y2="120" stroke-width="1" class="arrow" />
+                        <path transform="translate(208 117)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
+                    </g>
+
+                    <g transform="translate(-60 119)"> <!-- false arrow -->
+                        <path d="M 110 137 L 110 50 L 171 50" stroke="black" stroke-width="1" fill="none" class="arrow" />
+                        <path transform="translate(103 129) rotate(0)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
+                        <text x="135" y="45" text-anchor="middle" class="txtBoolean" stroke-width="0">false</text>
+                    </g>
+
+                    <g transform="translate(150 119)"> <!-- true arrow -->
+                        <path d="M 150 133 L 150 50 L 99 50" stroke="black" stroke-width="1" fill="none" class="arrow" />
+                        <path transform="translate(143 129)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
+                        <text x="115" y="45" text-anchor="left" class="txtBoolean" stroke-width="0">true</text>
+                    </g>
+                    <g transform="translate(-55 260)">
+                        <rect x="60" y="0" width="100" height="30"
+                              stroke-width="1"
+                              fill="gainsboro" class="flowbox"/>
+                        <text x="110" y="20" text-anchor="middle" class="svgCode">Try again</text>
+                    </g>
+                    <g transform="translate(175 260)">
+                        <rect x="65" y="0" width="110" height="30"
+                              stroke-width="1"
+                              fill="gainsboro" class="flowbox"/>
+                        <text x="120" y="20" text-anchor="middle" class="svgCode">You got 6!</text>
+                    </g>
+
+                    <rect x="-15" y="-15" width="390" height="335" @click="highlight('none')" fill="transparent" />
+                    <!-- Condition 'rgb(252, 252, 113)' -->
+                    <g transform="translate(90 119)"
+                       @click="highlight('condition')"
+                       @mouseover="setHover('condition')"
+                       @mouseleave="clearHover()"
+                       :class="[
+            'svgSection',
+            {
+                'svgSection-hover': currentHover === 'condition',
+                'svgSection-active': highlighted === 'condition'
+            }
+        ]" >
+                        <path d="M 20 50 L 90 10 L 160 50 L 90 90 L 20 50"
+                              stroke-width="1"
+                              :fill="highlighted === 'condition' ? 'rgb(254, 254, 169)' : (currentHover === 'condition' ? 'lightyellow' : 'gainsboro')" class="flowbox"/>
+                        <text x="90" y="36" text-anchor="middle" class="svgCode"></text>
+                        <text x="90" y="56" text-anchor="middle" class="svgCode">dice == 6?</text>
+                        <text x="90" y="76" text-anchor="middle" class="svgCode"></text>
+                        <rect x="149" y="-14" width="90" height="27" />
+                        <path transform="translate(-10 25)" d="M 125 10 L 160 -20" class="behind" />
+                        <path transform="translate(-10 25)" d="M 125 10 L 160 -20" class="front" />
+                        <text x="154" y="6" text-anchor="left" class="svgExplainText">Condition</text>
+                    </g>
+                </svg>
+                <!-- Code tab -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 225" width="420" height="225" style="max-width: 100%; overflow: visible;" v-show="activeTab === 'code'" >
+                    <g class="svgCode" transform="translate(10, 10)">
+                        <rect x="0" y="0" width="260" height="190" fill="#EEE"/>
+                        <rect x="0" y="0" width="4" height="190" fill="#04AA6D"/>
+                        <text x="15" y="20" text-anchor="left" font-size="15">dice = random.randint(1,6)</text>
+                        <text x="15" y="50" text-anchor="left" font-size="15" class="svgCode">if</text>
+                        <text x="15" y="135" text-anchor="left" font-size="15" class="svgCode">else:</text>
+                    </g>
+                    <rect x="-15" y="-15" width="450" height="260" @click="highlight('none')" fill="transparent" />
+
+                    <!-- Condition -->
+                    <g transform="translate(-90 -25)"
+                       @click="highlight('condition')"
+                       @mouseover="setHover('condition')"
+                       @mouseleave="clearHover()"
+                       :class="[
+        'svgSection',
+        {
+            'svgSection-hover': currentHover === 'condition',
+            'svgSection-active': highlighted === 'condition'
+        }
+    ]" >
+                        <rect x="144" y="70" width="83" height="22"/>
+                        <text x="145" y="85" text-anchor="left" font-size="15" class="svgCode">dice == 6:</text>
+                        <rect x="395" y="48" width="90" height="27" />
+                        <text x="400" y="68" text-anchor="left" class="svgExplainText">Condition</text>
+                        <path d="M 200 70 L 200 63 L 394 63" class="behind" />
+                        <path d="M 200 70 L 200 63 L 394 63" class="front" />
+                        <!-- M 143 75 L 143 70 L 307 70 L 307 74 -->
+                    </g>
+
+                    <!-- code true -->
+                    <g transform="translate(-90 -20)"
+                       @click="highlight('trueCode')"
+                       @mouseover="setHover('trueCode')"
+                       @mouseleave="clearHover()"
+                       :class="[
+        'svgSection',
+        {
+            'svgSection-hover': currentHover === 'trueCode',
+            'svgSection-active': highlighted === 'trueCode'
+        }
+    ]" >
+                        <rect x="150" y="93" width="200" height="51"/>
+                        <text x="152" y="110" text-anchor="left" font-size="15" class="svgCode">print('You got 6!🥳')</text>
+                        <text x="152" y="135" text-anchor="left" font-size="15" class="svgCode">launchConfetti()</text>
+                        <rect x="393" y="93" width="105" height="67" />
+                        <text x="400" y="114" text-anchor="left" class="svgExplainText">Code runs</text>
+                        <text x="400" y="134" text-anchor="left" class="svgExplainText">if condition</text>
+                        <text x="400" y="154" text-anchor="left" class="svgExplainText">is true</text>
+                        <path d="M 346 106 L 394 106" class="behind" />
+                        <path d="M 346 106 L 394 106" class="front" />
+                        <!-- M 302 94 L 307 94 L 307 118 L 302 118 -->
+                    </g>
+
+                    <!-- code false -->
+                    <g transform="translate(-90 40)"
+                       @click="highlight('falseCode')"
+                       @mouseover="setHover('falseCode')"
+                       @mouseleave="clearHover()"
+                       :class="[
+        'svgSection',
+        {
+            'svgSection-hover': currentHover === 'falseCode',
+            'svgSection-active': highlighted === 'falseCode'
+        }
+    ]" >
+                        <rect x="150" y="120" width="170" height="22"/>
+                        <text x="152" y="135" text-anchor="left" font-size="15" class="svgCode">print('Try again')</text>
+                        <rect x="393" y="120" width="105" height="72" />
+                        <text x="400" y="138" text-anchor="left" class="svgExplainText">Code runs</text>
+                        <text x="400" y="158" text-anchor="left" class="svgExplainText">if condition</text>
+                        <text x="400" y="178" text-anchor="left" class="svgExplainText">is false</text>
+                        <path d="M 317 130 L 394 130" class="behind" />
+                        <path d="M 317 130 L 394 130" class="front" />
+                        <!-- M 346 94 L 351 94 L 351 118 L 346 118 -->
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <script>
+            const app_ifImg = Vue.createApp({
+                data() {
+                    return {
+                        highlighted: 'condition',
+                        currentHover: null,
+                        activeTab: 'flowchart'
+                    };
+                },
+                watch: {
+
+                },
+                computed: {
+
+                },
+                methods: {
+                    highlight(section){
+                        //console.log("Highlighting section: "+section);
+                        this.highlighted = section;
+                    },
+                    setHover(section) {
+                        this.currentHover = section; // Set the hovered section
+                    },
+                    clearHover() {
+                        this.currentHover = null; // Clear hover state
+                    }
+                },
+                async mounted(){
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                }
+            });
+
+            app_ifImg.mount('#vueApp_ifImg');
+        </script>
+        <p>We must use <code class="w3-codespan">else</code> in the code above, to handle the case when the dice is not 6, so that we can write "Try again".</p>
+        <p>Click the "Run Example" button below to see the dice rolling code in action.</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>dice = random.randint(1,6)
+print('You rolled a ' + str(dice))
+
+if dice == 6:
+  print('You got 6!🥳')
+else:
+  print('Try again')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const dice = Math.floor(Math.random() * 6) + 1;
+console.log('You rolled a ' + dice);
+
+if (dice == 6) {
+  console.log('You got 6!🥳');
+} else {
+  console.log('Try again');
+}
+</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int dice = random.nextInt(6) + 1;
+System.out.println("You rolled a " + dice);
+
+if (dice == 6) {
+  System.out.println("You got 6!🥳");
+} else {
+  System.out.println("Try again");
+}
+</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int dice = rand() % 6 + 1;
+cout &lt;&lt; "You rolled a " + to_string(dice) + "\\n";
+
+if (dice == 6) {
+  cout &lt;&lt; "You got 6!🥳\\n";
+} else {
+  cout &lt;&lt; "Try again\\n";
+}
+</code></pre>
+
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_dice.html">Run Example &raquo;</a>
+        </div>
+        <hr>
+        <h2>When Should I Use an If Statement?</h2>
+        <p>When you want your program to do something different depending on the situation, you should use an if statement.</p>
+        <p>For example, in case you want your program to print "Welcome!" when the user enters the correct password, and "Access denied" when the user enters the wrong password, you should use an if statement.</p>
+        <hr>
+        <h2>If, Else, and Else If</h2>
+        <div class="ws-info">
+            <p>An if-statement allways starts with an <code class="w3-codespan">if</code>.</p>
+            <p>An if-statement can contain zero or many <code class="w3-codespan">else if</code>, and zero or one <code class="w3-codespan">else</code>.</p>
+            <p>When <code class="w3-codespan">else</code> is present, it has to come last, after all the <code class="w3-codespan">else if</code>.</p>
+            <p>The <code class="w3-codespan">else</code> statement ensures that one (and only one) of the code blocks will execute.</p>
+        </div>
+        <p>Sometimes it is enough to just use a single <code class="w3-codespan">if</code>, like this:</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 32
+print('Age: ' + str(age))
+
+if age &gt; 17:
+  print('You are an adult!')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 32;
+console.log('Age: ' + age);
+
+if (age &gt; 17) {
+  console.log('You are an adult!');
+}
+</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 32;
+System.out.println("Age: " + age);
+
+if (age &gt; 17) {
+  System.out.println("You are an adult!");
+}
+</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 32;
+cout &lt;&lt; "Age: " + to_string(age) + "\\n";
+
+if (age &gt; 17) {
+  cout &lt;&lt; "You are an adult!\\n";
+}
+</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_if.html">Run Example &raquo;</a>
+        </div>
+        <p>But usually, we also want to handle the case when the condition is not true, so we use an <code class="w3-codespan">else</code> statement for that.</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 10
+print('Age: ' + str(age))
+
+if age &gt; 17:
+  print('You are an adult!')
+else:
+  print('You are not an adult yet.')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 10;
+console.log('Age: ' + age);
+
+if (age &gt; 17) {
+  console.log('You are an adult!');
+} else {
+  console.log('You are not an adult yet.');
+}
+</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 10;
+System.out.println("Age: " + age);
+
+if (age &gt; 17) {
+  System.out.println("You are an adult!");
+} else {
+  System.out.println("You are not an adult yet.");
+}
+</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 10;
+cout &lt;&lt; "Age: " + to_string(age) + "\\n";
+
+if (age &gt; 17) {
+  cout &lt;&lt; "You are an adult!\\n";
+} else {
+  cout &lt;&lt; "You are not an adult yet.\\n";
+}
+</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_else.html">Run Example &raquo;</a>
+        </div>
+        <p>The code block that belongs to the <code class="w3-codespan">else</code> will only be executed in case the condition in the <code class="w3-codespan">if</code> is false.</p>
+        <p>We can also use <code class="w3-codespan">else if</code> to check more than one condition, so that we get more than two outcomes.</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 15
+print('Age: ' + str(age))
+
+if age &lt; 13:
+  print('You are a child')
+elif age &lt; 20:
+  print('You are a teenager')
+else:
+  print('You are an adult')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 15;
+console.log('Age: ' + age);
+
+if (age &lt; 13) {
+  console.log('You are a child');
+} else if (age &lt; 20) {
+  console.log('You are a teenager');
+} else {
+  console.log('You are an adult');
+}
+</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 15;
+System.out.println("Age: " + age);
+
+if (age &lt; 13) {
+  System.out.println("You are a child");
+} else if (age &lt; 20) {
+  System.out.println("You are a teenager");
+} else {
+  System.out.println("You are an adult");
+}
+</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 15;
+cout &lt;&lt; "Age: " + to_string(age) + "\\n";
+
+if (age &lt; 13) {
+  cout &lt;&lt; "You are a child";
+} else if (age &lt; 20) {
+  cout &lt;&lt; "You are a teenager";
+} else {
+  cout &lt;&lt; "You are an adult";
+}
+</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_elseif.html">Run Example &raquo;</a>
+        </div>
+        <p>You can only have one <code class="w3-codespan">if</code> statement, and only one <code class="w3-codespan">else</code> statement, but you can have as many <code class="w3-codespan">else if</code> statements as you want.</p>
+        <p>Also, the <code class="w3-codespan">if</code> is always first, the <code class="w3-codespan">else</code> is always last, and the <code class="w3-codespan">else if</code> statements are in between.</p>
+        <hr>
+        <h2>Nested If Statements</h2>
+        <p>A nested if statement is an if statement inside another if statement.</p>
+        <p>Nested if statements are useful in cases where you want to check a condition, only if another condition is true.</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 19
+print('Age: ' + str(age))
+
+if age < 13:
+  print('You are a child')
+elif age < 20:
+  print('You are a teenager')
+  if age > 17:
+    print('and an adult!')
+else:
+  print('You are an adult')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 19;
+console.log('Age: ' + age);
+
+if (age < 13) {
+  console.log('You are a child');
+} else if (age < 20) {
+  console.log('You are a teenager');
+  if (age > 17) {
+    console.log('and an adult!');
+  }
+} else {
+  console.log('You are an adult');
+}</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 19;
+System.out.println("Age: " + age);
+
+if (age < 13) {
+  System.out.println("You are a child");
+} else if (age < 20) {
+  System.out.println("You are a teenager");
+  if (age > 17) {
+    System.out.println("and an adult!");
+  }
+} else {
+  System.out.println("You are an adult");
+}</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 19;
+cout << "Age: " + to_string(age) + "\n";
+
+if (age < 13) {
+  cout << "You are a child";
+} else if (age < 20) {
+  cout << "You are a teenager";
+  if (age > 17) {
+    cout << "\nand an adult!";
+  }
+} else {
+  cout << "You are an adult";
+}</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_nested.html">Run Example &raquo;</a>
+        </div>
+        <p>In the code above, the nested if statement allows us to filter out the special case of ages 18 and 19, when you are both a teenager and an adult.</p>
+        <div id="vueApp_flowchart_nested" class="" style="width: 100%; max-width: 425px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" width="420" height="360" style="max-width: 100%; height: auto;">
+                <!--<g transform="translate(182 0)">
+        <path d="M 15 5 L 50 5 A 1 1 0 0 1 50 30 L 15 30 A 1 1 0 0 1 15 5" stroke="black"
+        stroke-width="1" fill="gainsboro"/>
+        <text x="33" y="22" text-anchor="middle">start</text>
+    </g>
+
+    <line x1="215" x2="215" y1="30" y2="60" stroke="black" stroke-width="1" />
+    <path transform="translate(208 49)" d="M 12 2 L 2 2 L 7 11 z" stroke="black" stroke-width="0" fill="black" />-->
+                <g transform="translate(5 10)">
+                    <rect x="97" y="0" width="100" height="30"
+                          :stroke-width="isSliding ? 2 : 1"
+                          :class="{'flow-active': isSliding}" />
+                    <text x="150" y="20" text-anchor="middle" class="svgCode">age = {{age}}&nbsp;</text>
+                </g>
+                <g transform="translate(-60 0)">
+                    <line x1="215" x2="215" y1="40" y2="70" :stroke-width="isSliding ? 2 : 1" />
+                    <path class="arrowhead" transform="translate(208 67)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                </g>
+                <!-- Condition 1 -->
+                <g transform="translate(65 79)" >
+                    <path class="condition-path" d="M 30 25 L 90 0 L 150 25 L 90 50 L 30 25"
+                          stroke-width="1.5"/>
+                    <text x="90" y="30" text-anchor="middle" class="svgCode">age &lt; 13</text>
+                </g>
+                <!-- true arrow 1 -->
+                <g transform="translate(-5 54)" :opacity="state === 'child' ? 1 : 0.3">
+                    <path d="M 58 73 L 58 50 L 100 50" :stroke-width="state === 'child' ? 2 : 1" fill="none" />
+                    <path class="arrowhead" transform="translate(51 69)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                    <text x="65" y="45" text-anchor="left" :opacity="state === 'child' ? 1 : 0">true</text>
+                </g>
+                <g transform="translate(-70 135)" :opacity="state === 'child' ? 1 : 0.3">
+                    <rect x="75" y="0" width="90" height="30"
+                          :stroke-width="state === 'child' ? 2 : 1"
+                          :class="{'flow-active': state === 'child'}" />
+                    <text x="120" y="20" text-anchor="middle" class="svgCode">'child'</text>
+                </g>
+                <!-- false arrow 1 -->
+                <g transform="translate(165 54)" :opacity="state !== 'child' ? 1 : 0.3">
+                    <path d="M 100 97 L 100 50 L 49 50" :stroke-width="state !== 'child' ? 2 : 1" fill="none" />
+                    <path class="arrowhead" transform="translate(93 89) rotate(0)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                    <text x="74" y="45" text-anchor="middle" :opacity="state !== 'child' ? 1 : 0">false</text>
+                </g>
+                <!-- false arrow 2 -->
+                <g transform="translate(247 130)" :opacity="state === 'adult' ? 1 : 0.3">
+                    <path d="M 120 77 L 120 50 L 74 50" :stroke-width="state === 'adult' ? 2 : 1" fill="none" />
+                    <path class="arrowhead" transform="translate(113 69) rotate(0)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                    <text x="95" y="45" text-anchor="middle" :opacity="state === 'adult' ? 1 : 0">false</text>
+                </g>
+                <!-- Condition 2 -->
+                <g transform="translate(174 155)" :opacity="state !== 'child' ? 1 : 0.3">
+                    <path class="condition-path" d="M 30 25 L 90 0 L 150 25 L 90 50 L 30 25"
+                          :stroke-width="state !== 'child' ? 1.5 : 1"
+                          fill="gainsboro"/>
+                    <text x="90" y="30" text-anchor="middle" class="svgCode">age &lt; 20</text>
+                </g>
+                <!-- true arrow 2 -->
+                <g transform="translate(25 130)" :opacity="state === 'teen' || state === 'and adult' ? 1 : 0.3">
+                    <path d="M 140 73 L 140 50 L 181 50" :stroke-width="state === 'teen' || state === 'and adult' ? 2 : 1" fill="none" />
+                    <path class="arrowhead" transform="translate(133 69)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                    <text x="146" y="45" text-anchor="left" :opacity="state === 'teen' || state === 'and adult' ? 1 : 0">true</text>
+                </g>
+                <g transform="translate(55 211)" :opacity="state === 'teen' || state === 'and adult' ? 1 : 0.3">
+                    <rect x="65" y="0" width="90" height="30"
+                          :stroke-width="state === 'teen' || state === 'and adult' ? 2 : 1"
+                          :class="{'flow-active': state === 'teen' || state === 'and adult'}" />
+                    <text x="110" y="20" text-anchor="middle" class="svgCode">'teen'</text>
+                </g>
+                <!-- arrow, straight down -->
+                <g transform="translate(-50 200)" :opacity="state === 'teen' || state === 'and adult' ? 1 : 0.3">
+                    <line x1="215" x2="215" y1="40" y2="60" :stroke-width="state === 'teen' || state === 'and adult' ? 2 : 1" />
+                    <path class="arrowhead" transform="translate(208 57)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                </g>
+                <!-- Condition 3 -->
+                <g transform="translate(75 269)" :opacity="state === 'and adult' || state === 'teen' ? 1 : 0.3">
+                    <path class="condition-path" d="M 30 25 L 90 0 L 150 25 L 90 50 L 30 25"
+                          :stroke-width="state === 'teen' || state === 'and adult' ? 1.5 : 1"/>
+                    <text x="90" y="30" text-anchor="middle" class="svgCode">age > 17</text>
+                </g>
+                <!-- true arrow 3 -->
+                <g transform="translate(126 244)" :opacity="state === 'and adult' ? 1 : 0.3">
+                    <path d="M 140 73 L 140 50 L 99 50" :stroke-width="state === 'and adult' ? 2 : 1" fill="none" />
+                    <path class="arrowhead" transform="translate(133 69)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                    <text x="105" y="45" text-anchor="left" :opacity="state === 'and adult' ? 1 : 0">true</text>
+                </g>
+                <g transform="translate(160 325)" :opacity="state === 'and adult' ? 1 : 0.3">
+                    <rect x="55" y="0" width="110" height="30"
+                          :stroke-width="state === 'and adult' ? 2 : 1"
+                          :class="{'flow-active': state === 'and adult'}" />
+                    <text x="110" y="20" text-anchor="middle" class="svgCode">'and adult'</text>
+                </g>
+                <g transform="translate(260 211)" :opacity="state === 'adult' ? 1 : 0.3">
+                    <rect x="65" y="0" width="90" height="30"
+                          :stroke-width="state === 'adult' ? 2 : 1"
+                          :class="{'flow-active': state === 'adult'}" />
+                    <text x="110" y="20" text-anchor="middle" class="svgCode">'adult'</text>
+                </g>
+            </svg>
+            <div style="display: flex; justify-content: flex-start;">
+                <div style="margin-left: 90px;">
+                    <p style="margin-bottom: 0;">
+                        <input
+                                type="range"
+                                min="7"
+                                max="25"
+                                step="1"
+                                v-model.number="age"
+                                style="width: 100%;"
+                                @mousedown="isSliding = true"
+                                @mouseup="isSliding = false"
+                                @mouseleave="isSliding = false"
+                        /><!--{{age}}--></p>
+                    <p style="text-align: center; margin-top: 5px;">Age</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const app_flowchart_nested = Vue.createApp({
+                data() {
+                    return {
+                        state: 'and adult',
+                        age: 19,
+                        isSliding: false
+                    };
+                },
+                watch: {
+                    age(newVal) {
+                        if(newVal < 13) {
+                            this.state = 'child';
+                        } else if(newVal < 20) {
+                            this.state = 'teen';
+                            if(newVal > 17) {
+                                this.state = 'and adult';
+                            }
+                        } else {
+                            this.state = 'adult';
+                        }
+                    },
+                    thumbPosition(newValue) {
+                        // Update the CSS variable when the thumb position changes
+                        document.documentElement.style.setProperty('--thumb-position', newValue);
+                    },
+                },
+                computed: {
+                    thumbPosition() {
+                        // Calculate the percentage position of the thumb
+                        const range = 25 - 7;
+                        return ((this.age - 7) / range) * 100 + '%';
+                    },
+                },
+                mounted(){
+                    document.documentElement.style.setProperty('--thumb-position', '67%');
+                }
+            });
+            app_flowchart_nested.mount('#vueApp_flowchart_nested');
+        </script>
+        <p>In the flowchart above, we can see that the code block for <code class="w3-codespan">age > 17</code> is only executed if the <code class="w3-codespan">age</code> is 18 or 19.</p>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="prog_variables_en.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="prog_arrays_en.html">Next &#10095;</a>
+        </div>
+    </article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    </div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">PROGRAMMING</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../programming/index_en.html' class='btn-rightbar'>Programming Intro</a>
+            <a href='../python/index_en.html' class='btn-rightbar'>Python</a>
+            <a href='../django/index_en.html' class='btn-rightbar'>Django</a>
+            <a href='../java/index_en.html' class='btn-rightbar'>Java</a>
+            <a href='../kotlin/index_en.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../js/index_en.html' class='btn-rightbar'>JavaScript</a>
+            <a href='../typescript/index_en.html' class='btn-rightbar'>TypeScript</a>
+            <a href='../c/index_en.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index_en.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index_en.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index_en.html' class='btn-rightbar'>R</a>
+            <a href='../rust/index_en.html' class='btn-rightbar'>Rust</a>
+            <a href='../go/index_en.html' class='btn-rightbar'>Go</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="All online guides on the site">SERVER-SIDE</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index_en.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index_en.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index_en.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index_en.html' class='btn-rightbar'>ASP & ASP.NET</a>
+            <a href='../nodejs/index_en.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi_en.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index_en.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index_en.html' class='btn-rightbar'>GitHub Pages</a>
+            <a href='../bash/index_en.html' class='btn-rightbar'>Bash</a>
+            <a href='../mongodb/index_en.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index_en.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Place for your advertisement!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>CONTACTS</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none'>PRINT PAGE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index_en.html' target='_top' style='text-decoration:none'>BLOG</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index_en.html' target='_top' style='text-decoration:none'>ABOUT</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Contacts</h2>
+      <p>If you want to report a bug, as well as make an offer for the site, add an ad or advertisement on the site, do not hesitate to email the admin:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Tutorial</h4>
+        <a href='../html/index_en.html'>HTML Tutorial</a><br>
+        <a href='../css/index_en.html'>CSS Tutorial</a><br>
+        <a href='../js/index_en.html'>JavaScript Tutorial</a><br>
+        <a href='../sql/index_en.html'>SQL Tutorial</a><br>
+        <a href='../python/index_en.html'>Python Tutorial</a><br>
+        <a href='../php/index_en.html'>PHP Tutorial</a><br>
+        <a href='../w3css/index_en.html'>W3.CSS Tutorial</a><br>
+        <a href='../appml/index_en.html'>AppML Tutorial</a><br>
+        <a href='../jquery/index_en.html'>jQuery Tutorial</a><br>
+        <a href='../angular/index_en.html'>Angular Tutorial</a><br>
+        <a href='../sass/index_en.html'>Sass Tutorial</a><br>
+        <a href='../java/index_en.html'>Java Tutorial</a><br>
+        <a href='../kotlin/index_en.html'>Kotlin Tutorial</a><br>
+        <a href='../c/index_en.html'>C Tutorial</a><br>
+        <a href='../cpp/index_en.html'>C++ Tutorial</a><br>
+        <a href='../cs/index_en.html'>C# Tutorial</a><br>
+        <a href='../chatgpt-3-5/index_en.html'>ChatGPT-3.5 Tutorial</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top References</h4>
+        <a href='../tags/index_en.html'>HTML Reference</a><br>
+        <a href='../cssref/index_en.html'>CSS Reference</a><br>
+        <a href='../jsref/index_en.html'>JavaScript Reference</a><br>
+        <a href='../sql/sql_ref_keywords_en.html'>SQL Reference</a><br>
+        <a href='../python/python_reference_en.html'>Python Reference</a><br>
+        <a href='../php/php_ref_overview_en.html'>PHP Reference</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_en.html'>Bootstrap 3 Reference</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_en.html'>Bootstrap 4 Reference</a><br>
+        <a href='../w3css/w3css_references_en.html'>W3.CSS Reference</a><br>
+        <a href='../appml/appml_reference_en.html'>Appml Reference</a><br>
+        <a href='../jquery/jquery_ref_overview_en.html'>jQuery Reference</a><br>
+        <a href='../angular/angular_ref_directives_en.html'>Angular Reference</a><br>
+        <a href='../sass/sass_functions_string_en.html'>Sass Reference</a><br>
+        <a href='../java/java_ref_keywords_en.html'>Java Reference</a><br>
+        <a href='../colors/colors_names_en.html'>Colors Reference</a><br>
+        <a href='../icons/icons_reference_en.html'>Icons Reference</a><br>
+        <a href='../graphics/svg_reference_en.html'>SVG Reference</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top Examples</h4>
+        <a href='../html/html_examples_en.html'>HTML Examples</a><br>
+        <a href='../css/css_examples_en.html'>CSS Examples</a><br>
+        <a href='../js/js_examples_en.html'>JavaScript Examples</a><br>
+        <a href='../sql/sql_examples_en.html'>SQL Examples</a><br>
+        <a href='../python/python_examples_en.html'>Python Examples</a><br>
+        <a href='../php/php_examples_en.html'>PHP Examples</a><br>
+        <a href='../bootstrap/bootstrap_examples_en.html'>Bootstrap Examples</a><br>
+        <a href='../w3css/w3css_examples_en.html'>W3.CSS Examples</a><br>
+        <a href='../jquery/jquery_examples_en.html'>jQuery Examples</a><br>
+        <a href='../angular/angular_examples_en.html'>Angular Examples</a><br>
+        <a href='../java/java_examples_en.html'>Java Examples</a><br>
+        <a href='../kotlin/kotlin_examples_en.html'>Kotlin Examples</a><br>
+        <a href='../c/c_examples_en.html'>C Examples</a><br>
+        <a href='../cpp/cpp_examples_en.html'>C++ Examples</a><br>
+        <a href='../cs/cs_examples_en.html'>C# Examples</a><br>
+        <a href='../xml/xml_examples_en.html'>XML Examples</a><br>
+        <a href='../howto/index_en.html'>How To Examples</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_en.html'>Web Certificates</a></h4>
+        <a href='../cert/cert_html_en.html'>HTML Certificate</a><br>
+        <a href='../cert/cert_css_en.html'>CSS Certificate</a><br>
+        <a href='../cert/cert_javascript_en.html'>JavaScript Certificate</a><br>
+        <a href='../cert/cert_frontend_en.html'>Front End Certificate</a><br>
+        <a href='../cert/cert_python_en.html'>Python Certificate</a><br>
+        <a href='../cert/cert_datascience_en.html'>Data Science Certificate</a><br>
+        <a href='../cert/cert_jquery_en.html'>jQuery Certificate</a><br>
+        <a href='../cert/cert_sql_en.html'>SQL Certificate</a><br>
+        <a href='../cert/cert_php_en.html'>PHP Certificate</a><br>
+        <a href='../cert/cert_java_en.html'>Java Certificate</a><br>
+        <a href='../cert/cert_c_en.html'>C Certificate</a><br>
+        <a href='../cert/cert_cpp_en.html'>C++ Certificate</a><br>
+        <a href='../cert/cert_cs_en.html'>C# Certificate</a><br>
+        <a href='../cert/cert_bootstrap_en.html'>Bootstrap Certificate</a><br>
+        <a href='../cert/cert_xml_en.html'>XML Certificate</a><br>
+        <a href='../cert/career_tips_en.html'>Career planning</a><br>
+        <a href='../cert/career_cv_en.html'>Writing a résumé</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>This site is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our <a href='../about/about_copyright_en.html'>terms of use</a>, <a href='../about/about_privacy_en.html'>cookie and privacy policy</a>.<br>
+   Versions of the site in other languages are also available:
+   <a href='../index.html' title='W3Schools in Ukrainian'><strong>Ukrainian</strong></a>,
+   <a href='../index_es.html' title='W3Schools in Spanish'><strong>Spanish</strong></a>,
+   <a href='../index_de.html' title='W3Schools in German'><strong>German</strong></a>,
+   <a href='../index_fr.html' title='W3Schools in French'><strong>French</strong></a>.<br>
+    <a href='../about/about_copyright_en.html'>Copyright 1999-2026</a> by Refsnes Data. All Rights Reserved. <a href='../w3css/index_en.html'>W3Schools is Powered by W3.CSS</a>.<br>
+      You can use other reputable web development and programming learning resources:<br>
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+      <a href='https://developer.mozilla.org/en-US/' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+      <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+      <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+      <br><br>
+      <a href='../index_en.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>

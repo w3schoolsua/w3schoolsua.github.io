@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Основи програмування. W3Schools також пропонує безкоштовні онлайн-уроки, навчальні посібники, довідкові матеріали, завдання та вправи на більшості мов програмування та створення веб-сайтів. Охоплює найпопулярніші технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато іншого'>
+<script src="../lib/vue3.4.21.js"></script>
+<link rel="stylesheet" href="../lib/prism1.css">
+<script src="../lib/prism1.js"></script>
+<link rel="stylesheet" href="../styles/programming.css">
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->    <title>Підручник з програмування. Інструкції If в програмуванні. Уроки для початківців. W3Schools українською</title>
+    <meta name='description' content='Що таке інструкція If? Коли слід використовувати інструкцію If? If, Else та Else If. Вкладені інструкції If. Підручник з програмування. Приклади. Відеоуроки. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        /* Style the track */
+        #vueApp_flowchart_nested input[type='range'] {
+            -webkit-appearance: none; /* Removes default styling */
+            width: 100%; /* Full-width track */
+            height: 8px; /* Height of the track */
+            background: linear-gradient(to right, #059862 0%, #059862 var(--thumb-position), lightgray var(--thumb-position), lightgray 100%);
+            border-radius: 5px; /* Rounded corners */
+            outline: none; /* Removes focus outline */
+            transition: background 0.3s ease; /* Smooth background transition */
+        }
+        /* Style the thumb (slider button) */
+        #vueApp_flowchart_nested input[type='range']::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Removes default thumb styling */
+            appearance: none; /* Ensures cross-browser compatibility */
+            width: 22px; /* Width of the thumb */
+            height: 22px; /* Height of the thumb */
+            background-color: #059862; /* Green thumb */
+            border-radius: 50%; /* Circular thumb */
+            cursor: pointer; /* Pointer cursor on hover */
+            border: 1px solid white; /* Optional border for better visibility */
+        }
+        #vueApp_flowchart_nested input[type='range']::-moz-range-thumb {
+            width: 22px;
+            height: 22px;
+            background-color: #059862;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #vueApp_flowchart_nested input[type='range']::-ms-thumb {
+            width: 22px;
+            height: 22px;
+            background-color: #059862;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #vueApp_flowchart_nested rect,
+        #vueApp_flowchart_nested text,
+        #vueApp_flowchart_nested path,
+        #vueApp_flowchart_nested line {
+            transition: fill 0.2s ease-in-out, stroke-width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+        }
+        #vueApp_flowchart_nested path {
+            stroke: black;
+        }
+        .darkpagetheme #vueApp_flowchart_nested path {
+            stroke: #ddd;
+        }
+        #vueApp_flowchart_nested rect,
+        #vueApp_flowchart_nested line,
+        #vueApp_flowchart_nested .condition-path {
+            stroke: black;
+            fill: gainsboro;
+        }
+        .darkpagetheme #vueApp_flowchart_nested rect,
+        .darkpagetheme #vueApp_flowchart_nested line,
+        .darkpagetheme #vueApp_flowchart_nested .condition-path {
+            stroke: #ddd;
+            fill: dimgray;
+        }
+        #vueApp_flowchart_nested .arrowhead,
+        #vueApp_flowchart_nested text {
+            fill: black;
+        }
+        .darkpagetheme #vueApp_flowchart_nested .arrowhead,
+        .darkpagetheme #vueApp_flowchart_nested text {
+            fill: #ddd;
+        }
+        #vueApp_flowchart_nested .flow-active {
+            fill: rgb(254, 254, 169);
+        }
+        .darkpagetheme #vueApp_flowchart_nested .flow-active {
+            fill: #193d3d;/*hsl(180,50%,30%);#423a01;*/
+        }
+        .roll-enter-from {
+            opacity: 0;
+            transform: translate(-135px, 0) rotate(-270deg);
+        }
+        .roll-enter-to {
+            opacity: 1;
+            transform: translate(0, 0) rotate(0deg);
+        }
+        .roll-leave-from {
+            opacity: 1;
+        }
+        .roll-leave-to {
+            opacity: 0;
+        }
+        .darkpagetheme #vueApp_ifGame canvas {
+            background-color: transparent;
+        }
+    </style>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню' aria-label='Відкрити меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index.html' title='Kotlin Підручник'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index.html' title='C Підручник'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index.html' title='C++ Підручник'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index.html' title='C# Підручник'>C#</a>
+            <a class='w3-bar-item w3-button' href='../ai/index.html' title='AI Підручник'>AI</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../typescript/index.html' title='TypeScript Підручник'>TypeScript</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='Як зробити'>Як зробити?</a>
+            <a class='w3-bar-item w3-button w3-left' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники' aria-label='Перейти в розділ Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників' aria-label='Переглянути більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті' aria-label='Пошук по сайту'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темну тему' aria-label='Увімкнути темну тему'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи' aria-label='Перейти в розділ Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../programming/index.html'>Програмування Інтро</a>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../rust/index.html'>Вивчити Rust</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index.html'>Вивчити PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../bash/index.html'>Вивчити Bash</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index.html'>Редактори коду / IDE</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class='left'><span class='left_h2'>Концепції</span> програмування</h2>
+            <a target='_top' href='index.html'>Інтро</a>
+            <a target='_top' href='prog_programming.html'>Програмування</a>
+            <a target='_top' href='prog_variables.html'>Змінні</a>
+            <a target='_top' href='prog_if.html'>If Інструкції</a>
+            <a target='_top' href='prog_arrays.html'>Масиви</a>
+            <a target='_top' href='prog_loops.html'>Цикли</a>
+            <a target='_top' href='prog_functions.html'>Функції</a>
+            <a target='_top' href='prog_scope.html'>Область застосування</a>
+            <a target='_top' href='prog_data_types.html'>Типи даних</a>
+            <a target='_top' href='prog_operators.html'>Оператори</a>
+            <div class='tut_overview'>
+                <a target='_top' href='prog_operators_arithmetic.html'>Арифметичні оператори</a>
+                <a target='_top' href='prog_operators_assignment.html'>Оператори присвоєння</a>
+                <a target='_top' href='prog_operators_comparison.html'>Оператори порівняння</a>
+                <a target='_top' href='prog_operators_logical.html'>Логічні оператори</a>
+                <a target='_top' href='prog_operators_bitwise.html'>Побітові оператори</a>
+            </div>
+            <a target='_top' href='prog_comments.html'>Коментарі</a>
+            <a target='_top' href='prog_bits_and_bytes.html'>Біти та байти</a>
+            <a target='_top' href='prog_binary_numbers.html'>Двійкові (бінарні) числа</a>
+            <a target='_top' href='prog_hexadecimal_numbers.html'>Шістнадцяткові (hex) числа</a>
+            <a target='_top' href='prog_boolean_algebra.html'>Булева алгебра</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../images1/editors.png' alt='Основи програмування. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='Програмування для початківців. W3Schools українською' style='width: 100px'></a>    <p class='w3-right'>
+        <a href='prog_if_en.html' title='Перейти на англійську мову'>En</a>
+        <a href='prog_if_es.html' title='Перейти на іспанську мову'>Es</a>
+        <a href='prog_if_de.html' title='Перейти на німецьку мову'>De</a>
+        <a href='prog_if_fr.html' title='Перейти на французьку мову'>Fr</a>
+    </p>
+    <article>
+        <h1><span class="color_h1">Інструкції <b>If</b></span> в програмуванні</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="prog_variables.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="prog_arrays.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <div class="ws-info">
+            <p>Інструкції <b>if</b> дозволяють вашій програмі приймати рішення, тому вона може виконувати різні дії залежно від ситуації.</p>
+        </div>
+        <hr>
+        <h2>Що таке інструкція <b>if</b>?</h2>
+        <p>Інструкція <b>if</b> виконує блок коду, якщо умова true (істинна).</p>
+        <p>Ми робимо подібні речі в реальному житті, наприклад, користуємося парасолькою, якщо йде дощ, або одягаємо пальто, якщо холодно.</p>
+        <p>Подивіться, як працює інструкція <b>if</b> у простій грі нижче. Мета — отримати 6 очок під час кидання кубика.</p>
+        <div id="vueApp_ifGame" style="width: 200px; padding: 30px 20px; position: relative; border: solid black 1px; overflow: hidden;">
+            <canvas id="confettiCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; background-color: transparent;"></canvas>
+            <div style="overflow: visible; height: 47px; display: flex; justify-content: center;">
+                <transition name="roll">
+                    <!--<div v-if="diceResult" style="outline: solid gray 2px; border: solid lightgray 1px; padding: 10px; border-radius: 5px;aspect-ratio: 1; width: 45px; text-align: center; background-color: whitesmoke; overflow: visible; transition: all 0.3s ease-in-out;">{{diceResult}}</div>-->
+                    <img v-if="diceResult" :src="diceImg[diceResult]" alt="Dice" style="width: 45px; height: 45px; transition: opacity 0.1s ease-in-out, transform 0.3s ease-in-out;">
+                </transition>
+            </div>
+            <p v-html="diceText" style="text-align: center; margin: 13px 0;"></p>
+            <div style="display: flex; justify-content: center;">
+                <button @click="rollDice" :disabled="btnDisabled" class="ws-btn">Кинути</button>
+            </div>
+        </div>
+        <script>
+            const app_ifGame = Vue.createApp({
+                data() {
+                    return {
+                        diceResult: null,
+                        diceText: "Киньте кубики",
+                        diceImg: {
+                            1: "img_dice_1.svg",
+                            2: "img_dice_2.svg",
+                            3: "img_dice_3.svg",
+                            4: "img_dice_4.svg",
+                            5: "img_dice_5.svg",
+                            6: "img_dice_6.svg"
+                        },
+                        btnDisabled: false
+                    }
+                },
+                methods: {
+                    async rollDice() {
+                        this.btnDisabled = true;
+                        this.diceResult = null;
+                        this.diceText = "&nbsp;";
+                        await new Promise(resolve => setTimeout(resolve, 500));
+                        this.diceResult = Math.floor(Math.random() * 6) + 1;
+                        await new Promise(resolve => setTimeout(resolve, 800));
+                        if(this.diceResult === 6) {
+                            this.diceText = "Ви отримали 6!🥳";
+                            await new Promise(resolve => setTimeout(resolve, 600));
+                            this.launchConfetti();
+                        } else {
+                            this.diceText = "Спробуй ще";
+                        }
+                        this.btnDisabled = false;
+                    },
+                    async launchConfetti() {
+                        const canvas = document.getElementById('confettiCanvas');
+
+                        canvas.confetti = canvas.confetti || (await confetti.create(canvas, { resize: true }));
+
+                        canvas.confetti({
+                            particleCount: 100,
+                            spread: 100,
+                            startVelocity: 25,
+                            origin: { x: 0.5, y: 0.5 },
+                            angle: 90,
+                            decay: 0.9,
+                        });
+                    }
+                }
+            });
+            app_ifGame.mount('#vueApp_ifGame');
+        </script>
+        <p>To make the game do something different depending on the dice result, we use <code class="w3-codespan">if</code> with a condition that checks if the dice result is 6.</p>
+        <p>In case the condition is true, we print "Ви отримали 6!" and launch the confetti. And in case the condition is not true, we print "Спробуй ще".</p>
+        <p>Here is the flow chart and Python code for the game:</p>
+
+        <div id="vueApp_ifImg" class="vueAppCode" style="width: 100%; overflow: hidden;">
+            <div>
+                <button @click="activeTab = 'flowchart'" :class="['codeTab', { 'codeTab-active': activeTab === 'flowchart' }]" >Flow chart</button>
+                <button @click="activeTab = 'code'" :class="['codeTab', { 'codeTab-active': activeTab === 'code' }]">Code</button>
+            </div>
+            <div class="contentDiv">
+
+                <!-- Flowchart tab -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" width="360" height="300" style="max-width: 100%; height: auto; overflow: visible;" v-show="activeTab === 'flowchart'">
+                    <g transform="translate(147 0)">
+                        <path d="M 15 5 L 50 5 A 1 1 0 0 1 50 30 L 15 30 A 1 1 0 0 1 15 5"
+                              stroke-width="1" fill="gainsboro" class="flowbox"/>
+                        <text x="33" y="22" text-anchor="middle">start</text>
+                    </g>
+
+                    <g transform="translate(-35 0)">
+                        <line x1="215" x2="215" y1="30" y2="60" stroke-width="1" class="arrow" />
+                        <path transform="translate(208 49)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
+                    </g>
+
+                    <g transform="translate(30 60)">
+                        <rect x="55" y="0" width="185" height="30"
+                              stroke-width="1"
+                              fill="gainsboro" class="flowbox" />
+                        <text x="150" y="20" text-anchor="middle" class="svgCode">dice = random(1,6)</text>
+                    </g>
+
+                    <g transform="translate(-35 0)">
+                        <line x1="215" x2="215" y1="90" y2="120" stroke-width="1" class="arrow" />
+                        <path transform="translate(208 117)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
+                    </g>
+
+                    <g transform="translate(-60 119)"> <!-- false arrow -->
+                        <path d="M 110 137 L 110 50 L 171 50" stroke="black" stroke-width="1" fill="none" class="arrow" />
+                        <path transform="translate(103 129) rotate(0)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
+                        <text x="135" y="45" text-anchor="middle" class="txtBoolean" stroke-width="0">false</text>
+                    </g>
+
+                    <g transform="translate(150 119)"> <!-- true arrow -->
+                        <path d="M 150 133 L 150 50 L 99 50" stroke="black" stroke-width="1" fill="none" class="arrow" />
+                        <path transform="translate(143 129)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
+                        <text x="115" y="45" text-anchor="left" class="txtBoolean" stroke-width="0">true</text>
+                    </g>
+                    <g transform="translate(-55 260)">
+                        <rect x="60" y="0" width="100" height="30"
+                              stroke-width="1"
+                              fill="gainsboro" class="flowbox"/>
+                        <text x="110" y="20" text-anchor="middle" class="svgCode">Спробуй ще</text>
+                    </g>
+                    <g transform="translate(175 260)">
+                        <rect x="65" y="0" width="110" height="30"
+                              stroke-width="1"
+                              fill="gainsboro" class="flowbox"/>
+                        <text x="120" y="20" text-anchor="middle" class="svgCode">Ви отримали 6!</text>
+                    </g>
+
+                    <rect x="-15" y="-15" width="390" height="335" @click="highlight('none')" fill="transparent" />
+                    <!-- Condition 'rgb(252, 252, 113)' -->
+                    <g transform="translate(90 119)"
+                       @click="highlight('condition')"
+                       @mouseover="setHover('condition')"
+                       @mouseleave="clearHover()"
+                       :class="[
+            'svgSection',
+            {
+                'svgSection-hover': currentHover === 'condition',
+                'svgSection-active': highlighted === 'condition'
+            }
+        ]" >
+                        <path d="M 20 50 L 90 10 L 160 50 L 90 90 L 20 50"
+                              stroke-width="1"
+                              :fill="highlighted === 'condition' ? 'rgb(254, 254, 169)' : (currentHover === 'condition' ? 'lightyellow' : 'gainsboro')" class="flowbox"/>
+                        <text x="90" y="36" text-anchor="middle" class="svgCode"></text>
+                        <text x="90" y="56" text-anchor="middle" class="svgCode">dice == 6?</text>
+                        <text x="90" y="76" text-anchor="middle" class="svgCode"></text>
+                        <rect x="149" y="-14" width="90" height="27" />
+                        <path transform="translate(-10 25)" d="M 125 10 L 160 -20" class="behind" />
+                        <path transform="translate(-10 25)" d="M 125 10 L 160 -20" class="front" />
+                        <text x="154" y="6" text-anchor="left" class="svgExplainText">Condition</text>
+                    </g>
+                </svg>
+                <!-- Code tab -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 225" width="420" height="225" style="max-width: 100%; overflow: visible;" v-show="activeTab === 'code'" >
+                    <g class="svgCode" transform="translate(10, 10)">
+                        <rect x="0" y="0" width="260" height="190" fill="#EEE"/>
+                        <rect x="0" y="0" width="4" height="190" fill="#04AA6D"/>
+                        <text x="15" y="20" text-anchor="left" font-size="15">dice = random.randint(1,6)</text>
+                        <text x="15" y="50" text-anchor="left" font-size="15" class="svgCode">if</text>
+                        <text x="15" y="135" text-anchor="left" font-size="15" class="svgCode">else:</text>
+                    </g>
+                    <rect x="-15" y="-15" width="450" height="260" @click="highlight('none')" fill="transparent" />
+
+                    <!-- Condition -->
+                    <g transform="translate(-90 -25)"
+                       @click="highlight('condition')"
+                       @mouseover="setHover('condition')"
+                       @mouseleave="clearHover()"
+                       :class="[
+        'svgSection',
+        {
+            'svgSection-hover': currentHover === 'condition',
+            'svgSection-active': highlighted === 'condition'
+        }
+    ]" >
+                        <rect x="144" y="70" width="83" height="22"/>
+                        <text x="145" y="85" text-anchor="left" font-size="15" class="svgCode">dice == 6:</text>
+                        <rect x="395" y="48" width="90" height="27" />
+                        <text x="400" y="68" text-anchor="left" class="svgExplainText">Condition</text>
+                        <path d="M 200 70 L 200 63 L 394 63" class="behind" />
+                        <path d="M 200 70 L 200 63 L 394 63" class="front" />
+                        <!-- M 143 75 L 143 70 L 307 70 L 307 74 -->
+                    </g>
+
+                    <!-- code true -->
+                    <g transform="translate(-90 -20)"
+                       @click="highlight('trueCode')"
+                       @mouseover="setHover('trueCode')"
+                       @mouseleave="clearHover()"
+                       :class="[
+        'svgSection',
+        {
+            'svgSection-hover': currentHover === 'trueCode',
+            'svgSection-active': highlighted === 'trueCode'
+        }
+    ]" >
+                        <rect x="150" y="93" width="200" height="51"/>
+                        <text x="152" y="110" text-anchor="left" font-size="15" class="svgCode">print('Ви отримали 6!🥳')</text>
+                        <text x="152" y="135" text-anchor="left" font-size="15" class="svgCode">launchConfetti()</text>
+                        <rect x="393" y="93" width="105" height="67" />
+                        <text x="400" y="114" text-anchor="left" class="svgExplainText">Code runs</text>
+                        <text x="400" y="134" text-anchor="left" class="svgExplainText">if condition</text>
+                        <text x="400" y="154" text-anchor="left" class="svgExplainText">is true</text>
+                        <path d="M 346 106 L 394 106" class="behind" />
+                        <path d="M 346 106 L 394 106" class="front" />
+                        <!-- M 302 94 L 307 94 L 307 118 L 302 118 -->
+                    </g>
+
+                    <!-- code false -->
+                    <g transform="translate(-90 40)"
+                       @click="highlight('falseCode')"
+                       @mouseover="setHover('falseCode')"
+                       @mouseleave="clearHover()"
+                       :class="[
+        'svgSection',
+        {
+            'svgSection-hover': currentHover === 'falseCode',
+            'svgSection-active': highlighted === 'falseCode'
+        }
+    ]" >
+                        <rect x="150" y="120" width="170" height="22"/>
+                        <text x="152" y="135" text-anchor="left" font-size="15" class="svgCode">print('Спробуй ще')</text>
+                        <rect x="393" y="120" width="105" height="72" />
+                        <text x="400" y="138" text-anchor="left" class="svgExplainText">Code runs</text>
+                        <text x="400" y="158" text-anchor="left" class="svgExplainText">if condition</text>
+                        <text x="400" y="178" text-anchor="left" class="svgExplainText">is false</text>
+                        <path d="M 317 130 L 394 130" class="behind" />
+                        <path d="M 317 130 L 394 130" class="front" />
+                        <!-- M 346 94 L 351 94 L 351 118 L 346 118 -->
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <script>
+            const app_ifImg = Vue.createApp({
+                data() {
+                    return {
+                        highlighted: 'condition',
+                        currentHover: null,
+                        activeTab: 'flowchart'
+                    };
+                },
+                watch: {
+
+                },
+                computed: {
+
+                },
+                methods: {
+                    highlight(section){
+                        //console.log("Highlighting section: "+section);
+                        this.highlighted = section;
+                    },
+                    setHover(section) {
+                        this.currentHover = section; // Set the hovered section
+                    },
+                    clearHover() {
+                        this.currentHover = null; // Clear hover state
+                    }
+                },
+                async mounted(){
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                }
+            });
+
+            app_ifImg.mount('#vueApp_ifImg');
+        </script>
+        <p>We must use <code class="w3-codespan">else</code> in the code above, to handle the case when the dice is not 6, so that we can write "Спробуй ще".</p>
+        <p>Click the "Run Example" button below to see the dice rolling code in action.</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>dice = random.randint(1,6)
+print('You rolled a ' + str(dice))
+
+if dice == 6:
+  print('Ви отримали 6!🥳')
+else:
+  print('Спробуй ще')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const dice = Math.floor(Math.random() * 6) + 1;
+console.log('You rolled a ' + dice);
+
+if (dice == 6) {
+  console.log('Ви отримали 6!🥳');
+} else {
+  console.log('Спробуй ще');
+}
+</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int dice = random.nextInt(6) + 1;
+System.out.println("You rolled a " + dice);
+
+if (dice == 6) {
+  System.out.println("Ви отримали 6!🥳");
+} else {
+  System.out.println("Спробуй ще");
+}
+</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int dice = rand() % 6 + 1;
+cout &lt;&lt; "You rolled a " + to_string(dice) + "\\n";
+
+if (dice == 6) {
+  cout &lt;&lt; "Ви отримали 6!🥳\\n";
+} else {
+  cout &lt;&lt; "Спробуй ще\\n";
+}
+</code></pre>
+
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_dice.html">Run Example &raquo;</a>
+        </div>
+        <hr>
+        <h2>When Should I Use an If Statement?</h2>
+        <p>When you want your program to do something different depending on the situation, you should use an if statement.</p>
+        <p>For example, in case you want your program to print "Welcome!" when the user enters the correct password, and "Access denied" when the user enters the wrong password, you should use an if statement.</p>
+        <hr>
+        <h2>If, Else, and Else If</h2>
+        <div class="ws-info">
+            <p>An if-statement allways starts with an <code class="w3-codespan">if</code>.</p>
+            <p>An if-statement can contain zero or many <code class="w3-codespan">else if</code>, and zero or one <code class="w3-codespan">else</code>.</p>
+            <p>When <code class="w3-codespan">else</code> is present, it has to come last, after all the <code class="w3-codespan">else if</code>.</p>
+            <p>The <code class="w3-codespan">else</code> statement ensures that one (and only one) of the code blocks will execute.</p>
+        </div>
+        <p>Sometimes it is enough to just use a single <code class="w3-codespan">if</code>, like this:</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 32
+print('Age: ' + str(age))
+
+if age &gt; 17:
+  print('You are an adult!')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 32;
+console.log('Age: ' + age);
+
+if (age &gt; 17) {
+  console.log('You are an adult!');
+}
+</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 32;
+System.out.println("Age: " + age);
+
+if (age &gt; 17) {
+  System.out.println("You are an adult!");
+}
+</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 32;
+cout &lt;&lt; "Age: " + to_string(age) + "\\n";
+
+if (age &gt; 17) {
+  cout &lt;&lt; "You are an adult!\\n";
+}
+</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_if.html">Run Example &raquo;</a>
+        </div>
+        <p>But usually, we also want to handle the case when the condition is not true, so we use an <code class="w3-codespan">else</code> statement for that.</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 10
+print('Age: ' + str(age))
+
+if age &gt; 17:
+  print('You are an adult!')
+else:
+  print('You are not an adult yet.')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 10;
+console.log('Age: ' + age);
+
+if (age &gt; 17) {
+  console.log('You are an adult!');
+} else {
+  console.log('You are not an adult yet.');
+}
+</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 10;
+System.out.println("Age: " + age);
+
+if (age &gt; 17) {
+  System.out.println("You are an adult!");
+} else {
+  System.out.println("You are not an adult yet.");
+}
+</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 10;
+cout &lt;&lt; "Age: " + to_string(age) + "\\n";
+
+if (age &gt; 17) {
+  cout &lt;&lt; "You are an adult!\\n";
+} else {
+  cout &lt;&lt; "You are not an adult yet.\\n";
+}
+</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_else.html">Run Example &raquo;</a>
+        </div>
+        <p>The code block that belongs to the <code class="w3-codespan">else</code> will only be executed in case the condition in the <code class="w3-codespan">if</code> is false.</p>
+        <p>We can also use <code class="w3-codespan">else if</code> to check more than one condition, so that we get more than two outcomes.</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 15
+print('Age: ' + str(age))
+
+if age &lt; 13:
+  print('You are a child')
+elif age &lt; 20:
+  print('You are a teenager')
+else:
+  print('You are an adult')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 15;
+console.log('Age: ' + age);
+
+if (age &lt; 13) {
+  console.log('You are a child');
+} else if (age &lt; 20) {
+  console.log('You are a teenager');
+} else {
+  console.log('You are an adult');
+}
+</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 15;
+System.out.println("Age: " + age);
+
+if (age &lt; 13) {
+  System.out.println("You are a child");
+} else if (age &lt; 20) {
+  System.out.println("You are a teenager");
+} else {
+  System.out.println("You are an adult");
+}
+</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 15;
+cout &lt;&lt; "Age: " + to_string(age) + "\\n";
+
+if (age &lt; 13) {
+  cout &lt;&lt; "You are a child";
+} else if (age &lt; 20) {
+  cout &lt;&lt; "You are a teenager";
+} else {
+  cout &lt;&lt; "You are an adult";
+}
+</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_elseif.html">Run Example &raquo;</a>
+        </div>
+        <p>You can only have one <code class="w3-codespan">if</code> statement, and only one <code class="w3-codespan">else</code> statement, but you can have as many <code class="w3-codespan">else if</code> statements as you want.</p>
+        <p>Also, the <code class="w3-codespan">if</code> is always first, the <code class="w3-codespan">else</code> is always last, and the <code class="w3-codespan">else if</code> statements are in between.</p>
+        <hr>
+        <h2>Nested If Statements</h2>
+        <p>A nested if statement is an if statement inside another if statement.</p>
+        <p>Nested if statements are useful in cases where you want to check a condition, only if another condition is true.</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 19
+print('Age: ' + str(age))
+
+if age < 13:
+  print('You are a child')
+elif age < 20:
+  print('You are a teenager')
+  if age > 17:
+    print('and an adult!')
+else:
+  print('You are an adult')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 19;
+console.log('Age: ' + age);
+
+if (age < 13) {
+  console.log('You are a child');
+} else if (age < 20) {
+  console.log('You are a teenager');
+  if (age > 17) {
+    console.log('and an adult!');
+  }
+} else {
+  console.log('You are an adult');
+}</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 19;
+System.out.println("Age: " + age);
+
+if (age < 13) {
+  System.out.println("You are a child");
+} else if (age < 20) {
+  System.out.println("You are a teenager");
+  if (age > 17) {
+    System.out.println("and an adult!");
+  }
+} else {
+  System.out.println("You are an adult");
+}</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 19;
+cout << "Age: " + to_string(age) + "\n";
+
+if (age < 13) {
+  cout << "You are a child";
+} else if (age < 20) {
+  cout << "You are a teenager";
+  if (age > 17) {
+    cout << "\nand an adult!";
+  }
+} else {
+  cout << "You are an adult";
+}</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_nested.html">Run Example &raquo;</a>
+        </div>
+        <p>In the code above, the nested if statement allows us to filter out the special case of ages 18 and 19, when you are both a teenager and an adult.</p>
+        <div id="vueApp_flowchart_nested" class="" style="width: 100%; max-width: 425px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" width="420" height="360" style="max-width: 100%; height: auto;">
+                <!--<g transform="translate(182 0)">
+        <path d="M 15 5 L 50 5 A 1 1 0 0 1 50 30 L 15 30 A 1 1 0 0 1 15 5" stroke="black"
+        stroke-width="1" fill="gainsboro"/>
+        <text x="33" y="22" text-anchor="middle">start</text>
+    </g>
+
+    <line x1="215" x2="215" y1="30" y2="60" stroke="black" stroke-width="1" />
+    <path transform="translate(208 49)" d="M 12 2 L 2 2 L 7 11 z" stroke="black" stroke-width="0" fill="black" />-->
+                <g transform="translate(5 10)">
+                    <rect x="97" y="0" width="100" height="30"
+                          :stroke-width="isSliding ? 2 : 1"
+                          :class="{'flow-active': isSliding}" />
+                    <text x="150" y="20" text-anchor="middle" class="svgCode">age = {{age}}&nbsp;</text>
+                </g>
+                <g transform="translate(-60 0)">
+                    <line x1="215" x2="215" y1="40" y2="70" :stroke-width="isSliding ? 2 : 1" />
+                    <path class="arrowhead" transform="translate(208 67)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                </g>
+                <!-- Condition 1 -->
+                <g transform="translate(65 79)" >
+                    <path class="condition-path" d="M 30 25 L 90 0 L 150 25 L 90 50 L 30 25"
+                          stroke-width="1.5"/>
+                    <text x="90" y="30" text-anchor="middle" class="svgCode">age &lt; 13</text>
+                </g>
+                <!-- true arrow 1 -->
+                <g transform="translate(-5 54)" :opacity="state === 'child' ? 1 : 0.3">
+                    <path d="M 58 73 L 58 50 L 100 50" :stroke-width="state === 'child' ? 2 : 1" fill="none" />
+                    <path class="arrowhead" transform="translate(51 69)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                    <text x="65" y="45" text-anchor="left" :opacity="state === 'child' ? 1 : 0">true</text>
+                </g>
+                <g transform="translate(-70 135)" :opacity="state === 'child' ? 1 : 0.3">
+                    <rect x="75" y="0" width="90" height="30"
+                          :stroke-width="state === 'child' ? 2 : 1"
+                          :class="{'flow-active': state === 'child'}" />
+                    <text x="120" y="20" text-anchor="middle" class="svgCode">'child'</text>
+                </g>
+                <!-- false arrow 1 -->
+                <g transform="translate(165 54)" :opacity="state !== 'child' ? 1 : 0.3">
+                    <path d="M 100 97 L 100 50 L 49 50" :stroke-width="state !== 'child' ? 2 : 1" fill="none" />
+                    <path class="arrowhead" transform="translate(93 89) rotate(0)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                    <text x="74" y="45" text-anchor="middle" :opacity="state !== 'child' ? 1 : 0">false</text>
+                </g>
+                <!-- false arrow 2 -->
+                <g transform="translate(247 130)" :opacity="state === 'adult' ? 1 : 0.3">
+                    <path d="M 120 77 L 120 50 L 74 50" :stroke-width="state === 'adult' ? 2 : 1" fill="none" />
+                    <path class="arrowhead" transform="translate(113 69) rotate(0)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                    <text x="95" y="45" text-anchor="middle" :opacity="state === 'adult' ? 1 : 0">false</text>
+                </g>
+                <!-- Condition 2 -->
+                <g transform="translate(174 155)" :opacity="state !== 'child' ? 1 : 0.3">
+                    <path class="condition-path" d="M 30 25 L 90 0 L 150 25 L 90 50 L 30 25"
+                          :stroke-width="state !== 'child' ? 1.5 : 1"
+                          fill="gainsboro"/>
+                    <text x="90" y="30" text-anchor="middle" class="svgCode">age &lt; 20</text>
+                </g>
+                <!-- true arrow 2 -->
+                <g transform="translate(25 130)" :opacity="state === 'teen' || state === 'and adult' ? 1 : 0.3">
+                    <path d="M 140 73 L 140 50 L 181 50" :stroke-width="state === 'teen' || state === 'and adult' ? 2 : 1" fill="none" />
+                    <path class="arrowhead" transform="translate(133 69)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                    <text x="146" y="45" text-anchor="left" :opacity="state === 'teen' || state === 'and adult' ? 1 : 0">true</text>
+                </g>
+                <g transform="translate(55 211)" :opacity="state === 'teen' || state === 'and adult' ? 1 : 0.3">
+                    <rect x="65" y="0" width="90" height="30"
+                          :stroke-width="state === 'teen' || state === 'and adult' ? 2 : 1"
+                          :class="{'flow-active': state === 'teen' || state === 'and adult'}" />
+                    <text x="110" y="20" text-anchor="middle" class="svgCode">'teen'</text>
+                </g>
+                <!-- arrow, straight down -->
+                <g transform="translate(-50 200)" :opacity="state === 'teen' || state === 'and adult' ? 1 : 0.3">
+                    <line x1="215" x2="215" y1="40" y2="60" :stroke-width="state === 'teen' || state === 'and adult' ? 2 : 1" />
+                    <path class="arrowhead" transform="translate(208 57)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                </g>
+                <!-- Condition 3 -->
+                <g transform="translate(75 269)" :opacity="state === 'and adult' || state === 'teen' ? 1 : 0.3">
+                    <path class="condition-path" d="M 30 25 L 90 0 L 150 25 L 90 50 L 30 25"
+                          :stroke-width="state === 'teen' || state === 'and adult' ? 1.5 : 1"/>
+                    <text x="90" y="30" text-anchor="middle" class="svgCode">age > 17</text>
+                </g>
+                <!-- true arrow 3 -->
+                <g transform="translate(126 244)" :opacity="state === 'and adult' ? 1 : 0.3">
+                    <path d="M 140 73 L 140 50 L 99 50" :stroke-width="state === 'and adult' ? 2 : 1" fill="none" />
+                    <path class="arrowhead" transform="translate(133 69)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" />
+                    <text x="105" y="45" text-anchor="left" :opacity="state === 'and adult' ? 1 : 0">true</text>
+                </g>
+                <g transform="translate(160 325)" :opacity="state === 'and adult' ? 1 : 0.3">
+                    <rect x="55" y="0" width="110" height="30"
+                          :stroke-width="state === 'and adult' ? 2 : 1"
+                          :class="{'flow-active': state === 'and adult'}" />
+                    <text x="110" y="20" text-anchor="middle" class="svgCode">'and adult'</text>
+                </g>
+                <g transform="translate(260 211)" :opacity="state === 'adult' ? 1 : 0.3">
+                    <rect x="65" y="0" width="90" height="30"
+                          :stroke-width="state === 'adult' ? 2 : 1"
+                          :class="{'flow-active': state === 'adult'}" />
+                    <text x="110" y="20" text-anchor="middle" class="svgCode">'adult'</text>
+                </g>
+            </svg>
+            <div style="display: flex; justify-content: flex-start;">
+                <div style="margin-left: 90px;">
+                    <p style="margin-bottom: 0;">
+                        <input
+                                type="range"
+                                min="7"
+                                max="25"
+                                step="1"
+                                v-model.number="age"
+                                style="width: 100%;"
+                                @mousedown="isSliding = true"
+                                @mouseup="isSliding = false"
+                                @mouseleave="isSliding = false"
+                        /><!--{{age}}--></p>
+                    <p style="text-align: center; margin-top: 5px;">Age</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const app_flowchart_nested = Vue.createApp({
+                data() {
+                    return {
+                        state: 'and adult',
+                        age: 19,
+                        isSliding: false
+                    };
+                },
+                watch: {
+                    age(newVal) {
+                        if(newVal < 13) {
+                            this.state = 'child';
+                        } else if(newVal < 20) {
+                            this.state = 'teen';
+                            if(newVal > 17) {
+                                this.state = 'and adult';
+                            }
+                        } else {
+                            this.state = 'adult';
+                        }
+                    },
+                    thumbPosition(newValue) {
+                        // Update the CSS variable when the thumb position changes
+                        document.documentElement.style.setProperty('--thumb-position', newValue);
+                    },
+                },
+                computed: {
+                    thumbPosition() {
+                        // Calculate the percentage position of the thumb
+                        const range = 25 - 7;
+                        return ((this.age - 7) / range) * 100 + '%';
+                    },
+                },
+                mounted(){
+                    document.documentElement.style.setProperty('--thumb-position', '67%');
+                }
+            });
+            app_flowchart_nested.mount('#vueApp_flowchart_nested');
+        </script>
+        <p>In the flowchart above, we can see that the code block for <code class="w3-codespan">age > 17</code> is only executed if the <code class="w3-codespan">age</code> is 18 or 19.</p>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="prog_variables.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="prog_arrays.html">Next &#10095;</a>
+        </div>
+    </article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    </div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">ПРОГРАМУВАННЯ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../programming/index.html' class='btn-rightbar'>Програмування. Інтро</a>
+            <a href='../python/index.html' class='btn-rightbar'>Python</a>
+            <a href='../django/index.html' class='btn-rightbar'>Django</a>
+            <a href='../java/index.html' class='btn-rightbar'>Java</a>
+            <a href='../kotlin/index.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../js/index.html' class='btn-rightbar'>JavaScript</a>
+            <a href='../typescript/index.html' class='btn-rightbar'>TypeScript</a>
+            <a href='../c/index.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index.html' class='btn-rightbar'>R</a>
+            <a href='../rust/index.html' class='btn-rightbar'>Rust</a>
+            <a href='../go/index.html' class='btn-rightbar'>Go</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Всі онлайн-довідники на сайті">СЕРВЕРНА СТОРОНА</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index.html' class='btn-rightbar'>ASP та ASP.NET</a>
+            <a href='../nodejs/index.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index.html' class='btn-rightbar'>GitHub Pages</a>
+            <a href='../bash/index.html' class='btn-rightbar'>Bash</a>
+            <a href='../mongodb/index.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style="text-decoration:none">ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index.html' target='_top' style="text-decoration:none">БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index.html' target='_top' style="text-decoration:none">ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../kotlin/index.html'>Kotlin Підручник</a><br>
+        <a href='../c/index.html'>C Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+        <a href='../chatgpt-3-5/index.html'>ChatGPT-3.5 Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+        <a href='../icons/icons_reference.html'>Іконки Довідник</a><br>
+        <a href='../graphics/svg_reference.html'>SVG Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../kotlin/kotlin_examples.html'>Kotlin Приклади</a><br>
+        <a href='../c/c_examples.html'>C Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Вебсертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_c.html'>C Сертифікат</a><br>
+        <a href='../cert/cert_cpp.html'>C++ Сертифікат</a><br>
+        <a href='../cert/cert_cs.html'>C# Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали й прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступні версії сайту іншими мовами:
+    <a href='../index_en.html' title='W3Schools англійською'><strong>англійською</strong></a>,
+    <a href='../index_es.html' title='W3Schools іспанською'><strong>іспанською</strong></a>,
+    <a href='../index_de.html' title='W3Schools німецькою'><strong>німецькою</strong></a>,
+    <a href='../index_fr.html' title='W3Schools французькою'><strong>французькою</strong></a>.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2026</a> by Refsnes Data. All Rights Reserved.
+    Сайт створений і працює на фреймворку <a href='../w3css/index.html'>W3.CSS</a>.<br>
+    Ви можете використовувати інші авторитетні ресурси для навчання веброзробці та програмуванню:<br>
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+      <a href='https://developer.mozilla.org/en-US/?retiredLocale=uk' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+      <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+      <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+    <br><br>
+    <a href='../index.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
