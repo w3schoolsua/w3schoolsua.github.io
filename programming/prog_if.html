@@ -507,7 +507,7 @@
                         this.diceResult = Math.floor(Math.random() * 6) + 1;
                         await new Promise(resolve => setTimeout(resolve, 800));
                         if(this.diceResult === 6) {
-                            this.diceText = "Ви отримали 6!🥳";
+                            this.diceText = "У вас 6!🥳";
                             await new Promise(resolve => setTimeout(resolve, 600));
                             this.launchConfetti();
                         } else {
@@ -533,17 +533,15 @@
             });
             app_ifGame.mount('#vueApp_ifGame');
         </script>
-        <p>To make the game do something different depending on the dice result, we use <code class="w3-codespan">if</code> with a condition that checks if the dice result is 6.</p>
-        <p>In case the condition is true, we print "Ви отримали 6!" and launch the confetti. And in case the condition is not true, we print "Спробуй ще".</p>
-        <p>Here is the flow chart and Python code for the game:</p>
-
+        <p>Щоб гра діяла по-різному залежно від результату кидання кубиків, ми використовуємо <code class="w3-codespan">if</code> з умовою, яка перевіряє, чи результат кидання кубиків дорівнює 6.</p>
+        <p>Якщо умова істинна (true), ми друкуємо "У вас 6!" та запускаємо конфетті. А якщо умова не істинна (false), ми друкуємо "Спробуй ще".</p>
+        <p>Ось блок-схема та код Python для гри:</p>
         <div id="vueApp_ifImg" class="vueAppCode" style="width: 100%; overflow: hidden;">
             <div>
                 <button @click="activeTab = 'flowchart'" :class="['codeTab', { 'codeTab-active': activeTab === 'flowchart' }]" >Flow chart</button>
                 <button @click="activeTab = 'code'" :class="['codeTab', { 'codeTab-active': activeTab === 'code' }]">Code</button>
             </div>
             <div class="contentDiv">
-
                 <!-- Flowchart tab -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" width="360" height="300" style="max-width: 100%; height: auto; overflow: visible;" v-show="activeTab === 'flowchart'">
                     <g transform="translate(147 0)">
@@ -551,30 +549,25 @@
                               stroke-width="1" fill="gainsboro" class="flowbox"/>
                         <text x="33" y="22" text-anchor="middle">start</text>
                     </g>
-
                     <g transform="translate(-35 0)">
                         <line x1="215" x2="215" y1="30" y2="60" stroke-width="1" class="arrow" />
                         <path transform="translate(208 49)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
                     </g>
-
                     <g transform="translate(30 60)">
                         <rect x="55" y="0" width="185" height="30"
                               stroke-width="1"
                               fill="gainsboro" class="flowbox" />
                         <text x="150" y="20" text-anchor="middle" class="svgCode">dice = random(1,6)</text>
                     </g>
-
                     <g transform="translate(-35 0)">
                         <line x1="215" x2="215" y1="90" y2="120" stroke-width="1" class="arrow" />
                         <path transform="translate(208 117)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
                     </g>
-
                     <g transform="translate(-60 119)"> <!-- false arrow -->
                         <path d="M 110 137 L 110 50 L 171 50" stroke="black" stroke-width="1" fill="none" class="arrow" />
                         <path transform="translate(103 129) rotate(0)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
                         <text x="135" y="45" text-anchor="middle" class="txtBoolean" stroke-width="0">false</text>
                     </g>
-
                     <g transform="translate(150 119)"> <!-- true arrow -->
                         <path d="M 150 133 L 150 50 L 99 50" stroke="black" stroke-width="1" fill="none" class="arrow" />
                         <path transform="translate(143 129)" d="M 12 2 L 2 2 L 7 11 z" stroke-width="0" class="arrowhead" />
@@ -590,9 +583,8 @@
                         <rect x="65" y="0" width="110" height="30"
                               stroke-width="1"
                               fill="gainsboro" class="flowbox"/>
-                        <text x="120" y="20" text-anchor="middle" class="svgCode">Ви отримали 6!</text>
+                        <text x="120" y="20" text-anchor="middle" class="svgCode">У вас 6!</text>
                     </g>
-
                     <rect x="-15" y="-15" width="390" height="335" @click="highlight('none')" fill="transparent" />
                     <!-- Condition 'rgb(252, 252, 113)' -->
                     <g transform="translate(90 119)"
@@ -628,7 +620,6 @@
                         <text x="15" y="135" text-anchor="left" font-size="15" class="svgCode">else:</text>
                     </g>
                     <rect x="-15" y="-15" width="450" height="260" @click="highlight('none')" fill="transparent" />
-
                     <!-- Condition -->
                     <g transform="translate(-90 -25)"
                        @click="highlight('condition')"
@@ -663,7 +654,7 @@
         }
     ]" >
                         <rect x="150" y="93" width="200" height="51"/>
-                        <text x="152" y="110" text-anchor="left" font-size="15" class="svgCode">print('Ви отримали 6!🥳')</text>
+                        <text x="152" y="110" text-anchor="left" font-size="15" class="svgCode">print('У вас 6!🥳')</text>
                         <text x="152" y="135" text-anchor="left" font-size="15" class="svgCode">launchConfetti()</text>
                         <rect x="393" y="93" width="105" height="67" />
                         <text x="400" y="114" text-anchor="left" class="svgExplainText">Code runs</text>
@@ -673,7 +664,6 @@
                         <path d="M 346 106 L 394 106" class="front" />
                         <!-- M 302 94 L 307 94 L 307 118 L 302 118 -->
                     </g>
-
                     <!-- code false -->
                     <g transform="translate(-90 40)"
                        @click="highlight('falseCode')"
@@ -733,8 +723,8 @@
 
             app_ifImg.mount('#vueApp_ifImg');
         </script>
-        <p>We must use <code class="w3-codespan">else</code> in the code above, to handle the case when the dice is not 6, so that we can write "Спробуй ще".</p>
-        <p>Click the "Run Example" button below to see the dice rolling code in action.</p>
+        <p>Ми повинні використовувати <code class="w3-codespan">else</code> у коді вище, щоб обробити випадок, коли на кубиках випало не 6, щоб ми могли записати "Спробуй ще".</p>
+        <p>Натисніть кнопку «Запустити приклад» нижче, щоб побачити код кидання кубиків у дії.</p>
         <div class="w3-example">
             <br>
             Python:
@@ -742,7 +732,7 @@
 print('You rolled a ' + str(dice))
 
 if dice == 6:
-  print('Ви отримали 6!🥳')
+  print('У вас 6!🥳')
 else:
   print('Спробуй ще')</code></pre>
             JavaScript:
@@ -750,7 +740,7 @@ else:
 console.log('You rolled a ' + dice);
 
 if (dice == 6) {
-  console.log('Ви отримали 6!🥳');
+  console.log('У вас 6!🥳');
 } else {
   console.log('Спробуй ще');
 }
@@ -760,7 +750,7 @@ if (dice == 6) {
 System.out.println("You rolled a " + dice);
 
 if (dice == 6) {
-  System.out.println("Ви отримали 6!🥳");
+  System.out.println("У вас 6!🥳");
 } else {
   System.out.println("Спробуй ще");
 }
@@ -770,231 +760,223 @@ if (dice == 6) {
 cout &lt;&lt; "You rolled a " + to_string(dice) + "\\n";
 
 if (dice == 6) {
-  cout &lt;&lt; "Ви отримали 6!🥳\\n";
+  cout &lt;&lt; "У вас 6!🥳\\n";
 } else {
   cout &lt;&lt; "Спробуй ще\\n";
 }
 </code></pre>
 
-            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_dice.html">Run Example &raquo;</a>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_dice.html">Запустити приклад &raquo;</a>
         </div>
         <hr>
-        <h2>When Should I Use an If Statement?</h2>
-        <p>When you want your program to do something different depending on the situation, you should use an if statement.</p>
-        <p>For example, in case you want your program to print "Welcome!" when the user enters the correct password, and "Access denied" when the user enters the wrong password, you should use an if statement.</p>
+        <h2>Коли слід використовувати інструкцію If?</h2>
+        <p>Якщо ви хочете, щоб ваша програма виконувала різні дії залежно від ситуації, слід використовувати інструкцію if.</p>
+        <p>Наприклад, якщо ви хочете, щоб ваша програма виводила «Ласкаво просимо!», коли користувач вводить правильний пароль, і «Доступ заборонено», коли користувач вводить неправильний пароль, слід використовувати інструкцію if.</p>
         <hr>
-        <h2>If, Else, and Else If</h2>
+        <h2>If, Else та Else If</h2>
         <div class="ws-info">
-            <p>An if-statement allways starts with an <code class="w3-codespan">if</code>.</p>
-            <p>An if-statement can contain zero or many <code class="w3-codespan">else if</code>, and zero or one <code class="w3-codespan">else</code>.</p>
-            <p>When <code class="w3-codespan">else</code> is present, it has to come last, after all the <code class="w3-codespan">else if</code>.</p>
-            <p>The <code class="w3-codespan">else</code> statement ensures that one (and only one) of the code blocks will execute.</p>
+            <p>Інструкція if завжди починається з <code class="w3-codespan">if</code>.</p>
+            <p>Інструкція if може містити нуль або багато <code class="w3-codespan">else if</code>, а також нуль або один <code class="w3-codespan">else</code>.</p>
+            <p>Коли присутній <code class="w3-codespan">else</code>, він має бути останнім, після всіх <code class="w3-codespan">else if</code>.</p>
+            <p>Інструкція <code class="w3-codespan">else</code> гарантує виконання одного (і лише одного) блоку коду.</p>
         </div>
-        <p>Sometimes it is enough to just use a single <code class="w3-codespan">if</code>, like this:</p>
+        <p>Іноді достатньо використовувати лише одну інструкцію <code class="w3-codespan">if</code>, ось так:</p>
         <div class="w3-example">
             <br>
             Python:
             <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 32
-print('Age: ' + str(age))
+print('Вік ' + str(age))
 
 if age &gt; 17:
-  print('You are an adult!')</code></pre>
+  print('Ти доросла людина!')</code></pre>
             JavaScript:
             <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 32;
-console.log('Age: ' + age);
+console.log('Вік ' + age);
 
 if (age &gt; 17) {
-  console.log('You are an adult!');
+  console.log('Ти доросла людина!');
 }
 </code></pre>
             Java:
             <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 32;
-System.out.println("Age: " + age);
+System.out.println("Вік " + age);
 
 if (age &gt; 17) {
-  System.out.println("You are an adult!");
+  System.out.println("Ти доросла людина!");
 }
 </code></pre>
             C++:
             <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 32;
-cout &lt;&lt; "Age: " + to_string(age) + "\\n";
+cout &lt;&lt; "Вік " + to_string(age) + "\\n";
 
 if (age &gt; 17) {
-  cout &lt;&lt; "You are an adult!\\n";
+  cout &lt;&lt; "Ти доросла людина!\\n";
 }
 </code></pre>
-            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_if.html">Run Example &raquo;</a>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_if.html">Запустити приклад &raquo;</a>
         </div>
-        <p>But usually, we also want to handle the case when the condition is not true, so we use an <code class="w3-codespan">else</code> statement for that.</p>
+        <p>Але зазвичай ми також хочемо обробити випадок, коли умова не є істинною, тому для цього використовуємо інструкцію <code class="w3-codespan">else</code>.</p>
         <div class="w3-example">
             <br>
             Python:
             <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 10
-print('Age: ' + str(age))
+print('Вік ' + str(age))
 
 if age &gt; 17:
-  print('You are an adult!')
+  print('Ти доросла людина!')
 else:
-  print('You are not an adult yet.')</code></pre>
+  print('Ти ще не доросла людина')</code></pre>
             JavaScript:
             <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 10;
-console.log('Age: ' + age);
+console.log('Вік ' + age);
 
 if (age &gt; 17) {
-  console.log('You are an adult!');
+  console.log('Ти доросла людина!');
 } else {
-  console.log('You are not an adult yet.');
+  console.log('Ти ще не доросла людина');
 }
 </code></pre>
             Java:
             <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 10;
-System.out.println("Age: " + age);
+System.out.println("Вік " + age);
 
 if (age &gt; 17) {
-  System.out.println("You are an adult!");
+  System.out.println("Ти доросла людина!");
 } else {
-  System.out.println("You are not an adult yet.");
+  System.out.println("Ти ще не доросла людина");
 }
 </code></pre>
             C++:
             <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 10;
-cout &lt;&lt; "Age: " + to_string(age) + "\\n";
+cout &lt;&lt; "Вік " + to_string(age) + "\\n";
 
 if (age &gt; 17) {
-  cout &lt;&lt; "You are an adult!\\n";
+  cout &lt;&lt; "Ти доросла людина!\\n";
 } else {
-  cout &lt;&lt; "You are not an adult yet.\\n";
+  cout &lt;&lt; "Ти ще не доросла людина\\n";
 }
 </code></pre>
-            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_else.html">Run Example &raquo;</a>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_else.html">Запустити приклад &raquo;</a>
         </div>
-        <p>The code block that belongs to the <code class="w3-codespan">else</code> will only be executed in case the condition in the <code class="w3-codespan">if</code> is false.</p>
-        <p>We can also use <code class="w3-codespan">else if</code> to check more than one condition, so that we get more than two outcomes.</p>
+        <p>Блок коду, що належить до <code class="w3-codespan">else</code>, буде виконано лише у випадку, якщо умова в <code class="w3-codespan">if</code> є false (хибною).</p>
+        <p>Ми також можемо використовувати <code class="w3-codespan">else if</code> для перевірки кількох умов, щоб отримати більше двох результатів.</p>
         <div class="w3-example">
             <br>
             Python:
             <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 15
-print('Age: ' + str(age))
+print('Вік ' + str(age))
 
 if age &lt; 13:
-  print('You are a child')
+  print('Ти дитина')
 elif age &lt; 20:
-  print('You are a teenager')
+  print('Ти підліток')
 else:
-  print('You are an adult')</code></pre>
+  print('Ти доросла людина')</code></pre>
             JavaScript:
             <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 15;
-console.log('Age: ' + age);
+console.log('Вік ' + age);
 
 if (age &lt; 13) {
-  console.log('You are a child');
+  console.log('Ти дитина');
 } else if (age &lt; 20) {
-  console.log('You are a teenager');
+  console.log('Ти підліток');
 } else {
-  console.log('You are an adult');
+  console.log('Ти доросла людина');
 }
 </code></pre>
             Java:
             <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 15;
-System.out.println("Age: " + age);
+System.out.println("Вік " + age);
 
 if (age &lt; 13) {
-  System.out.println("You are a child");
+  System.out.println("Ти дитина");
 } else if (age &lt; 20) {
-  System.out.println("You are a teenager");
+  System.out.println("Ти підліток");
 } else {
-  System.out.println("You are an adult");
+  System.out.println("Ти доросла людина");
 }
 </code></pre>
             C++:
             <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 15;
-cout &lt;&lt; "Age: " + to_string(age) + "\\n";
+cout &lt;&lt; "Вік " + to_string(age) + "\\n";
 
 if (age &lt; 13) {
-  cout &lt;&lt; "You are a child";
+  cout &lt;&lt; "Ти дитина";
 } else if (age &lt; 20) {
-  cout &lt;&lt; "You are a teenager";
+  cout &lt;&lt; "Ти підліток";
 } else {
-  cout &lt;&lt; "You are an adult";
+  cout &lt;&lt; "Ти доросла людина";
 }
 </code></pre>
-            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_elseif.html">Run Example &raquo;</a>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_elseif.html">Запустити приклад &raquo;</a>
         </div>
-        <p>You can only have one <code class="w3-codespan">if</code> statement, and only one <code class="w3-codespan">else</code> statement, but you can have as many <code class="w3-codespan">else if</code> statements as you want.</p>
-        <p>Also, the <code class="w3-codespan">if</code> is always first, the <code class="w3-codespan">else</code> is always last, and the <code class="w3-codespan">else if</code> statements are in between.</p>
+        <p>Ви можете мати лише одну інструкцію <code class="w3-codespan">if</code> та лише одну інструкцію <code class="w3-codespan">else</code>, але ви можете мати скільки завгодно інструкцій <code class="w3-codespan">else if</code>.</p>
+        <p>Також, інструкція <code class="w3-codespan">if</code> завжди перша, <code class="w3-codespan">else</code> завжди остання, а інструкції <code class="w3-codespan">else if</code> знаходяться посередині.</p>
         <hr>
-        <h2>Nested If Statements</h2>
-        <p>A nested if statement is an if statement inside another if statement.</p>
-        <p>Nested if statements are useful in cases where you want to check a condition, only if another condition is true.</p>
+        <h2>Вкладені інструкції If</h2>
+        <p>Вкладені інструкції if — це інструкції if всередині іншої інструкції if.</p>
+        <p>Вкладені інструкції if корисні у випадках, коли потрібно перевірити умову, лише якщо інша умова true (істинна).</p>
         <div class="w3-example">
             <br>
             Python:
             <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>age = 19
-print('Age: ' + str(age))
+print('Вік ' + str(age))
 
 if age < 13:
-  print('You are a child')
+  print('Ти дитина')
 elif age < 20:
-  print('You are a teenager')
+  print('Ти підліток')
   if age > 17:
-    print('and an adult!')
+    print('і доросла людина!')
 else:
-  print('You are an adult')</code></pre>
+  print('Ти доросла людина')</code></pre>
             JavaScript:
             <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const age = 19;
-console.log('Age: ' + age);
+console.log('Вік ' + age);
 
 if (age < 13) {
-  console.log('You are a child');
+  console.log('Ти дитина');
 } else if (age < 20) {
-  console.log('You are a teenager');
+  console.log('Ти підліток');
   if (age > 17) {
-    console.log('and an adult!');
+    console.log('і доросла людина!');
   }
 } else {
-  console.log('You are an adult');
+  console.log('Ти доросла людина');
 }</code></pre>
             Java:
             <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>int age = 19;
-System.out.println("Age: " + age);
+System.out.println("Вік " + age);
 
 if (age < 13) {
-  System.out.println("You are a child");
+  System.out.println("Ти дитина");
 } else if (age < 20) {
-  System.out.println("You are a teenager");
+  System.out.println("Ти підліток");
   if (age > 17) {
-    System.out.println("and an adult!");
+    System.out.println("і доросла людина!");
   }
 } else {
-  System.out.println("You are an adult");
+  System.out.println("Ти доросла людина");
 }</code></pre>
             C++:
             <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>int age = 19;
-cout << "Age: " + to_string(age) + "\n";
+cout << "Вік " + to_string(age) + "\n";
 
 if (age < 13) {
-  cout << "You are a child";
+  cout << "Ти дитина";
 } else if (age < 20) {
-  cout << "You are a teenager";
+  cout << "Ти підліток";
   if (age > 17) {
-    cout << "\nand an adult!";
+    cout << "\nі доросла людина!";
   }
 } else {
-  cout << "You are an adult";
+  cout << "Ти доросла людина";
 }</code></pre>
-            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_nested.html">Run Example &raquo;</a>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_ifs_nested.html">Запустити приклад &raquo;</a>
         </div>
-        <p>In the code above, the nested if statement allows us to filter out the special case of ages 18 and 19, when you are both a teenager and an adult.</p>
+        <p>У наведеному вище коді вкладена інструкція if дозволяє нам відфільтрувати особливий випадок віку 18 та 19 років, коли ви одночасно підліток і доросла особа.</p>
         <div id="vueApp_flowchart_nested" class="" style="width: 100%; max-width: 425px;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" width="420" height="360" style="max-width: 100%; height: auto;">
-                <!--<g transform="translate(182 0)">
-        <path d="M 15 5 L 50 5 A 1 1 0 0 1 50 30 L 15 30 A 1 1 0 0 1 15 5" stroke="black"
-        stroke-width="1" fill="gainsboro"/>
-        <text x="33" y="22" text-anchor="middle">start</text>
-    </g>
-
-    <line x1="215" x2="215" y1="30" y2="60" stroke="black" stroke-width="1" />
-    <path transform="translate(208 49)" d="M 12 2 L 2 2 L 7 11 z" stroke="black" stroke-width="0" fill="black" />-->
                 <g transform="translate(5 10)">
                     <rect x="97" y="0" width="100" height="30"
                           :stroke-width="isSliding ? 2 : 1"
@@ -1142,7 +1124,7 @@ if (age < 13) {
             });
             app_flowchart_nested.mount('#vueApp_flowchart_nested');
         </script>
-        <p>In the flowchart above, we can see that the code block for <code class="w3-codespan">age > 17</code> is only executed if the <code class="w3-codespan">age</code> is 18 or 19.</p>
+        <p>На блок-схемі вище ми бачимо, що блок коду для <code class="w3-codespan">age > 17</code> виконується лише тоді, коли <code class="w3-codespan">age</code> дорівнює 18 або 19.</p>
         <hr>
         <div class="w3-clear nextprev">
             <a class="w3-left w3-btn" href="prog_variables.html">&#10094; Prev</a>
