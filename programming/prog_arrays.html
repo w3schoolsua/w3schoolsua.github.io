@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Основи програмування. W3Schools також пропонує безкоштовні онлайн-уроки, навчальні посібники, довідкові матеріали, завдання та вправи на більшості мов програмування та створення веб-сайтів. Охоплює найпопулярніші технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато іншого'>
+<script src="../lib/vue3.4.21.js"></script>
+<link rel="stylesheet" href="../lib/prism1.css">
+<script src="../lib/prism1.js"></script>
+<link rel="stylesheet" href="../styles/programming.css">
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->    <title>Підручник з програмування. Масиви в програмуванні. Уроки для початківців. W3Schools українською</title>
+    <meta name='description' content='Що таке масив? Що можна робити з масивом? Створення масиву. Операції з масивами. Зчитування значення масиву. Оновлення значення масиву. Вставка значення масиву. Видалення значення масиву. Знаходження довжини масиву. Цикл по масиву. Суворе визначення масиву. Підручник з основ програмування. Приклади. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #vueApp_read {
+            margin: 0 10px;
+            width: 270px;
+        }
+        @media (max-width: 550px) {
+            #vueApp_read {
+                margin-left: 0;
+                margin-right: 0;
+                width: 270px;
+            }
+        }
+        #vueApp_update {
+            margin: 0 10px;
+            width: 270px; /*640px;*/
+        }
+        @media (max-width: 1150px) {
+            #vueApp_update {
+                margin-left: 0;
+                margin-right: 0;
+                width: 270px;
+            }
+        }
+        #vueApp_insert {
+            margin: 0 10px;
+            width: 350px;
+        }
+        @media (max-width: 500px) {
+            #vueApp_insert {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        #vueApp_remove {
+            margin: 0 10px;
+            width: 350px;
+        }
+        @media (max-width: 500px) {
+            #vueApp_remove {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        #vueApp_length {
+            margin: 0 10px;
+            width: 390px;
+        }
+        @media (max-width: 500px) {
+            #vueApp_length {
+                margin-left: 0;
+                margin-right: 0;
+                width: 270px;
+            }
+        }
+        #vueApp_arrayLoop {
+            margin: 0 10px;
+            width: 390px;
+        }
+        @media (max-width: 500px) {
+            #vueApp_arrayLoop {
+                margin: 0;
+                width: 270px;
+            }
+        }
+        .gArrayEl {
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+        .svgIndexText {
+            text-anchor: middle;
+            font-size: 15px;
+            font-family: monospace;
+        }
+        .svgDataText{
+            font-family: "Menlo", "Consolas", "Courier New", monospace;
+        }
+        .darkpagetheme .svgIndexText {
+            fill: #ddd;
+        }
+        .svgApple {
+            transition: transform 0.2s ease-in-out;
+        }
+    </style>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню' aria-label='Відкрити меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index.html' title='Kotlin Підручник'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index.html' title='C Підручник'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index.html' title='C++ Підручник'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index.html' title='C# Підручник'>C#</a>
+            <a class='w3-bar-item w3-button' href='../ai/index.html' title='AI Підручник'>AI</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../typescript/index.html' title='TypeScript Підручник'>TypeScript</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='Як зробити'>Як зробити?</a>
+            <a class='w3-bar-item w3-button w3-left' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники' aria-label='Перейти в розділ Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників' aria-label='Переглянути більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті' aria-label='Пошук по сайту'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темну тему' aria-label='Увімкнути темну тему'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи' aria-label='Перейти в розділ Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../programming/index.html'>Програмування Інтро</a>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../rust/index.html'>Вивчити Rust</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index.html'>Вивчити PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../bash/index.html'>Вивчити Bash</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index.html'>Редактори коду / IDE</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class='left'><span class='left_h2'>Концепції</span> програмування</h2>
+            <a target='_top' href='index.html'>Інтро</a>
+            <a target='_top' href='prog_programming.html'>Програмування</a>
+            <a target='_top' href='prog_variables.html'>Змінні</a>
+            <a target='_top' href='prog_if.html'>If Інструкції</a>
+            <a target='_top' href='prog_arrays.html'>Масиви</a>
+            <a target='_top' href='prog_loops.html'>Цикли</a>
+            <a target='_top' href='prog_functions.html'>Функції</a>
+            <a target='_top' href='prog_scope.html'>Область застосування</a>
+            <a target='_top' href='prog_data_types.html'>Типи даних</a>
+            <a target='_top' href='prog_operators.html'>Оператори</a>
+            <div class='tut_overview'>
+                <a target='_top' href='prog_operators_arithmetic.html'>Арифметичні оператори</a>
+                <a target='_top' href='prog_operators_assignment.html'>Оператори присвоєння</a>
+                <a target='_top' href='prog_operators_comparison.html'>Оператори порівняння</a>
+                <a target='_top' href='prog_operators_logical.html'>Логічні оператори</a>
+                <a target='_top' href='prog_operators_bitwise.html'>Побітові оператори</a>
+            </div>
+            <a target='_top' href='prog_comments.html'>Коментарі</a>
+            <a target='_top' href='prog_bits_and_bytes.html'>Біти та байти</a>
+            <a target='_top' href='prog_binary_numbers.html'>Двійкові (бінарні) числа</a>
+            <a target='_top' href='prog_hexadecimal_numbers.html'>Шістнадцяткові (hex) числа</a>
+            <a target='_top' href='prog_boolean_algebra.html'>Булева алгебра</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../images1/editors.png' alt='Основи програмування. W3Schools українською. Уроки для початківців' class='w3-left w3-padding' title='Програмування для початківців. W3Schools українською' style='width: 100px'></a>    <p class='w3-right'>
+        <a href='prog_arrays_en.html' title='Перейти на англійську мову'>En</a>
+        <a href='prog_arrays_es.html' title='Перейти на іспанську мову'>Es</a>
+        <a href='prog_arrays_de.html' title='Перейти на німецьку мову'>De</a>
+        <a href='prog_arrays_fr.html' title='Перейти на французьку мову'>Fr</a>
+    </p>
+    <article>
+        <h1><span class="color_h1">Масиви</span> в програмуванні</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="prog_if.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="prog_loops.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <div class="ws-info">
+            <p>Масиви створені для зберігання багатьох значень разом.</p>
+        </div>
+        <hr>
+        <h2>Що таке масив?</h2>
+        <p><strong>Масив</strong> – це колекція значень.</p>
+        <p>На зображенні нижче показано, як можна уявити масив з назвою <code class="w3-codespan">myFruits</code>, у якому зберігатимуться значення <code class="w3-codespan">'banana'</code>, <code class="w3-codespan">'apple'</code> та <code class="w3-codespan">'orange'</code>.</p>
+        <div id="vueApp_varSimple">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 190" width="420" height="190" style="max-width: 100%; height: auto; overflow: visible;">
+                <filter id="gaussian-blur">
+                    <feGaussianBlur stdDeviation="5" />
+                </filter>
+                <!-- The whole box -->
+                <g transform="translate(-30 -65)">
+                    <!-- back -->
+                    <g transform="translate(38 14)">
+                        <path transform="translate(110 114)" d="M -84 76 L 203 76 L 203 20 L 183 10 L -62 10 L -84 20 Z" fill="rgb(148,132,120)" stroke="none" stroke-width="0" />
+                        <path transform="translate(110 114)" d="M 10 9 L 181 9 L 208 20 L 199 20 L 179 12 L 107 12 L 114 20 L 108 20 L 101 12 L 13 12 L 6 20 L 0 20 L 7 12 L -60 12 L -78 20 L -87 20 L -62 9 Z" fill="rgb(66,66,67)" stroke="none" stroke-width="0" />
+                        <line x1="108" y1="135" x2="205" y2="28" stroke="red" stroke-width="1" opacity="0" />
+                        <line x1="226" y1="135" x2="130" y2="28" stroke="red" stroke-width="1" opacity="0" />
+                        <line x1="19" y1="135" x2="200" y2="55" stroke="red" stroke-width="1" opacity="0" />
+                        <line x1="322" y1="135" x2="130" y2="55" stroke="red" stroke-width="1" opacity="0" />
+                    </g>
+                    <rect x="30" y="65" width="420" height="190" @click="highlight('none')" fill="transparent" />
+                    <!-- Apple -->
+                    <g :transform="`translate(165 ${appleHeight})`"
+                       @click="showValue = !showValue"
+                       @mouseover="setHover('value')"
+                       @mouseleave="clearHover()"
+                       :class="[
+                'svgSectionArray',
+                'svgApple',
+                {
+                    'svgSectionArray-hover': currentHover === 'value',
+                    'svgSectionArray-active': showValue
+                }
+            ]"
+                    >
+                        <image x="0" y="0" width="80" height="80" href="img_apple.svg" />
+                        <rect x="11" y="27" width="60" height="18" filter="url(#gaussian-blur)" class="label" stroke="none" />
+                        <text x="40" y="40" text-anchor="middle" class="svgCode">'apple'</text>
+                    </g>
+                    <!-- Orange -->
+                    <g :transform="`translate(265 ${appleHeight})`"
+                       @click="showValue = !showValue"
+                       @mouseover="setHover('value')"
+                       @mouseleave="clearHover()"
+                       :class="[
+                'svgSectionArray',
+                'svgApple',
+                {
+                    'svgSectionArray-hover': currentHover === 'value',
+                    'svgSectionArray-active': showValue
+                }
+            ]"
+                    >
+                        <image x="0" y="0" width="80" height="80" href="img_orange.svg"/>
+                        <rect x="11" y="27" width="60" height="18" filter="url(#gaussian-blur)" class="label" stroke="none" />
+                        <text x="40" y="40" text-anchor="middle" class="svgCode">'orange'</text>
+                    </g>
+                    <!-- banana -->
+                    <g :transform="`translate(65 ${bananaHeight}) rotate(-40)`"
+                       @click="showValue = !showValue"
+                       @mouseover="setHover('value')"
+                       @mouseleave="clearHover()"
+                       :class="[
+                'svgSectionArray',
+                'svgApple',
+                {
+                    'svgSectionArray-hover': currentHover === 'value',
+                    'svgSectionArray-active': showValue
+                }
+            ]"
+                    >
+                        <image x="-10" y="0" width="110" height="70" href="img_banana.svg"/>
+                        <rect x="11" y="23" width="60" height="18" filter="url(#gaussian-blur)" class="label" stroke="none" />
+                        <text x="40" y="36" text-anchor="middle" class="svgCode">'banana'</text>
+                    </g>
+                    <!-- front -->
+                    <g transform="translate(50 50)" opacity="1" @click="highlight('none')">
+                        <rect x="13" y="100" width="291" height="60" fill="rgb(189,179,155)" stroke="rgb(66,66,67)" stroke-width="4" />
+                        <rect x="8" y="157" width="301" height="10" fill="rgb(139,103,57)" stroke="rgb(66,66,67)" stroke-width="4" />
+                    </g>
+                </g>
+                <!-- Values -->
+                <g transform="translate(370 61)"
+                   @click="showValue = !showValue"
+                   @mouseover="setHover('value')"
+                   @mouseleave="clearHover()"
+                   :class="[
+                'svgSectionArray',
+                {
+                    'svgSectionArray-hover': currentHover === 'value',
+                    'svgSectionArray-active': showValue
+                }
+            ]" >
+                    <rect x="-30" y="-20" width="60" height="27" opacity="0" />
+                    <text x="0" y="0" text-anchor="middle" class="svgExplainText">Values</text>
+                </g>
+                <!-- Array Name -->
+                <g transform="translate(0 0)"
+                   @click="showName = !showName"
+                   @mouseover="setHover('name')"
+                   @mouseleave="clearHover()"
+                   :class="[
+                'svgSectionArray',
+                {
+                    'svgSectionArray-hover': currentHover === 'name',
+                    'svgSectionArray-active': showName
+                }
+            ]" >
+                    <rect x="30" y="162" width="105" height="27" opacity="0" />
+                    <text x="85" y="180" text-anchor="middle" class="svgExplainText">Array Name</text>
+                    <g :transform="`scale(${showName ? 1.1 : 1})`" transform-origin="173 115" transform-box="fill-box" style="transition: transform 0.1s ease-in-out;">
+                        <path transform="translate(0 5)" d="M 130 115 Q 130 100 145 100 L 202 100 Q 217 100 217 115 Q 217 130 202 130 L 145 130 Q 130 130 130 115" stroke="rgb(66,66,67)" class="label"/>
+                        <text x="137" y="124" text-anchor="left" font-size="15" class="svgCode">myFruits</text>
+                    </g>
+                    <path d="M 140 175 L 177 175 L 177 133" class="behind"/>
+                    <path d="M 140 175 L 177 175 L 177 133" class="front"/>
+                </g>
+                <!-- Indexes -->
+                <g transform="translate(0 0)"
+                   @click="showIndexes = !showIndexes"
+                   @mouseover="setHover('indexes')"
+                   @mouseleave="clearHover()"
+                   :class="[
+                'svgSectionArray',
+                {
+                    'svgSectionArray-hover': currentHover === 'indexes',
+                    'svgSectionArray-active': showIndexes
+                }
+            ]" >
+                    <rect x="340" y="72" width="70" height="27" fill="transparent" opacity="0"/>
+                    <text x="375" y="95" text-anchor="middle" class="svgExplainText">Indexes</text>
+                    <g :transform="`scale(${showIndexes ? 1.1 : 1})`" transform-origin="81 91" transform-box="fill-box" style="transition: transform 0.1s ease-in-out;">
+                        <rect x="71" y="81" width="19" height="18" fill="lightgray" stroke="rgb(66,66,67)" class="label"/>
+                        <text x="76" y="95" text-anchor="left" font-size="15" class="svgCode">0</text>
+                    </g>
+                    <g :transform="`scale(${showIndexes ? 1.1 : 1})`" transform-origin="178 91" transform-box="fill-box" style="transition: transform 0.1s ease-in-out;">
+                        <rect x="168" y="81" width="19" height="18" fill="lightgray" stroke="rgb(66,66,67)" class="label"/>
+                        <text x="173" y="95" text-anchor="left" font-size="15" class="svgCode">1</text>
+                    </g>
+                    <g :transform="`scale(${showIndexes ? 1.1 : 1})`" transform-origin="275 91" transform-box="fill-box" style="transition: transform 0.1s ease-in-out;">
+                        <rect x="265" y="81" width="19" height="18" fill="lightgray" stroke="rgb(66,66,67)" class="label"/>
+                        <text x="270" y="95" text-anchor="left" font-size="15" class="svgCode">2</text>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <script>
+            const app_varSimple = Vue.createApp({
+                data() {
+                    return {
+                        showValue: false,
+                        showName: false,
+                        showIndexes: false,
+                        highlighted: null,
+                        currentHover: null
+                    };
+                },
+                computed: {
+                    appleHeight() {
+                        if(this.showValue){
+                            return 85;
+                        }
+                        else if(this.currentHover === 'value'){
+                            return 120;
+                        }
+                        return 125;
+                    },
+                    bananaHeight() {
+                        if(this.showValue){
+                            return 125;
+                        }
+                        else if(this.currentHover === 'value'){
+                            return 170;
+                        }
+                        return 175;
+                    },
+                    nameLineEndX() {
+                        return this.showName ? 62 : 0;  // Line shrinks or extends based on state
+                    },
+                    valueLineEndX() {
+                        return this.showValue ? 55 : 0;  // Line shrinks or extends based on state
+                    },
+                    indexesLineEndX() {
+                        return this.showIndexes ? 55 : 0;  // Line shrinks or extends based on state
+                    }
+                },
+                methods: {
+                    highlight(section){
+                        if(section === 'none'){
+                            this.showValue = false;
+                            this.showName = false;
+                            this.showIndexes = false;
+                        }
+                        if(section === 'value'){
+                            this.showValue = true
+                        }
+                        if(section === 'name'){
+                            this.showName = true;
+                        }
+                        if(section === 'indexes'){
+                            this.showIndexes = true;
+                        }
+                        //console.log("Highlighting section: "+section);
+                        this.highlighted = section;
+                    },
+                    setHover(section) {
+                        this.currentHover = section; // Set the hovered section
+                    },
+                    clearHover() {
+                        this.currentHover = null; // Clear hover state
+                    }
+                },
+                watch: {
+                    showName(newVal) {
+                        //console.log("showName: "+newVal);
+                    },
+                    showIndexes(newVal) {
+                        //console.log("showIndexes: "+newVal);
+                    }
+                }
+            });
+            app_varSimple.mount('#vueApp_varSimple');
+        </script>
+        <p>Each value in an array has a position, called index, which starts at <code class="w3-codespan">0</code>.</p>
+        <p>Below is how the <code class="w3-codespan">myFruits</code> array is created, using Python code:</p>
+        <div id="vueApp_arrayImg" style="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 130" width="430" height="130" style="max-width: 100%; overflow:hidden;">
+                <filter id="gaussian-blur">
+                    <feGaussianBlur stdDeviation="5" />
+                </filter>
+                <g class="svgCode" transform="translate(0, 42)">
+                    <rect x="0" y="0" width="380" height="45" fill="#EEE"/>
+                    <rect x="0" y="0" width="4" height="45" fill="#04AA6D"/>
+                </g>
+                <rect x="0" y="0" width="445" height="205" @click="highlight('none')" fill="transparent" />
+                <!-- Name -->
+                <g  @click="highlight('name')"
+                    @mouseover="setHover('name')"
+                    @mouseleave="clearHover()"
+                    :class="[
+            'svgSection',
+            {
+                'svgSection-hover': currentHover === 'name',
+                'svgSection-active': highlighted === 'name'
+            }
+        ]"
+                    transform="translate(10, 0)" >
+                    <rect x="2" y="53" width="80" height="24" filter="url(#gaussian-blur)"/>
+                    <text x="10" y="70" text-anchor="start" font-size="15" class="svgDataText">myFruits = </text>
+                    <rect x="10" y="99" width="60" height="24"/>
+                    <text x="40" y="117" text-anchor="middle" class="svgExplainText">Name</text>
+                    <path d="M 40 77 L 40 97 M 17 97 L 63 97" class="behind" />
+                    <path d="M 40 77 L 40 97 M 17 97 L 63 97" class="front" />
+                </g>
+                <!-- Values -->
+                <g  @click="highlight('values')"
+                    @mouseover="setHover('values')"
+                    @mouseleave="clearHover()"
+                    :class="[
+            'svgSection',
+            {
+                'svgSection-hover': currentHover === 'values',
+                'svgSection-active': highlighted === 'values'
+            }
+        ]"
+                    transform="translate(10, 0)" >
+                    <rect x="117" y="54" width="72" height="23" filter="url(#gaussian-blur)"/>
+                    <text x="150" y="70" text-anchor="middle" font-size="15" class="svgDataText">['banana',</text>
+                    <rect x="195" y="54" width="68" height="23" filter="url(#gaussian-blur)"/>
+                    <text x="233" y="70" text-anchor="middle" font-size="15" class="svgDataText">'apple',</text>
+                    <rect x="271" y="54" width="78" height="23" filter="url(#gaussian-blur)"/>
+                    <text x="315" y="70" text-anchor="middle" font-size="15" class="svgDataText">'orange']</text>
+                    <rect x="198" y="0" width="63" height="23"/>
+                    <text x="230" y="17" text-anchor="middle" class="svgExplainText">Values</text>
+                    <g transform="translate(140, 15)">
+                        <path d="M 10 43 L 10 10 L 90 10 L 90 43 M 90 10 L 170 10 L 170 43" class="behind"  />
+                        <path d="M 10 42 L 10 10 L 90 10 L 90 42 M 90 10 L 170 10 L 170 42" class="front"  />
+                    </g>
+                </g>
+                <!-- indexes -->
+                <g  @click="highlight('indexes')"
+                    @mouseover="setHover('indexes')"
+                    @mouseleave="clearHover()"
+                    :class="[
+            'svgSection',
+            {
+                'svgSection-hover': currentHover === 'indexes',
+                'svgSection-active': highlighted === 'indexes'
+            }
+        ]"
+                    transform="translate(10, -3)" >
+                    <rect x="340" y="100" width="78" height="24"/>
+                    <text x="380" y="117" text-anchor="middle" class="svgExplainText">Indexes</text>
+                    <!-- 100, 180, 260 : 20 -->
+                    <rect x="143" y="82" width="15" height="20" filter=""/>
+                    <text class="svgIndexText" x="150" y="96">0</text>
+                    <rect x="222" y="82" width="15" height="20" filter=""/>
+                    <text class="svgIndexText" x="230" y="96">1</text>
+                    <rect x="303" y="82" width="15" height="20" filter=""/>
+                    <text class="svgIndexText" x="310" y="96">2</text>
+                    <g transform="translate(140, 90)">
+                        <path d="M 200 22 L 10 22 L 10 10 M 90 10 L 90 22 M 170 10 L 170 22" class="behind" />
+                        <path d="M 200 22 L 10 22 L 10 10 M 90 10 L 90 22 M 170 10 L 170 22" class="front" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <script>
+            const app_arrayImg = Vue.createApp({
+                data() {
+                    return {
+                        highlighted: null,
+                        currentHover: null,
+                        activeTab: 'flowchart'
+                    };
+                },
+                watch: {
+
+                },
+                computed: {
+
+                },
+                methods: {
+                    highlight(section){
+                        //console.log("Highlighting section: "+section);
+                        this.highlighted = section;
+                    },
+                    setHover(section) {
+                        this.currentHover = section; // Set the hovered section
+                    },
+                    clearHover() {
+                        this.currentHover = null; // Clear hover state
+                    }
+                },
+                async mounted(){
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                }
+            });
+
+            app_arrayImg.mount('#vueApp_arrayImg');
+        </script>
+        <p>The first value <code class="w3-codespan">'banana'</code> is positioned at index <code class="w3-codespan">0</code> in the array.</p>
+        <hr>
+        <h2>What Can I Do With an Array?</h2>
+        <p>Arrays make it easier to work with groups of values compared to using a separate variable for each value.</p>
+        <p>So instead of creating 3 variables:</p>
+        <div class="w3-example">
+  <pre class="language-python notranslate w3-white" data-line=""><code>fruit1 = 'banana'
+fruit2 = 'apple'
+fruit3 = 'orange'</code></pre>
+        </div>
+        <p>We can just create an array:</p>
+        <div class="w3-example">
+            <pre class="language-python notranslate w3-white" data-line=""><code>myFruits = ['banana','apple','orange']</code></pre>
+        </div>
+        <p>With an array, you can:</p>
+        <ul>
+            <li>Store a collection of numbers, words, or objects.</li>
+            <li>Access any value using its index (position).</li>
+            <li>Read, update, insert, or remove any of the array values.</li>
+        </ul>
+        <p>See how an array can be created and used in the sections below.</p>
+        <hr>
+        <h2>Creating an Array</h2>
+        <p>When creating an array, we must specify the name of the array and the values inside it.</p>
+        <p>Here is how the <code class="w3-codespan">myFruits</code> array can be created using different programming languages:</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>myFruits = ['banana','apple','orange']</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const myFruits = ['banana','apple','orange'];</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>String[] myFruits = {"banana","apple","orange"};</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>string myFruits[] = {"banana","apple","orange"};</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_create.html">Run Example &raquo;</a>
+        </div>
+        <p>In the Python code above:</p>
+        <ul>
+            <li><code class="w3-codespan">myFruits</code> is the name of the array.</li>
+            <li>The equal sign <code class="w3-codespan">=</code> stores the values on the right side into the array.</li>
+            <li>The square brackets <code class="w3-codespan">[ ]</code> mean we are creating an array.</li>
+            <li><code class="w3-codespan">'banana','apple','orange'</code> are the values inside the array, separated by comma.</li>
+        </ul>
+        <div class="ws-note">
+            <p><b>Note:</b> When creating an array in programming languages like C/C++ and Java, the data type of the values inside the array must be stated.</p>
+        </div>
+        <hr>
+        <h2>Array Operations</h2>
+        <p>Arrays can be read and manipulated in many different ways, here are some common things you can do with an array:</p>
+        <table class="ws-table-all notranslate">
+            <tr>
+                <th>Operation</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>read</td>
+                <td>Read a value from an index in the array.</td>
+            </tr>
+            <tr>
+                <td>update</td>
+                <td>Updates the existing value at an array index position.</td>
+            </tr>
+            <tr>
+                <td>insert</td>
+                <td>Insert a new value in the array, in addition to the existing values.</td>
+            </tr>
+            <tr>
+                <td>remove</td>
+                <td>Removes a value from the array at a given index position.</td>
+            </tr>
+            <tr>
+                <td>length</td>
+                <td>Gives us the number of values in the array. The number of values is the length of an array.</td>
+            </tr>
+            <tr>
+                <td>loop</td>
+                <td>Visit each value in the array, using a <a href="prog_loops.html">loop</a>.</td>
+            </tr>
+        </table>
+        <p>Go to the sections below to see how the code for these array operations look like in different programming languages.</p>
+        <hr>
+        <h2>Reading an Array Value</h2>
+        <p>To read an array value, we use the array name with the index of the value we want to read in brackets, like this <code class="w3-codespan">myFruits[0]</code>.</p>
+        <div id="vueApp_read" style="display: flex; flex-direction: row; flex-wrap: wrap; border: solid black 1px;">
+            <div style="margin: 10px;">
+                <svg ref="svgString" viewBox="-2 48 245 50" width="245" height="50" style="margin: 0; overflow: hidden;">
+                    <text v-for="(el, i) in arrayData"
+                          class="svgIndexText"
+                          :x="40 + i * 80" y="96"
+                          :opacity="selectedIndex === i ? 1 : 0.5">{{ i }}
+                    </text>
+                    <g v-for="(el, i) in arrayData" :key="el.key"
+                       class="gArrayEl"
+                       :transform="calculateTransform(el,i)"
+                       :opacity="el.opacity"
+                       @click="selectElement(i)"
+                       style="cursor: pointer;">
+                        <rect x="0" y="30" width="80" height="30"
+                              stroke="black"
+                              :fill="(selectedIndex === i || allSelected) ? 'rgb(252, 252, 113)' : '#EEE'"
+                              :stroke-width="(selectedIndex === i || allSelected) ? 3 : 1" />
+                        <text x="40" y="50" text-anchor="middle" font-size="15" font-family="monospace">'{{ el.value }}'</text>
+                    </g>
+                </svg>
+            </div>
+            <div style="flex-basis: 100%; padding-top: 3px; margin: 10px; margin-top: 0;">
+                <!--<label>Index: <input v-model.number="selectedIndex" step="1" min="0" max="2" type="number" style="width: 5ch;" :disabled="inputsDisabled"></label>-->
+                <div class="w3-example" style="margin: 0; padding: 8px;">
+                    <!--<div class="w3-code notranslate pythonHigh" style="margin-top: 0px !important; margin-bottom: 0px !important;">
+                      myFruits[{{selectedIndex}}]
+                    </div>-->
+                    <pre class="language-python notranslate w3-white" data-line="" style="margin-top: 0px !important; margin-bottom: 0px !important; padding: 8px 12px;"><code v-html="highlightedCode"></code></pre>
+                </div>
+                <p>Result: <span style="margin-left: 2px; font-family: monospace;">'{{ result }}'</span></p>
+
+                <button @click="getValue" :disabled="!getBtnActive">Run code</button>
+            </div>
+        </div>
+        <script>
+            const app_read = Vue.createApp({
+                data() {
+                    return {
+                        arrayData: [],
+                        selectedIndex: 0,
+                        currentValue: null,
+                        keyCounter: 0,
+                        inputsDisabled: false,
+                        allSelected: false,
+                        statement: '',
+                        result: '',
+                        fruitNames: ['banana','apple','orange','kiwi','lemon']
+                    };
+                },
+                computed: {
+                    highlightedCode(){
+                        return Prism.highlight('myFruits['+this.selectedIndex+']', Prism.languages.python);
+                    },
+                    getBtnActive() {
+                        return this.selectedIndex !== null && this.selectedIndex > -1 &&
+                            this.selectedIndex < this.arrayData.length && !this.inputsDisabled;
+                    }
+                },
+                methods: {
+                    getValue() {
+                        if (!this.inputsDisabled) {
+                            this.inputsDisabled = true;
+                            this.statement = 'myFruits[' + this.selectedIndex + ']';
+                            this.currentValue = null;
+                            this.result = null;
+
+                            setTimeout(() => {
+                                this.currentValue = this.arrayData[this.selectedIndex].value;
+                                this.result = this.currentValue;
+                                this.inputsDisabled = false;
+                            }, 500);
+                        }
+                    },
+                    calculateTransform(el, i) {
+                        return `translate(${el.offsetX + i * 80}, ${20 + el.offsetY})`;
+                    },
+                    populateArray(elementCount) {
+                        this.statement = 'myFruits = [';
+                        for (let i = 0; i < elementCount; i++) {
+                            let elObj = {
+                                value: this.fruitNames[i],
+                                offsetX: 0,
+                                offsetY: 0,
+                                opacity: 1,
+                                key: this.keyCounter++
+                            };
+                            this.arrayData.push(elObj);
+                            this.statement += "'"+elObj.value+"'";
+                            if (i < elementCount - 1) this.statement += ',';
+                        }
+                        this.statement += ']';
+                    },
+                    selectElement(i) {
+                        if (!this.inputsDisabled) {
+                            this.selectedIndex = i;
+                            this.currentValue = null;
+                            this.result = '';
+                        }
+                    },
+                },
+                mounted() {
+                    this.populateArray(3);
+                }
+            });
+            app_read.mount('#vueApp_read');
+        </script>
+
+        <!--<script>
+        function testprism() {
+          var a = document.getElementById("pelle");
+          var newcontent = Prism.highlight("another = [1, 2, 5, 7, 51]", Prism.languages.python);
+          a.innerHTML = newcontent;
+        }
+        </script>
+        <button onclick="testprism()">Test</button>
+        <div class="w3-example">
+        <pre class="language-python notranslate w3-white" data-line=""><code id="pelle">my_array = [7, 12, 9, 4, 11]</code></pre>
+        </div>-->
+
+        <p>We must also use a command to write <code class="w3-codespan">myFruits[0]</code> to the console/terminal, so that we can actually see the result, and that is done a little different depending on the programming language.</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>myFruits = ['banana','apple','orange']
+
+print(myFruits[0])</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const myFruits = ['banana','apple','orange'];
+
+console.log(myFruits[0]);</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>String[] myFruits = {"banana","apple","orange"};
+
+System.out.println(myFruits[0]);</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>string myFruits[] = {"banana","apple","orange"};
+
+cout << myFruits[0];</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_read.html">Run Example &raquo;</a>
+        </div>
+        <hr>
+        <h2>Updating an Array Value</h2>
+        <p>To update a value in an array, we use the array name with the index position of the value we want to update, like this <code class="w3-codespan">myFruits[0]</code>, and then we use the equal sign <code class="w3-codespan">=</code> to store a new value there.</p>
+        <div id="vueApp_update" style="display: flex; flex-direction: row; flex-wrap: wrap; border: solid black 1px;">
+            <div style="margin: 10px;">
+                <svg ref="svgString" viewBox="-2 48 245 50" width="245" height="50" style="margin: 0; overflow: hidden;">
+                    <text v-for="(el, i) in arrayData"
+                          class="svgIndexText"
+                          :x="40 + i * 80" y="96"
+                          :opacity="selectedIndex === i ? 1 : 0.5">{{ i }}
+                    </text>
+                    <g v-for="(el, i) in arrayData" :key="el.key"
+                       class="gArrayEl"
+                       :transform="calculateTransform(el,i)"
+                       :opacity="el.opacity"
+                       @click="selectElement(i)"
+                       style="cursor: pointer;">
+                        <rect x="0" y="30" width="80" height="30"
+                              stroke="black"
+                              :fill="(selectedIndex === i || allSelected) ? 'rgb(252, 252, 113)' : '#EEE'"
+                              :stroke-width="(selectedIndex === i || allSelected) ? 3 : 1" />
+                        <text x="40" y="50" text-anchor="middle" font-size="15" font-family="monospace">'{{ el.value }}'</text>
+                    </g>
+                </svg>
+            </div>
+            <div style="flex-basis: 100%; padding-top: 3px; margin: 10px;">
+                <div class="w3-example" style="margin: 0; padding: 8px;">
+                    <pre class="language-python notranslate w3-white" data-line="" style="margin-top: 0 !important; margin-bottom: 0 !important; padding: 8px 12px;"><code v-html="highlightedCode"></code></pre>
+                </div>
+                <p><label>Value:<input ref="inpUpdate" v-model="currentValue" type="text" style="width: 7ch; margin-left: 5px;" maxlength="6" :disabled="inputsDisabled"></label></p>
+                &nbsp;<button @click="setValue" :disabled="!setBtnActive">Run code</button>
+            </div>
+        </div>
+        <script>
+            const app_update = Vue.createApp({
+                data() {
+                    return {
+                        arrayData: [],
+                        selectedIndex: 0,
+                        currentValue: 'kiwi',
+                        keyCounter: 0,
+                        inputsDisabled: false,
+                        allSelected: false,
+                        statement: '',
+                        result: '',
+                        fruitNames: ['banana','apple','orange','kiwi','lemon']
+                    };
+                },
+                computed: {
+                    highlightedCode(){
+                        return Prism.highlight("myFruits["+this.selectedIndex+"] = '"+this.currentValue+"'", Prism.languages.python);
+                    },
+                    setBtnActive() {
+                        return (this.selectedIndex !== null && this.selectedIndex > -1 &&
+                            this.selectedIndex < this.arrayData.length) && this.currentValue !== '' && !this.inputsDisabled;
+                    }
+                },
+                methods: {
+                    setValue() {
+                        if (!this.inputsDisabled && this.currentValue !== '') {
+                            this.inputsDisabled = true;
+                            this.statement = "myFruits[" + this.selectedIndex + "] = '" + this.currentValue+"'";
+                            this.result = null;
+
+                            const svg = d3.select(this.$refs.svgString);
+
+                            // Position of the input field
+                            const inputX = 40 + this.selectedIndex * 80; // Match the input field position
+                            const inputY = 0; // Match the input field position
+
+                            // Calculate the destination x and y positions for the array box
+                            const textX = 40 + this.selectedIndex * 80; // Offset for text inside the box
+                            const textY = 20 + 50; // Aligns with y-offset of the text element
+
+                            // Create a text element starting from the input field
+                            const newText = svg.append("text")
+                                .text(this.currentValue)
+                                .attr("x", inputX)
+                                .attr("y", inputY)
+                                .attr("font-size", "15px")
+                                .attr("text-anchor", "middle");
+
+                            // Animate the text to the array box
+                            newText.transition()
+                                .duration(500)
+                                .attr("x", textX) // Move to the target position
+                                .attr("y", textY) // Move to the target position
+                                .on("end", () => {
+                                    // Run these lines only after the transition completes
+                                    this.arrayData[this.selectedIndex].value = this.currentValue; // Update array value
+                                    this.result = ''; // Log the result
+                                    newText.remove(); // Clean up the cloned element
+                                    this.inputsDisabled = false;
+
+                                    this.currentValue = '';
+                                    setTimeout(() => {
+                                        this.$refs.inpUpdate.focus();
+                                    }, 200);
+                                });
+                        }
+                    },
+                    calculateTransform(el, i) {
+                        return `translate(${el.offsetX + i * 80}, ${20 + el.offsetY})`;
+                    },
+                    populateArray(elementCount) {
+                        this.statement = 'myFruits = [';
+                        for (let i = 0; i < elementCount; i++) {
+                            let elObj = {
+                                value: this.fruitNames[i],
+                                offsetX: 0,
+                                offsetY: 0,
+                                opacity: 1,
+                                key: this.keyCounter++
+                            };
+                            this.arrayData.push(elObj);
+                            this.statement += "'"+elObj.value+"'";
+                            if (i < elementCount - 1) this.statement += ',';
+                        }
+                        this.statement += ']';
+                    },
+                    selectElement(i) {
+                        if (!this.inputsDisabled) {
+                            this.selectedIndex = i;
+                            this.currentValue = '';
+                            this.result = '';
+                            setTimeout(() => {
+                                this.$refs.inpUpdate.focus();
+                            }, 200);
+                        }
+                    },
+                },
+                mounted() {
+                    this.populateArray(3);
+                }
+            });
+            app_update.mount('#vueApp_update');
+        </script>
+        <p>This is how updating an array value at index 0 can be done in different programming languages:</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>myFruits = ['banana','apple','orange']
+
+myFruits[0] = 'kiwi'</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const myFruits = ['banana','apple','orange'];
+
+myFruits[0] = 'kiwi';</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>String[] myFruits = {"banana","apple","orange"};
+
+myFruits[0] = "kiwi";</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>string myFruits[] = {"banana","apple","orange"};
+
+myFruits[0] = "kiwi";</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_update.html">Run Example &raquo;</a>
+        </div>
+        <hr>
+        <h2>Inserting an Array Value</h2>
+        <p>To insert a value into an array, in addition to the existing values, we need:</p>
+        <ul>
+            <li>the array name</li>
+            <li>a command to do the insert operation</li>
+            <li>the value to be inserted</li>
+        </ul>
+        <div id="vueApp_insert" style="display: flex; flex-direction: row; flex-wrap: wrap; border: solid black 1px;">
+            <div style="margin: 10px; flex-basis: 100%;">
+                <svg ref="svgString" viewBox="-2 48 350 50" width="350" height="50" style="margin: 0; overflow: hidden;">
+                    <text v-for="(el, i) in arrayData"
+                          class="svgIndexText"
+                          :x="40 + i * 80" y="96"
+                          :opacity="selectedIndex === i ? 1 : 0.5">{{ i }}
+                    </text>
+                    <g v-for="(el, i) in arrayData" :key="el.key"
+                       class="gArrayEl"
+                       :transform="calculateTransform(el,i)"
+                       :opacity="el.opacity"
+                       @click="selectElement(i)"
+                       style="cursor: pointer;">
+                        <rect x="0" y="30" width="80" height="30"
+                              stroke="black"
+                              :fill="(selectedIndex === i || allSelected) ? 'rgb(252, 252, 113)' : '#EEE'"
+                              :stroke-width="(selectedIndex === i || allSelected) ? 3 : 1" />
+                        <text x="40" y="50" text-anchor="middle" font-size="15" font-family="monospace">'{{ el.value }}'</text>
+                    </g>
+                </svg>
+            </div>
+            <div style="flex-basis: 100%; margin: 10px;">
+                <div class="w3-example" style="margin: 0; padding: 8px;">
+                    <pre class="language-python notranslate w3-white" data-line="" style="margin-top: 0 !important; margin-bottom: 0 !important; padding: 8px 12px;"><code v-html="highlightedCode"></code></pre>
+                </div>
+                <p><label>Value:<input ref="inpUpdate" v-model="currentValue" type="text" style="width: 7ch; margin-left: 5px;" maxlength="6" :disabled="inputsDisabled"></label></p>
+                <div style="flex-basis: 100%;">
+                    <button @click="insertElement" :disabled="!insertBtnActive">Run code</button>&nbsp;
+                    <button @click="resetSim" :disabled="!resetBtnActive">Reset</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            const app_insert = Vue.createApp({
+                data() {
+                    return {
+                        arrayData: [],
+                        selectedIndex: 0,
+                        currentValue: 'kiwi',
+                        keyCounter: 0,
+                        inputsDisabled: false,
+                        allSelected: false,
+                        statement: '',
+                        result: '',
+                        resetEnabled: false,
+                        fruitNames: ['banana','apple','orange','kiwi','lemon']
+                    };
+                },
+                computed: {
+                    highlightedCode(){
+                        return Prism.highlight("myFruits.insert('"+this.currentValue+"')", Prism.languages.python);
+                    },
+                    insertBtnActive() {
+                        return (this.selectedIndex !== null && this.selectedIndex > -1 &&
+                            this.selectedIndex <= this.arrayData.length) && this.currentValue !== '' && !this.inputsDisabled && this.arrayData.length < 4;
+                    },
+                    resetBtnActive(){
+                        return !this.inputsDisabled && this.resetEnabled;
+                    },
+                    maxIndex(){
+                        return this.arrayData.length;
+                    }
+                },
+                methods: {
+                    resetSim(){
+                        this.arrayData = [];
+                        this.populateArray(1);
+                        this.selectedIndex = this.arrayData.length;
+                        this.currentValue = 'pear';
+                        setTimeout(() => {
+                            this.$refs.inpUpdate.focus();
+                        }, 200);
+                    },
+                    async insertElement() {
+                        if (!this.inputsDisabled) {
+                            this.inputsDisabled = true;
+                            this.statement = "myFruits.insert('" + this.currentValue+"'," + this.selectedIndex + ")";
+                            this.result = null;
+                            let elObj = {
+                                value: this.currentValue,
+                                offsetX: 0,
+                                offsetY: 60,
+                                opacity: 0,
+                                key: this.keyCounter++
+                            };
+                            this.arrayData.push(elObj);
+                            await this.$nextTick();
+                            this.arrayData[this.selectedIndex].opacity = 1;
+                            await new Promise(resolve => setTimeout(resolve, 700));
+                            this.arrayData[this.selectedIndex].offsetY = 0;
+
+                            await new Promise(resolve => setTimeout(resolve, 700));
+                            this.selectedIndex = this.arrayData.length;
+                            this.inputsDisabled = false;
+                            this.resetEnabled = true;
+
+                            this.currentValue = '';
+                            setTimeout(() => {
+                                this.$refs.inpUpdate.focus();
+                            }, 100);
+                        }
+                    },
+                    async lengthOfArray() {
+                        if (!this.inputsDisabled) {
+                            this.statement = 'myFruits.length';
+                            this.result = '';
+                            this.allSelected = true;
+                            await new Promise(resolve => setTimeout(resolve, 500));
+                            this.result = this.arrayData.length;
+                            this.allSelected = false;
+                            this.inputsDisabled = false;
+                        }
+                    },
+                    calculateTransform(el, i) {
+                        return `translate(${el.offsetX + i * 80}, ${20 + el.offsetY})`;
+                    },
+                    populateArray(elementCount) {
+                        this.statement = 'myFruits = [';
+                        for (let i = 0; i < elementCount; i++) {
+                            let elObj = {
+                                value: this.fruitNames[i],
+                                offsetX: 0,
+                                offsetY: 0,
+                                opacity: 1,
+                                key: this.keyCounter++
+                            };
+                            this.arrayData.push(elObj);
+                            this.statement += "'"+elObj.value+"'";
+                            if (i < elementCount - 1) this.statement += ',';
+                        }
+                        this.statement += ']';
+                        this.selectedIndex = this.arrayData.length;
+                    },
+                    selectElement(i) {
+                        if (!this.inputsDisabled) {
+                            this.selectedIndex = i;
+                            this.currentValue = '';
+                            this.result = '';
+                            setTimeout(() => {
+                                this.$refs.inpUpdate.focus();
+                            }, 200);
+                        }
+                    },
+                },
+                mounted() {
+                    this.populateArray(2);
+                }
+            });
+            app_insert.mount('#vueApp_insert');
+        </script>
+        <p>When we do insert this way, the new value is inserted at the end of the array.</p>
+        <p>The command to insert a value into an array varies a bit between the programming languages.</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>myFruits = ['banana','apple','orange']
+
+myFruits.append('kiwi')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const myFruits = ['banana','apple','orange'];
+
+myFruits.push('kiwi');</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>ArrayList&lt;String&gt; myFruits = new ArrayList&lt;String&gt;();
+myFruits.add("banana");
+myFruits.add("apple");
+myFruits.add("orange");
+
+myFruits.add("kiwi");</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>vector&lt;string&gt; myFruits = {"banana", "apple", "orange"};
+
+myFruits.push_back("kiwi");</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_append.html">Run Example &raquo;</a>
+        </div>
+        <div class="ws-note">
+            <p>A <strong>Dynamic Array</strong> is an array that is able to change size, like it must for insert and remove operations. In such cases where the array changes size, we use <a href="../java/java_arraylist.html">ArrayList</a> in Java and <a href="../cpp/cpp_vectors.html">vector</a> in C++.</p>
+        </div>
+        <p>A value can also be added to a specific position in an array, using the index, like this:</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>myFruits = ['banana','apple','orange']
+
+myFruits.insert(1,'kiwi')</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const myFruits = ['banana','apple','orange'];
+
+myFruits.splice(1,0,'kiwi');</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>ArrayList&lt;String&gt; myFruits = new ArrayList&lt;String&gt;();
+myFruits.add("banana");
+myFruits.add("apple");
+myFruits.add("orange");
+
+myFruits.add(1,"kiwi");</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>vector&lt;string&gt; myFruits = {"banana", "apple", "orange"};
+
+myFruits.insert(myFruits.begin() + 1, "kiwi");</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_insert.html">Run Example &raquo;</a>
+        </div>
+        <hr>
+        <h2>Removing an Array Value</h2>
+        <p>An array value is removed by specifying the index where the value should be removed from.</p>
+        <div id="vueApp_remove" style="display: flex; flex-direction: row; flex-wrap: wrap; border: solid black 1px;">
+            <div style="margin: 10px; flex-basis: 100%;">
+                <svg ref="svgString" viewBox="-2 48 350 50" width="350" height="50" style="margin: 0; overflow: hidden;">
+                    <text v-for="(el, i) in arrayData"
+                          class="svgIndexText"
+                          :x="40 + i * 80" y="96"
+                          :opacity="selectedIndex === i ? 1 : 0.5">{{ i }}
+                    </text>
+                    <g v-for="(el, i) in arrayData" :key="el.key"
+                       class="gArrayEl"
+                       :transform="calculateTransform(el,i)"
+                       :opacity="el.opacity"
+                       @click="selectElement(i)"
+                       style="cursor: pointer;">
+                        <rect x="0" y="30" width="80" height="30"
+                              stroke="black"
+                              :fill="(selectedIndex === i || allSelected) ? 'rgb(252, 252, 113)' : '#EEE'"
+                              :stroke-width="(selectedIndex === i || allSelected) ? 3 : 1" />
+                        <text x="40" y="50" text-anchor="middle" font-size="15" font-family="monospace">'{{ el.value }}'</text>
+                    </g>
+                </svg>
+            </div>
+            <div style="flex-basis: 100%; margin: 10px;">
+                <div class="w3-example" style="margin: 0; padding: 8px;">
+                    <pre class="language-python notranslate w3-white" data-line="" style="margin-top: 0 !important; margin-bottom: 0 !important; padding: 8px 12px;"><code v-html="highlightedCode"></code></pre>
+                </div>
+                <p><label>Index:<input v-model.number="selectedIndex" step="1" min="0" :max="maxIndex" type="number" style="width: 5ch; margin-left: 5px;" :disabled="inputsDisabled"></label></p>
+                <div style="flex-basis: 100%;">
+                    <button @click="removeElement" :disabled="!removeBtnActive">Run code</button>&nbsp;<button @click="resetSim" :disabled="!resetBtnActive">Reset</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            const app_remove = Vue.createApp({
+                data() {
+                    return {
+                        arrayData: [],
+                        selectedIndex: 2,
+                        currentValue: 'kiwi',
+                        keyCounter: 0,
+                        inputsDisabled: false,
+                        allSelected: false,
+                        statement: '',
+                        result: '',
+                        resetEnabled: false,
+                        fruitNames: ['banana','apple','orange','kiwi','lemon']
+                    };
+                },
+                computed: {
+                    highlightedCode(){
+                        let insertIndex = '';
+                        if(this.selectedIndex === null){
+                            insertIndex = '';
+                        }
+                        else {
+                            insertIndex = this.selectedIndex;
+                        }
+                        return Prism.highlight("myFruits.remove("+insertIndex+")", Prism.languages.python);
+                    },
+                    insertBtnActive() {
+                        return (this.selectedIndex !== null && this.selectedIndex > -1 &&
+                            this.selectedIndex <= this.arrayData.length) && this.currentValue !== null && !this.inputsDisabled && this.arrayData.length < 4;
+                    },
+                    resetBtnActive(){
+                        return !this.inputsDisabled && this.resetEnabled;
+                    },
+                    removeBtnActive() {
+                        return this.selectedIndex !== null && this.selectedIndex > -1 &&
+                            this.selectedIndex < this.arrayData.length && !this.inputsDisabled;
+                    },
+                    maxIndex(){
+                        return this.arrayData.length-1;
+                    },
+                    selectedIndexBtnTxt(){
+                        if(this.selectedIndex===null){
+                            return ' ';
+                        }
+                        else{
+                            return this.selectedIndex;
+                        }
+                    }
+                },
+                methods: {
+                    resetSim(){
+                        this.arrayData = [];
+                        this.populateArray(4);
+                        this.selectedIndex = 1;
+                        this.currentValue = 'pear';
+                        setTimeout(() => {
+                            this.selectedIndex = Math.floor(Math.random()*this.arrayData.length);
+                        }, 200);
+                    },
+                    async removeElement() {
+                        if (!this.inputsDisabled) {
+                            this.inputsDisabled = true;
+                            this.statement = "myFruits.remove(" + this.selectedIndex + ")";
+                            this.result = null;
+                            this.arrayData[this.selectedIndex].offsetY = -40;
+                            this.arrayData[this.selectedIndex].opacity = 0;
+                            await new Promise(resolve => setTimeout(resolve, 500));
+                            this.arrayData.splice(this.selectedIndex, 1);
+                            this.selectedIndex = null;
+                            this.inputsDisabled = false;
+
+                            setTimeout(() => {
+                                //this.$refs.inpRemove.focus();
+                                this.selectedIndex = Math.floor(Math.random()*this.arrayData.length);
+                                if(this.arrayData.length<3){
+                                    this.resetEnabled = true;
+                                }
+                            }, 500);
+                        }
+                    },
+                    calculateTransform(el, i) {
+                        return `translate(${el.offsetX + i * 80}, ${20 + el.offsetY})`;
+                    },
+                    populateArray(elementCount) {
+                        this.statement = 'myFruits = [';
+                        for (let i = 0; i < elementCount; i++) {
+                            let elObj = {
+                                value: this.fruitNames[i],
+                                offsetX: 0,
+                                offsetY: 0,
+                                opacity: 1,
+                                key: this.keyCounter++
+                            };
+                            this.arrayData.push(elObj);
+                            this.statement += "'"+elObj.value+"'";
+                            if (i < elementCount - 1) this.statement += ',';
+                        }
+                        this.statement += ']';
+                    },
+                    selectElement(i) {
+                        if (!this.inputsDisabled) {
+                            this.selectedIndex = i;
+                            this.currentValue = null;
+                            this.result = '';
+                            setTimeout(() => {
+                                //this.$refs.inpUpdate.focus();
+                            }, 200);
+                        }
+                    },
+                },
+                mounted() {
+                    this.populateArray(4);
+                }
+            });
+            app_remove.mount('#vueApp_remove');
+        </script>
+        <p>This is how an array value placed at index 1 can be removed in different programming languages:</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>myFruits = ['banana','apple','orange']
+
+myFruits.pop(1)</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const myFruits = ['banana','apple','orange'];
+
+myFruits.splice(1,1);</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>ArrayList&lt;String&gt; myFruits = new ArrayList&lt;String&gt;();
+myFruits.add("banana");
+myFruits.add("apple");
+myFruits.add("orange");
+
+myFruits.remove(1);</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>vector&lt;string&gt; myFruits = {"banana", "apple", "orange"};
+
+myFruits.erase(myFruits.begin() + 1);</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_remove.html">Run Example &raquo;</a>
+        </div>
+        <p>A value can also be removed from the end of an array, without using the index (except for Java), like this:</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>myFruits = ['banana','apple','orange']
+
+myFruits.pop()</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const myFruits = ['banana','apple','orange'];
+
+myFruits.pop();</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>ArrayList&lt;String&gt; myFruits = new ArrayList&lt;String&gt;();
+myFruits.add("banana");
+myFruits.add("apple");
+myFruits.add("orange");
+
+myFruits.remove(myFruits.size()-1);</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>vector&lt;string&gt; myFruits = {"banana", "apple", "orange"};
+
+myFruits.pop_back();</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_pop.html">Run Example &raquo;</a>
+        </div>
+        <hr>
+        <h2>Finding the length of an Array</h2>
+        <p>You can always check the length of an array:</p>
+        <div id="vueApp_length" style="display: flex; flex-direction: row; flex-wrap: wrap; border: solid black 1px;">
+            <div style="margin: 10px;">
+                <svg ref="svgString" viewBox="-2 48 245 50" width="245" height="50" style="margin: 0; overflow: hidden;">
+                    <text v-for="(el, i) in arrayData"
+                          class="svgIndexText"
+                          :x="40 + i * 80" y="96"
+                          :opacity="selectedIndex === i ? 1 : 0.5">{{ i }}
+                    </text>
+                    <g v-for="(el, i) in arrayData" :key="el.key"
+                       class="gArrayEl"
+                       :transform="calculateTransform(el,i)"
+                       :opacity="el.opacity">
+                        <rect x="0" y="30" width="80" height="30"
+                              stroke="black"
+                              :fill="(selectedIndex === i || allSelected) ? 'rgb(252, 252, 113)' : '#EEE'"
+                              :stroke-width="(selectedIndex === i || allSelected) ? 3 : 1" />
+                        <text x="40" y="50" text-anchor="middle" font-size="15" font-family="monospace">'{{ el.value }}'</text>
+                    </g>
+                </svg>
+            </div>
+            <div style="flex-basis: 100%; margin: 10px;">
+                <div class="w3-example" style="margin: 0; padding: 8px;">
+                    <pre class="language-python notranslate w3-white" data-line="" style="margin-top: 0 !important; margin-bottom: 0 !important; padding: 8px 12px;"><code v-html="highlightedCode"></code></pre>
+                </div>
+                <p>Result: <span style="margin-left: 10px;">{{ result }}</span></p>
+                <div style="flex-basis: 100%;">
+                    <button @click="lengthOfArray" :disabled="!lengthBtnActive">Run code</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            const app_length = Vue.createApp({
+                data() {
+                    return {
+                        arrayData: [],
+                        selectedIndex: null,
+                        currentValue: null,
+                        keyCounter: 0,
+                        inputsDisabled: false,
+                        allSelected: false,
+                        statement: '',
+                        result: '',
+                        fruitNames: ['banana','apple','orange','kiwi','lemon']
+                    };
+                },
+                computed: {
+                    highlightedCode(){
+                        return Prism.highlight("myFruits.length", Prism.languages.python);
+                    },
+                    lengthBtnActive() {
+                        return this.arrayData.length > 0 && !this.inputsDisabled && !this.allSelected;
+                    }
+                },
+                methods: {
+                    async lengthOfArray() {
+                        if (!this.inputsDisabled) {
+                            this.statement = 'myFruits.length';
+                            this.result = '';
+                            this.allSelected = true;
+                            await new Promise(resolve => setTimeout(resolve, 500));
+                            this.result = this.arrayData.length;
+                            this.allSelected = false;
+                            this.inputsDisabled = false;
+                        }
+                    },
+                    calculateTransform(el, i) {
+                        return `translate(${el.offsetX + i * 80}, ${20 + el.offsetY})`;
+                    },
+                    populateArray(elementCount) {
+                        this.statement = 'myFruits = [';
+                        for (let i = 0; i < elementCount; i++) {
+                            let elObj = {
+                                value: this.fruitNames[i],
+                                offsetX: 0,
+                                offsetY: 0,
+                                opacity: 1,
+                                key: this.keyCounter++
+                            };
+                            this.arrayData.push(elObj);
+                            this.statement += "'"+elObj.value+"'";
+                            if (i < elementCount - 1) this.statement += ',';
+                        }
+                        this.statement += ']';
+                    },
+                    selectElement(i) {
+                        if (!this.inputsDisabled) {
+                            this.selectedIndex = i;
+                            this.currentValue = null;
+                        }
+                    },
+                },
+                mounted() {
+                    this.populateArray(3);
+                }
+            });
+            app_length.mount('#vueApp_length');
+        </script>
+        <p>This is how the length of an array is found in different programming languages:</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>myFruits = ['banana','apple','orange']
+
+print(len(myFruits))</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const myFruits = ['banana','apple','orange'];
+
+console.log(myFruits.length);</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>ArrayList&lt;String&gt; myFruits = new ArrayList&lt;String&gt;();
+myFruits.add("banana");
+myFruits.add("apple");
+myFruits.add("orange");
+
+System.out.println(myFruits.size());</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>vector&lt;string&gt; myFruits = {"banana", "apple", "orange"};
+
+cout &lt;&lt; myFruits.size();</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_length.html">Run Example &raquo;</a>
+        </div>
+        <hr>
+        <h2>Looping Through an Array</h2>
+        <p>See <a href="prog_loops.html">this page</a> for an explanation of what a loop is.</p>
+        <p>Looping through an array means to look at every value in the array.</p>
+        <p>Here is how we can loop through the <code class="w3-codespan">myFruits</code> array using a <code class="w3-codespan">for</code> loop, printing every value:</p>
+        <div id="vueApp_arrayLoop" style="display: flex; flex-direction: row; flex-wrap: wrap; border: solid black 1px;">
+            <div style="margin: 10px;">
+                <svg ref="svgString" viewBox="-2 48 245 50" width="245" height="50" style="margin: 0; overflow: hidden;">
+                    <text v-for="(el, i) in arrayData"
+                          class="svgIndexText"
+                          :x="40 + i * 80" y="96"
+                          :opacity="selectedIndex === i ? 1 : 0.5">{{ i }}
+                    </text>
+                    <g v-for="(el, i) in arrayData" :key="el.key"
+                       class="gArrayEl"
+                       :transform="calculateTransform(el,i)"
+                       :opacity="el.opacity">
+                        <rect x="0" y="30" width="80" height="30"
+                              stroke="black"
+                              :fill="(selectedIndex === i || allSelected) ? 'rgb(252, 252, 113)' : '#EEE'"
+                              :stroke-width="(selectedIndex === i || allSelected) ? 3 : 1" />
+                        <text x="40" y="50" text-anchor="middle" font-size="15" font-family="monospace">'{{ el.value }}'</text>
+                    </g>
+                </svg>
+            </div>
+            <div style="flex-basis: 100%; margin: 10px;">
+                <div class="w3-example" style="margin: 0; padding: 8px;">
+                    <pre class="language-python notranslate w3-white" data-line="" style="margin-top: 0 !important; margin-bottom: 0 !important; padding: 8px 12px;"><code v-html="highlightedCode"></code></pre>
+                </div>
+                <p style="margin-bottom: 10px;">Result:</p>
+                <ul style="margin: 0 0 10px 0; list-style-type: none;">
+                    <li v-for="(line, index) in resultLines" :key="index" v-html="line" style="font-family: monospace;"></li>
+                </ul>
+                <div style="flex-basis: 100%;">
+                    <button @click="loopThroughArray" :disabled="!loopBtnActive">Run code</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            const app_arrayLoop = Vue.createApp({
+                data() {
+                    return {
+                        arrayData: [],
+                        resultLines: ['&nbsp;','&nbsp;','&nbsp;'],
+                        selectedIndex: null,
+                        currentValue: null,
+                        keyCounter: 0,
+                        inputsDisabled: false,
+                        allSelected: false,
+                        statement: '',
+                        result: '',
+                        fruitNames: ['banana','apple','orange','kiwi','lemon']
+                    };
+                },
+                computed: {
+                    highlightedCode(){
+                        return Prism.highlight("for fruit in myFruits:\n  print(fruit)", Prism.languages.python);
+                    },
+                    loopBtnActive() {
+                        return this.arrayData.length > 0 && !this.inputsDisabled && !this.allSelected;
+                    }
+                },
+                methods: {
+                    async loopThroughArray() {
+                        if (!this.inputsDisabled) {
+                            this.inputsDisabled = true;
+                            this.resultLines = ['&nbsp;','&nbsp;','&nbsp;'];
+                            await new Promise(resolve => setTimeout(resolve, 500));
+                            for (let i=0; i<this.arrayData.length; i++) {
+                                this.selectedIndex = i;
+                                await new Promise(resolve => setTimeout(resolve, 500));
+                                this.resultLines[i] = this.arrayData[i].value;
+                                await new Promise(resolve => setTimeout(resolve, 500));
+                            }
+                            this.selectedIndex = null;
+                            this.inputsDisabled = false;
+                        }
+                    },
+                    calculateTransform(el, i) {
+                        return `translate(${el.offsetX + i * 80}, ${20 + el.offsetY})`;
+                    },
+                    populateArray(elementCount) {
+                        this.statement = 'myFruits = [';
+                        for (let i = 0; i < elementCount; i++) {
+                            let elObj = {
+                                value: this.fruitNames[i],
+                                offsetX: 0,
+                                offsetY: 0,
+                                opacity: 1,
+                                key: this.keyCounter++
+                            };
+                            this.arrayData.push(elObj);
+                            this.statement += "'"+elObj.value+"'";
+                            if (i < elementCount - 1) this.statement += ',';
+                        }
+                        this.statement += ']';
+                    },
+                    selectElement(i) {
+                        if (!this.inputsDisabled) {
+                            this.selectedIndex = i;
+                            this.currentValue = null;
+                        }
+                    },
+                },
+                mounted() {
+                    this.populateArray(3);
+                }
+            });
+            app_arrayLoop.mount('#vueApp_arrayLoop');
+        </script>
+        <p>There is more than one way to loop through an array, but using a <code class="w3-codespan">for</code> loop is perhaps the straightest forward way that is also supported in all programming languages, like this:</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>myFruits = ['banana','apple','orange']
+
+for fruit in myFruits:
+  print(fruit)</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const myFruits = ['banana','apple','orange'];
+
+for (let fruit of myFruits) {
+  console.log(fruit);
+}</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>String[] myFruits = {"banana", "apple", "orange"};
+
+for (String fruit : myFruits) {
+  System.out.println(fruit);
+}</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>string myFruits[] = {"banana", "apple", "orange"};
+
+for (auto fruit : myFruits) {
+  cout << fruit + "\n";
+}</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_loop.html">Run Example &raquo;</a>
+        </div>
+        <p>Another way to loop through an array is to use a <code class="w3-codespan">for</code> loop with a counting variable for the indexes, like this:</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>myFruits = ['banana','apple','orange']
+
+for i in range(len(myFruits)):
+  print(myFruits[i])</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>const myFruits = ['banana','apple','orange'];
+
+for (let i = 0; i < myFruits.length; i++) {
+  console.log(myFruits[i]);
+}</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>String[] myFruits = {"banana", "apple", "orange"};
+
+for (int i = 0; i < myFruits.length; i++) {
+  System.out.println(myFruits[i]);
+}</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>string myFruits[] = {"banana", "apple", "orange"};
+int size = sizeof(myFruits) / sizeof(myFruits[0]);
+
+for (int i = 0; i < size; i++) {
+  cout << myFruits[i] + "\n";
+}</code></pre>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_loop_index.html">Run Example &raquo;</a>
+        </div>
+        <p>Other things we can do with looping through arrays is to find out if "Bob" appears in an array of names, or we can loop through an array of groceries, for example, to find the total sum we need to pay for them.</p>
+        <p>Below is an example of looping through an array of names, looking for "Bob".</p>
+        <div class="w3-example">
+            <br>
+            Python:
+            <pre class="language-python notranslate w3-white" data-tab-header="Python"><code>listOfNames = ['Jones','Jill','Lisa','Stan','Bob','Alice']
+
+for i in range(len(listOfNames)):
+  print(listOfNames[i])
+  if listOfNames[i] == 'Bob':
+    print('Found Bob!')
+    break</code></pre>
+            JavaScript:
+            <pre class="language-jsx notranslate w3-white" data-tab-header="JavaScript"><code>let listOfNames = ['Jones','Jill','Lisa','Stan','Bob','Alice'];
+
+for (let i = 0; i < listOfNames.length; i++) {
+  console.log(listOfNames[i]);
+  if (listOfNames[i] === 'Bob') {
+    console.log('Found Bob!');
+     break;
+  }
+}</code></pre>
+            Java:
+            <pre class="language-java notranslate w3-white" data-tab-header="Java"><code>String[] listOfNames = {"Jones", "Jill", "Lisa", "Stan", "Bob", "Alice"};
+
+for (int i = 0; i < listOfNames.length; i++) {
+  System.out.println(listOfNames[i]);
+  if (listOfNames[i] == "Bob") {
+    System.out.println("Found Bob!");
+    break;
+  }
+}</code></pre>
+            C++:
+            <pre class="language-java notranslate w3-white" data-tab-header="C++"><code>string listOfNames[] = {"Jones", "Jill", "Lisa", "Stan", "Bob", "Alice"};
+int size = sizeof(listOfNames) / sizeof(listOfNames[0]);
+
+for (int i = 0; i < size; i++) {
+  cout << listOfNames[i] + "\n";
+  if (listOfNames[i] == "Bob") {
+    cout << "Found Bob!\n";
+    break;
+  }
+}</code></pre>
+
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../programmingtryit/demo_arrays_loop_findbob.html">Run Example &raquo;</a>
+        </div>
+        <p>In the code above, the <code class="w3-codespan">break</code> statement stops the loop once "Bob" is found. That is why "Alice" is not printed.</p>
+        <hr>
+        <h2>Strict Definition of an Array</h2>
+        <p>Arrays found in modern languages like Python or JavaScript are flexible, meaning arrays can grow, shrink, and hold different types of values. Other programming languages, like C and Java, require arrays to be defined more strictly.</p>
+        <p>A stricter definition of an array means that in addition to being a collection of values, an array is also:</p>
+        <ul>
+            <li>fixed length</li>
+            <li>same data type for all values</li>
+            <li>stored contiguously in memory</li>
+        </ul>
+        <p><strong>Fixed length</strong> means that the array length (the number of values inside the array), cannot be changed.</p>
+        <p>When using the C programming language, for example, if you have created an array of 4 values, the array length (4) is fixed and cannot be changed. So if you want to insert a 5th value at the end of your array, you must create a new array 5 values long, put in the original 4 values, and put the 5th value in the last place in new array where there is now place for it.</p>
+        <p><strong>Same datatype</strong> means that all values in the array must be of the same type, so they must all be whole numbers, for example, or decimal numbers, or characters, or strings, or some other data type.</p>
+        <p>Having the array <strong>stored contiguously in memory</strong> means that the values are stored right after each other in one block of memory, like a group of friends living right next to each other on the same street. Read more about how arrays are stored in memory <a href="../dsa/dsa_theory_linkedlists_memory.html#arraysInMemory">here</a>.</p>
+        <p>Using arrays in their strict form gives the user full control over how the program actually executes, but it also makes it hard to do certain things, and it is more prone to errors.</p>
+        <p>When in need for more flexible/dynamic array functionality in languages such as C or Java, developers often use libraries to help them get the expanded dynamic array functionality they are looking for.</p>
+        <p>In the code examples on this page, to achieve a dynamic array length so that we can insert and remove values, we have used <a href="../python/python_lists.html">Python Lists</a>, <a href="../js/js_arrays.html">JavaScript Arrays</a>, <a href="../java/java_arraylist.html">Java ArrayList</a>, and <a href="../cpp/cpp_vectors.html">C++ Vectors</a>.</p>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="prog_if.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="prog_loops.html">Next &#10095;</a>
+        </div>
+    </article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    </div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">ПРОГРАМУВАННЯ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../programming/index.html' class='btn-rightbar'>Програмування. Інтро</a>
+            <a href='../python/index.html' class='btn-rightbar'>Python</a>
+            <a href='../django/index.html' class='btn-rightbar'>Django</a>
+            <a href='../java/index.html' class='btn-rightbar'>Java</a>
+            <a href='../kotlin/index.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../js/index.html' class='btn-rightbar'>JavaScript</a>
+            <a href='../typescript/index.html' class='btn-rightbar'>TypeScript</a>
+            <a href='../c/index.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index.html' class='btn-rightbar'>R</a>
+            <a href='../rust/index.html' class='btn-rightbar'>Rust</a>
+            <a href='../go/index.html' class='btn-rightbar'>Go</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Всі онлайн-довідники на сайті">СЕРВЕРНА СТОРОНА</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index.html' class='btn-rightbar'>ASP та ASP.NET</a>
+            <a href='../nodejs/index.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index.html' class='btn-rightbar'>GitHub Pages</a>
+            <a href='../bash/index.html' class='btn-rightbar'>Bash</a>
+            <a href='../mongodb/index.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style="text-decoration:none">ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index.html' target='_top' style="text-decoration:none">БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index.html' target='_top' style="text-decoration:none">ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../kotlin/index.html'>Kotlin Підручник</a><br>
+        <a href='../c/index.html'>C Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+        <a href='../chatgpt-3-5/index.html'>ChatGPT-3.5 Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+        <a href='../icons/icons_reference.html'>Іконки Довідник</a><br>
+        <a href='../graphics/svg_reference.html'>SVG Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../kotlin/kotlin_examples.html'>Kotlin Приклади</a><br>
+        <a href='../c/c_examples.html'>C Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Вебсертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_c.html'>C Сертифікат</a><br>
+        <a href='../cert/cert_cpp.html'>C++ Сертифікат</a><br>
+        <a href='../cert/cert_cs.html'>C# Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали й прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступні версії сайту іншими мовами:
+    <a href='../index_en.html' title='W3Schools англійською'><strong>англійською</strong></a>,
+    <a href='../index_es.html' title='W3Schools іспанською'><strong>іспанською</strong></a>,
+    <a href='../index_de.html' title='W3Schools німецькою'><strong>німецькою</strong></a>,
+    <a href='../index_fr.html' title='W3Schools французькою'><strong>французькою</strong></a>.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2026</a> by Refsnes Data. All Rights Reserved.
+    Сайт створений і працює на фреймворку <a href='../w3css/index.html'>W3.CSS</a>.<br>
+    Ви можете використовувати інші авторитетні ресурси для навчання веброзробці та програмуванню:<br>
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+      <a href='https://developer.mozilla.org/en-US/?retiredLocale=uk' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+      <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+      <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+    <br><br>
+    <a href='../index.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
