@@ -12,7 +12,7 @@
 <link rel='stylesheet' href='../styles/external.css'>
 <meta property='og:title' content='W3SchoolsEN TheBest'>
 <meta property='og:description' content='Well organized and easy to understand Web building tutorials with lots of examples of how to use HTML, CSS, JavaScript, SQL, PHP, Python, Java, C++, C#, Go and more'>
-<meta property='og:locale' content='en' />
+<meta property='og:locale' content='en'>
 <meta property='og:type' content='website'>
 <meta property='og:image' content='../images/w3schools_logo_436_2.png'>
 <meta property='og:image:type' content='image/png'>
@@ -43,70 +43,70 @@
             "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
         ]
     }
-</script><title>HTML Element Reference. Lessons for beginners. W3Schools in English</title>
-<meta name='description' content='HTML Element Reference. Tags Ordered Alphabetically. Tags with description. How many HTML tags are there? Lessons for beginners. W3Schools in English'>
-<link rel="stylesheet" href="../cdn/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--Стиль та скрипт для пошуку по тегам-->
-<script>
-    function filterSearch() {
-        let a, l, b, i, j, c, ahref, s, tr, td;
-        c = document.getElementById("searchstring").value.toUpperCase();
-        a = document.getElementById("htmltags").getElementsByClassName("ws-table-all");
-        //h = document.getElementById("htmltags").getElementsByTagName("h2");
-        for (j = 0; j < a.length; j++) {
-            s = 0;
-            tr = a[j].getElementsByTagName("tr");
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[0];
-                if (td) {
-                    ahref = td.getElementsByTagName("a")[0];
-                    if (ahref) {
-                        ahref = ahref.innerHTML;
-                        ahref = ahref.replace("&lt;", "");
-                        ahref = ahref.replace("&gt;", "");
-                        if (ahref.toUpperCase().indexOf(c) > -1) {
-                            tr[i].style.display = "";
-                            s = 1;
+</script>    <title>HTML Element Reference. Lessons for beginners. W3Schools in English</title>
+    <meta name='description' content='HTML Element Reference. Tags Ordered Alphabetically. Tags with description. How many HTML tags are there? Lessons for beginners. W3Schools in English'>
+    <link rel="stylesheet" href="../cdn/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Стиль та скрипт для пошуку по тегам-->
+    <script>
+        function filterSearch() {
+            let a, l, b, i, j, c, ahref, s, tr, td;
+            c = document.getElementById("searchstring").value.toUpperCase();
+            a = document.getElementById("htmltags").getElementsByClassName("ws-table-all");
+            //h = document.getElementById("htmltags").getElementsByTagName("h2");
+            for (j = 0; j < a.length; j++) {
+                s = 0;
+                tr = a[j].getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        ahref = td.getElementsByTagName("a")[0];
+                        if (ahref) {
+                            ahref = ahref.innerHTML;
+                            ahref = ahref.replace("&lt;", "");
+                            ahref = ahref.replace("&gt;", "");
+                            if (ahref.toUpperCase().indexOf(c) > -1) {
+                                tr[i].style.display = "";
+                                s = 1;
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+                    if (i === (tr.length - 1)) {
+                        if (s === 0) {
+                            a[j].style.display = "none";
+                            //h[j].style.display = "none";
                         } else {
-                            tr[i].style.display = "none";
+                            a[j].style.display = "";
+                            //h[j].style.display = "";
+                            fixStripes(tr);
                         }
                     }
                 }
-                if (i === (tr.length - 1)) {
-                    if (s === 0) {
-                        a[j].style.display = "none";
-                        //h[j].style.display = "none";
+            }
+        }
+        function fixStripes(a) {
+            let i, c = 0, n = 0;
+            for (i = 0; i < a.length; i++) {
+                if (a[i].style.display !== "none") {
+                    if (c === 0) {
+                        a[i].className = "w3-white";
+                        c = 1;
                     } else {
-                        a[j].style.display = "";
-                        //h[j].style.display = "";
-                        fixStripes(tr);
+                        a[i].className = "ws-grey";
+                        c = 0;
                     }
                 }
             }
         }
-    }
-    function fixStripes(a) {
-        let i, c = 0, n = 0;
-        for (i = 0; i < a.length; i++) {
-            if (a[i].style.display !== "none") {
-                if (c === 0) {
-                    a[i].className = "w3-white";
-                    c = 1;
-                } else {
-                    a[i].className = "ws-grey";
-                    c = 0;
-                }
-            }
-        }
-    }
-</script>
-<style>
-    .notsupported,.notsupported:hover,.notsupported:active,.notsupported:visited,.notsupported:link {color:rgb(197,128,128)}
-    #htmltags .ws-table-all td:first-child {width: 30%!important}
-    input[type=text] {width: 100%;box-sizing: border-box;border: 2px solid #ccc;border-radius:4px;font-size:16px;padding: 12px 20px 12px 40px;margin-bottom:5px}
-    #searchicon:after {content: "\f002"; font-family: FontAwesome, sans-serif; position:absolute;font-size:24px;color:#ccc;top:6px;left:12px}
-    label {font-weight:normal}
-</style>
+    </script>
+    <style>
+        .notsupported,.notsupported:hover,.notsupported:active,.notsupported:visited,.notsupported:link {color:rgb(197,128,128)}
+        #htmltags .ws-table-all td:first-child {width: 30%!important}
+        input[type=text] {width: 100%;box-sizing: border-box;border: 2px solid #ccc;border-radius:4px;font-size:16px;padding: 12px 20px 12px 40px;margin-bottom:5px}
+        #searchicon:after {content: "\f002"; font-family: FontAwesome, sans-serif; position:absolute;font-size:24px;color:#ccc;top:6px;left:12px}
+        label {font-weight:normal}
+    </style>
 <!--/Стиль та скрипт для пошуку по тегам-->
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index_en.html'>W3schoolsEN<span class='dotcom w3-hide-small'>. TheBest</span></a>
@@ -202,6 +202,7 @@
                     <a class='w3-bar-item w3-button' href='../appml/index_en.html'>Learn AppML</a>
                     <a class='w3-bar-item w3-button' href='../w3js/index_en.html'>Learn W3.JS</a>
                     <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../programming/index_en.html'>Programming Intro</a>
                     <a class='w3-bar-item w3-button' href='../python/index_en.html'>Learn Python</a>
                     <a class='w3-bar-item w3-button' href='../java/index_en.html'>Learn Java</a>
                     <a class='w3-bar-item w3-button' href='../c/index_en.html'>Learn C</a>
@@ -209,6 +210,7 @@
                     <a class='w3-bar-item w3-button' href='../cs/index_en.html'>Learn C#</a>
                     <a class='w3-bar-item w3-button' href='../r/index_en.html'>Learn R</a>
                     <a class='w3-bar-item w3-button' href='../kotlin/index_en.html'>Learn Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../rust/index_en.html'>Learn Rust</a>
                     <a class='w3-bar-item w3-button' href='../go/index_en.html'>Learn Go</a>
                     <a class='w3-bar-item w3-button' href='../django/index_en.html'>Learn Django</a>
                     <a class='w3-bar-item w3-button' href='../typescript/index_en.html'>Learn TypeScript</a>
@@ -225,6 +227,7 @@
                     <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_en.html'>Learn Raspberry Pi</a>
                     <a class='w3-bar-item w3-button' href='../git/index_en.html'>Learn Git</a>
                     <a class='w3-bar-item w3-button' href='../githubpages/index_en.html'>Learn GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../bash/index_en.html'>Learn Bash</a>
                     <a class='w3-bar-item w3-button' href='../mongodb/index_en.html'>Learn MongoDB</a>
                     <a class='w3-bar-item w3-button' href='../aws/index_en.html'>Learn AWS Cloud</a>
                     <h3>Web Building</h3>
@@ -232,6 +235,7 @@
                     <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_en.html'>Web Templates</a>
                     <a class='w3-bar-item w3-button' href='../browsers/index_en.html'>Web Statistics</a>
                     <a class='w3-bar-item w3-button' href='../tryit/index_en.html'>Code Editor</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index_en.html'>Code Editors/IDE</a>
                     <a class='w3-bar-item w3-button' href='../whatis/index_en.html'>Web Development</a>
                     <a class='w3-bar-item w3-button' href='../cybersecurity/index_en.html'>CyberSecurity</a>
                     <a class='w3-bar-item w3-button' href='../accessibility/index_en.html'>Accessibility</a>
@@ -461,7 +465,20 @@
                 <a target='_top' href='tag_dt_en.html'>&lt;dt&gt;</a>
                 <a target='_top' href='tag_em_en.html'>&lt;em&gt;</a>
                 <a target='_top' href='tag_embed_en.html'>&lt;embed&gt;</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='tag_embed_en.html'>&lt;embed&gt;</a>
+                    <a target='_top' href='att_embed_height_en.html'>height Attribute</a>
+                    <a target='_top' href='att_embed_src_en.html'>src Attribute</a>
+                    <a target='_top' href='att_embed_type_en.html'>type Attribute</a>
+                    <a target='_top' href='att_embed_width_en.html'>width Attribute</a>
+                </div>
                 <a target='_top' href='tag_fieldset_en.html'>&lt;fieldset&gt;</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='tag_fieldset_en.html'>&lt;fieldset&gt;</a>
+                    <a target='_top' href='att_fieldset_disabled_en.html'>disabled Attribute</a>
+                    <a target='_top' href='att_fieldset_form_en.html'>form Attribute</a>
+                    <a target='_top' href='att_fieldset_name_en.html'>name Attribute</a>
+                </div>
                 <a target='_top' href='tag_figcaption_en.html'>&lt;figcaption&gt;</a>
                 <a target='_top' href='tag_figure_en.html'>&lt;figure&gt;</a>
                 <a target='_top' href='tag_font_en.html'>&lt;font&gt;</a>
@@ -554,540 +571,520 @@
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>            <a href='index_en.html'><img src='../svg/html5_icon1.svg' alt='HTML5. W3Schools in English. The complete tag guide' class='w3-left w3-padding' title='All HTML tags. W3Schools in English' style='width: 90px'></a>
-<p class='w3-right'>
-    <a href="index.html" title='Switch to Ukrainian'>Ua</a>
-    <a href="index_es.html" title='Switch to Spanish'>Es</a>
-    <a href="index_de.html" title='Switch to German'>De</a>
-    <a href='index_fr.html' title='Switch to French'>Fr</a>
-</p>
-<article>
-    <h1>HTML <span class="color_h1">Element Reference</span></h1>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="../index_en.html">&#10094; Home</a>
-        <a class="w3-right w3-btn" href="ref_byfunc_en.html">Next &#10095;</a>
-    </div>
-    <hr>
-    <h2>HTML Tags Ordered Alphabetically</h2>
-    <div style="position:relative"><div id="searchicon"></div></div>
-    <input type="text" aria-label='Search' id="searchstring" name="search" placeholder="Search.." oninput="filterSearch()">
-    <div id="htmltags">
-        <table class="ws-table-all notranslate">
-            <tr>
-                <th style="width:25%">Tag</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td><a href="tag_comment_en.html">&lt;!--...--&gt;</a></td>
-                <td>Defines a comment</td>
-            </tr>
-            <tr>
-                <td><a href="tag_doctype_en.html">&lt;!DOCTYPE&gt;</a>&nbsp;</td>
-                <td>Define the document type</td>
-            </tr>
-            <tr>
-                <td><a href="tag_a_en.html">&lt;a&gt;</a></td>
-                <td>Defines a hyperlink</td>
-            </tr>
-            <tr>
-                <td><a href="tag_abbr_en.html">&lt;abbr&gt;</a></td>
-                <td>Define an abbreviation or an acronym</td>
-            </tr>
-            <tr>
-                <td><a href="tag_acronym_en.html" class="notsupported">&lt;acronym&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5. Use <a href="tag_abbr_en.html">&lt;abbr&gt;</a> instead.<br></span>Defines an acronym</td>
-            </tr>
-            <tr>
-                <td><a href="tag_address_en.html">&lt;address&gt;</a></td>
-                <td>Defines contact information for the author/owner of a document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_applet_en.html" class="notsupported">&lt;applet&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5. Use <a href="tag_embed_en.html">&lt;embed&gt;</a> or <a href="tag_object_en.html">&lt;object&gt;</a> instead.<br></span>Defines an embedded applet</td>
-            </tr>
-            <tr>
-                <td><a href="tag_area_en.html">&lt;area&gt;</a></td>
-                <td>Defines an area inside an image map</td>
-            </tr>
-            <tr>
-                <td class="html5badge"><a href="tag_article_en.html">&lt;article&gt;</a></td>
-                <td>Defines an article</td>
-            </tr>
-            <tr>
-                <td class="html5badge"><a href="tag_aside_en.html">&lt;aside&gt;</a></td>
-                <td>Defines content aside from the page content</td>
-            </tr>
-            <tr>
-                <td class="html5badge"><a href="tag_audio_en.html">&lt;audio&gt;</a></td>
-                <td>Defines embedded sound content</td>
-            </tr>
-            <tr>
-                <td><a href="tag_b_en.html">&lt;b&gt;</a></td>
-                <td>Defines bold text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_base_en.html">&lt;base&gt;</a></td>
-                <td>Specify the base URL/target for all relative URLs in a document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_basefont_en.html" class="notsupported">&lt;basefont&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Specify a default color, size, and font for all text in a document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_bdi_en.html">&lt;bdi&gt;</a></td>
-                <td>Isolates a part of text that might be formatted in a different direction from another text outside it</td>
-            </tr>
-            <tr>
-                <td><a href="tag_bdo_en.html">&lt;bdo&gt;</a></td>
-                <td>Overrides the current text direction</td>
-            </tr>
-            <tr>
-                <td><a href="tag_big_en.html" class="notsupported">&lt;big&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines big text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_blockquote_en.html">&lt;blockquote&gt;</a></td>
-                <td>Defines a section that is quoted from another source</td>
-            </tr>
-            <tr>
-                <td><a href="tag_body_en.html">&lt;body&gt;</a></td>
-                <td>Defines the document's body</td>
-            </tr>
-            <tr>
-                <td><a href="tag_br_en.html">&lt;br&gt;</a></td>
-                <td>Defines a single line break</td>
-            </tr>
-            <tr>
-                <td><a href="tag_button_en.html">&lt;button&gt;</a></td>
-                <td>Define a clickable button</td>
-            </tr>
-            <tr>
-                <td><a href="tag_canvas_en.html">&lt;canvas&gt;</a></td>
-                <td>Used to draw graphics, on the fly, via scripting (usually JavaScript)</td>
-            </tr>
-            <tr>
-                <td><a href="tag_caption_en.html">&lt;caption&gt;</a></td>
-                <td>Define a table caption</td>
-            </tr>
-            <tr>
-                <td><a href="tag_center_en.html" class="notsupported">&lt;center&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines centered text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_cite_en.html">&lt;cite&gt;</a></td>
-                <td>Defines the title of a work</td>
-            </tr>
-            <tr>
-                <td><a href="tag_code_en.html">&lt;code&gt;</a></td>
-                <td>Define a piece of computer code</td>
-            </tr>
-            <tr>
-                <td><a href="tag_col_en.html">&lt;col&gt;</a></td>
-                <td>Specify column properties for each column within a &lt;colgroup&gt; element&nbsp;</td>
-            </tr>
-            <tr>
-                <td><a href="tag_colgroup_en.html">&lt;colgroup&gt;</a></td>
-                <td>Specify a group of one or more columns in a table for formatting</td>
-            </tr>
-            <tr>
-                <td><a href="tag_data_en.html">&lt;data&gt;</a></td>
-                <td>Adds a machine-readable translation of a given content</td>
-            </tr>
-            <tr>
-                <td><a href="tag_datalist_en.html">&lt;datalist&gt;</a></td>
-                <td>Specify a list of pre-defined options for input controls</td>
-            </tr>
-            <tr>
-                <td><a href="tag_dd_en.html">&lt;dd&gt;</a></td>
-                <td>Defines a description/value of a term in a description list</td>
-            </tr>
-            <tr>
-                <td><a href="tag_del_en.html">&lt;del&gt;</a></td>
-                <td>Defines text that has been deleted from a document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_details_en.html">&lt;details&gt;</a></td>
-                <td>Defines additional details that the user can view or hide</td>
-            </tr>
-            <tr>
-                <td><a href="tag_dfn_en.html">&lt;dfn&gt;</a></td>
-                <td>Specify a term that is going to be defined within the content</td>
-            </tr>
-            <tr>
-                <td><a href="tag_dialog_en.html">&lt;dialog&gt;</a></td>
-                <td>Define a dialog box or window</td>
-            </tr>
-            <tr>
-                <td><a href="tag_dir_en.html" class="notsupported">&lt;dir&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5. Use <a href="tag_ul_en.html">&lt;ul&gt;</a> instead.<br></span>Defines a directory list</td>
-            </tr>
-            <tr>
-                <td><a href="tag_div_en.html">&lt;div&gt;</a></td>
-                <td>Define a section in a document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_dl_en.html">&lt;dl&gt;</a></td>
-                <td>Defines a description list</td>
-            </tr>
-            <tr>
-                <td><a href="tag_dt_en.html">&lt;dt&gt;</a></td>
-                <td>Defines a term/name in a description list</td>
-            </tr>
-            <tr>
-                <td><a href="tag_em_en.html">&lt;em&gt;</a></td>
-                <td>Defines emphasized text&nbsp;</td>
-            </tr>
-            <tr>
-                <td><a href="tag_embed_en.html">&lt;embed&gt;</a></td>
-                <td>Define a container for an external application</td>
-            </tr>
-            <tr>
-                <td><a href="tag_fieldset_en.html">&lt;fieldset&gt;</a></td>
-                <td>Groups related elements in a form</td>
-            </tr>
-            <tr>
-                <td class="html5badge"><a href="tag_figcaption_en.html">&lt;figcaption&gt;</a></td>
-                <td>Defines a caption for a &lt;figure&gt; element</td>
-            </tr>
-            <tr>
-                <td class="html5badge"><a href="tag_figure_en.html">&lt;figure&gt;</a></td>
-                <td>Specifies self-contained content</td>
-            </tr>
-            <tr>
-                <td><a href="tag_font_en.html" class="notsupported">&lt;font&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines font, color, and size for text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_footer_en.html">&lt;footer&gt;</a></td>
-                <td>Defines a footer for a document or section</td>
-            </tr>
-            <tr>
-                <td><a href="tag_form_en.html">&lt;form&gt;</a></td>
-                <td>Defines an HTML form for user input</td>
-            </tr>
-            <tr>
-                <td><a href="tag_frame_en.html" class="notsupported">&lt;frame&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5.<br></span>Defines a window (a frame) in a frameset</td>
-            </tr>
-            <tr>
-                <td><a href="tag_frameset_en.html" class="notsupported">&lt;frameset&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5.<br></span>Defines a set of frames</td>
-            </tr>
-            <tr>
-                <td><a href="tag_hn_en.html">&lt;h1&gt; to &lt;h6&gt;</a></td>
-                <td> Defines HTML headings</td>
-            </tr>
-            <tr>
-                <td><a href="tag_head_en.html">&lt;head&gt;</a></td>
-                <td>Contains metadata/information for the document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_header_en.html">&lt;header&gt;</a></td>
-                <td>Define a header for a document or section</td>
-            </tr>
-            <tr>
-                <td><a href="tag_hr_en.html">&lt;hr&gt;</a></td>
-                <td> Defines a thematic change in the content</td>
-            </tr>
-            <tr>
-                <td><a href="tag_html_en.html">&lt;html&gt;</a></td>
-                <td>Define the root of an HTML document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_i_en.html">&lt;i&gt;</a></td>
-                <td>Defines a part of text in an alternate voice or mood</td>
-            </tr>
-            <tr>
-                <td><a href="tag_iframe_en.html">&lt;iframe&gt;</a></td>
-                <td>Defines an inline frame</td>
-            </tr>
-            <tr>
-                <td><a href="tag_img_en.html">&lt;img&gt;</a></td>
-                <td>Defines an image</td>
-            </tr>
-            <tr>
-                <td><a href="tag_input_en.html">&lt;input&gt;</a></td>
-                <td>Define an input control</td>
-            </tr>
-            <tr>
-                <td><a href="tag_ins_en.html">&lt;ins&gt;</a></td>
-                <td>Defines a text that has been inserted into a document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_kbd_en.html">&lt;kbd&gt;</a></td>
-                <td>Defines keyboard input</td>
-            </tr>
-            <tr>
-                <td><a href="tag_label_en.html">&lt;label&gt;</a></td>
-                <td>Defines a label&nbsp;for an &lt;input&gt; element</td>
-            </tr>
-            <tr>
-                <td><a href="tag_legend_en.html">&lt;legend&gt;</a></td>
-                <td>Defines a caption for a &lt;fieldset&gt; element</td>
-            </tr>
-            <tr>
-                <td><a href="tag_li_en.html">&lt;li&gt;</a></td>
-                <td>Defines a list item</td>
-            </tr>
-            <tr>
-                <td><a href="tag_link_en.html">&lt;link&gt;</a></td>
-                <td>Defines the relationship between a document and an external resource (most used to link to style sheets)</td>
-            </tr>
-            <tr>
-                <td><a href="tag_main_en.html">&lt;main&gt;</a></td>
-                <td>Specify the main content of a document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_map_en.html">&lt;map&gt;</a></td>
-                <td>Defines an image map</td>
-            </tr>
-            <tr>
-                <td><a href="tag_mark_en.html">&lt;mark&gt;</a></td>
-                <td>Defines marked/highlighted text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_meta_en.html">&lt;meta&gt;</a></td>
-                <td>Defines metadata about an HTML document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_meter_en.html">&lt;meter&gt;</a></td>
-                <td>Defines a scalar measurement within a known range (a gauge)</td>
-            </tr>
-            <tr>
-                <td><a href="tag_nav_en.html">&lt;nav&gt;</a></td>
-                <td>Defines navigation links</td>
-            </tr>
-            <tr>
-                <td><a href="tag_noframes_en.html" class="notsupported">&lt;noframes&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5.<br></span>Defines an alternate content for users that do not support frames</td>
-            </tr>
-            <tr>
-                <td><a href="tag_noscript_en.html">&lt;noscript&gt;</a></td>
-                <td>Defines an alternate content for users that do not support client-side scripts</td>
-            </tr>
-            <tr>
-                <td><a href="tag_object_en.html">&lt;object&gt;</a></td>
-                <td>Define a container for an external application</td>
-            </tr>
-            <tr>
-                <td><a href="tag_ol_en.html">&lt;ol&gt;</a></td>
-                <td>Define an ordered list</td>
-            </tr>
-            <tr>
-                <td><a href="tag_optgroup_en.html">&lt;optgroup&gt;</a></td>
-                <td>Defines a group of related options in a drop-down list</td>
-            </tr>
-            <tr>
-                <td><a href="tag_option_en.html">&lt;option&gt;</a></td>
-                <td>Define an option in a drop-down list</td>
-            </tr>
-            <tr>
-                <td><a href="tag_output_en.html">&lt;output&gt;</a></td>
-                <td>Defines the result of a calculation</td>
-            </tr>
-            <tr>
-                <td><a href="tag_p_en.html">&lt;p&gt;</a></td>
-                <td>Defines a paragraph</td>
-            </tr>
-            <tr>
-                <td><a href="tag_param_en.html">&lt;param&gt;</a></td>
-                <td>Defines a parameter for an object</td>
-            </tr>
-            <tr>
-                <td><a href="tag_picture_en.html">&lt;picture&gt;</a></td>
-                <td>Defines a container for multiple image resources</td>
-            </tr>
-            <tr>
-                <td><a href="tag_pre_en.html">&lt;pre&gt;</a></td>
-                <td>Defines preformatted text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_progress_en.html">&lt;progress&gt;</a></td>
-                <td>Represents the progress of a task</td>
-            </tr>
-            <tr>
-                <td><a href="tag_q_en.html">&lt;q&gt;</a></td>
-                <td>Defines a short quotation</td>
-            </tr>
-            <tr>
-                <td><a href="tag_rp_en.html">&lt;rp&gt;</a></td>
-                <td>Defines what to show in browsers that do not support ruby annotations</td>
-            </tr>
-            <tr>
-                <td><a href="tag_rt_en.html">&lt;rt&gt;</a></td>
-                <td>Defines an explanation/pronunciation of characters (for East Asian typography)</td>
-            </tr>
-            <tr>
-                <td><a href="tag_ruby_en.html">&lt;ruby&gt;</a></td>
-                <td>Define a ruby annotation (for East Asian typography)</td>
-            </tr>
-            <tr>
-                <td><a href="tag_s_en.html">&lt;s&gt;</a></td>
-                <td>Defines text that is no longer correct</td>
-            </tr>
-            <tr>
-                <td><a href="tag_samp_en.html">&lt;samp&gt;</a></td>
-                <td>Defines sample output from a computer program</td>
-            </tr>
-            <tr>
-                <td><a href="tag_script_en.html">&lt;script&gt;</a></td>
-                <td>Define a client-side script</td>
-            </tr>
-            <tr>
-                <td><a href="tag_section_en.html">&lt;section&gt;</a></td>
-                <td>Define a section in a document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_select_en.html">&lt;select&gt;</a></td>
-                <td>Define a drop-down list</td>
-            </tr>
-            <tr>
-                <td><a href="tag_small_en.html">&lt;small&gt;</a></td>
-                <td>Defines smaller text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_source_en.html">&lt;source&gt;</a></td>
-                <td>Defines multiple media resources for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
-            </tr>
-            <tr>
-                <td><a href="tag_span_en.html">&lt;span&gt;</a></td>
-                <td>Define a section in a document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_strike_en.html" class="notsupported">&lt;strike&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5. Use <a href="tag_del_en.html">&lt;del&gt;</a> or <a href="tag_s_en.html">&lt;s&gt;</a> instead.<br></span>Defines strikethrough text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_strong_en.html">&lt;strong&gt;</a></td>
-                <td>Defines important text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_style_en.html">&lt;style&gt;</a></td>
-                <td>Defines style information for a document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_sub_en.html">&lt;sub&gt;</a></td>
-                <td>Defines subscripted text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_summary_en.html">&lt;summary&gt;</a></td>
-                <td>Defines a visible heading for a &lt;details&gt; element</td>
-            </tr>
-            <tr>
-                <td><a href="tag_sup_en.html">&lt;sup&gt;</a></td>
-                <td>Defines superscripted text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_svg_en.html">&lt;svg&gt;</a></td>
-                <td>Define a container for SVG graphics</td>
-            </tr>
-            <tr>
-                <td><a href="tag_table_en.html">&lt;table&gt;</a></td>
-                <td>Defines a table</td>
-            </tr>
-            <tr>
-                <td><a href="tag_tbody_en.html">&lt;tbody&gt;</a></td>
-                <td>Groups the body content in a table</td>
-            </tr>
-            <tr>
-                <td><a href="tag_td_en.html">&lt;td&gt;</a></td>
-                <td>Defines a cell in a table</td>
-            </tr>
-            <tr>
-                <td><a href="tag_template_en.html">&lt;template&gt;</a></td>
-                <td>Define a container for content that should be hidden when the page loads</td>
-            </tr>
-            <tr>
-                <td><a href="tag_textarea_en.html">&lt;textarea&gt;</a></td>
-                <td>Defines a multiline input control (text area)</td>
-            </tr>
-            <tr>
-                <td><a href="tag_tfoot_en.html">&lt;tfoot&gt;</a></td>
-                <td>Groups the footer content in a table</td>
-            </tr>
-            <tr>
-                <td><a href="tag_th_en.html">&lt;th&gt;</a></td>
-                <td>Define a header cell in a table</td>
-            </tr>
-            <tr>
-                <td><a href="tag_thead_en.html">&lt;thead&gt;</a></td>
-                <td>Groups the header content in a table</td>
-            </tr>
-            <tr>
-                <td><a href="tag_time_en.html">&lt;time&gt;</a></td>
-                <td>Defines a specific time (or datetime)</td>
-            </tr>
-            <tr>
-                <td><a href="tag_title_en.html">&lt;title&gt;</a></td>
-                <td>Defines a title for the document</td>
-            </tr>
-            <tr>
-                <td><a href="tag_tr_en.html">&lt;tr&gt;</a></td>
-                <td>Defines a row in a table</td>
-            </tr>
-            <tr>
-                <td><a href="tag_track_en.html">&lt;track&gt;</a></td>
-                <td>Defines text tracks for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
-            </tr>
-            <tr>
-                <td><a class="notsupported" href="tag_tt_en.html">&lt;tt&gt;</a></td>
-                <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines teletype text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_u_en.html">&lt;u&gt;</a></td>
-                <td>Defines some text that is unarticulated and styled differently from a normal text</td>
-            </tr>
-            <tr>
-                <td><a href="tag_ul_en.html">&lt;ul&gt;</a></td>
-                <td>Defines an unordered list</td>
-            </tr>
-            <tr>
-                <td><a href="tag_var_en.html">&lt;var&gt;</a></td>
-                <td>Defines a variable</td>
-            </tr>
-            <tr>
-                <td><a href="tag_video_en.html">&lt;video&gt;</a></td>
-                <td>Defines embedded video content</td>
-            </tr>
-            <tr>
-                <td><a href="tag_wbr_en.html">&lt;wbr&gt;</a></td>
-                <td>Defines a possible line-break</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <div class="adver_adinfeed">
+    <p class='w3-right'>
+        <a href="index.html" title='Switch to Ukrainian'>Ua</a>
+        <a href="index_es.html" title='Switch to Spanish'>Es</a>
+        <a href="index_de.html" title='Switch to German'>De</a>
+        <a href='index_fr.html' title='Switch to French'>Fr</a>
+        <a href='index_ru.html' title='Switch to Russian'>Ru</a>
+    </p>
+    <article>
+        <h1>HTML <span class="color_h1">Element Reference</span></h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="../index_en.html">&#10094; Home</a>
+            <a class="w3-right w3-btn" href="ref_byfunc_en.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <h2>HTML Tags Ordered Alphabetically</h2>
+        <div style="position:relative"><div id="searchicon"></div></div>
+        <input type="text" aria-label='Search' id="searchstring" name="search" placeholder="Search.." oninput="filterSearch()">
+        <div id="htmltags">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th style="width:25%">Tag</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><a href="tag_comment_en.html">&lt;!--...--&gt;</a></td>
+                    <td>Defines a comment</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_doctype_en.html">&lt;!DOCTYPE&gt;</a>&nbsp;</td>
+                    <td>Define the document type</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_a_en.html">&lt;a&gt;</a></td>
+                    <td>Defines a hyperlink</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_abbr_en.html">&lt;abbr&gt;</a></td>
+                    <td>Define an abbreviation or an acronym</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_acronym_en.html" class="notsupported">&lt;acronym&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5. Use <a href="tag_abbr_en.html">&lt;abbr&gt;</a> instead.<br></span>Defines an acronym</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_address_en.html">&lt;address&gt;</a></td>
+                    <td>Defines contact information for the author/owner of a document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_applet_en.html" class="notsupported">&lt;applet&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5. Use <a href="tag_embed_en.html">&lt;embed&gt;</a> or <a href="tag_object_en.html">&lt;object&gt;</a> instead.<br></span>Defines an embedded applet</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_area_en.html">&lt;area&gt;</a></td>
+                    <td>Defines an area inside an image map</td>
+                </tr>
+                <tr>
+                    <td class="html5badge"><a href="tag_article_en.html">&lt;article&gt;</a></td>
+                    <td>Defines an article</td>
+                </tr>
+                <tr>
+                    <td class="html5badge"><a href="tag_aside_en.html">&lt;aside&gt;</a></td>
+                    <td>Defines content aside from the page content</td>
+                </tr>
+                <tr>
+                    <td class="html5badge"><a href="tag_audio_en.html">&lt;audio&gt;</a></td>
+                    <td>Defines embedded sound content</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_b_en.html">&lt;b&gt;</a></td>
+                    <td>Defines bold text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_base_en.html">&lt;base&gt;</a></td>
+                    <td>Specify the base URL/target for all relative URLs in a document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_basefont_en.html" class="notsupported">&lt;basefont&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Specify a default color, size, and font for all text in a document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_bdi_en.html">&lt;bdi&gt;</a></td>
+                    <td>Isolates a part of text that might be formatted in a different direction from another text outside it</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_bdo_en.html">&lt;bdo&gt;</a></td>
+                    <td>Overrides the current text direction</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_big_en.html" class="notsupported">&lt;big&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines big text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_blockquote_en.html">&lt;blockquote&gt;</a></td>
+                    <td>Defines a section that is quoted from another source</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_body_en.html">&lt;body&gt;</a></td>
+                    <td>Defines the document's body</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_br_en.html">&lt;br&gt;</a></td>
+                    <td>Defines a single line break</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_button_en.html">&lt;button&gt;</a></td>
+                    <td>Define a clickable button</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_canvas_en.html">&lt;canvas&gt;</a></td>
+                    <td>Used to draw graphics, on the fly, via scripting (usually JavaScript)</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_caption_en.html">&lt;caption&gt;</a></td>
+                    <td>Define a table caption</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_center_en.html" class="notsupported">&lt;center&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines centered text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_cite_en.html">&lt;cite&gt;</a></td>
+                    <td>Defines the title of a work</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_code_en.html">&lt;code&gt;</a></td>
+                    <td>Define a piece of computer code</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_col_en.html">&lt;col&gt;</a></td>
+                    <td>Specify column properties for each column within a &lt;colgroup&gt; element&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_colgroup_en.html">&lt;colgroup&gt;</a></td>
+                    <td>Specify a group of one or more columns in a table for formatting</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_data_en.html">&lt;data&gt;</a></td>
+                    <td>Adds a machine-readable translation of a given content</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_datalist_en.html">&lt;datalist&gt;</a></td>
+                    <td>Specify a list of pre-defined options for input controls</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_dd_en.html">&lt;dd&gt;</a></td>
+                    <td>Defines a description/value of a term in a description list</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_del_en.html">&lt;del&gt;</a></td>
+                    <td>Defines text that has been deleted from a document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_details_en.html">&lt;details&gt;</a></td>
+                    <td>Defines additional details that the user can view or hide</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_dfn_en.html">&lt;dfn&gt;</a></td>
+                    <td>Specify a term that is going to be defined within the content</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_dialog_en.html">&lt;dialog&gt;</a></td>
+                    <td>Define a dialog box or window</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_dir_en.html" class="notsupported">&lt;dir&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5. Use <a href="tag_ul_en.html">&lt;ul&gt;</a> instead.<br></span>Defines a directory list</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_div_en.html">&lt;div&gt;</a></td>
+                    <td>Define a section in a document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_dl_en.html">&lt;dl&gt;</a></td>
+                    <td>Defines a description list</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_dt_en.html">&lt;dt&gt;</a></td>
+                    <td>Defines a term/name in a description list</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_em_en.html">&lt;em&gt;</a></td>
+                    <td>Defines emphasized text&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_embed_en.html">&lt;embed&gt;</a></td>
+                    <td>Define a container for an external application</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_fieldset_en.html">&lt;fieldset&gt;</a></td>
+                    <td>Groups related elements in a form</td>
+                </tr>
+                <tr>
+                    <td class="html5badge"><a href="tag_figcaption_en.html">&lt;figcaption&gt;</a></td>
+                    <td>Defines a caption for a &lt;figure&gt; element</td>
+                </tr>
+                <tr>
+                    <td class="html5badge"><a href="tag_figure_en.html">&lt;figure&gt;</a></td>
+                    <td>Specifies self-contained content</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_font_en.html" class="notsupported">&lt;font&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines font, color, and size for text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_footer_en.html">&lt;footer&gt;</a></td>
+                    <td>Defines a footer for a document or section</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_form_en.html">&lt;form&gt;</a></td>
+                    <td>Defines an HTML form for user input</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_frame_en.html" class="notsupported">&lt;frame&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5.<br></span>Defines a window (a frame) in a frameset</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_frameset_en.html" class="notsupported">&lt;frameset&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5.<br></span>Defines a set of frames</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_hn_en.html">&lt;h1&gt; to &lt;h6&gt;</a></td>
+                    <td> Defines HTML headings</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_head_en.html">&lt;head&gt;</a></td>
+                    <td>Contains metadata/information for the document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_header_en.html">&lt;header&gt;</a></td>
+                    <td>Define a header for a document or section</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_hr_en.html">&lt;hr&gt;</a></td>
+                    <td> Defines a thematic change in the content</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_html_en.html">&lt;html&gt;</a></td>
+                    <td>Define the root of an HTML document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_i_en.html">&lt;i&gt;</a></td>
+                    <td>Defines a part of text in an alternate voice or mood</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_iframe_en.html">&lt;iframe&gt;</a></td>
+                    <td>Defines an inline frame</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_img_en.html">&lt;img&gt;</a></td>
+                    <td>Defines an image</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_input_en.html">&lt;input&gt;</a></td>
+                    <td>Define an input control</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_ins_en.html">&lt;ins&gt;</a></td>
+                    <td>Defines a text that has been inserted into a document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_kbd_en.html">&lt;kbd&gt;</a></td>
+                    <td>Defines keyboard input</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_label_en.html">&lt;label&gt;</a></td>
+                    <td>Defines a label&nbsp;for an &lt;input&gt; element</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_legend_en.html">&lt;legend&gt;</a></td>
+                    <td>Defines a caption for a &lt;fieldset&gt; element</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_li_en.html">&lt;li&gt;</a></td>
+                    <td>Defines a list item</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_link_en.html">&lt;link&gt;</a></td>
+                    <td>Defines the relationship between a document and an external resource (most used to link to style sheets)</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_main_en.html">&lt;main&gt;</a></td>
+                    <td>Specify the main content of a document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_map_en.html">&lt;map&gt;</a></td>
+                    <td>Defines an image map</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_mark_en.html">&lt;mark&gt;</a></td>
+                    <td>Defines marked/highlighted text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_meta_en.html">&lt;meta&gt;</a></td>
+                    <td>Defines metadata about an HTML document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_meter_en.html">&lt;meter&gt;</a></td>
+                    <td>Defines a scalar measurement within a known range (a gauge)</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_nav_en.html">&lt;nav&gt;</a></td>
+                    <td>Defines navigation links</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_noframes_en.html" class="notsupported">&lt;noframes&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5.<br></span>Defines an alternate content for users that do not support frames</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_noscript_en.html">&lt;noscript&gt;</a></td>
+                    <td>Defines an alternate content for users that do not support client-side scripts</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_object_en.html">&lt;object&gt;</a></td>
+                    <td>Define a container for an external application</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_ol_en.html">&lt;ol&gt;</a></td>
+                    <td>Define an ordered list</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_optgroup_en.html">&lt;optgroup&gt;</a></td>
+                    <td>Defines a group of related options in a drop-down list</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_option_en.html">&lt;option&gt;</a></td>
+                    <td>Define an option in a drop-down list</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_output_en.html">&lt;output&gt;</a></td>
+                    <td>Defines the result of a calculation</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_p_en.html">&lt;p&gt;</a></td>
+                    <td>Defines a paragraph</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_param_en.html">&lt;param&gt;</a></td>
+                    <td>Defines a parameter for an object</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_picture_en.html">&lt;picture&gt;</a></td>
+                    <td>Defines a container for multiple image resources</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_pre_en.html">&lt;pre&gt;</a></td>
+                    <td>Defines preformatted text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_progress_en.html">&lt;progress&gt;</a></td>
+                    <td>Represents the progress of a task</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_q_en.html">&lt;q&gt;</a></td>
+                    <td>Defines a short quotation</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_rp_en.html">&lt;rp&gt;</a></td>
+                    <td>Defines what to show in browsers that do not support ruby annotations</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_rt_en.html">&lt;rt&gt;</a></td>
+                    <td>Defines an explanation/pronunciation of characters (for East Asian typography)</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_ruby_en.html">&lt;ruby&gt;</a></td>
+                    <td>Define a ruby annotation (for East Asian typography)</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_s_en.html">&lt;s&gt;</a></td>
+                    <td>Defines text that is no longer correct</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_samp_en.html">&lt;samp&gt;</a></td>
+                    <td>Defines sample output from a computer program</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_script_en.html">&lt;script&gt;</a></td>
+                    <td>Define a client-side script</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_section_en.html">&lt;section&gt;</a></td>
+                    <td>Define a section in a document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_select_en.html">&lt;select&gt;</a></td>
+                    <td>Define a drop-down list</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_small_en.html">&lt;small&gt;</a></td>
+                    <td>Defines smaller text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_source_en.html">&lt;source&gt;</a></td>
+                    <td>Defines multiple media resources for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_span_en.html">&lt;span&gt;</a></td>
+                    <td>Define a section in a document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_strike_en.html" class="notsupported">&lt;strike&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5. Use <a href="tag_del_en.html">&lt;del&gt;</a> or <a href="tag_s_en.html">&lt;s&gt;</a> instead.<br></span>Defines strikethrough text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_strong_en.html">&lt;strong&gt;</a></td>
+                    <td>Defines important text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_style_en.html">&lt;style&gt;</a></td>
+                    <td>Defines style information for a document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_sub_en.html">&lt;sub&gt;</a></td>
+                    <td>Defines subscripted text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_summary_en.html">&lt;summary&gt;</a></td>
+                    <td>Defines a visible heading for a &lt;details&gt; element</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_sup_en.html">&lt;sup&gt;</a></td>
+                    <td>Defines superscripted text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_svg_en.html">&lt;svg&gt;</a></td>
+                    <td>Define a container for SVG graphics</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_table_en.html">&lt;table&gt;</a></td>
+                    <td>Defines a table</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_tbody_en.html">&lt;tbody&gt;</a></td>
+                    <td>Groups the body content in a table</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_td_en.html">&lt;td&gt;</a></td>
+                    <td>Defines a cell in a table</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_template_en.html">&lt;template&gt;</a></td>
+                    <td>Define a container for content that should be hidden when the page loads</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_textarea_en.html">&lt;textarea&gt;</a></td>
+                    <td>Defines a multiline input control (text area)</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_tfoot_en.html">&lt;tfoot&gt;</a></td>
+                    <td>Groups the footer content in a table</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_th_en.html">&lt;th&gt;</a></td>
+                    <td>Define a header cell in a table</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_thead_en.html">&lt;thead&gt;</a></td>
+                    <td>Groups the header content in a table</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_time_en.html">&lt;time&gt;</a></td>
+                    <td>Defines a specific time (or datetime)</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_title_en.html">&lt;title&gt;</a></td>
+                    <td>Defines a title for the document</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_tr_en.html">&lt;tr&gt;</a></td>
+                    <td>Defines a row in a table</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_track_en.html">&lt;track&gt;</a></td>
+                    <td>Defines text tracks for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
+                </tr>
+                <tr>
+                    <td><a class="notsupported" href="tag_tt_en.html">&lt;tt&gt;</a></td>
+                    <td><span class="deprecated">Not supported in HTML5. Use CSS instead.<br></span>Defines teletype text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_u_en.html">&lt;u&gt;</a></td>
+                    <td>Defines some text that is unarticulated and styled differently from a normal text</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_ul_en.html">&lt;ul&gt;</a></td>
+                    <td>Defines an unordered list</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_var_en.html">&lt;var&gt;</a></td>
+                    <td>Defines a variable</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_video_en.html">&lt;video&gt;</a></td>
+                    <td>Defines embedded video content</td>
+                </tr>
+                <tr>
+                    <td><a href="tag_wbr_en.html">&lt;wbr&gt;</a></td>
+                    <td>Defines a possible line-break</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>    <h2>How many HTML tags are there?</h2>
-    <p>Many beginners who are just starting to learn web technologies often ask: <em>How many tags are there in the HTML5 specification?</em> As can be seen from the above table, as of the end of 2023 in the specification <strong>HTML5</strong> is officially approved and supports <strong>107 HTML tags</strong>. The 12 tags listed in the table are no longer supported by the <strong>HTML5</strong> specification, but are supported by most browsers. Even if you've used these tags before when building your websites, they will still work in all modern web browsers. However, outdated <strong>HTML tags</strong> <span style='color:red'>are not recommended</span> to be used in new web projects. It is better to follow the <strong>W3C</strong> recommendations and the officially approved <strong>HTML5</strong> specification. In addition, standards are constantly changing. Over time, some tags may disappear, and new tags appear. In order to stay up to date with all the changes that occur in web standards, it is necessary to visit the official web resources where all these changes are published, such as the site of the World Wide Web Consortium <strong>W3C</strong>: <a href= 'https://www.w3.org/' target='_blank' rel='nofollow noopener'>https://www.w3.org/</a> and <a href='https://whatwg.org /' target='_blank' rel='nofollow noopener' title='Web, Hypertext, Applications and Technology Working Group'>WHATWG</a>.</p>
-    <hr>
-    <div class="w3-clear nextprev">
-        <a class="w3-left w3-btn" href="../index_en.html">&#10094; Home</a>
-        <a class="w3-right w3-btn" href="ref_byfunc_en.html">Next &#10095;</a>
-    </div>
-</article>
-<hr>
-<div class="disqus">
-    <h4 title="Read before you write a comment!"><span class="predisqus-comment">&#x270D;</span> Comments</h4>
-    <iframe class="predisqus-frame" src="../pages/predisqus_en.html" title="Read it!"></iframe>
-    <!--Коментарі DisqusEN-->
-    <div id="disqus_thread"></div>
-    <script>
-        var disqus_config = function() {
-            this.page.url = w3schoolsua.github.io; // канонічна URL сторінки
-            this.page.identifier = w3schoolsua.github.io / tags / index_en.html; // унікальний id сторінки
-        };
-        (function() { // Нижче не редагувати
-            var d = document, s = d.createElement('script');
-            s.src = 'https://w3schoolsen.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view <a href="https://disqus.com/?ref_noscript">Disqus comments.</a></noscript>
-    <!--/Коментарі DisqusEN-->
-</div>
+</div>        <h2>How many HTML tags are there?</h2>
+        <p>Many beginners who are just starting to learn web technologies often ask: <em>How many tags are there in the HTML5 specification?</em> As can be seen from the above table, as of the end of 2023 in the specification <strong>HTML5</strong> is officially approved and supports <strong>107 HTML tags</strong>. The 12 tags listed in the table are no longer supported by the <strong>HTML5</strong> specification, but are supported by most browsers. Even if you've used these tags before when building your websites, they will still work in all modern web browsers. However, outdated <strong>HTML tags</strong> <span style='color:red'>are not recommended</span> to be used in new web projects. It is better to follow the <strong>W3C</strong> recommendations and the officially approved <strong>HTML5</strong> specification. In addition, standards are constantly changing. Over time, some tags may disappear, and new tags appear. In order to stay up to date with all the changes that occur in web standards, it is necessary to visit the official web resources where all these changes are published, such as the site of the World Wide Web Consortium <strong>W3C</strong>: <a href= 'https://www.w3.org/' target='_blank' rel='nofollow noopener'>https://www.w3.org/</a> and <a href='https://whatwg.org /' target='_blank' rel='nofollow noopener' title='Web, Hypertext, Applications and Technology Working Group'>WHATWG</a>.</p>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="../index_en.html">&#10094; Home</a>
+            <a class="w3-right w3-btn" href="ref_byfunc_en.html">Next &#10095;</a>
+        </div>
+    </article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
@@ -1304,24 +1301,8 @@
    <a href='../index_es.html' title='W3Schools in Spanish'><strong>Spanish</strong></a>,
    <a href='../index_de.html' title='W3Schools in German'><strong>German</strong></a>,
    <a href='../index_fr.html' title='W3Schools in French'><strong>French</strong></a>.<br>
-    <a href='../about/about_copyright_en.html'>Copyright 1999-2025</a> by Refsnes Data. All Rights Reserved. <a href='../w3css/index_en.html'>W3Schools is Powered by W3.CSS</a>.<br>
+    <a href='../about/about_copyright_en.html'>Copyright 1999-2026</a> by Refsnes Data. All Rights Reserved. <a href='../w3css/index_en.html'>W3Schools is Powered by W3.CSS</a>.<br>
       You can use other reputable web development and programming learning resources:<br>
-      <a href='https://www.udemy.com/' target='_blank' rel='noopener'>Udemy</a>&nbsp;|&nbsp;
-      <a href='https://www.codecademy.com/' target='_blank' rel='noopener'>Codecademy</a>&nbsp;|&nbsp;
-      <a href='https://www.coursera.org/' target='_blank' rel='noopener'>Coursera</a>&nbsp;|&nbsp;
-      <a href='https://www.edx.org/' target='_blank' rel='noopener'>edX</a>&nbsp;|&nbsp;
-      <a href='https://www.khanacademy.org/' target='_blank' rel='noopener'>Khan Academy</a>&nbsp;|&nbsp;
-      <a href='https://www.skillshare.com/' target='_blank' rel='noopener'>Skillshare</a>&nbsp;|&nbsp;
-      <a href='https://www.freecodecamp.org/' target='_blank' rel='noopener'>FreeCodeCamp</a>&nbsp;|&nbsp;
-      <a href='https://learn.microsoft.com/en-us/' target='_blank' rel='noopener'>MicrosoftLearn</a>&nbsp;|&nbsp;
-      <a href='https://hyperskill.org/' target='_blank' rel='noopener'>HyperSkill</a>&nbsp;|&nbsp;
-      <a href='https://www.udacity.com/' target='_blank' rel='noopener'>Udacity</a>&nbsp;|&nbsp;
-      <a href='https://code.org/' target='_blank' rel='noopener'>Code.org</a>&nbsp;|&nbsp;
-      <a href='https://www.sololearn.com/' target='_blank' rel='noopener'>SoloLearn</a>&nbsp;|&nbsp;
-      <a href='https://developer.ibm.com/' target='_blank' rel='noopener'>IBMDeveloper</a>&nbsp;|&nbsp;
-      <a href='https://www.codewars.com/' target='_blank' rel='noopener'>CodeWars</a>&nbsp;|&nbsp;
-      <a href='https://ed-era.com/' target='_blank' rel='noopener'>Ed-Era</a>&nbsp;|&nbsp;
-      <a href='https://www.theodinproject.com/' target='_blank' rel='noopener'>TheOdinProject</a>&nbsp;|&nbsp;
       <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
       <a href='https://developer.mozilla.org/en-US/' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
       <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
