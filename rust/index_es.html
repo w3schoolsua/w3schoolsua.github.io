@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang='es'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='apple-touch-icon' sizes='180x180' href='../apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='../favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='../favicon-16x16.png'>
+<link rel='manifest' href='../manifest.json'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:title' content='W3SchoolsES El mejor'>
+<meta property='og:description' content='Tutoriales de creación web bien organizados y fáciles de entender con muchos ejemplos de cómo usar HTML, CSS, JavaScript, SQL, PHP, Python, Java, C++, C#, Go y más'>
+<meta property='og:locale' content='es'>
+<meta property='og:type' content='website'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:url' content='https://w3schoolsua.github.io/index_es.html'>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "W3SchoolsES El mejor",
+        "url": "https://w3schoolsua.github.io/index_es.html",
+        "description": "W3Schools en español. Conceptos básicos de programación y desarrollo web. Lecciones para principiantes",
+        "image": "https://w3schoolsua.github.io/images/logo_w3s.gif",
+        "keywords": ["Lecciones", "W3Schools", "para principiantes", "HTML", "CSS", "JavaScript", "PHP", "SQL", "Python", "Java"],
+        "author": {
+            "@type": "Person",
+            "name": "W3SchoolsES El mejor",
+            "url": "https://w3schoolsua.github.io/blog/index_es.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "W3SchoolsES El mejor",
+            "url": "https://w3schoolsua.github.io/"
+        },
+        "inLanguage": "es-ES",
+        "sameAs": [
+            "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
+        ]
+    }
+</script>    <title>Tutorial de Rust. Fundamentos. Ejemplos. Lecciones para principiantes. W3Schools en español</title>
+    <meta name='keywords' content='Lenguaje Rust, aprender, descargar, ejercicios, cuestionarios, ejemplos, programación, aprendizaje, lecciones, tutoriales'>
+    <meta name='description' content='Rust es un lenguaje de programación popular que se usa para crear de todo, desde servidores web hasta motores de juegos. Ejemplos en cada capítulo. Pruébalo tú mismo. Ejercicios. Cuestionario. Ejemplos. Videolecciones. Lecciones para principiantes. W3Schools en español'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_es.html'>W3schoolsES<span class='dotcom w3-hide-small'>.ElMejor</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">MEJOR SITIO PARA DESARROLLADORES WEB</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src='https://cse.google.com/cse.js?cx=751c3d18bb8a64f00'></script><div class='gcse-search'></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Menu' aria-label='Menú abierto'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_es.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_es.html' title='HTML Tutorial'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_es.html' title='CSS Tutorial'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_es.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_es.html' title='SQL Tutorial'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../php/index_es.html' title='PHP Tutorial'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../python/index_es.html' title='Python Tutorial'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../java/index_es.html' title='Java Tutorial'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index_es.html' title='Kotlin Tutorial'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index_es.html' title='Go Tutorial'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index_es.html' title='C Tutorial'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index_es.html' title='C++ Tutorial'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index_es.html' title='C# Tutorial'>C#</a>
+            <a class='w3-bar-item w3-button' href='../ai/index_es.html' title='AI Tutorial'>AI</a>
+            <a class='w3-bar-item w3-button' href='../django/index_es.html' title='Django Tutorial'>Django</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_es.html' title='How To'>CÓMO</a>
+            <a class='w3-bar-item w3-button' href='../r/index_es.html' title='AI Tutorial'>R</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Más tutoriales' aria-label='ver más tutoriales'>Más <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Buscar' aria-label='Búsqueda de sitio'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='tema oscuro' aria-label='Habilitar el tema oscuro'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' rel="noopener" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Descargar libros gratis desde Google Drive' aria-label="Descargar libros gratis desde Google Drive">Libros</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Referencias' aria-label='Ir a Referencias'>REFERENCIAS <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Ejercicios' aria-label='Ir a Ejercicios'>EJERCICIOS <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML & CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_es.html'>Aprende HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_es.html'>Aprende CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_es.html'>Aprende RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_es.html'>Aprende Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_es.html'>Aprende W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_es.html'>Aprende Colores</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_es.html'>Aprende Iconos</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_es.html'>Aprende Gráficos</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_es.html'>Aprende SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_es.html'>Aprende Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_es.html'>Aprende Cómo</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_es.html'>Aprende Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Análisis de datos</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index_es.html'>Aprende IA</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index_es.html'>Aprende IA generativa</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_es.html'>Aprende ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index_es.html'>Aprende ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index_es.html'>Aprende Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_es.html'>Aprende Aprendizaje automático</a>
+                        <a class='w3-bar-item w3-button' href='../dsa/index_es.html'>Aprende DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_es.html'>Aprende Ciencia de los datos</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_es.html'>Aprende NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_es.html'>Aprende Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_es.html'>Aprende SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_es.html'>Aprende Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_es.html'>Aprende Estadísticas</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_es.html'>Aprende Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_es.html'>Aprende Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_es.html'>Aprende XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_es.html'>Aprende XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_es.html'>Aprende XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_es.html'>Aprende XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_es.html'>Aprende XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_es.html'>Aprende XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_es.html'>Aprende XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_es.html'>Aprende XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_es.html'>Aprende JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_es.html'>Aprende React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_es.html'>Aprende jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index_es.html'>Aprende Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_es.html'>Aprende AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_es.html'>Aprende JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_es.html'>Aprende AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_es.html'>Aprende AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_es.html'>Aprende W3.JS</a>
+                    <h3>Programación</h3>
+                    <a class='w3-bar-item w3-button' href='../programming/index_es.html'>Programación Intro</a>
+                    <a class='w3-bar-item w3-button' href='../python/index_es.html'>Aprende Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_es.html'>Aprende Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_es.html'>Aprende C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_es.html'>Aprende C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_es.html'>Aprende C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_es.html'>Aprende R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_es.html'>Aprende Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../rust/index_es.html'>Aprende Rust</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_es.html'>Aprende Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_es.html'>Aprende Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_es.html'>Aprende TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Lado del servidor</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_es.html'>Aprende SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_es.html'>Aprende MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index_es.html'>Aprende PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_es.html'>Aprende PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_es.html'>Aprende ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_es.html'>Aprende Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_es.html'>Aprende Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_es.html'>Aprende Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_es.html'>Aprende GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../bash/index_es.html'>Aprende Bash</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_es.html'>Aprende MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_es.html'>Aprende AWS Cloud</a>
+                    <h3>Construcción web</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_es.html'>Donde empezar</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_es.html'>Plantillas web</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_es.html'>Estadísticas web</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_es.html'>Editor de código</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index_es.html'>Editores de código/IDE</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_es.html'>Desarrollo web</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_es.html'>La seguridad cibernética</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_es.html'>Accesibilidad</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Prueba de velocidad de escritura</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Juego de código</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Análisis de datos</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_es.html'>Aprende IA</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index_es.html'>Aprende IA generativa</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_es.html'>Aprende ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index_es.html'>Aprende ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index_es.html'>Aprende Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_es.html'>Aprende Aprendizaje automático</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index_es.html'>Aprende DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_es.html'>Aprende Ciencia de los datos</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_es.html'>Aprende NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_es.html'>Aprende Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_es.html'>Aprende SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_es.html'>Aprende Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_es.html'>Aprende Estadísticas</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_es.html'>Aprende Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_es.html'>Aprende Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_es.html'>Aprende XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_es.html'>Aprende XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_es.html'>Aprende XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_es.html'>Aprende XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_es.html'>Aprende XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_es.html'>Aprende XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_es.html'>Aprende XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_es.html'>Aprende XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_es.html'>HTML Referencia de etiqueta</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_es.html'>HTML Soporte del navegador</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_es.html'>HTML Referencia de evento</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_es.html'>HTML Referencia de color</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_es.html'>HTML Referencia de atributos</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_es.html'>HTML Canvas Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_es.html'>HTML SVG Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_es.html'>Google Maps Referencia</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_es.html'>CSS Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_es.html'>CSS Soporte del navegador</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_es.html'>CSS Referencia de selectores</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_es.html'>Bootstrap 3 Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_es.html'>Bootstrap 4 Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_es.html'>W3.CSS Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_es.html'>Referencia de iconos</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_es.html'>Sass Referencia</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_es.html'>JavaScript Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_es.html'>HTML DOM Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_es.html'>jQuery Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_es.html'>AngularJS Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_es.html'>AppML Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_es.html'>W3.JS Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_es.html'>JS Guiones listos</a>
+                    <h3>Programación</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_es.html'>Python Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_es.html'>Java Referencia</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Lado del servidor</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_es.html'>SQL Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_es.html'>MySQL Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_es.html'>PHP Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_es.html'>ASP Referencia</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_es.html'>XML DOM Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_es.html'>XML Http Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_es.html'>XSLT Referencia</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_es.html'>XML Schema Referencia</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Conjuntos de caracteres</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_es.html'>HTML Conjuntos de caracteres</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_es.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_es.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_es.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_es.html'>HTML Símbolos</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_es.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Ejercicios</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_es.html'>HTML Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_es.html'>CSS Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_es.html'>JavaScript Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_es.html'>SQL Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_es.html'>MySQL Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_es.html'>PHP Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_es.html'>Python Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_es.html'>NumPy Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_es.html'>Pandas Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_es.html'>SciPy Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_es.html'>jQuery Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_es.html'>Java Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_es.html'>Bootstrap Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_es.html'>Bootstrap 4 Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_es.html'>C++ Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_es.html'>C# Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_es.html'>R Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_es.html'>Kotlin Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_es.html'>Go Ejercicios</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_es.html'>Git Ejercicios</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Cuestionarios</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_es.html' target='_top'>HTML Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_es.html' target='_top'>CSS Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_es.html' target='_top'>JavaScript Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_es.html' target='_top'>SQL Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_es.html' target='_top'>MySQL Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_es.html' target='_top'>PHP Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_es.html' target='_top'>Python Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_es.html' target='_top'>NumPy Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_es.html' target='_top'>Pandas Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_es.html' target='_top'>SciPy Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_es.html' target='_top'>jQuery Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_es.html' target='_top'>Java Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_es.html' target='_top'>Bootstrap Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_es.html' target='_top'>Bootstrap 4 Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_es.html' target='_top'>C++ Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_es.html' target='_top'>C# Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_es.html' target='_top'>R Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_es.html' target='_top'>XML Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_es.html' target='_top'>La seguridad cibernética Prueba</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_es.html' target='_top'>Accesibilidad Prueba</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Certificados</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_es.html' target='_top'>HTML Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_es.html' target='_top'>CSS Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_es.html' target='_top'>JavaScript Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_es.html' target='_top'>SQL Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_es.html' target='_top'>PHP Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_es.html' target='_top'>Python Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_es.html' target='_top'>jQuery Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_es.html' target='_top'>Bootstrap Certificado</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_es.html' target='_top'>XML Certificado</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <nav>
+                <h2 class='left'><span class='left_h2'>Rust</span> Tutorial</h2>
+                <a target='_top' href='index_es.html'>Rust HOGAR</a>
+                <a target='_top' href='rust_intro_es.html'>Rust Introducción</a>
+                <a target='_top' href='rust_getstarted_es.html'>Rust Empezar</a>
+                <a target='_top' href='rust_syntax_es.html'>Rust Sintaxis</a>
+                <a target='_top' href='rust_output_es.html'>Rust Producción</a>
+                <a target='_top' href='rust_comments_es.html'>Rust Comentarios</a>
+                <a target='_top' href='rust_variables_es.html'>Rust Variables</a>
+                <a target='_top' href='rust_data_types_es.html'>Rust Tipos de datos</a>
+                <a target='_top' href='rust_constants_es.html'>Rust Constantes</a>
+                <a target='_top' href='rust_operators_es.html'>Rust Operadores</a>
+                <a target='_top' href='rust_booleans_es.html'>Rust Booleanos</a>
+                <a target='_top' href='rust_if_else_es.html'>Rust If..Else</a>
+                <a target='_top' href='rust_match_es.html'>Rust Fósforo</a>
+                <a target='_top' href='rust_loops_es.html'>Rust Bucles</a>
+                <a target='_top' href='rust_loops_while_es.html'>Rust Bucles While</a>
+                <a target='_top' href='rust_loops_for_es.html'>Rust Bucles For</a>
+                <a target='_top' href='rust_functions_es.html'>Rust Funciones</a>
+                <a target='_top' href='rust_scope_es.html'>Rust Alcance</a>
+                <a target='_top' href='rust_strings_es.html'>Rust Cuerdas</a>
+                <a target='_top' href='rust_ownership_es.html'>Rust Propiedad</a>
+                <a target='_top' href='rust_borrowing_references_es.html'>Rust Préstamo</a>
+                <br>
+                <h2 class='left'><span class='left_h2'>Rust</span> Estructuras de datos</h2>
+                <a target='_top' href='rust_data_structures_es.html'>Rust Estructuras de datos</a>
+                <a target='_top' href='rust_arrays_es.html'>Rust Matrices</a>
+                <a target='_top' href='rust_vectors_es.html'>Rust Vectores</a>
+                <a target='_top' href='rust_tuples_es.html'>Rust Tuplas</a>
+                <a target='_top' href='rust_hashmap_es.html'>Rust HashMap</a>
+                <a target='_top' href='rust_structs_es.html'>Rust Estructuras</a>
+                <a target='_top' href='rust_enums_es.html'>Rust Enumeraciones</a>
+            </nav>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index_es.html'><img src='../svg/rust_icon.svg' alt='Lenguaje de programación Rust. W3Schools en español. Lecciones para principiantes' class='w3-left w3-padding' title='Lecciones de lenguaje Rust para principiantes. W3Schools en español' style='width: 90px'></a>
+    <p class='w3-right'>
+        <a href='index.html' title='Cambiar a ucraniano'>Ua</a>
+        <a href='index_en.html' title='Cambiar a inglés'>En</a>
+        <a href='index_de.html' title='Cambiar al alemán'>De</a>
+        <a href='index_fr.html' title='Cambiar al francés'>Fr</a>
+        <a href='index_ru.html' title='Cambiar a ruso'>Ru</a>
+    </p>
+    <article>
+        <h1>Rust <span class='color_h1'>Tutorial</span></h1>
+        <div class='w3-clear nextprev'>
+            <a class="w3-left w3-btn" href='../index_es.html'>&#10094; Home</a>
+            <a class="w3-right w3-btn" href='rust_intro_es.html'>Next &#10095;</a>
+        </div>
+        <hr>
+        <div class="w3-panel ws-info intro">
+            <h2>Aprende Rust</h2>
+            <p>Rust es un lenguaje de programación popular utilizado para construir todo, desde servidores web hasta motores de juegos.</p>
+            <p>Rust es conocido por ser rápido y es similar a <a href="../c/index_es.html">C</a> y <a href="../cpp/index_es.html">C++</a> en lenguaje.</p>
+            <a class="w3-btn w3-margin-bottom" href="rust_intro_es.html" style="font-size: 18px;padding-left:25px;padding-right:25px;font-family: 'Source Sans Pro', sans-serif;margin-top:6px;">Empieza a aprender Rust ahora &raquo;</a>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Ejemplos en cada capítulo</h2>
+        <p>Nuestro editor "Try it Yourself" ("Pruébalo tú mismo") facilita el aprendizaje de Rust. Puedes editar el código y ver el resultado en tu navegador:</p>
+        <div class="w3-example">
+            <h3>Ejemplo</h3>
+            <div class="w3-code notranslate javaHigh">
+                fn main() {<br>&nbsp;&nbsp;println!(&quot;Hello World!&quot;);<br>}
+            </div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../rusttryit/demo_helloworld.html">Try it Yourself &raquo;</a>
+        </div>
+        <div class="w3-panel ws-note">
+            <p>Haga clic en el botón "Try it Yourself" ("Pruébalo tú mismo") para ver cómo funciona.</p>
+            <p>Recomendamos leer este tutorial, en el orden que aparece en el menú de la izquierda.</p>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <div class="w3-card-2 w3-info w3-padding">
+            <h3 class="w3-center">Acerca de Rust</h3>
+            <h2>¿Qué es el lenguaje de programación Rust?</h2>
+            <p>Rust es un lenguaje de programación de sistemas centrado en la seguridad, el rendimiento y el paralelismo. Fue diseñado para evitar errores de memoria (como desbordamientos de búfer o accesos a datos sin inicializar) comunes en lenguajes como C o C++. Rust combina la seguridad de la gestión de memoria sin necesidad de recolección de elementos no utilizados, lo que lo hace ideal para su uso en programación de sistemas, así como para la creación de aplicaciones de alto rendimiento. Rust es un lenguaje desarrollado por la comunidad y patrocinado por Mozilla. Es un lenguaje de tipado estático que compila a código máquina, lo que le permite ejecutarse muy rápidamente.</p>
+            <p>Características principales de Rust:</p>
+            <ul>
+                <li><b>Seguridad:</b> Rust previene muchos errores comunes de programación, como punteros nulos y desbordamientos de búfer, en tiempo de compilación. Esto se logra mediante los conceptos de "propiedad" y "préstamo", que permiten la gestión de memoria sin un recolector de basura, evitando fugas de memoria.</li>
+                <li><b>Velocidad:</b> Al compilar a código nativo y carecer de un recolector de basura, los programas Rust se ejecutan con un rendimiento comparable al de C y C++.</li>
+                <li><b>Paralelismo:</b> El lenguaje cuenta con funciones integradas para el procesamiento paralelo seguro, lo que elimina muchos problemas de concurrencia.</li>
+            </ul>
+            <hr>
+            <h2>Historia del lenguaje Rust</h2>
+            <p>El desarrollo del lenguaje fue iniciado por Graydon Goare, empleado de Mozilla, en 2006 como proyecto personal. En 2009, Mozilla se unió al desarrollo y en 2010 se presentó oficialmente en la Cumbre de Mozilla de 2010. Desde 2021, tras las reducciones de Mozilla, el desarrollo lo lleva a cabo una fundación independiente, la Fundación Rust. El lenguaje recibe su nombre de la familia de hongos Rust. La idea de crear este lenguaje es crear uno que permita a los programadores trabajar con acceso a memoria de bajo nivel (como en C/C++), a la vez que ofrece mayor seguridad mediante el concepto de propiedad y préstamo, lo que permite evitar muchos errores comunes.</p>
+            <hr>
+            <h2>Áreas de uso de Rust</h2>
+            <p>Rust encuentra su aplicación en diversas industrias debido a su rendimiento y seguridad:</p>
+            <ul>
+                <li><b>Programación de sistemas:</b> Creación de sistemas operativos, controladores y software de bajo nivel.</li>
+                <li><b>Aplicaciones de alto rendimiento:</b> Por ejemplo, programación de servidores y aplicaciones para procesar big data o trabajar con redes.</li>
+                <li><b>Desarrollo web:</b> En particular, se utiliza junto con <a href="https://webassembly.org/" target="_blank" rel="nofollow noopener">WebAssembly</a> para crear aplicaciones web rápidas y eficientes. Desarrollo de servicios backend y servidores web de alto rendimiento.</li>
+                <li><b>Integrado e IoT:</b> Rust es ligero y rápido, lo que lo hace ideal para dispositivos con capacidades limitadas.</li>
+                <li><b>Línea de comandos:</b> Desarrollo de utilidades de terminal rápidas y fiables.</li>
+                <li><b>Criptomonedas:</b> Desarrollo de plataformas blockchain y otras aplicaciones que requieren seguridad y eficiencia.</li>
+                <li><b>Motores de juegos:</b> El lenguaje permite el desarrollo de juegos que requieren alta velocidad. Aunque aún no es una plataforma generalizada, Rust se está empezando a utilizar para crear motores y componentes de juegos.</li>
+            </ul>
+            <p>Las empresas populares que utilizan Rust incluyen <a href="https://www.mozilla.org/" target="_blank" rel="nofollow noopener">Mozilla</a>, <a href="https://www.dropbox.com/" target="_blank" rel="nofollow noopener">Dropbox</a>, <a href="https://www.microsoft.com/" target="_blank" rel="nofollow noopener">Microsoft</a>, <a href="https://www.amazon.com/" target="_blank" rel="nofollow noopener">Amazon</a> y otras.</p>
+            <hr>
+            <h2>Perspectivas de desarrollo del lenguaje Rust</h2>
+            <p>Rust está ganando popularidad rápidamente gracias a sus ventajas, en particular la seguridad de la memoria, la velocidad de ejecución y el uso eficiente de procesadores multinúcleo. Cada año, el número de usuarios crece y el lenguaje adquiere nuevas capacidades, especialmente en el ecosistema de desarrollo web y criptografía. En el futuro, se espera un mayor desarrollo de la compatibilidad con operaciones asíncronas y la integración con otras tecnologías.</p>
+            <p>Las perspectivas para Rust son muy optimistas. El lenguaje ha ganado gran popularidad entre los desarrolladores y ha sido reconocido repetidamente como el "lenguaje de programación favorito" según los resultados de las encuestas de Stack Overflow. El crecimiento constante de la comunidad, el desarrollo activo del ecosistema (bibliotecas, herramientas) y el apoyo de grandes empresas (como Amazon, Google y Microsoft) indican su éxito a largo plazo.</p>
+            <hr>
+            <h2>Sitio web oficial y descargas</h2>
+            <p>Sitio web oficial del lenguaje Rust — <a href="https://www.rust-lang.org" target="_blank" rel="nofollow noopener">https://www.rust-lang.org</a>.</p>
+            <p>Allí encontrará documentación, herramientas de instalación y otros recursos útiles. Para descargar el idioma, visite
+                <a href="https://www.rust-lang.org/tools/install" target="_blank" rel="nofollow noopener">visite la página oficial de descargas</a>.</p>
+            <hr>
+            <h2>📚 Recursos gratuitos para aprender Rust</h2>
+            <ul>
+                <li><a href="https://doc.rust-lang.org/book/" target="_blank" rel="nofollow noopener">The Rust Programming Language Book (Book Rust)</a>: The official textbook, known as "The Book." It explains all the concepts of the language in detail. It is the essential guide for beginners, helping them learn the language from the very beginning.</li>
+                <li>Rustlings: <a href="https://github.com/rust-lang/rustlings" target="_blank" rel="nofollow noopener">https://github.com/rust-lang/rustlings</a> — A set of small exercises that help reinforce core concepts by fixing small errors in your code. Helps you learn Rust through practice.</li>
+                <li>Rust por ejemplo: <a href="https://doc.rust-lang.org/rust-by-example/" target="_blank" rel="nofollow noopener">https://doc.rust-lang.org/rust-by-example/</a> — Un recurso práctico con muchos ejemplos de código que le ayudarán a comprender mejor los conceptos del lenguaje.</li>
+                <li>Exercism.io: <a href="https://exercism.io/tracks/rust" target="_blank" rel="nofollow noopener">https://exercism.io/tracks/rust</a> — Una plataforma de programación gratuita que ofrece muchas tareas prácticas que se pueden resolver en Rust con la ayuda de mentores.</li>
+                <li><a href="https://product.letsgetrusty.com/home" target="_blank" rel="nofollow noopener">https://letsgetrusty.com/</a> - Hoja de trucos del lenguaje Rust.</li>
+                <li>YouTube: Canales como <a href="https://www.youtube.com/@letsgetrusty" target="_blank" rel="nofollow noopener">Let's Get Rusty</a>, <a href="https://www.youtube.com/@dougmilford7814" target="_blank" rel="nofollow noopener">Doug Milford</a>, <a href="https://www.youtube.com/watch?v=T_KrYLW4jw8&list=PLzMcBGfZo4-nyLTlSRBvo0zjSnCnqjHYQ">TechWithTim</a> y otros ofrecen tutoriales en vídeo de calidad.</li>
+            </ul>
+            <hr>
+            <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <h2>Consejos para principiantes</h2>
+            <ul>
+                <li><b>Empieza con lo básico, no intentes dominarlo todo de golpe:</b> Rust puede parecer complicado al principio debido a los conceptos de "propiedad" y "préstamo", pero estas ideas son importantes para trabajar con la memoria de forma segura y eficiente. No tengas miedo de experimentar dificultades; es parte del proceso de aprendizaje.</li>
+                <li><b>Escribe código constantemente:</b> La práctica es la clave del éxito. Realizar tareas en Exercism, crear pequeños proyectos o incluso participar en proyectos abiertos en GitHub son excelentes maneras de mejorar tus habilidades rápidamente.</li>
+                <li><b>No tengas miedo de hacer preguntas:</b> La comunidad de Rust es una de las mejores. Ayuda activamente a los principiantes en los foros, Reddit y Stack Overflow. Si algo no te queda claro, es probable que alguien ya haya tenido una pregunta similar.</li>
+                <li><b>Supera los obstáculos al principio:</b> Rust puede llevar más tiempo aprender que otros lenguajes de programación, pero una vez que te familiarices con sus principios, comprenderás mejor cómo funcionan las computadoras.</li>
+                <li><b>Usa las herramientas de Rust:</b> Usa herramientas como Cargo (un gestor de paquetes y compilaciones), Rustfmt (formateo de código) y Clippy (un analizador de código estático) para mejorar tu experiencia de desarrollo.</li>
+            </ul>
+            <p><strong>Rust</strong> es una herramienta poderosa para quienes desean controlar el funcionamiento de su computadora, a la vez que disfrutan de las ventajas modernas que garantizan la seguridad y velocidad de la memoria. Aprender este lenguaje puede ser difícil al principio, pero las habilidades que adquieras te brindarán muchas oportunidades en la programación.</p>
+        </div>
+        <hr>
+        <div class='w3-clear nextprev'>
+            <a class="w3-left w3-btn" href='../index_es.html'>&#10094; Home</a>
+            <a class="w3-right w3-btn" href='rust_intro_es.html'>Next &#10095;</a>
+        </div>
+    </article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    </div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">PROGRAMACIÓN</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../programming/index_es.html' class='btn-rightbar'>Programación Intro</a>
+            <a href='../python/index_es.html' class='btn-rightbar'>Python</a>
+            <a href='../django/index_es.html' class='btn-rightbar'>Django</a>
+            <a href='../java/index_es.html' class='btn-rightbar'>Java</a>
+            <a href='../kotlin/index_es.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../js/index_es.html' class='btn-rightbar'>JavaScript</a>
+            <a href='../typescript/index_es.html' class='btn-rightbar'>TypeScript</a>
+            <a href='../c/index_es.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index_es.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index_es.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index_es.html' class='btn-rightbar'>R</a>
+            <a href='../rust/index_es.html' class='btn-rightbar'>Rust</a>
+            <a href='../go/index_es.html' class='btn-rightbar'>Go</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="All online guides on the site">LADO DEL SERVIDOR</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index_es.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index_es.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index_es.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index_es.html' class='btn-rightbar'>ASP & ASP.NET</a>
+            <a href='../nodejs/index_es.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi_es.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index_es.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index_es.html' class='btn-rightbar'>GitHub Pages</a>
+            <a href='../bash/index_es.html' class='btn-rightbar'>Bash</a>
+            <a href='../mongodb/index_es.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index_es.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>¡Lugar para tu anuncio!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>CONTACTOS</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none'>IMPRIMIR PÁGINA</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index_es.html' target='_top' style='text-decoration:none'>BLOG</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index_es.html' target='_top' style='text-decoration:none'>ACERCA DE</a>
+    </div>
+  </div>
+  <hr>
+   <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Contactos</h2>
+      <p>Si desea informar un error, así como hacer una oferta para el sitio, agregar un anuncio o publicidad en el sitio, no dude en enviar un correo electrónico al administrador:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Tutorial superior</h4>
+        <a href='../html/index_es.html'>HTML Tutorial</a><br>
+        <a href='../css/index_es.html'>CSS Tutorial</a><br>
+        <a href='../js/index_es.html'>JavaScript Tutorial</a><br>
+        <a href='../sql/index_es.html'>SQL Tutorial</a><br>
+        <a href='../python/index_es.html'>Python Tutorial</a><br>
+        <a href='../php/index_es.html'>PHP Tutorial</a><br>
+        <a href='../w3css/index_es.html'>W3.CSS Tutorial</a><br>
+        <a href='../appml/index_es.html'>AppML Tutorial</a><br>
+        <a href='../jquery/index_es.html'>jQuery Tutorial</a><br>
+        <a href='../angular/index_es.html'>Angular Tutorial</a><br>
+        <a href='../sass/index_es.html'>Sass Tutorial</a><br>
+        <a href='../java/index_es.html'>Java Tutorial</a><br>
+        <a href='../kotlin/index_es.html'>Kotlin Tutorial</a><br>
+        <a href='../c/index_es.html'>C Tutorial</a><br>
+        <a href='../cpp/index_es.html'>C++ Tutorial</a><br>
+        <a href='../cs/index_es.html'>C# Tutorial</a><br>
+        <a href='../chatgpt-3-5/index_es.html'>ChatGPT-3.5 Tutorial</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Referencias principales</h4>
+        <a href='../tags/index_es.html'>HTML Referencia</a><br>
+        <a href='../cssref/index_es.html'>CSS Referencia</a><br>
+        <a href='../jsref/index_es.html'>JavaScript Referencia</a><br>
+        <a href='../sql/sql_ref_keywords_es.html'>SQL Referencia</a><br>
+        <a href='../python/python_reference_es.html'>Python Referencia</a><br>
+        <a href='../php/php_ref_overview_es.html'>PHP Referencia</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_es.html'>Bootstrap 3 Referencia</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_es.html'>Bootstrap 4 Referencia</a><br>
+        <a href='../w3css/w3css_references_es.html'>W3.CSS Referencia</a><br>
+        <a href='../appml/appml_reference_es.html'>Appml Referencia</a><br>
+        <a href='../jquery/jquery_ref_overview_es.html'>jQuery Referencia</a><br>
+        <a href='../angular/angular_ref_directives_es.html'>Angular Referencia</a><br>
+        <a href='../sass/sass_functions_string_es.html'>Sass Referencia</a><br>
+        <a href='../java/java_ref_keywords_es.html'>Java Referencia</a><br>
+        <a href='../colors/colors_names_es.html'>Colors Referencia</a><br>
+        <a href='../icons/icons_reference_es.html'>Iconos Referencia</a><br>
+        <a href='../graphics/svg_reference_es.html'>SVG Referencia</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Ejemplos principales</h4>
+        <a href='../html/html_examples_es.html'>HTML Ejemplos</a><br>
+        <a href='../css/css_examples_es.html'>CSS Ejemplos</a><br>
+        <a href='../js/js_examples_es.html'>JavaScript Ejemplos</a><br>
+        <a href='../sql/sql_examples_es.html'>SQL Ejemplos</a><br>
+        <a href='../python/python_examples_es.html'>Python Ejemplos</a><br>
+        <a href='../php/php_examples_es.html'>PHP Ejemplos</a><br>
+        <a href='../bootstrap/bootstrap_examples_es.html'>Bootstrap Ejemplos</a><br>
+        <a href='../w3css/w3css_examples_es.html'>W3.CSS Ejemplos</a><br>
+        <a href='../jquery/jquery_examples_es.html'>jQuery Ejemplos</a><br>
+        <a href='../angular/angular_examples_es.html'>Angular Ejemplos</a><br>
+        <a href='../java/java_examples_es.html'>Java Ejemplos</a><br>
+        <a href='../kotlin/kotlin_examples_es.html'>Kotlin Ejemplos</a><br>
+        <a href='../c/c_examples_es.html'>C Ejemplos</a><br>
+        <a href='../cpp/cpp_examples_es.html'>C++ Ejemplos</a><br>
+        <a href='../cs/cs_examples_es.html'>C# Ejemplos</a><br>
+        <a href='../xml/xml_examples_es.html'>XML Ejemplos</a><br>
+        <a href='../howto/index_es.html'>Cómo Ejemplos</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_es.html'>Certificados Web</a></h4>
+        <a href='../cert/cert_html_es.html'>HTML Certificado</a><br>
+        <a href='../cert/cert_css_es.html'>CSS Certificado</a><br>
+        <a href='../cert/cert_javascript_es.html'>JavaScript Certificado</a><br>
+        <a href='../cert/cert_frontend_es.html'>Front End Certificado</a><br>
+        <a href='../cert/cert_python_es.html'>Python Certificado</a><br>
+        <a href='../cert/cert_datascience_es.html'>Data Science Certificado</a><br>
+        <a href='../cert/cert_jquery_es.html'>jQuery Certificado</a><br>
+        <a href='../cert/cert_sql_es.html'>SQL Certificado</a><br>
+        <a href='../cert/cert_php_es.html'>PHP Certificado</a><br>
+        <a href='../cert/cert_java_es.html'>Java Certificado</a><br>
+        <a href='../cert/cert_c_es.html'>C Certificado</a><br>
+        <a href='../cert/cert_cpp_es.html'>C++ Certificado</a><br>
+        <a href='../cert/cert_cs_es.html'>C# Certificado</a><br>
+        <a href='../cert/cert_bootstrap_es.html'>Bootstrap Certificado</a><br>
+        <a href='../cert/cert_xml_es.html'>XML Certificado</a><br>
+        <a href='../cert/career_tips_es.html'>Planificación de la carrera</a><br>
+        <a href='../cert/career_cv_es.html'>Escribir un resumen</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Este sitio está optimizado para el aprendizaje y la formación. Los ejemplos podrían simplificarse para mejorar la lectura y el aprendizaje. Los tutoriales, referencias y ejemplos se revisan constantemente para evitar errores, pero no podemos garantizar la total corrección de todo el contenido. Al utilizar W3Schools, usted acepta haber leído y aceptado nuestros <a href='../about/about_copyright_es.html'>términos de uso</a>, <a href='../about/about_privacy_es.html'> política de cookies y privacidad</a>.<br>
+   También están disponibles versiones del sitio en otros idiomas:
+   <a href='../index.html' title='W3Schools en ucraniano'><strong>Ucraniano</strong></a>,
+   <a href='../index_en.html' title='W3Schools en inglés'><strong>Inglés</strong></a>,
+   <a href='../index_de.html' title='W3Schools en alemán'><strong>Alemán</strong></a>,
+   <a href='../index_fr.html' title='W3Schools en francés'><strong>Francés</strong></a>.<br>
+    <a href='../about/about_copyright_es.html'>Derechos de autor 1999-2026</a> por Refsnes Data. Reservados todos los derechos. W3Schools funciona con <a href='../w3css/index_es.html'>W3.CSS</a>.<br>
+      Puede utilizar otros recursos de aprendizaje de programación y desarrollo web de buena reputación:<br>
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+      <a href='https://developer.mozilla.org/es/' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+      <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+      <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+      <br><br>
+      <a href='../index_es.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
