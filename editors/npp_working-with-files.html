@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='apple-touch-icon' sizes='180x180' href='../apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='../favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='../favicon-16x16.png'>
+<link rel='manifest' href='../manifest.json'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:title' content='Уроки від W3Schools українською онлайн'>
+<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
+<meta property='og:locale' content='uk'>
+<meta property='og:type' content='website'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "W3SchoolsUA",
+        "url": "https://w3schoolsua.github.io/index.html",
+        "description": "W3Schools українською мовою. Основи програмування та веброзробки. Уроки для початківців",
+        "image": "https://w3schoolsua.github.io/images/logo_w3s.gif",
+        "keywords": ["Уроки", "W3Schools", "для початківців", "HTML", "CSS", "JavaScript", "PHP", "SQL", "Python", "Java"],
+        "author": {
+            "@type": "Person",
+            "name": "W3Schools Ukrainian",
+            "url": "https://w3schoolsua.github.io/blog/index.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "W3SchoolsUA",
+            "url": "https://w3schoolsua.github.io/"
+        },
+        "inLanguage": "uk-UA",
+        "sameAs": [
+            "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
+        ]
+    }
+</script>    <title>Notepad&#43;&#43;. Робота з файлами. Офіційна документація. Уроки для початківців. W3Schools українською</title>
+    <meta name='description' content='Notepad&#43;&#43;. Робота з файлами. Меню File. Фільтри типів файлів. Альтернативи меню File. Друк. Документація. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню' aria-label='Відкрити меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index.html' title='Kotlin Підручник'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index.html' title='C Підручник'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index.html' title='C++ Підручник'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index.html' title='C# Підручник'>C#</a>
+            <a class='w3-bar-item w3-button' href='../ai/index.html' title='AI Підручник'>AI</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../typescript/index.html' title='TypeScript Підручник'>TypeScript</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='Як зробити'>Як зробити?</a>
+            <a class='w3-bar-item w3-button w3-left' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники' aria-label='Перейти в розділ Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників' aria-label='Переглянути більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті' aria-label='Пошук по сайту'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темну тему' aria-label='Увімкнути темну тему'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи' aria-label='Перейти в розділ Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../programming/index.html'>Програмування Інтро</a>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../rust/index.html'>Вивчити Rust</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index.html'>Вивчити PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../bash/index.html'>Вивчити Bash</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index.html'>Редактори коду / IDE</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <nav>
+                <h2 class='left'><span class='left_h2'>Документація</span></h2>
+                <a target='_top' href='index.html'>Редактори коду - ГОЛОВНА</a>
+                <a target='_top' href='notepad-plus-plus.html'>Notepad++ Інтро</a>
+                <a target='_top' href='npp_getting-started.html'>Початок роботи</a>
+                <a target='_top' href='npp_working-with-files.html'>Робота з файлами</a>
+                <a target='_top' href='npp_editing.html'>Редагування</a>
+                <a target='_top' href='npp_searching.html'>Пошук</a>
+                <a target='_top' href='npp_views.html'>Огляд</a>
+                <a target='_top' href='npp_sessions.html'>Сесії, робочі області, проєкти</a>
+                <a target='_top' href='npp_function-list.html'>Список функцій</a>
+                <a target='_top' href='npp_auto-completion.html'>Автозавершення</a>
+                <a target='_top' href='npp_syntax-highlighting-built-in-languages.html'>Підсвічування синтаксису - вбудовані мови</a>
+                <a target='_top' href='npp_syntax-highlighting-user-defined-languages.html'>Підсвічування синтаксису – мови, визначені користувачем</a>
+                <a target='_top' href='npp_udl-parser.html'>UDL Парсер</a>
+                <a target='_top' href='npp_udl-default-style.html'>UDL Стиль за замовчуванням</a>
+                <a target='_top' href='npp_udl-folding-in-code.html'>UDL Згортання коду</a>
+                <a target='_top' href='npp_udl-folding-in-comment.html'>UDL Складання коментарів</a>
+                <a target='_top' href='npp_udl-keywords.html'>UDL Ключові слова</a>
+                <a target='_top' href='npp_udl-comments.html'>UDL Коментарі</a>
+                <a target='_top' href='npp_udl-numbers.html'>UDL Числа</a>
+                <a target='_top' href='npp_udl-operators.html'>UDL Оператори</a>
+                <a target='_top' href='npp_udl-delimiters.html'>UDL Роздільники</a>
+                <a target='_top' href='npp_macros-task-automation.html'>Макроси - автоматизація завдань</a>
+                <a target='_top' href='npp_running-external-command.html'>Виконання зовнішніх команд</a>
+                <a target='_top' href='npp_plugins.html'>Плагіни</a>
+                <a target='_top' href='npp_plugin-communication.html'>Зв'язок плагінів</a>
+                <a target='_top' href='npp_command-line-arguments.html'>Аргументи командного рядка</a>
+                <a target='_top' href='npp_preferences.html'>Налаштування</a>
+                <a target='_top' href='npp_configuration-files-details.html'>Деталі конфігураційних файлів</a>
+                <a target='_top' href='npp_themes.html'>Теми</a>
+                <a target='_top' href='npp_localization-user-interface-translation.html'>Локалізація – переклад інтерфейсу користувача</a>
+                <a target='_top' href='npp_user-interface.html'>Інтерфейс користувача</a>
+                <a target='_top' href='npp_upgrading.html'>Оновлення</a>
+                <a target='_top' href='npp_right-click-edit-with-notepadpp.html'>Правий клік - Редагувати з Notepad++</a>
+                <a target='_top' href='npp_ghost-typing.html'>Сліпе введення</a>
+                <a target='_top' href='npp_other-resources.html'>Інші ресурси</a>
+                <a target='_top' href='npp_user-manual-history.html'>Посібник користувача. Історія</a>
+                <a target='_top' href='npp_copyright-and-license.html'>Авторське право та ліцензія</a>
+                <br><br>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/notepadpp-logo-mini.svg' alt='Notepad++ Редактор коду. Уроки для початківців' class='w3-left' title='Notepad++ для початківців. W3Schools українською' style='width: 100px; padding: 10px'></a>    <p class='w3-right'>
+        <a href='npp_working-with-files_en.html' title='Перейти на англійську мову'>En</a>
+        <a href='npp_working-with-files_es.html' title='Перейти на іспанську мову'>Es</a>
+        <a href='npp_working-with-files_de.html' title='Перейти на німецьку мову'>De</a>
+        <a href='npp_working-with-files_fr.html' title='Перейти на французьку мову'>Fr</a>
+        <a href='npp_working-with-files_ru.html' title='Перейти на російську мову'>Ru</a>
+    </p>
+    <article>
+        <h1>Notepad&#43;&#43; <span class='color_h1'>Робота з файлами</span></h1>
+        <div class='w3-clear nextprev'>
+            <a class='w3-left w3-btn' href='npp_getting-started.html'>&#10094; Prev</a>
+            <a class='w3-right w3-btn' href='npp_editing.html'>Next &#10095;</a>
+        </div>
+        <hr>
+        <h2>Робота з файлами</h2>
+        <p>«Файл» – це основна одиниця того, що редагується в Notepad++, але цей термін насправді охоплює кілька пов’язаних понять. По-перше, «файл» – це послідовність байтів, що зберігаються на диску або іншому носії інформації та доступ до яких здійснюється через файлову систему вашого комп’ютера; і, як на зло, якщо документ, який ви редагуєте, ніколи не зберігався у файловій системі, технічно він не є файлом, хоча зазвичай цей термін застосовується і до незбережених документів. «Документ» стосується тексту, що редагується, незалежно від того, чи це новий, незбережений документ, чи це документ, який раніше був збережений як файл у файловій системі. І, нарешті, у Notepad++ кожен документ представлений у вкладці в одному з двох <a href="npp_views_en.html">Views</a> інтерфейсу користувача Notepad++, які є графічними контейнерами, що Notepad++ використовує для маніпулювання файлами та іншими документами, хоча багато користувачів також вважають елемент інтерфейсу користувача «файлом».</p>
+        <hr>
+        <h2>Меню File / Файл</h2>
+        <p>Меню File / Файл містить багато звичайних дій з файлами, які можна знайти в більшості програм. Notepad++ також містить інші користувацькі дії, які корисно розуміти.</p>
+        <ul>
+          <li><b>New / Новий:</b> Створює новий документ і відображає цей порожній документ у вкладці активного перегляду.</li>
+          <li><b>Open / Відкрити:</b> Відкриває існуючий файл із файлової системи та відображає цей документ у вкладці активного перегляду.</li>
+          <li><b>Відкрити папку-контейнер &gt;:</b>
+            <ul>
+              <li><b>Explorer / Провідник:</b> Відкриває екземпляр Провідника Windows, починаючи з папки (також відомої як «каталог»), яка містить активний файл.</li>
+              <li><b>cmd:</b> Відкриває екземпляр cmd.exe системи Windows, починаючи з папки, яка містить активний файл.</li>
+              <li><b>Folder as Workspace / Папка як робоча область:</b> Відкриває папку активного файлу на панелі «Папка як робоча область» програми Notepad++.</li>
+            </ul>
+          </li>
+          <li><b>Open in Default Viewer / Відкрити у програмі перегляду за замовчуванням:</b> Це використовуватиме «асоціацію типу файлу» Windows для активного файлу (на основі розширення файлу).
+            <ul>
+              <li>Це еквівалентно подвійному клацанню на файлі в Провіднику Windows.</li>
+              <li>Якщо документ ніколи не зберігався як файл, ця дія буде неактивною, і пункт меню не можна буде використовувати.</li>
+              <li>Якщо тип файлу не має пов’язаної дії за замовчуванням у Windows, ця дія буде неактивною, і пункт меню не можна буде використовувати.</li>
+              <li>Якщо тип файлу пов’язаний з Notepad++ і, таким чином, просто повторно відкриває файл у Notepad++, ця дія буде неактивною, і пункт меню не можна буде використовувати.</li>
+            </ul>
+          </li>
+          <li><b>Open Folder as Workspace / Відкрити папку як робочу область:</b> Відкриває папку активного файлу на панелі «Папка як робочий простір» у Notepad++.</li>
+          <li><b>Reload from Disk / Перезавантажити з диска:</b> Це повторно зчитає байти файлу з файлової системи, замінивши поточний вміст документа, що редагується, останньою збереженою версією (і таким чином втратить будь-які зміни, які могли бути внесені в Notepad++).
+            <ul>
+              <li>Якщо у вас увімкнено параметр Settings > Preferences > MISC > File Status Auto-detection turned on, Notepad++ може автоматично виконати еквівалент цієї команди, без необхідності використовувати цей пункт меню.</li>
+              <li>Будь-які закладки або стилі токенів, які ви встановили раніше, будуть очищені.</li>
+              <li>Будь-яку історію змін, записану для файлу, буде скинуто, і файл відображатиметься без кольорів полів історії змін.</li>
+            </ul>
+          </li>
+          <li><b>Save / Зберегти:</b> Зберігає поточний документ у файловій системі, використовуючи те саме ім'я файлу.
+            <ul>
+              <li>Якщо з документом наразі не пов’язано жодного файлу, ця дія буде неактивною, і пункт меню не можна буде використовувати. Натомість скористайтеся командою File > Save As (Файл > Зберегти як).</li>
+            </ul>
+          </li>
+          <li><b>Save As / Зберегти як:</b> Зберігає поточний документ у файловій системі, запитуючи нове ім'я файлу.
+            <ul>
+              <li>Якщо документ раніше було збережено у файлі, це створить нову копію файлу, і Notepad++ продовжить роботу з документом, пов'язаним з новим файлом, залишивши старий файл із вмістом, який було збережено востаннє.</li>
+            </ul>
+          </li>
+          <li><b>Save a Copy As / Зберегти копію як:</b> Зберігає поточний документ у файловій системі, запитуючи нове ім'я файлу для використання..
+            <ul>
+              <li>Новий файл буде збережено, але Notepad++ продовжить працювати з документом, пов’язаним з оригінальним ім’ям файлу. Таким чином, ця дія фактично створює резервну копію файлу, але дозволяє продовжувати роботу з попереднім файлом, тоді як функція «Зберегти як» використовує оригінал як резервну копію та дозволяє продовжувати роботу з новим файлом.</li>
+              <li>Зазвичай під час виконання цієї команди новостворений файл не відкривається на вкладці редагування Notepad++. Щоб відкрити новий файл як частину процесу, утримуйте клавішу <kbd class="shortcut">Shift</kbd>, натискаючи кнопку <b>Save / Зберегти</b> в діалоговому вікні <b>Save As / Зберегти як</b>.</li>
+            </ul>
+          </li>
+          <li><b>Save All / Зберегти все:</b> Зберігає всі документи, які наразі відкриті в одному з двох подань Notepad++.</li>
+          <li><b>Rename / Перейменувати:</b> Запитує нову назву для поточного документа.
+            <ul>
+              <li>Якщо документ пов’язаний із файлом, Notepad++ відкриє стандартне діалогове вікно Windows для збереження файлу під новим ім’ям у файловій системі, і старе ім’я файлу більше не існуватиме.</li>
+              <li>Якщо документ є новим, незбереженим документом, ім’я, що відображається на вкладці для поточного документа, зміниться. Якщо пізніше ви збережете як, воно використовуватиметься як запропоноване ім’я за замовчуванням у діалоговому вікні «Зберегти як».</li>
+            </ul>
+          </li>
+          <li><b>Close / Закрити:</b> Закриває активний документ, запитуючи на збереження, якщо він був змінений з моменту відкриття або створення.</li>
+          <li><b>Close All / Закрити все:</b> Закриває всі документи, відкриті в поточному екземплярі Notepad++, і пропонує зберегти зміни, якщо один або декілька файлів було змінено з моменту їх відкриття або створення.
+            <ul>
+              <li>У діалоговому вікні запиту <b>Yes / Так</b> збереже файл, <b>No / Ні</b> закриє його без збереження (ви втратите всі зміни), <b>Cancel / Скасувати</b> зупинить закриття всіх файлів у Notepad++.</li>
+              <li>Якщо запитується кілька файлів, ви також отримаєте <b>Yes to All / Так для всіх</b>, щоб зберегти всі змінені файли, і <b>No to All / Ні для всіх</b>, щоб втратити зміни з усіх змінених файлів.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Закрити кілька документів >:</b>
+            <ul>
+              <li>Закрити всі, крім активного документа: Закриває всі відкриті документи, крім документа, який активно редагується.</li>
+              <li>Закрити всі, крім закріплених документів: Закриває всі відкриті документи, якщо їхня вкладка не закріплена.</li>
+              <li>Закрити всі ліворуч: Закриває всі відкриті документи, що знаходяться ліворуч від активного документа на панелі вкладок поточного перегляду.</li>
+              <li>Закрити всі праворуч: Закриває всі відкриті документи, що знаходяться праворуч від активного документа на панелі вкладок поточного перегляду.</li>
+              <li>Закрити всі без змін: Закриває всі відкриті документи, які не редагувалися з моменту їх останнього відкриття або створення.</li>
+            </ul>
+          </li>
+          <li><b>Move to Recycle Bin / Перемістити до кошика:</b> Закриває активний документ і переміщує базовий файл до кошика Windows. Якщо документ не має базового файлу, ця дія буде неактивною, і пункт меню не можна буде використовувати.</li>
+          <li><b>Load Session… / Завантажити сеанс…:</b> Завантажує всі файли зі збереженого файлу сеансу.</li>
+          <li><b>Save Session… / Зберегти сеанс…:</b> Зберігає поточний сеанс (список відкритих файлів) до файлу сеансу.</li>
+          <li><b>Print / Друк:</b> Відкриває діалогове вікно друку для друку файлу, як описано в розділі «Друк».</li>
+          <li><b>Print Now / Друкувати зараз:</b> Друкує активний файл без відображення діалогового вікна друку, використовуючи принтер за замовчуванням та інші налаштування діалогового вікна друку за замовчуванням.</li>
+          <li><b>Recent Files / Недавні файли >:</b> Список нещодавно закритих файлів, які редагував Notepad++.
+            <ul>
+              <li>Якщо для параметра [<b>Settings > Preferences > Recent Files History</b>] налаштовано використання підменю, останні файли будуть у цьому підменю, інакше вони будуть у головному меню «Файл».</li>
+              <li>Клацання на записі файлу відкриє цей файл.</li>
+              <li><b>Restore Recent Closed File / Відновити нещодавно закритий файл:</b> Відкриває файл, який було закрито останнім і знаходиться у верхній частині списку нещодавно відкритих файлів.</li>
+              <li><b>Open All Recent Files / Відкрити всі нещодавні файли:</b> Відкриває всі файли зі списку.</li>
+              <li><b>Empty Recent Files List / Очистити список останніх файлів:</b> Видаляє всі файли зі списку останніх файлів.</li>
+            </ul>
+          </li>
+          <li><b>Exit / Вихід:</b> Закриває програму Notepad++.
+            <ul>
+              <li>Якщо у вас встановлено прапорець <b>Settings > Preferences > Backup</b> <code class="w3-codespan">☑ Remember current session for next launch</code>, Notepad++ збереже поточний список файлів у сеансі. Єдині файли, які будуть запам’ятані для наступного запуску Notepad++, будуть ті, що наразі відкриті в Notepad++.</li>
+              <li>Якщо у вас не встановлено прапорець <b>Settings > Preferences > Backup</b> <code class="w3-codespan">☐ Enable session snapshot and periodic backup</code>, Notepad++ запропонує вам, чи зберігати будь-які змінені файли, дотримуючись тих самих правил, що й для параметра «Закрити все», описаного вище. Якщо у вас встановлено прапорець для цього параметра, незбережені документи також будуть включені до файлу сеансу, навіть якщо вони не мають базового файлу.</li>
+            </ul>
+          </li>
+        </ul>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Фільтри типів файлів</h2>
+        <p>Для діалогового вікна <b>Зберегти як</b> та подібних є випадаюче поле <b>Зберегти як тип</b>. Для діалогового вікна <b>Відкрити</b> (та подібних) є випадаюче поле типу файлу праворуч від запису <b>Ім'я файлу</b>. Ці випадаючі списки служать для фільтрації списку файлів у діалоговому вікні на основі типу файлу. Список типів файлів фільтра включатиме всі мови в меню <a href="npp_syntax-highlighting-built-in-languages.html">Мова</a> та розширення для цих типів, як визначено в <a href="preferences.html/#style-configurator">Конфігураторі стилів</a>). Починаючи з версії 8.7, фільтр також включатиме різні типи файлів та розширення <a href="npp_syntax-highlighting-user-defined-languages.html">Визначена користувачем мова</a>.</p>
+        <p>Для діалогового вікна «Зберегти як» прапорець ☐ Append extension «Додати розширення», описаний у розділі <a href="preferences.html/#preference-toggles-in-other-dialogs">«Перемикачі налаштувань в інших діалогових вікнах»</a>, дозволить діалоговому вікну автоматично додавати <i>перше</i> розширення у списку для активного фільтра. Якщо вам потрібне інше розширення для цього типу або якщо цей параметр не позначено, ви завжди можете ввести назву файлу з розширенням, щоб явно визначити потрібне розширення для файлу, який ви наразі зберігаєте. (Тому зазвичай виконання фільтра <b>Зберегти як</b> для C++ автоматично додає розширення <code class="w3-codespan">.cpp</code>; але якщо ви хочете, щоб це було <code class="w3-codespan">.cxx</code> або <code class="w3-codespan">.h</code>, ви можете просто ввести це як частину запису <b>Ім'я файлу</b>, а не дозволяти Notepad++ автоматично додавати розширення.)</p>
+        <hr>
+        <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Альтернативи меню «Файл»</h2>
+        <p>Багато дій з меню «Файл» мають кілька способів доступу, як описано в <a href="npp_user-interface.html">Інтерфейсі користувача</a> та в інших відповідних розділах Посібника користувача.</p>
+        <p>Наприклад,</p>
+        <ul>
+          <li><b>File > Open</b> має багато способів досягти одного й того ж:
+            <ul>
+              <li>Сполучення клавіш за замовчуванням <kbd class="shortcut">Ctrl+N</kbd>.</li>
+              <li>На панелі інструментів є значок «Створити».</li>
+              <li>У рядку меню може бути значок <kbd class="shortcut">+</kbd> для створення нового файлу.</li>
+              <li>Ви можете двічі клацнути вільне місце на панелі вкладок.</li>
+              <li>Ви можете скористатися контекстним меню значка системного трея, яке викликається клацанням правою кнопкою миші.</li>
+            </ul>
+          </li>
+          <li><b>File > Close</b> також має багато способів досягти того ж самого:
+            <ul>
+              <li>Сполучення клавіш за замовчуванням <kbd class="shortcut">Ctrl+W</kbd>.</li>
+              <li>На панелі інструментів є значок «Закрити».</li>
+              <li>У рядку меню може бути значок <kbd class="shortcut">X</kbd> для закриття активного файлу.</li>
+              <li>У розділі User Interface > Tabs пояснюються ще три пункти:
+                <ul>
+                  <li>Ви можете натиснути <kbd class="shortcut">X</kbd> поруч із назвою вкладки, щоб закрити її, якщо встановлено параметр <b>Settings > Preferences > General > Tab Bar > Show close button</b>.</li>
+                  <li>Ви можете двічі клацнути на заголовку вкладки, щоб закрити її, якщо встановлено параметр <b>Settings > Preferences > General > Tab Bar > ☐ Double click to close document</b>.</li>
+                  <li>Ви можете клацнути середньою кнопкою миші на заголовку вкладки, щоб закрити її.</li>
+                </ul>
+              </li>
+              <li>Ви можете скористатися контекстним меню назви вкладки, що випадає після клацання правою кнопкою миші.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>Загалом, зайвим є пояснювати всі альтернативні методи в кількох місцях Посібника, тому, якщо ви шукаєте спосіб виконати дію з меню «Файл» в якомусь іншому місці, ви можете скористатися функцією <code class="w3-codespan">Find in Page</code> вашого браузера (часто <kbd class="shortcut">Ctrl+F</kbd> або подібною), щоб знайти потрібну вам дію на сторінці <a href="npp_user-interface.html">Інтерфейс користувача</a>. А вивчення цієї сторінки дозволить вам ознайомитися з різними місцями, де можна знайти такі об'єкти.</p>
+        <hr>
+        <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Друк</h2>
+        <p>Дія <b>File > Print</b> відкриє стандартне діалогове вікно друку Windows, в якому ви можете вибрати принтер і надіслати текст на вибраний принтер. Зазвичай друкується весь документ, але ви можете використовувати діалогове вікно друку, щоб вибрати лише певні сторінки; якщо у вас є активний вибір у редакторі, буде надруковано лише вибраний текст.</p>
+        <p>На друк тексту впливають налаштування <b>Settings > Preferences > Print</b>, де ви можете вирішити, чи включати номери рядків у роздруківку, ширину полів, додатковий текст для друку у верхньому та/або нижньому колонтитулах кожної сторінки, а параметри кольору визначатимуть, як кольори вашої <a href="npp_preferences.html">теми конфігуратора стилів</a> будуть поширюватися на друкований вивід. Ви як користувач повинні вирішити, які налаштування друку найкраще відповідають вашим потребам і найкраще виглядатимуть на вибраному вами друкованому носії. Зверніть увагу, що з будь-якими темами з кольоровим фоном деякі з цих кольорів будуть надруковані на фоні друкованої сторінки, якщо ви не оберете один із параметрів кольору, який не друкує колір фону; але з темнішими темами, які використовують світлий текст на темному фоні, якщо ви не налаштуєте друк кольору фону, то на білому папері буде дуже світлий текст. Якщо у вас є принтер, який дозволяє друкувати у форматі PDF, це гарний спосіб побачити, як насправді виглядатиме роздруківка без використання паперу та чорнил (а якщо у вас немає PDF-принтера, ваша улюблена пошукова система покаже вам безліч комерційних та безкоштовних PDF-принтерів, якщо ви пошукаєте щось на кшталт «PDF-принтер Windows» або «друк у PDF»).</p>
+        <hr>
+        <div class='w3-clear nextprev'>
+          <a class='w3-left w3-btn' href='npp_getting-started.html'>&#10094; Prev</a>
+          <a class='w3-right w3-btn' href='npp_editing.html'>Next &#10095;</a>
+        </div>
+    </article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    </div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-border' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">ПІДРУЧНИКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../html/index.html' class='btn-rightbar'>HTML</a>
+            <a href='../css/index.html' class='btn-rightbar'>CSS</a>
+            <a href='../js/index.html' class='btn-rightbar'>JavaScript</a>
+            <a href='../css/css_rwd_intro.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index.html' class='btn-rightbar'>Кольори</a>
+            <a href='../icons/index.html' class='btn-rightbar'>Іконки</a>
+            <a href='../graphics/index.html' class='btn-rightbar'>Графіка</a>
+            <a href='../graphics/svg_intro.html' class='btn-rightbar'>Графіка SVG</a>
+            <a href='../graphics/canvas_intro.html' class='btn-rightbar'>Графіка Canvas</a>
+            <a href='../howto/index.html' class='btn-rightbar'>Як зробити?</a>
+            <a href='../sass/index.html' class='btn-rightbar'>Sass</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Всі онлайн-довідники на сайті">ДОВІДНИКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../tags/index.html' class='btn-rightbar'>HTML-теги</a>
+            <a href='../tags/ref_html_browsersupport.html' class='btn-rightbar'>Підтримка браузерами</a>
+            <a href='../tags/ref_attributes.html' class='btn-rightbar'>HTML-атрибути</a>
+            <a href='../tags/ref_standardattributes.html' class='btn-rightbar'>Глобальні атрибути</a>
+            <a href='../tags/ref_eventattributes.html' class='btn-rightbar'>Атрибути подій</a>
+            <a href='../tags/ref_colornames.html' class='btn-rightbar'>HTML-кольори</a>
+            <a href='../tags/ref_canvas.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom.html' class='btn-rightbar'>Аудіо-Відео</a>
+            <a href='../tags/ref_charactersets.html' class='btn-rightbar'>Набори символів</a>
+            <a href='../tags/ref_html_dtd.html' class='btn-rightbar'>DOCTYPE</a>
+            <a href='../tags/ref_urlencode.html' class='btn-rightbar'>URL-кодування</a>
+            <a href='../tags/ref_language_codes.html' class='btn-rightbar'>Коди мов</a>
+            <a href='../tags/ref_country_codes.html' class='btn-rightbar'>Коди країн</a>
+            <a href='../tags/ref_httpmessages.html' class='btn-rightbar'>HTTP повідомлення</a>
+            <a href='../tags/ref_httpmethods.html' class='btn-rightbar'>HTTP методи</a>
+            <a href='../tags/ref_pxtoemconversion.html' class='btn-rightbar'>Конвертер Px в Em</a>
+            <a href='../tags/ref_keyboardshortcuts.html' class='btn-rightbar'>Гарячі клавіші</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">HTML Кодування</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../charsets/index.html' class='btn-rightbar'>Набори символів</a>
+            <a href='../charsets/ref_html_ascii.html' class='btn-rightbar'>ASCII Довідник</a>
+            <a href='../charsets/ref_html_ansi.html' class='btn-rightbar'>Win-1252 (ANSI)</a>
+            <a href='../charsets/ref_html_8859.html' class='btn-rightbar'>ISO-8859-1</a>
+            <a href='../charsets/ref_html_symbols.html' class='btn-rightbar'>HTML Символи</a>
+            <a href='../charsets/ref_html_utf8.html' class='btn-rightbar'>Unicode (UTF-8)</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style="text-decoration:none">ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index.html' target='_top' style="text-decoration:none">БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index.html' target='_top' style="text-decoration:none">ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../kotlin/index.html'>Kotlin Підручник</a><br>
+        <a href='../c/index.html'>C Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+        <a href='../chatgpt-3-5/index.html'>ChatGPT-3.5 Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+        <a href='../icons/icons_reference.html'>Іконки Довідник</a><br>
+        <a href='../graphics/svg_reference.html'>SVG Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../kotlin/kotlin_examples.html'>Kotlin Приклади</a><br>
+        <a href='../c/c_examples.html'>C Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Вебсертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_c.html'>C Сертифікат</a><br>
+        <a href='../cert/cert_cpp.html'>C++ Сертифікат</a><br>
+        <a href='../cert/cert_cs.html'>C# Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали й прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступні версії сайту іншими мовами:
+    <a href='../index_en.html' title='W3Schools англійською'><strong>англійською</strong></a>,
+    <a href='../index_es.html' title='W3Schools іспанською'><strong>іспанською</strong></a>,
+    <a href='../index_de.html' title='W3Schools німецькою'><strong>німецькою</strong></a>,
+    <a href='../index_fr.html' title='W3Schools французькою'><strong>французькою</strong></a>.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2026</a> by Refsnes Data. All Rights Reserved.
+    Сайт створений і працює на фреймворку <a href='../w3css/index.html'>W3.CSS</a>.<br>
+    Ви можете використовувати інші авторитетні ресурси для навчання веброзробці та програмуванню:<br>
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+      <a href='https://developer.mozilla.org/en-US/?retiredLocale=uk' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+      <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+      <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+    <br><br>
+    <a href='../index.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
