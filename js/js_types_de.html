@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang='de'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='apple-touch-icon' sizes='180x180' href='../apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='../favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='../favicon-16x16.png'>
+<link rel='manifest' href='../manifest.json'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:title' content='W3SchoolsDE DerBeste'>
+<meta property='og:description' content='Gut organisierte und leicht verständliche Webbuilding-Tutorials mit vielen Beispielen für die Verwendung von HTML, CSS, JavaScript, SQL, PHP, Python, Java, C++, C#, Go und mehr'>
+<meta property='og:locale' content='de'>
+<meta property='og:type' content='website'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:url' content='https://w3schoolsua.github.io/index_de.html'>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "W3SchoolsDE DerBeste",
+        "url": "https://w3schoolsua.github.io/index_de.html",
+        "description": "W3Schools auf Deutsch. Grundlagen der Programmierung und Webentwicklung. Unterricht für Anfänger",
+        "image": "https://w3schoolsua.github.io/images/logo_w3s.gif",
+        "keywords": ["Unterricht", "W3Schools", "für Anfänger", "HTML", "CSS", "JavaScript", "PHP", "SQL", "Python", "Java"],
+        "author": {
+            "@type": "Person",
+            "name": "W3Schools DerBeste",
+            "url": "https://w3schoolsua.github.io/blog/index_de.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "W3SchoolsDE DerBeste",
+            "url": "https://w3schoolsua.github.io/"
+        },
+        "inLanguage": "de-DE",
+        "sameAs": [
+            "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
+        ]
+    }
+</script>    <title>JavaScript Datentypen. Beispiele. Video. Unterricht für Anfänger. W3Schools das Beste</title>
+    <meta name='description' content='JavaScript hat 8 Datentypen. Der typeof-Operator. Zeichenfolgen. Zahlen. Exponentialnotation. Boolesche Werte. Datentyp undefiniert. Leere Werte. Beispiele. Video-Lektionen. Unterricht für Anfänger. W3Schools auf Deutsch'>
+    <link rel="stylesheet" href="../styles/browserref.css">
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_de.html'>W3schoolsDE<span class='dotcom w3-hide-small'>. DasBeste</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">BESTE WEBSITE FÜR WEBENTWICKLER</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src='https://cse.google.com/cse.js?cx=751c3d18bb8a64f00'></script><div class='gcse-search'></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Menu' aria-label='Open menu'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_de.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_de.html' title='HTML Tutorial'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_de.html' title='CSS Tutorial'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_de.html' title='JavaScript Tutorial'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_de.html' title='SQL Tutorial'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../python/index_de.html' title='Python Tutorial'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../php/index_de.html' title='PHP Tutorial'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../java/index_de.html' title='Java Tutorial'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index_de.html' title='Kotlin Tutorial'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index_de.html' title='Go Tutorial'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index_de.html' title='C Tutorial'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index_de.html' title='C++ Tutorial'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index_de.html' title='C# Tutorial'>C#</a>
+            <a class='w3-bar-item w3-button' href='../django/index_de.html' title='Django Tutorial'>Django</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_de.html' title='How To'>WIE MAN</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_de.html' title='W3.CSS Tutorial'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../ai/index_de.html' title='AI Tutorial'>AI</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Weitere Tutorials' aria-label='view more tutorials'>Mehr <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Suchen' aria-label='Site search'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Dark theme' aria-label='Aktivieren Sie das dunkle Thema'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' target='_blank' rel="noopener" href='https://drive.google.com/open?id=1fddM8chCC273SbiTEYVNLorbZ2qij7fp' title='Laden Sie Bücher kostenlos von Google Drive herunter' aria-label="Laden Sie Bücher kostenlos von Google Drive herunter">Bücher</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Verweise' aria-label='Gehen Sie zu Referenzen'>VERWEISE <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Übungen' aria-label='Gehen Sie zu Übungen'>ÜBUNGEN <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML & CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_de.html'>Lernen HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_de.html'>Lernen CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_de.html'>Lernen RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_de.html'>Lernen Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_de.html'>Lernen W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_de.html'>Lernen Farben</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_de.html'>Lernen Symbole</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_de.html'>Lernen Grafik</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_de.html'>Lernen SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_de.html'>Lernen Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_de.html'>Lernen Wie man</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_de.html'>Lernen Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Data Analytics</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index_de.html'>Lernen KI</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index_de.html'>Lernen Generative KI</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_de.html'>Lernen ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index_de.html'>Lernen ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index_de.html'>Lernen Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_de.html'>Lernen Maschinelles Lernen</a>
+                        <a class='w3-bar-item w3-button' href='../DSA/index_de.html'>Lernen DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_de.html'>Lernen Datenwissenschaft</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_de.html'>Lernen NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_de.html'>Lernen Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_de.html'>Lernen SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_de.html'>Lernen Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_de.html'>Lernen Statistiken</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_de.html'>Lernen Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_de.html'>Lernen Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_de.html'>Lernen XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_de.html'>Lernen XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_de.html'>Lernen XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_de.html'>Lernen XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_de.html'>Lernen XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_de.html'>Lernen XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_de.html'>Lernen XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_de.html'>Lernen XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_de.html'>Lernen JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_de.html'>Lernen React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_de.html'>Lernen jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index_de.html'>Lernen Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_de.html'>Lernen AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_de.html'>Lernen JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_de.html'>Lernen AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_de.html'>Lernen AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_de.html'>Lernen W3.JS</a>
+                    <h3>Programmierung</h3>
+                    <a class='w3-bar-item w3-button' href='../programming/index_de.html'>Programmierung Intro</a>
+                    <a class='w3-bar-item w3-button' href='../python/index_de.html'>Lernen Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_de.html'>Lernen Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_de.html'>Lernen C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_de.html'>Lernen C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_de.html'>Lernen C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_de.html'>Lernen R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_de.html'>Lernen Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../rust/index_de.html'>Lernen Rust</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_de.html'>Lernen Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_de.html'>Lernen Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_de.html'>Lernen TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Serverseitig</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_de.html'>Lernen SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_de.html'>Lernen MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index_de.html'>Lernen PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_de.html'>Lernen PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_de.html'>Lernen ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_de.html'>Lernen Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_de.html'>Lernen Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_de.html'>Lernen Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_de.html'>Lernen GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../bash/index_de.html'>Lernen Bash</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_de.html'>Lernen MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_de.html'>Lernen AWS Cloud</a>
+                    <h3>Webaufbau</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_de.html'>Wo soll man anfangen</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_de.html'>Webvorlagen</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_de.html'>Webstatistiken</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_de.html'>Code-Editor</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index_de.html'>Code-Editoren/IDE</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_de.html'>Web Entwicklung</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_de.html'>Internet-Sicherheit</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_de.html'>Barrierefreiheit</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Tippgeschwindigkeitstest</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Code-Spiel</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Datenanalyse</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_de.html'>Lernen KI</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index_de.html'>Lernen Generative KI</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_de.html'>Lernen ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index_de.html'>Lernen ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index_de.html'>Lernen Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_de.html'>Lernen Maschinelles Lernen</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index_de.html'>Lernen DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_de.html'>Lernen Datenwissenschaft</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_de.html'>Lernen NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_de.html'>Lernen Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_de.html'>Lernen SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_de.html'>Lernen Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_de.html'>Lernen Statistiken</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_de.html'>Lernen Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_de.html'>Lernen Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_de.html'>Lernen XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_de.html'>Lernen XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_de.html'>Lernen XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_de.html'>Lernen XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_de.html'>Lernen XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_de.html'>Lernen XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_de.html'>Lernen XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_de.html'>Lernen XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_de.html'>HTML Tag-Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_de.html'>HTML Browser-Unterstützung</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_de.html'>HTML Ereignisreferenz</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_de.html'>HTML Farbreferenz</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_de.html'>HTML Attributreferenz</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_de.html'>HTML Canvas Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_de.html'>HTML SVG Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_de.html'>Google Maps Referenz</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_de.html'>CSS Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_de.html'>CSS Browser-Unterstützung</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_de.html'>CSS Auswahlreferenz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_de.html'>Bootstrap 3 Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_de.html'>Bootstrap 4 Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_de.html'>W3.CSS Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_de.html'>Symbolreferenz</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_de.html'>Sass Referenz</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_de.html'>JavaScript Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_de.html'>HTML DOM Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_de.html'>jQuery Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_de.html'>AngularJS Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_de.html'>AppML Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_de.html'>W3.JS Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_de.html'>JS Ready Scripts</a>
+                    <h3>Programming</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_de.html'>Python Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_de.html'>Java Referenz</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Serverseitig</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_de.html'>SQL Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_de.html'>MySQL Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_de.html'>PHP Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_de.html'>ASP Referenz</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_de.html'>XML DOM Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_de.html'>XML Http Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_de.html'>XSLT Referenz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_de.html'>XML Schema Referenz</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Zeichensätze</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_de.html'>HTML Zeichensätze</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_de.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_de.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_de.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_de.html'>HTML Symbole</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_de.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Übungen</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_de.html'>HTML Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_de.html'>CSS Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_de.html'>JavaScript Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_de.html'>SQL Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_de.html'>MySQL Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_de.html'>PHP Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_de.html'>Python Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_de.html'>NumPy Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_de.html'>Pandas Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_de.html'>SciPy Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_de.html'>jQuery Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_de.html'>Java Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_de.html'>Bootstrap Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_de.html'>Bootstrap 4 Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_de.html'>C++ Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_de.html'>C# Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_de.html'>R Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_de.html'>Kotlin Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_de.html'>Go Übungen</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_de.html'>Git Übungen</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Quiz</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_de.html' target='_top'>HTML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_de.html' target='_top'>CSS Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_de.html' target='_top'>JavaScript Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_de.html' target='_top'>SQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_de.html' target='_top'>MySQL Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_de.html' target='_top'>PHP Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_de.html' target='_top'>Python Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_de.html' target='_top'>NumPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_de.html' target='_top'>Pandas Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_de.html' target='_top'>SciPy Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_de.html' target='_top'>jQuery Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_de.html' target='_top'>Java Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_de.html' target='_top'>Bootstrap Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_de.html' target='_top'>Bootstrap 4 Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_de.html' target='_top'>C++ Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_de.html' target='_top'>C# Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_de.html' target='_top'>R Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_de.html' target='_top'>XML Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_de.html' target='_top'>Internet-Sicherheit Quiz</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_de.html' target='_top'>Barrierefreiheit Quiz</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Zertifikate</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_de.html' target='_top'>HTML Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_de.html' target='_top'>CSS Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_de.html' target='_top'>JavaScript Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_de.html' target='_top'>SQL Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_de.html' target='_top'>PHP Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_de.html' target='_top'>Python Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_de.html' target='_top'>jQuery Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_de.html' target='_top'>Bootstrap Zertifikat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_de.html' target='_top'>XML Zertifikat</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class='left'>Basic JavaScript</h2>
+            <a target='_top' href='index_de.html'>JS Tutorial</a>
+            <div class='tut_overview'>
+                <a target='_top' href='index_de.html'>JS Tutorial</a>
+                <a target='_top' href='js_intro_de.html'>JS Introduction</a>
+                <a target='_top' href='js_whereto_de.html'>JS Where To</a>
+                <a target='_top' href='js_output_de.html'>JS Output</a>
+            </div>
+            <a target='_top' href='js_syntax_de.html'>JS Syntax</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_syntax_de.html'>JS Syntax</a>
+                <a target='_top' href='js_statements_de.html'>JS Statements</a>
+                <a target='_top' href='js_comments_de.html'>JS Comments</a>
+            </div>
+            <a target='_top' href='js_variables_de.html'>JS Variables</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_variables_de.html'>JS Variables</a>
+                <a target='_top' href='js_let_de.html'>JS Let</a>
+                <a target='_top' href='js_const_de.html'>JS Const</a>
+                <a target='_top' href='js_types_de.html'>JS Types</a>
+            </div>
+            <a target='_top' href='js_operators_de.html'>JS Operators</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_operators_de.html'>JS Operators</a>
+                <a target='_top' href='js_arithmetic_de.html'>JS Arithmetic</a>
+                <a target='_top' href='js_assignment_de.html'>JS Assignment</a>
+                <a target='_top' href='js_comparisons_de.html'>JS Comparisons</a>
+            </div>
+            <a target='_top' href='js_conditionals_de.html'>JS If Conditions</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_conditionals_de.html'>JS Conditional</a>
+                <a target='_top' href='js_if_de.html'>JS If</a>
+                <a target='_top' href='js_if_else_de.html'>JS If Else</a>
+                <a target='_top' href='js_if_ternary_de.html'>JS Ternary</a>
+                <a target='_top' href='js_switch_de.html'>JS Switch</a>
+                <a target='_top' href='js_booleans_de.html'>JS Booleans</a>
+                <a target='_top' href='js_logical_de.html'>JS Logical</a>
+            </div>
+            <a target='_top' href='js_loops_de.html'>JS Loops</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_loops_de.html'>JS Loops</a>
+                <a target='_top' href='js_loop_for_de.html'>JS Loop for</a>
+                <a target='_top' href='js_loop_while_de.html'>JS Loop while</a>
+                <a target='_top' href='js_break_de.html'>JS Break</a>
+                <a target='_top' href='js_continue_de.html'>JS Continue</a>
+            </div>
+            <a target='_top' href='js_strings_de.html'>JS Strings</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_strings_de.html'>JS Strings</a>
+                <a target='_top' href='js_string_templates_de.html'>JS String Templates</a>
+                <a target='_top' href='js_string_methods_de.html'>JS String Methods</a>
+                <a target='_top' href='js_string_search_de.html'>JS String Search</a>
+                <a target='_top' href='js_string_reference_de.html'>JS String Reference</a>
+            </div>
+            <a target='_top' href='js_numbers_de.html'>JS Numbers</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_numbers_de.html'>JS Numbers</a>
+                <a target='_top' href='js_number_methods_de.html'>JS Number Methods</a>
+                <a target='_top' href='js_number_properties_de.html'>JS Number Properties</a>
+                <a target='_top' href='js_number_reference_de.html'>JS Number Reference</a>
+                <a target='_top' href='js_bigint_de.html'>JS BigInt</a>
+                <a target='_top' href='js_bitwise_de.html'>JS Bitwise</a>
+            </div>
+            <a target='_top' href='js_functions_de.html'>JS Functions</a>
+            <a target='_top' href='js_objects_de.html'>JS Objects</a>
+            <a target='_top' href='js_dates_de.html'>JS Dates</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_dates_de.html'>JS Dates</a>
+                <a target='_top' href='js_date_formats_de.html'>JS Date Formats</a>
+                <a target='_top' href='js_date_methods_de.html'>JS Date Get</a>
+                <a target='_top' href='js_date_methods_set_de.html'>JS Date Set</a>
+                <a target='_top' href='js_date_reference_de.html'>JS Date Reference</a>
+            </div>
+            <a target='_top' href='js_arrays_de.html'>JS Arrays</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_arrays_de.html'>JS Arrays</a>
+                <a target='_top' href='js_array_methods_de.html'>JS Array Methods</a>
+                <a target='_top' href='js_array_search_de.html'>JS Array Search</a>
+                <a target='_top' href='js_array_sort_de.html'>JS Array Sort</a>
+                <a target='_top' href='js_array_iteration_de.html'>JS Array Iterations</a>
+                <a target='_top' href='js_array_reference_de.html'>JS Array Reference</a>
+                <a target='_top' href='js_array_const_de.html'>JS Array Const</a>
+                <a target='_top' href='js_typed_arrays_de.html'>JS Typed Arrays</a>
+                <a target='_top' href='js_typed_methods_de.html'>JS Typed Methods</a>
+                <a target='_top' href='js_typed_reference_de.html'>JS Typed Reference</a>
+            </div>
+            <a target='_top' href='js_sets_de.html'>JS Sets</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_sets_de.html'>JS Sets</a>
+                <a target='_top' href='js_set_methods_de.html'>JS Set Methods</a>
+                <a target='_top' href='js_set_logic_de.html'>JS Set Logic</a>
+                <a target='_top' href='js_sets_weak_de.html'>JS Set WeakSet</a>
+                <a target='_top' href='js_set_reference_de.html'>JS Set Reference</a>
+            </div>
+            <a target='_top' href='js_maps_de.html'>JS Maps</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_maps_de.html'>JS Maps</a>
+                <a target='_top' href='js_map_methods_de.html'>JS Map Methods</a>
+                <a target='_top' href='js_maps_weak_de.html'>JS Map WeakMap</a>
+                <a target='_top' href='js_map_reference_de.html'>JS Map Reference</a>
+            </div>
+            <a target='_top' href='js_math_de.html'>JS Math</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_math_de.html'>JS Math</a>
+                <a target='_top' href='js_math_reference_de.html'>JS Math Reference</a>
+                <a target='_top' href='js_random_de.html'>JS Random</a>
+            </div>
+            <a target='_top' href='js_regexp_de.html'>JS RegExp</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_regexp_de.html'>JS RegExp</a>
+                <a target='_top' href='js_regexp_flags_de.html'>JS RegExp Flags</a>
+                <a target='_top' href='js_regexp_characters_de.html'>JS RegExp Classes</a>
+                <a target='_top' href='js_regexp_meta_characters_de.html'>JS RegExp Metachars</a>
+                <a target='_top' href='js_regexp_assertions_de.html'>JS RegExp Assertions</a>
+                <a target='_top' href='js_regexp_quantifiers_de.html'>JS RegExp Quantifiers</a>
+                <a target='_top' href='js_regexp_patterns_de.html'>JS RegExp Patterns</a>
+                <a target='_top' href='js_regexp_objects_de.html'>JS RegExp Objects</a>
+                <a target='_top' href='js_regexp_methods_de.html'>JS RegExp Methods</a>
+            </div>
+            <a target='_top' href='js_datatypes_de.html'>JS Data Types</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_datatypes_de.html'>JS Data Types</a>
+                <a target='_top' href='js_typeof_de.html'>JS typeof</a>
+                <a target='_top' href='js_tostring_de.html'>JS toString()</a>
+                <a target='_top' href='js_type_conversion_de.html'>JS Type Conversion</a>
+            </div>
+            <a target='_top' href='js_errors_de.html'>JS Errors</a>
+            <a target='_top' href='js_debugging_de.html'>JS Debugging</a>
+            <a target='_top' href='js_events_de.html'>JS Events</a>
+            <a target='_top' href='js_control_flow_de.html'>JS Programming</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_control_flow_de.html'>JS Control Flow</a>
+                <a target='_top' href='js_scope_de.html'>JS Scope</a>
+                <a target='_top' href='js_hoisting_de.html'>JS Hoisting</a>
+                <a target='_top' href='js_strict_de.html'>JS Strict Mode</a>
+                <a target='_top' href='js_codeblocks_de.html'>JS Code Blocks</a>
+                <a target='_top' href='js_conventions_de.html'>JS Style Guide</a>
+                <a target='_top' href='js_best_practices_de.html'>JS Best Practices</a>
+                <a target='_top' href='js_mistakes_de.html'>JS Mistakes</a>
+                <a target='_top' href='js_performance_de.html'>JS Performance</a>
+            </div>
+            <a target='_top' href='js_statements_reference_de.html'>JS References</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_statements_reference_de.html'>JS Keywords Reference</a>
+                <a target='_top' href='js_reserved_de.html'>JS Keywords Reserved</a>
+                <a target='_top' href='js_operators_reference_de.html'>JS Operator Reference</a>
+                <a target='_top' href='js_precedence_de.html'>JS Operator Precedence</a>
+            </div>
+            <a target='_top' href='js_utf8_de.html'>JS UTF-8 Characters</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_utf8_de.html'>JS UTF-8 Letters</a>
+                <a target='_top' href='js_utf8_symbols_de.html'>JS UTF-8 Symbols</a>
+                <a target='_top' href='js_utf8_emojis_de.html'>JS UTF-8 Emojis</a>
+            </div>
+            <br>
+            <h2>JS Advanced</h2>
+            <a target='_top' href='js_versions_de.html'>JS Versions</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_versions_de.html'>JS Versions</a>
+                <a target='_top' href='js_2025_de.html'>JS 2025</a>
+                <a target='_top' href='js_2024_de.html'>JS 2024</a>
+                <a target='_top' href='js_2023_de.html'>JS 2023</a>
+                <a target='_top' href='js_2022_de.html'>JS 2022</a>
+                <a target='_top' href='js_2021_de.html'>JS 2021</a>
+                <a target='_top' href='js_2020_de.html'>JS 2020</a>
+                <a target='_top' href='js_2019_de.html'>JS 2019</a>
+                <a target='_top' href='js_2018_de.html'>JS 2018</a>
+                <a target='_top' href='js_2017_de.html'>JS 2017</a>
+                <a target='_top' href='js_2016_de.html'>JS 2016</a>
+                <a target='_top' href='js_es6_de.html'>JS 2015 (ES6)</a>
+                <a target='_top' href='js_es5_de.html'>JS 2009 (ES5)</a>
+                <a target='_top' href='js_ie_edge_de.html'>JS IE / Edge</a>
+                <a target='_top' href='js_history_de.html'>JS History</a>
+            </div>
+            <a target='_top' href='js_function_definition_de.html'>JS Functions</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_function_definition_de.html'>Function Definitions</a>
+                <a target='_top' href='js_arrow_function_de.html'>Function Arrows</a>
+                <a target='_top' href='js_function_parameters_de.html'>Function Parameters</a>
+                <a target='_top' href='js_function_invocation_de.html'>Function Invocation</a>
+                <a target='_top' href='js_function_this_de.html'>Function this</a>
+                <a target='_top' href='js_function_call_de.html'>Function Call</a>
+                <a target='_top' href='js_function_apply_de.html'>Function Apply</a>
+                <a target='_top' href='js_function_bind_de.html'>Function Bind</a>
+                <a target='_top' href='js_function_closures_de.html'>Function Closures</a>
+            </div>
+            <a target='_top' href='js_object_definition_de.html'>JS Objects</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_object_definition_de.html'>Object Definitions</a>
+                <a target='_top' href='js_object_property_de.html'>Object Properties</a>
+                <a target='_top' href='js_object_method_de.html'>Object Methods</a>
+                <a target='_top' href='js_object_display_de.html'>Object Display</a>
+                <a target='_top' href='js_object_constructors_de.html'>Object Constructors</a>
+                <a target='_top' href='js_this_de.html'>Object this</a>
+                <a target='_top' href='js_destructuring_de.html'>Object Destructuring</a>
+                <a target='_top' href='js_object_prototypes_de.html'>Object Prototypes</a>
+                <a target='_top' href='js_object_methods_de.html'>Object Iterations</a>
+                <a target='_top' href='js_object_properties_de.html'>Object Management</a>
+                <a target='_top' href='js_object_accessors_de.html'>Object Get / Set</a>
+                <a target='_top' href='js_object_protection_de.html'>Object Protection</a>
+                <a target='_top' href='js_object_reference_de.html'>Object Reference</a>
+            </div>
+            <a target='_top' href='js_classes_de.html'>JS Classes</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_classes_de.html'>JS Classes</a>
+                <a target='_top' href='js_class_inheritance_de.html'>JS Class Inheritance</a>
+                <a target='_top' href='js_class_static_de.html'>JS Class Static</a>
+            </div>
+            <a target='_top' href='js_looping_de.html'>JS Iterations</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_looping_de.html'>JS Loops</a>
+                <a target='_top' href='js_iterables_de.html'>JS Iterables</a>
+                <a target='_top' href='js_iterators_de.html'>JS Iterators</a>
+                <a target='_top' href='js_generators_de.html'>JS Generators</a>
+            </div>
+            <a target='_top' href='js_callback_de.html'>JS Promises</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_callback_de.html'>JS Callbacks</a>
+                <a target='_top' href='js_asynchronous_de.html'>JS Asynchronous</a>
+                <a target='_top' href='js_promise_de.html'>JS Promises</a>
+                <a target='_top' href='js_async_de.html'>JS Async/Await</a>
+            </div>
+            <a target='_top' href='js_modules_de.html'>JS Modules</a>
+            <a target='_top' href='js_htmldom_de.html'>JS HTML DOM</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_htmldom_de.html'>DOM Intro</a>
+                <a target='_top' href='js_htmldom_methods_de.html'>DOM Methods</a>
+                <a target='_top' href='js_htmldom_document_de.html'>DOM Document</a>
+                <a target='_top' href='js_htmldom_elements_de.html'>DOM Elements</a>
+                <a target='_top' href='js_htmldom_html_de.html'>DOM HTML</a>
+                <a target='_top' href='js_validation_de.html'>DOM Forms</a>
+                <a target='_top' href='js_htmldom_css_de.html'>DOM CSS</a>
+                <a target='_top' href='js_htmldom_animate_de.html'>DOM Animations</a>
+                <a target='_top' href='js_htmldom_events_de.html'>DOM Events</a>
+                <a target='_top' href='js_htmldom_eventlistener_de.html'>DOM Event Listener</a>
+                <a target='_top' href='js_htmldom_navigation_de.html'>DOM Navigation</a>
+                <a target='_top' href='js_htmldom_nodes_de.html'>DOM Nodes</a>
+                <a target='_top' href='js_htmldom_collections_de.html'>DOM Collections</a>
+                <a target='_top' href='js_htmldom_nodelist_de.html'>DOM Node Lists</a>
+            </div>
+            <a target='_top' href='js_window_de.html'>JS Windows</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_window_de.html'>JS Window</a>
+                <a target='_top' href='js_window_screen_de.html'>JS Screen</a>
+                <a target='_top' href='js_window_location_de.html'>JS Location</a>
+                <a target='_top' href='js_window_history_de.html'>JS History</a>
+                <a target='_top' href='js_window_navigator_de.html'>JS Navigator</a>
+                <a target='_top' href='js_popup_de.html'>JS Popup Alert</a>
+                <a target='_top' href='js_timing_de.html'>JS Timing</a>
+                <a target='_top' href='js_cookies_de.html'>JS Cookies</a>
+            </div>
+            <a target='_top' href='js_api_intro_de.html'>JS Web API</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_api_intro_de.html'>Web API Intro</a>
+                <a target='_top' href='js_validation_api_de.html'>Web Validation API</a>
+                <a target='_top' href='js_api_history_de.html'>Web History API</a>
+                <a target='_top' href='js_api_web_storage_de.html'>Web Storage API</a>
+                <a target='_top' href='js_api_web_workers_de.html'>Web Worker API</a>
+                <a target='_top' href='js_api_fetch_de.html'>Web Fetch API</a>
+                <a target='_top' href='js_api_geolocation_de.html'>Web Geolocation API</a>
+            </div>
+            <a target='_top' href='js_ajax_intro_de.html'>JS AJAX</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_ajax_intro_de.html'>AJAX Intro</a>
+                <a target='_top' href='js_ajax_http_de.html'>AJAX XMLHttp</a>
+                <a target='_top' href='js_ajax_http_send_de.html'>AJAX Request</a>
+                <a target='_top' href='js_ajax_http_response_de.html'>AJAX Response</a>
+                <a target='_top' href='js_ajax_xmlfile_de.html'>AJAX XML File</a>
+                <a target='_top' href='js_ajax_php_de.html'>AJAX PHP</a>
+                <a target='_top' href='js_ajax_asp_de.html'>AJAX ASP</a>
+                <a target='_top' href='js_ajax_database_de.html'>AJAX Database</a>
+                <a target='_top' href='js_ajax_applications_de.html'>AJAX Applications</a>
+                <a target='_top' href='js_ajax_examples_de.html'>AJAX Examples</a>
+            </div>
+            <a target='_top' href='js_json_de.html'>JS JSON</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_json_de.html'>JSON Intro</a>
+                <a target='_top' href='js_json_syntax_de.html'>JSON Syntax</a>
+                <a target='_top' href='js_json_xml_de.html'>JSON vs XML</a>
+                <a target='_top' href='js_json_datatypes_de.html'>JSON Data Types</a>
+                <a target='_top' href='js_json_parse_de.html'>JSON Parse</a>
+                <a target='_top' href='js_json_stringify_de.html'>JSON Stringify</a>
+                <a target='_top' href='js_json_objects_de.html'>JSON Objects</a>
+                <a target='_top' href='js_json_arrays_de.html'>JSON Arrays</a>
+                <a target='_top' href='js_json_server_de.html'>JSON Server</a>
+                <a target='_top' href='js_json_php_de.html'>JSON PHP</a>
+                <a target='_top' href='js_json_html_de.html'>JSON HTML</a>
+                <a target='_top' href='js_json_jsonp_de.html'>JSON JSONP</a>
+            </div>
+            <a target='_top' href='js_jquery_selectors_de.html'>JS jQuery</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_jquery_selectors_de.html'>jQuery Selectors</a>
+                <a target='_top' href='js_jquery_elements_de.html'>jQuery HTML</a>
+                <a target='_top' href='js_jquery_css_de.html'>jQuery CSS</a>
+                <a target='_top' href='js_jquery_dom_de.html'>jQuery DOM</a>
+            </div>
+            <a target='_top' href='js_graphics_de.html'>JS Graphics</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_graphics_de.html'>JS Graphics</a>
+                <a target='_top' href='js_graphics_canvas_de.html'>JS Canvas</a>
+                <a target='_top' href='js_graphics_plotly_de.html'>JS Plotly</a>
+                <a target='_top' href='js_graphics_chartjs_de.html'>JS Chart.js</a>
+                <a target='_top' href='js_graphics_google_chart_de.html'>JS Google Chart</a>
+                <a target='_top' href='js_graphics_d3js_de.html'>JS D3.js</a>
+            </div>
+            <a target='_top' href='js_examples_de.html'>JS Examples</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_examples_de.html'>JS Examples</a>
+                <a target='_top' href='js_dom_examples_de.html'>JS HTML DOM</a>
+                <a target='_top' href='js_input_examples_de.html'>JS HTML Input</a>
+                <a target='_top' href='js_ex_dom_de.html'>JS HTML Objects</a>
+                <a target='_top' href='js_events_examples_de.html'>JS HTML Events</a>
+                <a target='_top' href='js_ex_browser_de.html'>JS Browser</a>
+                <a target='_top' href='js_editor_de.html'>JS Editor</a>
+                <a target='_top' href='js_exercises_de.html'>JS Exercises</a>
+                <a target='_top' href='js_quiz_de.html'>JS Quiz</a>
+                <a target='_top' href='js_website_de.html'>JS Website</a>
+                <a target='_top' href='js_syllabus_de.html'>JS Syllabus</a>
+                <a target='_top' href='js_study_plan_de.html'>JS Study Plan</a>
+                <a target='_top' href='js_interview_prep_de.html'>JS Interview Prep</a>
+                <a target='_top' href='js_bootcamp_de.html'>JS Bootcamp</a>
+                <a target='_top' href='js_exam_de.html'>JS Certificate</a>
+            </div>
+            <a target='_top' href='../jsref/index_de.html'>JS Objects</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT JS-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index_de.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools auf Deutsch. Unterricht für Anfänger' class='w3-left w3-padding' title='JavaScript für Anfänger. W3Schools auf Deutsch' style='width: 120px'></a>    <p class='w3-right'>
+        <a href='js_types.html' title='Wechseln Sie zu Ukrainisch'>Ua</a>
+        <a href='js_types_de.html' title='Wechseln Sie zu Englisch'>En</a>
+        <a href='js_types_es.html' title='Wechseln Sie zu Spanisch'>Es</a>
+        <a href='js_types_fr.html' title='Wechseln Sie zu Französisch'>Fr</a>
+        <a href='js_types_ru.html' title='Wechseln Sie zu Russisch'>Ru</a>
+    </p>
+    <article>
+        <h1>JavaScript Datentypen</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="js_const_de.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="js_operators_de.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <h2>JavaScript hat 8 Datentypen</h2>
+        <p>Eine JavaScript-Variable kann 8 Datentypen enthalten:</p>
+        <div class="w3-stretch">
+            <table class="ws-table-all">
+                <tr></tr>
+                <tr><th>Typ</th><th>Beschreibung</th></tr>
+                <tr><td>String</td><td>Ein Text aus Zeichen in Anführungszeichen</td></tr>
+                <tr><td>Number</td><td>Eine Zahl, die einen mathematischen Wert darstellt</td></tr>
+                <tr><td>Bigint</td><td>Eine Zahl, die eine große Ganzzahl darstellt</td></tr>
+                <tr><td>Boolean</td><td>Ein Datentyp, der „true“ oder „false“ darstellt</td></tr>
+                <tr><td>Object</td><td>Eine Sammlung von Schlüssel-Wert-Paaren von Daten</td></tr>
+                <tr><td>Undefined</td><td>Eine primitive Variable ohne zugewiesenen Wert</td></tr>
+                <tr><td>Null</td><td>Ein primitiver Wert, der die Abwesenheit eines Objekts darstellt</td></tr>
+                <tr><td>Symbol</td><td>Eine eindeutige und primitive Kennung</td></tr>
+            </table>
+        </div>
+        <div class="w3-example">
+            <h3>Beispiele</h3>
+            <div class="w3-code notranslate jsHigh">
+                // String<br>
+                let color = "Yellow";<br>
+                let lastName = &quot;Johnson&quot;;<br><br>
+                // Number<br>
+                let length = 16;<br>
+                let weight = 7.5;<br><br>
+                // BigInt<br>
+                let x = 1234567890123456789012345n;<br>
+                let y = BigInt(1234567890123456789012345)<br><br>
+                // Boolean<br>
+                let x = true;<br>
+                let y = false;<br><br>
+                // Object<br>
+                const person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;};<br><br>
+                // Array object<br>
+                const cars = ["Saab", "Volvo", "BMW"];<br><br>
+                // Date object<br>
+                const date = new Date("2022-03-25");<br><br>
+                // Undefined<br>
+                let x;<br>
+                let y;<br><br>
+                // Null<br>
+                let x = null;<br>
+                let y = null;<br><br>
+                // Symbol<br>
+                const x = Symbol();<br>
+                const y = Symbol();<br>
+            </div>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Der typeof-Operator</h2>
+        <p>Sie können den JavaScript-Operator <code class="w3-codespan">typeof</code> verwenden, um den Typ einer JavaScript-Variablen zu ermitteln.</p>
+        <p>Der Operator <code class="w3-codespan">typeof</code> gibt den Typ einer Variablen oder eines Ausdrucks zurück:</p>
+        <div class="w3-example">
+            <h3>Beispiel</h3>
+            <div class="w3-code notranslate jsHigh">
+            typeof &quot;&quot;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Rückgaben &quot;string&quot;<br>typeof &quot;John&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Rückgaben &quot;string&quot;<br>typeof &quot;John Doe&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Rückgaben &quot;string&quot;
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_typeof_string.html" target="_blank">Try it Yourself &raquo;</a>
+        </div>
+        <div class="w3-example">
+            <h3>Beispiel</h3>
+            <div class="w3-code notranslate jsHigh">
+                typeof 0&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Rückgaben &quot;number&quot;<br>typeof 314&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Rückgaben &quot;number&quot;<br>typeof 3.14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Rückgaben &quot;number&quot;<br>typeof (3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Rückgaben &quot;number&quot;<br>typeof (3 + 4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Rückgaben &quot;number&quot;
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_typeof_number.html" target="_blank">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <h2>JavaScript Strings</h2>
+        <p>Eine Zeichenfolge (eine Textzeichenfolge) ist eine Reihe von Zeichen wie &quot;John Doe&quot;.</p>
+        <p>Zeichenfolgen werden in Anführungszeichen geschrieben. Sie können einfache oder doppelte Anführungszeichen verwenden:</p>
+        <div class="w3-example">
+            <h3>Beispiel</h3>
+            <div class="w3-code notranslate jsHigh">
+                // Verwenden von doppelten Anführungszeichen:<br>
+                let carName1 = &quot;Volvo XC60&quot;;<br><br>
+                // Verwenden Sie einfache Anführungszeichen:<br>let carName2 = 'Volvo XC60';
+            </div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_string_quotes.html">Try it Yourself &raquo;</a>
+        </div>
+        <p>Sie können Anführungszeichen innerhalb einer Zeichenfolge verwenden, solange sie nicht mit den Anführungszeichen übereinstimmen, die die Zeichenfolge umgeben:</p>
+        <div class="w3-example">
+            <h3>Beispiel</h3>
+            <div class="w3-code notranslate jsHigh">
+                // Einfaches Anführungszeichen in doppelten Anführungszeichen:<br>let answer1 = &quot;It's alright&quot;;<br><br>// Einfache Anführungszeichen in doppelten Anführungszeichen:<br>let answer2 = "He is called 'Johnny'";<br><br>// Doppelte Anführungszeichen in einfachen Anführungszeichen:<br>let answer3 = 'He is called "Johnny"';
+            </div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_string.html">Try it Yourself &raquo;</a>
+        </div>
+        <div class="ws-note">
+            <h2>Notiz</h2>
+            <p>Später in diesem Tutorial erfahren Sie noch viel mehr über <a href="js_strings_de.html">JavaScript-Strings</a>.</p>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>JavaScript Numbers</h2>
+        <p>Alle JavaScript-Zahlen werden als Dezimalzahlen (Gleitkommazahlen) gespeichert.</p>
+        <p>Zahlen können mit oder ohne Dezimalstellen geschrieben werden:</p>
+        <div class="w3-example">
+            <h3>Beispiel</h3>
+            <div class="w3-code notranslate jsHigh">
+                // Mit Dezimalstellen:<br>
+                let x1 = 34.00;<br><br>
+                // Ohne Dezimalstellen:<br>
+                let x2 = 34;
+            </div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_numbers.html">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <h2>Exponentialnotation</h2>
+        <p>Besonders große oder besonders kleine Zahlen können in wissenschaftlicher (Exponential-)Notation geschrieben werden:</p>
+        <div class="w3-example">
+            <h3>Beispiel</h3>
+            <div class="w3-code notranslate jsHigh">
+                let y = 123e5;&nbsp;&nbsp;&nbsp;&nbsp;// 12300000<br>let z = 123e-5;&nbsp;&nbsp;&nbsp;// 0.00123
+            </div>
+            <a target="_blank" class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_numbers_large.html">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <h2>JavaScript Booleans</h2>
+        <p>JavaScript-Boolesche Werte können nur einen von zwei Werten annehmen: <b>true</b> oder <b>false</b>.</p>
+        <p>Der Boolesche Wert eines Ausdrucks ist die Grundlage für JavaScript-Vergleiche:</p>
+        <div class="w3-stretch">
+            <table class="ws-table-all notranslate">
+                <tr></tr>
+                <tr>
+                    <th>Beschreibung</th>
+                    <th>Ausdruck</th>
+                    <th>Rückgaben</th>
+                </tr>
+                <tr>
+                    <td>Ungleich</td>
+                    <td>(x == 8)</td>
+                    <td><b>false</b></td>
+                </tr>
+                <tr>
+                    <td>Ungleich</td>
+                    <td>(x != 8)</td>
+                    <td><b>true</b></td>
+                </tr>
+                <tr>
+                    <td>Größer als</td>
+                    <td>(x &gt; 8)</td>
+                    <td><b>false</b></td>
+                </tr>
+                <tr>
+                    <td>Weniger als</td>
+                    <td>(x &lt; 8)</td>
+                    <td><b>true</b></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Datentyp undefined</h2>
+        <p>In Computerprogrammen werden Variablen oft ohne Wert deklariert. Der Wert kann etwas sein, das berechnet werden muss, oder etwas, das später bereitgestellt wird, beispielsweise eine Benutzereingabe.</p>
+        <p>Eine Variable ohne Wert hat den Datentyp <code class="w3-codespan">undefined</code>.</p>
+        <p>Eine Variable ohne Wert hat auch den Wert <code class="w3-codespan">undefined</code>.</p>
+        <div class="w3-example">
+            <h3>Beispiel</h3>
+            <div class="w3-code notranslate jsHigh">
+                let carName;
+            </div>
+            <a target="_blank" href="../jstryit/tryjs_types_undefined.html" class="w3-btn w3-margin-bottom">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <h2>Leere Werte</h2>
+        <p>Ein leerer Wert hat nichts zu tun mit <code class="w3-codespan">undefined</code>.</p>
+        <p>Eine leere Zeichenfolge hat sowohl einen gültigen Wert als auch einen Typ.</p>
+        <div class="w3-example">
+            <h3>Beispiel</h3>
+            <div class="w3-code notranslate jsHigh">
+                let car = &quot;&quot;;&nbsp;&nbsp;&nbsp; // Der Wert ist &quot;&quot;, der typeof ist &quot;string&quot;
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_datatypes_empty.html" target="_blank">Try it Yourself &raquo;</a>
+        </div>
+        <div class="ws-note">
+            <h2>Notiz</h2>
+            <p>Später in diesem Tutorial erfahren Sie noch viel mehr über <a href="js_datatypes_de.html">Datentypen</a>.</p>
+        </div>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="js_const_de.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="js_operators_de.html">Next &#10095;</a>
+        </div>
+    </article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    </div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-border' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker_de.html'>FARBWÄHLER</a></h4>
+        <a href='../colors/colors_picker_de.html'><img src='../images/colorpicker.gif' alt='colorpicker'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Alle Online-Lehrbücher auf der Website">TUTORIALS</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../html/index_de.html' class='btn-rightbar'>HTML</a>
+            <a href='../css/index_de.html' class='btn-rightbar'>CSS</a>
+            <a href='../js/index_de.html' class='btn-rightbar'>JavaScript</a>
+            <a href='../css/css_rwd_intro_de.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver_de.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index_de.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index_de.html' class='btn-rightbar'>Farben</a>
+            <a href='../icons/index_de.html' class='btn-rightbar'>Symbole</a>
+            <a href='../graphics/index_de.html' class='btn-rightbar'>Grafik</a>
+            <a href='../graphics/svg_intro_de.html' class='btn-rightbar'>SVG Grafik</a>
+            <a href='../graphics/canvas_intro_de.html' class='btn-rightbar'>Canvas Grafik</a>
+            <a href='../howto/index_de.html' class='btn-rightbar'>Wie man</a>
+            <a href='../sass/index_de.html' class='btn-rightbar'>Sass</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Alle Online-Anleitungen auf der Website">VERWEISE</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../tags/index_de.html' class='btn-rightbar'>HTML-Tags</a>
+            <a href='../tags/ref_html_browsersupport_de.html' class='btn-rightbar'>Browser-Unterstützung</a>
+            <a href='../tags/ref_attributes_de.html' class='btn-rightbar'>HTML Attribute</a>
+            <a href='../tags/ref_standardattributes_de.html' class='btn-rightbar'>Globale Attribute</a>
+            <a href='../tags/ref_eventattributes_de.html' class='btn-rightbar'>Ereignisattribute</a>
+            <a href='../tags/ref_colornames_de.html' class='btn-rightbar'>HTML Farbnamen</a>
+            <a href='../tags/ref_canvas_de.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom_de.html' class='btn-rightbar'>Audio/Video DOM</a>
+            <a href='../tags/ref_charactersets_de.html' class='btn-rightbar'>Zeichensätze</a>
+            <a href='../tags/ref_html_dtd_de.html' class='btn-rightbar'>DOCTYPE</a>
+            <a href='../tags/ref_urlencode_de.html' class='btn-rightbar'>URL-Kodierung</a>
+            <a href='../tags/ref_language_codes_de.html' class='btn-rightbar'>Sprachcode</a>
+            <a href='../tags/ref_country_codes_de.html' class='btn-rightbar'>ISO Ländercodes</a>
+            <a href='../tags/ref_httpmessages_de.html' class='btn-rightbar'>HTTP Statusmeldungen</a>
+            <a href='../tags/ref_httpmethods_de.html' class='btn-rightbar'>HTTP Anforderungsmethoden</a>
+            <a href='../tags/ref_pxtoemconversion_de.html' class='btn-rightbar'>Pixel-zu-Em-Konverter</a>
+            <a href='../tags/ref_keyboardshortcuts_de.html' class='btn-rightbar'>Tastatürkürzel</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Alle Online-Lehrbücher auf der Website">HTML-Zeichensätze</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../charsets/index_de.html' class='btn-rightbar'>Zeichensätze</a>
+            <a href='../charsets/ref_html_ascii_de.html' class='btn-rightbar'>ASCII Referenz</a>
+            <a href='../charsets/ref_html_ansi_de.html' class='btn-rightbar'>Win-1252 (ANSI)</a>
+            <a href='../charsets/ref_html_8859_de.html' class='btn-rightbar'>ISO-8859-1</a>
+            <a href='../charsets/ref_html_symbols_de.html' class='btn-rightbar'>HTML-Symbole</a>
+            <a href='../charsets/ref_html_utf8_de.html' class='btn-rightbar'>Unicode (UTF-8)</a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Platz für Ihre Werbung!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>KONTAKTE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none'>SEITE DRUCKEN</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index_de.html' target='_top' style='text-decoration:none'>BLOG</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index_de.html' target='_top' style='text-decoration:none'>ÜBER DIE WEBSITE</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Kontakte</h2>
+      <p>Wenn Sie einen Fehler melden, ein Angebot für die Website abgeben oder eine Anzeige auf der Website hinzufügen möchten, zögern Sie nicht, eine E-Mail an den Administrator zu senden:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top-Tutorial</h4>
+        <a href='../html/index_de.html'>HTML Tutorial</a><br>
+        <a href='../css/index_de.html'>CSS Tutorial</a><br>
+        <a href='../js/index_de.html'>JavaScript Tutorial</a><br>
+        <a href='../sql/index_de.html'>SQL Tutorial</a><br>
+        <a href='../python/index_de.html'>Python Tutorial</a><br>
+        <a href='../php/index_de.html'>PHP Tutorial</a><br>
+        <a href='../w3css/index_de.html'>W3.CSS Tutorial</a><br>
+        <a href='../appml/index_de.html'>AppML Tutorial</a><br>
+        <a href='../jquery/index_de.html'>jQuery Tutorial</a><br>
+        <a href='../angular/index_de.html'>Angular Tutorial</a><br>
+        <a href='../sass/index_de.html'>Sass Tutorial</a><br>
+        <a href='../java/index_de.html'>Java Tutorial</a><br>
+        <a href='../kotlin/index_de.html'>Kotlin Tutorial</a><br>
+        <a href='../c/index_de.html'>C Tutorial</a><br>
+        <a href='../cpp/index_de.html'>C++ Tutorial</a><br>
+        <a href='../cs/index_de.html'>C# Tutorial</a><br>
+        <a href='../chatgpt-3-5/index_de.html'>ChatGPT-3.5 Tutorial</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top-Referenzen</h4>
+        <a href='../tags/index_de.html'>HTML Referenz</a><br>
+        <a href='../cssref/index_de.html'>CSS Referenz</a><br>
+        <a href='../jsref/index_de.html'>JavaScript Referenz</a><br>
+        <a href='../sql/sql_ref_keywords_de.html'>SQL Referenz</a><br>
+        <a href='../python/python_reference_de.html'>Python Referenz</a><br>
+        <a href='../php/php_ref_overview_de.html'>PHP Referenz</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_de.html'>Bootstrap 3 Referenz</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_de.html'>Bootstrap 4 Referenz</a><br>
+        <a href='../w3css/w3css_references_de.html'>W3.CSS Referenz</a><br>
+        <a href='../appml/appml_reference_de.html'>Appml Referenz</a><br>
+        <a href='../jquery/jquery_ref_overview_de.html'>jQuery Referenz</a><br>
+        <a href='../angular/angular_ref_directives_de.html'>Angular Referenz</a><br>
+        <a href='../sass/sass_functions_string_de.html'>Sass Referenz</a><br>
+        <a href='../java/java_ref_keywords_de.html'>Java Referenz</a><br>
+        <a href='../colors/colors_names_de.html'>Colors Referenz</a><br>
+        <a href='../icons/icons_reference_de.html'>Symbole Referenz</a><br>
+        <a href='../graphics/svg_reference_de.html'>SVG Referenz</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Top-Beispiele</h4>
+        <a href='../html/html_examples_de.html'>HTML Beispiele</a><br>
+        <a href='../css/css_examples_de.html'>CSS Beispiele</a><br>
+        <a href='../js/js_examples_de.html'>JavaScript Beispiele</a><br>
+        <a href='../sql/sql_examples_de.html'>SQL Beispiele</a><br>
+        <a href='../python/python_examples_de.html'>Python Beispiele</a><br>
+        <a href='../php/php_examples_de.html'>PHP Beispiele</a><br>
+        <a href='../bootstrap/bootstrap_examples_de.html'>Bootstrap Beispiele</a><br>
+        <a href='../w3css/w3css_examples_de.html'>W3.CSS Beispiele</a><br>
+        <a href='../jquery/jquery_examples_de.html'>jQuery Beispiele</a><br>
+        <a href='../angular/angular_examples_de.html'>Angular Beispiele</a><br>
+        <a href='../java/java_examples_de.html'>Java Beispiele</a><br>
+        <a href='../kotlin/kotlin_examples_de.html'>Kotlin Beispiele</a><br>
+        <a href='../c/c_examples_de.html'>C Beispiele</a><br>
+        <a href='../cpp/cpp_examples_de.html'>C++ Beispiele</a><br>
+        <a href='../cs/cs_examples_de.html'>C# Beispiele</a><br>
+        <a href='../xml/xml_examples_de.html'>XML Beispiele</a><br>
+        <a href='../howto/index_de.html'>How To Beispiele</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_de.html'>Web-Zertifikate</a></h4>
+        <a href='../cert/cert_html_de.html'>HTML Zertifikat</a><br>
+        <a href='../cert/cert_css_de.html'>CSS Zertifikat</a><br>
+        <a href='../cert/cert_javascript_de.html'>JavaScript Zertifikat</a><br>
+        <a href='../cert/cert_frontend_de.html'>Front End Zertifikat</a><br>
+        <a href='../cert/cert_python_de.html'>Python Zertifikat</a><br>
+        <a href='../cert/cert_datascience_de.html'>Data Science Zertifikat</a><br>
+        <a href='../cert/cert_jquery_de.html'>jQuery Zertifikat</a><br>
+        <a href='../cert/cert_sql_de.html'>SQL Zertifikat</a><br>
+        <a href='../cert/cert_php_de.html'>PHP Zertifikat</a><br>
+        <a href='../cert/cert_java_de.html'>Java Zertifikat</a><br>
+        <a href='../cert/cert_c_de.html'>C Zertifikat</a><br>
+        <a href='../cert/cert_cpp_de.html'>C++ Zertifikat</a><br>
+        <a href='../cert/cert_cs_de.html'>C# Zertifikat</a><br>
+        <a href='../cert/cert_bootstrap_de.html'>Bootstrap Zertifikat</a><br>
+        <a href='../cert/cert_xml_de.html'>XML Zertifikat</a><br>
+        <a href='../cert/career_tips_de.html'>Karriereplanung</a><br>
+        <a href='../cert/career_cv_de.html'>Eine Zusammenfassung schreiben</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Diese Seite ist für Lernen und Training optimiert. Beispiele könnten vereinfacht werden, um das Lesen und Lernen zu verbessern. Tutorials, Referenzen und Beispiele werden ständig überprüft, um Fehler zu vermeiden. Wir können jedoch nicht die vollständige Richtigkeit aller Inhalte garantieren. Durch die Nutzung von W3Schools erklären Sie sich damit einverstanden, unsere <a href='../about/about_copyright_de.html'>Nutzungsbedingungen</a>, gelesen und akzeptiert zu haben <a href='../about/about_privacy_de.html'>Cookie- und Datenschutzrichtlinie</a>.<br>
+      Es sind auch Versionen der Website in anderen Sprachen verfügbar:
+      <a href='../index.html' title='W3Schools auf Ukrainisch'><strong>Ukrainisch</strong></a>,
+      <a href='../index_en.html' title='W3Schools auf Englisch'><strong>Englisch</strong></a>,
+      <a href='../index_es.html' title='W3Schools auf Spanisch'><strong>Spanisch</strong></a>,
+      <a href='../index_fr.html' title='W3Schools auf Französisch'><strong>Französisch</strong></a>.<br>
+    <a href='../about/about_copyright_de.html'>Urheberrechte © 1999-2026</a> liegt bei Refsnes Data. Alle Rechte vorbehalten. W3Schools wird von <a href='../w3css/index_de.html'>W3.CSS betrieben</a>.<br>
+      Sie können andere seriöse Lernressourcen für Webentwicklung und Programmierung nutzen:<br>
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+      <a href='https://developer.mozilla.org/en-US/' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+      <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+      <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+      <br><br>
+      <a href='../index_de.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
