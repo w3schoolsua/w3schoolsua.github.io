@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='apple-touch-icon' sizes='180x180' href='../apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='../favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='../favicon-16x16.png'>
+<link rel='manifest' href='../manifest.json'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:title' content='W3SchoolsEN TheBest'>
+<meta property='og:description' content='Tutoriels de création Web bien organisés et faciles à comprendre avec de nombreux exemples d&#8217;utilisation de HTML, CSS, JavaScript, SQL, PHP, Python, Java, C++, C#, Go et plus encore'>
+<meta property='og:locale' content='fr'>
+<meta property='og:type' content='website'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:url' content='https://w3schoolsua.github.io/index_fr.html'>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "W3SchoolsFR Le meilleur",
+        "url": "https://w3schoolsua.github.io/index_fr.html",
+        "description": "W3Schools en français. Bases de la programmation et du développement Web. Cours pour débutants",
+        "image": "https://w3schoolsua.github.io/images/logo_w3s.gif",
+        "keywords": ["Leçons", "W3Schools", "pour les débutants", "HTML", "CSS", "JavaScript", "PHP", "SQL", "Python", "Java"],
+        "author": {
+            "@type": "Person",
+            "name": "W3Schools Le meilleur",
+            "url": "https://w3schoolsua.github.io/blog/index_fr.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "W3SchoolsFR Le meilleur",
+            "url": "https://w3schoolsua.github.io/"
+        },
+        "inLanguage": "fr-FR",
+        "sameAs": [
+            "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
+        ]
+    }
+</script>    <title>Opérateurs de comparaison JavaScript. Exemples. Vidéo. Cours pour débutants. W3Schools en français</title>
+    <meta name='description' content='Opérateurs de comparaison JavaScript. Les opérateurs de comparaison permettent de comparer deux valeurs. Comparaison de chaînes. Comparaison de différents types. Exemples. Exercices. Leçons vidéo. Cours pour débutants. W3Schools en français'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_fr.html'>W3schoolsFR<span class='dotcom w3-hide-small'>. LeMeilleur</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">MEILLEUR SITE POUR LES DÉVELOPPEURS WEB</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src='https://cse.google.com/cse.js?cx=751c3d18bb8a64f00'></script><div class='gcse-search'></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Menu' aria-label='Open menu'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_fr.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_fr.html' title='HTML Tutoriel'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_fr.html' title='CSS Tutoriel'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_fr.html' title='JavaScript Tutoriel'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_fr.html' title='SQL Tutoriel'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../php/index_fr.html' title='PHP Tutoriel'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../python/index_fr.html' title='Python Tutoriel'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../java/index_fr.html' title='Java Tutoriel'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index_fr.html' title='Kotlin Tutoriel'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index_fr.html' title='Go Tutoriel'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index_fr.html' title='C Tutoriel'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index_fr.html' title='C++ Tutoriel'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index_fr.html' title='C# Tutoriel'>C#</a>
+            <a class='w3-bar-item w3-button' href='../ai/index_fr.html' title='AI Tutoriel'>AI</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_fr.html' title='W3.CSS Tutoriel'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../typescript/index_fr.html' title='TypeScript Tutoriel'>TypeScript</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_fr.html' title='Comment faire'>Comment faire</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Plus de tutoriels' aria-label='Voir plus de tutoriels'>Plus <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Recherche' aria-label='Site search'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Thème sombre' aria-label='Activer le thème sombre'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Références' aria-label='Aller aux références'>RÉFÉRENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercices' aria-label='Aller aux exercices'>EXERCICES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML & CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_fr.html'>Apprendre HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_fr.html'>Apprendre CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_fr.html'>Apprendre RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_fr.html'>Apprendre Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_fr.html'>Apprendre W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_fr.html'>Apprendre les couleurs</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_fr.html'>Apprendre Icônes</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_fr.html'>Apprendre Graphique</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_fr.html'>Apprendre SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_fr.html'>Apprendre Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_fr.html'>Apprendre Comment faire</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_fr.html'>Apprendre Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Analyse des données</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index_fr.html'>Apprendre IA</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index_fr.html'>Apprendre IA générative</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_fr.html'>Apprendre ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index_fr.html'>Apprendre ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index_fr.html'>Apprendre Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_fr.html'>Apprendre Apprentissage automatique</a>
+                        <a class='w3-bar-item w3-button' href='../dsa/index_fr.html'>Apprendre DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_fr.html'>Apprendre Science des données</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_fr.html'>Apprendre NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_fr.html'>Apprendre Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_fr.html'>Apprendre SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_fr.html'>Apprendre Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_fr.html'>Apprendre Statistiques</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_fr.html'>Apprendre Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_fr.html'>Apprendre Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_fr.html'>Apprendre XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_fr.html'>Apprendre XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_fr.html'>Apprendre XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_fr.html'>Apprendre XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_fr.html'>Apprendre XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_fr.html'>Apprendre XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_fr.html'>Apprendre XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_fr.html'>Apprendre XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_fr.html'>Apprendre JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_fr.html'>Apprendre React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_fr.html'>Apprendre jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index_fr.html'>Apprendre Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_fr.html'>Apprendre AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_fr.html'>Apprendre JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_fr.html'>Apprendre AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_fr.html'>Apprendre AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_fr.html'>Apprendre W3.JS</a>
+                    <h3>Programmation</h3>
+                    <a class='w3-bar-item w3-button' href='../programming/index_fr.html'>Programmation Intro</a>
+                    <a class='w3-bar-item w3-button' href='../python/index_fr.html'>Apprendre Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_fr.html'>Apprendre Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_fr.html'>Apprendre C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_fr.html'>Apprendre C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_fr.html'>Apprendre C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_fr.html'>Apprendre R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_fr.html'>Apprendre Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../rust/index_fr.html'>Apprendre Rust</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_fr.html'>Apprendre Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_fr.html'>Apprendre Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_fr.html'>Apprendre TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Côté serveur</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_fr.html'>Apprendre SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_fr.html'>Apprendre MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index_fr.html'>Apprendre PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_fr.html'>Apprendre PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_fr.html'>Apprendre ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_fr.html'>Apprendre Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_fr.html'>Apprendre Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_fr.html'>Apprendre Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_fr.html'>Apprendre GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../bash/index_fr.html'>Apprendre Bash</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_fr.html'>Apprendre MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_fr.html'>Apprendre AWS Cloud</a>
+                    <h3>Création de sites Web</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_fr.html'>Par où commencer</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_fr.html'>Modèles Web</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_fr.html'>Statistiques Web</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_fr.html'>Éditeur de code</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index_fr.html'>Éditeurs de code/IDE</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_fr.html'>Développement Web</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_fr.html'>Cybersécurité</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_fr.html'>Accessibilité</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Test de vitesse de frappe</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Jeu de codes</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Analyse des données</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_fr.html'>Apprendre IA</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index_fr.html'>Apprendre IA générative</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_fr.html'>Apprendre ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index_fr.html'>Apprendre ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index_fr.html'>Apprendre Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_fr.html'>Apprendre Apprentissage automatique</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index_fr.html'>Apprendre DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_fr.html'>Apprendre Data Science</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_fr.html'>Apprendre NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_fr.html'>Apprendre Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_fr.html'>Apprendre SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_fr.html'>Apprendre Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_fr.html'>Apprendre Statistiques</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_fr.html'>Apprendre Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_fr.html'>Apprendre Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_fr.html'>Apprendre XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_fr.html'>Apprendre XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_fr.html'>Apprendre XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_fr.html'>Apprendre XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_fr.html'>Apprendre XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_fr.html'>Apprendre XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_fr.html'>Apprendre XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_fr.html'>Apprendre XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_fr.html'>HTML Référence de balise</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_fr.html'>HTML Prise en charge du navigateur</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_fr.html'>HTML Référence d'événement</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_fr.html'>HTML Référence de couleur</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_fr.html'>HTML Référence d'attribut</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_fr.html'>HTML Référence du canevas</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_fr.html'>HTML Référence SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_fr.html'>Référence Google Maps</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_fr.html'>CSS Référence</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_fr.html'>CSS Prise en charge du navigateur</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_fr.html'>CSS Selector Référence</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_fr.html'>Bootstrap 3 Référence</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_fr.html'>Bootstrap 4 Référence</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_fr.html'>W3.CSS Référence</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_fr.html'>Icônes Référence</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_fr.html'>Sass Référence</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_fr.html'>JavaScript Référence</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_fr.html'>HTML DOM Référence</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_fr.html'>jQuery Référence</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_fr.html'>AngularJS Référence</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_fr.html'>AppML Référence</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_fr.html'>W3.JS Référence</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_fr.html'>JS Scripts prêts</a>
+                    <h3>Programmation</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_fr.html'>Python Référence</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_fr.html'>Java Référence</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Côté serveur</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_fr.html'>SQL Référence</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_fr.html'>MySQL Référence</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_fr.html'>PHP Référence</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_fr.html'>ASP Référence</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_fr.html'>XML DOM Référence</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_fr.html'>XML Http Référence</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_fr.html'>XSLT Référence</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_fr.html'>XML Schema Référence</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Jeux de caractères</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_fr.html'>HTML Jeux de caractères</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_fr.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_fr.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_fr.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_fr.html'>HTML Symboles</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_fr.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Exercices</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_fr.html'>HTML Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_fr.html'>CSS Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_fr.html'>JavaScript Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_fr.html'>SQL Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_fr.html'>MySQL Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_fr.html'>PHP Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_fr.html'>Python Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_fr.html'>NumPy Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_fr.html'>Pandas Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_fr.html'>SciPy Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_fr.html'>jQuery Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_fr.html'>Java Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_fr.html'>Bootstrap Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_fr.html'>Bootstrap 4 Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_fr.html'>C++ Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_fr.html'>C# Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_fr.html'>R Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_fr.html'>Kotlin Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_fr.html'>Go Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_fr.html'>Git Exercices</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Quiz</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_fr.html' target='_top'>HTML Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_fr.html' target='_top'>CSS Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_fr.html' target='_top'>JavaScript Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_fr.html' target='_top'>SQL Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_fr.html' target='_top'>MySQL Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_fr.html' target='_top'>PHP Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_fr.html' target='_top'>Python Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_fr.html' target='_top'>NumPy Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_fr.html' target='_top'>Pandas Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_fr.html' target='_top'>SciPy Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_fr.html' target='_top'>jQuery Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_fr.html' target='_top'>Java Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_fr.html' target='_top'>Bootstrap Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_fr.html' target='_top'>Bootstrap 4 Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_fr.html' target='_top'>C++ Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_fr.html' target='_top'>C# Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_fr.html' target='_top'>R Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_fr.html' target='_top'>XML Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_fr.html' target='_top'>Questionnaire sur la cybersécurité</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_fr.html' target='_top'>Questionnaire d&#8217;accessibilité</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Certificats</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_fr.html' target='_top'>HTML Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_fr.html' target='_top'>CSS Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_fr.html' target='_top'>JavaScript Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_fr.html' target='_top'>SQL Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_fr.html' target='_top'>PHP Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_fr.html' target='_top'>Python Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_fr.html' target='_top'>jQuery Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_fr.html' target='_top'>Bootstrap Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_fr.html' target='_top'>XML Certificat</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class='left'>Basic JavaScript</h2>
+            <a target='_top' href='index_fr.html'>JS Tutorial</a>
+            <div class='tut_overview'>
+                <a target='_top' href='index_fr.html'>JS Tutorial</a>
+                <a target='_top' href='js_intro_fr.html'>JS Introduction</a>
+                <a target='_top' href='js_whereto_fr.html'>JS Where To</a>
+                <a target='_top' href='js_output_fr.html'>JS Output</a>
+            </div>
+            <a target='_top' href='js_syntax_fr.html'>JS Syntax</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_syntax_fr.html'>JS Syntax</a>
+                <a target='_top' href='js_statements_fr.html'>JS Statements</a>
+                <a target='_top' href='js_comments_fr.html'>JS Comments</a>
+            </div>
+            <a target='_top' href='js_variables_fr.html'>JS Variables</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_variables_fr.html'>JS Variables</a>
+                <a target='_top' href='js_let_fr.html'>JS Let</a>
+                <a target='_top' href='js_const_fr.html'>JS Const</a>
+                <a target='_top' href='js_types_fr.html'>JS Types</a>
+            </div>
+            <a target='_top' href='js_operators_fr.html'>JS Operators</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_operators_fr.html'>JS Operators</a>
+                <a target='_top' href='js_arithmetic_fr.html'>JS Arithmetic</a>
+                <a target='_top' href='js_assignment_fr.html'>JS Assignment</a>
+                <a target='_top' href='js_comparisons_fr.html'>JS Comparisons</a>
+            </div>
+            <a target='_top' href='js_conditionals_fr.html'>JS If Conditions</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_conditionals_fr.html'>JS Conditional</a>
+                <a target='_top' href='js_if_fr.html'>JS If</a>
+                <a target='_top' href='js_if_else_fr.html'>JS If Else</a>
+                <a target='_top' href='js_if_ternary_fr.html'>JS Ternary</a>
+                <a target='_top' href='js_switch_fr.html'>JS Switch</a>
+                <a target='_top' href='js_booleans_fr.html'>JS Booleans</a>
+                <a target='_top' href='js_logical_fr.html'>JS Logical</a>
+            </div>
+            <a target='_top' href='js_loops_fr.html'>JS Loops</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_loops_fr.html'>JS Loops</a>
+                <a target='_top' href='js_loop_for_fr.html'>JS Loop for</a>
+                <a target='_top' href='js_loop_while_fr.html'>JS Loop while</a>
+                <a target='_top' href='js_break_fr.html'>JS Break</a>
+                <a target='_top' href='js_continue_fr.html'>JS Continue</a>
+            </div>
+            <a target='_top' href='js_strings_fr.html'>JS Strings</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_strings_fr.html'>JS Strings</a>
+                <a target='_top' href='js_string_templates_fr.html'>JS String Templates</a>
+                <a target='_top' href='js_string_methods_fr.html'>JS String Methods</a>
+                <a target='_top' href='js_string_search_fr.html'>JS String Search</a>
+                <a target='_top' href='js_string_reference_fr.html'>JS String Reference</a>
+            </div>
+            <a target='_top' href='js_numbers_fr.html'>JS Numbers</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_numbers_fr.html'>JS Numbers</a>
+                <a target='_top' href='js_number_methods_fr.html'>JS Number Methods</a>
+                <a target='_top' href='js_number_properties_fr.html'>JS Number Properties</a>
+                <a target='_top' href='js_number_reference_fr.html'>JS Number Reference</a>
+                <a target='_top' href='js_bigint_fr.html'>JS BigInt</a>
+                <a target='_top' href='js_bitwise_fr.html'>JS Bitwise</a>
+            </div>
+            <a target='_top' href='js_functions_fr.html'>JS Functions</a>
+            <a target='_top' href='js_objects_fr.html'>JS Objects</a>
+            <a target='_top' href='js_dates_fr.html'>JS Dates</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_dates_fr.html'>JS Dates</a>
+                <a target='_top' href='js_date_formats_fr.html'>JS Date Formats</a>
+                <a target='_top' href='js_date_methods_fr.html'>JS Date Get</a>
+                <a target='_top' href='js_date_methods_set_fr.html'>JS Date Set</a>
+                <a target='_top' href='js_date_reference_fr.html'>JS Date Reference</a>
+            </div>
+            <a target='_top' href='js_arrays_fr.html'>JS Arrays</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_arrays_fr.html'>JS Arrays</a>
+                <a target='_top' href='js_array_methods_fr.html'>JS Array Methods</a>
+                <a target='_top' href='js_array_search_fr.html'>JS Array Search</a>
+                <a target='_top' href='js_array_sort_fr.html'>JS Array Sort</a>
+                <a target='_top' href='js_array_iteration_fr.html'>JS Array Iterations</a>
+                <a target='_top' href='js_array_reference_fr.html'>JS Array Reference</a>
+                <a target='_top' href='js_array_const_fr.html'>JS Array Const</a>
+                <a target='_top' href='js_typed_arrays_fr.html'>JS Typed Arrays</a>
+                <a target='_top' href='js_typed_methods_fr.html'>JS Typed Methods</a>
+                <a target='_top' href='js_typed_reference_fr.html'>JS Typed Reference</a>
+            </div>
+            <a target='_top' href='js_sets_fr.html'>JS Sets</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_sets_fr.html'>JS Sets</a>
+                <a target='_top' href='js_set_methods_fr.html'>JS Set Methods</a>
+                <a target='_top' href='js_set_logic_fr.html'>JS Set Logic</a>
+                <a target='_top' href='js_sets_weak_fr.html'>JS Set WeakSet</a>
+                <a target='_top' href='js_set_reference_fr.html'>JS Set Reference</a>
+            </div>
+            <a target='_top' href='js_maps_fr.html'>JS Maps</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_maps_fr.html'>JS Maps</a>
+                <a target='_top' href='js_map_methods_fr.html'>JS Map Methods</a>
+                <a target='_top' href='js_maps_weak_fr.html'>JS Map WeakMap</a>
+                <a target='_top' href='js_map_reference_fr.html'>JS Map Reference</a>
+            </div>
+            <a target='_top' href='js_math_fr.html'>JS Math</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_math_fr.html'>JS Math</a>
+                <a target='_top' href='js_math_reference_fr.html'>JS Math Reference</a>
+                <a target='_top' href='js_random_fr.html'>JS Random</a>
+            </div>
+            <a target='_top' href='js_regexp_fr.html'>JS RegExp</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_regexp_fr.html'>JS RegExp</a>
+                <a target='_top' href='js_regexp_flags_fr.html'>JS RegExp Flags</a>
+                <a target='_top' href='js_regexp_characters_fr.html'>JS RegExp Classes</a>
+                <a target='_top' href='js_regexp_meta_characters_fr.html'>JS RegExp Metachars</a>
+                <a target='_top' href='js_regexp_assertions_fr.html'>JS RegExp Assertions</a>
+                <a target='_top' href='js_regexp_quantifiers_fr.html'>JS RegExp Quantifiers</a>
+                <a target='_top' href='js_regexp_patterns_fr.html'>JS RegExp Patterns</a>
+                <a target='_top' href='js_regexp_objects_fr.html'>JS RegExp Objects</a>
+                <a target='_top' href='js_regexp_methods_fr.html'>JS RegExp Methods</a>
+            </div>
+            <a target='_top' href='js_datatypes_fr.html'>JS Data Types</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_datatypes_fr.html'>JS Data Types</a>
+                <a target='_top' href='js_typeof_fr.html'>JS typeof</a>
+                <a target='_top' href='js_tostring_fr.html'>JS toString()</a>
+                <a target='_top' href='js_type_conversion_fr.html'>JS Type Conversion</a>
+            </div>
+            <a target='_top' href='js_errors_fr.html'>JS Errors</a>
+            <a target='_top' href='js_debugging_fr.html'>JS Debugging</a>
+            <a target='_top' href='js_events_fr.html'>JS Events</a>
+            <a target='_top' href='js_control_flow_fr.html'>JS Programming</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_control_flow_fr.html'>JS Control Flow</a>
+                <a target='_top' href='js_scope_fr.html'>JS Scope</a>
+                <a target='_top' href='js_hoisting_fr.html'>JS Hoisting</a>
+                <a target='_top' href='js_strict_fr.html'>JS Strict Mode</a>
+                <a target='_top' href='js_codeblocks_fr.html'>JS Code Blocks</a>
+                <a target='_top' href='js_conventions_fr.html'>JS Style Guide</a>
+                <a target='_top' href='js_best_practices_fr.html'>JS Best Practices</a>
+                <a target='_top' href='js_mistakes_fr.html'>JS Mistakes</a>
+                <a target='_top' href='js_performance_fr.html'>JS Performance</a>
+            </div>
+            <a target='_top' href='js_statements_reference_fr.html'>JS References</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_statements_reference_fr.html'>JS Keywords Reference</a>
+                <a target='_top' href='js_reserved_fr.html'>JS Keywords Reserved</a>
+                <a target='_top' href='js_operators_reference_fr.html'>JS Operator Reference</a>
+                <a target='_top' href='js_precedence_fr.html'>JS Operator Precedence</a>
+            </div>
+            <a target='_top' href='js_utf8_fr.html'>JS UTF-8 Characters</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_utf8_fr.html'>JS UTF-8 Letters</a>
+                <a target='_top' href='js_utf8_symbols_fr.html'>JS UTF-8 Symbols</a>
+                <a target='_top' href='js_utf8_emojis_fr.html'>JS UTF-8 Emojis</a>
+            </div>
+            <br>
+            <h2>JS Advanced</h2>
+            <a target='_top' href='js_versions_fr.html'>JS Versions</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_versions_fr.html'>JS Versions</a>
+                <a target='_top' href='js_2025_fr.html'>JS 2025</a>
+                <a target='_top' href='js_2024_fr.html'>JS 2024</a>
+                <a target='_top' href='js_2023_fr.html'>JS 2023</a>
+                <a target='_top' href='js_2022_fr.html'>JS 2022</a>
+                <a target='_top' href='js_2021_fr.html'>JS 2021</a>
+                <a target='_top' href='js_2020_fr.html'>JS 2020</a>
+                <a target='_top' href='js_2019_fr.html'>JS 2019</a>
+                <a target='_top' href='js_2018_fr.html'>JS 2018</a>
+                <a target='_top' href='js_2017_fr.html'>JS 2017</a>
+                <a target='_top' href='js_2016_fr.html'>JS 2016</a>
+                <a target='_top' href='js_es6_fr.html'>JS 2015 (ES6)</a>
+                <a target='_top' href='js_es5_fr.html'>JS 2009 (ES5)</a>
+                <a target='_top' href='js_ie_edge_fr.html'>JS IE / Edge</a>
+                <a target='_top' href='js_history_fr.html'>JS History</a>
+            </div>
+            <a target='_top' href='js_function_definition_fr.html'>JS Functions</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_function_definition_fr.html'>Function Definitions</a>
+                <a target='_top' href='js_arrow_function_fr.html'>Function Arrows</a>
+                <a target='_top' href='js_function_parameters_fr.html'>Function Parameters</a>
+                <a target='_top' href='js_function_invocation_fr.html'>Function Invocation</a>
+                <a target='_top' href='js_function_this_fr.html'>Function this</a>
+                <a target='_top' href='js_function_call_fr.html'>Function Call</a>
+                <a target='_top' href='js_function_apply_fr.html'>Function Apply</a>
+                <a target='_top' href='js_function_bind_fr.html'>Function Bind</a>
+                <a target='_top' href='js_function_closures_fr.html'>Function Closures</a>
+            </div>
+            <a target='_top' href='js_object_definition_fr.html'>JS Objects</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_object_definition_fr.html'>Object Definitions</a>
+                <a target='_top' href='js_object_property_fr.html'>Object Properties</a>
+                <a target='_top' href='js_object_method_fr.html'>Object Methods</a>
+                <a target='_top' href='js_object_display_fr.html'>Object Display</a>
+                <a target='_top' href='js_object_constructors_fr.html'>Object Constructors</a>
+                <a target='_top' href='js_this_fr.html'>Object this</a>
+                <a target='_top' href='js_destructuring_fr.html'>Object Destructuring</a>
+                <a target='_top' href='js_object_prototypes_fr.html'>Object Prototypes</a>
+                <a target='_top' href='js_object_methods_fr.html'>Object Iterations</a>
+                <a target='_top' href='js_object_properties_fr.html'>Object Management</a>
+                <a target='_top' href='js_object_accessors_fr.html'>Object Get / Set</a>
+                <a target='_top' href='js_object_protection_fr.html'>Object Protection</a>
+                <a target='_top' href='js_object_reference_fr.html'>Object Reference</a>
+            </div>
+            <a target='_top' href='js_classes_fr.html'>JS Classes</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_classes_fr.html'>JS Classes</a>
+                <a target='_top' href='js_class_inheritance_fr.html'>JS Class Inheritance</a>
+                <a target='_top' href='js_class_static_fr.html'>JS Class Static</a>
+            </div>
+            <a target='_top' href='js_looping_fr.html'>JS Iterations</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_looping_fr.html'>JS Loops</a>
+                <a target='_top' href='js_iterables_fr.html'>JS Iterables</a>
+                <a target='_top' href='js_iterators_fr.html'>JS Iterators</a>
+                <a target='_top' href='js_generators_fr.html'>JS Generators</a>
+            </div>
+            <a target='_top' href='js_callback_fr.html'>JS Promises</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_callback_fr.html'>JS Callbacks</a>
+                <a target='_top' href='js_asynchronous_fr.html'>JS Asynchronous</a>
+                <a target='_top' href='js_promise_fr.html'>JS Promises</a>
+                <a target='_top' href='js_async_fr.html'>JS Async/Await</a>
+            </div>
+            <a target='_top' href='js_modules_fr.html'>JS Modules</a>
+            <a target='_top' href='js_htmldom_fr.html'>JS HTML DOM</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_htmldom_fr.html'>DOM Intro</a>
+                <a target='_top' href='js_htmldom_methods_fr.html'>DOM Methods</a>
+                <a target='_top' href='js_htmldom_document_fr.html'>DOM Document</a>
+                <a target='_top' href='js_htmldom_elements_fr.html'>DOM Elements</a>
+                <a target='_top' href='js_htmldom_html_fr.html'>DOM HTML</a>
+                <a target='_top' href='js_validation_fr.html'>DOM Forms</a>
+                <a target='_top' href='js_htmldom_css_fr.html'>DOM CSS</a>
+                <a target='_top' href='js_htmldom_animate_fr.html'>DOM Animations</a>
+                <a target='_top' href='js_htmldom_events_fr.html'>DOM Events</a>
+                <a target='_top' href='js_htmldom_eventlistener_fr.html'>DOM Event Listener</a>
+                <a target='_top' href='js_htmldom_navigation_fr.html'>DOM Navigation</a>
+                <a target='_top' href='js_htmldom_nodes_fr.html'>DOM Nodes</a>
+                <a target='_top' href='js_htmldom_collections_fr.html'>DOM Collections</a>
+                <a target='_top' href='js_htmldom_nodelist_fr.html'>DOM Node Lists</a>
+            </div>
+            <a target='_top' href='js_window_fr.html'>JS Windows</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_window_fr.html'>JS Window</a>
+                <a target='_top' href='js_window_screen_fr.html'>JS Screen</a>
+                <a target='_top' href='js_window_location_fr.html'>JS Location</a>
+                <a target='_top' href='js_window_history_fr.html'>JS History</a>
+                <a target='_top' href='js_window_navigator_fr.html'>JS Navigator</a>
+                <a target='_top' href='js_popup_fr.html'>JS Popup Alert</a>
+                <a target='_top' href='js_timing_fr.html'>JS Timing</a>
+                <a target='_top' href='js_cookies_fr.html'>JS Cookies</a>
+            </div>
+            <a target='_top' href='js_api_intro_fr.html'>JS Web API</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_api_intro_fr.html'>Web API Intro</a>
+                <a target='_top' href='js_validation_api_fr.html'>Web Validation API</a>
+                <a target='_top' href='js_api_history_fr.html'>Web History API</a>
+                <a target='_top' href='js_api_web_storage_fr.html'>Web Storage API</a>
+                <a target='_top' href='js_api_web_workers_fr.html'>Web Worker API</a>
+                <a target='_top' href='js_api_fetch_fr.html'>Web Fetch API</a>
+                <a target='_top' href='js_api_geolocation_fr.html'>Web Geolocation API</a>
+            </div>
+            <a target='_top' href='js_ajax_intro_fr.html'>JS AJAX</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_ajax_intro_fr.html'>AJAX Intro</a>
+                <a target='_top' href='js_ajax_http_fr.html'>AJAX XMLHttp</a>
+                <a target='_top' href='js_ajax_http_send_fr.html'>AJAX Request</a>
+                <a target='_top' href='js_ajax_http_response_fr.html'>AJAX Response</a>
+                <a target='_top' href='js_ajax_xmlfile_fr.html'>AJAX XML File</a>
+                <a target='_top' href='js_ajax_php_fr.html'>AJAX PHP</a>
+                <a target='_top' href='js_ajax_asp_fr.html'>AJAX ASP</a>
+                <a target='_top' href='js_ajax_database_fr.html'>AJAX Database</a>
+                <a target='_top' href='js_ajax_applications_fr.html'>AJAX Applications</a>
+                <a target='_top' href='js_ajax_examples_fr.html'>AJAX Examples</a>
+            </div>
+            <a target='_top' href='js_json_fr.html'>JS JSON</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_json_fr.html'>JSON Intro</a>
+                <a target='_top' href='js_json_syntax_fr.html'>JSON Syntax</a>
+                <a target='_top' href='js_json_xml_fr.html'>JSON vs XML</a>
+                <a target='_top' href='js_json_datatypes_fr.html'>JSON Data Types</a>
+                <a target='_top' href='js_json_parse_fr.html'>JSON Parse</a>
+                <a target='_top' href='js_json_stringify_fr.html'>JSON Stringify</a>
+                <a target='_top' href='js_json_objects_fr.html'>JSON Objects</a>
+                <a target='_top' href='js_json_arrays_fr.html'>JSON Arrays</a>
+                <a target='_top' href='js_json_server_fr.html'>JSON Server</a>
+                <a target='_top' href='js_json_php_fr.html'>JSON PHP</a>
+                <a target='_top' href='js_json_html_fr.html'>JSON HTML</a>
+                <a target='_top' href='js_json_jsonp_fr.html'>JSON JSONP</a>
+            </div>
+            <a target='_top' href='js_jquery_selectors_fr.html'>JS jQuery</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_jquery_selectors_fr.html'>jQuery Selectors</a>
+                <a target='_top' href='js_jquery_elements_fr.html'>jQuery HTML</a>
+                <a target='_top' href='js_jquery_css_fr.html'>jQuery CSS</a>
+                <a target='_top' href='js_jquery_dom_fr.html'>jQuery DOM</a>
+            </div>
+            <a target='_top' href='js_graphics_fr.html'>JS Graphics</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_graphics_fr.html'>JS Graphics</a>
+                <a target='_top' href='js_graphics_canvas_fr.html'>JS Canvas</a>
+                <a target='_top' href='js_graphics_plotly_fr.html'>JS Plotly</a>
+                <a target='_top' href='js_graphics_chartjs_fr.html'>JS Chart.js</a>
+                <a target='_top' href='js_graphics_google_chart_fr.html'>JS Google Chart</a>
+                <a target='_top' href='js_graphics_d3js_fr.html'>JS D3.js</a>
+            </div>
+            <a target='_top' href='js_examples_fr.html'>JS Examples</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_examples_fr.html'>JS Examples</a>
+                <a target='_top' href='js_dom_examples_fr.html'>JS HTML DOM</a>
+                <a target='_top' href='js_input_examples_fr.html'>JS HTML Input</a>
+                <a target='_top' href='js_ex_dom_fr.html'>JS HTML Objects</a>
+                <a target='_top' href='js_events_examples_fr.html'>JS HTML Events</a>
+                <a target='_top' href='js_ex_browser_fr.html'>JS Browser</a>
+                <a target='_top' href='js_editor_fr.html'>JS Editor</a>
+                <a target='_top' href='js_exercises_fr.html'>JS Exercises</a>
+                <a target='_top' href='js_quiz_fr.html'>JS Quiz</a>
+                <a target='_top' href='js_website_fr.html'>JS Website</a>
+                <a target='_top' href='js_syllabus_fr.html'>JS Syllabus</a>
+                <a target='_top' href='js_study_plan_fr.html'>JS Study Plan</a>
+                <a target='_top' href='js_interview_prep_fr.html'>JS Interview Prep</a>
+                <a target='_top' href='js_bootcamp_fr.html'>JS Bootcamp</a>
+                <a target='_top' href='js_exam_fr.html'>JS Certificate</a>
+            </div>
+            <a target='_top' href='../jsref/index_fr.html'>JS Objects</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT JS-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index_fr.html'><img src='../svg/js.svg' alt='JavaScript. W3Schools en français. Cours pour débutants' class='w3-left w3-padding' title='JavaScript pour les débutants. W3Schools en français' style='width: 120px'></a>
+    <p class='w3-right'>
+        <a href='js_comparisons_en.html' title='Passer à l&#8217;anglais'>En</a>
+        <a href='js_comparisons.html' title='Passer à l&#8217;ukrainien'>Ua</a>
+        <a href='js_comparisons_es.html' title='Passer à l&#8217;espagnol'>Es</a>
+        <a href='js_comparisons_de.html' title='Passer à l&#8217;allemand'>De</a>
+        <a href='js_comparisons_ru.html' title='Passer au russe'>Ru</a>
+    </p>
+    <article>
+        <h1>JavaScript Comparaison</h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="js_assignment_fr.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="js_conditionals_fr.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <div class="ws-info">
+            <h2>Opérateurs de comparaison</h2>
+            <p>Les opérateurs de comparaison sont utilisés pour <b>comparer deux valeurs</b>.</p>
+            <p>Les opérateurs de comparaison renvoient toujours <code class="w3-codespan">true</code> ou <code class="w3-codespan">false</code>.</p>
+        </div>
+        <p>Étant donné que <code class="w3-codespan">x = 5</code>, le tableau ci-dessous explique les opérateurs de comparaison :</p>
+        <div class="w3-responsive w3-stretch">
+            <table class="ws-table-all notranslate">
+                <tr>
+                    <th>Opérateur</th>
+                    <th>Description</th>
+                    <th>Comparaison</th>
+                    <th>Renvoie</th>
+                    <th></th>
+                </tr>
+                <tr class="spes_table_row1">
+                    <td>==</td>
+                    <td>égal à</td>
+                    <td>x == 8</td>
+                    <td>false</td>
+                    <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison1.html">Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row1">
+                    <td></td>
+                    <td></td>
+                    <td>x == 5</td>
+                    <td>true</td>
+                    <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison2.html">Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row1">
+                    <td></td>
+                    <td></td>
+                    <td>x == "5"</td>
+                    <td>true</td>
+                    <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison12.html">Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row2">
+                    <td>===</td>
+                    <td>valeur égale et type égal</td>
+                    <td>x === 5</td>
+                    <td>true</td>
+                    <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison4.html">Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row2">
+                    <td></td>
+                    <td></td>
+                    <td>x === "5"</td>
+                    <td>false</td>
+                    <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison3.html">Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row1">
+                    <td>!=</td>
+                    <td>pas égal</td>
+                    <td>x != 8</td>
+                    <td>true</td>
+                    <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison5.html">Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row2">
+                    <td>!==</td>
+                    <td>pas de valeur égale ou pas de type égal</td>
+                    <td>x !== 5</td>
+                    <td>false</td>
+                    <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_comparison7.html" target='_blank'>Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row2">
+                    <td></td>
+                    <td></td>
+                    <td>x !== &quot;5&quot;</td>
+                    <td>true</td>
+                    <td><a class="w3-btn btnsmall" href="../jstryit/tryjs_comparison6.html" target='_blank'>Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row2">
+                    <td></td>
+                    <td></td>
+                    <td>x !== 8</td>
+                    <td>true</td>
+                    <td><a class="w3-btn btnsmall" href="../jstryit/tryit.html?filename=tryjs_comparison13" target='_blank'>Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row1">
+                    <td>&gt;</td>
+                    <td>supérieur à</td>
+                    <td>x &gt; 8</td>
+                    <td>false</td>
+                    <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison8.html">Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row2">
+                    <td>&lt;</td>
+                    <td>moins que</td>
+                    <td>x &lt; 8</td>
+                    <td>true</td>
+                    <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison9.html">Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row1">
+                    <td>&gt;=</td>
+                    <td>supérieur ou égal à</td>
+                    <td>x &gt;= 8</td>
+                    <td>false</td>
+                    <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison10.html">Try it &raquo;</a></td>
+                </tr>
+                <tr class="spes_table_row2">
+                    <td>&lt;=</td>
+                    <td>inférieur ou égal à</td>
+                    <td>x &lt;= 8</td>
+                    <td>true</td>
+                    <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison11.html">Try it &raquo;</a></td>
+                </tr>
+            </table>
+        </div>
+        <p>Les opérateurs de comparaison peuvent être utilisés dans des instructions conditionnelles pour comparer des valeurs et agir en fonction du résultat :</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate jsHigh">
+                if (age &lt; 18) text = &quot;Trop jeune pour acheter de l'alcool&quot;;
+            </div>
+        </div>
+        <p>Vous en apprendrez davantage sur l'utilisation des instructions conditionnelles dans le chapitre <a href="js_if_else_fr.html">if...else</a> de ce tutoriel.</p>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>JavaScript Comparaison de chaînes</h2>
+        <p>Tous les opérateurs de comparaison ci-dessus peuvent également être utilisés sur des chaînes:</p>
+        <div class="w3-example">
+            <h3>Exemple</h3>
+            <div class="w3-code notranslate jsHigh">
+                let text1 = &quot;A&quot;;<br>
+                let text2 = &quot;B&quot;;<br>
+                let result = text1 &lt; text2;
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_oper_string_comparison.html" target='_blank'>Try it Yourself &raquo;</a>
+        </div>
+        <p>Notez que les chaînes sont comparées par ordre alphabétique :</p>
+        <div class="w3-example">
+            <h3>Exemple</h3>
+            <div class="w3-code notranslate jsHigh">
+                let text1 = &quot;20&quot;;<br>
+                let text2 = &quot;5&quot;;<br>
+                let result = text1 &lt; text2;
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_oper_string_comparison1.html" target='_blank'>Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Comparaison de différents types</h2>
+        <p>La comparaison de données de différents types peut donner des résultats inattendus.</p>
+        <p>Lors de la comparaison d'une chaîne avec un nombre, JavaScript convertit la chaîne en nombre. Une chaîne vide est convertie en 0. Une chaîne non numérique est convertie en <code class="w3-codespan">NaN</code>, qui est toujours <code class="w3-codespan">false</code>.</p>
+        <table class="ws-table-all notranslate">
+            <tr>
+                <th>Cas</th>
+                <th>Valeur</th>
+                <th style="width:10%">Try</th>
+            </tr>
+            <tr>
+                <td>2 &lt; 12</td>
+                <td>true</td>
+                <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_20.html">Try it &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>2 &lt; &quot;12&quot;</td>
+                <td>true</td>
+                <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_21.html">Try it &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>2 &lt; &quot;John&quot;</td>
+                <td>false</td>
+                <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_23.html">Try it &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>2 &gt; &quot;John&quot;</td>
+                <td>false</td>
+                <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_24.html">Try it &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>2 == &quot;John&quot;</td>
+                <td>false</td>
+                <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_25.html">Try it &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>&quot;2&quot; &lt; &quot;12&quot;</td>
+                <td>false</td>
+                <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_26.html">Try it &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>&quot;2&quot; &gt; &quot;12&quot;</td>
+                <td>true</td>
+                <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_27.html">Try it &raquo;</a></td>
+            </tr>
+            <tr>
+                <td>&quot;2&quot; == &quot;12&quot;</td>
+                <td>false</td>
+                <td><a target='_blank' class="w3-btn btnsmall" href="../jstryit/tryjs_comparison_28.html">Try it &raquo;</a></td>
+            </tr>
+        </table>
+        <p>Lors de la comparaison de deux chaînes, &quot;2&quot; sera supérieur à &quot;12&quot;.</p>
+        <p>Alphabétiquement, 1 est inférieur à 21.</p>
+        <p>Pour garantir un résultat correct, les variables doivent être converties au type approprié avant la comparaison :</p>
+        <div class="w3-example">
+            <h3>Exemple</h3>
+            <div class="w3-code notranslate jsHigh">
+                age = Number(age);<br>if (isNaN(age)) {<br>&nbsp;&nbsp;voteable = &quot;Input is not a number&quot;;<br>} else {<br>&nbsp; voteable = (age &lt; 18) ? &quot;Too young&quot; : &quot;Old enough&quot;;<br>}
+            </div>
+            <a target='_blank' class="w3-btn w3-margin-bottom" href="../jstryit/tryjs_comparison_12.html">Try it Yourself &raquo;</a>
+        </div>
+        <hr>
+        <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="js_assignment_fr.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="js_conditionals_fr.html">Next &#10095;</a>
+        </div>
+    </article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    </div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-border' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker_fr.html'>SÉLECTIONNEUR DE COULEURS</a></h4>
+        <a href='../colors/colors_picker_fr.html'><img src='../images/colorpicker.gif' alt='Sélecteur de couleurs'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Tous les manuels en ligne sur le site">TUTORIELS</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../html/index_fr.html' class='btn-rightbar'>HTML</a>
+            <a href='../css/index_fr.html' class='btn-rightbar'>CSS</a>
+            <a href='../js/index_fr.html' class='btn-rightbar'>JavaScript</a>
+            <a href='../css/css_rwd_intro_fr.html' class='btn-rightbar'>RWD</a>
+            <a href='../bootstrap/bootstrap_ver_fr.html' class='btn-rightbar'>Bootstrap</a>
+            <a href='../w3css/index_fr.html' class='btn-rightbar'>W3.CSS</a>
+            <a href='../colors/index_fr.html' class='btn-rightbar'>Couleurs</a>
+            <a href='../icons/index_fr.html' class='btn-rightbar'>Icônes</a>
+            <a href='../graphics/index_fr.html' class='btn-rightbar'>Graphique</a>
+            <a href='../graphics/svg_intro_fr.html' class='btn-rightbar'>SVG Graphique</a>
+            <a href='../graphics/canvas_intro_fr.html' class='btn-rightbar'>Canvas Graphique</a>
+            <a href='../howto/index_fr.html' class='btn-rightbar'>Comment faire</a>
+            <a href='../sass/index_fr.html' class='btn-rightbar'>Sass</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Tous les guides en ligne sur le site">RÉFÉRENCES</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../tags/index_fr.html' class='btn-rightbar'>HTML Balises</a>
+            <a href='../tags/ref_html_browsersupport_fr.html' class='btn-rightbar'>Prise en charge du navigateur</a>
+            <a href='../tags/ref_attributes_fr.html' class='btn-rightbar'>HTML Attributs</a>
+            <a href='../tags/ref_standardattributes_fr.html' class='btn-rightbar'>Attributs globaux</a>
+            <a href='../tags/ref_eventattributes_fr.html' class='btn-rightbar'>Attributs d'événement</a>
+            <a href='../tags/ref_colornames_fr.html' class='btn-rightbar'>HTML Noms des couleurs</a>
+            <a href='../tags/ref_canvas_fr.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_av_dom_fr.html' class='btn-rightbar'>Audio/Vidéo DOM</a>
+            <a href='../tags/ref_charactersets_fr.html' class='btn-rightbar'>Jeux de caractères</a>
+            <a href='../tags/ref_html_dtd_fr.html' class='btn-rightbar'>DOCTYPE</a>
+            <a href='../tags/ref_urlencode_fr.html' class='btn-rightbar'>URL Codage</a>
+            <a href='../tags/ref_language_codes_fr.html' class='btn-rightbar'>Code de langue</a>
+            <a href='../tags/ref_country_codes_fr.html' class='btn-rightbar'>ISO Indicatifs de pays</a>
+            <a href='../tags/ref_httpmessages_fr.html' class='btn-rightbar'>HTTP Messages d'état</a>
+            <a href='../tags/ref_httpmethods_fr.html' class='btn-rightbar'>HTTP Méthodes de demande</a>
+            <a href='../tags/ref_pxtoemconversion_fr.html' class='btn-rightbar'>Convertisseur de pixels en Em</a>
+            <a href='../tags/ref_keyboardshortcuts_fr.html' class='btn-rightbar'>Raccourcis clavier</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="All online textbooks on the site">Jeux de caractères HTML</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../charsets/index_fr.html' class='btn-rightbar'>Jeux de caractères</a>
+            <a href='../charsets/ref_html_ascii_fr.html' class='btn-rightbar'>ASCII Référence</a>
+            <a href='../charsets/ref_html_ansi_fr.html' class='btn-rightbar'>Win-1252 (ANSI)</a>
+            <a href='../charsets/ref_html_8859_fr.html' class='btn-rightbar'>ISO-8859-1</a>
+            <a href='../charsets/ref_html_symbols_fr.html' class='btn-rightbar'>HTML Symboles</a>
+            <a href='../charsets/ref_html_utf8_fr.html' class='btn-rightbar'>Unicode (UTF-8)</a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Place à votre publicité!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>CONTACTS</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none'>IMPRIMER LA PAGE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index_fr.html' target='_top' style='text-decoration:none'>BLOGUE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index_fr.html' target='_top' style='text-decoration:none'>À PROPOS</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Contacts</h2>
+      <p>Si vous souhaitez signaler un bug, ainsi que faire une offre pour le site, ajouter une annonce ou une publicité sur le site, n'hésitez pas à envoyer un email à l'administrateur:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Tutoriel supérieur</h4>
+        <a href='../html/index_fr.html'>HTML Tutoriel</a><br>
+        <a href='../css/index_fr.html'>CSS Tutoriel</a><br>
+        <a href='../js/index_fr.html'>JavaScript Tutoriel</a><br>
+        <a href='../sql/index_fr.html'>SQL Tutoriel</a><br>
+        <a href='../python/index_fr.html'>Python Tutoriel</a><br>
+        <a href='../php/index_fr.html'>PHP Tutoriel</a><br>
+        <a href='../w3css/index_fr.html'>W3.CSS Tutoriel</a><br>
+        <a href='../appml/index_fr.html'>AppML Tutoriel</a><br>
+        <a href='../jquery/index_fr.html'>jQuery Tutoriel</a><br>
+        <a href='../angular/index_fr.html'>Angular Tutoriel</a><br>
+        <a href='../sass/index_fr.html'>Sass Tutoriel</a><br>
+        <a href='../java/index_fr.html'>Java Tutoriel</a><br>
+        <a href='../kotlin/index_fr.html'>Kotlin Tutoriel</a><br>
+        <a href='../c/index_fr.html'>C Tutoriel</a><br>
+        <a href='../cpp/index_fr.html'>C++ Tutoriel</a><br>
+        <a href='../cs/index_fr.html'>C# Tutoriel</a><br>
+        <a href='../chatgpt-3-5/index_fr.html'>ChatGPT-3.5 Tutoriel</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Principales références</h4>
+        <a href='../tags/index_fr.html'>HTML Référence</a><br>
+        <a href='../cssref/index_fr.html'>CSS Référence</a><br>
+        <a href='../jsref/index_fr.html'>JavaScript Référence</a><br>
+        <a href='../sql/sql_ref_keywords_fr.html'>SQL Référence</a><br>
+        <a href='../python/python_reference_fr.html'>Python Référence</a><br>
+        <a href='../php/php_ref_overview_fr.html'>PHP Référence</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_fr.html'>Bootstrap 3 Référence</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_fr.html'>Bootstrap 4 Référence</a><br>
+        <a href='../w3css/w3css_references_fr.html'>W3.CSS Référence</a><br>
+        <a href='../appml/appml_reference_fr.html'>Appml Référence</a><br>
+        <a href='../jquery/jquery_ref_overview_fr.html'>jQuery Référence</a><br>
+        <a href='../angular/angular_ref_directives_fr.html'>Angular Référence</a><br>
+        <a href='../sass/sass_functions_string_fr.html'>Sass Référence</a><br>
+        <a href='../java/java_ref_keywords_fr.html'>Java Référence</a><br>
+        <a href='../colors/colors_names_fr.html'>Couleurs Référence</a><br>
+        <a href='../icons/icons_reference_fr.html'>Icônes Référence</a><br>
+        <a href='../graphics/svg_reference_fr.html'>SVG Référence</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Meilleurs exemples</h4>
+        <a href='../html/html_examples_fr.html'>HTML Exemples</a><br>
+        <a href='../css/css_examples_fr.html'>CSS Exemples</a><br>
+        <a href='../js/js_examples_fr.html'>JavaScript Exemples</a><br>
+        <a href='../sql/sql_examples_fr.html'>SQL Exemples</a><br>
+        <a href='../python/python_examples_fr.html'>Python Exemples</a><br>
+        <a href='../php/php_examples_fr.html'>PHP Exemples</a><br>
+        <a href='../bootstrap/bootstrap_examples_fr.html'>Bootstrap Exemples</a><br>
+        <a href='../w3css/w3css_examples_fr.html'>W3.CSS Exemples</a><br>
+        <a href='../jquery/jquery_examples_fr.html'>jQuery Exemples</a><br>
+        <a href='../angular/angular_examples_fr.html'>Angular Exemples</a><br>
+        <a href='../java/java_examples_fr.html'>Java Exemples</a><br>
+        <a href='../kotlin/kotlin_examples_fr.html'>Kotlin Exemples</a><br>
+        <a href='../c/c_examples_fr.html'>C Exemples</a><br>
+        <a href='../cpp/cpp_examples_fr.html'>C++ Exemples</a><br>
+        <a href='../cs/cs_examples_fr.html'>C# Exemples</a><br>
+        <a href='../xml/xml_examples_fr.html'>XML Exemples</a><br>
+        <a href='../howto/index_fr.html'>How To Exemples</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_fr.html'>Certificats Web</a></h4>
+        <a href='../cert/cert_html_fr.html'>HTML Certificat</a><br>
+        <a href='../cert/cert_css_fr.html'>CSS Certificat</a><br>
+        <a href='../cert/cert_javascript_fr.html'>JavaScript Certificat</a><br>
+        <a href='../cert/cert_frontend_fr.html'>Front End Certificat</a><br>
+        <a href='../cert/cert_python_fr.html'>Python Certificat</a><br>
+        <a href='../cert/cert_datascience_fr.html'>Data Science Certificat</a><br>
+        <a href='../cert/cert_jquery_fr.html'>jQuery Certificat</a><br>
+        <a href='../cert/cert_sql_fr.html'>SQL Certificat</a><br>
+        <a href='../cert/cert_php_fr.html'>PHP Certificat</a><br>
+        <a href='../cert/cert_java_fr.html'>Java Certificat</a><br>
+        <a href='../cert/cert_c_fr.html'>C Certificat</a><br>
+        <a href='../cert/cert_cpp_fr.html'>C++ Certificat</a><br>
+        <a href='../cert/cert_cs_fr.html'>C# Certificat</a><br>
+        <a href='../cert/cert_bootstrap_fr.html'>Bootstrap Certificat</a><br>
+        <a href='../cert/cert_xml_fr.html'>XML Certificat</a><br>
+        <a href='../cert/career_tips_fr.html'>Planification de carrière</a><br>
+        <a href='../cert/career_cv_fr.html'>Rédaction d'un CV</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Ce site est optimisé pour l'apprentissage et la formation. Les exemples pourraient être simplifiés pour améliorer la lecture et l’apprentissage. Les didacticiels, références et exemples sont constamment révisés pour éviter les erreurs, mais nous ne pouvons garantir l'exactitude totale de tout le contenu. En utilisant W3Schools, vous acceptez d'avoir lu et accepté notre <a href='../about/about_copyright_fr.html'>conditions d'utilisation</a>, <a href='../about/about_privacy_fr.html'>politique de cookies et de confidentialité</a>.<br>Des versions du site dans d'autres langues sont également disponibles:
+   <a href='../index.html' title='W3Schools en ukrainien'><strong>Ukrainien</strong></a>,
+   <a href='../index.html' title='W3Schools en anglais'><strong>Anglais</strong></a>,
+   <a href='../index_es.html' title='W3Schools en espagnol'><strong>Espagnol</strong></a>,
+   <a href='../index_de.html' title='W3Schools en allemand'><strong>Allemand</strong></a>.<br>
+   <a href='../about/about_copyright_fr.html'>Copyright 1999-2026</a> par Refsnes Data. Tous droits réservés. <a href='../w3css/index_fr.html'>W3Schools est propulsé par W3.CSS</a>.<br>
+   Vous pouvez utiliser d'autres ressources d'apprentissage de développement et de programmation Web réputées :<br>
+   <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+   <a href='https://developer.mozilla.org/fr/' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+   <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+   <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+   <br><br>
+   <a href='../index_fr.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
