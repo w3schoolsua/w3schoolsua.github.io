@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang='uk'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel='apple-touch-icon' sizes='180x180' href='../apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='../favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='../favicon-16x16.png'>
+<link rel='manifest' href='../manifest.json'>
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:title' content='Уроки від W3Schools українською онлайн'>
+<meta property='og:description' content='W3Schools українською пропонує безкоштовні онлайн-уроки, навчальні та довідкові матеріали, завдання та вправи на більшості мовах програмування та створення веб-сайтів. Охоплює найбільш популярні технології, такі як HTML, CSS, JavaScript, PHP, Python, SQL, Java, C++, C#, Kotlin, Go, фреймворки Bootstrap, W3.CSS та багато інших'>
+<meta property='og:locale' content='uk'>
+<meta property='og:type' content='website'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "W3SchoolsUA",
+        "url": "https://w3schoolsua.github.io/index.html",
+        "description": "W3Schools українською мовою. Основи програмування та веброзробки. Уроки для початківців",
+        "image": "https://w3schoolsua.github.io/images/logo_w3s.gif",
+        "keywords": ["Уроки", "W3Schools", "для початківців", "HTML", "CSS", "JavaScript", "PHP", "SQL", "Python", "Java"],
+        "author": {
+            "@type": "Person",
+            "name": "W3Schools Ukrainian",
+            "url": "https://w3schoolsua.github.io/blog/index.html"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "W3SchoolsUA",
+            "url": "https://w3schoolsua.github.io/"
+        },
+        "inLanguage": "uk-UA",
+        "sameAs": [
+            "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
+        ]
+    }
+</script>    <title>JavaScript інструкція if. Приклади. Уроки для початківців. W3Schools українською</title>
+    <meta name='description' content='JavaScript інструкція (оператор) if. Використовуйте інструкцію if у JavaScript для виконання блоку коду, коли умова true. Синтаксис. Вкладений if. Кращим рішенням є використання логічного оператора AND. Приклади. Відеоурок. Основи програмування та веброзробки. Уроки W3Schools для початківців'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src="https://cse.google.com/cse.js?cx=751c3d18bb8a64f00"></script><div class="gcse-search"></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Меню' aria-label='Відкрити меню'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index.html' title='Головна'></a>
+            <a class='w3-bar-item w3-button' href='../html/index.html' title='HTML Підручник'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index.html' title='CSS Підручник'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index.html' title='JavaScript Підручник'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index.html' title='SQL Підручник'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../php/index.html' title='PHP Підручник'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../python/index.html' title='Python Підручник'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../java/index.html' title='Java Підручник'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index.html' title='Kotlin Підручник'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index.html' title='Go Підручник'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index.html' title='C Підручник'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index.html' title='C++ Підручник'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index.html' title='C# Підручник'>C#</a>
+            <a class='w3-bar-item w3-button' href='../ai/index.html' title='AI Підручник'>AI</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index.html' title='W3.CSS Підручник'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../typescript/index.html' title='TypeScript Підручник'>TypeScript</a>
+            <a class='w3-bar-item w3-button' href='../howto/index.html' title='Як зробити'>Як зробити?</a>
+            <a class='w3-bar-item w3-button w3-left' id='topnavbtn_references' href='javascript:void(0);' onclick="w3_open_nav('references')" title='Довідники' aria-label='Перейти в розділ Довідники'>ДОВІДНИКИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick="w3_open_nav('tutorials')" title='Більше підручників' aria-label='Переглянути більше підручників'>БІЛЬШЕ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Пошук на сайті' aria-label='Пошук по сайту'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Увімкнути темну тему' aria-label='Увімкнути темну тему'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick="w3_open_nav('exercises')" title='Вправи' aria-label='Перейти в розділ Вправи'>ВПРАВИ <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick="w3_close_nav('tutorials')" class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML та CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index.html'>Вивчити HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index.html'>Вивчити CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro.html'>Вивчити RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver.html'>Вивчити Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index.html'>Вивчити W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>Вивчити Кольори</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index.html'>Вивчити Іконки</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index.html'>Вивчити Графіку</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro.html'>Вивчити SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro.html'>Вивчити Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index.html'>Вивчити Як зробити</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index.html'>Вивчити Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Аналітика даних</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                        <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index.html'>Вивчити JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index.html'>Вивчити React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index.html'>Вивчити jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index.html'>Вивчити Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index.html'>Вивчити AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro.html'>Вивчити JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro.html'>Вивчити AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index.html'>Вивчити AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index.html'>Вивчити W3.JS</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../programming/index.html'>Програмування Інтро</a>
+                    <a class='w3-bar-item w3-button' href='../python/index.html'>Вивчити Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index.html'>Вивчити Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index.html'>Вивчити C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index.html'>Вивчити C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index.html'>Вивчити C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index.html'>Вивчити R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index.html'>Вивчити Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../rust/index.html'>Вивчити Rust</a>
+                    <a class='w3-bar-item w3-button' href='../go/index.html'>Вивчити Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index.html'>Вивчити Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index.html'>Вивчити TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index.html'>Вивчити SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index.html'>Вивчити MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index.html'>Вивчити PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index.html'>Вивчити PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index.html'>Вивчити ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index.html'>Вивчити Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi.html'>Вивчити Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../git/index.html'>Вивчити Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index.html'>Вивчити GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../bash/index.html'>Вивчити Bash</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index.html'>Вивчити MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index.html'>Вивчити AWS Cloud</a>
+                    <h3>Веб-будівництво</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start.html'>З чого почати</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates.html'>Веб-шаблони</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index.html'>Веб-статистика</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index.html'>Веб-редактор</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index.html'>Редактори коду / IDE</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index.html'>Веб-розробка</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index.html'>Кібербезпека</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index.html'>Доступність</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Перевірити швидкість друку</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Кодова гра</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Аналітика даних</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index.html'>Вивчити Штучний інтелект</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index.html'>Вивчити Генеративний ШІ</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index.html'>Вивчити ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index.html'>Вивчити ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index.html'>Вивчити Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started.html'>Вивчити Машинне навчання</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index.html'>Вивчити DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index.html'>Вивчити Науку про дані</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index.html'>Вивчити NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index.html'>Вивчити Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index.html'>Вивчити SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro.html'>Вивчити Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index.html'>Вивчити Статистику</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index.html'>Вивчити Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index.html'>Вивчити Google таблиці</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index.html'>Вивчити XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro.html'>Вивчити XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro.html'>Вивчити XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro.html'>Вивчити XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro.html'>Вивчити XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro.html'>Вивчити XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro.html'>Вивчити XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro.html'>Вивчити XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('references')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index.html'>HTML Довідник тегів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport.html'>HTML Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes.html'>HTML Довідник подій</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index.html'>HTML Довідник кольорів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes.html'>HTML Довідник атрибутів</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas.html'>HTML Canvas Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference.html'>HTML SVG Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference.html'>Google-карти Довідник</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index.html'>CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport.html'>CSS Підтримка браузерами</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors.html'>CSS Селектори Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references.html'>W3.CSS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference.html'>Іконки Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string.html'>Sass Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>JavaScript Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index.html'>HTML DOM Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives.html'>AngularJS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference.html'>AppML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references.html'>W3.JS Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index.html'>JS Готові скрипти</a>
+                    <h3>Програмування</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference.html'>Python Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords.html'>Java Довідник</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Серверна сторона</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords.html'>SQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions.html'>MySQL Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview.html'>PHP Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response.html'>ASP Довідник</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype.html'>XML Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http.html'>XML Http Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref.html'>XSLT Довідник</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref.html'>XML Schema Довідник</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Набори символів</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index.html'>HTML Набори символів</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols.html'>HTML Символи</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick="w3_close_nav('exercises')" class='w3-button w3-xlarge w3-right'
+                  style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Вправи</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises.html'>HTML Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises.html'>CSS Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises.html'>JavaScript Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises.html'>SQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises.html'>MySQL Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises.html'>PHP Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises.html'>Python Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises.html'>NumPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises.html'>Pandas Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises.html'>SciPy Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises.html'>jQuery Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises.html'>Java Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises.html'>Bootstrap Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises.html'>Bootstrap 4 Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises.html'>C++ Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises.html'>C# Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises.html'>R Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises.html'>Kotlin Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises.html'>Go Вправи</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises.html'>Git Вправи</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Вікторини</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz.html' target='_top'>HTML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz.html' target='_top'>CSS Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz.html' target='_top'>JavaScript Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz.html' target='_top'>SQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz.html' target='_top'>MySQL Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz.html' target='_top'>PHP Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz.html' target='_top'>Python Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz.html' target='_top'>NumPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz.html' target='_top'>Pandas Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz.html' target='_top'>SciPy Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz.html' target='_top'>jQuery Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz.html' target='_top'>Java Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz.html' target='_top'>Bootstrap Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz.html' target='_top'>Bootstrap 4 Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz.html' target='_top'>C++ Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz.html' target='_top'>C# Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz.html' target='_top'>R Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz.html' target='_top'>XML Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz.html' target='_top'>Кібербезпека Вікторина</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz.html' target='_top'>Доступність Вікторина</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Сертифікати</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new.html' target='_top'>HTML Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css.html' target='_top'>CSS Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript.html' target='_top'>JavaScript Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql.html' target='_top'>SQL Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php.html' target='_top'>PHP Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python.html' target='_top'>Python Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery.html' target='_top'>jQuery Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap.html' target='_top'>Bootstrap Сертифікат</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml.html' target='_top'>XML Сертифікат</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <h2 class='left'>Базовий JavaScript</h2>
+            <a target='_top' href='index.html'>JS Підручник</a>
+            <div class='tut_overview'>
+                <a target='_top' href='index.html'>JS Старт</a>
+                <a target='_top' href='js_intro.html'>JS Інтро</a>
+                <a target='_top' href='js_whereto.html'>JS Установка</a>
+                <a target='_top' href='js_output.html'>JS Виведення</a>
+            </div>
+            <a target='_top' href='js_syntax.html'>JS Синтаксис</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_syntax.html'>JS Синтаксис</a>
+                <a target='_top' href='js_statements.html'>JS Інструкції</a>
+                <a target='_top' href='js_comments.html'>JS Коментарі</a>
+            </div>
+            <a target='_top' href='js_variables.html'>JS Змінні</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_variables.html'>JS Змінні</a>
+                <a target='_top' href='js_let.html'>JS Ключове слово Let</a>
+                <a target='_top' href='js_const.html'>JS Ключове слово Const</a>
+                <a target='_top' href='js_types.html'>JS Типи</a>
+            </div>
+            <a target='_top' href='js_operators.html'>JS Оператори</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_operators.html'>JS Оператори</a>
+                <a target='_top' href='js_arithmetic.html'>JS Арифметичні</a>
+                <a target='_top' href='js_assignment.html'>JS Присвоєння</a>
+                <a target='_top' href='js_comparisons.html'>JS Порівняння</a>
+            </div>
+            <a target='_top' href='js_conditionals.html'>JS If Умови</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_conditionals.html'>JS Умови</a>
+                <a target='_top' href='js_if.html'>JS If</a>
+                <a target='_top' href='js_if_else.html'>JS If Else</a>
+                <a target='_top' href='js_if_ternary.html'>JS Тернарний</a>
+                <a target='_top' href='js_switch.html'>JS Switch</a>
+                <a target='_top' href='js_booleans.html'>JS Булеві</a>
+                <a target='_top' href='js_logical.html'>JS Логічні</a>
+            </div>
+            <a target='_top' href='js_loops.html'>JS Цикли</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_loops.html'>JS Цикли</a>
+                <a target='_top' href='js_loop_for.html'>JS Цикл for</a>
+                <a target='_top' href='js_loop_while.html'>JS Цикл while</a>
+                <a target='_top' href='js_break.html'>JS Break</a>
+                <a target='_top' href='js_continue.html'>JS Continue</a>
+            </div>
+            <a target='_top' href='js_strings.html'>JS Рядки</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_strings.html'>JS Рядки</a>
+                <a target='_top' href='js_string_templates.html'>JS Шаблони рядків</a>
+                <a target='_top' href='js_string_methods.html'>JS Рядкові методи</a>
+                <a target='_top' href='js_string_search.html'>JS Пошук рядків</a>
+                <a target='_top' href='js_string_reference.html'>JS Рядки. Довідник</a>
+            </div>
+            <a target='_top' href='js_numbers.html'>JS Числа</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_numbers.html'>JS Числа</a>
+                <a target='_top' href='js_number_methods.html'>JS Методи чисел</a>
+                <a target='_top' href='js_number_properties.html'>JS Властивості числа</a>
+                <a target='_top' href='js_number_reference.html'>JS Числа. Довідник</a>
+                <a target='_top' href='js_bigint.html'>JS BigInt</a>
+                <a target='_top' href='js_bitwise.html'>JS Побітові</a>
+            </div>
+            <a target='_top' href='js_functions.html'>JS Функції</a>
+            <a target='_top' href='js_objects.html'>JS Об&#8217;єкти</a>
+            <a target='_top' href='js_dates.html'>JS Дати</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_dates.html'>JS Дати</a>
+                <a target='_top' href='js_date_formats.html'>JS Формати дат</a>
+                <a target='_top' href='js_date_methods.html'>JS Отримати дату</a>
+                <a target='_top' href='js_date_methods_set.html'>JS Встановити дату</a>
+                <a target='_top' href='js_date_reference.html'>JS Дати. Довідник</a>
+            </div>
+            <a target='_top' href='js_arrays.html'>JS Масиви</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_arrays.html'>JS Масиви</a>
+                <a target='_top' href='js_array_methods.html'>JS Методи масивів</a>
+                <a target='_top' href='js_array_search.html'>JS Пошук за масивами</a>
+                <a target='_top' href='js_array_sort.html'>JS Сортування масивів</a>
+                <a target='_top' href='js_array_iteration.html'>JS Ітерації масивів</a>
+                <a target='_top' href='js_array_reference.html'>JS Масиви. Довідник</a>
+                <a target='_top' href='js_array_const.html'>JS Константи масивів</a>
+                <a target='_top' href='js_typed_arrays.html'>JS Типізовані масиви</a>
+                <a target='_top' href='js_typed_methods.html'>JS Типізовані методи</a>
+                <a target='_top' href='js_typed_reference.html'>JS Довідник з типізованих методів</a>
+            </div>
+            <a target='_top' href='js_sets.html'>JS Набори</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_sets.html'>JS Набори</a>
+                <a target='_top' href='js_set_methods.html'>JS Методи набору</a>
+                <a target='_top' href='js_set_logic.html'>JS Логіка набору</a>
+                <a target='_top' href='js_sets_weak.html'>JS Набір WeakSet</a>
+                <a target='_top' href='js_set_reference.html'>JS Набори. Довідник</a>
+            </div>
+            <a target='_top' href='js_maps.html'>JS Карти</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_maps.html'>JS Карти</a>
+                <a target='_top' href='js_map_methods.html'>JS Методи карти</a>
+                <a target='_top' href='js_maps_weak.html'>JS Карта WeakMap</a>
+                <a target='_top' href='js_map_reference.html'>JS Карти. Довідник</a>
+            </div>
+            <a target='_top' href='js_math.html'>JS Математичні</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_math.html'>JS Математичні</a>
+                <a target='_top' href='js_math_reference.html'>JS Математичні. Довідник</a>
+                <a target='_top' href='js_random.html'>JS Random</a>
+            </div>
+            <a target='_top' href='js_regexp.html'>JS RegExp</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_regexp.html'>JS RegExp</a>
+                <a target='_top' href='js_regexp_flags.html'>JS RegExp Прапори</a>
+                <a target='_top' href='js_regexp_characters.html'>JS RegExp Класи</a>
+                <a target='_top' href='js_regexp_meta_characters.html'>JS Метасимволи RegExp</a>
+                <a target='_top' href='js_regexp_assertions.html'>JS Твердження RegExp</a>
+                <a target='_top' href='js_regexp_quantifiers.html'>JS Квантори RegExp</a>
+                <a target='_top' href='js_regexp_patterns.html'>JS Шаблони RegExp</a>
+                <a target='_top' href='js_regexp_objects.html'>JS Об&#8217;єкти RegExp</a>
+                <a target='_top' href='js_regexp_methods.html'>JS Методи RegExp</a>
+            </div>
+            <a target='_top' href='js_datatypes.html'>JS Типи даних</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_datatypes.html'>JS Типи даних</a>
+                <a target='_top' href='js_typeof.html'>JS typeof</a>
+                <a target='_top' href='js_tostring.html'>JS toString()</a>
+                <a target='_top' href='js_type_conversion.html'>JS Перетворення типів</a>
+            </div>
+            <a target='_top' href='js_errors.html'>JS Помилки</a>
+            <a target='_top' href='js_debugging.html'>JS Дебагінг</a>
+            <a target='_top' href='js_events.html'>JS Події</a>
+            <a target='_top' href='js_control_flow.html'>JS Програмування</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_control_flow.html'>JS Потік керування</a>
+                <a target='_top' href='js_scope.html'>JS Область дії</a>
+                <a target='_top' href='js_hoisting.html'>JS Хостинг</a>
+                <a target='_top' href='js_strict.html'>JS Суворий режим</a>
+                <a target='_top' href='js_codeblocks.html'>JS Блоки коду</a>
+                <a target='_top' href='js_conventions.html'>JS Посібник зі стилю</a>
+                <a target='_top' href='js_best_practices.html'>JS Найкращі практики</a>
+                <a target='_top' href='js_mistakes.html'>JS Помилки</a>
+                <a target='_top' href='js_performance.html'>JS Продуктивність</a>
+            </div>
+            <a target='_top' href='js_statements_reference.html'>JS Довідники</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_statements_reference.html'>JS Ключові слова. Довідник</a>
+                <a target='_top' href='js_reserved.html'>JS Зарезервовані ключові слова</a>
+                <a target='_top' href='js_operators_reference.html'>JS Оператори. Довідник</a>
+                <a target='_top' href='js_precedence.html'>JS Пріоритет оператора</a>
+            </div>
+            <a target='_top' href='js_utf8.html'>JS UTF-8 Характери</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_utf8.html'>JS UTF-8 Літери</a>
+                <a target='_top' href='js_utf8_symbols.html'>JS UTF-8 Символи</a>
+                <a target='_top' href='js_utf8_emojis.html'>JS UTF-8 Емодзі</a>
+            </div>
+            <br>
+            <h2>JS Розширений</h2>
+            <a target='_top' href='js_versions.html'>JS Версії</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_versions.html'>JS Версії</a>
+                <a target='_top' href='js_2025.html'>JS 2025</a>
+                <a target='_top' href='js_2024.html'>JS 2024</a>
+                <a target='_top' href='js_2023.html'>JS 2023</a>
+                <a target='_top' href='js_2022.html'>JS 2022</a>
+                <a target='_top' href='js_2021.html'>JS 2021</a>
+                <a target='_top' href='js_2020.html'>JS 2020</a>
+                <a target='_top' href='js_2019.html'>JS 2019</a>
+                <a target='_top' href='js_2018.html'>JS 2018</a>
+                <a target='_top' href='js_2017.html'>JS 2017</a>
+                <a target='_top' href='js_2016.html'>JS 2016</a>
+                <a target='_top' href='js_es6.html'>JS 2015 (ES6)</a>
+                <a target='_top' href='js_es5.html'>JS 2009 (ES5)</a>
+                <a target='_top' href='js_ie_edge.html'>JS IE / Edge</a>
+                <a target='_top' href='js_history.html'>JS Історія</a>
+            </div>
+            <a target='_top' href='js_function_definition.html'>JS Функції</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_function_definition.html'>Визначення функцій</a>
+                <a target='_top' href='js_arrow_function.html'>Функції стрілки</a>
+                <a target='_top' href='js_function_parameters.html'>Параметри функцій</a>
+                <a target='_top' href='js_function_invocation.html'>Виклик функції</a>
+                <a target='_top' href='js_function_this.html'>Функція this</a>
+                <a target='_top' href='js_function_call.html'>Функція Call</a>
+                <a target='_top' href='js_function_apply.html'>Застосування функції</a>
+                <a target='_top' href='js_function_bind.html'>Прив&#8217;язка функцій</a>
+                <a target='_top' href='js_function_closures.html'>Замикання функцій</a>
+            </div>
+            <a target='_top' href='js_object_definition.html'>JS Об&#8217;єкти</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_object_definition.html'>Визначення об&#8217;єктів</a>
+                <a target='_top' href='js_object_property.html'>Властивості об&#8217;єктів</a>
+                <a target='_top' href='js_object_method.html'>Методи об&#8217;єктів</a>
+                <a target='_top' href='js_object_display.html'>Відображення об&#8217;єктів</a>
+                <a target='_top' href='js_object_constructors.html'>Конструктори об&#8217;єктів</a>
+                <a target='_top' href='js_this.html'>Об&#8217;єкт this</a>
+                <a target='_top' href='js_destructuring.html'>Деструктуризація об&#8217;єктів</a>
+                <a target='_top' href='js_object_prototypes.html'>Прототипи об&#8217;єктів</a>
+                <a target='_top' href='js_object_methods.html'>Ітерації об&#8217;єктів</a>
+                <a target='_top' href='js_object_properties.html'>Керування об&#8217;єктами</a>
+                <a target='_top' href='js_object_accessors.html'>Отримання / встановлення об&#8217;єкта</a>
+                <a target='_top' href='js_object_protection.html'>Захист об&#8217;єкта</a>
+                <a target='_top' href='js_object_reference.html'>Об&#8217;єкти. Довідник</a>
+            </div>
+            <a target='_top' href='js_classes.html'>JS Класи</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_classes.html'>JS Класи</a>
+                <a target='_top' href='js_class_inheritance.html'>JS Успадкування класів</a>
+                <a target='_top' href='js_class_static.html'>JS Статичний клас</a>
+            </div>
+            <a target='_top' href='js_looping.html'>JS Ітерації</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_looping.html'>JS Цикли</a>
+                <a target='_top' href='js_iterables.html'>JS Ітеровані</a>
+                <a target='_top' href='js_iterators.html'>JS Ітератори</a>
+                <a target='_top' href='js_generators.html'>JS Генератори</a>
+            </div>
+            <a target='_top' href='js_callback.html'>JS Проміси</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_callback.html'>JS Зворотні виклики</a>
+                <a target='_top' href='js_asynchronous.html'>JS Асинхронний</a>
+                <a target='_top' href='js_promise.html'>JS Проміси</a>
+                <a target='_top' href='js_async.html'>JS Асинхронний/очікувальний</a>
+            </div>
+            <a target='_top' href='js_modules.html'>JS Модулі</a>
+            <a target='_top' href='js_htmldom.html'>JS HTML DOM</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_htmldom.html'>DOM Інтро</a>
+                <a target='_top' href='js_htmldom_methods.html'>DOM Методи</a>
+                <a target='_top' href='js_htmldom_document.html'>DOM Документ</a>
+                <a target='_top' href='js_htmldom_elements.html'>DOM Елементи</a>
+                <a target='_top' href='js_htmldom_html.html'>DOM HTML</a>
+                <a target='_top' href='js_validation.html'>DOM Форми</a>
+                <a target='_top' href='js_htmldom_css.html'>DOM CSS</a>
+                <a target='_top' href='js_htmldom_animate.html'>DOM Анімації</a>
+                <a target='_top' href='js_htmldom_events.html'>DOM Події</a>
+                <a target='_top' href='js_htmldom_eventlistener.html'>DOM Слухач подій</a>
+                <a target='_top' href='js_htmldom_navigation.html'>DOM Навігація</a>
+                <a target='_top' href='js_htmldom_nodes.html'>DOM Вузли</a>
+                <a target='_top' href='js_htmldom_collections.html'>DOM Колекції</a>
+                <a target='_top' href='js_htmldom_nodelist.html'>DOM Списки вузлів</a>
+            </div>
+            <a target='_top' href='js_window.html'>JS Вікна</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_window.html'>JS Вікно</a>
+                <a target='_top' href='js_window_screen.html'>JS Екран</a>
+                <a target='_top' href='js_window_location.html'>JS Локація</a>
+                <a target='_top' href='js_window_history.html'>JS Історія</a>
+                <a target='_top' href='js_window_navigator.html'>JS Навігатор</a>
+                <a target='_top' href='js_popup.html'>JS Спливаюче сповіщення</a>
+                <a target='_top' href='js_timing.html'>JS Таймінг</a>
+                <a target='_top' href='js_cookies.html'>JS Куки</a>
+            </div>
+            <a target='_top' href='js_api_intro.html'>JS Web API</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_api_intro.html'>Web API Інтро</a>
+                <a target='_top' href='js_validation_api.html'>Web Валідація API</a>
+                <a target='_top' href='js_api_history.html'>Web Історія API</a>
+                <a target='_top' href='js_api_web_storage.html'>Web Сховище API</a>
+                <a target='_top' href='js_api_web_workers.html'>Web Робітник API</a>
+                <a target='_top' href='js_api_fetch.html'>Web Завантажувач API</a>
+                <a target='_top' href='js_api_geolocation.html'>Web Геолокація API</a>
+            </div>
+            <a target='_top' href='js_ajax_intro.html'>JS AJAX</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_ajax_intro.html'>AJAX Інтро</a>
+                <a target='_top' href='js_ajax_http.html'>AJAX XMLHttp</a>
+                <a target='_top' href='js_ajax_http_send.html'>AJAX Запит</a>
+                <a target='_top' href='js_ajax_http_response.html'>AJAX Відповідь</a>
+                <a target='_top' href='js_ajax_xmlfile.html'>AJAX XML Файл</a>
+                <a target='_top' href='js_ajax_php.html'>AJAX PHP</a>
+                <a target='_top' href='js_ajax_asp.html'>AJAX ASP</a>
+                <a target='_top' href='js_ajax_database.html'>AJAX База даних</a>
+                <a target='_top' href='js_ajax_applications.html'>AJAX Застосунки</a>
+                <a target='_top' href='js_ajax_examples.html'>AJAX Приклади</a>
+            </div>
+            <a target='_top' href='js_json.html'>JS JSON</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_json.html'>JSON Інтро</a>
+                <a target='_top' href='js_json_syntax.html'>JSON Синтаксис</a>
+                <a target='_top' href='js_json_xml.html'>JSON vs XML</a>
+                <a target='_top' href='js_json_datatypes.html'>JSON Типи даних</a>
+                <a target='_top' href='js_json_parse.html'>JSON Розбір</a>
+                <a target='_top' href='js_json_stringify.html'>JSON Стрінгіфікація</a>
+                <a target='_top' href='js_json_objects.html'>JSON Об&#8217;єкти</a>
+                <a target='_top' href='js_json_arrays.html'>JSON Масиви</a>
+                <a target='_top' href='js_json_server.html'>JSON Сервер</a>
+                <a target='_top' href='js_json_php.html'>JSON PHP</a>
+                <a target='_top' href='js_json_html.html'>JSON HTML</a>
+                <a target='_top' href='js_json_jsonp.html'>JSON JSONP</a>
+            </div>
+            <a target='_top' href='js_jquery_selectors.html'>JS jQuery</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_jquery_selectors.html'>jQuery Селектори</a>
+                <a target='_top' href='js_jquery_elements.html'>jQuery HTML</a>
+                <a target='_top' href='js_jquery_css.html'>jQuery CSS</a>
+                <a target='_top' href='js_jquery_dom.html'>jQuery DOM</a>
+            </div>
+            <a target='_top' href='js_graphics.html'>JS Графіка</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_graphics.html'>JS Графіка</a>
+                <a target='_top' href='js_graphics_canvas.html'>JS Canvas</a>
+                <a target='_top' href='js_graphics_plotly.html'>JS Plotly</a>
+                <a target='_top' href='js_graphics_chartjs.html'>JS Chart.js</a>
+                <a target='_top' href='js_graphics_google_chart.html'>JS Google Chart</a>
+                <a target='_top' href='js_graphics_d3js.html'>JS D3.js</a>
+            </div>
+            <a target='_top' href='js_examples.html'>JS Приклади</a>
+            <div class='tut_overview'>
+                <a target='_top' href='js_examples.html'>JS Приклади</a>
+                <a target='_top' href='js_dom_examples.html'>JS HTML DOM</a>
+                <a target='_top' href='js_input_examples.html'>JS HTML Input</a>
+                <a target='_top' href='js_ex_dom.html'>JS HTML Об&#8217;єкти</a>
+                <a target='_top' href='js_events_examples.html'>JS HTML Події</a>
+                <a target='_top' href='js_ex_browser.html'>JS Браузер</a>
+                <a target='_top' href='js_editor.html'>JS Редактор</a>
+                <a target='_top' href='js_exercises.html'>JS Вправи</a>
+                <a target='_top' href='js_quiz.html'>JS Вікторина</a>
+                <a target='_top' href='js_website.html'>JS Вебсайт</a>
+                <a target='_top' href='js_syllabus.html'>JS Силабус</a>
+                <a target='_top' href='js_study_plan.html'>JS Навчальний план</a>
+                <a target='_top' href='js_interview_prep.html'>JS Підготовка до співбесіди</a>
+                <a target='_top' href='js_bootcamp.html'>JS Трентабір</a>
+                <a target='_top' href='js_exam.html'>JS Сертифікат</a>
+            </div>
+            <a target='_top' href='../jsref/index.html'>JS Об&#8217;єкти</a>
+            <br><br>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT JS-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index.html'><img src='../svg/js.svg' alt='JavaScript. Уроки W3Schools для початківців українською мовою' class='w3-left w3-padding' title='JavaScript для початківців. W3Schools українською мовою' style='width:120px'></a>
+    <p class='w3-right'>
+        <a href='js_if_en.html' title='Перейти на англійську мову'>En</a>
+        <a href='js_if_es.html' title='Перейти на іспанську мову'>Es</a>
+        <a href='js_if_de.html' title='Перейти на німецьку мову'>De</a>
+        <a href='js_if_fr.html' title='Перейти на французьку мову'>Fr</a>
+        <a href='js_if_ru.html' title='Перейти на російську мову'>Ru</a>
+    </p>
+<article>
+    <h1>JavaScript if</h1>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_conditionals.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_if_else.html">Next &#10095;</a>
+    </div>
+    <hr>
+    <div class="ws-info">
+        <h2>JavaScript інструкція if</h2>
+        <p>Використовуйте інструкцію <b>if</b> у JavaScript для виконання блоку коду, коли умова <b>true</b>.</p>
+    </div>
+    <h2>Синтаксис</h2>
+    <div class="w3-code w3-border notranslate jsHigh">
+        <div>
+            if (<i>умова</i>) {<br>&nbsp;&nbsp;//<em>&nbsp; блок коду, який буде виконано, якщо умова true<br></em>}
+        </div>
+    </div>
+    <div class="w3-panel ws-note">
+        <p>Зверніть увагу, що <code class="w3-codespan">if</code> пишеться в нижньому регістрі (малими літерами). Великі літери (If або IF) генеруватимуть помилку JavaScript.</p>
+    </div>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <p>Привітайтеся &quot;Good day&quot; якщо година менше 18:00:</p>
+        <div class="w3-code notranslate jsHigh">
+            if (hour &lt; 18) {<br>&nbsp; greeting = &quot;Good day&quot;;<br>}
+        </div>
+        <p>Результатом привітання буде:</p>
+        <div class="w3-white w3-padding notranslate">
+            <code>
+                <script>
+                    d=new Date();
+                    var time=d.getHours();
+                    if (time<20)
+                    {
+                        document.write("Good day");
+                    }
+                </script>
+            </code>
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_ifthen.html" class="w3-btn w3-margin-bottom w3-margin-top">Спробуйте самі &raquo;</a>
+    </div>
+    <div class="w3-example">
+        <h3>Приклади</h3>
+        <div class="w3-code notranslate jsHigh">
+            let age = 18;<br>let text = "Ви не можете керувати автомобілем";<br><br>if (age &gt;= 18) {<br>&nbsp; text = "Ви можете керувати автомобілем");<br>}<br>
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_if.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+        <div class="w3-code notranslate jsHigh">
+            let age = 16;<br>let text = "Ви не можете керувати автомобілем";<br><br>if (age &gt;= 18) {<br>&nbsp; text = "Ви можете керувати автомобілем");<br>}<br>
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_if_not.html" class="w3-btn w3-margin-bottom">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Вкладений if</h2>
+    <p>Ви можете використовувати інструкцію <code class="w3-codespan">if</code> всередині іншої інструкції <code class="w3-codespan">if</code>:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            let age = 16;<br>let country = "USA";<br>let text = "Ви не можете керувати автомобілем!";<br><br>if (country == "USA") {<br>&nbsp;&nbsp;if (age &gt;= 16) {<br>&nbsp;&nbsp;&nbsp;&nbsp;text = "Ви можете керувати автомобілем!";<br>&nbsp;&nbsp;}<br>}<br>
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_if_nested.html" class="w3-btn w3-margin-bottom w3-margin-top">Спробуйте самі &raquo;</a>
+    </div>
+    <p>Вкладені оператори if можуть ускладнити ваш код.</p>
+    <p>Кращим рішенням є використання логічного оператора AND:</p>
+    <div class="w3-example">
+        <h3>Приклад</h3>
+        <div class="w3-code notranslate jsHigh">
+            let age = 16;<br>let country = "USA";<br>let text = "Ви не можете керувати автомобілем!";<br><br>if (country == "USA" &amp;&amp; age &gt;= 16) {<br>&nbsp;&nbsp;text = "Ви можете керувати автомобілем!";<br>}<br>
+        </div>
+        <a target="_blank" href="../jstryit/tryjs_if_and.html" class="w3-btn w3-margin-bottom w3-margin-top">Спробуйте самі &raquo;</a>
+    </div>
+    <hr>
+    <div class="w3-clear nextprev">
+        <a class="w3-left w3-btn" href="js_conditionals.html">&#10094; Prev</a>
+        <a class="w3-right w3-btn" href="js_if_else.html">Next &#10095;</a>
+    </div>
+</article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    </div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection w3-border' style='padding-bottom: 5px'>
+        <h4><a href='../colors/colors_picker.html'>ПАЛІТРА КОЛЬОРІВ</a></h4>
+        <a href='../colors/colors_picker.html'><img src='../images/colorpicker.gif' alt='Палітра кольорів'></a>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Всі онлайн-підручники на сайті">ПІДРУЧНИКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../html/index.html' class='btn-rightbar'>HTML</a>
+            <a href='../css/index.html' class='btn-rightbar'>CSS</a>
+            <a href='../js/index.html' class='btn-rightbar'>JavaScript</a>
+            <a href='../css/css_rwd_intro.html' class='btn-rightbar'>Адаптив.веб-дизайн</a>
+            <a href='../graphics/index.html' class='btn-rightbar'>Графіка</a>
+            <a href='../graphics/svg_intro.html' class='btn-rightbar'>Графіка SVG</a>
+            <a href='../graphics/canvas_intro.html' class='btn-rightbar'>Графіка Canvas</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class="shadow-black-1" title="Всі онлайн-довідники на сайті">ДОВІДНИКИ</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../tags/index.html' class='btn-rightbar'>HTML-теги</a>
+            <a href='../tags/ref_attributes.html' class='btn-rightbar'>HTML-атрибути</a>
+            <a href='../tags/ref_standardattributes.html' class='btn-rightbar'>Глобальні атрибути</a>
+            <a href='../tags/ref_eventattributes.html' class='btn-rightbar'>Атрибути подій</a>
+            <a href='../tags/ref_colornames.html' class='btn-rightbar'>HTML-кольори</a>
+            <a href='../tags/ref_canvas.html' class='btn-rightbar'>HTML-Canvas</a>
+            <a href='../tags/ref_charactersets.html' class='btn-rightbar'>Набори символів</a>
+            <a href='../tags/ref_html_dtd.html' class='btn-rightbar'>DOCTYPE</a>
+            <a href='../tags/ref_urlencode.html' class='btn-rightbar'>URL-кодування</a>
+            <a href='../tags/ref_language_codes.html' class='btn-rightbar'>Коди мов</a>
+            <a href='../tags/ref_country_codes.html' class='btn-rightbar'>Коди країн</a>
+            <a href='../tags/ref_pxtoemconversion.html' class='btn-rightbar'>Конвертер Px в Em</a>
+        </div>
+    </div>
+  <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Місце для вашої реклами!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>ЗВОРОТНІЙ ЗВ&rsquo;ЯЗОК</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style="text-decoration:none">ДРУК СТОРІНКИ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index.html' target='_top' style="text-decoration:none">БЛОГ</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index.html' target='_top' style="text-decoration:none">ПРО САЙТ</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Зв&rsquo;язок з адміном</h2>
+      <p>Якщо ви хочете повідомити про помилку, а також внести пропозиції про роботу сайту, додати оголошення, рекламу на сайт і т.п., відправте адміну електронного листа на email:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Підручники</h4>
+        <a href='../html/index.html'>HTML Підручник</a><br>
+        <a href='../css/index.html'>CSS Підручник</a><br>
+        <a href='../js/index.html'>JavaScript Підручник</a><br>
+        <a href='../sql/index.html'>SQL Підручник</a><br>
+        <a href='../python/index.html'>Python Підручник</a><br>
+        <a href='../php/index.html'>PHP Підручник</a><br>
+        <a href='../w3css/index.html'>W3.CSS Підручник</a><br>
+        <a href='../appml/index.html'>AppML Підручник</a><br>
+        <a href='../jquery/index.html'>jQuery Підручник</a><br>
+        <a href='../angular/index.html'>Angular Підручник</a><br>
+        <a href='../sass/index.html'>Sass Підручник</a><br>
+        <a href='../java/index.html'>Java Підручник</a><br>
+        <a href='../kotlin/index.html'>Kotlin Підручник</a><br>
+        <a href='../c/index.html'>C Підручник</a><br>
+        <a href='../cpp/index.html'>C++ Підручник</a><br>
+        <a href='../cs/index.html'>C# Підручник</a><br>
+        <a href='../chatgpt-3-5/index.html'>ChatGPT-3.5 Підручник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Довідники</h4>
+        <a href='../tags/index.html'>HTML Довідник</a><br>
+        <a href='../cssref/index.html'>CSS Довідник</a><br>
+        <a href='../jsref/index.html'>JavaScript Довідник</a><br>
+        <a href='../sql/sql_ref_keywords.html'>SQL Довідник</a><br>
+        <a href='../python/python_reference.html'>Python Довідник</a><br>
+        <a href='../php/php_ref_overview.html'>PHP Довідник</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes.html'>Bootstrap 3 Довідник</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes.html'>Bootstrap 4 Довідник</a><br>
+        <a href='../w3css/w3css_references.html'>W3.CSS Довідник</a><br>
+        <a href='../appml/appml_reference.html'>Appml Довідник</a><br>
+        <a href='../jquery/jquery_ref_overview.html'>jQuery Довідник</a><br>
+        <a href='../angular/angular_ref_directives.html'>Angular Довідник</a><br>
+        <a href='../sass/sass_functions_string.html'>Sass Довідник</a><br>
+        <a href='../java/java_ref_keywords.html'>Java Довідник</a><br>
+        <a href='../colors/colors_names.html'>Кольори Довідник</a><br>
+        <a href='../icons/icons_reference.html'>Іконки Довідник</a><br>
+        <a href='../graphics/svg_reference.html'>SVG Довідник</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Приклади</h4>
+        <a href='../html/html_examples.html'>HTML Приклади</a><br>
+        <a href='../css/css_examples.html'>CSS Приклади</a><br>
+        <a href='../js/js_examples.html'>JavaScript Приклади</a><br>
+        <a href='../sql/sql_examples.html'>SQL Приклади</a><br>
+        <a href='../python/python_examples.html'>Python Приклади</a><br>
+        <a href='../php/php_examples.html'>PHP Приклади</a><br>
+        <a href='../bootstrap/bootstrap_examples.html'>Bootstrap Приклади</a><br>
+        <a href='../w3css/w3css_examples.html'>W3.CSS Приклади</a><br>
+        <a href='../jquery/jquery_examples.html'>jQuery Приклади</a><br>
+        <a href='../angular/angular_examples.html'>Angular Приклади</a><br>
+        <a href='../java/java_examples.html'>Java Приклади</a><br>
+        <a href='../kotlin/kotlin_examples.html'>Kotlin Приклади</a><br>
+        <a href='../c/c_examples.html'>C Приклади</a><br>
+        <a href='../cpp/cpp_examples.html'>C++ Приклади</a><br>
+        <a href='../cs/cs_examples.html'>C# Приклади</a><br>
+        <a href='../xml/xml_examples.html'>XML Приклади</a><br>
+        <a href='../howto/index.html'>Як зробити? Приклади</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index.html'>Вебсертифікати</a></h4>
+        <a href='../cert/cert_html.html'>HTML Сертифікат</a><br>
+        <a href='../cert/cert_css.html'>CSS Сертифікат</a><br>
+        <a href='../cert/cert_javascript.html'>JavaScript Сертифікат</a><br>
+        <a href='../cert/cert_frontend.html'>Front End Сертифікат</a><br>
+        <a href='../cert/cert_python.html'>Python Сертифікат</a><br>
+        <a href='../cert/cert_datascience.html'>Наука про дані Сертифікат</a><br>
+        <a href='../cert/cert_jquery.html'>jQuery Сертифікат</a><br>
+        <a href='../cert/cert_sql.html'>SQL Сертифікат</a><br>
+        <a href='../cert/cert_php.html'>PHP Сертифікат</a><br>
+        <a href='../cert/cert_java.html'>Java Сертифікат</a><br>
+        <a href='../cert/cert_c.html'>C Сертифікат</a><br>
+        <a href='../cert/cert_cpp.html'>C++ Сертифікат</a><br>
+        <a href='../cert/cert_cs.html'>C# Сертифікат</a><br>
+        <a href='../cert/cert_bootstrap.html'>Bootstrap Сертифікат</a><br>
+        <a href='../cert/cert_xml.html'>XML Сертифікат</a><br>
+        <a href='../cert/career_tips.html'>Планування кар&rsquo;єри</a><br>
+        <a href='../cert/career_cv.html'>Складання резюме</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Цей сайт оптимізований для навчання і тестування. Приклади можуть бути спрощені для поліпшення читання і базового розуміння. Навчальні посібники, посилання і приклади постійно переглядаються, щоб уникнути помилок, але ми не можемо гарантувати повну правильність і працездатність всього контенту. Використовуючи цей сайт, ви погоджуєтеся з тим, що прочитали й прийняли  <a href='../about/about_copyright.html'>умови використання</a>, <a href='../about/about_privacy.html'>cookie і політику конфіденційності</a>.<br>
+    Також доступні версії сайту іншими мовами:
+    <a href='../index_en.html' title='W3Schools англійською'><strong>англійською</strong></a>,
+    <a href='../index_es.html' title='W3Schools іспанською'><strong>іспанською</strong></a>,
+    <a href='../index_de.html' title='W3Schools німецькою'><strong>німецькою</strong></a>,
+    <a href='../index_fr.html' title='W3Schools французькою'><strong>французькою</strong></a>,
+    <a href='../index_ru.html' title='W3Schools російською'><strong>російською</strong></a>.<br>
+    <a href='../about/about_copyright.html'>Copyright 1999-2026</a> by Refsnes Data. All Rights Reserved.
+    Сайт створений і працює на фреймворку <a href='../w3css/index.html'>W3.CSS</a>.<br>
+    Ви можете використовувати інші авторитетні ресурси для навчання веброзробці та програмуванню:<br>
+      <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+      <a href='../hyperskillua/index.html' target='_blank' rel='noopener'>HyperskillUA</a>&nbsp;|&nbsp;
+      <a href='https://developer.mozilla.org/en-US/?retiredLocale=uk' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+      <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+      <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+    <br><br>
+    <a href='../index.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+    <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
