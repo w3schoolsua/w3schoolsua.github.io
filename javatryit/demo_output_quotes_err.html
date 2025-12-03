@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset='utf-8'>
+    <title>W3Schools Tryit Editor</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo_436_2.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="436">
+    <meta property="og:image:height" content="228">
+    <meta property="og:title" content="W3Schools online JAVA editor">
+    <meta property="og:description" content="The W3Schools online code editor allows you to edit code and view the result in your browser">
+    <link rel="stylesheet" href="../lib/w3.css">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="mask-icon" href="../svg/safari-pinned-tab.svg" color="#04aa6d">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#fff">
+    <link rel='stylesheet' href='../lib/codemirror_multi.css'>
+    <script src='../lib/codemirror_multi.js'></script>
+    <script src='../lib/codemirror_clike.js'></script>
+    <script src="../scripts/javatryit_head.js" data-cfasync="false"></script>
+    <link rel='stylesheet' href='../styles/tryitstyle_java.css'>
+    <!--[if lt IE 8]>
+    <style>
+        #textareacontainer, #iframecontainer {width:48%;}
+        #container {height:500px;}
+        #textarea, #iframe {width:90%;height:450px;}
+        #textareaCode, #textareaCode2, #iframeResult, .codewindow {height:450px;}
+        .stack {display:none;}
+    </style>
+    <![endif]-->
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+</head>
+<body>
+<div id='tryitLeaderboard'>
+</div>
+
+<div class='trytopnav'>
+    <div class='w3-bar' style='overflow:auto'>
+        <a id='tryhome' href='../index.html' target='_blank' title='Головна' class='w3-button w3-bar-item topnav-icons fa fa-home ga-tryit' style='margin-top:-2px'></a>
+        <a href='javascript:void(0);' onclick='openMenu()' id='menuButton' title='Відкрити меню' class='w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu ga-tryit' style='margin-top:-2px'></a>
+        <a href='javascript:void(0);' onclick='restack(currentStack)' title='Змінити орієнтацію' class='w3-button w3-bar-item w3-hide-small topnav-icons fa fa-rotate ga-tryit' style='margin-top:-2px'></a>
+        <a href='javascript:void(0);' onclick='retheme()' title='Змінити тему' class='w3-button w3-bar-item topnav-icons fa fa-adjust ga-tryit' style='margin-top:-2px'></a>
+        <button id='runbtn' class='w3-button w3-bar-item w3-hover-white w3-hover-text-green ga-tryit' onclick="submitTryit(1);uic_prov_run();">Виконати &#10095;</button>
+        <span class="w3-right w3-hide-small" style="padding:8px 16px 8px 0;display:block;float:right;font-size:16px;margin-top:4px">
+            <span id="framesize"></span>
+        </span>
+    </div>
+</div>
+
+<div id="shield"></div>
+<a href="javascript:void(0)" id="dragbar"></a>
+<div id="container">
+    <div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
+        <div class="w3-bar-block">
+            <a class="w3-bar-item w3-button ga-tryit" href='javascript:void(0);' title="Запустити код" onclick="openMenu();submitTryit(1);uic_prov_run();"><span style="display:inline-block;font-size:26px;margin-left:15px;margin-right:22px">&#10095;</span><span style="position:relative;top:-4px;left:2px;">Запустити код <span style="float:right;font-size:10px;color:#333;margin-top:18px;">Ctrl+Alt+R</span></span></a>
+            <a class="w3-bar-item w3-button ga-tryit" href='javascript:void(0);' title="Змінити орієнтацію" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Змінити орієнтацію <span style="float:right;font-size:10px;color:#333;margin-top:18px;">Ctrl+Alt+O</span></span></a>
+            <a class="w3-bar-item w3-button ga-tryit" href='javascript:void(0);' title="Змінити тему" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Змінити тему  <span style="float:right;font-size:10px;color:#333;margin-top:18px;">Ctrl+Alt+D</span></span></a>
+        </div>
+        <footer class="w3-container w3-small ws-grey">
+            <p>
+                <a style="display:inline;padding:0;" href="../about/about_privacy.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green ga-tryit">Політика конфіденційності</a> та
+                <a style="display:inline;padding:0;" href="../about/about_copyright.html" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green ga-tryit">Copyright 1999-2026</a>
+            </p>
+        </footer>
+    </div>
+    <div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
+    <div id="textareacontainer">
+        <div id="textarea">
+            <div id="textareawrapper">
+            <textarea autocomplete="off" id="textareaCode" wrap="soft" aria-label='Example' spellcheck="false">public class Main {
+  public static void main(String[] args) {
+    System.out.println(This sentence will produce an error);
+  }
+}
+</textarea>
+                <form id="codeForm" autocomplete="off" style="margin:0;display:none;">
+                    <input type="hidden" name="code" id="code" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="iframecontainer">
+        <div id="iframe">
+            <div id="runloadercontainer"><div id="runloader"></div></div>
+            <div id="iframewrapper">
+                <div id="iframeResult" style="position:relative;white-space:nowrap;overflow:auto;">
+                    <div>
+                        Main.java:3: error: ')' expected<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(This sentence will produce an error);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                        Main.java:3: error: ';' expected<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(This sentence will produce an error);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                        Main.java:3: error: ';' expected<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(This sentence will produce an error);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                        Main.java:3: error: not a statement<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(This sentence will produce an error);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                        Main.java:3: error: ';' expected<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(This sentence will produce an error);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br>
+                        5 errors
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src='../scripts/tryit_java_end.js'></script>
+</body>
+</html>
