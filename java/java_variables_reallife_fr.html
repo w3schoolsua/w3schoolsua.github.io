@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<link rel='icon' href='../favicon.ico' type='image/x-icon'>
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel='stylesheet' href='../styles/w3.css'>
+<link rel='stylesheet' href='../styles/external.css'>
+<meta property='og:image' content='../images/w3schools_logo_436_2.png'>
+<meta property='og:image:type' content='image/png'>
+<meta property='og:image:width' content='436'>
+<meta property='og:image:height' content='228'>
+<meta property='og:description' content='Cours de programmation Java. W3Schools propose également des cours en ligne gratuits, des tutoriels, des ressources de référence, des défis et des exercices dans la plupart des langages de programmation et de création de sites web. Ce cours couvre les technologies les plus courantes telles que HTML, CSS, JavaScript, PHP, Python, SQL, C++, C#, Kotlin, Go, les frameworks Bootstrap, W3.CSS et bien d&#8217;autres.'>
+<script src='../lib/prism2.js'></script>
+<link rel='stylesheet' href='../lib/prism1.css'>
+<!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+<!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->    <title>Java Exemples concrets. Cours pour débutants. W3Schools en français</title>
+    <meta name='description' content='Java Exemples concrets. Dans nos exemples, nous simplifions souvent les noms des variables pour qu&#8217;ils correspondent à leur type de données (myInt ou myNum pour les entiers, myChar pour les caractères, etc.). Ceci afin d&#8217;éviter toute confusion. Calculer l&#8217;aire d&#8217;un rectangle. Cours pour débutants. W3Schools en français'>
+<div class='w3-container top'>
+    <a class='w3schools-logo notranslate' href='../index_fr.html'>W3schoolsFR<span class='dotcom w3-hide-small'>. LeMeilleur</span></a>
+    <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">MEILLEUR SITE POUR LES DÉVELOPPEURS WEB</div>
+</div>
+<div style='display:none;position:absolute;z-index:4;right:52px;height:44px;background-color:#5f5f5f;letter-spacing:normal;' id='googleSearch'>
+    <!--W3SchoolsUA-Google-Search-->
+    <script async src='https://cse.google.com/cse.js?cx=751c3d18bb8a64f00'></script><div class='gcse-search'></div>
+    <!--/W3SchoolsUA-Google-Search-->
+</div>
+<!--Top menu-->
+<div class='w3-card-2 topnav notranslate' id='topnav'>
+    <div style='overflow:auto;'>
+        <div class='w3-bar w3-left' style='width:100%;overflow:hidden;height:44px'>
+            <a class='topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button' href='javascript:void(0);' onclick='open_menu()' title='Menu' aria-label='Open menu'></a>
+            <a class='topnav-icons fa fa-home w3-left w3-bar-item w3-button' href='../index_fr.html' title='main'></a>
+            <a class='w3-bar-item w3-button' href='../html/index_fr.html' title='HTML Tutoriel'>HTML</a>
+            <a class='w3-bar-item w3-button' href='../css/index_fr.html' title='CSS Tutoriel'>CSS</a>
+            <a class='w3-bar-item w3-button' href='../js/index_fr.html' title='JavaScript Tutoriel'>JAVASCRIPT</a>
+            <a class='w3-bar-item w3-button' href='../sql/index_fr.html' title='SQL Tutoriel'>SQL</a>
+            <a class='w3-bar-item w3-button' href='../php/index_fr.html' title='PHP Tutoriel'>PHP</a>
+            <a class='w3-bar-item w3-button' href='../python/index_fr.html' title='Python Tutoriel'>PYTHON</a>
+            <a class='w3-bar-item w3-button' href='../java/index_fr.html' title='Java Tutoriel'>JAVA</a>
+            <a class='w3-bar-item w3-button' href='../kotlin/index_fr.html' title='Kotlin Tutoriel'>KOTLIN</a>
+            <a class='w3-bar-item w3-button' href='../go/index_fr.html' title='Go Tutoriel'>GO</a>
+            <a class='w3-bar-item w3-button' href='../c/index_fr.html' title='C Tutoriel'>C</a>
+            <a class='w3-bar-item w3-button' href='../cpp/index_fr.html' title='C++ Tutoriel'>C++</a>
+            <a class='w3-bar-item w3-button' href='../cs/index_fr.html' title='C# Tutoriel'>C#</a>
+            <a class='w3-bar-item w3-button' href='../ai/index_fr.html' title='AI Tutoriel'>AI</a>
+            <a class='w3-bar-item w3-button' href='../w3css/index_fr.html' title='W3.CSS Tutoriel'>W3.CSS</a>
+            <a class='w3-bar-item w3-button' href='../typescript/index_fr.html' title='TypeScript Tutoriel'>TypeScript</a>
+            <a class='w3-bar-item w3-button' href='../howto/index_fr.html' title='Comment faire'>Comment faire</a>
+            <a class='w3-bar-item w3-button' id='topnavbtn_tutorials' href='javascript:void(0);' onclick='w3_open_nav("tutorials")' title='Plus de tutoriels' aria-label='Voir plus de tutoriels'>Plus <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='open_search(this)' title='Recherche' aria-label='Site search'>&#128269;</a>
+            <a class='topnav-icons fa w3-right w3-bar-item w3-button' href='javascript:void(0);' onclick='changecodetheme(this)' title='Thème sombre' aria-label='Activer le thème sombre'>&#9681;</a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_references' href='javascript:void(0);' onclick='w3_open_nav("references")' title='Références' aria-label='Aller aux références'>RÉFÉRENCES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+            <a class='w3-bar-item w3-button w3-right' id='topnavbtn_exercises' href='javascript:void(0);' onclick='w3_open_nav("exercises")' title='Exercices' aria-label='Aller aux exercices'>EXERCICES <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style='display:none'></i></a>
+        </div>
+        <div id='nav_tutorials' class='w3-bar-block w3-card-2' style='display:none;'>
+            <span onclick='w3_close_nav("tutorials")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML & CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../html/index_fr.html'>Apprendre HTML</a>
+                    <a class='w3-bar-item w3-button' href='../css/index_fr.html'>Apprendre CSS</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_rwd_intro_fr.html'>Apprendre RWD</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ver_fr.html'>Apprendre Bootstrap</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/index_fr.html'>Apprendre W3.CSS</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_fr.html'>Apprendre les couleurs</a>
+                    <a class='w3-bar-item w3-button' href='../icons/index_fr.html'>Apprendre Icônes</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/index_fr.html'>Apprendre Graphique</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_intro_fr.html'>Apprendre SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/canvas_intro_fr.html'>Apprendre Canvas</a>
+                    <a class='w3-bar-item w3-button' href='../howto/index_fr.html'>Apprendre Comment faire</a>
+                    <a class='w3-bar-item w3-button' href='../sass/index_fr.html'>Apprendre Sass</a>
+                    <div class='w3-hide-large w3-hide-small'>
+                        <h3>Analyse des données</h3>
+                        <a class='w3-bar-item w3-button' href='../ai/index_fr.html'>Apprendre IA</a>
+                        <a class='w3-bar-item w3-button' href='../gen_ai/index_fr.html'>Apprendre IA générative</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_fr.html'>Apprendre ChatGPT-3.5</a>
+                        <a class='w3-bar-item w3-button' href='../chatgpt-4/index_fr.html'>Apprendre ChatGPT-4</a>
+                        <a class='w3-bar-item w3-button' href='../bard/index_fr.html'>Apprendre Google Bard</a>
+                        <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_fr.html'>Apprendre Apprentissage automatique</a>
+                        <a class='w3-bar-item w3-button' href='../dsa/index_fr.html'>Apprendre DSA</a>
+                        <a class='w3-bar-item w3-button' href='../datascience/index_fr.html'>Apprendre Science des données</a>
+                        <a class='w3-bar-item w3-button' href='../numpy/index_fr.html'>Apprendre NumPy</a>
+                        <a class='w3-bar-item w3-button' href='../pandas/index_fr.html'>Apprendre Pandas</a>
+                        <a class='w3-bar-item w3-button' href='../scipy/index_fr.html'>Apprendre SciPy</a>
+                        <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_fr.html'>Apprendre Matplotlib</a>
+                        <a class='w3-bar-item w3-button' href='../statistics/index_fr.html'>Apprendre Statistiques</a>
+                        <a class='w3-bar-item w3-button' href='../excel/index_fr.html'>Apprendre Excel</a>
+                        <a class='w3-bar-item w3-button' href='../googlesheets/index_fr.html'>Apprendre Google Sheets</a>
+                        <h3>XML</h3>
+                        <a class='w3-bar-item w3-button' href='../xml/index_fr.html'>Apprendre XML</a>
+                        <a class='w3-bar-item w3-button' href='../xml/ajax_intro_fr.html'>Apprendre XML AJAX</a>
+                        <a class='w3-bar-item w3-button' href='../xml/dom_intro_fr.html'>Apprendre XML DOM</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_fr.html'>Apprendre XML DTD</a>
+                        <a class='w3-bar-item w3-button' href='../xml/schema_intro_fr.html'>Apprendre XML Schema</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xsl_intro_fr.html'>Apprendre XSLT</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xpath_intro_fr.html'>Apprendre XPath</a>
+                        <a class='w3-bar-item w3-button' href='../xml/xquery_intro_fr.html'>Apprendre XQuery</a>
+                    </div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../js/index_fr.html'>Apprendre JavaScript</a>
+                    <a class='w3-bar-item w3-button' href='../react/index_fr.html'>Apprendre React</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/index_fr.html'>Apprendre jQuery</a>
+                    <a class='w3-bar-item w3-button' href='../vue/index_fr.html'>Apprendre Vue</a>
+                    <a class='w3-bar-item w3-button' href='../angular/index_fr.html'>Apprendre AngularJS</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_json_intro_fr.html'>Apprendre JSON</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_ajax_intro_fr.html'>Apprendre AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../appml/index_fr.html'>Apprendre AppML</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/index_fr.html'>Apprendre W3.JS</a>
+                    <h3>Programmation</h3>
+                    <a class='w3-bar-item w3-button' href='../programming/index_fr.html'>Programmation Intro</a>
+                    <a class='w3-bar-item w3-button' href='../python/index_fr.html'>Apprendre Python</a>
+                    <a class='w3-bar-item w3-button' href='../java/index_fr.html'>Apprendre Java</a>
+                    <a class='w3-bar-item w3-button' href='../c/index_fr.html'>Apprendre C</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/index_fr.html'>Apprendre C++</a>
+                    <a class='w3-bar-item w3-button' href='../cs/index_fr.html'>Apprendre C#</a>
+                    <a class='w3-bar-item w3-button' href='../r/index_fr.html'>Apprendre R</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/index_fr.html'>Apprendre Kotlin</a>
+                    <a class='w3-bar-item w3-button' href='../rust/index_fr.html'>Apprendre Rust</a>
+                    <a class='w3-bar-item w3-button' href='../go/index_fr.html'>Apprendre Go</a>
+                    <a class='w3-bar-item w3-button' href='../django/index_fr.html'>Apprendre Django</a>
+                    <a class='w3-bar-item w3-button' href='../typescript/index_fr.html'>Apprendre TypeScript</a>
+                    <div class='w3-hide-small'><br class='w3-hide-medium w3_hide-small'><br class='w3-hide-medium w3_hide-small'></div>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Côté serveur</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/index_fr.html'>Apprendre SQL</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/index_fr.html'>Apprendre MySQL</a>
+                    <a class='w3-bar-item w3-button' href='../postgresql/index_fr.html'>Apprendre PostgreSQL</a>
+                    <a class='w3-bar-item w3-button' href='../php/index_fr.html'>Apprendre PHP</a>
+                    <a class='w3-bar-item w3-button' href='../asp/index_fr.html'>Apprendre ASP</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/index_fr.html'>Apprendre Node.js</a>
+                    <a class='w3-bar-item w3-button' href='../nodejs/nodejs_raspberrypi_fr.html'>Apprendre Raspberry Pi</a>
+                    <a class='w3-bar-item w3-button' href='../swift/index_fr.html'>Apprendre Swift</a>
+                    <a class='w3-bar-item w3-button' href='../git/index_fr.html'>Apprendre Git</a>
+                    <a class='w3-bar-item w3-button' href='../githubpages/index_fr.html'>Apprendre GitHub Pages</a>
+                    <a class='w3-bar-item w3-button' href='../bash/index_fr.html'>Apprendre Bash</a>
+                    <a class='w3-bar-item w3-button' href='../mongodb/index_fr.html'>Apprendre MongoDB</a>
+                    <a class='w3-bar-item w3-button' href='../aws/index_fr.html'>Apprendre AWS Cloud</a>
+                    <h3>Création de sites Web</h3>
+                    <a class='w3-bar-item w3-button' href='../where_to_start_fr.html'>Par où commencer</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_templates_fr.html'>Modèles Web</a>
+                    <a class='w3-bar-item w3-button' href='../browsers/index_fr.html'>Statistiques Web</a>
+                    <a class='w3-bar-item w3-button' href='../tryit/index_fr.html'>Éditeur de code</a>
+                    <a class='w3-bar-item w3-button' href='../editors/index_fr.html'>Éditeurs de code/IDE</a>
+                    <a class='w3-bar-item w3-button' href='../whatis/index_fr.html'>Développement Web</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/index_fr.html'>Cybersécurité</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/index_fr.html'>Accessibilité</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/typingspeed/' target='_blank' rel='nofollow noopener'>Test de vitesse de frappe</a>
+                    <a class='w3-bar-item w3-button' href='https://www.w3schools.com/codegame/' target='_blank' rel='nofollow noopener'>Jeu de codes</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium'>
+                    <h3>Analyse des données</h3>
+                    <a class='w3-bar-item w3-button' href='../ai/index_fr.html'>Apprendre IA</a>
+                    <a class='w3-bar-item w3-button' href='../gen_ai/index_fr.html'>Apprendre IA générative</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-3-5/index_fr.html'>Apprendre ChatGPT-3.5</a>
+                    <a class='w3-bar-item w3-button' href='../chatgpt-4/index_fr.html'>Apprendre ChatGPT-4</a>
+                    <a class='w3-bar-item w3-button' href='../bard/index_fr.html'>Apprendre Google Bard</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_ml_getting_started_fr.html'>Apprendre Apprentissage automatique</a>
+                    <a class='w3-bar-item w3-button' href='../dsa/index_fr.html'>Apprendre DSA</a>
+                    <a class='w3-bar-item w3-button' href='../datascience/index_fr.html'>Apprendre Data Science</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/index_fr.html'>Apprendre NumPy</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/index_fr.html'>Apprendre Pandas</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/index_fr.html'>Apprendre SciPy</a>
+                    <a class='w3-bar-item w3-button' href='../python/matplotlib_intro_fr.html'>Apprendre Matplotlib</a>
+                    <a class='w3-bar-item w3-button' href='../statistics/index_fr.html'>Apprendre Statistiques</a>
+                    <a class='w3-bar-item w3-button' href='../excel/index_fr.html'>Apprendre Excel</a>
+                    <a class='w3-bar-item w3-button' href='../googlesheets/index_fr.html'>Apprendre Google sheets</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/index_fr.html'>Apprendre XML</a>
+                    <a class='w3-bar-item w3-button' href='../xml/ajax_intro_fr.html'>Apprendre XML AJAX</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_intro_fr.html'>Apprendre XML DOM</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_dtd_intro_fr.html'>Apprendre XML DTD</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_intro_fr.html'>Apprendre XML Schema</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_intro_fr.html'>Apprendre XSLT</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xpath_intro_fr.html'>Apprendre XPath</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xquery_intro_fr.html'>Apprendre XQuery</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_references' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("references")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l3 m6'>
+                    <h3>HTML</h3>
+                    <a class='w3-bar-item w3-button' href='../tags/index_fr.html'>HTML Référence de balise</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_html_browsersupport_fr.html'>HTML Prise en charge du navigateur</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_eventattributes_fr.html'>HTML Référence d'événement</a>
+                    <a class='w3-bar-item w3-button' href='../colors/index_fr.html'>HTML Référence de couleur</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_attributes_fr.html'>HTML Référence d'attribut</a>
+                    <a class='w3-bar-item w3-button' href='../tags/ref_canvas_fr.html'>HTML Référence du canevas</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/svg_reference_fr.html'>HTML Référence SVG</a>
+                    <a class='w3-bar-item w3-button' href='../graphics/google_maps_reference_fr.html'>Référence Google Maps</a>
+                    <h3>CSS</h3>
+                    <a class='w3-bar-item w3-button' href='../cssref/index_fr.html'>CSS Référence</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css3_browsersupport_fr.html'>CSS Prise en charge du navigateur</a>
+                    <a class='w3-bar-item w3-button' href='../cssref/css_selectors_fr.html'>CSS Selector Référence</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_ref_all_classes_fr.html'>Bootstrap 3 Référence</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_ref_all_classes_fr.html'>Bootstrap 4 Référence</a>
+                    <a class='w3-bar-item w3-button' href='../w3css/w3css_references_fr.html'>W3.CSS Référence</a>
+                    <a class='w3-bar-item w3-button' href='../icons/icons_reference_fr.html'>Icônes Référence</a>
+                    <a class='w3-bar-item w3-button' href='../sass/sass_functions_string_fr.html'>Sass Référence</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>JavaScript</h3>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_fr.html'>JavaScript Référence</a>
+                    <a class='w3-bar-item w3-button' href='../jsref/index_fr.html'>HTML DOM Référence</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_ref_overview_fr.html'>jQuery Référence</a>
+                    <a class='w3-bar-item w3-button' href='../angular/angular_ref_directives_fr.html'>AngularJS Référence</a>
+                    <a class='w3-bar-item w3-button' href='../appml/appml_reference_fr.html'>AppML Référence</a>
+                    <a class='w3-bar-item w3-button' href='../w3js/w3js_references_fr.html'>W3.JS Référence</a>
+                    <a class='w3-bar-item w3-button' href='../readyscripts/index_fr.html'>JS Scripts prêts</a>
+                    <h3>Programmation</h3>
+                    <a class='w3-bar-item w3-button' href='../python/python_reference_fr.html'>Python Référence</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_ref_keywords_fr.html'>Java Référence</a>
+                </div>
+                <div class='w3-col l3 m6'>
+                    <h3>Côté serveur</h3>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_ref_keywords_fr.html'>SQL Référence</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_ref_functions_fr.html'>MySQL Référence</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_ref_overview_fr.html'>PHP Référence</a>
+                    <a class='w3-bar-item w3-button' href='../asp/asp_ref_response_fr.html'>ASP Référence</a>
+                    <h3>XML</h3>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_nodetype_fr.html'>XML DOM Référence</a>
+                    <a class='w3-bar-item w3-button' href='../xml/dom_http_fr.html'>XML Http Référence</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xsl_elementref_fr.html'>XSLT Référence</a>
+                    <a class='w3-bar-item w3-button' href='../xml/schema_elements_ref_fr.html'>XML Schema Référence</a>
+                </div>
+                <div class='w3-col l3 m6 w3-hide-medium w3-hide-small'>
+                    <h3>Jeux de caractères</h3>
+                    <a class='w3-bar-item w3-button' href='../charsets/index_fr.html'>HTML Jeux de caractères</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ascii_fr.html'>HTML ASCII</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_ansi_fr.html'>HTML Windows-1252</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_8859_fr.html'>HTML ISO-8859-1</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_symbols_fr.html'>HTML Symboles</a>
+                    <a class='w3-bar-item w3-button' href='../charsets/ref_html_utf8_fr.html'>HTML UTF-8</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id='nav_exercises' class='w3-bar-block w3-card-2'>
+            <span onclick='w3_close_nav("exercises")' class='w3-button w3-xlarge w3-right' style='position:absolute;right:0;font-weight:bold;'>&times;</span>
+            <div class='w3-row-padding' style='padding:24px 48px'>
+                <div class='w3-col l4 m6'>
+                    <h3>Exercices</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_exercises_fr.html'>HTML Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_exercises_fr.html'>CSS Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_exercises_fr.html'>JavaScript Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_exercises_fr.html'>SQL Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_exercises_fr.html'>MySQL Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_exercises_fr.html'>PHP Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_exercises_fr.html'>Python Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_exercises_fr.html'>NumPy Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_exercises_fr.html'>Pandas Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_exercises_fr.html'>SciPy Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_exercises_fr.html'>jQuery Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_exercises_fr.html'>Java Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_exercises_fr.html'>Bootstrap Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_exercises_fr.html'>Bootstrap 4 Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_exercises_fr.html'>C++ Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_exercises_fr.html'>C# Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_exercises_fr.html'>R Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../kotlin/cotlin_exercises_fr.html'>Kotlin Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../go/go_exercises_fr.html'>Go Exercices</a>
+                    <a class='w3-bar-item w3-button' href='../git/git_exercises_fr.html'>Git Exercices</a>
+                </div>
+                <div class='w3-col l4 m6'>
+                    <h3>Quiz</h3>
+                    <a class='w3-bar-item w3-button' href='../html/html_quiz_fr.html' target='_top'>HTML Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../css/css_quiz_fr.html' target='_top'>CSS Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../js/js_quiz_fr.html' target='_top'>JavaScript Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../sql/sql_quiz_fr.html' target='_top'>SQL Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../mysql/mysql_quiz_fr.html' target='_top'>MySQL Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../php/php_quiz_fr.html' target='_top'>PHP Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../python/python_quiz_fr.html' target='_top'>Python Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../numpy/numpy_quiz_fr.html' target='_top'>NumPy Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../pandas/pandas_quiz_fr.html' target='_top'>Pandas Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../scipy/scipy_quiz_fr.html' target='_top'>SciPy Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../jquery/jquery_quiz_fr.html' target='_top'>jQuery Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../java/java_quiz_fr.html' target='_top'>Java Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap/bootstrap_quiz_fr.html' target='_top'>Bootstrap Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../bootstrap4/bootstrap_quiz_fr.html' target='_top'>Bootstrap 4 Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../cpp/cpp_quiz_fr.html' target='_top'>C++ Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../cs/cs_quiz_fr.html' target='_top'>C# Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../r/r_quiz_fr.html' target='_top'>R Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../xml/xml_quiz_fr.html' target='_top'>XML Questionnaire</a>
+                    <a class='w3-bar-item w3-button' href='../cybersecurity/cybersecurity_quiz_fr.html' target='_top'>Questionnaire sur la cybersécurité</a>
+                    <a class='w3-bar-item w3-button' href='../accessibility/accessibility_quiz_fr.html' target='_top'>Questionnaire d&#8217;accessibilité</a>
+                </div>
+                <div class='w3-col l4 m12'>
+                    <h3>Certificats</h3>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_html_new_fr.html' target='_top'>HTML Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_css_fr.html' target='_top'>CSS Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_javascript_fr.html' target='_top'>JavaScript Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_sql_fr.html' target='_top'>SQL Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_php_fr.html' target='_top'>PHP Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_python_fr.html' target='_top'>Python Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_jquery_fr.html' target='_top'>jQuery Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_bootstrap_fr.html' target='_top'>Bootstrap Certificat</a>
+                    <a class='w3-bar-item w3-button' href='../cert/cert_xml_fr.html' target='_top'>XML Certificat</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!--/Top menu--><!--Left menu-->
+<div class='w3-sidebar w3-collapse' id='sidenav'>
+    <div id='leftmenuinner'>
+        <div id='leftmenuinnerinner'>
+            <nav>
+                <h2 class='left'><span class='left_h2'>Java</span> Tutoriel</h2>
+                <a target='_top' href='index_fr.html'>Java MAISON</a>
+                <a target='_top' href='java_intro_fr.html'>Java Intro</a>
+                <a target='_top' href='java_getstarted_fr.html'>Java Démarrage</a>
+                <a target='_top' href='java_syntax_fr.html'>Java Syntaxe</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_syntax_fr.html'>Syntaxe</a>
+                    <a target='_top' href='java_statements_fr.html'>Instructions</a>
+                </div>
+                <a target='_top' href='java_output_fr.html'>Java Sortie</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_output_fr.html'>Imprimer le texte</a>
+                    <a target='_top' href='java_output_numbers_fr.html'>Imprimer les nombres</a>
+                </div>
+                <a target='_top' href='java_comments_fr.html'>Java Commentaires</a>
+                <a target='_top' href='java_variables_fr.html'>Java Variables</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_variables_fr.html'>Variables</a>
+                    <a target='_top' href='java_variables_print_fr.html'>Variables d'impression</a>
+                    <a target='_top' href='java_variables_multiple_fr.html'>Variables multiples</a>
+                    <a target='_top' href='java_variables_identifiers_fr.html'>Identifiants</a>
+                    <a target='_top' href='java_variables_final_fr.html'>Constantes (final)</a>
+                    <a target='_top' href='java_variables_reallife_fr.html'>Exemples concrets</a>
+                </div>
+                <a target='_top' href='java_data_types_fr.html'>Java Types de données</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_data_types_fr.html'>Types de données</a>
+                    <a target='_top' href='java_data_types_numbers_fr.html'>Nombres</a>
+                    <a target='_top' href='java_data_types_boolean_fr.html'>Booléens</a>
+                    <a target='_top' href='java_data_types_characters_fr.html'>Caractères</a>
+                    <a target='_top' href='java_data_types_reallife_fr.html'>Exemple concret</a>
+                    <a target='_top' href='java_data_types_non-prim_fr.html'>Types non primitifs</a>
+                </div>
+                <a target='_top' href='java_type_casting_fr.html'>Conversion de type Java</a>
+                <a target='_top' href='java_operators_fr.html'>Opérateurs Java</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_operators_fr.html'>Operators</a>
+                    <a target='_top' href='java_operators_arithmetic_fr.html'>Arithmetic</a>
+                    <a target='_top' href='java_operators_assign_fr.html'>Assignment</a>
+                    <a target='_top' href='java_operators_comparison_fr.html'>Comparison</a>
+                    <a target='_top' href='java_operators_logical_fr.html'>Logical</a>
+                    <a target='_top' href='java_operators_precedence_fr.html'>Precedence</a>
+                </div>
+                <a target='_top' href='java_strings_fr.html'>Chaînes Java</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_strings_fr.html'>Chaînes</a>
+                    <a target='_top' href='java_strings_concat_fr.html'>Concaténation</a>
+                    <a target='_top' href='java_strings_numbers_fr.html'>Nombres et chaînes</a>
+                    <a target='_top' href='java_strings_specchars_fr.html'>Caractères spéciaux</a>
+                </div>
+                <a target='_top' href='java_math_fr.html'>Java Mathématiques</a>
+                <a target='_top' href='java_booleans_fr.html'>Java Booléens</a>
+                <a target='_top' href='java_conditions_fr.html'>Java If...Else</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_conditions_fr.html'>if</a>
+                    <a target='_top' href='java_conditions_else_fr.html'>else</a>
+                    <a target='_top' href='java_conditions_elseif_fr.html'>else if</a>
+                    <a target='_top' href='java_conditions_shorthand_fr.html'>Abréviation If...Else</a>
+                    <a target='_top' href='java_conditions_nested_fr.html'>Instructions if imbriquées</a>
+                    <a target='_top' href='java_conditions_logical_fr.html'>Opérateurs logiques</a>
+                    <a target='_top' href='java_conditions_reallife_fr.html'>Exemples concrets</a>
+                </div>
+                <a target='_top' href='java_switch_fr.html'>Java Switch</a>
+                <a target='_top' href='java_while_loop_fr.html'>Java While Boucle</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_while_loop_fr.html'>While Boucle</a>
+                    <a target='_top' href='java_while_loop_do_fr.html'>Do/While Boucle</a>
+                    <a target='_top' href='java_while_loop_reallife_fr.html'>Exemples concrets</a>
+                </div>
+                <a target='_top' href='java_for_loop_fr.html'>Java For Boucle</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_for_loop_fr.html'>For Boucle</a>
+                    <a target='_top' href='java_for_loop_nested_fr.html'>Boucles imbriquées</a>
+                    <a target='_top' href='java_foreach_loop_fr.html'>For-Each Boucle</a>
+                    <a target='_top' href='java_for_loop_reallife_fr.html'>Exemples concrets</a>
+                </div>
+                <a target='_top' href='java_break_fr.html'>Java Break/Continue</a>
+                <a target='_top' href='java_arrays_fr.html'>Java Tableaux</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_arrays_fr.html'>Tableaux</a>
+                    <a target='_top' href='java_arrays_loop_fr.html'>Boucle à travers un tableau</a>
+                    <a target='_top' href='java_arrays_reallife_fr.html'>Exemples concrets</a>
+                    <a target='_top' href='java_arrays_multi_fr.html'>Tableaux multidimensionnels</a>
+                </div>
+                <br>
+                <h2>Java Méthodes</h2>
+                <a target='_top' href='java_methods_fr.html'>Java Méthodes</a>
+                <a target='_top' href='java_methods_param_fr.html'>Java Paramètres de la méthode</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_methods_param_fr.html'>Paramètres</a>
+                    <a target='_top' href='java_methods_return_fr.html'>Valeurs de retour</a>
+                </div>
+                <a target='_top' href='java_methods_overloading_fr.html'>Surcharge de méthodes Java</a>
+                <a target='_top' href='java_scope_fr.html'>Portée Java</a>
+                <a target='_top' href='java_recursion_fr.html'>Récursivité Java</a>
+                <br>
+                <h2>Java Classes</h2>
+                <a target='_top' href='java_oop_fr.html'>POO Java</a>
+                <a target='_top' href='java_classes_fr.html'>Classes/Objets Java</a>
+                <a target='_top' href='java_class_attributes_fr.html'>Attributs de classe Java</a>
+                <a target='_top' href='java_class_methods_fr.html'>Méthodes de classe Java</a>
+                <a target='_top' href='java_constructors_fr.html'>Constructeurs Java</a>
+                <a target='_top' href='java_this_fr.html'>Mot-clé Java this</a>
+                <a target='_top' href='java_modifiers_fr.html'>Modificateurs Java</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_modifiers_fr.html'>Modificateurs d'accès</a>
+                    <a target='_top' href='java_non_modifiers_fr.html'>Modificateurs hors accès</a>
+                </div>
+                <a target='_top' href='java_encapsulation_fr.html'>Encapsulation Java</a>
+                <a target='_top' href='java_packages_fr.html'>Packages Java / API</a>
+                <a target='_top' href='java_inheritance_fr.html'>Héritage Java</a>
+                <a target='_top' href='java_polymorphism_fr.html'>Polymorphisme Java</a>
+                <a target='_top' href='java_super_fr.html'>Mot-clé Java super</a>
+                <a target='_top' href='java_inner_classes_fr.html'>Classes internes Java</a>
+                <a target='_top' href='java_abstract_fr.html'>Abstraction Java</a>
+                <a target='_top' href='java_interface_fr.html'>Interface Java</a>
+                <a target='_top' href='java_anonymous_fr.html'>Java Anonyme</a>
+                <a target='_top' href='java_enums_fr.html'>Java Énumération</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_enums_fr.html'>Énumérations</a>
+                    <a target='_top' href='java_enum_constructor_fr.html'>Constructeur d'énumération</a>
+                </div>
+                <a target='_top' href='java_user_input_fr.html'>Saisie utilisateur Java</a>
+                <a target='_top' href='java_date_fr.html'>Date Java</a>
+                <br>
+                <h2>Erreurs Java</h2>
+                <a target='_top' href='java_errors_fr.html'>Erreurs Java</a>
+                <a target='_top' href='java_debugging_fr.html'>Débogage Java</a>
+                <a target='_top' href='java_try_catch_fr.html'>Exceptions Java</a>
+                <a target='_top' href='java_exceptions_multiple_fr.html'>Java Exceptions multiples</a>
+                <a target='_top' href='java_try_catch_resources_fr.html'>Java try-with-resources</a>
+                <br>
+                <h2>Java Gestion des fichiers</h2>
+                <a target='_top' href='java_files_fr.html'>Java Fichiers</a>
+                <a target='_top' href='java_files_create_fr.html'>Java Créer des fichiers</a>
+                <a target='_top' href='java_files_write_fr.html'>Java Écrire des fichiers</a>
+                <a target='_top' href='java_files_read_fr.html'>Java Lire les fichiers</a>
+                <a target='_top' href='java_files_delete_fr.html'>Suppression de fichiers Java</a>
+                <br>
+                <h2>Java Flux d'E/S</h2>
+                <a target='_top' href='java_io_streams_fr.html'>Java Flux d'E/S</a>
+                <a target='_top' href='java_fileinputstream_fr.html'>Java FileInputStream</a>
+                <a target='_top' href='java_fileoutputstream_fr.html'>Java FileOutputStream</a>
+                <a target='_top' href='java_bufferedreader_fr.html'>Java BufferedReader</a>
+                <a target='_top' href='java_bufferedwriter_fr.html'>Java BufferedWriter</a>
+                <br>
+                <h2>Java Structures de données</h2>
+                <a target='_top' href='java_data_structures_fr.html'>Structures de données Java</a>
+                <a target='_top' href='java_collections_fr.html'>Collections Java</a>
+                <a target='_top' href='java_list_fr.html'>Liste Java</a>
+                <a target='_top' href='java_arraylist_fr.html'>Liste de tableaux Java</a>
+                <a target='_top' href='java_linkedlist_fr.html'>Liste chaînée Java</a>
+                <a target='_top' href='java_sort_list_fr.html'>Tri de liste Java</a>
+                <a target='_top' href='java_set_fr.html'>Ensemble Java</a>
+                <a target='_top' href='java_hashset_fr.html'>Java HashSet</a>
+                <a target='_top' href='java_treeset_fr.html'>Java TreeSet</a>
+                <a target='_top' href='java_linkedhashset_fr.html'>Java LinkedHashSet</a>
+                <a target='_top' href='java_map_fr.html'>Java Map</a>
+                <a target='_top' href='java_hashmap_fr.html'>Java HashMap</a>
+                <a target='_top' href='java_treemap_fr.html'>Java TreeMap</a>
+                <a target='_top' href='java_linkedhashmap_fr.html'>Java LinkedHashMap</a>
+                <a target='_top' href='java_iterator_fr.html'>Java Itérateur</a>
+                <a target='_top' href='java_algorithms_fr.html'>Java Algorithmes</a>
+                <br>
+                <h2>Java avancé</h2>
+                <a target='_top' href='java_wrapper_classes_fr.html'>Classes wrapper Java</a>
+                <a target='_top' href='java_generics_fr.html'>Génériques Java</a>
+                <a target='_top' href='java_annotations_fr.html'>Annotations Java</a>
+                <a target='_top' href='java_regex_fr.html'>RegEx Java</a>
+                <a target='_top' href='java_threads_fr.html'>Threads Java</a>
+                <a target='_top' href='java_lambda_fr.html'>Lambda Java</a>
+                <a target='_top' href='java_advanced_sorting_fr.html'>Tri avancé Java</a>
+                <br>
+                <h2>Java Projets</h2>
+                <a target='_top' href='java_projects_fr.html'>Java Projets</a>
+                <br>
+                <h2>Java How To's</h2>
+                <a target='_top' href='java_howtos_fr.html'>Java How Tos</a>
+                <div class='tut_overview'>
+                    <a target='_top' href='java_howtos_fr.html'>How Tos</a>
+                    <a target='_top' href='java_howto_add_two_numbers_fr.html'>Add Two Numbers</a>
+                    <a target='_top' href='java_howto_swap_two_variables_fr.html'>Swap Two Variables</a>
+                    <a target='_top' href='java_howto_even_or_odd_fr.html'>Even or Odd Number</a>
+                    <a target='_top' href='java_howto_reverse_number_fr.html'>Reverse a Number</a>
+                    <a target='_top' href='java_howto_pos_or_neg_fr.html'>Positive or Negative</a>
+                    <a target='_top' href='java_howto_find_square_root_fr.html'>Square Root</a>
+                    <a target='_top' href='java_howto_area_of_rectangle_fr.html'>Area of Rectangle</a>
+                    <a target='_top' href='java_howto_convert_celsius_fr.html'>Celsius to Fahrenheit</a>
+                    <a target='_top' href='java_howto_sum_of_digits_fr.html'>Sum of Digits</a>
+                    <a target='_top' href='java_howto_check_armstrong_number_fr.html'>Check Armstrong Num</a>
+                    <a target='_top' href='java_howto_random_number_fr.html'>Random Number</a>
+                    <a target='_top' href='java_howto_count_words_fr.html'>Count Words</a>
+                    <a target='_top' href='java_howto_count_vowels_string_fr.html'>Count Vowels in a String</a>
+                    <a target='_top' href='java_howto_remove_vowels_string_fr.html'>Remove Vowels</a>
+                    <a target='_top' href='java_howto_count_digits_string_fr.html'>Count Digits in a String</a>
+                    <a target='_top' href='java_howto_reverse_string_fr.html'>Reverse a String</a>
+                    <a target='_top' href='java_howto_palindrome_check_fr.html'>Palindrome Check</a>
+                    <a target='_top' href='java_howto_check_anagram_strings_fr.html'>Check Anagram</a>
+                    <a target='_top' href='java_howto_string_to_array_fr.html'>Convert String to Array</a>
+                    <a target='_top' href='java_howto_remove_whitespace_fr.html'>Remove Whitespace</a>
+                    <a target='_top' href='java_howto_count_char_freq_fr.html'>Count Character Frequency</a>
+                    <a target='_top' href='java_howto_sum_of_array_elements_fr.html'>Sum of Array Elements</a>
+                    <a target='_top' href='java_howto_calculate_avg_array_fr.html'>Find Array Average</a>
+                    <a target='_top' href='java_howto_sort_an_array_fr.html'>Sort an Array</a>
+                    <a target='_top' href='java_howto_find_smallest_array_el_fr.html'>Find Smallest Element</a>
+                    <a target='_top' href='java_howto_largest_el_array_fr.html'>Find Largest Element</a>
+                    <a target='_top' href='java_howto_second_largest_array_fr.html'>Second Largest Array</a>
+                    <a target='_top' href='java_howto_min_max_array_fr.html'>Min and Max Array</a>
+                    <a target='_top' href='java_howto_merge_two_arrays_fr.html'>Merge Two Arrays</a>
+                    <a target='_top' href='java_howto_remove_duplicates_array_fr.html'>Remove Duplicates</a>
+                    <a target='_top' href='java_howto_duplicate_elements_array_fr.html'>Find Duplicates</a>
+                    <a target='_top' href='java_howto_shuffle_array_fr.html'>Shuffle an Array</a>
+                    <a target='_top' href='java_howto_factorial_fr.html'>Factorial of a Number</a>
+                    <a target='_top' href='java_howto_fibonacci_fr.html'>Fibonacci Sequence</a>
+                    <a target='_top' href='java_howto_find_gcd_fr.html'>Find GCD</a>
+                    <a target='_top' href='java_howto_check_prime_num_fr.html'>Check Prime Number</a>
+                    <a target='_top' href='java_howto_loop_through_arraylist_fr.html'>ArrayList Loop</a>
+                    <a target='_top' href='java_howto_loop_through_hashmap_fr.html'>HashMap Loop</a>
+                    <a target='_top' href='java_howto_loop_through_enum_fr.html'>Loop Through an Enum</a>
+                </div>
+                <br>
+                <h2>Java Référence</h2>
+                <a target='_top' href='java_ref_reference_fr.html'>Référence Java</a>
+                <a target='_top' href='java_ref_keywords_fr.html'>Mots-clés Java</a>
+                <div class='tut_overview' style='margin-left:10px;'>
+                    <a target='_top' href='ref_keyword_assert_fr.html'>assert</a>
+                    <a target='_top' href='ref_keyword_abstract_fr.html'>abstract</a>
+                    <a target='_top' href='ref_keyword_boolean_fr.html'>boolean</a>
+                    <a target='_top' href='ref_keyword_break_fr.html'>break</a>
+                    <a target='_top' href='ref_keyword_byte_fr.html'>byte</a>
+                    <a target='_top' href='ref_keyword_case_fr.html'>case</a>
+                    <a target='_top' href='ref_keyword_catch_fr.html'>catch</a>
+                    <a target='_top' href='ref_keyword_char_fr.html'>char</a>
+                    <a target='_top' href='ref_keyword_class_fr.html'>class</a>
+                    <a target='_top' href='ref_keyword_continue_fr.html'>continue</a>
+                    <a target='_top' href='ref_keyword_default_fr.html'>default</a>
+                    <a target='_top' href='ref_keyword_do_fr.html'>do</a>
+                    <a target='_top' href='ref_keyword_double_fr.html'>double</a>
+                    <a target='_top' href='ref_keyword_else_fr.html'>else</a>
+                    <a target='_top' href='ref_keyword_enum_fr.html'>enum</a>
+                    <a target='_top' href='ref_keyword_exports_fr.html'>exports</a>
+                    <a target='_top' href='ref_keyword_extends_fr.html'>extends</a>
+                    <a target='_top' href='ref_keyword_final_fr.html'>final</a>
+                    <a target='_top' href='ref_keyword_finally_fr.html'>finally</a>
+                    <a target='_top' href='ref_keyword_float_fr.html'>float</a>
+                    <a target='_top' href='ref_keyword_for_fr.html'>for</a>
+                    <a target='_top' href='ref_keyword_if_fr.html'>if</a>
+                    <a target='_top' href='ref_keyword_implements_fr.html'>implements</a>
+                    <a target='_top' href='ref_keyword_import_fr.html'>import</a>
+                    <a target='_top' href='ref_keyword_instanceof_fr.html'>instanceof</a>
+                    <a target='_top' href='ref_keyword_int_fr.html'>int</a>
+                    <a target='_top' href='ref_keyword_interface_fr.html'>interface</a>
+                    <a target='_top' href='ref_keyword_long_fr.html'>long</a>
+                    <a target='_top' href='ref_keyword_module_fr.html'>module</a>
+                    <a target='_top' href='ref_keyword_native_fr.html'>native</a>
+                    <a target='_top' href='ref_keyword_new_fr.html'>new</a>
+                    <a target='_top' href='ref_keyword_package_fr.html'>package</a>
+                    <a target='_top' href='ref_keyword_private_fr.html'>private</a>
+                    <a target='_top' href='ref_keyword_protected_fr.html'>protected</a>
+                    <a target='_top' href='ref_keyword_public_fr.html'>public</a>
+                    <a target='_top' href='ref_keyword_return_fr.html'>return</a>
+                    <a target='_top' href='ref_keyword_requires_fr.html'>requires</a>
+                    <a target='_top' href='ref_keyword_short_fr.html'>short</a>
+                    <a target='_top' href='ref_keyword_static_fr.html'>static</a>
+                    <a target='_top' href='ref_keyword_super_fr.html'>super</a>
+                    <a target='_top' href='ref_keyword_switch_fr.html'>switch</a>
+                    <a target='_top' href='ref_keyword_synchronized_fr.html'>synchronized</a>
+                    <a target='_top' href='ref_keyword_this_fr.html'>this</a>
+                    <a target='_top' href='ref_keyword_throw_fr.html'>throw</a>
+                    <a target='_top' href='ref_keyword_throws_fr.html'>throws</a>
+                    <a target='_top' href='ref_keyword_transient_fr.html'>transient</a>
+                    <a target='_top' href='ref_keyword_try_fr.html'>try</a>
+                    <a target='_top' href='ref_keyword_var_fr.html'>var</a>
+                    <a target='_top' href='ref_keyword_void_fr.html'>void</a>
+                    <a target='_top' href='ref_keyword_volatile_fr.html'>volatile</a>
+                    <a target='_top' href='ref_keyword_while_fr.html'>while</a>
+                </div>
+                <a target='_top' href='java_ref_string_fr.html'>Méthodes de chaîne Java</a>
+                <div class='tut_overview' style='margin-left:10px;'>
+                    <a target='_top' href='ref_string_charat_fr.html'>charAt()</a>
+                    <a target='_top' href='ref_string_codepointat_fr.html'>codePointAt()</a>
+                    <a target='_top' href='ref_string_codepointbefore_fr.html'>codePointBefore()</a>
+                    <a target='_top' href='ref_string_codepointcount_fr.html'>codePointCount()</a>
+                    <a target='_top' href='ref_string_compareto_fr.html'>compareTo()</a>
+                    <a target='_top' href='ref_string_comparetoignorecase_fr.html'>compareToIgnoreCase()</a>
+                    <a target='_top' href='ref_string_concat_fr.html'>concat()</a>
+                    <a target='_top' href='ref_string_contains_fr.html'>contains()</a>
+                    <a target='_top' href='ref_string_contentequals_fr.html'>contentEquals()</a>
+                    <a target='_top' href='ref_string_copyvalueof_fr.html'>copyValueOf()</a>
+                    <a target='_top' href='ref_string_endswith_fr.html'>endsWith()</a>
+                    <a target='_top' href='ref_string_equals_fr.html'>equals()</a>
+                    <a target='_top' href='ref_string_equalsignorecase_fr.html'>equalsIgnoreCase()</a>
+                    <a target='_top' href='ref_string_format_fr.html'>format()</a>
+                    <a target='_top' href='ref_string_getbytes_fr.html'>getBytes()</a>
+                    <a target='_top' href='ref_string_getchars_fr.html'>getChars()</a>
+                    <a target='_top' href='ref_string_hashcode_fr.html'>hashCode()</a>
+                    <a target='_top' href='ref_string_indexof_fr.html'>indexOf()</a>
+                    <a target='_top' href='ref_string_isempty_fr.html'>isEmpty()</a>
+                    <a target='_top' href='ref_string_join_fr.html'>join()</a>
+                    <a target='_top' href='ref_string_lastindexof_fr.html'>lastIndexOf()</a>
+                    <a target='_top' href='ref_string_length_fr.html'>length()</a>
+                    <a target='_top' href='ref_string_matches_fr.html'>matches()</a>
+                    <a target='_top' href='ref_string_offsetbycodepoints_fr.html'>offsetByCodePoints()</a>
+                    <a target='_top' href='ref_string_regionmatches_fr.html'>regionMatches()</a>
+                    <a target='_top' href='ref_string_replace_fr.html'>replace()</a>
+                    <a target='_top' href='ref_string_replaceall_fr.html'>replaceAll()</a>
+                    <a target='_top' href='ref_string_replacefirst_fr.html'>replaceFirst()</a>
+                    <a target='_top' href='ref_string_split_fr.html'>split()</a>
+                    <a target='_top' href='ref_string_startswith_fr.html'>startsWith()</a>
+                    <a target='_top' href='ref_string_subsequence_fr.html'>subSequence()</a>
+                    <a target='_top' href='ref_string_substring_fr.html'>substring()</a>
+                    <a target='_top' href='ref_string_tochararray_fr.html'>toCharArray()</a>
+                    <a target='_top' href='ref_string_tolowercase_fr.html'>toLowerCase()</a>
+                    <a target='_top' href='ref_string_tostring_fr.html'>toString()</a>
+                    <a target='_top' href='ref_string_touppercase_fr.html'>toUpperCase()</a>
+                    <a target='_top' href='ref_string_trim_fr.html'>trim()</a>
+                    <a target='_top' href='ref_string_valueof_fr.html'>valueOf()</a>
+                </div>
+                <a target='_top' href='java_ref_math_fr.html'>Méthodes mathématiques Java</a>
+                <div class='tut_overview' style='margin-left:10px;'>
+                    <a target='_top' href='ref_math_abs_fr.html'>abs()</a>
+                    <a target='_top' href='ref_math_acos_fr.html'>acos()</a>
+                    <a target='_top' href='ref_math_addexact_fr.html'>addExact()</a>
+                    <a target='_top' href='ref_math_asin_fr.html'>asin()</a>
+                    <a target='_top' href='ref_math_atan_fr.html'>atan()</a>
+                    <a target='_top' href='ref_math_atan2_fr.html'>atan2()</a>
+                    <a target='_top' href='ref_math_cbrt_fr.html'>cbrt()</a>
+                    <a target='_top' href='ref_math_ceil_fr.html'>ceil()</a>
+                    <a target='_top' href='ref_math_copysign_fr.html'>copySign()</a>
+                    <a target='_top' href='ref_math_cos_fr.html'>cos()</a>
+                    <a target='_top' href='ref_math_cosh_fr.html'>cosh()</a>
+                    <a target='_top' href='ref_math_decrementexact_fr.html'>decrementExact()</a>
+                    <a target='_top' href='ref_math_exp_fr.html'>exp()</a>
+                    <a target='_top' href='ref_math_expm1_fr.html'>expm1()</a>
+                    <a target='_top' href='ref_math_floor_fr.html'>floor()</a>
+                    <a target='_top' href='ref_math_floordiv_fr.html'>floorDiv()</a>
+                    <a target='_top' href='ref_math_floormod_fr.html'>floorMod()</a>
+                    <a target='_top' href='ref_math_getexponent_fr.html'>getExponent()</a>
+                    <a target='_top' href='ref_math_hypot_fr.html'>hypot()</a>
+                    <a target='_top' href='ref_math_ieeeremainder_fr.html'>IEEEremainder()</a>
+                    <a target='_top' href='ref_math_incrementexact_fr.html'>incrementExact()</a>
+                    <a target='_top' href='ref_math_log_fr.html'>log()</a>
+                    <a target='_top' href='ref_math_log10_fr.html'>log10()</a>
+                    <a target='_top' href='ref_math_log1p_fr.html'>log1p()</a>
+                    <a target='_top' href='ref_math_max_fr.html'>max()</a>
+                    <a target='_top' href='ref_math_min_fr.html'>min()</a>
+                    <a target='_top' href='ref_math_multiplyexact_fr.html'>multiplyExact()</a>
+                    <a target='_top' href='ref_math_negateexact_fr.html'>negateExact()</a>
+                    <a target='_top' href='ref_math_nextafter_fr.html'>nextAfter()</a>
+                    <a target='_top' href='ref_math_nextdown_fr.html'>nextDown()</a>
+                    <a target='_top' href='ref_math_nextup_fr.html'>nextUp()</a>
+                    <a target='_top' href='ref_math_pow_fr.html'>pow()</a>
+                    <a target='_top' href='ref_math_random_fr.html'>random()</a>
+                    <a target='_top' href='ref_math_rint_fr.html'>rint()</a>
+                    <a target='_top' href='ref_math_round_fr.html'>round()</a>
+                    <a target='_top' href='ref_math_scalb_fr.html'>scalb()</a>
+                    <a target='_top' href='ref_math_signum_fr.html'>signum()</a>
+                    <a target='_top' href='ref_math_sin_fr.html'>sin()</a>
+                    <a target='_top' href='ref_math_sinh_fr.html'>sinh()</a>
+                    <a target='_top' href='ref_math_sqrt_fr.html'>sqrt()</a>
+                    <a target='_top' href='ref_math_subtractexact_fr.html'>subtractExact()</a>
+                    <a target='_top' href='ref_math_tan_fr.html'>tan()</a>
+                    <a target='_top' href='ref_math_tanh_fr.html'>tanh()</a>
+                    <a target='_top' href='ref_math_todegrees_fr.html'>toDegrees()</a>
+                    <a target='_top' href='ref_math_tointexact_fr.html'>toIntExact()</a>
+                    <a target='_top' href='ref_math_toradians_fr.html'>toRadians()</a>
+                    <a target='_top' href='ref_math_ulp_fr.html'>ulp()</a>
+                </div>
+                <a target='_top' href='java_ref_output_fr.html'>Méthodes de sortie Java</a>
+                <div class='tut_overview' style='margin-left:10px;'>
+                    <a target='_top' href='ref_output_print_fr.html'>print()</a>
+                    <a target='_top' href='ref_output_printf_fr.html'>printf()</a>
+                    <a target='_top' href='ref_output_println_fr.html'>println()</a>
+                </div>
+                <a target='_top' href='java_ref_arrays_fr.html'>Méthodes des tableaux Java</a>
+                <div class='tut_overview' style='margin-left:10px;'>
+                    <a target='_top' href='ref_arrays_compare_fr.html'>compare()</a>
+                    <a target='_top' href='ref_arrays_equals_fr.html'>equals()</a>
+                    <a target='_top' href='ref_arrays_sort_fr.html'>sort()</a>
+                    <a target='_top' href='ref_arrays_fill_fr.html'>fill()</a>
+                    <a target='_top' href='ref_arrays_length_fr.html'>length</a>
+                </div>
+                <a target='_top' href='java_ref_arraylist_fr.html'>Méthodes Java ArrayList</a>
+                <div class='tut_overview' style='margin-left:10px;'>
+                    <a target='_top' href='ref_arraylist_add_fr.html'>add()</a>
+                    <a target='_top' href='ref_arraylist_addall_fr.html'>addAll()</a>
+                    <a target='_top' href='ref_arraylist_clear_fr.html'>clear()</a>
+                    <a target='_top' href='ref_arraylist_clone_fr.html'>clone()</a>
+                    <a target='_top' href='ref_arraylist_contains_fr.html'>contains</a>
+                    <a target='_top' href='ref_arraylist_ensurecapacity_fr.html'>ensureCapacity()</a>
+                    <a target='_top' href='ref_arraylist_foreach_fr.html'>forEach()</a>
+                    <a target='_top' href='ref_arraylist_get_fr.html'>get()</a>
+                    <a target='_top' href='ref_arraylist_indexof_fr.html'>indexOf()</a>
+                    <a target='_top' href='ref_arraylist_isempty_fr.html'>isEmpty()</a>
+                    <a target='_top' href='ref_arraylist_iterator_fr.html'>iterator()</a>
+                    <a target='_top' href='ref_arraylist_lastindexof_fr.html'>lastIndexOf()</a>
+                    <a target='_top' href='ref_arraylist_listiterator_fr.html'>listIterator()</a>
+                    <a target='_top' href='ref_arraylist_remove_fr.html'>remove()</a>
+                    <a target='_top' href='ref_arraylist_removeall_fr.html'>removeAll()</a>
+                    <a target='_top' href='ref_arraylist_removeif_fr.html'>removeIf()</a>
+                    <a target='_top' href='ref_arraylist_replaceall_fr.html'>replaceAll()</a>
+                    <a target='_top' href='ref_arraylist_retainall_fr.html'>retainAll()</a>
+                    <a target='_top' href='ref_arraylist_set_fr.html'>set()</a>
+                    <a target='_top' href='ref_arraylist_size_fr.html'>size()</a>
+                    <a target='_top' href='ref_arraylist_sort_fr.html'>sort()</a>
+                    <a target='_top' href='ref_arraylist_spliterator_fr.html'>spliterator()</a>
+                    <a target='_top' href='ref_arraylist_sublist_fr.html'>subList()</a>
+                    <a target='_top' href='ref_arraylist_toarray_fr.html'>toArray()</a>
+                    <a target='_top' href='ref_arraylist_trimtosize_fr.html'>trimToSize()</a>
+                </div>
+                <a target='_top' href='java_ref_linkedlist_fr.html'>Méthodes de liste chaînée Java</a>
+                <div class='tut_overview' style='margin-left:10px;'>
+                    <a target='_top' href='ref_linkedlist_add_fr.html'>add()</a>
+                    <a target='_top' href='ref_linkedlist_addall_fr.html'>addAll()</a>
+                    <a target='_top' href='ref_linkedlist_clear_fr.html'>clear()</a>
+                    <a target='_top' href='ref_linkedlist_clone_fr.html'>clone()</a>
+                    <a target='_top' href='ref_linkedlist_contains_fr.html'>contains</a>
+                    <a target='_top' href='ref_linkedlist_foreach_fr.html'>forEach()</a>
+                    <a target='_top' href='ref_linkedlist_get_fr.html'>get()</a>
+                    <a target='_top' href='ref_linkedlist_getfirst_fr.html'>getFirst()</a>
+                    <a target='_top' href='ref_linkedlist_getlast_fr.html'>getLast()</a>
+                    <a target='_top' href='ref_linkedlist_indexof_fr.html'>indexOf()</a>
+                    <a target='_top' href='ref_linkedlist_isempty_fr.html'>isEmpty()</a>
+                    <a target='_top' href='ref_linkedlist_iterator_fr.html'>iterator()</a>
+                    <a target='_top' href='ref_linkedlist_lastindexof_fr.html'>lastIndexOf()</a>
+                    <a target='_top' href='ref_linkedlist_listiterator_fr.html'>listIterator()</a>
+                    <a target='_top' href='ref_linkedlist_remove_fr.html'>remove()</a>
+                    <a target='_top' href='ref_linkedlist_removeall_fr.html'>removeAll()</a>
+                    <a target='_top' href='ref_linkedlist_removefirst_fr.html'>removeFirst()</a>
+                    <a target='_top' href='ref_linkedlist_removeif_fr.html'>removeIf()</a>
+                    <a target='_top' href='ref_linkedlist_removelast_fr.html'>removeLast()</a>
+                    <a target='_top' href='ref_linkedlist_replaceall_fr.html'>replaceAll()</a>
+                    <a target='_top' href='ref_linkedlist_retainall_fr.html'>retainAll()</a>
+                    <a target='_top' href='ref_linkedlist_set_fr.html'>set()</a>
+                    <a target='_top' href='ref_linkedlist_size_fr.html'>size()</a>
+                    <a target='_top' href='ref_linkedlist_sort_fr.html'>sort()</a>
+                    <a target='_top' href='ref_linkedlist_spliterator_fr.html'>spliterator()</a>
+                    <a target='_top' href='ref_linkedlist_sublist_fr.html'>subList()</a>
+                    <a target='_top' href='ref_linkedlist_toarray_fr.html'>toArray()</a>
+                </div>
+                <a target='_top' href='java_ref_hashmap_fr.html'>Méthodes Java HashMap</a>
+                <div class='tut_overview' style='margin-left:10px;'>
+                    <a target='_top' href='ref_hashmap_clear_fr.html'>clear()</a>
+                    <a target='_top' href='ref_hashmap_clone_fr.html'>clone()</a>
+                    <a target='_top' href='ref_hashmap_compute_fr.html'>compute()</a>
+                    <a target='_top' href='ref_hashmap_computeifabsent_fr.html'>computeIfAbsent()</a>
+                    <a target='_top' href='ref_hashmap_computeifpresent_fr.html'>computeIfPresent()</a>
+                    <a target='_top' href='ref_hashmap_containskey_fr.html'>containsKey()</a>
+                    <a target='_top' href='ref_hashmap_containsvalue_fr.html'>containsValue()</a>
+                    <a target='_top' href='ref_hashmap_entryset_fr.html'>entrySet()</a>
+                    <a target='_top' href='ref_hashmap_foreach_fr.html'>forEach()</a>
+                    <a target='_top' href='ref_hashmap_get_fr.html'>get()</a>
+                    <a target='_top' href='ref_hashmap_getordefault_fr.html'>getOrDefault()</a>
+                    <a target='_top' href='ref_hashmap_isempty_fr.html'>isEmpty()</a>
+                    <a target='_top' href='ref_hashmap_keyset_fr.html'>keySet()</a>
+                    <a target='_top' href='ref_hashmap_merge_fr.html'>merge()</a>
+                    <a target='_top' href='ref_hashmap_put_fr.html'>put()</a>
+                    <a target='_top' href='ref_hashmap_putall_fr.html'>putAll()</a>
+                    <a target='_top' href='ref_hashmap_putifabsent_fr.html'>putIfAbsent()</a>
+                    <a target='_top' href='ref_hashmap_remove_fr.html'>remove()</a>
+                    <a target='_top' href='ref_hashmap_replace_fr.html'>replace()</a>
+                    <a target='_top' href='ref_hashmap_replaceall_fr.html'>replaceAll()</a>
+                    <a target='_top' href='ref_hashmap_size_fr.html'>size()</a>
+                    <a target='_top' href='ref_hashmap_values_fr.html'>values()</a>
+                </div>
+                <a target='_top' href='java_ref_scanner_fr.html'>Méthodes du scanner Java</a>
+                <div class='tut_overview' style='margin-left:10px;'>
+                    <a target='_top' href='ref_scanner_close_fr.html'>close()</a>
+                    <a target='_top' href='ref_scanner_delimiter_fr.html'>delimiter()</a>
+                    <a target='_top' href='ref_scanner_findinline_fr.html'>findInLine()</a>
+                    <a target='_top' href='ref_scanner_findwithinhorizon_fr.html'>findWithinHorizon()</a>
+                    <a target='_top' href='ref_scanner_hasnext_fr.html'>hasNext()</a>
+                    <a target='_top' href='ref_scanner_hasnextboolean_fr.html'>hasNextBoolean()</a>
+                    <a target='_top' href='ref_scanner_hasnextbyte_fr.html'>hasNextByte()</a>
+                    <a target='_top' href='ref_scanner_hasnextdouble_fr.html'>hasNextDouble()</a>
+                    <a target='_top' href='ref_scanner_hasnextfloat_fr.html'>hasNextFloat()</a>
+                    <a target='_top' href='ref_scanner_hasnextint_fr.html'>hasNextInt()</a>
+                    <a target='_top' href='ref_scanner_hasnextline_fr.html'>hasNextLine()</a>
+                    <a target='_top' href='ref_scanner_hasnextlong_fr.html'>hasNextLong()</a>
+                    <a target='_top' href='ref_scanner_hasnextshort_fr.html'>hasNextShort()</a>
+                    <a target='_top' href='ref_scanner_locale_fr.html'>locale()</a>
+                    <a target='_top' href='ref_scanner_next_fr.html'>next()</a>
+                    <a target='_top' href='ref_scanner_nextboolean_fr.html'>nextBoolean()</a>
+                    <a target='_top' href='ref_scanner_nextbyte_fr.html'>nextByte()</a>
+                    <a target='_top' href='ref_scanner_nextdouble_fr.html'>nextDouble()</a>
+                    <a target='_top' href='ref_scanner_nextfloat_fr.html'>nextFloat()</a>
+                    <a target='_top' href='ref_scanner_nextint_fr.html'>nextInt()</a>
+                    <a target='_top' href='ref_scanner_nextline_fr.html'>nextLine()</a>
+                    <a target='_top' href='ref_scanner_nextlong_fr.html'>nextLong()</a>
+                    <a target='_top' href='ref_scanner_nextshort_fr.html'>nextShort()</a>
+                    <a target='_top' href='ref_scanner_radix_fr.html'>radix()</a>
+                    <a target='_top' href='ref_scanner_reset_fr.html'>reset()</a>
+                    <a target='_top' href='ref_scanner_usedelimiter_fr.html'>useDelimiter()</a>
+                    <a target='_top' href='ref_scanner_uselocale_fr.html'>useLocale()</a>
+                    <a target='_top' href='ref_scanner_useradix_fr.html'>useRadix()</a>
+                </div>
+                <a target='_top' href='java_ref_file_fr.html'>Java Méthodes de fichiers</a>
+                <a target='_top' href='java_ref_fileinputstream_fr.html'>Java FileInputStream</a>
+                <a target='_top' href='java_ref_fileoutputstream_fr.html'>Java FileOutputStream</a>
+                <a target='_top' href='java_ref_bufferedreader_fr.html'>Java BufferedReader</a>
+                <a target='_top' href='java_ref_bufferedwriter_fr.html'>Java BufferedWriter</a>
+                <a target='_top' href='java_ref_iterators_fr.html'>Java Méthodes d'itération</a>
+                <a target='_top' href='java_ref_collections_fr.html'>Java Méthodes de collecte</a>
+                <a target='_top' href='java_ref_system_fr.html'>Java Méthodes du système</a>
+                <a target='_top' href='java_ref_errors_fr.html'>Java Erreurs et exceptions</a>
+                <br>
+                <h2>Java Exemples</h2>
+                <a target='_top' href='java_examples_fr.html'>Exemples Java</a>
+                <a target='_top' href='java_compiler_fr.html'>Compilateur Java</a>
+                <a target='_top' href='java_exercises_fr.html'>Exercices Java</a>
+                <a target='_top' href='java_quiz_fr.html'>Quiz Java</a>
+                <a target='_top' href='java_server_fr.html'>Serveur Java</a>
+                <a target='_top' href='java_syllabus_fr.html'>Programme Java</a>
+                <a target='_top' href='java_study_plan_fr.html'>Plan d'étude Java</a>
+                <a target='_top' href='java_exam_fr.html'>Certificat Java</a>
+                <br><br>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--/Left menu--><!--CONTENT-->
+<div class='w3-main w3-light-grey' id='belowtopnav' style='margin-left:220px;'>
+    <div class='w3-row w3-white'>
+        <div class='w3-col l10 m12' id='main'>
+          <div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>            <a href='index_fr.html'><img src='../svg/java_icon.svg' alt='Langage de programmation Java. Tutoriels pour débutants' class="w3-left w3-padding" title='Java pour débutants. W3Schools en français' style='width:120px'></a>    <p class='w3-right'>
+        <a href='java_variables_reallife_en.html' title='Passer à l&#8217;anglais'>En</a>
+        <a href='java_variables_reallife.html' title='Passer à l&#8217;ukrainien'>Ua</a>
+        <a href='java_variables_reallife_es.html' title='Passer à l&#8217;espagnol'>Es</a>
+        <a href='java_variables_reallife_de.html' title='Passer à l&#8217;allemand'>De</a>
+        <a href='java_variables_reallife_ru.html' title='Passer au russe'>Ru</a>
+    </p>
+    <article>
+        <h1>Java <span class="color_h1">Variables - Exemples</span></h1>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="java_variables_final_fr.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="java_data_types_fr.html">Next &#10095;</a>
+        </div>
+        <hr>
+        <h2>Exemples concrets</h2>
+        <p>Dans nos exemples, nous simplifions souvent les noms des variables pour qu'ils correspondent à leur type de données (myInt ou myNum pour les types <code class="w3-codespan">int</code>, myChar pour les types <code class="w3-codespan">char</code>, etc.). Ceci afin d'éviter toute confusion.</p>
+        <p>Toutefois, à titre d'exemple pratique d'utilisation des variables, nous avons créé un programme qui stocke différentes données concernant un étudiant :</p>
+        <div class="w3-example">
+            <h3>Exemple</h3>
+            <pre class="language-java w3-white"><code>// Données étudiantes
+String studentName = &quot;John Doe&quot;;
+int studentID = 15;
+int studentAge = 23;
+float studentFee = 75.25f;
+char studentGrade = 'B';
+
+// Variables d'impression
+System.out.println(&quot;Student name: &quot; + studentName);
+System.out.println(&quot;Student id: &quot; + studentID);
+System.out.println(&quot;Student age: &quot; + studentAge);
+System.out.println(&quot;Student fee: &quot; + studentFee);
+System.out.println(&quot;Student grade: &quot; + studentGrade);</code></pre>
+            <p><a target="_blank" class="w3-btn" href="../javatryit/demo_variables_reallife.html">Try it Yourself &raquo;</a></p>
+        </div>
+        <hr>
+        <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>        <h2>Calculer l'aire d'un rectangle</h2>
+        <p>Dans cet exemple concret, nous créons un programme pour calculer l'aire d'un rectangle (en multipliant la longueur et la largeur) :</p>
+        <div class="w3-example">
+            <h3>Exemple</h3>
+            <pre class="language-java w3-white"><code>// Créer des variables entières
+int length = 4;
+int width = 6;
+int area;
+
+// Calculer l'aire d'un rectangle
+area = length * width;
+
+// Variables d'impression
+System.out.println(&quot;Length is: &quot; + length);
+System.out.println(&quot;Width is: &quot; + width);
+System.out.println(&quot;Area of the rectangle is: &quot; + area);</code></pre>
+            <p><a target="_blank" class="w3-btn" href="../javatryit/demo_variables_reallife2.html">Try it Yourself &raquo;</a></p>
+        </div>
+        <hr>
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="java_variables_final_fr.html">&#10094; Prev</a>
+            <a class="w3-right w3-btn" href="java_data_types_fr.html">Next &#10095;</a>
+        </div>
+    </article>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+    </div>
+<!--Right sidebar-->
+<div class='w3-col l2 m12' id='right'>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class='shadow-black-1' title='Tous les manuels en ligne sur le site'>PROGRAMMATION</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../programming/index_fr.html' class='btn-rightbar'>Programmation Intro</a>
+            <a href='../python/index_fr.html' class='btn-rightbar'>Python</a>
+            <a href='../django/index_fr.html' class='btn-rightbar'>Django</a>
+            <a href='../java/index_fr.html' class='btn-rightbar'>Java</a>
+            <a href='../kotlin/index_fr.html' class='btn-rightbar'>Kotlin</a>
+            <a href='../js/index_fr.html' class='btn-rightbar'>JavaScript</a>
+            <a href='../typescript/index_fr.html' class='btn-rightbar'>TypeScript</a>
+            <a href='../c/index_fr.html' class='btn-rightbar'>C</a>
+            <a href='../cpp/index_fr.html' class='btn-rightbar'>C++</a>
+            <a href='../cs/index_fr.html' class='btn-rightbar'>C#</a>
+            <a href='../r/index_fr.html' class='btn-rightbar'>R</a>
+            <a href='../rust/index_fr.html' class='btn-rightbar'>Rust</a>
+            <a href='../go/index_fr.html' class='btn-rightbar'>Go</a>
+            <a href='../swift/index_fr.html' class='btn-rightbar'>Swift</a>
+        </div>
+    </div>
+    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:230px'>Place à votre publicité!</div>
+<div class="adver2">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1902033594" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="admedia-square-rightbar">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_square_rightbar -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="6653465929" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <div class='sidesection' style='margin-left:auto;margin-right:auto;max-width:100%'>
+        <div class='w3-container w3-blue-grey w3-border'>
+            <h5 class='shadow-black-1' title='Tous les guides en ligne sur le site'>CÔTÉ SERVEUR</h5>
+        </div>
+        <div class='w3-border'>
+            <a href='../sql/index_fr.html' class='btn-rightbar'>SQL</a>
+            <a href='../mysql/index_fr.html' class='btn-rightbar'>MySQL</a>
+            <a href='../php/index_fr.html' class='btn-rightbar'>PHP</a>
+            <a href='../asp/index_fr.html' class='btn-rightbar'>ASP & ASP.NET</a>
+            <a href='../nodejs/index_fr.html' class='btn-rightbar'>NodeJS</a>
+            <a href='../nodejs/nodejs_raspberrypi_fr.html' class='btn-rightbar'>Raspberry Pi</a>
+            <a href='../git/index_fr.html' class='btn-rightbar'>Git</a>
+            <a href='../githubpages/index_fr.html' class='btn-rightbar'>GitHub Pages</a>
+            <a href='../bash/index_fr.html' class='btn-rightbar'>Bash</a>
+            <a href='../mongodb/index_fr.html' class='btn-rightbar'>MongoDB</a>
+            <a href='../aws/index_fr.html' class='btn-rightbar'>AWS Cloud</a>
+        </div>
+    </div>
+  <div class="adver3">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- admedia_vertical_rightbar2 -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7441711750" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div class="adver_admultiplex_rightbar1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="9491119548"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<!--/Right sidebar-->
+</div><!--FOOTER-->
+<div id='footer' class='footer w3-container w3-white'>
+  <hr>
+  <div class='w3-row-padding w3-center w3-small' style='margin:0 -16px'>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' onclick='displayError();return false' style='white-space:nowrap;text-decoration:none'>CONTACTS</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='javascript:void(0);' target='_blank' onclick='printPage();return false;' style='text-decoration:none'>IMPRIMER LA PAGE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../blog/index_fr.html' target='_top' style='text-decoration:none'>BLOGUE</a>
+    </div>
+    <div class='w3-col l3 m3 s12'>
+      <a class='btn-footer' href='../about/index_fr.html' target='_top' style='text-decoration:none'>À PROPOS</a>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-padding w3-margin-bottom feedback' id='err_form'>
+    <span onclick="this.parentElement.style.display='none'" class='w3-button w3-display-topright w3-large'>&times;</span>
+      <h2>Contacts</h2>
+      <p>Si vous souhaitez signaler un bug, ainsi que faire une offre pour le site, ajouter une annonce ou une publicité sur le site, n'hésitez pas à envoyer un email à l'administrateur:</p>
+      <p>w3schoolsua@gmail.com</p>
+  </div>
+  <div class='w3-row w3-center w3-small'>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Tutoriel supérieur</h4>
+        <a href='../html/index_fr.html'>HTML Tutoriel</a><br>
+        <a href='../css/index_fr.html'>CSS Tutoriel</a><br>
+        <a href='../js/index_fr.html'>JavaScript Tutoriel</a><br>
+        <a href='../sql/index_fr.html'>SQL Tutoriel</a><br>
+        <a href='../python/index_fr.html'>Python Tutoriel</a><br>
+        <a href='../php/index_fr.html'>PHP Tutoriel</a><br>
+        <a href='../w3css/index_fr.html'>W3.CSS Tutoriel</a><br>
+        <a href='../appml/index_fr.html'>AppML Tutoriel</a><br>
+        <a href='../jquery/index_fr.html'>jQuery Tutoriel</a><br>
+        <a href='../angular/index_fr.html'>Angular Tutoriel</a><br>
+        <a href='../sass/index_fr.html'>Sass Tutoriel</a><br>
+        <a href='../java/index_fr.html'>Java Tutoriel</a><br>
+        <a href='../kotlin/index_fr.html'>Kotlin Tutoriel</a><br>
+        <a href='../c/index_fr.html'>C Tutoriel</a><br>
+        <a href='../cpp/index_fr.html'>C++ Tutoriel</a><br>
+        <a href='../cs/index_fr.html'>C# Tutoriel</a><br>
+        <a href='../swift/index_fr.html'>Swift Tutoriel</a><br>
+        <a href='../chatgpt-3-5/index_fr.html'>ChatGPT-3.5 Tutoriel</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Principales références</h4>
+        <a href='../tags/index_fr.html'>HTML Référence</a><br>
+        <a href='../cssref/index_fr.html'>CSS Référence</a><br>
+        <a href='../jsref/index_fr.html'>JavaScript Référence</a><br>
+        <a href='../sql/sql_ref_keywords_fr.html'>SQL Référence</a><br>
+        <a href='../python/python_reference_fr.html'>Python Référence</a><br>
+        <a href='../php/php_ref_overview_fr.html'>PHP Référence</a><br>
+        <a href='../bootstrap/bootstrap_ref_all_classes_fr.html'>Bootstrap 3 Référence</a><br>
+        <a href='../bootstrap4/bootstrap_ref_all_classes_fr.html'>Bootstrap 4 Référence</a><br>
+        <a href='../w3css/w3css_references_fr.html'>W3.CSS Référence</a><br>
+        <a href='../appml/appml_reference_fr.html'>Appml Référence</a><br>
+        <a href='../jquery/jquery_ref_overview_fr.html'>jQuery Référence</a><br>
+        <a href='../angular/angular_ref_directives_fr.html'>Angular Référence</a><br>
+        <a href='../sass/sass_functions_string_fr.html'>Sass Référence</a><br>
+        <a href='../java/java_ref_keywords_fr.html'>Java Référence</a><br>
+        <a href='../colors/colors_names_fr.html'>Couleurs Référence</a><br>
+        <a href='../icons/icons_reference_fr.html'>Icônes Référence</a><br>
+        <a href='../graphics/svg_reference_fr.html'>SVG Référence</a><br>
+        <a href='../jsref/api_canvas_fr.html'>Canvas Référence</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4>Meilleurs exemples</h4>
+        <a href='../html/html_examples_fr.html'>HTML Exemples</a><br>
+        <a href='../css/css_examples_fr.html'>CSS Exemples</a><br>
+        <a href='../js/js_examples_fr.html'>JavaScript Exemples</a><br>
+        <a href='../sql/sql_examples_fr.html'>SQL Exemples</a><br>
+        <a href='../python/python_examples_fr.html'>Python Exemples</a><br>
+        <a href='../php/php_examples_fr.html'>PHP Exemples</a><br>
+        <a href='../bootstrap/bootstrap_examples_fr.html'>Bootstrap Exemples</a><br>
+        <a href='../w3css/w3css_examples_fr.html'>W3.CSS Exemples</a><br>
+        <a href='../jquery/jquery_examples_fr.html'>jQuery Exemples</a><br>
+        <a href='../angular/angular_examples_fr.html'>Angular Exemples</a><br>
+        <a href='../java/java_examples_fr.html'>Java Exemples</a><br>
+        <a href='../kotlin/kotlin_examples_fr.html'>Kotlin Exemples</a><br>
+        <a href='../c/c_examples_fr.html'>C Exemples</a><br>
+        <a href='../cpp/cpp_examples_fr.html'>C++ Exemples</a><br>
+        <a href='../cs/cs_examples_fr.html'>C# Exemples</a><br>
+        <a href='../xml/xml_examples_fr.html'>XML Exemples</a><br>
+        <a href='../howto/index_fr.html'>How To Exemples</a><br>
+      </div>
+    </div>
+    <div class='w3-col l3 m6 s12'>
+      <div class='top10'>
+        <h4><a href='../cert/index_fr.html'>Certificats Web</a></h4>
+        <a href='../cert/cert_html_fr.html'>HTML Certificat</a><br>
+        <a href='../cert/cert_css_fr.html'>CSS Certificat</a><br>
+        <a href='../cert/cert_javascript_fr.html'>JavaScript Certificat</a><br>
+        <a href='../cert/cert_frontend_fr.html'>Front End Certificat</a><br>
+        <a href='../cert/cert_python_fr.html'>Python Certificat</a><br>
+        <a href='../cert/cert_datascience_fr.html'>Data Science Certificat</a><br>
+        <a href='../cert/cert_jquery_fr.html'>jQuery Certificat</a><br>
+        <a href='../cert/cert_sql_fr.html'>SQL Certificat</a><br>
+        <a href='../cert/cert_php_fr.html'>PHP Certificat</a><br>
+        <a href='../cert/cert_java_fr.html'>Java Certificat</a><br>
+        <a href='../cert/cert_c_fr.html'>C Certificat</a><br>
+        <a href='../cert/cert_cpp_fr.html'>C++ Certificat</a><br>
+        <a href='../cert/cert_cs_fr.html'>C# Certificat</a><br>
+        <a href='../cert/cert_bootstrap_fr.html'>Bootstrap Certificat</a><br>
+        <a href='../cert/cert_xml_fr.html'>XML Certificat</a><br>
+        <a href='../cert/career_tips_fr.html'>Planification de carrière</a><br>
+        <a href='../cert/career_cv_fr.html'>Rédaction d'un CV</a><br>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class='w3-center w3-small w3-opacity'>Ce site est optimisé pour l'apprentissage et la formation. Les exemples pourraient être simplifiés pour améliorer la lecture et l’apprentissage. Les didacticiels, références et exemples sont constamment révisés pour éviter les erreurs, mais nous ne pouvons garantir l'exactitude totale de tout le contenu. En utilisant W3Schools, vous acceptez d'avoir lu et accepté notre <a href='../about/about_copyright_fr.html'>conditions d'utilisation</a>, <a href='../about/about_privacy_fr.html'>politique de cookies et de confidentialité</a>.<br>Des versions du site dans d'autres langues sont également disponibles:
+   <a href='../index.html' title='W3Schools en ukrainien'><strong>Ukrainien</strong></a>,
+   <a href='../index.html' title='W3Schools en anglais'><strong>Anglais</strong></a>,
+   <a href='../index_es.html' title='W3Schools en espagnol'><strong>Espagnol</strong></a>,
+   <a href='../index_de.html' title='W3Schools en allemand'><strong>Allemand</strong></a>,
+   <a href='../index_ru.html' title='W3Schools en russe'><strong>Russe</strong></a>.<br>
+   <a href='../about/about_copyright_fr.html'>Copyright 1999-2026</a> par Refsnes Data. Tous droits réservés. <a href='../w3css/index_fr.html'>W3Schools est propulsé par W3.CSS</a>.<br>
+   Vous pouvez utiliser d'autres ressources d'apprentissage de développement et de programmation Web réputées :<br>
+   <a href='https://www.w3schools.com/' target='_blank' rel='noopener'>W3Schools</a>&nbsp;|&nbsp;
+   <a href='https://developer.mozilla.org/fr/' target='_blank' rel='noopener'>MDNWebDocs</a>&nbsp;|&nbsp;
+   <a href='https://whatwg.org/' target='_blank' rel='noopener'>WHATWG</a>&nbsp;|&nbsp;
+   <a href='https://www.w3.org/' target='_blank' rel='noopener'>W3C</a>
+   <br><br>
+   <a href='../index_fr.html'><img src='../svg/w3schools_logo.svg' class='w3schools-logo-down' alt='W3Schools'></a>
+  </div>
+  <br><br>
+    <div class="adver_adfooter">
+    <!--web--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script><!--/web-->
+    <!--w3--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4060216941760396" crossorigin="anonymous"></script><!--/w3-->
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+</div>
+</div>
+<script src='../lib/w3schools_footer.js'></script>
+<!--[if lt IE 9]>
+<script src='../cdn/html5shiv/3.7.3/html5shiv.js'></script>
+<script src='../cdn/respond/1.4.2/respond.min.js'></script>
+<![endif]-->
+<!--FOOTER-->
+</html>
