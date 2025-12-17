@@ -42,8 +42,8 @@
             "https://www.youtube.com/channel/UCHMtoMp4TyUG_fN3G-8zHXg"
         ]
     }
-</script>    <title>HTML Кнопки. Приклади. Уроки для початківців. W3Schools українською</title>
-    <meta name="description" content="HTML Кнопки дозволяють користувачам взаємодіяти з веб-сторінкою. Вони можуть надсилати форми, запускати JavaScript або запускати різні дії при натисканні. HTML-елемент &lt;button&gt; визначає кнопку, на яку можна натискати. Стилізація кнопок HTML. Вимкнені кнопки. Кнопка за допомогою JavaScript. Типи кнопок. Довідник з кнопок. Приклади. Відеоурок. Основи програмування та веброзробки. Уроки W3Schools для початківців">
+</script>    <title>Кнопки в HTML: все про тег &lt;button&gt;, атрибути та стилізацію з прикладами. Уроки для початківців. W3Schools українською</title>
+    <meta name="description" content="HTML Для чого потрібні кнопки на веб-сторінці? Кнопки можуть надсилати форми, запускати JavaScript, запускати різні дії при натисканні. HTML-елемент &lt;button&gt; визначає кнопку, на яку можна натискати. Стилізація кнопок. Вимкнені кнопки. Типи кнопок. Атрибути, доступність, практичні скрипти. Довідник з кнопок. Приклади. Запитання та відповіді. Відеоурок. Основи програмування та веброзробки. Уроки W3Schools для початківців">
     <!-- FAQ структуровані дані -->
     <script type="application/ld+json">
         {
@@ -580,7 +580,7 @@
         <p class="intro"><strong>Кнопки</strong> дозволяють користувачам взаємодіяти з вебсторінкою. Вони можуть надсилати форми, запускати JavaScript або запускати різні дії при натисканні.</p>
         <hr>
         <h2>HTML Кнопка</h2>
-        <p>HTML-елемент <code class="w3-codespan">&lt;button&gt;</code> визначає кнопку, на яку можна натискати.</p>
+        <p>Як зробити кнопку в HTML? Дуже просто! HTML-елемент <code class="w3-codespan">&lt;button&gt;</code> визначає кнопку, на яку можна натискати.</p>
         <p>Сама по собі кнопка нічого не робить, поки ви не додасте до неї дію.</p>
         <div class="w3-example">
             <h3>Приклад</h3>
@@ -589,7 +589,6 @@
             </div>
             <a class="w3-btn w3-margin-bottom" href="../htmltryit/tryhtml_buttons_basic.html" target="_blank">Спробуйте самі &raquo;</a>
         </div>
-        <hr>
         <h2>Стилізація HTML кнопок</h2>
         <p>Кнопки часто стилізуються за допомогою CSS:</p>
         <div class="w3-example">
@@ -661,6 +660,123 @@
             <p><b>Примітка:</b> Завжди слід вказувати атрибут <code class="w3-codespan">type</code>. Усередині форми тип за замовчуванням — <code class="w3-codespan">submit</code>, і браузери можуть поводитися інакше, якщо цей type пропустити.</p>
         </div>
         <hr>
+        <h2>Кнопка чи посилання?</h2>
+        <h3>Коли використовувати <code class="w3-codespan">&lt;a&gt;</code> (посилання)?</h3>
+        <p>Тег <code class="w3-codespan">&lt;a&gt;</code> створює гіперпосилання. Він використовується коли потрібно перейти на іншу сторінку або на інший розділ сторінки.</p>
+        <p><b>Правило</b>: Якщо дія — це перехід, використовуйте тег <code class="w3-codespan">&lt;a&gt;</code>.</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;a href="https://example.com"&gt;Перейти на інший сайт&lt;/a&gt;
+            </div>
+        </div>
+        <p>Або для переходу на якийсь розділ сторінки:</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;a href="#contact"&gt;До контакту&lt;/a&gt;
+            </div>
+        </div>
+        <h3>Коли використовувати <code class="w3-codespan">&lt;button&gt;</code> (кнопку)?</h3>
+        <p>Тег <code class="w3-codespan">&lt;button&gt;</code> створює елемент, який виконує дію на тій самій сторінці — наприклад, надсилання форми, відкриття спливаючого вікна (модалки), запуск JavaScript.</p>
+        <p><b>Правило</b>: Якщо дія — це запуск події на сторінці, використовуйте <code class="w3-codespan">&lt;button&gt;</code>.</p>
+        <div class="w3-example">
+            <h3>Приклад - надсилання форми:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;form&gt;<br>
+                &nbsp;&nbsp;&lt;input type="text" placeholder="Ваше імʼя"&gt;<br>
+                &nbsp;&nbsp;&lt;button type="submit"&gt;Відправити&lt;/button&gt;<br>
+                &lt;/form&gt;
+            </div>
+        </div>
+        <p>або</p>
+        <div class="w3-example">
+            <h3>Приклад - кнопка для JavaScript (відкриття модалки):</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;button onclick="openModal()"&gt;Відкрити модалку&lt;/button&gt;<br>
+                &lt;script&gt;<br>
+                &nbsp;&nbsp;function openModal() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;alert("Модалка відкрита");<br>
+                &nbsp;&nbsp;}<br>
+                &lt;/script&gt;<br>
+            </div>
+        </div>
+        <hr>
+        <h2>Кнопка з іконкою в HTML</h2>
+        <p>Усередині тега <code class="w3-codespan">&lt;button&gt;</code> можна розміщувати будь-який HTML-контент: текст, зображення (<code class="w3-codespan">&lt;img&gt;</code>), SVG-іконки або їх комбінацію. Це стандартна і правильна практика.</p>
+        <h3>Іконка через &lt;img&gt;</h3>
+        <p>Найпростіший варіант — вставити зображення всередину кнопки.</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;button&gt;<br>
+                &nbsp;&nbsp;&lt;img src="icon-save.png" alt="" width="16" height="16"&gt;<br>
+                &nbsp;&nbsp;Зберегти<br>
+                &lt;/button&gt;
+            </div>
+        </div>
+        <p>Пояснення:</p>
+        <ul>
+            <li><code class="w3-codespan">&lt;img&gt;</code> вставляється так само як звичайний текст.</li>
+            <li>обов&#8217;язковий атрибут <code class="w3-codespan">alt=""</code> залишають порожнім, якщо поруч є текст (інакше скрінрідери читатимуть зайве).</li>
+            <li>розмір іконки зазвичай задають через width / height або CSS.</li>
+        </ul>
+        <h3>Кнопка лише з іконкою</h3>
+        <p>Якщо кнопка без тексту, потрібно додати пояснення для доступності - <code class="w3-codespan">aria-label=""</code>.</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;button aria-label="Пошук"&gt;<br>
+                &nbsp;&nbsp;&lt;img src="icon-search.png" alt=""&gt;<br>
+                &lt;/button&gt;
+            </div>
+        </div>
+        <h3>Іконка через SVG (рекомендовано)</h3>
+        <p>Іконка через SVG — найкращий варіант: чіткий на будь-якому екрані, легко стилізується через CSS.</p>
+        <div class="w3-example">
+            <h3>Приклад</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;button&gt;<br>
+                &nbsp;&nbsp;&lt;svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="2"/&gt;<br>
+                &nbsp;&nbsp;&lt;/svg&gt;<br>
+                &nbsp;&nbsp;Додати<br>
+                &lt;/button&gt;
+            </div>
+        </div>
+        <p>Переваги SVG:</p>
+        <ul>
+            <li>Не розмивається;</li>
+            <li>Наслідує колір тексту (currentColor);</li>
+            <li>Не потребує окремого файлу.</li>
+        </ul>
+        <hr>
+        <h3>Типова помилка</h3>
+        <div class="w3-example">
+            <h3>❌ Неправильно:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;a href="#"&gt;<br>
+                &nbsp;&nbsp;&lt;button&gt;OK&lt;/button&gt;<br>
+                &lt;/a&gt;
+            </div>
+        </div>
+        <div class="w3-example">
+            <h3>&#x2714; Правильно:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;button&gt;<br>
+                &nbsp;&nbsp;&lt;img src="icon-ok.png" alt=""&gt;<br>
+                &nbsp;&nbsp;OK<br>
+                &lt;/button&gt;
+            </div>
+        </div>
+        <p>Коротко:</p>
+        <ul>
+            <li><code class="w3-codespan">&lt;button&gt;</code> може містити іконки, текст і SVG</li>
+            <li><code class="w3-codespan">&lt;img&gt;</code> — просто і зрозуміло</li>
+            <li>SVG — сучасно і правильно</li>
+            <li>Кнопка без тексту → aria-label обов’язково</li>
+        </ul>
+        <hr>
         <div class="adver_admultiplex1">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
@@ -677,6 +793,104 @@
             </tr>
         </table>
         <p><b>Підказка:</b> Щоб переглянути повний список усіх тегів HTML, відвідайте <a href="../tags/index.html">Довідник з HTML-тегів</a>.</p>
+        <hr>
+        <h2>Атрибути кнопки</h2>
+        <table class="ws-table-all notranslate">
+            <thead>
+                <tr>
+                    <th>Атрибут</th>
+                    <th>Значення</th>
+                    <th>Опис</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>type</td>
+                <td>
+                    button<br>
+                    submit<br>
+                    reset
+                </td>
+                <td>Визначає тип кнопки. За замовчуванням — submit</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>текст</td>
+                <td>Ім’я кнопки, яке надсилається разом із формою</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>текст</td>
+                <td>Значення кнопки, яке надсилається на сервер</td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>disabled</td>
+                <td>Вимикає кнопку — вона стає неактивною</td>
+            </tr>
+            <tr>
+                <td>autofocus</td>
+                <td>autofocus</td>
+                <td>Автоматично встановлює фокус на кнопку при завантаженні</td>
+            </tr>
+            <tr>
+                <td>form</td>
+                <td>ID форми</td>
+                <td>Прив’язує кнопку до форми, навіть якщо вона поза &lt;form&gt;</td>
+            </tr>
+            <tr>
+                <td>formaction</td>
+                <td>URL</td>
+                <td>URL для надсилання даних (перевизначає action форми)</td>
+            </tr>
+            <tr>
+                <td>formenctype</td>
+                <td>
+                    application/x-www-form-urlencoded<br>
+                    multipart/form-data<br>
+                    text/plain
+                </td>
+                <td>Тип кодування даних форми</td>
+            </tr>
+            <tr>
+                <td>formmethod</td>
+                <td>
+                    get<br>
+                    post
+                </td>
+                <td>Метод надсилання форми</td>
+            </tr>
+            <tr>
+                <td>formnovalidate</td>
+                <td>formnovalidate</td>
+                <td>Вимикає валідацію при надсиланні</td>
+            </tr>
+            <tr>
+                <td>formtarget</td>
+                <td>
+                    _self<br>
+                    _blank<br>
+                    _parent<br>
+                    _top
+                </td>
+                <td>Де відкривати результат надсилання</td>
+            </tr>
+            <tr>
+                <td>popovertarget</td>
+                <td>ID елемента</td>
+                <td>Прив’язує кнопку до popover-елемента</td>
+            </tr>
+            <tr>
+                <td>popovertargetaction</td>
+                <td>
+                    toggle<br>
+                    show<br>
+                    hide
+                </td>
+                <td>Дія для popover-елемента</td>
+            </tr>
+            </tbody>
+        </table>
         <hr>
         <section>
             <h2>❓ FAQ (Питання та відповіді по уроку)</h2>
