@@ -1365,17 +1365,416 @@
         </div>
         <hr>
         <div id="bcd-button"></div>
-        <script>
+        <!--<script>
             fetch('data/button.json')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('HTTP error ' + response.status);
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    document.getElementById('bcd-button').textContent = JSON.stringify(data);
+                    const buttonData = data.html
+                        && data.html.elements
+                        && data.html.elements.button
+                        && data.html.elements.button.__compat;
+
+                    if (!buttonData || !buttonData.support) {
+                        throw new Error('JSON має іншу структуру');
+                    }
+
+                    const support = buttonData.support;
+
+                    let tableHTML = `
+      <h3>Підтримка елемента &lt;button&gt;</h3>
+      <table class="w3-table-all w3-small">
+        <thead>
+          <tr class="w3-light-grey">
+            <th>Браузер</th>
+            <th>Початкова підтримка</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+                    for (const browser in support) {
+                        const info = support[browser];
+                        let versionAdded = '';
+
+                        if (typeof info === 'object' && info !== null && 'version_added' in info) {
+                            versionAdded = info.version_added;
+                        } else {
+                            versionAdded = info; // наприклад "mirror"
+                        }
+
+                        tableHTML += `
+        <tr>
+          <td>${browser}</td>
+          <td>${versionAdded ?? '—'}</td>
+        </tr>
+      `;
+                    }
+
+                    tableHTML += `
+        </tbody>
+      </table>
+    `;
+
+                    document.getElementById('bcd-button').innerHTML = tableHTML;
                 })
                 .catch(error => {
+                    document.getElementById('bcd-button').innerHTML =
+                        '<p class="w3-text-red">Помилка: ' + error.message + '</p>';
                     console.error(error);
-                    document.getElementById('bcd-button').textContent = 'Помилка JSON';
+                });
+        </script>-->
+        <!--<script>
+            fetch('/html/data/button.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('HTTP error ' + response.status);
+                    return response.json();
+                })
+                .then(data => {
+                    const buttonData = data.html?.elements?.button?.__compat;
+                    if (!buttonData || !buttonData.support) {
+                        throw new Error('Немає support у JSON');
+                    }
+
+                    const support = buttonData.support;
+                    const mdnUrl = buttonData.mdn_url || '#';
+
+                    let html = `
+      <h3>Підтримка елемента &lt;button&gt;</h3>
+      <p>Документація: <a href="${mdnUrl}" target="_blank">${mdnUrl}</a></p>
+      <table class="w3-table-all w3-small w3-striped w3-bordered">
+        <thead>
+          <tr class="w3-light-grey">
+            <th>Браузер</th>
+            <th>Початкова підтримка</th>
+            <th>Примітка</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+                    for (const browser in support) {
+                        const info = Array.isArray(support[browser]) ? support[browser][0] : support[browser];
+
+                        const versionAdded = info?.version_added ?? '—';
+                        const notes = info?.notes
+                            ? (Array.isArray(info.notes) ? info.notes.join('; ') : info.notes)
+                            : '';
+                        const prefix = info?.prefix ?? '';
+
+                        html += `
+        <tr>
+          <td>${browser}</td>
+          <td>${versionAdded}</td>
+          <td>${prefix}${notes ? ' — ' + notes : ''}</td>
+        </tr>
+      `;
+                    }
+
+                    html += `
+        </tbody>
+      </table>
+    `;
+
+                    document.getElementById('bcd-button').innerHTML = html;
+                })
+                .catch(error => {
+                    document.getElementById('bcd-button').innerHTML =
+                        '<p class="w3-text-red">Помилка: ' + error.message + '</p>';
+                    console.error(error);
+                });
+        </script>-->
+        <!--<script>
+            fetch('/html/data/button.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('HTTP error ' + response.status);
+                    return response.json();
+                })
+                .then(data => {
+                    const buttonData = data.html?.elements?.button?.__compat;
+                    if (!buttonData || !buttonData.support) {
+                        throw new Error('Немає support у JSON');
+                    }
+
+                    const support = buttonData.support;
+                    const mdnUrl = buttonData.mdn_url || '#';
+
+                    let html = `
+      <h3>Підтримка елемента &lt;button&gt;</h3>
+      <p>Документація: <a href="${mdnUrl}" target="_blank">${mdnUrl}</a></p>
+      <table class="w3-table-all w3-small w3-striped w3-bordered">
+        <thead>
+          <tr class="w3-light-grey">
+            <th>Браузер</th>
+            <th>Початкова підтримка</th>
+            <th>Примітка</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+                    for (const browser in support) {
+                        const info = Array.isArray(support[browser]) ? support[browser][0] : support[browser];
+
+                        // Версія підтримки
+                        const versionAdded = info?.version_added;
+
+                        // Вибираємо іконку
+                        let icon = '—'; // дефолт
+                        let iconClass = '';
+                        if (versionAdded === true || (typeof versionAdded === 'string' && versionAdded !== '')) {
+                            icon = '✓';
+                            iconClass = 'w3-text-green';
+                        } else if (versionAdded === false) {
+                            icon = '✗';
+                            iconClass = 'w3-text-red';
+                        }
+
+                        // Примітки
+                        const notes = info?.notes
+                            ? (Array.isArray(info.notes) ? info.notes.join('; ') : info.notes)
+                            : '';
+                        const prefix = info?.prefix ?? '';
+
+                        html += `
+        <tr>
+          <td>${browser}</td>
+          <td class="${iconClass}">${icon} ${versionAdded ?? ''}</td>
+          <td>${prefix}${notes ? ' — ' + notes : ''}</td>
+        </tr>
+      `;
+                    }
+
+                    html += `
+        </tbody>
+      </table>
+    `;
+
+                    document.getElementById('bcd-button').innerHTML = html;
+                })
+                .catch(error => {
+                    document.getElementById('bcd-button').innerHTML =
+                        '<p class="w3-text-red">Помилка: ' + error.message + '</p>';
+                    console.error(error);
+                });
+        </script>-->
+        <!--<script>
+            fetch('/html/data/button.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('HTTP error ' + response.status);
+                    return response.json();
+                })
+                .then(data => {
+                    const buttonData = data.html?.elements?.button?.__compat;
+                    if (!buttonData || !buttonData.support) {
+                        throw new Error('Немає support у JSON');
+                    }
+
+                    const support = buttonData.support;
+                    const mdnUrl = buttonData.mdn_url || '#';
+
+                    // Розділяємо браузери за платформами
+                    const desktopBrowsers = {};
+                    const mobileBrowsers = {};
+                    const otherBrowsers = {};
+
+                    for (const browser in support) {
+                        // Просте групування по назві браузера
+                        if (browser.includes('_android') || browser.includes('_ios') || browser.includes('mobile')) {
+                            mobileBrowsers[browser] = support[browser];
+                        } else if (browser.includes('chrome') || browser.includes('firefox') || browser.includes('edge') || browser.includes('safari') || browser.includes('ie')) {
+                            desktopBrowsers[browser] = support[browser];
+                        } else {
+                            otherBrowsers[browser] = support[browser];
+                        }
+                    }
+
+                    // Функція сортування алфавітом
+                    function sortKeys(obj) {
+                        return Object.keys(obj).sort((a, b) => a.localeCompare(b));
+                    }
+
+                    let html = `
+      <h3>Підтримка елемента &lt;button&gt;</h3>
+      <p>Документація: <a href="${mdnUrl}" target="_blank">${mdnUrl}</a></p>
+      <table class="w3-table-all w3-small w3-striped w3-bordered">
+        <thead>
+          <tr class="w3-light-grey">
+            <th>Браузер</th>
+            <th>Початкова підтримка</th>
+            <th>Примітка</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+                    // Додаємо функцію для рендеру рядків
+                    function renderRows(group) {
+                        const keys = sortKeys(group);
+                        keys.forEach(browser => {
+                            const info = Array.isArray(group[browser]) ? group[browser][0] : group[browser];
+
+                            const versionAdded = info?.version_added;
+
+                            // Вибір іконки
+                            let icon = '—';
+                            let iconClass = '';
+                            if (versionAdded === true || (typeof versionAdded === 'string' && versionAdded !== '')) {
+                                icon = '✓';
+                                iconClass = 'w3-text-green';
+                            } else if (versionAdded === false) {
+                                icon = '✗';
+                                iconClass = 'w3-text-red';
+                            }
+
+                            // Примітки
+                            const notes = info?.notes
+                                ? (Array.isArray(info.notes) ? info.notes.join('; ') : info.notes)
+                                : '';
+                            const prefix = info?.prefix ?? '';
+
+                            html += `
+          <tr>
+            <td>${browser}</td>
+            <td class="${iconClass}">${icon} ${versionAdded ?? ''}</td>
+            <td>${prefix}${notes ? ' — ' + notes : ''}</td>
+          </tr>
+        `;
+                        });
+                    }
+
+                    // Спочатку десктоп
+                    html += `<tr><td colspan="3" class="w3-grey"><strong>Desktop Browsers</strong></td></tr>`;
+                    renderRows(desktopBrowsers);
+
+                    // Мобільні
+                    html += `<tr><td colspan="3" class="w3-grey"><strong>Mobile Browsers</strong></td></tr>`;
+                    renderRows(mobileBrowsers);
+
+                    // Інші
+                    if (Object.keys(otherBrowsers).length > 0) {
+                        html += `<tr><td colspan="3" class="w3-grey"><strong>Other Browsers</strong></td></tr>`;
+                        renderRows(otherBrowsers);
+                    }
+
+                    html += `
+        </tbody>
+      </table>
+    `;
+
+                    document.getElementById('bcd-button').innerHTML = html;
+
+                })
+                .catch(error => {
+                    document.getElementById('bcd-button').innerHTML =
+                        '<p class="w3-text-red">Помилка: ' + error.message + '</p>';
+                    console.error(error);
+                });
+        </script>-->
+        <script>
+            fetch('/html/data/button.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('HTTP error ' + response.status);
+                    return response.json();
+                })
+                .then(data => {
+                    const buttonData = data.html?.elements?.button?.__compat;
+                    if (!buttonData || !buttonData.support) {
+                        throw new Error('Немає support у JSON');
+                    }
+
+                    const support = buttonData.support;
+                    const mdnUrl = buttonData.mdn_url || '#';
+
+                    // Розділяємо браузери за платформами
+                    const desktopBrowsers = {};
+                    const mobileBrowsers = {};
+                    const otherBrowsers = {};
+
+                    for (const browser in support) {
+                        if (browser.includes('_android') || browser.includes('_ios') || browser.includes('mobile')) {
+                            mobileBrowsers[browser] = support[browser];
+                        } else if (browser.includes('chrome') || browser.includes('firefox') || browser.includes('edge') || browser.includes('safari') || browser.includes('ie')) {
+                            desktopBrowsers[browser] = support[browser];
+                        } else {
+                            otherBrowsers[browser] = support[browser];
+                        }
+                    }
+
+                    function sortKeys(obj) {
+                        return Object.keys(obj).sort((a, b) => a.localeCompare(b));
+                    }
+
+                    let html = `
+      <h3>Підтримка елемента &lt;button&gt;</h3>
+      <p>Документація: <a href="${mdnUrl}" target="_blank">${mdnUrl}</a></p>
+      <table class="w3-table-all w3-small w3-striped w3-bordered">
+        <thead>
+          <tr class="w3-light-grey">
+            <th>Браузер</th>
+            <th>Початкова підтримка</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+                    function renderRows(group) {
+                        const keys = sortKeys(group);
+                        keys.forEach(browser => {
+                            const info = Array.isArray(group[browser]) ? group[browser][0] : group[browser];
+
+                            const versionAdded = info?.version_added;
+
+                            let icon = '—';
+                            let iconClass = '';
+                            if (versionAdded === true || (typeof versionAdded === 'string' && versionAdded !== '')) {
+                                icon = '✓';
+                                iconClass = 'w3-text-green';
+                            } else if (versionAdded === false) {
+                                icon = '✗';
+                                iconClass = 'w3-text-red';
+                            }
+
+                            html += `
+          <tr>
+            <td>${browser}</td>
+            <td class="${iconClass}">${icon} ${versionAdded ?? ''}</td>
+          </tr>
+        `;
+                        });
+                    }
+
+                    html += `<tr><td colspan="2" class="w3-grey"><strong>Desktop Browsers</strong></td></tr>`;
+                    renderRows(desktopBrowsers);
+
+                    html += `<tr><td colspan="2" class="w3-grey"><strong>Mobile Browsers</strong></td></tr>`;
+                    renderRows(mobileBrowsers);
+
+                    if (Object.keys(otherBrowsers).length > 0) {
+                        html += `<tr><td colspan="2" class="w3-grey"><strong>Other Browsers</strong></td></tr>`;
+                        renderRows(otherBrowsers);
+                    }
+
+                    html += `
+        </tbody>
+      </table>
+    `;
+
+                    document.getElementById('bcd-button').innerHTML = html;
+
+                })
+                .catch(error => {
+                    document.getElementById('bcd-button').innerHTML =
+                        '<p class="w3-text-red">Помилка: ' + error.message + '</p>';
+                    console.error(error);
                 });
         </script>
+
+
         <hr>
         <div class="w3-clear nextprev">
             <a class="w3-left w3-btn" href="html_id.html">&#10094; Prev</a>
