@@ -1364,6 +1364,20 @@
             <a class='bigbtn' href='../css/css_form.html'>CSS Форми</a>
         </div>
         <hr>
+        <script>
+            fetch('data/mdn-button.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('bcd-button').textContent =
+                        'JSON завантажено. Дані доступні в JS.';
+                })
+                .catch(error => {
+                    document.getElementById('bcd-button').textContent =
+                        'JSON не завантажився.';
+                });
+        </script>
+        <div id="bcd-data"></div>
+        <hr>
         <div class="w3-clear nextprev">
             <a class="w3-left w3-btn" href="html_id.html">&#10094; Prev</a>
             <a class="w3-right w3-btn" href="html_iframe.html">Next &#10095;</a>
