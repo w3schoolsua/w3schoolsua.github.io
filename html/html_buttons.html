@@ -1364,19 +1364,18 @@
             <a class='bigbtn' href='../css/css_form.html'>CSS Форми</a>
         </div>
         <hr>
+        <div id="bcd-button"></div>
         <script>
-            fetch('data/mdn-button.json')
+            fetch('data/button.json')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('bcd-button').textContent =
-                        'JSON завантажено. Дані доступні в JS.';
+                    document.getElementById('bcd-button').textContent = JSON.stringify(data);
                 })
                 .catch(error => {
-                    document.getElementById('bcd-button').textContent =
-                        'JSON не завантажився.';
+                    console.error(error);
+                    document.getElementById('bcd-button').textContent = 'Помилка JSON';
                 });
         </script>
-        <div id="bcd-data"></div>
         <hr>
         <div class="w3-clear nextprev">
             <a class="w3-left w3-btn" href="html_id.html">&#10094; Prev</a>
