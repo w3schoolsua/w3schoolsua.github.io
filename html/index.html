@@ -54,6 +54,12 @@
     <link rel='alternate' hreflang='ru' href='index_ru.html' />
     <link rel='alternate' hreflang='x-default' href='../index.html' />
     <link rel='stylesheet' href='../styles/bigbtn.css'>
+    <link rel="stylesheet" href="../lib/w3-colors-flat.css">
+    <style>
+        /* Адаптивність таблиці */
+        .table-container {overflow-x: auto}
+        th {cursor: pointer}
+    </style>
 <div class='w3-container top'>
     <a class='w3schools-logo notranslate' href='../index.html'>W3schoolsUA<span class='dotcom w3-hide-small'>. українською</span></a>
     <div class='w3-right w3-hide-small w3-wide toptext' style="font-family:'Segoe UI',Arial,sans-serif">НАЙКРАЩИЙ САЙТ ДЛЯ ВЕБ-РОЗРОБНИКІВ</div>
@@ -667,85 +673,127 @@
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>        <h2>Офіційні (авторитетні) ресурси для вивчення HTML/CSS/JavaScript</h2>
-        <table class="ws-table-all w3-hoverable">
-            <thead>
-            <tr>
-                <th>Джерело</th>
-                <th>Статус</th>
-                <th>Призначення</th>
-                <th>Рівень авторитетності</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener">WHATWG HTML Living Standard</a></td>
-                <td>Офіційний стандарт</td>
-                <td>Єдиний актуальний стандарт HTML, повний опис усіх елементів</td>
-                <td>⭐⭐⭐⭐⭐</td>
-            </tr>
-            <tr>
-                <td><a href="https://www.w3.org/html/" target="_blank" rel="noopener">W3C HTML Portal</a></td>
-                <td>Офіційний</td>
-                <td>Портал W3C з посиланнями на стандарти та пов’язані специфікації</td>
-                <td>⭐⭐⭐⭐</td>
-            </tr>
-            <tr>
-                <td><a href="https://www.w3.org/html/wiki/Elements" target="_blank" rel="noopener">W3C HTML Wiki</a></td>
-                <td>Офіційний (архівний)</td>
-                <td>Історія HTML, списки елементів, зміни</td>
-                <td>⭐⭐⭐</td>
-            </tr>
-            <tr>
-                <td><a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" rel="noopener">MDN Web Docs</a></td>
-                <td>Напівофіційний</td>
-                <td>Докладні пояснення елементів, атрибутів, приклади</td>
-                <td>⭐⭐⭐⭐⭐</td>
-            </tr>
-            <tr>
-                <td><a href="https://devdocs.io/html/" target="_blank" rel="noopener">DevDocs (HTML)</a></td>
-                <td>Неофіційний</td>
-                <td>Агрегатор MDN, зручний пошук, офлайн</td>
-                <td>⭐⭐⭐⭐</td>
-            </tr>
-            <tr>
-                <td><a href="https://web.dev/html" target="_blank" rel="noopener">web.dev (Google)</a></td>
-                <td>Офіційний ресурс Google</td>
-                <td>Сучасні практики HTML, доступність, продуктивність</td>
-                <td>⭐⭐⭐⭐</td>
-            </tr>
-            <tr>
-                <td><a href="https://wpt.fyi" target="_blank" rel="noopener">W3C Web Platform Tests (WPT)</a></td>
-                <td>Офіційний</td>
-                <td>Тести відповідності браузерів стандартам</td>
-                <td>⭐⭐⭐⭐</td>
-            </tr>
-            <tr>
-                <td><a href="https://github.com/whatwg/html" target="_blank" rel="noopener">WHATWG GitHub Repository</a></td>
-                <td>Офіційний</td>
-                <td>Розробка HTML Standard, історія змін</td>
-                <td>⭐⭐⭐⭐⭐</td>
-            </tr>
-            <tr>
-                <td><a href="https://github.com/mdn/content" target="_blank" rel="noopener">MDN GitHub Repository</a></td>
-                <td>Офіційний</td>
-                <td>Джерельний код документації MDN</td>
-                <td>⭐⭐⭐⭐</td>
-            </tr>
-            <tr>
-                <td><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools</a></td>
-                <td>Неофіційний</td>
-                <td>Приклади, базові пояснення</td>
-                <td>⭐⭐⭐</td>
-            </tr>
-            <tr>
-                <td><a href="https://w3schoolsua.github.io/" target="_blank" rel="noopener">W3SchoolsUA</a></td>
-                <td>Неофіційний</td>
-                <td>Українська локалізація W3Schools</td>
-                <td>⭐⭐⭐⭐⭐⭐</td>
-            </tr>
+        <div class="table-container">
+            <table id="sourcesTable" class="ws-table-all w3-hoverable w3-margin-top">
+                <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Джерело</th>
+                    <th onclick="sortTable(1)">Статус</th>
+                    <th onclick="sortTable(2)">Призначення</th>
+                    <th onclick="sortTable(3)">Авторитетність (UA)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener">WHATWG HTML Living Standard</a></td>
+                    <td>Офіційний стандарт</td>
+                    <td>Єдиний актуальний стандарт HTML</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" rel="noopener">MDN Web Docs</a></td>
+                    <td>Де-факто стандарт документації</td>
+                    <td>Найповніша та найточніша документація для розробників</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><a href="https://w3schoolsua.github.io/" target="_blank" rel="noopener">W3SchoolsUA</a></td>
+                    <td>Де-факто стандарт навчальних матеріалів українською</td>
+                    <td>Найдоступніший і найпопулярніший україномовний ресурс для навчання HTML/CSS/JS</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools</a></td>
+                    <td>Неофіційний</td>
+                    <td>Базові приклади, швидке навчання</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><a href="https://web.dev/html" target="_blank" rel="noopener">web.dev (Google)</a></td>
+                    <td>Офіційний ресурс Google</td>
+                    <td>Сучасні практики, доступність, продуктивність</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><a href="https://devdocs.io/html/" target="_blank" rel="noopener">DevDocs (HTML)</a></td>
+                    <td>Неофіційний</td>
+                    <td>Агрегатор MDN, зручний пошук, офлайн</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3.org/html/" target="_blank" rel="noopener">W3C HTML Portal</a></td>
+                    <td>Офіційний</td>
+                    <td>Портал W3C з посиланнями на стандарти</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><a href="https://wpt.fyi" target="_blank" rel="noopener">W3C Web Platform Tests (WPT)</a></td>
+                    <td>Офіційний</td>
+                    <td>Тести відповідності браузерів стандартам</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/whatwg/html" target="_blank" rel="noopener">WHATWG GitHub Repository</a></td>
+                    <td>Офіційний</td>
+                    <td>Розробка HTML Standard, історія змін</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/mdn/content" target="_blank" rel="noopener">MDN GitHub Repository</a></td>
+                    <td>Офіційний</td>
+                    <td>Джерельний код документації MDN</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.w3.org/html/wiki/Elements" target="_blank" rel="noopener">W3C HTML Wiki</a></td>
+                    <td>Офіційний (архівний)</td>
+                    <td>Історія HTML, списки елементів</td>
+                    <td>⭐⭐⭐</td>
+                </tr>
             </tbody>
         </table>
+        </div>
     </article>
+    <!--JS: Сортування таблиці Офіційні (авторитетні) ресурси для вивчення HTML/CSS/JavaScript-->
+    <script>
+        function sortTable(n) {
+            var table = document.getElementById("sourcesTable");
+            var switching = true;
+            var dir = "asc";
+            var switchcount = 0;
+
+            while (switching) {
+                switching = false;
+                var rows = table.rows;
+
+                for (var i = 1; i < (rows.length - 1); i++) {
+                    var shouldSwitch = false;
+                    var x = rows[i].getElementsByTagName("TD")[n];
+                    var y = rows[i + 1].getElementsByTagName("TD")[n];
+
+                    if (dir === "asc" && x.innerText.toLowerCase() > y.innerText.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                    if (dir === "desc" && x.innerText.toLowerCase() < y.innerText.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else {
+                    if (switchcount === 0 && dir === "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+    </script>
     <hr>
     <div class="disqus">
         <h4><span class="predisqus-comment">&#x270D;</span> Коментарі</h4>
