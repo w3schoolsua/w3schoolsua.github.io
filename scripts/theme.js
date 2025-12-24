@@ -1,18 +1,50 @@
-// Завантаження теми при відкритті сторінки
-(function() {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-mode");
-    }
-})();
+// scripts/theme.js
 
-// Перемикач теми
-function toggleTheme() {
-    document.body.classList.toggle("dark-mode");
+const THEME_KEY = "w3schoolsua-theme"; // ключ у localStorage
 
-    if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
+function applyTheme(theme) {
+    const body = document.body;
+    const icon = document.getElementById("themeIcon");
+
+    if (theme === "dark") {
+        body.classList.add("dark-mode");
+        if (icon) icon.textContent = "☀️";
     } else {
-        localStorage.setItem("theme", "light");
+        body.classList.remove("dark-mode");
+        if (icon) icon.textContent = "🌙";
     }
 }
+
+function getSavedTheme() {
+    try {
+        return localStorage.getItem(THEME_KEY);
+    } catch (e) {
+        return null;
+    }
+}
+
+function saveTheme(theme) {
+    try {
+        localStorage.setItem(THEME_KEY, theme);
+    } catch (e) {
+        // тихо ігноруємо
+    }
+}
+
+// Викликається з кнопки (через toggleThemeIcon у references.js або прямо)
+function toggleTheme() {
+    const isDark = document.body.classList.contains("dark-mode");
+    const newTheme = isDark ? "light" : "dark";
+    applyTheme(newTheme);
+    saveTheme(newTheme);
+}
+
+// Ініціалізація теми при завантаженні сторінки
+document.addEventListener("DOMContentLoaded", function () {
+    const saved = getSavedTheme();
+    if (saved === "dark") {
+        applyTheme("dark");
+    } else {
+        applyTheme("light");
+    }
+});
