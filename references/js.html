@@ -4,8 +4,10 @@
     <title>Рекомендовані джерела по JavaScript — W3SchoolsUA</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Найкращі та найавторитетніші джерела для вивчення JavaScript українською мовою. Офіційні стандарти ECMAScript, документація, навчальні ресурси.">
-    <meta name="keywords" content="JavaScript, JS, ECMAScript, документація JavaScript, джерела JavaScript, навчання JavaScript, W3SchoolsUA">
+    <meta name="description" content="Найкращі та найавторитетніші джерела для вивчення JavaScript українською мовою. Офіційні стандарти, документація, навчальні ресурси.">
+    <meta name="keywords" content="JavaScript, JS, документація JavaScript, стандарти JS, навчання JavaScript, W3SchoolsUA">
+
+    <!-- Structured Data -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -20,16 +22,41 @@
             }
         }
     </script>
+
+    <!-- W3.CSS -->
     <link rel="stylesheet" href="../w3css/4/w3.css">
     <link rel="stylesheet" href="../lib/w3-colors-flat.css">
+
+    <!-- Custom styles -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Theme + Data + Logic -->
     <script src="../scripts/theme.js"></script>
     <script src="../references/data.js"></script>
     <script src="../references/references.js"></script>
+
     <style>
-        body.dark-mode {background-color: #121212;color: #f1f1f1}
+        /* Темна тема */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+
+        /* Адаптивність таблиці */
+        .table-container {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        /* Sticky-заголовок */
+        #sourcesTable thead th {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
     </style>
 </head>
+
 <body onload="renderCategoryTable('js', 'sourcesTable')">
 
 <!-- HEADER -->
@@ -39,7 +66,10 @@
     <a href="../css/index.html" class="w3-bar-item w3-button w3-text-white">CSS</a>
     <a href="../js/index.html" class="w3-bar-item w3-button w3-text-white">JavaScript</a>
     <a href="../references/index.html" class="w3-bar-item w3-button w3-text-white w3-border-bottom">Рекомендовані джерела</a>
-    <button class="w3-bar-item w3-button w3-right w3-text-white theme-toggle-btn" onclick="toggleThemeIcon()"><span id="themeIcon">🌙</span></button>
+
+    <button class="w3-bar-item w3-button w3-right w3-text-white theme-toggle-btn" onclick="toggleThemeIcon()">
+        <span id="themeIcon">🌙</span>
+    </button>
 </div>
 
 <!-- BREADCRUMBS -->
@@ -53,24 +83,33 @@
 
 <!-- CONTENT -->
 <div class="w3-content" style="max-width:1200px;">
+
     <h2 class="w3-center">Рекомендовані джерела по JavaScript</h2>
-    <p class="w3-center w3-large">Офіційні стандарти ECMAScript, документація, навчальні ресурси</p>
-    <!-- Пошук по таблиці -->
+    <p class="w3-center w3-large">Офіційні стандарти, документація, навчальні ресурси</p>
+
+    <!-- Пошук -->
     <div class="w3-margin-top w3-margin-bottom">
         <label for="tableSearch"><b>Пошук по таблиці:</b></label>
-        <input id="tableSearch" class="w3-input w3-border" type="text" placeholder="Введіть текст для фільтрації..." onkeyup="filterCategoryTable('sourcesTable')">
+        <input id="tableSearch"
+               class="w3-input w3-border"
+               type="text"
+               placeholder="Введіть текст для фільтрації..."
+               onkeyup="filterCategoryTable('sourcesTable', 'tableSearch')">
     </div>
+
+    <!-- Таблиця -->
     <div class="table-container">
         <table id="sourcesTable" class="w3-table-all w3-hoverable w3-margin-top">
-            <!-- Заповнюється JS -->
+            <!-- Заповнюється через renderCategoryTable() -->
         </table>
     </div>
+
 </div>
 
 <!-- FOOTER -->
 <footer class="w3-center w3-flat-midnight-blue w3-padding-32 w3-text-white" style="margin-top:40px;">
     <p>© 2026 W3SchoolsUA — Українська навчальна платформа</p>
 </footer>
-<script src="../scripts/filter_category_table.js"></script>
+
 </body>
 </html>
