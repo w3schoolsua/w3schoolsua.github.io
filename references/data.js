@@ -81,6 +81,14 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐⭐",
         category: "css"
     },
+    {
+        name: "W3C CSS Validator",
+        url: "https://jigsaw.w3.org/css-validator/",
+        status: "Офіційний",
+        purpose: "Перевірка валідності CSS",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "css"
+    },
 
     /* ---------------- JavaScript ---------------- */
 
@@ -183,6 +191,14 @@ const sourcesData = [
         url: "https://codepen.io/",
         status: "Онлайн‑редактор",
         purpose: "Швидке тестування HTML/CSS/JS",
+        rating: "⭐⭐⭐⭐",
+        category: "tools"
+    },
+    {
+        name: "BeautifyTools",
+        url: "https://beautifytools.com/",
+        status: "Добірка інструментів",
+        purpose: "Різні інструменти для кодування",
         rating: "⭐⭐⭐⭐",
         category: "tools"
     },
