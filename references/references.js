@@ -366,17 +366,30 @@ function filterCategoryTable(tableId, inputId) {
         }
 
         // Підсвічування в кожній комірці
-        cells.forEach(cell => {
-            const originalText = cell.textContent;
-            if (!filter) {
-                cell.innerHTML = originalText;
+        cells.forEach((cell, cellIndex) => {
+            // Для першої колонки з посиланням зберігаємо <a>
+            if (cellIndex === 0) {
+                const link = cell.querySelector("a");
+                if (link) {
+                    const originalText = link.textContent;
+                    if (!filter) {
+                        link.textContent = originalText;
+                    } else {
+                        link.innerHTML = highlightText(originalText, filter);
+                    }
+                }
             } else {
-                cell.innerHTML = highlightText(originalText, filter);
+                // Для інших комірок працюємо як раніше
+                const originalText = cell.textContent;
+                if (!filter) {
+                    cell.textContent = originalText;
+                } else {
+                    cell.innerHTML = highlightText(originalText, filter);
+                }
             }
         });
     });
 }
-
 /* -------------------------------
    7. Ініціалізація
 -------------------------------- */
