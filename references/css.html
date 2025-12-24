@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Рекомендовані джерела по CSS — W3SchoolsUA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Найкращі та найавторитетніші джерела для вивчення CSS українською мовою. Офіційні специфікації, документація, навчальні ресурси.">
+    <meta name="keywords" content="CSS, документація CSS, джерела CSS, специфікації CSS, навчання CSS, W3SchoolsUA">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Рекомендовані джерела по CSS",
+            "description": "Авторитетні джерела для вивчення CSS.",
+            "url": "https://w3schoolsua.github.io/references/css.html",
+            "publisher": {
+                "@type": "Organization",
+                "name": "W3SchoolsUA",
+                "url": "https://w3schoolsua.github.io/"
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+
+    <script src="/scripts/theme.js"></script>
+    <script src="/references/data.js"></script>
+    <script src="/references/references.js"></script>
+
+    <style>
+        .table-container {
+            overflow-x: auto;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+    </style>
+</head>
+<body onload="renderCategoryTable('css', 'sourcesTable')">
+
+<!-- HEADER -->
+<div class="w3-bar w3-flat-midnight-blue w3-large">
+    <a href="https://w3schoolsua.github.io/" class="w3-bar-item w3-button w3-text-white"><b>W3SchoolsUA</b></a>
+    <a href="https://w3schoolsua.github.io/html/index.html" class="w3-bar-item w3-button w3-text-white">HTML</a>
+    <a href="https://w3schoolsua.github.io/css/index.html" class="w3-bar-item w3-button w3-text-white">CSS</a>
+    <a href="https://w3schoolsua.github.io/js/index.html" class="w3-bar-item w3-button w3-text-white">JavaScript</a>
+    <a href="https://w3schoolsua.github.io/references/index.html" class="w3-bar-item w3-button w3-text-white w3-border-bottom">Рекомендовані джерела</a>
+
+    <button class="w3-bar-item w3-button w3-right w3-text-white" onclick="toggleTheme()">
+        Темна/Світла тема
+    </button>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="w3-container w3-padding-16">
+    <div class="w3-small">
+        <a href="https://w3schoolsua.github.io/">Головна</a> &gt;
+        <a href="https://w3schoolsua.github.io/references/index.html">Рекомендовані джерела</a> &gt;
+        <span>CSS</span>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="w3-content" style="max-width:1200px;">
+
+    <h2 class="w3-center">Рекомендовані джерела по CSS</h2>
+    <p class="w3-center w3-large">Офіційні специфікації, документація, навчальні ресурси</p>
+
+    <!-- Пошук по таблиці -->
+    <div class="w3-margin-top w3-margin-bottom">
+        <label for="tableSearch"><b>Пошук по таблиці:</b></label>
+        <input id="tableSearch" class="w3-input w3-border" type="text" placeholder="Введіть текст для фільтрації..." onkeyup="filterCategoryTable('sourcesTable')">
+    </div>
+
+    <div class="table-container">
+        <table id="sourcesTable" class="w3-table-all w3-hoverable w3-margin-top">
+            <!-- Заповнюється JS -->
+        </table>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="w3-center w3-flat-midnight-blue w3-padding-32 w3-text-white" style="margin-top:40px;">
+    <p>© 2025 W3SchoolsUA — Українська навчальна платформа</p>
+</footer>
+
+<script>
+    function filterCategoryTable(tableId) {
+        var input = document.getElementById("tableSearch");
+        var filter = input.value.toLowerCase();
+        var table = document.getElementById(tableId);
+        var tr = table.getElementsByTagName("tr");
+
+        for (var i = 1; i < tr.length; i++) {
+            var rowText = tr[i].innerText.toLowerCase();
+            tr[i].style.display = rowText.includes(filter) ? "" : "none";
+        }
+    }
+</script>
+
+</body>
+</html>
