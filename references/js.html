@@ -69,41 +69,8 @@
 
 <!-- FOOTER -->
 <footer class="w3-center w3-flat-midnight-blue w3-padding-32 w3-text-white" style="margin-top:40px;">
-    <p>© 2025 W3SchoolsUA — Українська навчальна платформа</p>
+    <p>© 2026 W3SchoolsUA — Українська навчальна платформа</p>
 </footer>
-
-<script>
-    function filterCategoryTable(tableId) {
-        var input = document.getElementById("tableSearch");
-        var filter = input.value.toLowerCase();
-        var table = document.getElementById(tableId);
-        var tr = table.getElementsByTagName("tr");
-
-        for (var i = 1; i < tr.length; i++) {
-            var rowText = tr[i].innerText.toLowerCase();
-            tr[i].style.display = rowText.includes(filter) ? "" : "none";
-        }
-    }
-    // Перемикач теми з іконкою
-    function toggleThemeIcon() {
-        toggleTheme(); // з глобального theme.js
-        const icon = document.getElementById("themeIcon");
-        if (document.body.classList.contains("dark-mode")) {
-            icon.textContent = "☀️";
-        } else {
-            icon.textContent = "🌙";
-        }
-    }
-    // Ініціалізація іконки теми при завантаженні
-    document.addEventListener("DOMContentLoaded", function() {
-        renderCategoriesFromData();
-        const icon = document.getElementById("themeIcon");
-        if (document.body.classList.contains("dark-mode")) {
-            icon.textContent = "☀️";
-        } else {
-            icon.textContent = "🌙";
-        }
-    });
-</script>
+<script src="../scripts/filter_category_table.js"></script>
 </body>
 </html>

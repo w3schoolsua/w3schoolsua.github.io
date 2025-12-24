@@ -47,4 +47,26 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         applyTheme("light");
     }
+})
+
+// Перемикач теми з іконкою
+function toggleThemeIcon() {
+    toggleTheme(); // з глобального theme.js
+    const icon = document.getElementById("themeIcon");
+    if (document.body.classList.contains("dark-mode")) {
+        icon.textContent = "☀️";
+    } else {
+        icon.textContent = "🌙";
+    }
+}
+
+// Ініціалізація іконки теми при завантаженні
+document.addEventListener("DOMContentLoaded", function() {
+    renderCategoriesFromData();
+    const icon = document.getElementById("themeIcon");
+    if (document.body.classList.contains("dark-mode")) {
+        icon.textContent = "☀️";
+    } else {
+        icon.textContent = "🌙";
+    }
 });
