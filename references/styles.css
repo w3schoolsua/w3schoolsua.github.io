@@ -1,174 +1,47 @@
 /* Липкий хедер */
-.w3-top-bar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-/* Контейнер категорій */
-.category-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-/* Елемент сітки */
-.category-item {
-    flex: 1 1 calc(33.333% - 16px);
-    display: flex;
-}
-
-@media (max-width: 900px) {
-    .category-item {
-        flex: 1 1 calc(50% - 16px);
-    }
-}
-
-@media (max-width: 600px) {
-    .category-item {
-        flex: 1 1 100%;
-    }
-}
-
+.w3-top-bar {position: sticky;top: 0;z-index: 1000}
+/* Категорії як сітка */
+.category-grid {display: flex;flex-wrap: wrap;gap: 16px}
+/* Кожен елемент сітки */
+.category-item {flex: 1 1 calc(33.333% - 16px);display: flex}
 /* Картка категорії */
-.category-card {
-    width: 100%;
-    min-height: 220px;
-    padding: 24px;
-    text-align: center;
-    border-radius: 10px;
-    background: #fff;
-    border: 2px solid #e0e0e0;
-    transition: 0.25s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Темна тема*/
-body.dark-mode .category-card {
-    background: #5a1b1b;
-    border-color: #333;
-    color: #f1f1f1;
-}
-
+.category-card {width: 100%;min-height: 220px;padding: 24px;text-align: center;border-radius: 10px;background: #e2f1f4;border: 2px solid #e0e0e0;box-shadow: 1px 4px 5px #91939c;transition: 0.25s ease;display: flex;flex-direction: column;justify-content: space-between}
+.category-card:hover {transform: translateY(-6px);background: #c4eff6;border-color: #4da3ff;box-shadow: 0 6px 18px rgb(160, 165, 188);}
 /* Іконка */
-.category-icon {
-    font-size: 48px;
-    margin-bottom: 12px;
-}
-
-/* Hover‑ефекти */
-.category-card:hover {
-    transform: translateY(-6px);
-    border-color: #4da3ff;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    background: #f7fbff;
-}
-
-body.dark-mode .category-card:hover {
-    background: #2a2a2a;
-    border-color: #66b3ff;
-    box-shadow: 0 6px 18px rgba(255,255,255,0.15);
-}
-
-/* Кнопка теми */
-.theme-toggle-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 20px;
-}
-
+.category-icon {font-size: 48px;margin-bottom: 6px}
+/* Адаптивна таблиця для мобільних */
+.table-container {overflow-x: auto;width: 100%}
+/* Кнопка теми з фконкою */
+.theme-toggle-btn {display: flex;align-items: center;gap: 6px;font-size: 20px}
 /* RSS‑віджет */
-.rss-widget {
-    border-left: 4px solid #ff9800;
-}
+.rss-widget {border-left: 4px solid #ff9800}
+/* Адаптивність для мобільних гаджетів */
+@media (max-width: 900px) {.category-item {flex: 1 1 calc(50% - 16px)}}
+@media (max-width: 600px) {.category-item {flex: 1 1 100%}}
 
-/* Таблиці */
-.table-container {overflow-x: auto}
+/* Темна тема */
+body.dark-mode {background-color: #121212; color: #f1f1f1}
+body.dark-mode .w3-card {background-color: #1e1e1e}
+body.dark-mode a {color: #1c95ec}
+body.dark-mode .category-card {background: #1e1e1e;border-color: #333;color: #f1f1f1}
+body.dark-mode .category-card:hover {background: #2a2a2a;border-color: #66b3ff;box-shadow: 0 6px 18px rgba(255,255,255,0.15)}
 
-/* Бейджі тегів */
-.tag-badge {
-    display: inline-block;
-    padding: 2px 8px;
-    margin: 2px;
-    border-radius: 999px;
-    font-size: 11px;
-    font-weight: 600;
-    background: #e3f2fd;
-    color: #0d47a1;
-}
+/* Таблиця займає всю ширину */
+.w3-table-all {width: 100%;border-collapse: collapse}
+/* Комірки не злипаються */
+.w3-table-all td, .w3-table-all th {padding: 8px;word-break: break-word}
 
-body.dark-mode .tag-badge {
-    background: #263238;
-    color: #bbdefb;
-}
+/* Темна тема для таблиць */
+body.dark-mode .w3-table-all {background-color: #1e1e1e;color: #f0f0f0}
+body.dark-mode .w3-table-all th {background-color: #333;color: #f0f0f0}
+body.dark-mode .w3-table-all td {background-color: #1e1e1e;color: #f0f0f0}
+body.dark-mode .w3-table-all tr:hover td {background-color: #2a2a2a}
 
-/* Хмара тегів */
-.tag-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
+/* Sticky-заголовок таблиці */
+.w3-table-all thead th {position: sticky;top: 0;z-index: 2}
 
-.tag-cloud .tag-badge {
-    cursor: pointer;
-    transition: 0.2s;
-}
+/* Підсвічування знайдених слів */
+.highlight {background-color: #ffeb3b;color: #000;padding: 0 2px;border-radius: 2px}
 
-.tag-cloud .tag-badge:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* Фільтри тегів */
-.tag-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 13px;
-}
-
-.tag-filters label {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-/* Підсвічування знайденого тексту */
-.highlight {
-    background: #ffeb3b;
-    padding: 0 2px;
-}
-
-/* Анімація появи карток */
-.category-card {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-}
-
-.category-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-body.dark-mode .w3-table-all {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-}
-
-body.dark-mode .w3-table-all th {
-    background-color: #333;
-    color: #f0f0f0;
-}
-
-body.dark-mode .w3-table-all td {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
-}
-
-body.dark-mode .w3-table-all tr:hover td {
-    background-color: #2a2a2a;
-}
+/* Темна тема — інше підсвічування */
+body.dark-mode .highlight {background-color: #ffc107;color: #000}

@@ -86,7 +86,7 @@ const sourcesData = [
         url: "https://jigsaw.w3.org/css-validator/",
         status: "Офіційний",
         purpose: "Перевірка валідності CSS",
-        rating: "⭐⭐⭐⭐⭐",
+        rating: "⭐⭐⭐⭐",
         category: "css"
     },
 
