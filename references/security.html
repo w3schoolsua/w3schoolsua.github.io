@@ -4,10 +4,8 @@
     <title>Рекомендовані джерела по веб‑безпеці — W3SchoolsUA</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="description" content="Найкращі ресурси з веб‑безпеки: OWASP, MDN, стандарти, рекомендації, практики захисту.">
     <meta name="keywords" content="web security, безпека веб, OWASP, MDN security, W3SchoolsUA">
-
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -22,56 +20,47 @@
             }
         }
     </script>
-
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-
-    <script src="/scripts/theme.js"></script>
-    <script src="/references/data.js"></script>
-    <script src="/references/references.js"></script>
-
+    <link rel="stylesheet" href="../w3css/4/w3.css">
+    <link rel="stylesheet" href="../lib/w3-colors-flat.css">
+    <script src="../scripts/theme.js"></script>
+    <script src="../references/data.js"></script>
+    <script src="../references/references.js"></script>
     <style>
         .table-container { overflow-x: auto; }
         body.dark-mode { background-color: #121212; color: #f1f1f1; }
     </style>
 </head>
 <body onload="renderCategoryTable('security', 'sourcesTable')">
-
 <!-- HEADER -->
 <div class="w3-bar w3-flat-midnight-blue w3-large">
-    <a href="/" class="w3-bar-item w3-button w3-text-white"><b>W3SchoolsUA</b></a>
-    <a href="/html/index.html" class="w3-bar-item w3-button w3-text-white">HTML</a>
-    <a href="/css/index.html" class="w3-bar-item w3-button w3-text-white">CSS</a>
-    <a href="/js/index.html" class="w3-bar-item w3-button w3-text-white">JavaScript</a>
-    <a href="/references/index.html" class="w3-bar-item w3-button w3-text-white w3-border-bottom">Рекомендовані джерела</a>
-
-    <button class="w3-bar-item w3-button w3-right w3-text-white" onclick="toggleTheme()">Темна/Світла тема</button>
+    <a href="../" class="w3-bar-item w3-button w3-text-white"><b>W3SchoolsUA</b></a>
+    <a href="../html/index.html" class="w3-bar-item w3-button w3-text-white">HTML</a>
+    <a href="../css/index.html" class="w3-bar-item w3-button w3-text-white">CSS</a>
+    <a href="../js/index.html" class="w3-bar-item w3-button w3-text-white">JavaScript</a>
+    <a href="../references/index.html" class="w3-bar-item w3-button w3-text-white w3-border-bottom">Рекомендовані джерела</a>
+    <button class="w3-bar-item w3-button w3-right w3-text-white theme-toggle-btn" onclick="toggleThemeIcon()"><span id="themeIcon">🌙</span></button>
 </div>
 
 <!-- BREADCRUMBS -->
 <div class="w3-container w3-padding-16">
     <div class="w3-small">
-        <a href="/">Головна</a> &gt;
-        <a href="/references/index.html">Рекомендовані джерела</a> &gt;
+        <a href="../">Головна</a> &gt;
+        <a href="../references/index.html">Рекомендовані джерела</a> &gt;
         <span>Безпека</span>
     </div>
 </div>
 
 <!-- CONTENT -->
 <div class="w3-content" style="max-width:1200px;">
-
-    <h2 class="w3-center">Рекомендовані джерела по веб‑безпеці</h2>
+    <h2 class="w3-center">Рекомендовані джерела по веббезпеці</h2>
     <p class="w3-center w3-large">OWASP, MDN, стандарти, рекомендації</p>
-
     <div class="w3-margin-top w3-margin-bottom">
-        <label><b>Пошук по таблиці:</b></label>
+        <label for="tableSearch"><b>Пошук по таблиці:</b></label>
         <input id="tableSearch" class="w3-input w3-border" type="text" placeholder="Фільтр..." onkeyup="filterCategoryTable('sourcesTable')">
     </div>
-
     <div class="table-container">
         <table id="sourcesTable" class="w3-table-all w3-hoverable w3-margin-top"></table>
     </div>
-
 </div>
 
 <footer class="w3-center w3-flat-midnight-blue w3-padding-32 w3-text-white" style="margin-top:40px;">
@@ -86,7 +75,26 @@
             r[i].style.display=r[i].innerText.toLowerCase().includes(f)?"":"none";
         }
     }
+    // Перемикач теми з іконкою
+    function toggleThemeIcon() {
+        toggleTheme(); // з глобального theme.js
+        const icon = document.getElementById("themeIcon");
+        if (document.body.classList.contains("dark-mode")) {
+            icon.textContent = "☀️";
+        } else {
+            icon.textContent = "🌙";
+        }
+    }
+    // Ініціалізація іконки теми при завантаженні
+    document.addEventListener("DOMContentLoaded", function() {
+        renderCategoriesFromData();
+        const icon = document.getElementById("themeIcon");
+        if (document.body.classList.contains("dark-mode")) {
+            icon.textContent = "☀️";
+        } else {
+            icon.textContent = "🌙";
+        }
+    });
 </script>
-
 </body>
 </html>
