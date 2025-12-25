@@ -8,7 +8,7 @@
     <meta name="keywords" content="HTML, CSS, JS, API, tools, security, W3SchoolsUA">
     <link rel="stylesheet" href="../w3css/4/w3.css">
     <link rel="stylesheet" href="../lib/w3-colors-flat.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/styles_references.css">
     <script src="../scripts/theme.js"></script>
     <script src="../references/data.js"></script>
     <script src="../references/references.js"></script>
@@ -188,7 +188,7 @@
 
 <!-- FOOTER -->
 <footer class="w3-center w3-flat-midnight-blue w3-padding-32 w3-text-white" style="margin-top:40px;">
-    <p>© 2026 W3SchoolsUA — Українська навчальна платформа</p>
+    <p>© <span id="current-year"></span> W3SchoolsUA — Українська навчальна платформа</p>
 </footer>
 
 <script>
@@ -197,6 +197,8 @@
         html:     { title: "HTML",      icon: "📄", description: "Стандарти, документація, навчальні ресурси" },
         css:      { title: "CSS",       icon: "🎨", description: "Специфікації, довідники, гіди" },
         js:       { title: "JavaScript",icon: "⚙️", description: "ECMAScript, документація, навчання" },
+        sql:      { title: "SQL",       icon: "🧮", description: "Навчальні матеріали, документація" },
+        python:   { title: "Python",    icon: "🐍", description: "Навчальні матеріали, документація" },
         api:      { title: "Web API",   icon: "🌐", description: "Браузерні API та стандарти" },
         tools:    { title: "Інструменти",icon:"🛠️",description:"Валідатори, редактори, утиліти" },
         security: { title: "Безпека",   icon: "🔒", description: "OWASP, рекомендації, стандарти" }
@@ -232,6 +234,11 @@
         });
     }
 </script>
-
+/* Автоматичне відображення поточного року */
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    });
+</script>
 </body>
 </html>

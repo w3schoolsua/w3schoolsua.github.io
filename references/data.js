@@ -130,6 +130,134 @@ const sourcesData = [
         category: "js",
         tags: ["w3schools", "українською", "для початківців", "уроки", "підручник", "навчання", "приклади", "ua", "tutorial", "javascript"]
     },
+    /* ---------------- SQL ---------------- */
+    {
+        name: "LearnSQL.com — Офіційний сайт",
+        url: "https://learnsql.com/",
+        category: "sql",
+        status: "Офіційний сайт",
+        purpose: "Повний підручник по SQL",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "docs", "official", "підручник", "скл", "документація", "офіційний", "уроки"]
+    },
+    {
+        name: "W3Schools SQL Tutorial",
+        url: "https://www.w3schools.com/sql/",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади, довідники",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "tutorials", "lessons", "w3schools", "підручник", "мова", "навчання", "уроки"]
+    },
+    {
+        name: "W3SchoolsUA — SQL",
+        url: "https://w3schoolsua.github.io/sql/index.html",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади, довідники українською",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "w3schools", "підручник", "мова", "навчання", "уроки", "для початківців", "українською", "github", "ua"]
+    },
+    {
+        name: "SQLZoo",
+        url: "https://sqlzoo.net/wiki/SQL_Tutorial",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Інтерактивна серія уроків і вправ на SQL",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "sqlzoo", "підручник", "мова", "навчання", "уроки", "для початківців", "english", "wiki"]
+    },
+    {
+        name: "Codecademy – Learn SQL",
+        url: "https://www.codecademy.com/learn/learn-sql",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Інтерактивний курс SQL з практичними вправами",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "codecademy", "підручник", "мова", "навчання", "уроки", "для початківців", "курс", "інтерактивний", "онлайн"]
+    },
+    {
+        name: "Khan Academy – Intro to SQL",
+        url: "https://www.khanacademy.org/computing/computer-programming/sql",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Відео-курс з SQL із інтерактивними вправами для початківців",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "khan", "підручник", "мова", "навчання", "уроки", "для початківців", "курс", "інтерактивний", "відео"]
+    },
+    {
+        name: "Microsoft Learn – SQL Documentation",
+        url: "https://learn.microsoft.com/en-us/sql/",
+        category: "sql",
+        status: "Офіційний ресурс",
+        purpose: "Офіційна технічна документація Microsoft для SQL Server і Transact-SQL",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "microsoft", "офіційний", "сайт", "технічна", "документація", "сервер", "server", "documentation", "azure"]
+    },
+    {
+        name: "Oracle SQL Docs & Tutorials",
+        url: "https://www.oracle.com/database/technologies/appdev/sql.html",
+        category: "sql",
+        status: "Офіційний ресурс",
+        purpose: "Офіційний ресурс Oracle з документацією, прикладами і тестами для SQL",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "oracle", "офіційний", "сайт", "docs", "документація", "сервер", "server", "documentation", "tutorials"]
+    },
+    {
+        name: "Coursera – SQL Courses",
+        url: "https://www.coursera.org/courses?query=sql",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Колекція онлайн-курсів від університетів та компаній",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "coursera", "courses", "навчання", "уроки", "університети", "компанії", "курси", "сертифікати", "tutorials"]
+    },
+    {
+        name: "Dataquest SQL Guide",
+        url: "https://www.dataquest.io/guide/sql-tutorial/",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Збірка навчальних посібників, практичних завдань, шпаргалок по SQL",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "dataquest", "courses", "навчання", "уроки", "посібники", "підручники", "курси", "практика", "tutorials"]
+    },
+    /* ---------------- Python ---------------- */
+    {
+        name: "Python.org — Documentation",
+        url: "https://docs.python.org/3/",
+        category: "python",
+        status: "Офіційна документація",
+        purpose: "Повний довідник Python",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["python", "docs", "official", "питон", "пайтон", "документація", "офіційний"]
+    },
+    {
+        name: "Real Python",
+        url: "https://realpython.com/",
+        category: "python",
+        status: "Навчальний ресурс",
+        purpose: "Статті, уроки, приклади",
+        rating: "⭐⭐⭐⭐",
+        tags: ["python", "tutorials", "real", "реал", "пайтон", "питон", "навчання", "уроки"]
+    },
+    {
+        name: "W3SchoolsUA — Python",
+        url: "https://w3schoolsua.github.io/python/index.html",
+        category: "python",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади, пояснення",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["python", "tutorials", "w3schools", "підручник", "пайтон", "питон", "навчання", "уроки", "ua", "для початківців"]
+    },
+    {
+        name: "W3Schools.com — Python",
+        url: "https://w3schools.com/python/",
+        category: "python",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади, пояснення",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["python", "tutorials", "w3schools", "підручник", "пайтон", "питон", "навчання", "уроки", "en", "для початківців"]
+    },
     /* ---------------- Web API ---------------- */
     {
         name: "MDN Web Docs — Web APIs",
@@ -249,135 +377,7 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐",
         category: "security",
         tags: ["security", "web", "google", "офіційний", "рекомендації", "безпека"]
-    },
-    /* ---------------- Python ---------------- */
-    {
-        name: "Python.org — Documentation",
-        url: "https://docs.python.org/3/",
-        category: "python",
-        status: "Офіційна документація",
-        purpose: "Повний довідник Python",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["python", "docs", "official", "питон", "пайтон", "документація", "офіційний"]
-    },
-    {
-        name: "Real Python",
-        url: "https://realpython.com/",
-        category: "python",
-        status: "Навчальний ресурс",
-        purpose: "Статті, уроки, приклади",
-        rating: "⭐⭐⭐⭐",
-        tags: ["python", "tutorials", "real", "реал", "пайтон", "питон", "навчання", "уроки"]
-    },
-    {
-        name: "W3SchoolsUA — Python",
-        url: "https://w3schoolsua.github.io/python/index.html",
-        category: "python",
-        status: "Навчальний ресурс",
-        purpose: "Уроки, приклади, пояснення",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["python", "tutorials", "w3schools", "підручник", "пайтон", "питон", "навчання", "уроки", "ua", "для початківців"]
-    },
-    {
-        name: "W3Schools.com — Python",
-        url: "https://w3schools.com/python/",
-        category: "python",
-        status: "Навчальний ресурс",
-        purpose: "Уроки, приклади, пояснення",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["python", "tutorials", "w3schools", "підручник", "пайтон", "питон", "навчання", "уроки", "en", "для початківців"]
-    },
-    /* ---------------- SQL ---------------- */
-    {
-        name: "LearnSQL.com — Офіційний сайт",
-        url: "https://learnsql.com/",
-        category: "sql",
-        status: "Офіційний сайт",
-        purpose: "Повний підручник по SQL",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "docs", "official", "підручник", "скл", "документація", "офіційний", "уроки"]
-    },
-    {
-        name: "W3Schools SQL Tutorial",
-        url: "https://www.w3schools.com/sql/",
-        category: "sql",
-        status: "Навчальний ресурс",
-        purpose: "Уроки, приклади, довідники",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "tutorials", "lessons", "w3schools", "підручник", "мова", "навчання", "уроки"]
-    },
-    {
-        name: "W3SchoolsUA SQL Підручник",
-        url: "https://w3schoolsua.github.io/sql/index.html",
-        category: "sql",
-        status: "Навчальний ресурс",
-        purpose: "Уроки, приклади, довідники українською",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "w3schools", "підручник", "мова", "навчання", "уроки", "для початківців", "українською", "github", "ua"]
-    },
-    {
-        name: "SQLZoo",
-        url: "https://sqlzoo.net/wiki/SQL_Tutorial",
-        category: "sql",
-        status: "Навчальний ресурс",
-        purpose: "Інтерактивна серія уроків і вправ на SQL",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "sqlzoo", "підручник", "мова", "навчання", "уроки", "для початківців", "english", "wiki"]
-    },
-    {
-        name: "Codecademy – Learn SQL",
-        url: "https://www.codecademy.com/learn/learn-sql",
-        category: "sql",
-        status: "Навчальний ресурс",
-        purpose: "Інтерактивний курс SQL з практичними вправами",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "codecademy", "підручник", "мова", "навчання", "уроки", "для початківців", "курс", "інтерактивний", "онлайн"]
-    },
-    {
-        name: "Khan Academy – Intro to SQL",
-        url: "https://www.khanacademy.org/computing/computer-programming/sql",
-        category: "sql",
-        status: "Навчальний ресурс",
-        purpose: "Відео-курс з SQL із інтерактивними вправами для початківців",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "khan", "підручник", "мова", "навчання", "уроки", "для початківців", "курс", "інтерактивний", "відео"]
-    },
-    {
-        name: "Microsoft Learn – SQL Documentation",
-        url: "https://learn.microsoft.com/en-us/sql/",
-        category: "sql",
-        status: "Офіційний ресурс",
-        purpose: "Офіційна технічна документація Microsoft для SQL Server і Transact-SQL",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "microsoft", "офіційний", "сайт", "технічна", "документація", "сервер", "server", "documentation", "azure"]
-    },
-    {
-        name: "Oracle SQL Docs & Tutorials",
-        url: "https://www.oracle.com/database/technologies/appdev/sql.html",
-        category: "sql",
-        status: "Офіційний ресурс",
-        purpose: "Офіційний ресурс Oracle з документацією, прикладами і тестами для SQL",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "oracle", "офіційний", "сайт", "docs", "документація", "сервер", "server", "documentation", "tutorials"]
-    },
-    {
-        name: "Coursera – SQL Courses",
-        url: "https://www.coursera.org/courses?query=sql",
-        category: "sql",
-        status: "Навчальний ресурс",
-        purpose: "Колекція онлайн-курсів від університетів та компаній",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "coursera", "courses", "навчання", "уроки", "університети", "компанії", "курси", "сертифікати", "tutorials"]
-    },
-    {
-        name: "Dataquest SQL Guide",
-        url: "https://www.dataquest.io/guide/sql-tutorial/",
-        category: "sql",
-        status: "Навчальний ресурс",
-        purpose: "Збірка навчальних посібників, практичних завдань, шпаргалок по SQL",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "dataquest", "courses", "навчання", "уроки", "посібники", "підручники", "курси", "практика", "tutorials"]
-    },
+    }
 ];
 // Фільтрація по категорії
 function getSourcesByCategory(category) {

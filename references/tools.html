@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <title>Рекомендовані інструменти — W3SchoolsUA</title>
+  <title id="pageTitle">Рекомендовані джерела по Інструментам для веброзробки та програмування — W3SchoolsUA</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Найкращі та найавторитетніші інструменти для веб‑розробки. Валідатори, редактори, утиліти, онлайн‑сервіси.">
-  <meta name="keywords" content="tools, інструменти, веб‑розробка, валідатори, редактори, утиліти, W3SchoolsUA">
-
-  <!-- Structured Data -->
+  <meta id="metaDescription" name="description" content="Найкращі та найавторитетніші джерела для вивчення Інструментів для веброзробки та програмування. Редактори коду. Документація, інструкції, навчальні ресурси. W3Schools українською">
+  <meta id="metaKeywords" name="keywords" content="інструменти, уроки, підручники, офіційний сайт, редактори коду, онлайн, для початківців, w3schools українською">
+  <link rel="stylesheet" href="../w3css/4/w3.css">
+  <link rel="stylesheet" href="../lib/w3-colors-flat.css">
+  <link rel="stylesheet" href="../styles/styles_references.css">
+  <script src="../scripts/theme.js"></script>
+  <script src="../references/data.js"></script>
+  <script src="../references/references.js"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Рекомендовані інструменти",
-      "description": "Авторитетні інструменти для веб‑розробки.",
+      "name": "Рекомендовані джерела по Інструментам для програмування та веброзробки",
+      "description": "Авторитетні джерела для вивчення Інструментів для програмування та веброзробки. Редактори коду. Інструкції. Офіційна документація.",
       "url": "https://w3schoolsua.github.io/references/tools.html",
       "publisher": {
         "@type": "Organization",
@@ -22,43 +26,9 @@
       }
     }
   </script>
-
-  <!-- W3.CSS -->
-  <link rel="stylesheet" href="../w3css/4/w3.css">
-  <link rel="stylesheet" href="../lib/w3-colors-flat.css">
-
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Theme + Data + Logic -->
-  <script src="../scripts/theme.js"></script>
-  <script src="../references/data.js"></script>
-  <script src="../references/references.js"></script>
-
-  <style>
-    /* Темна тема */
-    body.dark-mode {
-      background-color: #121212;
-      color: #f1f1f1;
-    }
-
-    /* Адаптивність таблиці */
-    .table-container {
-      overflow-x: auto;
-      width: 100%;
-    }
-
-    /* Sticky-заголовок */
-    #sourcesTable thead th {
-      position: sticky;
-      top: 0;
-      z-index: 2;
-    }
-  </style>
 </head>
 
-<body onload="renderCategoryTable('tools', 'sourcesTable')">
-
+<body onload="initCategoryPage()">
 <!-- HEADER -->
 <div class="w3-bar w3-flat-midnight-blue w3-large">
   <a href="../" class="w3-bar-item w3-button w3-text-white"><b>W3SchoolsUA</b></a>
@@ -66,27 +36,22 @@
   <a href="../css/index.html" class="w3-bar-item w3-button w3-text-white">CSS</a>
   <a href="../js/index.html" class="w3-bar-item w3-button w3-text-white">JavaScript</a>
   <a href="../references/index.html" class="w3-bar-item w3-button w3-text-white w3-border-bottom">Рекомендовані джерела</a>
-
-  <button class="w3-bar-item w3-button w3-right w3-text-white theme-toggle-btn" onclick="toggleThemeIcon()">
-    <span id="themeIcon">🌙</span>
-  </button>
+  <button class="w3-bar-item w3-button w3-right w3-text-white" onclick="toggleThemeIcon()"><span id="themeIcon">🌙</span></button>
 </div>
 
-<!-- BREADCRUMBS -->
+<!--BREADCRUMBS-->
 <div class="w3-container w3-padding-16">
   <div class="w3-small">
     <a href="../">Головна</a> &gt;
     <a href="../references/index.html">Рекомендовані джерела</a> &gt;
-    <span>Інструменти</span>
+    <span id="breadcrumbName"></span>
   </div>
 </div>
 
 <!-- CONTENT -->
 <div class="w3-content" style="max-width:1200px;">
-
-  <h2 class="w3-center">Рекомендовані інструменти</h2>
-  <p class="w3-center w3-large">Валідатори, редактори, утиліти, онлайн‑сервіси</p>
-
+  <h2 class="w3-center" id="categoryTitle"></h2>
+  <p class="w3-center w3-large" id="categorySubtitle"></p>
   <!-- Пошук -->
   <div class="w3-margin-top w3-margin-bottom">
     <label for="tableSearch"><b>Пошук по таблиці:</b></label>
@@ -100,16 +65,16 @@
   <!-- Таблиця -->
   <div class="table-container">
     <table id="sourcesTable" class="w3-table-all w3-hoverable w3-margin-top">
-      <!-- Заповнюється через renderCategoryTable() -->
+      <!-- Заповнюється JS через renderCategoryTable() -->
     </table>
   </div>
-
 </div>
 
 <!-- FOOTER -->
 <footer class="w3-center w3-flat-midnight-blue w3-padding-32 w3-text-white" style="margin-top:40px;">
-  <p>© 2026 W3SchoolsUA — Українська навчальна платформа</p>
+  <p>© <span id="current-year"></span> W3SchoolsUA — Українська навчальна платформа</p>
 </footer>
 
+<script src="../scripts/category_tables.js"></script>
 </body>
 </html>

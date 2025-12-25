@@ -8,15 +8,24 @@
     <meta id="metaKeywords" name="keywords" content="python, learning, уроки, підручники, курси, онлайн, w3schools українською">
     <link rel="stylesheet" href="../w3css/4/w3.css">
     <link rel="stylesheet" href="../lib/w3-colors-flat.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/styles_references.css">
     <script src="../scripts/theme.js"></script>
     <script src="../references/data.js"></script>
     <script src="../references/references.js"></script>
-    <style>
-        body.dark-mode { background-color: #121212; color: #f1f1f1; }
-        .table-container { overflow-x: auto; width: 100%; }
-        #sourcesTable thead th { position: sticky; top: 0; z-index: 2; }
-    </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Рекомендовані джерела по Python",
+            "description": "Авторитетні джерела для вивчення Python. Документація.",
+            "url": "https://w3schoolsua.github.io/references/python.html",
+            "publisher": {
+                "@type": "Organization",
+                "name": "W3SchoolsUA",
+                "url": "https://w3schoolsua.github.io/"
+            }
+        }
+    </script>
 </head>
 
 <body onload="initCategoryPage()">
@@ -55,53 +64,17 @@
 
     <!-- Таблиця -->
     <div class="table-container">
-        <table id="sourcesTable" class="w3-table-all w3-hoverable w3-margin-top"></table>
+        <table id="sourcesTable" class="w3-table-all w3-hoverable w3-margin-top">
+            <!-- Заповнюється JS через renderCategoryTable() -->
+        </table>
     </div>
 </div>
 
 <!-- FOOTER -->
 <footer class="w3-center w3-flat-midnight-blue w3-padding-32 w3-text-white" style="margin-top:40px;">
-    <p>© 2026 W3SchoolsUA — Українська навчальна платформа</p>
+    <p>© <span id="current-year"></span> W3SchoolsUA — Українська навчальна платформа</p>
 </footer>
 
-<script>
-    /* Автоматичне визначення категорії з URL */
-    function getCategoryFromURL() {
-        const file = location.pathname.split("/").pop(); // html.html → html
-        return file.replace(".html", "");
-    }
-
-    /* Дані для заголовків */
-    const categoryInfo = {
-        html: { title: "HTML", subtitle: "Офіційні стандарти, документація, навчальні ресурси" },
-        css: { title: "CSS", subtitle: "Специфікації, довідники, гіди" },
-        js: { title: "JavaScript", subtitle: "ECMAScript, документація, навчання" },
-        api: { title: "Web API", subtitle: "Браузерні API та стандарти" },
-        tools: { title: "Інструменти", subtitle: "Валідатори, редактори, утиліти" },
-        security: { title: "Безпека", subtitle: "OWASP, рекомендації, стандарти" },
-        python: { title: "Python", subtitle: "Документація, стандарти, навчальні ресурси" }
-    };
-
-    /* Ініціалізація сторінки */
-    function initCategoryPage() {
-        const category = getCategoryFromURL();
-        const info = categoryInfo[category];
-
-        if (info) {
-            document.getElementById("pageTitle").textContent = `Рекомендовані джерела по ${info.title} — W3SchoolsUA`;
-            document.getElementById("breadcrumbName").textContent = info.title;
-            document.getElementById("categoryTitle").textContent = `Рекомендовані джерела по ${info.title}`;
-            document.getElementById("categorySubtitle").textContent = info.subtitle;
-
-            document.getElementById("metaDescription").content =
-                `Найкращі та найавторитетніші джерела по ${info.title}.`;
-            document.getElementById("metaKeywords").content =
-                `${info.title}, документація, стандарти, навчання, W3SchoolsUA`;
-        }
-
-        renderCategoryTable(category, "sourcesTable");
-    }
-</script>
-
+<script src="../scripts/category_tables.js"></script>
 </body>
 </html>

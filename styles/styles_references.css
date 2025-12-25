@@ -9,15 +9,26 @@
 .category-card:hover {transform: translateY(-6px);background: #c4eff6;border-color: #4da3ff;box-shadow: 0 6px 18px rgb(160, 165, 188);}
 /* Іконка */
 .category-icon {font-size: 48px;margin-bottom: 6px}
-/* Адаптивна таблиця для мобільних */
-.table-container {overflow-x: auto;width: 100%}
 /* Кнопка теми з фконкою */
 .theme-toggle-btn {display: flex;align-items: center;gap: 6px;font-size: 20px}
 /* RSS‑віджет */
 .rss-widget {border-left: 4px solid #ff9800}
+/* Підсвічування знайдених слів */
+.highlight {background-color: #ffeb3b;color: #000;padding: 0 2px;border-radius: 2px}
 /* Адаптивність для мобільних гаджетів */
 @media (max-width: 900px) {.category-item {flex: 1 1 calc(50% - 16px)}}
 @media (max-width: 600px) {.category-item {flex: 1 1 100%}}
+
+/* Адаптивна таблиця для мобільних */
+.table-container {overflow-x: auto;width: 100%}
+/* Таблиця займає всю ширину */
+.w3-table-all {width: 100%;border-collapse: collapse}
+/* Комірки не злипаються */
+.w3-table-all td, .w3-table-all th {padding: 8px;word-break: break-word}
+/* Sticky-заголовок таблиці */
+.w3-table-all thead th {position: sticky;top: 0;z-index: 2}
+
+#sourcesTable thead th { position: sticky; top: 0; z-index: 2; }
 
 /* Темна тема */
 body.dark-mode {background-color: #121212; color: #f1f1f1}
@@ -25,23 +36,11 @@ body.dark-mode .w3-card {background-color: #1e1e1e}
 body.dark-mode a {color: #1c95ec}
 body.dark-mode .category-card {background: #1e1e1e;border-color: #333;color: #f1f1f1}
 body.dark-mode .category-card:hover {background: #2a2a2a;border-color: #66b3ff;box-shadow: 0 6px 18px rgba(255,255,255,0.15)}
-
-/* Таблиця займає всю ширину */
-.w3-table-all {width: 100%;border-collapse: collapse}
-/* Комірки не злипаються */
-.w3-table-all td, .w3-table-all th {padding: 8px;word-break: break-word}
+/* Темна тема — інше підсвічування */
+body.dark-mode .highlight {background-color: #ffc107;color: #000}
 
 /* Темна тема для таблиць */
 body.dark-mode .w3-table-all {background-color: #1e1e1e;color: #f0f0f0}
 body.dark-mode .w3-table-all th {background-color: #333;color: #f0f0f0}
 body.dark-mode .w3-table-all td {background-color: #1e1e1e;color: #f0f0f0}
 body.dark-mode .w3-table-all tr:hover td {background-color: #2a2a2a}
-
-/* Sticky-заголовок таблиці */
-.w3-table-all thead th {position: sticky;top: 0;z-index: 2}
-
-/* Підсвічування знайдених слів */
-.highlight {background-color: #ffeb3b;color: #000;padding: 0 2px;border-radius: 2px}
-
-/* Темна тема — інше підсвічування */
-body.dark-mode .highlight {background-color: #ffc107;color: #000}
