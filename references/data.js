@@ -1,5 +1,4 @@
 // /references/data.js
-
 // Базова структура джерела:
 // {
 //   name: "Назва",
@@ -7,20 +6,19 @@
 //   status: "Офіційний / Неофіційний / Де-факто стандарт",
 //   purpose: "Короткий опис",
 //   rating: "⭐⭐⭐⭐⭐",
-//   category: "html" | "css" | "js" | "api" | "tools" | "security"
+//   category: "html" | "css" | "js" | "api" | "tools" | "security",
+//   tags: ["ключові", "...", "слова"]
 // }
-
 const sourcesData = [
-
     /* ---------------- HTML ---------------- */
-
     {
         name: "WHATWG HTML Living Standard",
         url: "https://html.spec.whatwg.org/",
         status: "Офіційний стандарт",
         purpose: "Єдиний актуальний стандарт HTML",
         rating: "⭐⭐⭐⭐⭐",
-        category: "html"
+        category: "html",
+        tags: ["whatwg", "web", "html", "docs", "стандарт", "standard", "документація", "living", "oficial", "джерело"]
     },
     {
         name: "MDN Web Docs — HTML",
@@ -28,7 +26,8 @@ const sourcesData = [
         status: "Де-факто стандарт документації",
         purpose: "Найповніша документація по HTML",
         rating: "⭐⭐⭐⭐⭐",
-        category: "html"
+        category: "html",
+        tags: ["mdn", "web", "html", "docs", "стандарт", "standard", "документація", "офіційна", "приклади", "навчання"]
     },
     {
         name: "W3SchoolsUA — HTML",
@@ -36,7 +35,8 @@ const sourcesData = [
         status: "Навчальний ресурс українською",
         purpose: "Приклади та пояснення HTML",
         rating: "⭐⭐⭐⭐⭐",
-        category: "html"
+        category: "html",
+        tags: ["w3schools", "підручник", "html", "для початківців", "українською", "web", "уроки", "безплатні", "приклади", "задачі"]
     },
     {
         name: "W3C HTML Validator",
@@ -44,18 +44,18 @@ const sourcesData = [
         status: "Офіційний",
         purpose: "Перевірка валідності HTML",
         rating: "⭐⭐⭐⭐",
-        category: "html"
+        category: "html",
+        tags: ["w3c", "валідатор", "html", "validator", "standard", "web", "стандарти", "розмітка", "перевірка", "теги"]
     },
-
     /* ---------------- CSS ---------------- */
-
     {
         name: "MDN Web Docs — CSS",
         url: "https://developer.mozilla.org/docs/Web/CSS",
         status: "Де-факто стандарт документації",
         purpose: "Докладна документація по CSS",
         rating: "⭐⭐⭐⭐⭐",
-        category: "css"
+        category: "css",
+        tags: ["mdn", "docs", "css", "spec", "standard", "web", "стандарти", "style", "oficial", "стилі"]
     },
     {
         name: "W3C CSS Specifications",
@@ -63,7 +63,8 @@ const sourcesData = [
         status: "Офіційний",
         purpose: "Офіційні специфікації CSS",
         rating: "⭐⭐⭐⭐",
-        category: "css"
+        category: "css",
+        tags: ["w3c", "docs", "css", "spec", "standard", "code", "стандарти", "style", "oficial", "стилі"]
     },
     {
         name: "Can I Use — CSS",
@@ -71,15 +72,17 @@ const sourcesData = [
         status: "Авторитетний",
         purpose: "Підтримка CSS‑функцій у браузерах",
         rating: "⭐⭐⭐⭐⭐",
-        category: "css"
+        category: "css",
+        tags: ["can", "use", "css", "перевірка", "можливості", "браузера", "стандарти", "підтримка", "функції", "стилі"]
     },
     {
         name: "W3SchoolsUA — CSS",
         url: "https://w3schoolsua.github.io/css/index.html",
         status: "Навчальний ресурс",
-        purpose: "Приклади та пояснення CSS",
+        purpose: "Уроки по CSS, приклади та пояснення",
         rating: "⭐⭐⭐⭐⭐",
-        category: "css"
+        category: "css",
+        tags: ["w3schools", "css", "сайт", "уроки", "підручник", "ua", "для початківців", "українською", "tutorial", "стилі"]
     },
     {
         name: "W3C CSS Validator",
@@ -87,18 +90,18 @@ const sourcesData = [
         status: "Офіційний",
         purpose: "Перевірка валідності CSS",
         rating: "⭐⭐⭐⭐",
-        category: "css"
+        category: "css",
+        tags: ["w3c", "css", "validator", "перевірка", "валідність", "каскадні", "таблиці", "стилі", "помилки", "офіційний"]
     },
-
     /* ---------------- JavaScript ---------------- */
-
     {
         name: "MDN Web Docs — JavaScript",
         url: "https://developer.mozilla.org/docs/Web/JavaScript",
         status: "Де-факто стандарт документації",
         purpose: "Докладна документація по JS",
         rating: "⭐⭐⭐⭐⭐",
-        category: "js"
+        category: "js",
+        tags: ["mdn", "script", "lang", "specification", "docs", "javascript", "документація", "js", "офіційна"]
     },
     {
         name: "ECMAScript Language Specification",
@@ -106,7 +109,8 @@ const sourcesData = [
         status: "Офіційний стандарт",
         purpose: "Стандарт мови JavaScript",
         rating: "⭐⭐⭐⭐⭐",
-        category: "js"
+        category: "js",
+        tags: ["ecma", "script", "lang", "specification", "oficial", "javascript", "standard", "js", "офіційні"]
     },
     {
         name: "TC39 Proposals",
@@ -114,26 +118,27 @@ const sourcesData = [
         status: "Офіційний",
         purpose: "Пропозиції нових можливостей JS",
         rating: "⭐⭐⭐⭐",
-        category: "js"
+        category: "js",
+        tags: ["TC39", "proposals", "пропозиції", "нові", "можливості", "javascript", "github", "js", "офіційні"]
     },
     {
         name: "W3SchoolsUA — JavaScript",
         url: "https://w3schoolsua.github.io/js/index.html",
         status: "Навчальний ресурс",
-        purpose: "Приклади та пояснення JS",
+        purpose: "Уроки, приклади та пояснення JavaScript українською",
         rating: "⭐⭐⭐⭐⭐",
-        category: "js"
+        category: "js",
+        tags: ["w3schools", "українською", "для початківців", "уроки", "підручник", "навчання", "приклади", "ua", "tutorial", "javascript"]
     },
-
     /* ---------------- Web API ---------------- */
-
     {
         name: "MDN Web Docs — Web APIs",
         url: "https://developer.mozilla.org/docs/Web/API",
         status: "Де-факто стандарт документації",
         purpose: "Документація по браузерним API",
         rating: "⭐⭐⭐⭐⭐",
-        category: "api"
+        category: "api",
+        tags: ["mdn", "web", "api", "docs", "документація", "браузери", "Mozilla", "стандарт", "специфікація", "standard"]
     },
     {
         name: "WHATWG Fetch Standard",
@@ -141,7 +146,8 @@ const sourcesData = [
         status: "Офіційний",
         purpose: "Стандарт Fetch API",
         rating: "⭐⭐⭐⭐",
-        category: "api"
+        category: "api",
+        tags: ["fetch", "web", "whatwg", "oficial", "офіційний", "сайт", "html", "стандарт", "специфікація", "standard"]
     },
     {
         name: "WHATWG URL Standard",
@@ -149,26 +155,27 @@ const sourcesData = [
         status: "Офіційний",
         purpose: "Стандарт URL API",
         rating: "⭐⭐⭐⭐",
-        category: "api"
+        category: "api",
+        tags: ["url", "web", "whatwg", "oficial", "офіційний", "сайт", "html", "стандарт", "специфікація", "браузери"]
     },
-
     /* ---------------- Tools ---------------- */
-
     {
         name: "Can I Use",
         url: "https://caniuse.com/",
         status: "Авторитетний",
         purpose: "Підтримка фіч у браузерах",
         rating: "⭐⭐⭐⭐⭐",
-        category: "tools"
+        category: "tools",
+        tags: ["tools", "caniuse", "онлайн", "підтримка", "стандарт", "інструменти", "html", "перевірка", "сумісність", "браузери"]
     },
     {
         name: "W3C Markup Validation Service",
         url: "https://validator.w3.org/",
         status: "Офіційний",
         purpose: "Валідатор HTML",
-        rating: "⭐⭐⭐⭐",
-        category: "tools"
+        rating: "⭐⭐⭐⭐⭐",
+        category: "tools",
+        tags: ["tools", "validator", "онлайн", "w3", "стандарт", "інструменти", "html", "офіційний", "валідатор"]
     },
     {
         name: "ESLint",
@@ -176,7 +183,8 @@ const sourcesData = [
         status: "Де-факто стандарт",
         purpose: "Лінтер JavaScript",
         rating: "⭐⭐⭐⭐⭐",
-        category: "tools"
+        category: "tools",
+        tags: ["tools", "eslint", "онлайн", "лінтер", "стандарт", "інструменти", "javascript", "js"]
     },
     {
         name: "Prettier",
@@ -184,7 +192,8 @@ const sourcesData = [
         status: "Популярний інструмент",
         purpose: "Форматування коду",
         rating: "⭐⭐⭐⭐⭐",
-        category: "tools"
+        category: "tools",
+        tags: ["tools", "prettier", "онлайн", "форматування", "коду", "інструменти", "кодування"]
     },
     {
         name: "CodePen",
@@ -192,7 +201,8 @@ const sourcesData = [
         status: "Онлайн‑редактор",
         purpose: "Швидке тестування HTML/CSS/JS",
         rating: "⭐⭐⭐⭐",
-        category: "tools"
+        category: "tools",
+        tags: ["tools", "codepen", "онлайн", "редактор", "коду", "інструменти"]
     },
     {
         name: "BeautifyTools",
@@ -200,18 +210,18 @@ const sourcesData = [
         status: "Добірка інструментів",
         purpose: "Різні інструменти для кодування",
         rating: "⭐⭐⭐⭐",
-        category: "tools"
+        category: "tools",
+        tags: ["tools", "beautify", "добірка", "інструменти", "онлайн", "покращення", "код", "кодування"]
     },
-
     /* ---------------- Security ---------------- */
-
     {
         name: "OWASP Cheat Sheet Series",
         url: "https://cheatsheetseries.owasp.org/",
         status: "Де-факто стандарт",
         purpose: "Найкращі практики безпеки",
         rating: "⭐⭐⭐⭐⭐",
-        category: "security"
+        category: "security",
+        tags: ["security", "standard", "owasp", "таблиці", "безпека"]
     },
     {
         name: "OWASP Top 10",
@@ -219,7 +229,8 @@ const sourcesData = [
         status: "Офіційний",
         purpose: "10 найкритичніших ризиків безпеки",
         rating: "⭐⭐⭐⭐⭐",
-        category: "security"
+        category: "security",
+        tags: ["security", "top", "oficial", "owasp", "oficial", "безпека"]
     },
     {
         name: "MDN — Web Security",
@@ -227,7 +238,8 @@ const sourcesData = [
         status: "Де-факто стандарт документації",
         purpose: "Документація по безпеці веб‑додатків",
         rating: "⭐⭐⭐⭐",
-        category: "security"
+        category: "security",
+        tags: ["security", "web", "mdn", "стандарт", "безпека"]
     },
     {
         name: "Google Web Fundamentals — Security",
@@ -235,11 +247,138 @@ const sourcesData = [
         status: "Офіційний ресурс Google",
         purpose: "Рекомендації по безпеці",
         rating: "⭐⭐⭐⭐",
-        category: "security"
-    }
-
+        category: "security",
+        tags: ["security", "web", "google", "офіційний", "рекомендації", "безпека"]
+    },
+    /* ---------------- Python ---------------- */
+    {
+        name: "Python.org — Documentation",
+        url: "https://docs.python.org/3/",
+        category: "python",
+        status: "Офіційна документація",
+        purpose: "Повний довідник Python",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["python", "docs", "official", "питон", "пайтон", "документація", "офіційний"]
+    },
+    {
+        name: "Real Python",
+        url: "https://realpython.com/",
+        category: "python",
+        status: "Навчальний ресурс",
+        purpose: "Статті, уроки, приклади",
+        rating: "⭐⭐⭐⭐",
+        tags: ["python", "tutorials", "real", "реал", "пайтон", "питон", "навчання", "уроки"]
+    },
+    {
+        name: "W3SchoolsUA — Python",
+        url: "https://w3schoolsua.github.io/python/index.html",
+        category: "python",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади, пояснення",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["python", "tutorials", "w3schools", "підручник", "пайтон", "питон", "навчання", "уроки", "ua", "для початківців"]
+    },
+    {
+        name: "W3Schools.com — Python",
+        url: "https://w3schools.com/python/",
+        category: "python",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади, пояснення",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["python", "tutorials", "w3schools", "підручник", "пайтон", "питон", "навчання", "уроки", "en", "для початківців"]
+    },
+    /* ---------------- SQL ---------------- */
+    {
+        name: "LearnSQL.com — Офіційний сайт",
+        url: "https://learnsql.com/",
+        category: "sql",
+        status: "Офіційний сайт",
+        purpose: "Повний підручник по SQL",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "docs", "official", "підручник", "скл", "документація", "офіційний", "уроки"]
+    },
+    {
+        name: "W3Schools SQL Tutorial",
+        url: "https://www.w3schools.com/sql/",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади, довідники",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "tutorials", "lessons", "w3schools", "підручник", "мова", "навчання", "уроки"]
+    },
+    {
+        name: "W3SchoolsUA SQL Підручник",
+        url: "https://w3schoolsua.github.io/sql/index.html",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади, довідники українською",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "w3schools", "підручник", "мова", "навчання", "уроки", "для початківців", "українською", "github", "ua"]
+    },
+    {
+        name: "SQLZoo",
+        url: "https://sqlzoo.net/wiki/SQL_Tutorial",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Інтерактивна серія уроків і вправ на SQL",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "sqlzoo", "підручник", "мова", "навчання", "уроки", "для початківців", "english", "wiki"]
+    },
+    {
+        name: "Codecademy – Learn SQL",
+        url: "https://www.codecademy.com/learn/learn-sql",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Інтерактивний курс SQL з практичними вправами",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "codecademy", "підручник", "мова", "навчання", "уроки", "для початківців", "курс", "інтерактивний", "онлайн"]
+    },
+    {
+        name: "Khan Academy – Intro to SQL",
+        url: "https://www.khanacademy.org/computing/computer-programming/sql",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Відео-курс з SQL із інтерактивними вправами для початківців",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "khan", "підручник", "мова", "навчання", "уроки", "для початківців", "курс", "інтерактивний", "відео"]
+    },
+    {
+        name: "Microsoft Learn – SQL Documentation",
+        url: "https://learn.microsoft.com/en-us/sql/",
+        category: "sql",
+        status: "Офіційний ресурс",
+        purpose: "Офіційна технічна документація Microsoft для SQL Server і Transact-SQL",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "microsoft", "офіційний", "сайт", "технічна", "документація", "сервер", "server", "documentation", "azure"]
+    },
+    {
+        name: "Oracle SQL Docs & Tutorials",
+        url: "https://www.oracle.com/database/technologies/appdev/sql.html",
+        category: "sql",
+        status: "Офіційний ресурс",
+        purpose: "Офіційний ресурс Oracle з документацією, прикладами і тестами для SQL",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "oracle", "офіційний", "сайт", "docs", "документація", "сервер", "server", "documentation", "tutorials"]
+    },
+    {
+        name: "Coursera – SQL Courses",
+        url: "https://www.coursera.org/courses?query=sql",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Колекція онлайн-курсів від університетів та компаній",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "coursera", "courses", "навчання", "уроки", "університети", "компанії", "курси", "сертифікати", "tutorials"]
+    },
+    {
+        name: "Dataquest SQL Guide",
+        url: "https://www.dataquest.io/guide/sql-tutorial/",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Збірка навчальних посібників, практичних завдань, шпаргалок по SQL",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "dataquest", "courses", "навчання", "уроки", "посібники", "підручники", "курси", "практика", "tutorials"]
+    },
 ];
-
 // Фільтрація по категорії
 function getSourcesByCategory(category) {
     return sourcesData.filter(src => src.category === category);

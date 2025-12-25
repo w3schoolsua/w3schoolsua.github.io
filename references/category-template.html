@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title id="pageTitle">Рекомендовані джерела — W3SchoolsUA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO -->
+    <meta id="metaDescription" name="description" content="">
+    <meta id="metaKeywords" name="keywords" content="">
+
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="../w3css/4/w3.css">
+    <link rel="stylesheet" href="../lib/w3-colors-flat.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Theme + Data + Logic -->
+    <script src="../scripts/theme.js"></script>
+    <script src="../references/data.js"></script>
+    <script src="../references/references.js"></script>
+
+    <style>
+        body.dark-mode { background-color: #121212; color: #f1f1f1; }
+        .table-container { overflow-x: auto; width: 100%; }
+        #sourcesTable thead th { position: sticky; top: 0; z-index: 2; }
+    </style>
+</head>
+
+<body onload="initCategoryPage()">
+
+<!-- HEADER -->
+<div class="w3-bar w3-flat-midnight-blue w3-large">
+    <a href="../" class="w3-bar-item w3-button w3-text-white"><b>W3SchoolsUA</b></a>
+    <a href="../html/index.html" class="w3-bar-item w3-button w3-text-white">HTML</a>
+    <a href="../css/index.html" class="w3-bar-item w3-button w3-text-white">CSS</a>
+    <a href="../js/index.html" class="w3-bar-item w3-button w3-text-white">JavaScript</a>
+    <a href="../references/index.html" class="w3-bar-item w3-button w3-text-white w3-border-bottom">Рекомендовані джерела</a>
+
+    <button class="w3-bar-item w3-button w3-right w3-text-white" onclick="toggleThemeIcon()">
+        <span id="themeIcon">🌙</span>
+    </button>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="w3-container w3-padding-16">
+    <div class="w3-small">
+        <a href="../">Головна</a> &gt;
+        <a href="../references/index.html">Рекомендовані джерела</a> &gt;
+        <span id="breadcrumbName"></span>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="w3-content" style="max-width:1200px;">
+
+    <h2 class="w3-center" id="categoryTitle"></h2>
+    <p class="w3-center w3-large" id="categorySubtitle"></p>
+
+    <!-- Пошук -->
+    <div class="w3-margin-top w3-margin-bottom">
+        <label for="tableSearch"><b>Пошук по таблиці:</b></label>
+        <input id="tableSearch"
+               class="w3-input w3-border"
+               type="text"
+               placeholder="Введіть текст для фільтрації..."
+               onkeyup="filterCategoryTable('sourcesTable', 'tableSearch')">
+    </div>
+
+    <!-- Таблиця -->
+    <div class="table-container">
+        <table id="sourcesTable" class="w3-table-all w3-hoverable w3-margin-top"></table>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="w3-center w3-flat-midnight-blue w3-padding-32 w3-text-white" style="margin-top:40px;">
+    <p>© 2026 W3SchoolsUA — Українська навчальна платформа</p>
+</footer>
+
+<script>
+    /* Автоматичне визначення категорії з URL */
+    function getCategoryFromURL() {
+        const file = location.pathname.split("/").pop(); // html.html → html
+        return file.replace(".html", "");
+    }
+
+    /* Дані для заголовків */
+    const categoryInfo = {
+        html: { title: "HTML", subtitle: "Офіційні стандарти, документація, навчальні ресурси" },
+        css: { title: "CSS", subtitle: "Специфікації, довідники, гіди" },
+        js: { title: "JavaScript", subtitle: "ECMAScript, документація, навчання" },
+        api: { title: "Web API", subtitle: "Браузерні API та стандарти" },
+        tools: { title: "Інструменти", subtitle: "Валідатори, редактори, утиліти" },
+        security: { title: "Безпека", subtitle: "OWASP, рекомендації, стандарти" }
+    };
+
+    /* Ініціалізація сторінки */
+    function initCategoryPage() {
+        const category = getCategoryFromURL();
+        const info = categoryInfo[category];
+
+        if (info) {
+            document.getElementById("pageTitle").textContent = `Рекомендовані джерела по ${info.title} — W3SchoolsUA`;
+            document.getElementById("breadcrumbName").textContent = info.title;
+            document.getElementById("categoryTitle").textContent = `Рекомендовані джерела по ${info.title}`;
+            document.getElementById("categorySubtitle").textContent = info.subtitle;
+
+            document.getElementById("metaDescription").content =
+                `Найкращі та найавторитетніші джерела по ${info.title}.`;
+            document.getElementById("metaKeywords").content =
+                `${info.title}, документація, стандарти, навчання, W3SchoolsUA`;
+        }
+
+        renderCategoryTable(category, "sourcesTable");
+    }
+</script>
+
+</body>
+</html>
