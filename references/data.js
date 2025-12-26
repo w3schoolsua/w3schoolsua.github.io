@@ -39,6 +39,15 @@ const sourcesData = [
         tags: ["w3schools", "підручник", "html", "для початківців", "українською", "web", "уроки", "безплатні", "приклади", "задачі"]
     },
     {
+        name: "Web.dev (від Google Chrome Team)",
+        url: "https://web.dev/learn/html/",
+        status: "Навчальний ресурс",
+        purpose: "Освітній ресурс від розробників браузера Chrome",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "html",
+        tags: ["web", "підручник", "html", "для початківців", "google", "chrome", "уроки", "безплатні", "приклади", "навчання"]
+    },
+    {
         name: "W3C HTML Validator",
         url: "https://validator.w3.org/",
         status: "Офіційний",
@@ -131,6 +140,15 @@ const sourcesData = [
         tags: ["TC39", "proposals", "пропозиції", "нові", "можливості", "javascript", "github", "js", "офіційні"]
     },
     {
+        name: "ECMAScript® Internationalization API Specification",
+        url: "https://tc39.es/ecma402/",
+        status: "Офіційний",
+        purpose: "Офіційний стандарт для роботи з локалізацією, форматуванням дат, чисел, валют тощо",
+        rating: "⭐⭐⭐⭐",
+        category: "js",
+        tags: ["TC39", "internationalization", "api", "ecma", "стандарти", "javascript", "локалізація", "js", "офіційні"]
+    },
+    {
         name: "W3SchoolsUA — JavaScript",
         url: "https://w3schoolsua.github.io/js/index.html",
         status: "Навчальний ресурс",
@@ -174,6 +192,33 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐⭐",
         category: "js",
         tags: ["javascript", "js", "сучасний", "підручник", "для початківців", "уроки", "ua", "навчання", "приклади", "українською"]
+    },
+    {
+        name: "Node.js Documentation",
+        url: "https://nodejs.org/en/docs",
+        status: "Офіційна документація",
+        purpose: "Офіційна документація середовища виконання JavaScript поза браузером",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["javascript", "js", "nodejs", "офіційна", "документація", "середовище", "розробка", "навчання", "додатки", "сервер"]
+    },
+    {
+        name: "«Eloquent JavaScript» (Marijn Haverbeke)",
+        url: "https://eloquentjavascript.net/",
+        status: "Онлайн-книга",
+        purpose: "Хороший вступ в JavaScript з практичними прикладами й вправами",
+        rating: "⭐⭐⭐⭐",
+        category: "js",
+        tags: ["javascript", "js", "книга", "підручник", "онлайн", "Marijn Haverbeke", "для початківців", "навчання", "приклади", "вправи"]
+    },
+    {
+        name: "Codecademy — JavaScript",
+        url: "https://www.codecademy.com/learn/introduction-to-javascript",
+        status: "Онлайн-курси",
+        purpose: "JavaScript курси з інтерактивними вправами та зворотнім зв’язком",
+        rating: "⭐⭐⭐⭐",
+        category: "js",
+        tags: ["javascript", "js", "курси", "підручник", "онлайн", "codecademy", "для початківців", "навчання", "приклади", "вправи"]
     },
     /* ---------------- SQL ---------------- */
     {
