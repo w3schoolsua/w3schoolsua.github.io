@@ -539,6 +539,24 @@ const sourcesData = [
         category: "tools",
         tags: ["tools", "beautify", "добірка", "інструменти", "онлайн", "покращення", "код", "кодування"]
     },
+    {
+        name: "Validator.schema.org",
+        url: "https://validator.schema.org/",
+        status: "Валідатор schema.org",
+        purpose: "Перевірка валідності schema.org",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "tools",
+        tags: ["tools", "schema", "validator", "інструменти", "онлайн", "валідатор", "перевірка", "валідність"]
+    },
+    {
+        name: "Search.Google - Розширені результаті",
+        url: "https://search.google.com/test/rich-results",
+        status: "Перевірка підтримки розширених результатів",
+        purpose: "Чи підтримує ваша сторінка розширені результати?",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "tools",
+        tags: ["tools", "search", "google", "інструменти", "онлайн", "розширені", "результати", "перевірка", "тест"]
+    },
     /* ---------------- Security ---------------- */
     {
         name: "OWASP Cheat Sheet Series",
