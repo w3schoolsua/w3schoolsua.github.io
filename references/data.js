@@ -104,6 +104,15 @@ const sourcesData = [
         tags: ["mdn", "script", "lang", "specification", "docs", "javascript", "документація", "js", "офіційна"]
     },
     {
+        name: "MDN JavaScript Guide",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
+        status: "Для систематизації знань по JavaScript",
+        purpose: "Покроковий гайд від основ до просунутих тем",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["mdn", "javascript", "guide", "developer", "learning", "підручник", "навчання", "js", "уроки", "для початківців"]
+    },
+    {
         name: "ECMAScript Language Specification",
         url: "https://tc39.es/ecma262/",
         status: "Офіційний стандарт",
@@ -129,6 +138,42 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐⭐",
         category: "js",
         tags: ["w3schools", "українською", "для початківців", "уроки", "підручник", "навчання", "приклади", "ua", "tutorial", "javascript"]
+    },
+    {
+        name: "W3Schools.com — JavaScript",
+        url: "https://w3schools.com/js/",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади та пояснення JavaScript",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["w3schools", "оригінал", "для початківців", "уроки", "підручник", "навчання", "приклади", "js", "tutorial", "javascript"]
+    },
+    {
+        name: "DevDocs — JavaScript Reference",
+        url: "https://devdocs.io/javascript/",
+        status: "Навчальний ресурс",
+        purpose: "Зручний офлайн‑орієнтований довідник, який агрегує документацію MDN",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["mdn", "агрегатор", "документація", "довідка", "довідник", "навчання", "приклади", "js", "tutorial", "javascript"]
+    },
+    {
+        name: "JavaScript.info - The Modern JavaScript Tutorial",
+        url: "https://javascript.info/js",
+        status: "Навчальний ресурс",
+        purpose: "Сучасний підручник по JavaScript",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["javascript", "js", "сучасний", "підручник", "для початківців", "уроки", "learning", "навчання", "приклади", "tutorial"]
+    },
+    {
+        name: "uk.JavaScript.info - Сучасний підручник по JavaScript",
+        url: "https://uk.javascript.info/js",
+        status: "Навчальний ресурс",
+        purpose: "Сучасний підручник по JavaScript українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["javascript", "js", "сучасний", "підручник", "для початківців", "уроки", "ua", "навчання", "приклади", "українською"]
     },
     /* ---------------- SQL ---------------- */
     {
