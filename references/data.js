@@ -30,6 +30,15 @@ const sourcesData = [
         tags: ["mdn", "web", "html", "docs", "стандарт", "standard", "документація", "офіційна", "приклади", "навчання"]
     },
     {
+        name: "Web.dev (від Google Chrome Team)",
+        url: "https://web.dev/learn/html/",
+        status: "Навчальний ресурс",
+        purpose: "Освітній ресурс від розробників браузера Chrome",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "html",
+        tags: ["web", "підручник", "html", "для початківців", "google", "chrome", "уроки", "безплатні", "приклади", "навчання"]
+    },
+    {
         name: "W3SchoolsUA — HTML",
         url: "https://w3schoolsua.github.io/html/index.html",
         status: "Навчальний ресурс українською",
@@ -39,13 +48,67 @@ const sourcesData = [
         tags: ["w3schools", "підручник", "html", "для початківців", "українською", "web", "уроки", "безплатні", "приклади", "задачі"]
     },
     {
-        name: "Web.dev (від Google Chrome Team)",
-        url: "https://web.dev/learn/html/",
+        name: "W3Schools.com — HTML",
+        url: "https://w3schools.com/html/",
         status: "Навчальний ресурс",
-        purpose: "Освітній ресурс від розробників браузера Chrome",
+        purpose: "Приклади та пояснення HTML",
         rating: "⭐⭐⭐⭐⭐",
         category: "html",
-        tags: ["web", "підручник", "html", "для початківців", "google", "chrome", "уроки", "безплатні", "приклади", "навчання"]
+        tags: ["w3schools", "підручник", "html", "для початківців", "оригінал", "web", "уроки", "безплатні", "приклади", "рішення"]
+    },
+    {
+        name: "itProger — Уроки HTML5",
+        url: "https://itproger.com/ua/course/html",
+        status: "Навчальний курс HTML українською",
+        purpose: "Онлайн-школа та IT-спільнота. Автор уроків - Гоша Дударь",
+        rating: "⭐⭐⭐⭐",
+        category: "html",
+        tags: ["itproger", "підручник", "html", "для початківців", "гоша", "дударь", "уроки", "безплатні", "ua", "навчання"]
+    },
+    {
+        name: "HTML-CSS.co.ua — Довідник HTML/CSS",
+        url: "https://html-css.co.ua/",
+        status: "Довідник",
+        purpose: "HTML і CSS довідник українською мовою",
+        rating: "⭐⭐⭐⭐",
+        category: "html",
+        tags: ["довідник", "стандарти", "html", "для початківців", "css", "онлайн", "online", "безплатні", "ua", "українською"]
+    },
+    {
+        name: "CSS.in.ua — Довідник HTML/CSS/JS",
+        url: "https://css.in.ua/",
+        status: "Довідник",
+        purpose: "HTML/CSS/JS довідник українською мовою",
+        rating: "⭐⭐⭐⭐",
+        category: "html",
+        tags: ["довідник", "стандарти", "html", "для початківців", "css", "онлайн", "online", "безплатні", "ua", "українською"]
+    },
+    {
+        name: "GoIt.global — Довідник HTML/CSS",
+        url: "https://goit.global/ua/glossary/html/html-hypertext-markup-language/",
+        status: "Довідник",
+        purpose: "HTML/CSS довідник українською мовою",
+        rating: "⭐⭐⭐⭐",
+        category: "html",
+        tags: ["довідник", "стандарти", "html", "для початківців", "css", "онлайн", "online", "безплатні", "ua", "українською"]
+    },
+    {
+        name: "Dystosvita.org.ua — Курс HTML",
+        url: "https://dystosvita.org.ua/course/section.php?id=124",
+        status: "Курс дистанційного навчання",
+        purpose: "Практичні курси HTML українською мовою",
+        rating: "⭐⭐⭐⭐",
+        category: "html",
+        tags: ["дистанційна", "освіта", "html", "для початківців", "навчання", "онлайн", "online", "безплатні", "ua", "українською"]
+    },
+    {
+        name: "HTML конструювання - Уроки HTML",
+        url: "https://htmlbook.in.ua/",
+        status: "Уроки з HTML з прикладами",
+        purpose: "Практичні курси HTML українською мовою",
+        rating: "⭐⭐⭐⭐",
+        category: "html",
+        tags: ["уроки", "конструктор", "html", "для початківців", "навчання", "онлайн", "online", "безплатні", "ua", "українською"]
     },
     {
         name: "W3C HTML Validator",
