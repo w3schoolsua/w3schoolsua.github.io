@@ -113,7 +113,7 @@ const sourcesData = [
     {
         name: "W3C HTML Validator",
         url: "https://validator.w3.org/",
-        status: "Офіційний",
+        status: "Офіційний валідатор",
         purpose: "Перевірка валідності HTML",
         rating: "⭐⭐⭐⭐",
         category: "html",
@@ -132,7 +132,7 @@ const sourcesData = [
     {
         name: "W3C CSS Specifications",
         url: "https://www.w3.org/Style/CSS/",
-        status: "Офіційний",
+        status: "Офіційний сайт",
         purpose: "Офіційні специфікації CSS",
         rating: "⭐⭐⭐⭐",
         category: "css",
@@ -159,7 +159,7 @@ const sourcesData = [
     {
         name: "W3C CSS Validator",
         url: "https://jigsaw.w3.org/css-validator/",
-        status: "Офіційний",
+        status: "Офіційний валідатор",
         purpose: "Перевірка валідності CSS",
         rating: "⭐⭐⭐⭐",
         category: "css",
@@ -167,13 +167,40 @@ const sourcesData = [
     },
     /* ---------------- JavaScript ---------------- */
     {
-        name: "MDN Web Docs — JavaScript",
-        url: "https://developer.mozilla.org/docs/Web/JavaScript",
-        status: "Де-факто стандарт документації",
-        purpose: "Докладна документація по JS",
+        name: "ECMAScript Language Specification (ECMA‑262)",
+        url: "https://tc39.es/ecma262/",
+        status: "Офіційний стандарт",
+        purpose: "Головне першоджерело JavaScript — синтаксис, алгоритми, поведінка мови",
         rating: "⭐⭐⭐⭐⭐",
         category: "js",
-        tags: ["mdn", "script", "lang", "specification", "docs", "javascript", "документація", "js", "офіційна"]
+        tags: ["ecma", "script", "lang", "specification", "oficial", "javascript", "js", "офіційні", "ecmascript", "standard", "офіційно", "tc39", "spec", "es"]
+    },
+    {
+        name: "TC39 Proposals",
+        url: "https://github.com/tc39/proposals",
+        status: "Офіційні пропозиції",
+        purpose: "Майбутні можливості JavaScript, стадії розробки, робочі документи",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["TC39", "proposals", "пропозиції", "esnext", "нові", "можливості", "javascript", "github", "js", "офіційні", "майбутні-фічі"]
+    },
+    {
+        name: "ECMAScript® Internationalization API Specification",
+        url: "https://tc39.es/ecma402/",
+        status: "Офіційний стандарт",
+        purpose: "Офіційний стандарт для роботи з локалізацією, форматуванням дат, чисел, валют тощо",
+        rating: "⭐⭐⭐⭐",
+        category: "js",
+        tags: ["TC39", "internationalization", "api", "ecma", "стандарти", "javascript", "локалізація", "js", "офіційні"]
+    },
+    {
+        name: "MDN Web Docs — JavaScript",
+        url: "https://developer.mozilla.org/docs/Web/JavaScript",
+        status: "Авторитетна документація",
+        purpose: "Докладна документація по JS, приклади, пояснення",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["mdn", "script", "mozilla", "lang", "specification", "docs", "javascript", "документація", "js", "офіційна", "гайди"]
     },
     {
         name: "MDN JavaScript Guide",
@@ -185,58 +212,49 @@ const sourcesData = [
         tags: ["mdn", "javascript", "guide", "developer", "learning", "підручник", "навчання", "js", "уроки", "для початківців"]
     },
     {
-        name: "ECMAScript Language Specification",
-        url: "https://tc39.es/ecma262/",
-        status: "Офіційний стандарт",
-        purpose: "Стандарт мови JavaScript",
-        rating: "⭐⭐⭐⭐⭐",
-        category: "js",
-        tags: ["ecma", "script", "lang", "specification", "oficial", "javascript", "standard", "js", "офіційні"]
-    },
-    {
-        name: "TC39 Proposals",
-        url: "https://github.com/tc39/proposals",
-        status: "Офіційний",
-        purpose: "Пропозиції нових можливостей JS",
-        rating: "⭐⭐⭐⭐",
-        category: "js",
-        tags: ["TC39", "proposals", "пропозиції", "нові", "можливості", "javascript", "github", "js", "офіційні"]
-    },
-    {
-        name: "ECMAScript® Internationalization API Specification",
-        url: "https://tc39.es/ecma402/",
-        status: "Офіційний",
-        purpose: "Офіційний стандарт для роботи з локалізацією, форматуванням дат, чисел, валют тощо",
-        rating: "⭐⭐⭐⭐",
-        category: "js",
-        tags: ["TC39", "internationalization", "api", "ecma", "стандарти", "javascript", "локалізація", "js", "офіційні"]
-    },
-    {
-        name: "W3SchoolsUA — JavaScript",
-        url: "https://w3schoolsua.github.io/js/index.html",
-        status: "Навчальний ресурс",
-        purpose: "Уроки, приклади та пояснення JavaScript українською",
-        rating: "⭐⭐⭐⭐⭐",
-        category: "js",
-        tags: ["w3schools", "українською", "для початківців", "уроки", "підручник", "навчання", "приклади", "ua", "tutorial", "javascript"]
-    },
-    {
-        name: "W3Schools.com — JavaScript",
-        url: "https://w3schools.com/js/",
-        status: "Навчальний ресурс",
-        purpose: "Уроки, приклади та пояснення JavaScript",
-        rating: "⭐⭐⭐⭐⭐",
-        category: "js",
-        tags: ["w3schools", "оригінал", "для початківців", "уроки", "підручник", "навчання", "приклади", "js", "tutorial", "javascript"]
-    },
-    {
         name: "DevDocs — JavaScript Reference",
         url: "https://devdocs.io/javascript/",
         status: "Навчальний ресурс",
         purpose: "Зручний офлайн‑орієнтований довідник, який агрегує документацію MDN",
         rating: "⭐⭐⭐⭐⭐",
         category: "js",
-        tags: ["mdn", "агрегатор", "документація", "довідка", "довідник", "навчання", "приклади", "js", "tutorial", "javascript"]
+        tags: ["devdocs", "агрегатор", "документація", "довідка", "довідник", "навчання", "приклади", "js", "tutorial", "javascript"]
+    },
+    {
+        name: "Node.js Documentation",
+        url: "https://nodejs.org/en/docs",
+        status: "Офіційна документація",
+        purpose: "Офіційна документація середовища виконання JavaScript поза браузером",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["javascript", "js", "nodejs", "офіційна", "документація", "середовище", "розробка", "навчання", "додатки", "сервер"]
+    },
+    {
+        name: "npm — Node Package Manager",
+        url: "https://www.npmjs.com/",
+        status: "Офіційний менеджер пакетів",
+        purpose: "Найбільша екосистема JavaScript‑пакетів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["js", "npm", "packages", "node", "tools", "javascript", "інструменти"]
+    },
+    {
+        name: "Webpack — Official Documentation",
+        url: "https://webpack.js.org/",
+        status: "Офіційна документація",
+        purpose: "Бандлер для фронтенд‑проєктів",
+        rating: "⭐⭐⭐⭐",
+        category: "js",
+        tags: ["webpack", "bundler", "frontend", "tools"]
+    },
+    {
+        name: "Vite — Official Documentation",
+        url: "https://vitejs.dev/",
+        status: "Офіційна документація",
+        purpose: "Надшвидкий дев‑сервер і бандлер нового покоління",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["vite", "bundler", "frontend", "tools"]
     },
     {
         name: "JavaScript.info - The Modern JavaScript Tutorial",
@@ -257,13 +275,31 @@ const sourcesData = [
         tags: ["javascript", "js", "сучасний", "підручник", "для початківців", "уроки", "ua", "навчання", "приклади", "українською"]
     },
     {
-        name: "Node.js Documentation",
-        url: "https://nodejs.org/en/docs",
-        status: "Офіційна документація",
-        purpose: "Офіційна документація середовища виконання JavaScript поза браузером",
+        name: "W3Schools.com — JavaScript",
+        url: "https://w3schools.com/js/",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади та пояснення JavaScript",
         rating: "⭐⭐⭐⭐⭐",
         category: "js",
-        tags: ["javascript", "js", "nodejs", "офіційна", "документація", "середовище", "розробка", "навчання", "додатки", "сервер"]
+        tags: ["w3schools", "оригінал", "для початківців", "уроки", "підручник", "навчання", "приклади", "js", "tutorial", "javascript"]
+    },
+    {
+        name: "W3SchoolsUA — JavaScript",
+        url: "https://w3schoolsua.github.io/js/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади та пояснення JavaScript українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["w3schools", "українською", "для початківців", "уроки", "підручник", "навчання", "приклади", "ua", "tutorial", "javascript"]
+    },
+    {
+        name: "Frontend Masters",
+        url: "https://frontendmasters.com/",
+        status: "Професійні курси",
+        purpose: "Глибокі курси від експертів індустрії",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["js", "frontend", "courses", "javascript", "css", "react", "курси"]
     },
     {
         name: "«Eloquent JavaScript» (Marijn Haverbeke)",
@@ -282,6 +318,15 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐",
         category: "js",
         tags: ["javascript", "js", "курси", "підручник", "онлайн", "codecademy", "для початківців", "навчання", "приклади", "вправи"]
+    },
+    {
+        name: "freeCodeCamp — Frontend Curriculum",
+        url: "https://www.freecodecamp.org/learn/",
+        status: "Безкоштовна програма",
+        purpose: "Практичні завдання, сертифікації, проєкти",
+        rating: "⭐⭐⭐⭐",
+        category: "js",
+        tags: ["js", "frontend", "free", "practice", "projects", "навчання"]
     },
     /* ---------------- SQL ---------------- */
     {
