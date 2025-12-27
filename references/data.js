@@ -419,6 +419,106 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐⭐",
         tags: ["sql", "dataquest", "courses", "навчання", "уроки", "посібники", "підручники", "курси", "практика", "tutorials"]
     },
+    /* ---------------- PHP ---------------- */
+    {
+        name: "PHP Manual (Official)",
+        url: "https://www.php.net/manual/en/",
+        status: "Офіційна документація",
+        purpose: "Повний офіційний довідник PHP, функції, приклади, конфігурація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "manual", "official", "docs", "reference", "core", "functions", "офіційна", "документація"]
+    },
+    {
+        name: "PHP.net — Official Website",
+        url: "https://www.php.net/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал PHP: новини, релізи, документація, завантаження",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "official", "homepage", "releases", "downloads", "офіційний", "сайт"]
+    },
+    {
+        name: "PHP: The Right Way",
+        url: "https://phptherightway.com/",
+        status: "Авторитетний гайд",
+        purpose: "Сучасні найкращі практики PHP, стандарти, рекомендації",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "best practices", "guide", "modern", "standards", "psr", "сучасні", "практика", "стандарт"]
+    },
+    {
+        name: "Composer — PHP Dependency Manager",
+        url: "https://getcomposer.org/",
+        status: "Офіційний інструмент",
+        purpose: "Менеджер пакетів PHP, стандарт де-факто для сучасних проєктів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "composer", "packages", "dependencies", "tools", "стандарт", "менеджер", "пакетів"]
+    },
+    {
+        name: "Packagist — PHP Package Repository",
+        url: "https://packagist.org/",
+        status: "Офіційний репозиторій",
+        purpose: "Головний репозиторій пакетів для Composer",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "composer", "packagist", "packages", "repository", "репозиторій", "пакети"]
+    },
+    {
+        name: "Laravel Documentation",
+        url: "https://laravel.com/docs",
+        status: "Офіційна документація",
+        purpose: "Найпопулярніший PHP‑фреймворк, сучасний та зручний",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "laravel", "framework", "docs", "mvc", "modern", "документація", "фреймворк"]
+    },
+    {
+        name: "Symfony Documentation",
+        url: "https://symfony.com/doc/current/index.html",
+        status: "Офіційна документація",
+        purpose: "Потужний корпоративний PHP‑фреймворк",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "symfony", "framework", "enterprise", "docs", "фреймворк", "документація"]
+    },
+    {
+        name: "PHP-FIG (PSR Standards)",
+        url: "https://www.php-fig.org/psr/",
+        status: "Офіційні стандарти",
+        purpose: "PSR‑стандарти для PHP: автозавантаження, логування, кешування",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "psr", "standards", "php-fig", "best practices", "стандарти"]
+    },
+    {
+        name: "W3Schools PHP Tutorial",
+        url: "https://www.w3schools.com/php/",
+        status: "Навчальний ресурс",
+        purpose: "Просте та доступне навчання PHP для початківців",
+        rating: "⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "tutorial", "learning", "beginner", "examples", "навчання", "уроки", "підручник"]
+    },
+    {
+        name: "W3SchoolsUA — PHP",
+        url: "https://w3schoolsua.github.io/php/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Навчання PHP для початківців українською мовою",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "tutorial", "learning", "beginner", "examples", "навчання", "уроки", "підручник", "ua", "українською"]
+    },
+    {
+        name: "MDN — Server-side Programming (PHP Section)",
+        url: "https://developer.mozilla.org/en-US/docs/Learn/Server-side/PHP",
+        status: "Авторитетний навчальний ресурс",
+        purpose: "Базове навчання PHP від Mozilla Developer Network",
+        rating: "⭐⭐⭐⭐",
+        category: "php",
+        tags: ["php", "mdn", "learning", "server-side", "tutorial", "підручник", "навчання"]
+    },
     /* ---------------- Python ---------------- */
     {
         name: "Python.org — Documentation",

@@ -8,11 +8,10 @@
   <meta id="metaKeywords" name="keywords" content="web, api, уроки, підручники, курси, онлайн, для початківців, w3schools українською">
   <link rel="stylesheet" href="../w3css/4/w3.css">
   <link rel="stylesheet" href="../lib/w3-colors-flat.css">
-  <link rel="stylesheet" href="../styles/styles_references.css">
+  <link rel="stylesheet" href="../styles/references_styles.css">
   <link rel="canonical" href="https://w3schoolsua.github.io/references/api.html">
   <script src="../scripts/theme.js"></script>
   <script src="../references/data.js"></script>
-  <script src="../scripts/data-loader.js"></script>
   <script src="../scripts/jsonld-generator.min.js?v=1.2"></script>
   <script src="../references/references.js"></script>
   <script type="application/ld+json">
@@ -33,14 +32,19 @@
 
 <body onload="initCategoryPage()">
 <!-- HEADER -->
-<div class="w3-bar w3-flat-midnight-blue w3-large">
-  <a href="../" class="w3-bar-item w3-button w3-text-white"><b>W3SchoolsUA</b></a>
-  <a href="../html/index.html" class="w3-bar-item w3-button w3-text-white">HTML</a>
-  <a href="../css/index.html" class="w3-bar-item w3-button w3-text-white">CSS</a>
-  <a href="../js/index.html" class="w3-bar-item w3-button w3-text-white">JavaScript</a>
-  <a href="../references/index.html" class="w3-bar-item w3-button w3-text-white w3-border-bottom">Рекомендовані джерела</a>
-  <button class="w3-bar-item w3-button w3-right w3-text-white" onclick="toggleThemeIcon()"><span id="themeIcon">🌙</span></button>
+<div class="w3-flat-midnight-blue w3-large sticky-menu" style="padding:0;">
+  <div class="w3-bar" style="display:flex; align-items:center; position:relative;">
+    <a href="../" class="w3-bar-item w3-button w3-text-white"><b>W3SchoolsUA</b></a>
+    <a href="../html/index.html" class="w3-bar-item w3-button w3-text-white">HTML</a>
+    <a href="../css/index.html" class="w3-bar-item w3-button w3-text-white">CSS</a>
+    <a href="../js/index.html" class="w3-bar-item w3-button w3-text-white">JavaScript</a>
+    <!-- КНОПКА ДЛЯ ДРОПДАУНУ -->
+    <button id="refsBtn" class="w3-button w3-text-white dropdown-trigger" onclick="toggleDropdown()">Рекомендовані джерела <span id="arrow">▼</span></button>
+    <button class="w3-bar-item w3-button w3-right w3-text-white" onclick="toggleThemeIcon()"><span id="themeIcon">🌙</span></button>
+  </div>
 </div>
+<!-- ДРОПДАУН ПОЗА w3-bar -->
+<div id="dropdownMenu" class="dropdown-menu w3-card-4"></div>
 
 <!--BREADCRUMBS-->
 <div class="w3-container w3-padding-16">
@@ -78,6 +82,7 @@
   <p>© <span id="current-year"></span> W3SchoolsUA — Українська навчальна платформа</p>
 </footer>
 
+<script src="../scripts/references-scripts.js"></script>
 <script src="../scripts/category_tables.js"></script>
 </body>
 </html>
