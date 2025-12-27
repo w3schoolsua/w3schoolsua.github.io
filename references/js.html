@@ -11,39 +11,8 @@
     <link rel="stylesheet" href="../styles/styles_references.css">
     <script src="../scripts/theme.js"></script>
     <script src="../references/data.js"></script>
-    <script>
-        /* ============================================================
-           Автоматичний генератор JSON‑LD для W3SchoolsUA
-           Повна синхронізація з sourcesData (з data.js)
-           ============================================================ */
-        (function generateJSONLD() {
-            if (!Array.isArray(sourcesData)) {
-                console.error("sourcesData не знайдено або має неправильний формат.");
-                return;
-            }
-            const itemList = sourcesData.map((src, index) => ({
-                "@type": "CreativeWork",
-                "position": index + 1,
-                "name": src.name || "Без назви",
-                "url": src.url || "",
-                "about": src.purpose || src.status || src.category || "Джерело"
-            }));
-            const jsonLd = {
-                "@context": "https://schema.org",
-                "@type": "ItemList",
-                "name": "Авторитетні джерела з JavaScript, Frontend, Web, Frameworks, Tools",
-                "description": "Автоматично згенерований список офіційних та авторитетних джерел W3SchoolsUA.",
-                "url": window.location.href,
-                "numberOfItems": itemList.length,
-                "itemListOrder": "Ordered",
-                "itemListElement": itemList
-            };
-            const script = document.createElement("script");
-            script.type = "application/ld+json";
-            script.textContent = JSON.stringify(jsonLd, null, 2);
-            document.head.appendChild(script);
-        })();
-    </script>
+    <script src="../scripts/data-loader.js"></script>
+    <script src="../scripts/jsonld-generator.min.js?v=1.2"></script>
     <script src="../references/references.js"></script>
     <script type="application/ld+json">
         {
