@@ -746,6 +746,133 @@ const sourcesData = [
         category: "java",
         tags: ["java", "tutorials", "examples", "learning"]
     },
+    /* ---------------- KOTLIN ---------------- */
+    {
+        name: "Kotlin Documentation (Official)",
+        url: "https://kotlinlang.org/docs/home.html",
+        status: "Офіційна документація",
+        purpose: "Повний офіційний довідник Kotlin: синтаксис, гіди, Multiplatform, Compose",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "official", "docs", "jetbrains", "reference", "language", "офіційна", "документація"]
+    },
+    {
+        name: "Kotlin Learning Materials (Official)",
+        url: "https://kotlinlang.org/docs/learning-materials-overview.html",
+        status: "Офіційний навчальний ресурс",
+        purpose: "Огляд навчальних матеріалів: синтаксис, ідіоми, Koans, міграція з Java",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "learning", "koans", "idioms", "tutorials", "official", "офіційне", "навчання", "уроки"]
+    },
+    {
+        name: "Kotlin Koans",
+        url: "https://kotlinlang.org/docs/koans.html",
+        status: "Офіційні вправи",
+        purpose: "Інтерактивні вправи для вивчення Kotlin через практику",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "koans", "practice", "exercises", "learning", "вправи", "навчання", "практика"]
+    },
+    {
+        name: "Kotlin Tour (Official)",
+        url: "https://kotlinlang.org/docs/kotlin-tour-welcome.html",
+        status: "Офіційний вступ",
+        purpose: "Огляд основ Kotlin: синтаксис, типи, функції, класи",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "tour", "basics", "syntax", "official", "офіційна", "тур", "основи", "навчання"]
+    },
+    {
+        name: "Kotlin Multiplatform Documentation",
+        url: "https://kotlinlang.org/docs/multiplatform.html",
+        status: "Офіційна документація",
+        purpose: "Документація Kotlin Multiplatform: Android, iOS, Desktop, Web",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "multiplatform", "kmp", "crossplatform", "official", "офіційна", "документація"]
+    },
+    {
+        name: "Compose Multiplatform Documentation",
+        url: "https://kotlinlang.org/docs/compose-multiplatform.html",
+        status: "Офіційна документація",
+        purpose: "UI‑фреймворк JetBrains для Android, Desktop та Web",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "compose", "ui", "multiplatform", "official", "офіційна", "документація"]
+    },
+    {
+        name: "Kotlin and Android — Android Developers",
+        url: "https://developer.android.com/kotlin/",
+        status: "Офіційний ресурс Google",
+        purpose: "Офіційні матеріали Google з Kotlin для Android",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "android", "google", "official", "mobile", "офіційна", "розробників", "андроїд", "гугл"]
+    },
+    {
+        name: "Android Developers — Kotlin Resources",
+        url: "https://developer.android.com/kotlin/getting-started-resources",
+        status: "Офіційний навчальний ресурс",
+        purpose: "Рекомендовані Google ресурси: курси, відео, книги, гайди",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "android", "learning", "google", "resources", "навчання", "джерела", "курси"]
+    },
+    {
+        name: "Kotlin Bootcamp for Programmers (Udacity + Google)",
+        url: "https://www.udacity.com/course/kotlin-bootcamp-for-programmers--ud9011",
+        status: "Офіційний курс Google",
+        purpose: "Безкоштовний курс Kotlin від Google та Udacity",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "course", "google", "udacity", "learning", "навчання", "курс", "безплатно"]
+    },
+    {
+        name: "Kotlin YouTube Channel (Official)",
+        url: "https://www.youtube.com/c/Kotlin",
+        status: "Офіційний канал",
+        purpose: "Офіційні відео JetBrains: новини, гайди, конференції",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "youtube", "videos", "official", "jetbrains", "ютуб", "відео", "канал"]
+    },
+    {
+        name: "KotlinConf — Official Conference",
+        url: "https://kotlinconf.com/",
+        status: "Офіційна конференція",
+        purpose: "Головна щорічна конференція Kotlin від JetBrains",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "conference", "kotlinconf", "official", "конференція", "офіційна"]
+    },
+    {
+        name: "Kotlin Style Guide (Official)",
+        url: "https://kotlinlang.org/docs/coding-conventions.html",
+        status: "Офіційний стильовий гайд",
+        purpose: "Рекомендації щодо стилю коду Kotlin",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "style", "guide", "conventions", "official", "офіційний", "гайд", "рекомендації"]
+    },
+    {
+        name: "W3Schools.com — Kotlin",
+        url: "https://www.w3schools.com/kotlin/",
+        status: "Навчальний курс",
+        purpose: "Уроки по мові Kotlin",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "w3schools", "lessons", "tutorial", "підручник", "уроки", "навчання", "онлайн"]
+    },
+    {
+        name: "W3SchoolsUA — Kotlin",
+        url: "https://w3schoolsua.github.io/kotlin/index.html",
+        status: "Навчальний курс",
+        purpose: "Уроки по мові Kotlin українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "kotlin",
+        tags: ["kotlin", "w3schoolsua", "lessons", "tutorial", "підручник", "уроки", "навчання", "безплатно", "онлайн", "українською"]
+    },
     /* ---------------- Web API ---------------- */
     {
         name: "MDN Web Docs — Web APIs",
