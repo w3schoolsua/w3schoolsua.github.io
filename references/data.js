@@ -873,6 +873,296 @@ const sourcesData = [
         category: "kotlin",
         tags: ["kotlin", "w3schoolsua", "lessons", "tutorial", "підручник", "уроки", "навчання", "безплатно", "онлайн", "українською"]
     },
+    /* ---------------- GO (GOLANG) ---------------- */
+    {
+        name: "Go Documentation (Official)",
+        url: "https://go.dev/doc/",
+        status: "Офіційна документація",
+        purpose: "Повний офіційний довідник Go: гіди, інструменти, модулі, релізи",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "golang", "official", "docs", "reference", "language"]
+    },
+    {
+        name: "The Go Programming Language — Official Site",
+        url: "https://go.dev/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Go: документація, релізи, інструменти, навчання",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "golang", "official", "homepage", "releases"]
+    },
+    {
+        name: "Go Tour (Official)",
+        url: "https://go.dev/tour/",
+        status: "Офіційний інтерактивний курс",
+        purpose: "Інтерактивний тур Go: основи, типи, методи, інтерфейси",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "tour", "interactive", "learning", "official"]
+    },
+    {
+        name: "Effective Go (Official)",
+        url: "https://go.dev/doc/effective_go",
+        status: "Офіційний гайд",
+        purpose: "Рекомендації щодо стилю, ідіом та найкращих практик Go",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "best practices", "idioms", "official", "guide"]
+    },
+    {
+        name: "Go Standard Library",
+        url: "https://pkg.go.dev/std",
+        status: "Офіційна бібліотека",
+        purpose: "Документація стандартної бібліотеки Go",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "stdlib", "packages", "reference", "official"]
+    },
+    {
+        name: "Go Packages (pkg.go.dev)",
+        url: "https://pkg.go.dev/",
+        status: "Офіційний репозиторій",
+        purpose: "Пошук пакетів Go: офіційні та сторонні модулі",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "packages", "modules", "repository", "official"]
+    },
+    {
+        name: "Go Modules — Official Guide",
+        url: "https://go.dev/doc/modules/",
+        status: "Офіційний гайд",
+        purpose: "Документація по Go Modules — стандарт управління залежностями",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "modules", "dependencies", "official"]
+    },
+    {
+        name: "Go Wiki (Official)",
+        url: "https://github.com/golang/go/wiki",
+        status: "Офіційний ресурс",
+        purpose: "Корисні матеріали: FAQ, поради, інструменти, патерни",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "wiki", "community", "official"]
+    },
+    {
+        name: "Go Proverbs (Rob Pike)",
+        url: "https://go-proverbs.github.io/",
+        status: "Авторитетний ресурс",
+        purpose: "Принципи дизайну Go від одного з творців мови",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "proverbs", "rob pike", "design", "principles"]
+    },
+    {
+        name: "Go by Example",
+        url: "https://gobyexample.com/",
+        status: "Навчальний ресурс",
+        purpose: "Приклади Go з поясненнями: канали, горутини, структури",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "examples", "learning", "tutorials"]
+    },
+    {
+        name: "Golang Blog (Official)",
+        url: "https://go.dev/blog/",
+        status: "Офіційний блог",
+        purpose: "Офіційні статті про релізи, інструменти, оптимізації",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "blog", "official", "news"]
+    },
+    {
+        name: "Gin Web Framework",
+        url: "https://gin-gonic.com/docs/",
+        status: "Популярний фреймворк",
+        purpose: "Найпопулярніший високопродуктивний веб‑фреймворк для Go",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "gin", "framework", "web", "backend"]
+    },
+    {
+        name: "Echo Web Framework",
+        url: "https://echo.labstack.com/guide",
+        status: "Популярний фреймворк",
+        purpose: "Швидкий та мінімалістичний веб‑фреймворк для Go",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "echo", "framework", "web", "backend"]
+    },
+    {
+        name: "Fiber Web Framework",
+        url: "https://docs.gofiber.io/",
+        status: "Популярний фреймворк",
+        purpose: "Високошвидкісний веб‑фреймворк, натхненний Express.js",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "fiber", "framework", "web", "backend"]
+    },
+    {
+        name: "W3Schools.com — Go (Golang)",
+        url: "https://www.w3schools.com/go/",
+        status: "Навчальні матеріали",
+        purpose: "Повний курс по Go (Golang)",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "w3schools", "golang", "web", "backend", "tutorial", "навчання", "курс", "уроки", "онлайн"]
+    },
+    {
+        name: "W3SchoolsUA — Go (Golang)",
+        url: "https://w3schoolsua.github.io/go/index.html",
+        status: "Навчальні матеріали",
+        purpose: "Повний курс по Go (Golang) українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "go",
+        tags: ["go", "w3schoolsua", "golang", "web", "backend", "tutorial", "навчання", "курс", "уроки", "ua", "українською"]
+    },
+    /* ---------------- C LANGUAGE ---------------- */
+    {
+        name: "ISO C Standard (Official)",
+        url: "https://www.iso.org/standard/74528.html",
+        status: "Офіційний стандарт",
+        purpose: "Офіційний стандарт мови C (ISO/IEC 9899), визначає синтаксис і поведінку",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "iso", "standard", "official", "language", "specification"]
+    },
+    {
+        name: "C17 / C18 Standard (ISO/IEC 9899:2018)",
+        url: "https://www.iso.org/standard/74528.html",
+        status: "Офіційний стандарт",
+        purpose: "Актуальна версія стандарту C, що використовується у промисловості",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "c17", "c18", "standard", "official", "iso"]
+    },
+    {
+        name: "C11 Standard (ISO/IEC 9899:2011)",
+        url: "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf",
+        status: "Офіційний стандарт",
+        purpose: "Попередня версія стандарту C, широко використовується у навчанні",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "c11", "standard", "official", "iso"]
+    },
+    {
+        name: "C99 Standard (ISO/IEC 9899:1999)",
+        url: "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf",
+        status: "Офіційний стандарт",
+        purpose: "Класичний стандарт C, який досі використовується у багатьох системах",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "c99", "standard", "official", "iso"]
+    },
+    {
+        name: "The C Programming Language (K&R)",
+        url: "https://en.wikipedia.org/wiki/The_C_Programming_Language",
+        status: "Класична книга",
+        purpose: "Найавторитетніша книга по C від творців мови (Kernighan & Ritchie)",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "kr", "book", "classic", "learning", "reference"]
+    },
+    {
+        name: "C Programming - Wikibooks.org",
+        url: "https://en.wikibooks.org/wiki/C_Programming",
+        status: "Книга на Wikibooks",
+        purpose: "Безплатна книга по C",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "wiki", "book", "classic", "learning", "reference", "книга", "підручник", "навчання"]
+    },
+    {
+        name: "cppreference — C Reference",
+        url: "https://en.cppreference.com/w/c",
+        status: "Авторитетний довідник",
+        purpose: "Детальна документація по C: синтаксис, типи, стандартна бібліотека",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "reference", "docs", "stdlib", "syntax"]
+    },
+    {
+        name: "GCC Documentation (Official)",
+        url: "https://gcc.gnu.org/onlinedocs/",
+        status: "Офіційна документація",
+        purpose: "Документація компілятора GCC: опції, стандарти, розширення",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "gcc", "compiler", "docs", "gnu"]
+    },
+    {
+        name: "Clang/LLVM Documentation (Official)",
+        url: "https://clang.llvm.org/docs/",
+        status: "Офіційна документація",
+        purpose: "Документація компілятора Clang: синтаксис, діагностика, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "clang", "llvm", "compiler", "docs"]
+    },
+    {
+        name: "Linux man-pages (C API)",
+        url: "https://man7.org/linux/man-pages/",
+        status: "Офіційна документація",
+        purpose: "Документація системних викликів Linux: C API, POSIX, glibc",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "linux", "posix", "api", "syscalls", "manpages"]
+    },
+    {
+        name: "POSIX Standard (IEEE)",
+        url: "https://pubs.opengroup.org/onlinepubs/9699919799/",
+        status: "Офіційний стандарт",
+        purpose: "Стандарт POSIX для C API: файлові системи, процеси, мережі",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "posix", "standard", "unix", "api"]
+    },
+    {
+        name: "Learn-C.org",
+        url: "https://www.learn-c.org/",
+        status: "Навчальний ресурс",
+        purpose: "Інтерактивні уроки по C для початківців",
+        rating: "⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "learning", "tutorials", "interactive"]
+    },
+    {
+        name: "GeeksForGeeks — C Programming",
+        url: "https://www.geeksforgeeks.org/c-programming-language/",
+        status: "Навчальний ресурс",
+        purpose: "Велика база статей, прикладів і задач по C",
+        rating: "⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "tutorials", "examples", "learning"]
+    },
+    {
+        name: "TutorialsPoint — C Programming",
+        url: "https://www.tutorialspoint.com/cprogramming/",
+        status: "Навчальний ресурс",
+        purpose: "Базові уроки по C з прикладами",
+        rating: "⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "tutorials", "learning", "examples"]
+    },
+    {
+        name: "W3Schools.com — C Programming",
+        url: "https://www.w3schools.com/c/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання C для початківців",
+        rating: "⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "w3schools", "tutorial", "learning", "beginner", "курси", "навчання"]
+    },
+    {
+        name: "W3SchoolsUA — C Programming",
+        url: "https://w3schoolsua.github.io/c/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Уроки з мови C для початківців українською",
+        rating: "⭐⭐⭐⭐",
+        category: "c",
+        tags: ["c", "w3schoolsua", "tutorial", "learning", "beginner", "курси", "навчання", "ua", "українською"]
+    },
     /* ---------------- Web API ---------------- */
     {
         name: "MDN Web Docs — Web APIs",
