@@ -21,6 +21,42 @@ const sourcesData = [
         tags: ["whatwg", "web", "html", "docs", "стандарт", "standard", "документація", "living", "oficial", "джерело"]
     },
     {
+        name: "WHATWG GitHub",
+        url: "https://github.com/whatwg/html",
+        status: "Офіційний стандарт",
+        purpose: "Розробка HTML Standard",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "html",
+        tags: ["whatwg", "web", "html", "docs", "стандарт", "standard", "документація", "living", "oficial", "джерело", "github"]
+    },
+    {
+        name: "W3C HTML Portal",
+        url: "https://www.w3.org/html/",
+        status: "Офіційні специфікації",
+        purpose: "Портал W3C зі специфікаціями",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "html",
+        tags: ["w3c", "web", "html", "docs", "документація", "стандарт", "standard", "офіційна", "приклади", "портал"]
+    },
+    {
+        name: "W3C Web Platform Tests",
+        url: "https://wpt.fyi",
+        status: "Офіційний ресурс",
+        purpose: "Тести відповідності браузерів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "html",
+        tags: ["w3c", "тести", "html", "браузери", "перевірка", "стандарти", "платформа", "безплатний", "офіційний", "mozilla"]
+    },
+    {
+        name: "W3C HTML Wiki",
+        url: "https://www.w3.org/html/wiki/Elements",
+        status: "Офіційний (архівний)",
+        purpose: "Історія HTML, списки елементів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "html",
+        tags: ["w3c", "архів", "html", "історія", "мережа", "стандарти", "інтернет", "вікі", "офіційний", "початок"]
+    },
+    {
         name: "MDN Web Docs — HTML",
         url: "https://developer.mozilla.org/docs/Web/HTML",
         status: "Де-факто стандарт документації",
@@ -30,6 +66,15 @@ const sourcesData = [
         tags: ["mdn", "web", "html", "docs", "стандарт", "standard", "документація", "офіційна", "приклади", "навчання"]
     },
     {
+        name: "MDN GitHub",
+        url: "https://github.com/mdn/content",
+        status: "Офіційний репозиторій MDN",
+        purpose: "Джерельний код MDN",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "html",
+        tags: ["mdn", "web", "html", "docs", "стандарт", "standard", "документація", "офіційна", "приклади", "github"]
+    },
+    {
         name: "Web.dev (від Google Chrome Team)",
         url: "https://web.dev/learn/html/",
         status: "Навчальний ресурс",
@@ -37,6 +82,15 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐⭐",
         category: "html",
         tags: ["web", "підручник", "html", "для початківців", "google", "chrome", "уроки", "безплатні", "приклади", "навчання"]
+    },
+    {
+        name: "DevDocs",
+        url: "https://devdocs.io/html/",
+        status: "Неофіційний ресурс",
+        purpose: "Агрегатор MDN, офлайн режим",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "html",
+        tags: ["devdocs", "документація", "html", "для початківців", "mdn", "агрегатор", "уроки", "безплатний", "офлайн", "навчання"]
     },
     {
         name: "W3SchoolsUA — HTML",
@@ -555,6 +609,142 @@ const sourcesData = [
         purpose: "Уроки, приклади, пояснення",
         rating: "⭐⭐⭐⭐⭐",
         tags: ["python", "tutorials", "w3schools", "підручник", "пайтон", "питон", "навчання", "уроки", "en", "для початківців"]
+    },
+    /* ---------------- JAVA ---------------- */
+    {
+        name: "Oracle Java Documentation (Official)",
+        url: "https://docs.oracle.com/en/java/",
+        status: "Офіційна документація",
+        purpose: "Повний офіційний довідник Java SE, API, гіди, приклади",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "oracle", "official", "docs", "reference", "jdk", "api"]
+    },
+    {
+        name: "Java SE Documentation — Oracle",
+        url: "https://www.oracle.com/java/technologies/javase-documentation.html",
+        status: "Офіційна документація",
+        purpose: "Технічні документи Java SE, релізи, API, JavaFX",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "oracle", "javase", "docs", "technical", "javafx"]
+    },
+    {
+        name: "Dev.java — Official Java Portal",
+        url: "https://dev.java/",
+        status: "Офіційний портал",
+        purpose: "Центральний портал Java: новини, гайди, відео, навчання",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "official", "community", "tutorials", "news"]
+    },
+    {
+        name: "Dev.java — Learn Java",
+        url: "https://dev.java/learn/",
+        status: "Офіційний навчальний ресурс",
+        purpose: "Офіційні навчальні матеріали Java: основи, OOP, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "learn", "tutorial", "official", "beginner", "oop"]
+    },
+    {
+        name: "OpenJDK — Official Source",
+        url: "https://openjdk.org/",
+        status: "Офіційний проєкт",
+        purpose: "Відкрите ядро Java, JDK, специфікації, JEP, розробка мови",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "openjdk", "jdk", "specs", "jep", "language"]
+    },
+    {
+        name: "Java Language Specification (JLS)",
+        url: "https://docs.oracle.com/javase/specs/",
+        status: "Офіційний стандарт",
+        purpose: "Формальна специфікація мови Java",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "specification", "jls", "standard", "language"]
+    },
+    {
+        name: "Java Tutorials (Legacy, Oracle)",
+        url: "https://docs.oracle.com/javase/tutorial/",
+        status: "Офіційний навчальний ресурс",
+        purpose: "Класичні офіційні туторіали Oracle для Java",
+        rating: "⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "tutorials", "oracle", "learning", "legacy"]
+    },
+    {
+        name: "Spring Framework Documentation",
+        url: "https://spring.io/docs",
+        status: "Офіційна документація",
+        purpose: "Найпопулярніший Java‑фреймворк для backend‑розробки",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "spring", "framework", "backend", "docs"]
+    },
+    {
+        name: "Spring Boot Documentation",
+        url: "https://docs.spring.io/spring-boot/docs/current/reference/html/",
+        status: "Офіційна документація",
+        purpose: "Документація Spring Boot — стандарт де‑факто для Java backend",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "spring boot", "backend", "docs", "microservices"]
+    },
+    {
+        name: "Maven — Official Documentation",
+        url: "https://maven.apache.org/guides/",
+        status: "Офіційна документація",
+        purpose: "Стандартний інструмент для збірки Java‑проєктів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "maven", "build", "tools", "apache"]
+    },
+    {
+        name: "Gradle — Official Documentation",
+        url: "https://docs.gradle.org/current/userguide/userguide.html",
+        status: "Офіційна документація",
+        purpose: "Сучасний інструмент збірки Java‑проєктів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "gradle", "build", "automation", "tools"]
+    },
+    {
+        name: "JUnit 5 Documentation",
+        url: "https://junit.org/junit5/docs/current/user-guide/",
+        status: "Офіційна документація",
+        purpose: "Стандарт для тестування Java‑додатків",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "junit", "testing", "unit tests", "docs"]
+    },
+    {
+        name: "JetBrains IntelliJ IDEA Guide",
+        url: "https://www.jetbrains.com/idea/guide/",
+        status: "Авторитетний ресурс",
+        purpose: "Офіційні гайди для найпопулярнішої IDE Java",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "intellij", "jetbrains", "ide", "guide"]
+    },
+    {
+        name: "Baeldung — Java Tutorials",
+        url: "https://www.baeldung.com/",
+        status: "Авторитетний навчальний ресурс",
+        purpose: "Глибокі статті по Java, Spring, Hibernate",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "spring", "hibernate", "tutorials", "articles"]
+    },
+    {
+        name: "GeeksForGeeks — Java",
+        url: "https://www.geeksforgeeks.org/java/",
+        status: "Навчальний ресурс",
+        purpose: "Велика база статей та прикладів по Java",
+        rating: "⭐⭐⭐⭐",
+        category: "java",
+        tags: ["java", "tutorials", "examples", "learning"]
     },
     /* ---------------- Web API ---------------- */
     {
