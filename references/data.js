@@ -1308,6 +1308,151 @@ const sourcesData = [
         category: "cpp",
         tags: ["c++", "w3schoolsua", "cpp", "tutorial", "learning", "beginner", "уроки", "навчання", "програмування", "українською", "ua"]
     },
+    /* ---------------- C# LANGUAGE ---------------- */
+    {
+        name: "Microsoft C# Documentation (Official)",
+        url: "https://learn.microsoft.com/en-us/dotnet/csharp/",
+        status: "Офіційна документація",
+        purpose: "Повний офіційний довідник C#: синтаксис, типи, ключові слова, приклади",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "csharp", "microsoft", "official", "docs", "language"]
+    },
+    {
+        name: "C# Guide — Microsoft Learn",
+        url: "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/",
+        status: "Офіційний гайд",
+        purpose: "Огляд мови C#, основи, сучасні можливості, приклади",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "guide", "tour", "official", "microsoft"]
+    },
+    {
+        name: "C# Language Specification",
+        url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/",
+        status: "Офіційний стандарт",
+        purpose: "Формальна специфікація мови C# від Microsoft",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "specification", "standard", "official"]
+    },
+    {
+        name: ".NET Documentation (Official)",
+        url: "https://learn.microsoft.com/en-us/dotnet/",
+        status: "Офіційна документація",
+        purpose: "Документація по .NET: CLR, бібліотеки, інструменти, API",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "dotnet", "official", "docs", "runtime"]
+    },
+    {
+        name: "ASP.NET Core Documentation",
+        url: "https://learn.microsoft.com/en-us/aspnet/core/",
+        status: "Офіційна документація",
+        purpose: "Документація по ASP.NET Core — найпопулярнішому веб‑фреймворку C#",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "asp.net", "web", "backend", "official"]
+    },
+    {
+        name: "Entity Framework Core Documentation",
+        url: "https://learn.microsoft.com/en-us/ef/core/",
+        status: "Офіційна документація",
+        purpose: "ORM‑фреймворк для C#, робота з базами даних",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "ef core", "orm", "database", "official"]
+    },
+    {
+        name: ".NET MAUI Documentation",
+        url: "https://learn.microsoft.com/en-us/dotnet/maui/",
+        status: "Офіційна документація",
+        purpose: "Кросплатформний UI‑фреймворк для мобільних і десктопних додатків",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "maui", "ui", "mobile", "desktop", "official"]
+    },
+    {
+        name: "Roslyn — .NET Compiler Platform",
+        url: "https://github.com/dotnet/roslyn",
+        status: "Офіційний репозиторій",
+        purpose: "Компілятор C# та VB.NET з відкритим кодом",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "compiler", "roslyn", "dotnet", "github"]
+    },
+    {
+        name: "NuGet — Official Package Repository",
+        url: "https://www.nuget.org/",
+        status: "Офіційний репозиторій",
+        purpose: "Головний репозиторій пакетів для .NET та C#",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "nuget", "packages", "repository"]
+    },
+    {
+        name: "C# Coding Conventions — Microsoft",
+        url: "https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions",
+        status: "Офіційний стильовий гайд",
+        purpose: "Рекомендації щодо стилю коду C#",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "style", "guide", "conventions", "official"]
+    },
+    {
+        name: "C# Reference — Microsoft",
+        url: "https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/",
+        status: "Офіційний довідник",
+        purpose: "Детальний довідник по синтаксису, типах, ключових словах",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "reference", "docs", "official"]
+    },
+    {
+        name: "C# Programming Yellow Book (Rob Miles)",
+        url: "https://www.robmiles.com/c-yellow-book",
+        status: "Авторитетна книга",
+        purpose: "Популярна книга по C# від Rob Miles, безкоштовна",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "book", "learning", "rob miles"]
+    },
+    {
+        name: "C# in Depth (Jon Skeet)",
+        url: "https://csharpindepth.com/",
+        status: "Авторитетний ресурс",
+        purpose: "Глибоке вивчення C# від легендарного Jon Skeet",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "jon skeet", "advanced", "learning"]
+    },
+    {
+        name: "DotNetPerls — C# Examples",
+        url: "https://www.dotnetperls.com/",
+        status: "Популярний ресурс",
+        purpose: "Велика база прикладів по C#",
+        rating: "⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "examples", "learning", "snippets"]
+    },
+    {
+        name: "W3Schools — C# Tutorial",
+        url: "https://www.w3schools.com/cs/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання C# для початківців",
+        rating: "⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "w3schools", "tutorial", "learning", "beginner"]
+    },
+    {
+        name: "W3SchoolsUA — C# Підручник",
+        url: "https://w3schoolsua.github.io/cs/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Уроки C# для початківців українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "csharp",
+        tags: ["c#", "w3schoolsua", "tutorial", "learning", "beginner", "підручник", "навчання", "українською", "для початківців"]
+    },
     /* ---------------- Web API ---------------- */
     {
         name: "MDN Web Docs — Web APIs",
