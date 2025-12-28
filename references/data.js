@@ -1163,6 +1163,151 @@ const sourcesData = [
         category: "c",
         tags: ["c", "w3schoolsua", "tutorial", "learning", "beginner", "курси", "навчання", "ua", "українською"]
     },
+    /* ---------------- C++ LANGUAGE ---------------- */
+    {
+        name: "ISO C++ Standard (Official)",
+        url: "https://www.iso.org/committee/54874.html",
+        status: "Офіційний стандарт",
+        purpose: "Офіційні стандарти C++ (ISO/IEC 14882), що визначають мову та бібліотеки",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "iso", "standard", "official", "language"]
+    },
+    {
+        name: "C++23 Standard Draft",
+        url: "https://eel.is/c++draft/",
+        status: "Офіційний драфт",
+        purpose: "Актуальний драфт стандарту C++23, підтримується комітетом WG21",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "c++23", "standard", "draft", "wg21"]
+    },
+    {
+        name: "C++20 Standard Draft",
+        url: "https://timsong-cpp.github.io/cppwp/",
+        status: "Офіційний драфт",
+        purpose: "Повний драфт стандарту C++20 — концепти, корутини, ranges",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "c++20", "standard", "draft"]
+    },
+    {
+        name: "cppreference.com — C++ Reference",
+        url: "https://en.cppreference.com/w/cpp",
+        status: "Авторитетний довідник",
+        purpose: "Найповніший довідник по C++: синтаксис, STL, бібліотеки, приклади",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "reference", "docs", "stl", "stdlib"]
+    },
+    {
+        name: "C++ Core Guidelines",
+        url: "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
+        status: "Офіційні рекомендації",
+        purpose: "Найкращі практики C++ від Bjarne Stroustrup та Herb Sutter",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "guidelines", "best practices", "stroustrup", "sutter"]
+    },
+    {
+        name: "ISO C++ Foundation — Official Site",
+        url: "https://isocpp.org/",
+        status: "Офіційний портал",
+        purpose: "Новини, статті, стандарти, конференції, ресурси по C++",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "official", "isocpp", "news"]
+    },
+    {
+        name: "GCC C++ Documentation",
+        url: "https://gcc.gnu.org/onlinedocs/gcc/C_002b_002b-Extensions.html",
+        status: "Офіційна документація",
+        purpose: "Документація компілятора GCC: розширення, опції, стандарти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "gcc", "compiler", "gnu"]
+    },
+    {
+        name: "Clang C++ Documentation",
+        url: "https://clang.llvm.org/docs/UsersManual.html",
+        status: "Офіційна документація",
+        purpose: "Документація компілятора Clang/LLVM",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "clang", "llvm", "compiler"]
+    },
+    {
+        name: "MSVC C++ Documentation",
+        url: "https://learn.microsoft.com/en-us/cpp/",
+        status: "Офіційна документація",
+        purpose: "Документація Microsoft Visual C++ та інструментів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "msvc", "microsoft", "compiler"]
+    },
+    {
+        name: "Boost C++ Libraries",
+        url: "https://www.boost.org/doc/libs/",
+        status: "Офіційна документація",
+        purpose: "Найпотужніша бібліотека C++, основа для багатьох стандартних компонентів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "boost", "libraries", "stl"]
+    },
+    {
+        name: "Qt Documentation",
+        url: "https://doc.qt.io/",
+        status: "Офіційна документація",
+        purpose: "Найпопулярніший C++ фреймворк для GUI та кросплатформної розробки",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "qt", "gui", "framework"]
+    },
+    {
+        name: "C++ Weekly (Jason Turner)",
+        url: "https://www.youtube.com/c/CppWeekly",
+        status: "Авторитетний ресурс",
+        purpose: "Щотижневі відео про сучасний C++ від експерта Jason Turner",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "videos", "modern c++", "learning"]
+    },
+    {
+        name: "LearnCpp.com",
+        url: "https://www.learncpp.com/",
+        status: "Навчальний ресурс",
+        purpose: "Найпопулярніший безкоштовний онлайн‑курс по C++",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "tutorials", "learning", "beginner"]
+    },
+    {
+        name: "GeeksForGeeks — C++ Programming",
+        url: "https://www.geeksforgeeks.org/c-plus-plus/",
+        status: "Навчальний ресурс",
+        purpose: "Велика база статей, прикладів і задач по C++",
+        rating: "⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "cpp", "tutorials", "examples", "learning"]
+    },
+    {
+        name: "W3Schools — C++ Tutorial",
+        url: "https://www.w3schools.com/cpp/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання C++ для початківців",
+        rating: "⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "w3schools", "cpp", "tutorial", "learning", "beginner", "lessons", "programming"]
+    },
+    {
+        name: "W3SchoolsUA — C++ Підручник",
+        url: "https://w3schoolsua.github.io/cpp/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Уроки C++ для початківців українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cpp",
+        tags: ["c++", "w3schoolsua", "cpp", "tutorial", "learning", "beginner", "уроки", "навчання", "програмування", "українською", "ua"]
+    },
     /* ---------------- Web API ---------------- */
     {
         name: "MDN Web Docs — Web APIs",
