@@ -1598,6 +1598,187 @@ const sourcesData = [
         category: "r",
         tags: ["r", "tutorial", "learning", "beginner", "підручник", "для початківців", "уроки", "українською"]
     },
+    /* ---------------- RUST LANGUAGE ---------------- */
+    {
+        name: "Rust Programming Language (Official)",
+        url: "https://www.rust-lang.org/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Rust: документація, інструменти, релізи, навчання",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "official", "docs", "language", "homepage", "мова", "програмування", "портал", "офіційний"]
+    },
+    {
+        name: "The Rust Programming Language — The Rust Book",
+        url: "https://doc.rust-lang.org/book/",
+        status: "Офіційна книга",
+        purpose: "Головна офіційна книга Rust: основи, власність, позичання, типи",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "book", "official", "learning", "beginner", "книга", "офіційна", "навчання"]
+    },
+    {
+        name: "Rust Reference (Official)",
+        url: "https://doc.rust-lang.org/reference/",
+        status: "Офіційна специфікація",
+        purpose: "Формальна специфікація мови Rust",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "reference", "specification", "official", "специфікація", "офіційна"]
+    },
+    {
+        name: "Rustonomicon (Official)",
+        url: "https://doc.rust-lang.org/nomicon/",
+        status: "Офіційний ресурс",
+        purpose: "Небезпечні частини Rust: unsafe, низькорівневі механізми",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "unsafe", "advanced", "official", "мова", "програмування"]
+    },
+    {
+        name: "Rust Standard Library Documentation",
+        url: "https://doc.rust-lang.org/std/",
+        status: "Офіційна документація",
+        purpose: "Документація стандартної бібліотеки Rust",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "stdlib", "docs", "official", "стандарт", "бібліотека", "документація"]
+    },
+    {
+        name: "Cargo — Rust Package Manager",
+        url: "https://doc.rust-lang.org/cargo/",
+        status: "Офіційна документація",
+        purpose: "Менеджер пакетів Rust, збірка, залежності, публікація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "cargo", "packages", "build", "official"]
+    },
+    {
+        name: "Crates.io — Rust Package Registry",
+        url: "https://crates.io/",
+        status: "Офіційний репозиторій",
+        purpose: "Головний репозиторій пакетів Rust",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "crates", "packages", "repository", "офіційний", "репозиторій", "пакети"]
+    },
+    {
+        name: "Rustup — Toolchain Installer",
+        url: "https://rustup.rs/",
+        status: "Офіційний інструмент",
+        purpose: "Офіційний інсталятор Rust toolchain",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "rustup", "toolchain", "official", "офіційний", "інсталятор"]
+    },
+    {
+        name: "Clippy — Rust Linter",
+        url: "https://github.com/rust-lang/rust-clippy",
+        status: "Офіційний інструмент",
+        purpose: "Офіційний лінтер Rust з найкращими практиками",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "clippy", "linter", "official", "лінтер", "офіційний"]
+    },
+    {
+        name: "Rustfmt — Code Formatter",
+        url: "https://github.com/rust-lang/rustfmt",
+        status: "Офіційний інструмент",
+        purpose: "Офіційний форматер коду Rust",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "rustfmt", "formatter", "official", "форматер", "коду"]
+    },
+    {
+        name: "Rust Foundation",
+        url: "https://foundation.rust-lang.org/",
+        status: "Офіційна організація",
+        purpose: "Фонд, що підтримує розвиток Rust",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "foundation", "official", "community", "фонд"]
+    },
+    {
+        name: "Rust Blog (Official)",
+        url: "https://blog.rust-lang.org/",
+        status: "Офіційний блог",
+        purpose: "Офіційні новини Rust: релізи, RFC, зміни в мові",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "blog", "official", "news", "офіційні", "новини"]
+    },
+    {
+        name: "Rust RFCs — Language Evolution",
+        url: "https://github.com/rust-lang/rfcs",
+        status: "Офіційний репозиторій",
+        purpose: "Пропозиції щодо розвитку Rust (RFC)",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "rfcs", "language", "evolution", "офіційний", "репозиторій"]
+    },
+    {
+        name: "Rust by Example (Official)",
+        url: "https://doc.rust-lang.org/rust-by-example/",
+        status: "Офіційний ресурс",
+        purpose: "Приклади Rust з поясненнями",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "examples", "learning", "official", "приклади", "навчання"]
+    },
+    {
+        name: "The Rust Cookbook",
+        url: "https://rust-lang-nursery.github.io/rust-cookbook/",
+        status: "Авторитетний ресурс",
+        purpose: "Готові рецепти та приклади використання Rust",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "cookbook", "examples", "learning", "приклади", "навчання"]
+    },
+    {
+        name: "Actix Web Framework",
+        url: "https://actix.rs/",
+        status: "Популярний фреймворк",
+        purpose: "Найшвидший веб‑фреймворк Rust",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "actix", "web", "framework", "фреймворк"]
+    },
+    {
+        name: "Rocket Web Framework",
+        url: "https://rocket.rs/",
+        status: "Популярний фреймворк",
+        purpose: "Зручний і сучасний веб‑фреймворк Rust",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "rocket", "web", "framework", "фреймворк"]
+    },
+    {
+        name: "Axum Web Framework",
+        url: "https://docs.rs/axum/latest/axum/",
+        status: "Популярний фреймворк",
+        purpose: "Сучасний веб‑фреймворк на основі Tokio",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "axum", "web", "framework", "tokio", "токіо", "фреймворк"]
+    },
+    {
+        name: "W3Schools.com - Rust Tutorial",
+        url: "https://www.w3schools.com/rust/",
+        status: "Навчальний ресурс",
+        purpose: "Уроки по мові програмування Rust для новачків",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "programming", "w3schools", "learning", "tutorial", "for beginners", "навчання", "уроки"]
+    },
+    {
+        name: "W3SchoolsUA - Rust Підручник",
+        url: "https://w3schoolsua.github.io/rust/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Уроки по мові програмування Rust для новачків українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "rust",
+        tags: ["rust", "programming", "w3schools", "learning", "tutorial", "for beginners", "програмування", "навчання", "уроки", "українською"]
+    },
     /* ---------------- Web API ---------------- */
     {
         name: "MDN Web Docs — Web APIs",
