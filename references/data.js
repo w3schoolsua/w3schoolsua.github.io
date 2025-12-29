@@ -1453,6 +1453,151 @@ const sourcesData = [
         category: "csharp",
         tags: ["c#", "w3schoolsua", "tutorial", "learning", "beginner", "підручник", "навчання", "українською", "для початківців"]
     },
+    /* ---------------- R LANGUAGE ---------------- */
+    {
+        name: "The R Project for Statistical Computing (Official)",
+        url: "https://www.r-project.org/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал R: документація, релізи, стандарти, завантаження",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "official", "docs", "language", "statistics", "офіційно", "портал", "документація", "стандарти"]
+    },
+    {
+        name: "CRAN — Comprehensive R Archive Network",
+        url: "https://cran.r-project.org/",
+        status: "Офіційний репозиторій",
+        purpose: "Офіційний репозиторій пакетів R, документація, мануали",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "cran", "packages", "repository", "official", "репозиторій", "офіційний", "документація", "пакети"]
+    },
+    {
+        name: "R Manuals (Official)",
+        url: "https://cran.r-project.org/manuals.html",
+        status: "Офіційна документація",
+        purpose: "Офіційні мануали R: Introduction, Language Definition, Extensions",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "manuals", "docs", "official", "reference", "офіційні", "мануали", "розширення"]
+    },
+    {
+        name: "R Language Definition",
+        url: "https://cran.r-project.org/doc/manuals/r-release/R-lang.html",
+        status: "Офіційний стандарт",
+        purpose: "Формальна специфікація мови R",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "specification", "standard", "official", "специфікація", "стандарт", "офіційний"]
+    },
+    {
+        name: "RStudio / Posit (Official)",
+        url: "https://posit.co/",
+        status: "Офіційний портал",
+        purpose: "Офіційний сайт RStudio/Posit: IDE, пакети, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "rstudio", "posit", "ide", "tools", "офіційний", "інструменти"]
+    },
+    {
+        name: "RStudio Documentation",
+        url: "https://docs.posit.co/",
+        status: "Офіційна документація",
+        purpose: "Документація RStudio IDE, Shiny, Connect, Workbench",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "rstudio", "docs", "shiny", "official", "офіційна", "документація"]
+    },
+    {
+        name: "Tidyverse (Official)",
+        url: "https://www.tidyverse.org/",
+        status: "Офіційний екосистемний портал",
+        purpose: "Набір пакетів для роботи з даними: dplyr, ggplot2, tidyr, readr",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "tidyverse", "ggplot2", "dplyr", "data", "офіційний", "портал", "пакети"]
+    },
+    {
+        name: "Tidyverse Documentation",
+        url: "https://tidyverse.tidyverse.org/",
+        status: "Офіційна документація",
+        purpose: "Документація по всіх пакетах tidyverse",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "tidyverse", "docs", "packages", "пакети", "документація"]
+    },
+    {
+        name: "R for Data Science (Hadley Wickham)",
+        url: "https://r4ds.hadley.nz/",
+        status: "Авторитетна книга",
+        purpose: "Найпопулярніша книга по R для аналізу даних",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "book", "data science", "tidyverse", "learning", "книга", "аналіз", "даних"]
+    },
+    {
+        name: "Advanced R (Hadley Wickham)",
+        url: "https://adv-r.hadley.nz/",
+        status: "Авторитетна книга",
+        purpose: "Глибоке вивчення R: середовище, об’єкти, функції, метапрограмування",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "advanced", "book", "hadley", "programming", "книга"]
+    },
+    {
+        name: "R Packages (Hadley Wickham)",
+        url: "https://r-pkgs.org/",
+        status: "Авторитетна книга",
+        purpose: "Створення, тестування та публікація R‑пакетів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "packages", "book", "development", "книга"]
+    },
+    {
+        name: "Shiny (Official)",
+        url: "https://shiny.posit.co/",
+        status: "Офіційний фреймворк",
+        purpose: "Створення інтерактивних веб‑додатків на R",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "shiny", "web", "framework", "official", "офіційний", "додатки"]
+    },
+    {
+        name: "R Bloggers",
+        url: "https://www.r-bloggers.com/",
+        status: "Популярний ресурс",
+        purpose: "Статті, новини, приклади та гайди по R від спільноти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "blog", "community", "learning", "статті", "новини"]
+    },
+    {
+        name: "DataCamp — R Courses",
+        url: "https://www.datacamp.com/courses/tech:r",
+        status: "Навчальний ресурс",
+        purpose: "Інтерактивні курси по R для аналізу даних",
+        rating: "⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "learning", "courses", "interactive", "курси"]
+    },
+    {
+        name: "W3Schools.com — R Tutorial",
+        url: "https://www.w3schools.com/r/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання R для початківців",
+        rating: "⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "tutorial", "learning", "beginner"]
+    },
+    {
+        name: "W3SchoolsUA — R Підручник",
+        url: "https://w3schoolsua.github.io/r/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Навчання R для початківців українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "r",
+        tags: ["r", "tutorial", "learning", "beginner", "підручник", "для початківців", "уроки", "українською"]
+    },
     /* ---------------- Web API ---------------- */
     {
         name: "MDN Web Docs — Web APIs",
