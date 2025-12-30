@@ -2418,6 +2418,165 @@ const sourcesData = [
         category: "nodejs",
         tags: ["nodejs", "ukrainian", "encyclopedia", "overview", "verified", "українською", "вікіпедія"]
     },
+    /* ---------------- FRONTEND: REACT ---------------- */
+    {
+        name: "React — Official Website",
+        url: "https://react.dev/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал React: документація, гіди, API, навчання",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["react", "official", "docs", "frontend", "library", "офіційна", "документація"]
+    },
+    {
+        name: "React — Legacy Docs",
+        url: "https://legacy.reactjs.org/",
+        status: "Офіційна документація",
+        purpose: "Стара документація React (до React 18)",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["react", "legacy", "docs", "офіційна", "документація"]
+    },
+    {
+        name: "React GitHub Repository",
+        url: "https://github.com/facebook/react",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код React, RFC, issues",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["react", "github", "repository", "офіційний", "репозиторій"]
+    },
+    /* ---------------- FRONTEND: VUE ---------------- */
+    {
+        name: "Vue.js — Official Website",
+        url: "https://vuejs.org/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Vue: документація, гіди, API",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["vue", "official", "docs", "frontend", "framework", "офіційна", "документація"]
+    },
+    {
+        name: "Vue.js GitHub Repository",
+        url: "https://github.com/vuejs/core",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код Vue 3",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["vue", "github", "repository", "офіційна", "репозиторій"]
+    },
+    /* ---------------- FRONTEND: ANGULAR ---------------- */
+    {
+        name: "Angular — Official Website",
+        url: "https://angular.dev/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Angular: документація, гіди, API",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["angular", "official", "docs", "frontend", "framework", "офіційна", "документація", "портал"]
+    },
+    {
+        name: "Angular GitHub Repository",
+        url: "https://github.com/angular/angular",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код Angular, RFC, issues",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["angular", "github", "repository", "офіційна", "документація", "репозиторій"]
+    },
+    /* ---------------- FRONTEND: JQUERY ---------------- */
+    {
+        name: "jQuery — Official Website",
+        url: "https://jquery.com/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал jQuery: документація, API, завантаження",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["jquery", "official", "docs", "library", "офіційна", "документація"]
+    },
+    {
+        name: "jQuery API Documentation",
+        url: "https://api.jquery.com/",
+        status: "Офіційна документація",
+        purpose: "Повний довідник API jQuery",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["jquery", "api", "docs", "офіційна", "документація"]
+    },
+    {
+        name: "jQuery GitHub Repository",
+        url: "https://github.com/jquery/jquery",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код jQuery",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["jquery", "github", "repository", "офіційна", "документація", "репозиторій"]
+    },
+    /* ---------------- ДОДАТКОВІ АВТОРИТЕТНІ РЕСУРСИ ---------------- */
+    {
+        name: "MDN Web Docs — Frontend",
+        url: "https://developer.mozilla.org/en-US/docs/Web",
+        status: "Авторитетна документація",
+        purpose: "Найкращий довідник по HTML, CSS, JavaScript, API",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["frontend", "mdn", "docs", "html", "css", "javascript", "офіційна", "документація"]
+    },
+    {
+        name: "W3Schools — Frontend Tutorials",
+        url: "https://www.w3schools.com/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання HTML, CSS, JS, React",
+        rating: "⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["frontend", "tutorial", "learning", "навчання", "уроки"]
+    },
+    {
+        name: "freeCodeCamp — Frontend Development",
+        url: "https://www.freecodecamp.org/learn/",
+        status: "Популярний навчальний ресурс",
+        purpose: "Безкоштовні курси з HTML, CSS, JS, React",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["frontend", "freecodecamp", "learning", "courses", "курси", "навчання"]
+    },
+    /* ---------------- УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ ---------------- */
+    {
+        name: "Вікіпедія (укр) — React",
+        url: "https://uk.wikipedia.org/wiki/React",
+        status: "Україномовний ресурс",
+        purpose: "Огляд React українською",
+        rating: "⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["react", "ukrainian", "encyclopedia", "verified", "вікіпедія"]
+    },
+    {
+        name: "Вікіпедія (укр) — Vue.js",
+        url: "https://uk.wikipedia.org/wiki/Vue.js",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Vue українською",
+        rating: "⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["vue", "ukrainian", "encyclopedia", "verified", "вікіпедія"]
+    },
+    {
+        name: "Вікіпедія (укр) — Angular",
+        url: "https://uk.wikipedia.org/wiki/Angular",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Angular українською",
+        rating: "⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["angular", "ukrainian", "encyclopedia", "verified", "вікіпедія"]
+    },
+    {
+        name: "Вікіпедія (укр) — jQuery",
+        url: "https://uk.wikipedia.org/wiki/JQuery",
+        status: "Україномовний ресурс",
+        purpose: "Огляд jQuery українською",
+        rating: "⭐⭐⭐⭐",
+        category: "frontend",
+        tags: ["jquery", "ukrainian", "encyclopedia", "verified", "вікіпедія"]
+    },
     /* ---------------- DEVOPS ---------------- */
     /* ОФІЦІЙНІ ДЖЕРЕЛА ТА СТАНДАРТИ */
     {
