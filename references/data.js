@@ -2725,6 +2725,174 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐",
         category: "security",
         tags: ["security", "web", "google", "офіційний", "рекомендації", "безпека"]
+    },
+    /* ---------------- SECURITY / CYBERSECURITY ---------------- */
+    /* ОФІЦІЙНІ ОРГАНІЗАЦІЇ ТА СТАНДАРТИ */
+    {
+        name: "NIST Cybersecurity Framework (CSF)",
+        url: "https://www.nist.gov/cyberframework",
+        status: "Офіційний стандарт",
+        purpose: "Головний міжнародний фреймворк кібербезпеки: Identify, Protect, Detect, Respond, Recover",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "nist", "csf", "standard", "official", "офіційний", "стандарт"]
+    },
+    {
+        name: "NIST Special Publications (SP 800 Series)",
+        url: "https://csrc.nist.gov/publications/sp800",
+        status: "Офіційна документація",
+        purpose: "Стандарти кібербезпеки: криптографія, мережі, ризики, хмарні системи",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "nist", "sp800", "standards", "official", "офіційний", "документація"]
+    },
+    {
+        name: "ISO/IEC 27001 Information Security Standard",
+        url: "https://www.iso.org/isoiec-27001-information-security.html",
+        status: "Офіційний стандарт",
+        purpose: "Міжнародний стандарт управління інформаційною безпекою",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "iso27001", "standard", "official", "офіційний", "стандарт"]
+    },
+    {
+        name: "OWASP (Open Worldwide Application Security Project)",
+        url: "https://owasp.org/",
+        status: "Офіційна організація",
+        purpose: "Найавторитетніші ресурси з безпеки веб‑додатків",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "owasp", "web", "application security"]
+    },
+    /* ОФІЦІЙНІ ДЕРЖАВНІ РЕСУРСИ */
+    {
+        name: "CISA — Cybersecurity & Infrastructure Security Agency",
+        url: "https://www.cisa.gov/",
+        status: "Офіційна агенція",
+        purpose: "Попередження загроз, рекомендації, інструменти, аналіз вразливостей",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "cisa", "government", "official", "офіційна", "безпека"]
+    },
+    {
+        name: "ENISA — European Union Agency for Cybersecurity",
+        url: "https://www.enisa.europa.eu/",
+        status: "Офіційна агенція",
+        purpose: "Європейські стандарти, рекомендації та аналітика кібербезпеки",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "enisa", "eu", "official", "офіційний", "безпека"]
+    },
+    /* ІНСТРУМЕНТИ ТА ПЛАТФОРМИ */
+    {
+        name: "Kali Linux Documentation",
+        url: "https://www.kali.org/docs/",
+        status: "Офіційна документація",
+        purpose: "Документація найпопулярнішого дистрибутива для пентесту",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "kali", "pentest", "linux", "офіційний", "безпека", "документація"]
+    },
+    {
+        name: "Metasploit Framework Documentation",
+        url: "https://docs.metasploit.com/",
+        status: "Офіційна документація",
+        purpose: "Документація Metasploit — інструменту для тестування безпеки",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "metasploit", "pentest", "exploitation", "офіційний", "безпека", "фреймворк"]
+    },
+    {
+        name: "Wireshark Documentation",
+        url: "https://www.wireshark.org/docs/",
+        status: "Офіційна документація",
+        purpose: "Аналіз мережевого трафіку, безпека мереж",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "wireshark", "network", "analysis", "офіційний", "безпека", "документація"]
+    },
+    {
+        name: "Shodan Documentation",
+        url: "https://help.shodan.io/",
+        status: "Офіційна документація",
+        purpose: "Пошукова система для пристроїв IoT та відкритих портів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "shodan", "iot", "scanning", "офіційний", "безпека", "документація"]
+    },
+    /* НАВЧАЛЬНІ РЕСУРСИ */
+    {
+        name: "MITRE ATT&CK Framework",
+        url: "https://attack.mitre.org/",
+        status: "Авторитетний ресурс",
+        purpose: "Каталог технік атак хакерів та методів захисту",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "mitre", "attack", "framework", "фреймворк"]
+    },
+    {
+        name: "Cybersecurity — IBM Security Learning Academy",
+        url: "https://www.securitylearningacademy.com/",
+        status: "Авторитетний навчальний ресурс",
+        purpose: "Безкоштовні курси з кібербезпеки від IBM",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "ibm", "learning", "courses", "безпека", "навчання"]
+    },
+    {
+        name: "Cybrary",
+        url: "https://www.cybrary.it/",
+        status: "Популярний навчальний ресурс",
+        purpose: "Курси з кібербезпеки, SOC, pentest, forensics",
+        rating: "⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "cybrary", "learning", "courses", "навчання", "кібербезпека", "курси"]
+    },
+    {
+        name: "SANS Institute",
+        url: "https://www.sans.org/",
+        status: "Авторитетна організація",
+        purpose: "Найвідоміші курси та стандарти кібербезпеки",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "sans", "training", "certification", "курси", "безпека"]
+    },
+    {
+        name: "W3Schools.com — Cyber Security Tutorial",
+        url: "https://www.w3schools.com/cybersecurity/",
+        status: "Навчальний ресурс",
+        purpose: "Навчальний курс по Кібербезпеці",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "w3schools", "learning", "lessons", "навчання", "уроки", "для початківців"]
+    },
+    /* УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ */
+    {
+        name: "W3SchoolsUA — Cyber Security Підручник",
+        url: "https://w3schoolsua.github.io/cybersecurity/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Навчальний курс по Кібербезпеці українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "w3schoolsua", "learning", "lessons", "навчання", "уроки", "для початківців", "українською"]
+    },
+    {
+        name: "Вікіпедія (укр) — Кібербезпека",
+        url: "https://uk.wikipedia.org/wiki/Кібербезпека",
+        status: "Україномовний ресурс",
+        purpose: "Огляд кібербезпеки українською: поняття, стандарти, загрози",
+        rating: "⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "ukrainian", "encyclopedia", "overview", "verified", "українською", "безпека"]
+    },
+    {
+        name: "CERT-UA — Державний центр реагування на кіберінциденти",
+        url: "https://cert.gov.ua/",
+        status: "Офіційний український ресурс",
+        purpose: "Офіційні попередження, рекомендації та аналітика кіберзагроз",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["security", "ukraine", "cert", "official", "cybersecurity", "українською", "безпека"]
     }
 ];
 // Фільтрація по категорії
