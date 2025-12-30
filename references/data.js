@@ -2264,6 +2264,160 @@ const sourcesData = [
         category: "typescript",
         tags: ["typescript", "w3schools", "lessond", "learning", "уроки", "навчання", "для початківців", "українською"]
     },
+    /* ---------------- NODE.JS LANGUAGE ---------------- */
+    {
+        name: "Node.js Official Website",
+        url: "https://nodejs.org/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Node.js: документація, релізи, інструменти, завантаження",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "official", "docs", "language", "homepage", "офіційний", "документація"]
+    },
+    {
+        name: "Node.js Documentation (Official)",
+        url: "https://nodejs.org/en/docs/",
+        status: "Офіційна документація",
+        purpose: "Повний офіційний довідник Node.js: API, модулі, приклади",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "docs", "api", "official", "reference", "офіційна", "документація"]
+    },
+    {
+        name: "Node.js API Reference",
+        url: "https://nodejs.org/api/",
+        status: "Офіційна документація",
+        purpose: "Документація API Node.js: модулі, функції, системні виклики",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "api", "docs", "official", "офіційна", "документація"]
+    },
+    {
+        name: "Node.js Release Notes",
+        url: "https://nodejs.org/en/blog/release/",
+        status: "Офіційний ресурс",
+        purpose: "Офіційні новини та зміни у версіях Node.js",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "releases", "news", "official"]
+    },
+    {
+        name: "Node.js GitHub Repository",
+        url: "https://github.com/nodejs/node",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код Node.js, issues, RFC",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "github", "repository", "official", "офіційний", "репозиторій"]
+    },
+    {
+        name: "Node.js Blog (Official)",
+        url: "https://nodejs.org/en/blog/",
+        status: "Офіційний блог",
+        purpose: "Офіційні статті Node.js: новини, релізи, зміни",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "blog", "official", "news", "офіційний", "блог", "новини", "статті"]
+    },
+    {
+        name: "Express.js Documentation",
+        url: "https://expressjs.com/",
+        status: "Популярний фреймворк",
+        purpose: "Найпопулярніший веб‑фреймворк для Node.js",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "express", "framework", "web", "фреймворк"]
+    },
+    {
+        name: "NestJS Documentation",
+        url: "https://docs.nestjs.com/",
+        status: "Популярний фреймворк",
+        purpose: "Прогресивний фреймворк для Node.js, побудований на TypeScript",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "nestjs", "framework", "typescript", "фреймворк"]
+    },
+    {
+        name: "Koa.js Documentation",
+        url: "https://koajs.com/",
+        status: "Популярний фреймворк",
+        purpose: "Мінімалістичний веб‑фреймворк для Node.js",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "koa", "framework", "web", "фреймворк"]
+    },
+    {
+        name: "Fastify Documentation",
+        url: "https://www.fastify.io/docs/latest/",
+        status: "Популярний фреймворк",
+        purpose: "Високопродуктивний веб‑фреймворк для Node.js",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "fastify", "framework", "web", "фреймворк"]
+    },
+    {
+        name: "Node.js Design Patterns (Book)",
+        url: "https://www.nodejsdesignpatterns.com/",
+        status: "Авторитетна книга",
+        purpose: "Класична книга по архітектурі та патернах Node.js",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "book", "design patterns", "learning", "книга", "архітектура", "навчання"]
+    },
+    {
+        name: "Node.js Best Practices (GitHub)",
+        url: "https://github.com/goldbergyoni/nodebestpractices",
+        status: "Авторитетний ресурс",
+        purpose: "Найпопулярніший репозиторій з найкращими практиками Node.js",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "best practices", "github", "guide", "гітхаб", "репозиторій"]
+    },
+    {
+        name: "W3Schools.com — Node.js Tutorial",
+        url: "https://www.w3schools.com/nodejs/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання Node.js для початківців",
+        rating: "⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "w3schools", "tutorial", "learning", "beginner", "уроки", "навчання", "для початківців"]
+    },
+    {
+        name: "W3SchoolsUA — Node.js Підручник",
+        url: "https://w3schoolsua.github.io/nodejs/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Уроки Node.js для початківців українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "w3schoolsua", "tutorial", "learning", "beginner", "уроки", "навчання", "для початківців", "українською"]
+    },
+    {
+        name: "Node.js Tutorial — TutorialsPoint",
+        url: "https://www.tutorialspoint.com/nodejs/",
+        status: "Навчальний ресурс",
+        purpose: "Базові уроки по Node.js з прикладами",
+        rating: "⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "tutorials", "examples", "learning", "уроки", "навчання"]
+    },
+    {
+        name: "Node.js — GeeksForGeeks",
+        url: "https://www.geeksforgeeks.org/nodejs/",
+        status: "Навчальний ресурс",
+        purpose: "Велика база статей та прикладів по Node.js",
+        rating: "⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "tutorials", "examples", "learning"]
+    },
+    {
+        name: "Вікіпедія (укр) — Node.js",
+        url: "https://uk.wikipedia.org/wiki/Node.js",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Node.js українською: історія, архітектура, застосування",
+        rating: "⭐⭐⭐⭐",
+        category: "nodejs",
+        tags: ["nodejs", "ukrainian", "encyclopedia", "overview", "verified", "українською", "вікіпедія"]
+    },
     /* ---------------- Web API ---------------- */
     {
         name: "MDN Web Docs — Web APIs",
