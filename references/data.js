@@ -2418,6 +2418,176 @@ const sourcesData = [
         category: "nodejs",
         tags: ["nodejs", "ukrainian", "encyclopedia", "overview", "verified", "українською", "вікіпедія"]
     },
+    /* ---------------- DEVOPS ---------------- */
+    /* ОФІЦІЙНІ ДЖЕРЕЛА ТА СТАНДАРТИ */
+    {
+        name: "DevOps — Microsoft Learn",
+        url: "https://learn.microsoft.com/en-us/devops/",
+        status: "Офіційна документація",
+        purpose: "Офіційні матеріали Microsoft по DevOps, CI/CD, GitOps, інструментах",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "microsoft", "official", "docs", "cicd", "офіційний", "стандарт"]
+    },
+    {
+        name: "AWS DevOps Documentation",
+        url: "https://aws.amazon.com/devops/",
+        status: "Офіційна документація",
+        purpose: "DevOps‑практики та інструменти AWS: CI/CD, CloudFormation, CodePipeline",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "aws", "cloud", "official", "офіційна", "документація"]
+    },
+    {
+        name: "Google Cloud DevOps",
+        url: "https://cloud.google.com/devops",
+        status: "Офіційна документація",
+        purpose: "DevOps‑гайди Google: SRE, CI/CD, автоматизація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "google", "sre", "cloud", "official", "офіційна", "документація"]
+    },
+    {
+        name: "DevOps — Red Hat",
+        url: "https://www.redhat.com/en/topics/devops",
+        status: "Офіційний ресурс",
+        purpose: "DevOps‑підхід, інструменти, автоматизація, контейнеризація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "redhat", "linux", "automation", "офіційна", "документація"]
+    },
+    /* CI/CD ТА АВТОМАТИЗАЦІЯ */
+    {
+        name: "Jenkins Documentation",
+        url: "https://www.jenkins.io/doc/",
+        status: "Офіційна документація",
+        purpose: "Документація Jenkins — найпопулярнішої CI/CD системи",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "jenkins", "cicd", "automation", "офіційна", "документація"]
+    },
+    {
+        name: "GitHub Actions Documentation",
+        url: "https://docs.github.com/en/actions",
+        status: "Офіційна документація",
+        purpose: "Автоматизація CI/CD у GitHub",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "github", "actions", "cicd", "офіційна", "документація"]
+    },
+    {
+        name: "GitLab CI/CD Documentation",
+        url: "https://docs.gitlab.com/ee/ci/",
+        status: "Офіційна документація",
+        purpose: "CI/CD пайплайни GitLab",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "gitlab", "cicd", "automation", "офіційна", "документація"]
+    },
+    /* КОНТЕЙНЕРИ ТА ОРКЕСТРАЦІЯ */
+    {
+        name: "Docker Documentation",
+        url: "https://docs.docker.com/",
+        status: "Офіційна документація",
+        purpose: "Документація Docker: контейнери, Dockerfile, Compose",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "docker", "containers", "official", "офіційна", "документація"]
+    },
+    {
+        name: "Kubernetes Documentation",
+        url: "https://kubernetes.io/docs/",
+        status: "Офіційна документація",
+        purpose: "Документація Kubernetes: деплой, сервіс‑меш, масштабування",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "kubernetes", "k8s", "orchestration", "офіційна", "документація"]
+    },
+    {
+        name: "Helm Documentation",
+        url: "https://helm.sh/docs/",
+        status: "Офіційна документація",
+        purpose: "Пакетний менеджер для Kubernetes",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "helm", "kubernetes", "charts", "офіційна", "документація"]
+    },
+    /* ІНФРАСТРУКТУРА ЯК КОД (IaC) */
+    {
+        name: "Terraform Documentation",
+        url: "https://developer.hashicorp.com/terraform/docs",
+        status: "Офіційна документація",
+        purpose: "Інфраструктура як код для будь‑яких хмар",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "terraform", "iac", "hashicorp", "офіційна", "документація"]
+    },
+    {
+        name: "Ansible Documentation",
+        url: "https://docs.ansible.com/",
+        status: "Офіційна документація",
+        purpose: "Автоматизація конфігурацій та розгортання",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "ansible", "automation", "iac", "офіційна", "документація"]
+    },
+    {
+        name: "Puppet Documentation",
+        url: "https://www.puppet.com/docs",
+        status: "Офіційна документація",
+        purpose: "Конфігураційний менеджмент для великих інфраструктур",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "puppet", "automation", "iac", "офіційна", "документація"]
+    },
+    /* SRE (Site Reliability Engineering) */
+    {
+        name: "Google SRE Book (Official)",
+        url: "https://sre.google/books/",
+        status: "Офіційна книга",
+        purpose: "Книга Google про SRE — основа сучасного DevOps",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "sre", "google", "book", "офіційна", "книга"]
+    },
+    {
+        name: "The DevOps Handbook",
+        url: "https://itrevolution.com/product/the-devops-handbook/",
+        status: "Авторитетна книга",
+        purpose: "Одна з найважливіших книг по DevOps",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "book", "handbook", "best practices", "навчання", "книга"]
+    },
+    /* СПОСТЕРЕЖЕННЯ, ЛОГІНГ, МОНІТОРИНГ */
+    {
+        name: "Prometheus Documentation",
+        url: "https://prometheus.io/docs/",
+        status: "Офіційна документація",
+        purpose: "Моніторинг та алертинг для DevOps",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "prometheus", "monitoring", "офіційна", "документація"]
+    },
+    {
+        name: "Grafana Documentation",
+        url: "https://grafana.com/docs/",
+        status: "Офіційна документація",
+        purpose: "Візуалізація метрик, дашборди",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "grafana", "monitoring", "visualization", "офіційна", "документація"]
+    },
+    /* УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ */
+    {
+        name: "Вікіпедія (укр) — DevOps",
+        url: "https://uk.wikipedia.org/wiki/DevOps",
+        status: "Україномовний ресурс",
+        purpose: "Огляд DevOps українською: історія, принципи, інструменти",
+        rating: "⭐⭐⭐⭐",
+        category: "devops",
+        tags: ["devops", "ukrainian", "encyclopedia", "overview", "verified", "вікіпедія", "українською"]
+    },
     /* ---------------- Web API ---------------- */
     {
         name: "MDN Web Docs — Web APIs",
