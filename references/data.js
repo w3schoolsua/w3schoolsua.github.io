@@ -393,24 +393,6 @@ const sourcesData = [
         tags: ["sql", "docs", "official", "підручник", "скл", "документація", "офіційний", "уроки"]
     },
     {
-        name: "W3Schools SQL Tutorial",
-        url: "https://www.w3schools.com/sql/",
-        category: "sql",
-        status: "Навчальний ресурс",
-        purpose: "Уроки, приклади, довідники",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "tutorials", "lessons", "w3schools", "підручник", "мова", "навчання", "уроки"]
-    },
-    {
-        name: "W3SchoolsUA — SQL",
-        url: "https://w3schoolsua.github.io/sql/index.html",
-        category: "sql",
-        status: "Навчальний ресурс",
-        purpose: "Уроки, приклади, довідники українською",
-        rating: "⭐⭐⭐⭐⭐",
-        tags: ["sql", "w3schools", "підручник", "мова", "навчання", "уроки", "для початківців", "українською", "github", "ua"]
-    },
-    {
         name: "SQLZoo",
         url: "https://sqlzoo.net/wiki/SQL_Tutorial",
         category: "sql",
@@ -472,6 +454,210 @@ const sourcesData = [
         purpose: "Збірка навчальних посібників, практичних завдань, шпаргалок по SQL",
         rating: "⭐⭐⭐⭐⭐",
         tags: ["sql", "dataquest", "courses", "навчання", "уроки", "посібники", "підручники", "курси", "практика", "tutorials"]
+    },
+    {
+        name: "W3Schools SQL Tutorial",
+        url: "https://www.w3schools.com/sql/",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Уроки, приклади, довідники",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "tutorials", "lessons", "w3schools", "підручник", "мова", "навчання", "уроки"]
+    },
+    {
+        name: "W3SchoolsUA — SQL Підручник",
+        url: "https://w3schoolsua.github.io/sql/index.html",
+        category: "sql",
+        status: "Навчальний ресурс",
+        purpose: "Уроки по SQL для початківців українською",
+        rating: "⭐⭐⭐⭐⭐",
+        tags: ["sql", "w3schools", "підручник", "мова", "навчання", "уроки", "для початківців", "українською", "github", "ua"]
+    },
+    /* ---------------- SQL (розширений) ---------------- */
+
+        /* ОФІЦІЙНІ СПЕЦИФІКАЦІЇ І СТАНДАРТИ */
+    {
+        name: "ISO/IEC 9075 SQL Standard (Official overview)",
+        url: "https://www.iso.org/standard/76583.html",
+        status: "Офіційний стандарт",
+        purpose: "Міжнародний стандарт SQL: формальні визначення мови та поведінки",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "iso", "standard", "official", "specification", "стандарт"]
+    },
+    {
+        name: "SQL:2016 — JSON, temporal, polymorphic tables (overview)",
+        url: "https://www.iso.org/committee/45342.html",
+        status: "Офіційний стандарт",
+        purpose: "Огляд актуальних частин стандарту SQL:2016",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "iso", "standard", "json", "temporal"]
+    },
+    /* ОФІЦІЙНІ ДОВІДНИКИ ПО СУБД */
+    {
+        name: "PostgreSQL Documentation",
+        url: "https://www.postgresql.org/docs/",
+        status: "Офіційна документація",
+        purpose: "Повна документація PostgreSQL: SQL‑синтаксис, типи, індекси, оптимізація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "postgresql", "docs", "relational", "open source", "довідники", "документація"]
+    },
+    {
+        name: "MySQL 8.4 Reference Manual",
+        url: "https://dev.mysql.com/doc/",
+        status: "Офіційна документація",
+        purpose: "Офіційний довідник MySQL: SQL‑синтаксис, реплікація, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "mysql", "docs", "reference", "oracle"]
+    },
+    {
+        name: "SQLite Documentation",
+        url: "https://www.sqlite.org/docs.html",
+        status: "Офіційна документація",
+        purpose: "Документація SQLite: SQL‑діалект, транзакції, файловий формат",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "sqlite", "embedded", "docs"]
+    },
+    {
+        name: "Microsoft SQL Server Documentation",
+        url: "https://learn.microsoft.com/en-us/sql/",
+        status: "Офіційна документація",
+        purpose: "Документація SQL Server та Azure SQL: T‑SQL, адміністрування, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "mssql", "t-sql", "microsoft", "azure", "docs"]
+    },
+    {
+        name: "Oracle Database SQL Language Reference",
+        url: "https://docs.oracle.com/en/database/",
+        status: "Офіційна документація",
+        purpose: "SQL‑довідник Oracle: синтаксис, PL/SQL інтеграція, оптимізація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "oracle", "plsql", "docs", "enterprise"]
+    },
+    {
+        name: "MariaDB Knowledge Base",
+        url: "https://mariadb.com/kb/en/",
+        status: "Офіційна документація",
+        purpose: "Документація MariaDB: SQL, рушії зберігання, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "mariadb", "docs", "open source"]
+    },
+    {
+        name: "IBM Db2 Documentation",
+        url: "https://www.ibm.com/docs/en/db2",
+        status: "Офіційна документація",
+        purpose: "Документація IBM Db2: SQL, оптимізатор, високі навантаження",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "db2", "ibm", "docs", "enterprise"]
+    },
+    /* ПРАКТИЧНІ ОФІЦІЙНІ ГАЙДИ І РЕСУРСИ */
+    {
+        name: "PostgreSQL Wiki — SQL Best Practices",
+        url: "https://wiki.postgresql.org/",
+        status: "Авторитетний ресурс",
+        purpose: "Практики, поради, налаштування та продуктивність SQL у PostgreSQL",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "postgresql", "best practices", "wiki"]
+    },
+    {
+        name: "SQL Style Guide (Simon Holywell)",
+        url: "https://www.sqlstyle.guide/",
+        status: "Авторитетний гайд",
+        purpose: "Стиль та найкращі практики написання SQL запитів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "style", "guide", "best practices"]
+    },
+    {
+        name: "Mode Analytics — SQL Tutorial",
+        url: "https://mode.com/sql-tutorial/",
+        status: "Авторитетний навчальний ресурс",
+        purpose: "Практичний курс SQL з акцентом на аналітику і реальні кейси",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "analytics", "tutorial", "learning"]
+    },
+    {
+        name: "SQLZoo",
+        url: "https://sqlzoo.net/",
+        status: "Авторитетний навчальний ресурс",
+        purpose: "Інтерактивні вправи SQL з живими базами даних",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "interactive", "tutorials", "practice"]
+    },
+    {
+        name: "SQLBolt",
+        url: "https://sqlbolt.com/",
+        status: "Популярний навчальний ресурс",
+        purpose: "Серія інтерактивних уроків і вправ по SQL",
+        rating: "⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "interactive", "learning", "tutorials"]
+    },
+    {
+        name: "W3Schools — SQL Tutorial",
+        url: "https://www.w3schools.com/sql/",
+        status: "Навчальний ресурс",
+        purpose: "Доступний вступ до SQL: SELECT, JOIN, агрегації, підзапити",
+        rating: "⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "tutorial", "beginner", "learning"]
+    },
+    /* ДОДАТКОВО: РОЗШИРЕНІ МОЖЛИВОСТІ ТА ІНСТРУМЕНТИ */
+    {
+        name: "PostgreSQL — Advanced Features",
+        url: "https://www.postgresql.org/docs/current/advanced-features.html",
+        status: "Офіційна документація",
+        purpose: "Розширені можливості: CTE, віконні функції, JSON/JSONB, партиціонування",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "postgresql", "advanced", "docs", "json", "window functions"]
+    },
+    {
+        name: "SQL Server — Transact‑SQL (T‑SQL) Reference",
+        url: "https://learn.microsoft.com/en-us/sql/t-sql/language-reference",
+        status: "Офіційна документація",
+        purpose: "Повний довідник T‑SQL: синтаксис, вбудовані функції, керування даними",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "t-sql", "microsoft", "reference", "docs"]
+    },
+    {
+        name: "Oracle — SQL Language Reference",
+        url: "https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/index.html",
+        status: "Офіційна документація",
+        purpose: "Розширений SQL у Oracle: аналітичні функції, індекси, партиції",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "oracle", "analytic functions", "docs"]
+    },
+    {
+        name: "SQLite — SQL Syntax",
+        url: "https://www.sqlite.org/lang.html",
+        status: "Офіційна документація",
+        purpose: "Повний опис SQL‑діалекту SQLite",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "sqlite", "syntax", "docs"]
+    },
+    {
+        name: "Вікіпедія (укр) — SQL",
+        url: "https://uk.wikipedia.org/wiki/SQL",
+        status: "Україномовний ресурс",
+        purpose: "Огляд мови SQL українською: історія, стандарт, базові конструкції",
+        rating: "⭐⭐⭐⭐",
+        category: "sql",
+        tags: ["sql", "ukrainian", "encyclopedia", "overview", "verified", "wiki", "вікіпедія", "українською"]
     },
     /* ---------------- PHP ---------------- */
     {
@@ -1778,6 +1964,305 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐⭐",
         category: "rust",
         tags: ["rust", "programming", "w3schools", "learning", "tutorial", "for beginners", "програмування", "навчання", "уроки", "українською"]
+    },
+    /* ---------------- SWIFT LANGUAGE ---------------- */
+    {
+        name: "Swift.org (Official)",
+        url: "https://swift.org/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Swift: документація, релізи, інструменти, стандарти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "official", "docs", "language", "homepage", "офіційний", "документація", "стандарти"]
+    },
+    {
+        name: "The Swift Programming Language (Swift Book)",
+        url: "https://docs.swift.org/swift-book/",
+        status: "Офіційна книга",
+        purpose: "Головна офіційна книга Swift: синтаксис, типи, протоколи, приклади",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "book", "official", "learning", "beginner", "офіційна", "книга", "навчання"]
+    },
+    {
+        name: "Swift Language Guide",
+        url: "https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html",
+        status: "Офіційний гайд",
+        purpose: "Офіційний гайд по мові Swift: основи, синтаксис, функції",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "guide", "language", "official", "гайд", "офіційний"]
+    },
+    {
+        name: "Swift Standard Library Documentation",
+        url: "https://developer.apple.com/documentation/swift",
+        status: "Офіційна документація",
+        purpose: "Документація стандартної бібліотеки Swift",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "stdlib", "docs", "official", "офіційна", "документація"]
+    },
+    {
+        name: "Swift API Reference — Apple Developer",
+        url: "https://developer.apple.com/documentation/",
+        status: "Офіційна документація",
+        purpose: "Офіційні API Apple: Swift, SwiftUI, UIKit, Foundation",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "apple", "api", "docs", "official", "офіційна", "документація"]
+    },
+    {
+        name: "Swift Evolution (Official)",
+        url: "https://github.com/apple/swift-evolution",
+        status: "Офіційний репозиторій",
+        purpose: "Пропозиції щодо розвитку Swift (SE)",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "evolution", "language", "official", "офіційний", "репозиторій"]
+    },
+    {
+        name: "Swift Blog (Official)",
+        url: "https://swift.org/blog/",
+        status: "Офіційний блог",
+        purpose: "Офіційні новини Swift: релізи, RFC, зміни в мові",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "blog", "official", "news", "офіційні", "новини"]
+    },
+    {
+        name: "Swift Forums (Official)",
+        url: "https://forums.swift.org/",
+        status: "Офіційний форум",
+        purpose: "Офіційна спільнота Swift: обговорення, RFC, підтримка",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "forums", "community", "official", "форму", "офіційний"]
+    },
+    {
+        name: "Swift Playgrounds (Apple)",
+        url: "https://www.apple.com/swift/playgrounds/",
+        status: "Офіційний навчальний ресурс",
+        purpose: "Інтерактивне навчання Swift для початківців на iPad",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "playgrounds", "learning", "apple", "beginner", "для початківців", "навчання"]
+    },
+    {
+        name: "SwiftUI Documentation",
+        url: "https://developer.apple.com/xcode/swiftui/",
+        status: "Офіційна документація",
+        purpose: "Документація SwiftUI — сучасний UI‑фреймворк для iOS/macOS",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "swiftui", "ui", "apple", "docs", "документація", "офіційна", "фреймворк"]
+    },
+    {
+        name: "Vapor Web Framework",
+        url: "https://docs.vapor.codes/",
+        status: "Популярний фреймворк",
+        purpose: "Найпопулярніший веб‑фреймворк для Swift",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "vapor", "web", "framework", "фреймворк"]
+    },
+    {
+        name: "Kitura Web Framework",
+        url: "https://www.kitura.io/",
+        status: "Популярний фреймворк",
+        purpose: "Веб‑фреймворк Swift від IBM",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "kitura", "web", "framework","фреймворк"]
+    },
+    {
+        name: "Perfect Web Framework",
+        url: "https://perfect.org/",
+        status: "Популярний фреймворк",
+        purpose: "Фреймворк Swift для серверної розробки",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "perfect", "web", "framework", "фреймворк"]
+    },
+    {
+        name: "Swift Package Manager (SPM)",
+        url: "https://swift.org/package-manager/",
+        status: "Офіційний інструмент",
+        purpose: "Менеджер пакетів Swift, інтегрований у Swift",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "spm", "packages", "official", "офіційний", "менеджер", "пакетів"]
+    },
+    {
+        name: "Swift Style Guide — Ray Wenderlich",
+        url: "https://github.com/raywenderlich/swift-style-guide",
+        status: "Авторитетний гайд",
+        purpose: "Популярний гайд по стилю коду Swift",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "style", "guide", "ray wenderlich", "гайд", "стиль"]
+    },
+    {
+        name: "Hacking with Swift",
+        url: "https://www.hackingwithswift.com/",
+        status: "Авторитетний ресурс",
+        purpose: "Велика база статей, прикладів і курсів по Swift",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "tutorials", "learning", "examples", "курс", "навчання"]
+    },
+    {
+        name: "Swift Playgrounds Guide — Apple Developer",
+        url: "https://developer.apple.com/swift/resources/",
+        status: "Офіційний ресурс",
+        purpose: "Ресурси для навчання Swift від Apple Developer",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "apple", "resources", "learning", "офіційний", "навчання"]
+    },
+    {
+        name: "The Swift Programming Language - GitHub",
+        url: "https://github.com/swiftlang",
+        status: "Офіційний ресурс",
+        purpose: "Репозиторій Swift на GitHub",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "apple", "resources", "github", "офіційний", "репозиторій"]
+    },
+    {
+        name: "W3Schools.com — Swift Tutorial",
+        url: "https://www.w3schools.com/swift/",
+        status: "Навчальний ресурс",
+        purpose: "Уроки для початківців по Swift",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "apple", "w3schools", "learning", "уроки", "навчання"]
+    },
+    {
+        name: "W3SchoolsUA — Swift Підручник",
+        url: "https://w3schoolsua.github.io/swift/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Уроки для початківців по Swift українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "swift",
+        tags: ["swift", "apple", "w3schoolsua", "learning", "уроки", "навчання", "українською"]
+    },
+    /* ---------------- TYPESCRIPT LANGUAGE ---------------- */
+    {
+        name: "TypeScript Official Website",
+        url: "https://www.typescriptlang.org/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал TypeScript: документація, релізи, інструменти, навчання",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "official", "docs", "language", "homepage"]
+    },
+    {
+        name: "TypeScript Handbook (Official)",
+        url: "https://www.typescriptlang.org/docs/handbook/intro.html",
+        status: "Офіційна документація",
+        purpose: "Головний офіційний довідник TypeScript: синтаксис, типи, приклади",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "handbook", "docs", "official", "reference"]
+    },
+    {
+        name: "TypeScript Language Specification",
+        url: "https://github.com/microsoft/TypeScript/blob/main/doc/spec.md",
+        status: "Офіційна специфікація",
+        purpose: "Формальна специфікація мови TypeScript",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "specification", "standard", "official"]
+    },
+    {
+        name: "TypeScript Release Notes",
+        url: "https://www.typescriptlang.org/docs/whats-new/",
+        status: "Офіційний ресурс",
+        purpose: "Офіційні новини та зміни у версіях TypeScript",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "releases", "news", "official"]
+    },
+    {
+        name: "DefinitelyTyped — TypeScript Type Definitions",
+        url: "https://github.com/DefinitelyTyped/DefinitelyTyped",
+        status: "Офіційний репозиторій",
+        purpose: "Головний репозиторій типів для сторонніх бібліотек",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "types", "repository", "official"]
+    },
+    {
+        name: "TypeScript Deep Dive (Basarat Ali Syed)",
+        url: "https://basarat.gitbook.io/typescript/",
+        status: "Авторитетна книга",
+        purpose: "Найпопулярніший безкоштовний гайд по TypeScript",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "book", "guide", "learning"]
+    },
+    {
+        name: "TypeScript GitHub Repository",
+        url: "https://github.com/microsoft/TypeScript",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код TypeScript, issues, RFC",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "github", "repository", "official"]
+    },
+    {
+        name: "TypeScript Blog (Official)",
+        url: "https://devblogs.microsoft.com/typescript/",
+        status: "Офіційний блог",
+        purpose: "Офіційні статті Microsoft про TypeScript",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "blog", "official", "news"]
+    },
+    {
+        name: "TypeScript Tutorial — W3Schools",
+        url: "https://www.w3schools.com/typescript/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання TypeScript для початківців",
+        rating: "⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "tutorial", "learning", "beginner"]
+    },
+    {
+        name: "TypeScript Tutorial — TutorialsPoint",
+        url: "https://www.tutorialspoint.com/typescript/",
+        status: "Навчальний ресурс",
+        purpose: "Базові уроки по TypeScript з прикладами",
+        rating: "⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "tutorials", "examples", "learning"]
+    },
+    {
+        name: "TypeScript — GeeksForGeeks",
+        url: "https://www.geeksforgeeks.org/introduction-to-typescript/",
+        status: "Навчальний ресурс",
+        purpose: "Велика база статей та прикладів по TypeScript",
+        rating: "⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "tutorials", "examples", "learning"]
+    },
+    {
+        name: "W3Schools.com — TypeScript Tutorial",
+        url: "https://www.w3schools.com/typescript/",
+        status: "Навчальний ресурс",
+        purpose: "Уроки для початківців по TypeScript",
+        rating: "⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "w3schools", "lessond", "learning", "уроки", "навчання", "для початківців"]
+    },
+    {
+        name: "W3SchoolsUA — TypeScript Підручник",
+        url: "https://w3schoolsua.github.io/typescript/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Уроки для початківців по TypeScript українською",
+        rating: "⭐⭐⭐⭐",
+        category: "typescript",
+        tags: ["typescript", "w3schools", "lessond", "learning", "уроки", "навчання", "для початківців", "українською"]
     },
     /* ---------------- Web API ---------------- */
     {
