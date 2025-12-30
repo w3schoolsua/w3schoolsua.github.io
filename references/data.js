@@ -2577,6 +2577,183 @@ const sourcesData = [
         category: "frontend",
         tags: ["jquery", "ukrainian", "encyclopedia", "verified", "вікіпедія"]
     },
+    /* ---------------- BACKEND: DJANGO ---------------- */
+    {
+        name: "Django — Official Website",
+        url: "https://www.djangoproject.com/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Django: документація, релізи, новини",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["django", "official", "docs", "python", "framework", "офіційна", "документація"]
+    },
+    {
+        name: "Django Documentation",
+        url: "https://docs.djangoproject.com/en/stable/",
+        status: "Офіційна документація",
+        purpose: "Повний офіційний довідник Django: ORM, views, templates, security",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["django", "docs", "official", "reference", "офіційна", "документація"]
+    },
+    {
+        name: "Django GitHub Repository",
+        url: "https://github.com/django/django",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код Django, issues, RFC",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["django", "github", "repository", "офіційний", "репозиторій"]
+    },
+    /* ---------------- BACKEND: SPRING ---------------- */
+    {
+        name: "Spring Framework — Official Website",
+        url: "https://spring.io/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Spring: документація, проєкти, гіди",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["spring", "java", "official", "framework"]
+    },
+    {
+        name: "Spring Framework Documentation",
+        url: "https://docs.spring.io/spring-framework/docs/current/reference/html/",
+        status: "Офіційна документація",
+        purpose: "Документація Spring Core: DI, MVC, Beans, Context",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["spring", "docs", "official", "reference"]
+    },
+    {
+        name: "Spring Boot Documentation",
+        url: "https://docs.spring.io/spring-boot/docs/current/reference/html/",
+        status: "Офіційна документація",
+        purpose: "Документація Spring Boot: автоконфігурація, REST, Actuator",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["spring boot", "java", "docs", "official"]
+    },
+    {
+        name: "Spring GitHub Repository",
+        url: "https://github.com/spring-projects/spring-framework",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код Spring Framework",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["spring", "github", "repository"]
+    },
+    /* ---------------- BACKEND: LARAVEL ---------------- */
+    {
+        name: "Laravel — Official Website",
+        url: "https://laravel.com/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Laravel: документація, новини, екосистема",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["laravel", "php", "official", "framework"]
+    },
+    {
+        name: "Laravel Documentation",
+        url: "https://laravel.com/docs",
+        status: "Офіційна документація",
+        purpose: "Повний довідник Laravel: routing, Eloquent, Blade, queues",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["laravel", "docs", "official", "reference"]
+    },
+    {
+        name: "Laravel GitHub Repository",
+        url: "https://github.com/laravel/laravel",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код Laravel",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["laravel", "github", "repository"]
+    },
+    /* ---------------- BACKEND: EXPRESS ---------------- */
+    {
+        name: "Express.js — Official Website",
+        url: "https://expressjs.com/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Express: документація, API, гіди",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["express", "nodejs", "official", "framework"]
+    },
+    {
+        name: "Express.js GitHub Repository",
+        url: "https://github.com/expressjs/express",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код Express.js",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["express", "github", "repository"]
+    },
+    /* ---------------- ДОДАТКОВІ АВТОРИТЕТНІ РЕСУРСИ ---------------- */
+    {
+        name: "MDN Web Docs — Backend",
+        url: "https://developer.mozilla.org/en-US/docs/Learn/Server-side",
+        status: "Авторитетна документація",
+        purpose: "Огляд серверних технологій: Python, Node.js, бази даних",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["backend", "mdn", "docs", "server"]
+    },
+    {
+        name: "freeCodeCamp — Backend Development",
+        url: "https://www.freecodecamp.org/learn/",
+        status: "Популярний навчальний ресурс",
+        purpose: "Безкоштовні курси з Node.js, APIs, Python",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["backend", "freecodecamp", "learning", "courses"]
+    },
+    {
+        name: "W3Schools — Backend Tutorials",
+        url: "https://www.w3schools.com/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання серверних технологій",
+        rating: "⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["backend", "tutorial", "learning"]
+    },
+    /* ---------------- УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ ---------------- */
+    {
+        name: "Вікіпедія (укр) — Django",
+        url: "https://uk.wikipedia.org/wiki/Django",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Django українською",
+        rating: "⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["django", "ukrainian", "encyclopedia", "verified"]
+    },
+    {
+        name: "Вікіпедія (укр) — Spring Framework",
+        url: "https://uk.wikipedia.org/wiki/Spring_Framework",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Spring українською",
+        rating: "⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["spring", "ukrainian", "encyclopedia", "verified"]
+    },
+    {
+        name: "Вікіпедія (укр) — Laravel",
+        url: "https://uk.wikipedia.org/wiki/Laravel",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Laravel українською",
+        rating: "⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["laravel", "ukrainian", "encyclopedia", "verified"]
+    },
+    {
+        name: "Вікіпедія (укр) — Express.js",
+        url: "https://uk.wikipedia.org/wiki/Express.js",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Express українською",
+        rating: "⭐⭐⭐⭐",
+        category: "backend",
+        tags: ["express", "ukrainian", "encyclopedia", "verified"]
+    },
     /* ---------------- DEVOPS ---------------- */
     /* ОФІЦІЙНІ ДЖЕРЕЛА ТА СТАНДАРТИ */
     {

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <title id="pageTitle">Рекомендовані джерела по Backend — W3SchoolsUA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta id="metaDescription" name="description" content="Найкращі та найавторитетніші джерела для вивчення Backend в мережі. Офіційні стандарти, документація, навчальні ресурси. W3Schools українською">
+  <meta id="metaKeywords" name="keywords" content="backend, мережа, уроки, підручники, інструкції, онлайн, для початківців, w3schools українською">
+  <link rel="stylesheet" href="../w3css/4/w3.css">
+  <link rel="stylesheet" href="../lib/w3-colors-flat.css">
+  <link rel="stylesheet" href="../styles/references_styles.css">
+  <link rel="canonical" href="https://w3schoolsua.github.io/references/backend.html">
+  <script src="../scripts/theme.js"></script>
+  <script src="../references/data.js"></script>
+  <script src="../scripts/jsonld-generator.min.js?v=1.2"></script>
+  <script src="../references/references.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Рекомендовані джерела по Backend",
+      "description": "Авторитетні джерела для вивчення Backend в мережі. Документація.",
+      "url": "https://w3schoolsua.github.io/references/backend.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "W3SchoolsUA",
+        "url": "https://w3schoolsua.github.io/"
+      }
+    }
+  </script>
+</head>
+
+<body onload="initCategoryPage()">
+<!-- HEADER -->
+<div class="w3-flat-midnight-blue w3-large sticky-menu" style="padding:0;">
+  <div class="w3-bar" style="display:flex; align-items:center; position:relative;">
+    <a href="../" class="w3-bar-item w3-button w3-text-white"><b>W3SchoolsUA</b></a>
+    <div class="w3-hide-small">
+      <a href="../html/index.html" class="w3-bar-item w3-button w3-text-white">HTML</a>
+      <a href="../css/index.html" class="w3-bar-item w3-button w3-text-white">CSS</a>
+      <a href="../js/index.html" class="w3-bar-item w3-button w3-text-white">JavaScript</a>
+    </div>
+    <!-- КНОПКА ДЛЯ ДРОПДАУНУ -->
+    <button id="refsBtn" class="w3-button w3-text-white dropdown-trigger" onclick="toggleDropdown()">Рекомендовані джерела <span id="arrow">▼</span></button>
+    <button class="w3-bar-item w3-button w3-right w3-text-white" onclick="toggleThemeIcon()"><span id="themeIcon">🌙</span></button>
+  </div>
+</div>
+<!-- ДРОПДАУН ПОЗА w3-bar -->
+<div id="dropdownMenu" class="dropdown-menu w3-card-4"></div>
+
+<!--BREADCRUMBS-->
+<div class="w3-container w3-padding-16">
+  <div class="w3-small">
+    <a href="../">Головна</a> &gt;
+    <a href="../references/index.html">Рекомендовані джерела</a> &gt;
+    <span id="breadcrumbName"></span>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="w3-content" style="max-width:1200px;">
+  <h2 class="w3-center">Рекомендовані джерела по Backend</h2>
+  <p class="w3-center w3-large">Офіційні стандарти, документація, навчальні ресурси</p>
+  <p class="w3-center w3-large">(Django, Spring, Laravel, Express)</p>
+  <h2 class="w3-center" id="categoryTitle"></h2>
+  <p class="w3-center w3-large" id="categorySubtitle"></p>
+  <!-- Пошук -->
+  <div class="w3-margin-top w3-margin-bottom">
+    <label for="tableSearch"><b>Пошук по таблиці:</b></label>
+    <input id="tableSearch"
+           class="w3-input w3-border"
+           type="text"
+           placeholder="Введіть текст для фільтрації..."
+           onkeyup="filterCategoryTable('sourcesTable', 'tableSearch')">
+  </div>
+
+  <!-- Таблиця -->
+  <div class="table-container">
+    <table id="sourcesTable" class="w3-table-all w3-hoverable w3-margin-top">
+      <!-- Заповнюється JS через renderCategoryTable() -->
+    </table>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="w3-center w3-flat-midnight-blue w3-padding-32 w3-text-white" style="margin-top:40px;">
+  <p>© <span id="current-year"></span> W3SchoolsUA — Українська навчальна платформа</p>
+</footer>
+
+<script src="../scripts/references-scripts.js"></script>
+<script src="../scripts/category_tables.js"></script>
+</body>
+</html>
