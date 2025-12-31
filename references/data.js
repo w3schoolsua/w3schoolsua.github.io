@@ -93,15 +93,6 @@ const sourcesData = [
         tags: ["devdocs", "документація", "html", "для початківців", "mdn", "агрегатор", "уроки", "безплатний", "офлайн", "навчання"]
     },
     {
-        name: "W3SchoolsUA — HTML",
-        url: "https://w3schoolsua.github.io/html/index.html",
-        status: "Навчальний ресурс українською",
-        purpose: "Приклади та пояснення HTML",
-        rating: "⭐⭐⭐⭐⭐",
-        category: "html",
-        tags: ["w3schools", "підручник", "html", "для початківців", "українською", "web", "уроки", "безплатні", "приклади", "задачі"]
-    },
-    {
         name: "W3Schools.com — HTML",
         url: "https://w3schools.com/html/",
         status: "Навчальний ресурс",
@@ -109,6 +100,15 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐⭐",
         category: "html",
         tags: ["w3schools", "підручник", "html", "для початківців", "оригінал", "web", "уроки", "безплатні", "приклади", "рішення"]
+    },
+    {
+        name: "W3SchoolsUA — HTML",
+        url: "https://w3schoolsua.github.io/html/index.html",
+        status: "Навчальний ресурс українською",
+        purpose: "Приклади та пояснення HTML",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "html",
+        tags: ["w3schools", "підручник", "html", "для початківців", "українською", "web", "уроки", "безплатні", "приклади", "задачі"]
     },
     {
         name: "itProger — Уроки HTML5",
@@ -173,6 +173,24 @@ const sourcesData = [
         category: "html",
         tags: ["w3c", "валідатор", "html", "validator", "standard", "web", "стандарти", "розмітка", "перевірка", "теги"]
     },
+    {
+        name: "GeeksForGeeks — HTML/CSS/JS",
+        url: "https://www.geeksforgeeks.org/javascript/learn-web-development-basics-with-html-css-and-javascript/",
+        status: "Навчальний ресурс",
+        purpose: "Розширені уроки HTML/CSS/JS",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "html",
+        tags: ["html", "css", "javascript", "learning"]
+    },
+    {
+        name: "Вікіпедія (укр) — HTML",
+        url: "https://uk.wikipedia.org/wiki/HTML",
+        status: "Україномовний ресурс",
+        purpose: "Огляд HTML українською",
+        rating: "⭐⭐⭐⭐",
+        category: "html",
+        tags: ["html", "ukrainian", "encyclopedia", "wiki"]
+    },
     /* ---------------- CSS ---------------- */
     {
         name: "MDN Web Docs — CSS",
@@ -185,12 +203,30 @@ const sourcesData = [
     },
     {
         name: "W3C CSS Specifications",
-        url: "https://www.w3.org/Style/CSS/",
+        url: "https://www.w3.org/Style/CSS",
         status: "Офіційний сайт",
         purpose: "Офіційні специфікації CSS",
         rating: "⭐⭐⭐⭐",
         category: "css",
         tags: ["w3c", "docs", "css", "spec", "standard", "code", "стандарти", "style", "oficial", "стилі"]
+    },
+    {
+        name: "W3Schools.com — CSS Tutorial",
+        url: "https://www.w3schools.com/css/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання CSS",
+        rating: "⭐⭐⭐⭐",
+        category: "css",
+        tags: ["css", "w3schools", "tutorial", "learning"]
+    },
+    {
+        name: "W3SchoolsUA — CSS Підручник",
+        url: "https://w3schoolsua.github.io/css/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Уроки по CSS для початківців українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "css",
+        tags: ["w3schools", "css", "сайт", "уроки", "підручник", "ua", "для початківців", "українською", "tutorial", "стилі"]
     },
     {
         name: "Can I Use — CSS",
@@ -202,15 +238,6 @@ const sourcesData = [
         tags: ["can", "use", "css", "перевірка", "можливості", "браузера", "стандарти", "підтримка", "функції", "стилі"]
     },
     {
-        name: "W3SchoolsUA — CSS",
-        url: "https://w3schoolsua.github.io/css/index.html",
-        status: "Навчальний ресурс",
-        purpose: "Уроки по CSS, приклади та пояснення",
-        rating: "⭐⭐⭐⭐⭐",
-        category: "css",
-        tags: ["w3schools", "css", "сайт", "уроки", "підручник", "ua", "для початківців", "українською", "tutorial", "стилі"]
-    },
-    {
         name: "W3C CSS Validator",
         url: "https://jigsaw.w3.org/css-validator/",
         status: "Офіційний валідатор",
@@ -218,6 +245,15 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐",
         category: "css",
         tags: ["w3c", "css", "validator", "перевірка", "валідність", "каскадні", "таблиці", "стилі", "помилки", "офіційний"]
+    },
+    {
+        name: "Вікіпедія (укр) — CSS",
+        url: "https://uk.wikipedia.org/wiki/CSS",
+        status: "Україномовний ресурс",
+        purpose: "Огляд CSS українською",
+        rating: "⭐⭐⭐⭐",
+        category: "css",
+        tags: ["css", "ukrainian", "encyclopedia", "вікіпедія"]
     },
     /* ---------------- JavaScript ---------------- */
     {
@@ -338,6 +374,15 @@ const sourcesData = [
         tags: ["w3schools", "оригінал", "для початківців", "уроки", "підручник", "навчання", "приклади", "js", "tutorial", "javascript"]
     },
     {
+        name: "W3Schools — JavaScript DOM Reference",
+        url: "https://www.w3schools.com/jsref/default.asp",
+        status: "Довідник",
+        purpose: "Повний довідник DOM API",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "js",
+        tags: ["javascript", "w3schools", "dom", "reference", "довідник"]
+    },
+    {
         name: "W3SchoolsUA — JavaScript",
         url: "https://w3schoolsua.github.io/js/index.html",
         status: "Навчальний ресурс",
@@ -381,6 +426,15 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐",
         category: "js",
         tags: ["js", "frontend", "free", "practice", "projects", "навчання"]
+    },
+    {
+        name: "Вікіпедія (укр) — JavaScript",
+        url: "https://uk.wikipedia.org/wiki/JavaScript",
+        status: "Україномовний ресурс",
+        purpose: "Огляд JavaScript українською",
+        rating: "⭐⭐⭐⭐",
+        category: "js",
+        tags: ["javascript", "ukrainian", "encyclopedia", "wiki"]
     },
     /* ---------------- SQL ---------------- */
     {
