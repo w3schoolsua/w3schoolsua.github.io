@@ -3134,6 +3134,192 @@ const sourcesData = [
         category: "ai",
         tags: ["ml", "ukrainian", "encyclopedia", "verified"]
     },
+    /* ---------------- DATABASES: POSTGRESQL ---------------- */
+    {
+        name: "PostgreSQL — Official Website",
+        url: "https://www.postgresql.org/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал PostgreSQL: документація, завантаження, новини",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["postgresql", "official", "database", "docs"]
+    },
+    {
+        name: "PostgreSQL Documentation",
+        url: "https://www.postgresql.org/docs/",
+        status: "Офіційна документація",
+        purpose: "Повний довідник PostgreSQL: SQL, конфігурація, оптимізація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["postgresql", "docs", "official", "reference"]
+    },
+    {
+        name: "PostgreSQL GitHub Repository",
+        url: "https://github.com/postgres/postgres",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код PostgreSQL",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["postgresql", "github", "repository"]
+    },
+    /* ---------------- DATABASES: MYSQL ---------------- */
+    {
+        name: "MySQL — Official Website",
+        url: "https://www.mysql.com/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал MySQL: продукти, документація, завантаження",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["mysql", "official", "database"]
+    },
+    {
+        name: "MySQL Documentation",
+        url: "https://dev.mysql.com/doc/",
+        status: "Офіційна документація",
+        purpose: "Повний довідник MySQL: SQL, адміністрування, реплікація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["mysql", "docs", "official", "reference"]
+    },
+    {
+        name: "MySQL GitHub Repository",
+        url: "https://github.com/mysql/mysql-server",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код MySQL Server",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["mysql", "github", "repository"]
+    },
+    /* ---------------- DATABASES: MONGODB ---------------- */
+    {
+        name: "MongoDB — Official Website",
+        url: "https://www.mongodb.com/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал MongoDB: продукти, документація, хмарні сервіси",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["mongodb", "official", "database", "nosql"]
+    },
+    {
+        name: "MongoDB Documentation",
+        url: "https://www.mongodb.com/docs/",
+        status: "Офіційна документація",
+        purpose: "Документація MongoDB: CRUD, індекси, агрегації",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["mongodb", "docs", "official", "reference"]
+    },
+    {
+        name: "MongoDB GitHub Repository",
+        url: "https://github.com/mongodb/mongo",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код MongoDB",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["mongodb", "github", "repository"]
+    },
+    /* ---------------- DATABASES: REDIS ---------------- */
+    {
+        name: "Redis — Official Website",
+        url: "https://redis.io/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Redis: документація, модулі, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["redis", "official", "database", "in-memory"]
+    },
+    {
+        name: "Redis Documentation",
+        url: "https://redis.io/docs/",
+        status: "Офіційна документація",
+        purpose: "Документація Redis: команди, конфігурація, кластери",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["redis", "docs", "official", "reference"]
+    },
+    {
+        name: "Redis GitHub Repository",
+        url: "https://github.com/redis/redis",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код Redis",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["redis", "github", "repository"]
+    },
+    /* ---------------- ДОДАТКОВІ АВТОРИТЕТНІ РЕСУРСИ ---------------- */
+    {
+        name: "MDN Web Docs — Databases",
+        url: "https://developer.mozilla.org/en-US/docs/Glossary/Database",
+        status: "Авторитетна документація",
+        purpose: "Огляд баз даних, SQL, NoSQL",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["database", "mdn", "docs"]
+    },
+    {
+        name: "W3Schools — SQL Tutorial",
+        url: "https://www.w3schools.com/sql/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання SQL",
+        rating: "⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["sql", "tutorial", "learning"]
+    },
+    {
+        name: "W3Schools — MongoDB Tutorial",
+        url: "https://www.w3schools.com/mongodb/",
+        status: "Навчальний ресурс",
+        purpose: "Основи MongoDB",
+        rating: "⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["mongodb", "tutorial", "learning"]
+    },
+    {
+        name: "W3SchoolsUA — MongoDB Підручник",
+        url: "https://w3schoolsua.github.io/mongodb/index.html",
+        status: "Україномовний ресурс",
+        purpose: "Уроки MongoDB для початківців українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["підручник", "w3schoolsua", "mongodb", "ukrainian", "tutorial", "уроки", "для початківців", "українською"]
+    },
+    /* ---------------- УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ ---------------- */
+    {
+        name: "Вікіпедія (укр) — PostgreSQL",
+        url: "https://uk.wikipedia.org/wiki/PostgreSQL",
+        status: "Україномовний ресурс",
+        purpose: "Огляд PostgreSQL українською",
+        rating: "⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["postgresql", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — MySQL",
+        url: "https://uk.wikipedia.org/wiki/MySQL",
+        status: "Україномовний ресурс",
+        purpose: "Огляд MySQL українською",
+        rating: "⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["mysql", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — MongoDB",
+        url: "https://uk.wikipedia.org/wiki/MongoDB",
+        status: "Україномовний ресурс",
+        purpose: "Огляд MongoDB українською",
+        rating: "⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["mongodb", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — Redis",
+        url: "https://uk.wikipedia.org/wiki/Redis",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Redis українською",
+        rating: "⭐⭐⭐⭐",
+        category: "databases",
+        tags: ["redis", "ukrainian", "encyclopedia"]
+    },
     /* ---------------- DEVOPS ---------------- */
     /* ОФІЦІЙНІ ДЖЕРЕЛА ТА СТАНДАРТИ */
     {
