@@ -3713,6 +3713,145 @@ const sourcesData = [
         category: "api",
         tags: ["grpc", "ukrainian", "encyclopedia"]
     },
+    /* ---------------- BIG DATA — ОФІЦІЙНІ ДЖЕРЕЛА ---------------- */
+    {
+        name: "Oracle Big Data Documentation",
+        url: "https://docs.oracle.com/en/bigdata/",
+        status: "Офіційна документація",
+        purpose: "Офіційні матеріали Oracle з Big Data, Hadoop, Kafka, NoSQL",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["big data", "oracle", "official", "docs"]
+    },
+    {
+        name: "Microsoft Azure — Data Engineering Learning Path",
+        url: "https://learn.microsoft.com/en-us/training/paths/get-started-data-engineering/",
+        status: "Офіційна документація",
+        purpose: "Офіційний курс Microsoft з Data Engineering",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["azure", "data engineering", "official", "learning"]
+    },
+    {
+        name: "Databricks — Big Book of Data Engineering",
+        url: "https://www.databricks.com/resources/ebook/big-book-of-data-engineering",
+        status: "Офіційний ресурс",
+        purpose: "Найавторитетніший гайд з Data Engineering",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["databricks", "data engineering", "official", "ebook"]
+    },
+    /* ---------------- BIG DATA — ТЕХНОЛОГІЇ ---------------- */
+    {
+        name: "Apache Hadoop — Official Documentation",
+        url: "https://hadoop.apache.org/docs/",
+        status: "Офіційна документація",
+        purpose: "Документація Hadoop: HDFS, MapReduce, YARN",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["hadoop", "apache", "big data", "docs"]
+    },
+    {
+        name: "Apache Spark — Official Documentation",
+        url: "https://spark.apache.org/docs/latest/",
+        status: "Офіційна документація",
+        purpose: "Документація Spark: SQL, MLlib, Streaming",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["spark", "apache", "big data", "docs"]
+    },
+    {
+        name: "Apache Kafka — Official Documentation",
+        url: "https://kafka.apache.org/documentation/",
+        status: "Офіційна документація",
+        purpose: "Документація Kafka: streaming, messaging, connectors",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["kafka", "apache", "streaming", "docs"]
+    },
+    {
+        name: "Apache Airflow — Official Documentation",
+        url: "https://airflow.apache.org/docs/",
+        status: "Офіційна документація",
+        purpose: "Оркестрація пайплайнів даних",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["airflow", "apache", "orchestration", "docs"]
+    },
+    {
+        name: "Apache Flink — Official Documentation",
+        url: "https://nightlies.apache.org/flink/flink-docs-master/",
+        status: "Офіційна документація",
+        purpose: "Стрімінгова обробка даних у реальному часі",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["flink", "apache", "streaming", "docs"]
+    },
+    /* ---------------- DATA ENGINEERING — ПРАКТИКА ---------------- */
+    {
+        name: "GitHub — Big Data Engineering Roadmap",
+        url: "https://github.com/theengineerguy-yt/Big-Data-Engineer-Roadmap-with-Free-Resources",
+        status: "Авторитетний ресурс",
+        purpose: "Роадмап Data Engineer з безкоштовними ресурсами",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["data engineering", "roadmap", "github"]
+    },
+    {
+        name: "Informatica — What is Big Data Engineering?",
+        url: "https://www.informatica.com/resources/articles/what-is-big-data-engineering.html.html",
+        status: "Аналітичний ресурс",
+        purpose: "Огляд Big Data Engineering та ключових концепцій",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["big data", "data engineering", "analysis"]
+    },
+    /* ---------------- НАВЧАЛЬНІ РЕСУРСИ ---------------- */
+    {
+        name: "W3Schools — SQL Tutorial",
+        url: "https://www.w3schools.com/sql/",
+        status: "Навчальний ресурс",
+        purpose: "Основи SQL — ключова навичка Data Engineer",
+        rating: "⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["sql", "tutorial", "learning"]
+    },
+    {
+        name: "W3Schools — Python for Data",
+        url: "https://www.w3schools.com/python/python_ml_getting_started.asp",
+        status: "Навчальний ресурс",
+        purpose: "Python для ML та обробки даних",
+        rating: "⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["python", "data", "tutorial"]
+    },
+    {
+        name: "W3SchoolsUA — SQL, Python, Data (Українською)",
+        url: "https://w3schoolsua.github.io/python/index.html",
+        status: "Україномовний ресурс",
+        purpose: "Українські уроки SQL, Python, Data Science",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["w3schoolsua", "sql", "python", "ukrainian", "tutorial", "українською"]
+    },
+    {
+        name: "Вікіпедія (укр) — Big Data",
+        url: "https://uk.wikipedia.org/wiki/Великі_дані",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Big Data українською",
+        rating: "⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["big data", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — Data Engineering",
+        url: "https://uk.wikipedia.org/wiki/Інженерія_даних",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Data Engineering українською",
+        rating: "⭐⭐⭐⭐",
+        category: "bigdata",
+        tags: ["data engineering", "ukrainian", "encyclopedia"]
+    },
     /* ---------------- Tools ---------------- */
     {
         name: "Can I Use",
