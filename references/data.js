@@ -2754,6 +2754,182 @@ const sourcesData = [
         category: "backend",
         tags: ["express", "ukrainian", "encyclopedia", "verified"]
     },
+    /* ---------------- CLOUD: AWS ---------------- */
+    {
+        name: "AWS — Official Website",
+        url: "https://aws.amazon.com/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал AWS: сервіси, продукти, документація, навчання",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["aws", "cloud", "official", "homepage"]
+    },
+    {
+        name: "AWS Documentation Overview",
+        url: "https://aws.amazon.com/documentation-overview/",
+        status: "Офіційна документація",
+        purpose: "Повний огляд документації AWS: compute, storage, networking, AI",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["aws", "docs", "official", "reference"]
+    },
+    {
+        name: "AWS Architecture Center",
+        url: "https://aws.amazon.com/architecture/",
+        status: "Офіційний ресурс",
+        purpose: "Архітектурні патерни, whitepapers, best practices",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["aws", "architecture", "best practices"]
+    },
+    {
+        name: "AWS Well-Architected Framework",
+        url: "https://aws.amazon.com/architecture/well-architected/",
+        status: "Офіційний стандарт",
+        purpose: "Фреймворк для побудови надійних cloud‑архітектур",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["aws", "well-architected", "standard"]
+    },
+    {
+        name: "W3Schools.com — AWS Cloud Practitioner Tutorial",
+        url: "https://www.w3schools.com/aws/",
+        status: "Навчальний ресурс",
+        purpose: "Уроки по AWS Cloud для початківців",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["aws", "w3schools", "learning", "lessons", "for beginners", "уроки", "для початківців"]
+    },
+    {
+        name: "W3SchoolsUA — AWS Cloud Practitioner Підручник",
+        url: "https://w3schoolsua.github.io/aws/index.html",
+        status: "Навчальний ресурс",
+        purpose: "Уроки по AWS Cloud для початківців українською",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["aws", "w3schools", "learning", "lessons", "for beginners", "уроки", "для початківців", "українською"]
+    },
+    /* ---------------- CLOUD: AZURE ---------------- */
+    {
+        name: "Microsoft Azure — Official Website",
+        url: "https://azure.microsoft.com/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Azure: сервіси, продукти, документація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["azure", "cloud", "official", "homepage"]
+    },
+    {
+        name: "Azure Documentation",
+        url: "https://learn.microsoft.com/en-us/azure/",
+        status: "Офіційна документація",
+        purpose: "Повний довідник Azure: compute, storage, networking, AI",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["azure", "docs", "official", "reference"]
+    },
+    {
+        name: "Azure Architecture Center",
+        url: "https://learn.microsoft.com/en-us/azure/architecture/",
+        status: "Офіційний ресурс",
+        purpose: "Архітектурні гіди, best practices, cloud‑patterns",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["azure", "architecture", "best practices"]
+    },
+    {
+        name: "Azure vs GCP — Official Comparison",
+        url: "https://learn.microsoft.com/en-us/azure/architecture/gcp-professional/services",
+        status: "Офіційний ресурс",
+        purpose: "Порівняння Azure та Google Cloud від Microsoft",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["azure", "gcp", "comparison", "official"]
+    },
+    /* ---------------- CLOUD: GOOGLE CLOUD (GCP) ---------------- */
+    {
+        name: "Google Cloud — Official Website",
+        url: "https://cloud.google.com/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал GCP: сервіси, продукти, документація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["gcp", "google cloud", "cloud", "official"]
+    },
+    {
+        name: "Google Cloud Documentation",
+        url: "https://cloud.google.com/docs",
+        status: "Офіційна документація",
+        purpose: "Повний довідник GCP: compute, storage, networking, AI",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["gcp", "docs", "official", "reference"]
+    },
+    {
+        name: "Google Cloud Architecture Framework",
+        url: "https://cloud.google.com/architecture/framework",
+        status: "Офіційний ресурс",
+        purpose: "Архітектурні принципи та best practices GCP",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["gcp", "architecture", "best practices"]
+    },
+    /* ---------------- ДОДАТКОВІ АВТОРИТЕТНІ РЕСУРСИ ---------------- */
+    {
+        name: "Dataquest — Cloud Providers Overview",
+        url: "https://www.dataquest.io/blog/cloud-providers-aws-azure-gcp/",
+        status: "Аналітичний ресурс",
+        purpose: "Огляд AWS, Azure, GCP та їх ключових сервісів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["cloud", "aws", "azure", "gcp", "analysis"]
+    },
+    {
+        name: "DataCamp — AWS vs Azure vs GCP",
+        url: "https://www.datacamp.com/blog/aws-vs-azure-vs-gcp",
+        status: "Аналітичний ресурс",
+        purpose: "Порівняння трьох провідних cloud‑платформ",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["cloud", "comparison", "aws", "azure", "gcp"]
+    },
+    /* ---------------- УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ ---------------- */
+    {
+        name: "Вікіпедія (укр) — Хмарні обчислення",
+        url: "https://uk.wikipedia.org/wiki/Хмарні_обчислення",
+        status: "Україномовний ресурс",
+        purpose: "Огляд cloud‑технологій українською",
+        rating: "⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["cloud", "ukrainian", "encyclopedia", "verified"]
+    },
+    {
+        name: "Вікіпедія (укр) — Amazon Web Services",
+        url: "https://uk.wikipedia.org/wiki/Amazon_Web_Services",
+        status: "Україномовний ресурс",
+        purpose: "Огляд AWS українською",
+        rating: "⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["aws", "ukrainian", "encyclopedia", "verified"]
+    },
+    {
+        name: "Вікіпедія (укр) — Microsoft Azure",
+        url: "https://uk.wikipedia.org/wiki/Microsoft_Azure",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Azure українською",
+        rating: "⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["azure", "ukrainian", "encyclopedia", "verified"]
+    },
+    {
+        name: "Вікіпедія (укр) — Google Cloud Platform",
+        url: "https://uk.wikipedia.org/wiki/Google_Cloud_Platform",
+        status: "Україномовний ресурс",
+        purpose: "Огляд GCP українською",
+        rating: "⭐⭐⭐⭐",
+        category: "cloud",
+        tags: ["gcp", "ukrainian", "encyclopedia", "verified"]
+    },
     /* ---------------- DEVOPS ---------------- */
     /* ОФІЦІЙНІ ДЖЕРЕЛА ТА СТАНДАРТИ */
     {
