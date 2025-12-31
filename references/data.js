@@ -2930,6 +2930,210 @@ const sourcesData = [
         category: "cloud",
         tags: ["gcp", "ukrainian", "encyclopedia", "verified"]
     },
+    /* ---------------- AI / MACHINE LEARNING ---------------- */
+    /* ОФІЦІЙНІ ПЛАТФОРМИ ТА СТАНДАРТИ */
+    {
+        name: "Microsoft AI Learning Resources",
+        url: "https://learn.microsoft.com/en-us/ai/ai-resources/",
+        status: "Офіційна платформа",
+        purpose: "Офіційні ресурси Microsoft для AI/ML, навчання, документації, інструментів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "ml", "microsoft", "official", "learning"]
+    },
+    {
+        name: "Microsoft AI — Copilot",
+        url: "https://learn.microsoft.com/en-us/copilot/",
+        status: "Офіційна платформа",
+        purpose: "Офіційні ресурси Microsoft для AI/ML, навчання, документації, інструментів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "ml", "microsoft", "official", "learning", "copilot"]
+    },
+    {
+        name: "Google Machine Learning Resources",
+        url: "https://developers.google.com/machine-learning/resources",
+        status: "Офіційна документація",
+        purpose: "Офіційні ресурси Google з ML, LLM, безпеки AI",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "ml", "google", "official", "learning"]
+    },
+    {
+        name: "OWASP GenAI Security Project",
+        url: "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+        status: "Офіційний стандарт",
+        purpose: "Безпека генеративного AI, ризики LLM, рекомендації",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "security", "owasp", "llm", "official"]
+    },
+    /* ФРЕЙМВОРКИ ТА БІБЛІОТЕКИ */
+    {
+        name: "TensorFlow — Official Documentation",
+        url: "https://www.tensorflow.org/",
+        status: "Офіційна документація",
+        purpose: "Головний фреймворк ML від Google",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "ml", "tensorflow", "deep learning"]
+    },
+    {
+        name: "PyTorch — Official Documentation",
+        url: "https://pytorch.org/docs/stable/index.html",
+        status: "Офіційна документація",
+        purpose: "Фреймворк глибинного навчання від Meta",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "ml", "pytorch", "deep learning"]
+    },
+    {
+        name: "HuggingFace — Transformers",
+        url: "https://huggingface.co/docs/transformers/index",
+        status: "Офіційна документація",
+        purpose: "Найпопулярніша бібліотека LLM та NLP",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "ml", "huggingface", "transformers", "llm"]
+    },
+    {
+        name: "Scikit‑Learn — Official Documentation",
+        url: "https://scikit-learn.org/stable/",
+        status: "Офіційна документація",
+        purpose: "Класичні ML‑алгоритми: класифікація, регресія, кластеризація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "ml", "scikit-learn", "python"]
+    },
+    /* МОДЕЛІ ТА API */
+    {
+        name: "OpenAI — Official Documentation",
+        url: "https://platform.openai.com/docs",
+        status: "Офіційна документація",
+        purpose: "Документація API, моделі GPT, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "openai", "gpt", "api"]
+    },
+    {
+        name: "Anthropic Claude — Official Documentation",
+        url: "https://docs.anthropic.com/",
+        status: "Офіційна документація",
+        purpose: "Документація Claude, API, моделі",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "anthropic", "claude", "api"]
+    },
+    {
+        name: "Claude Developer Platform",
+        url: "https://platform.claude.com/docs/en/home",
+        status: "Офіційна документація",
+        purpose: "Документація Claude, API, моделі",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "anthropic", "claude", "api", "developer"]
+    },
+    {
+        name: "Google Gemini — Official Documentation",
+        url: "https://ai.google.dev/",
+        status: "Офіційна документація",
+        purpose: "Документація моделей Gemini, API, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "google", "gemini", "api"]
+    },
+    {
+        name: "Google Gemini — API Documentation",
+        url: "https://ai.google.dev/gemini-api/docs",
+        status: "Офіційна документація",
+        purpose: "Документація моделей Gemini, API, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "google", "gemini", "api", "docs"]
+    },
+    {
+        name: "Perplexity — AI Model",
+        url: "https://www.perplexity.ai/",
+        status: "Офіційна платформа",
+        purpose: "Модель штучного інтелекту",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "perplexity", "learning", "api", "docs"]
+    },
+    {
+        name: "DeepSeek — AI Model",
+        url: "https://api-docs.deepseek.com/",
+        status: "Офіційна документація",
+        purpose: "Документація моделі DeepSeek",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "deepseek", "learning", "api", "docs"]
+    },
+    {
+        name: "Grok — AI Model",
+        url: "https://x.ai/api",
+        status: "Офіційна документація",
+        purpose: "Документація моделі Grok",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "grok", "learning", "api", "docs", "elon", "mask"]
+    },
+    /* НАВЧАЛЬНІ РЕСУРСИ */
+    {
+        name: "W3Schools.com — AI Tutorial",
+        url: "https://www.w3schools.com/ai/",
+        status: "Навчальний ресурс",
+        purpose: "Просте навчання AI, ML, нейронних мереж",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "tutorial", "learning"]
+    },
+    {
+        name: "W3Schools.com — Machine Learning Tutorial",
+        url: "https://www.w3schools.com/python/python_ml_getting_started.asp",
+        status: "Навчальний ресурс",
+        purpose: "ML на Python: моделі, алгоритми, приклади",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["w3schools", "ai", "ml", "tutorial", "python"]
+    },
+    {
+        name: "W3SchoolsUA — AI Підручник (українською)",
+        url: "https://w3schoolsua.github.io/ai/index.html",
+        status: "Україномовний ресурс",
+        purpose: "Українські уроки з AI, ML, Python, Data Science",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["w3schoolsua", "ai", "ml", "ukrainian", "tutorial", "verified", "уроки", "для початківців", "українською", "машинне", "навчання", "штучний", "інтелект"]
+    },
+    {
+        name: "freeCodeCamp — Machine Learning",
+        url: "https://www.freecodecamp.org/learn/",
+        status: "Популярний навчальний ресурс",
+        purpose: "Безкоштовні курси з ML, Python, нейронних мереж",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "ml", "learning", "courses"]
+    },
+    /* УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ */
+    {
+        name: "Вікіпедія (укр) — Штучний інтелект",
+        url: "https://uk.wikipedia.org/wiki/Штучний_інтелект",
+        status: "Україномовний ресурс",
+        purpose: "Огляд AI українською",
+        rating: "⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ai", "ukrainian", "encyclopedia", "verified"]
+    },
+    {
+        name: "Вікіпедія (укр) — Машинне навчання",
+        url: "https://uk.wikipedia.org/wiki/Машинне_навчання",
+        status: "Україномовний ресурс",
+        purpose: "Огляд ML українською",
+        rating: "⭐⭐⭐⭐",
+        category: "ai",
+        tags: ["ml", "ukrainian", "encyclopedia", "verified"]
+    },
     /* ---------------- DEVOPS ---------------- */
     /* ОФІЦІЙНІ ДЖЕРЕЛА ТА СТАНДАРТИ */
     {
