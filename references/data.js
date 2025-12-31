@@ -3518,6 +3518,147 @@ const sourcesData = [
         category: "api",
         tags: ["url", "web", "whatwg", "oficial", "офіційний", "сайт", "html", "стандарт", "специфікація", "браузери"]
     },
+    /* ---------------- REST ---------------- */
+    {
+        name: "REST — Roy Fielding Dissertation",
+        url: "https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm",
+        status: "Офіційне джерело",
+        purpose: "Оригінальна робота Роя Філдінга, де описано REST",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "api",
+        tags: ["rest", "official", "architecture", "fielding"]
+    },
+    {
+        name: "REST API Tutorial",
+        url: "https://restfulapi.net/",
+        status: "Авторитетний ресурс",
+        purpose: "Докладні пояснення REST, HTTP‑методів, статус‑кодів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "api",
+        tags: ["rest", "tutorial", "http"]
+    },
+    {
+        name: "MDN Web Docs — REST",
+        url: "https://developer.mozilla.org/en-US/docs/Glossary/REST",
+        status: "Авторитетна документація",
+        purpose: "Огляд REST від Mozilla MDN",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "api",
+        tags: ["rest", "mdn", "docs"]
+    },
+    /* ---------------- GRAPHQL ---------------- */
+    {
+        name: "GraphQL — Official Website",
+        url: "https://graphql.org/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал GraphQL: документація, гіди, API",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "api",
+        tags: ["graphql", "official", "docs"]
+    },
+    {
+        name: "GraphQL Specification",
+        url: "https://spec.graphql.org/",
+        status: "Офіційна специфікація",
+        purpose: "Формальна специфікація GraphQL",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "api",
+        tags: ["graphql", "specification", "standard"]
+    },
+    {
+        name: "GraphQL GitHub Repository",
+        url: "https://github.com/graphql/graphql-spec",
+        status: "Офіційний репозиторій",
+        purpose: "Специфікація GraphQL, RFC, issues",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "webapi",
+        tags: ["graphql", "github", "repository"]
+    },
+    /* ---------------- gRPC ---------------- */
+    {
+        name: "gRPC — Official Documentation",
+        url: "https://grpc.io/docs/",
+        status: "Офіційна документація",
+        purpose: "Документація gRPC: концепції, API, приклади",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "api",
+        tags: ["grpc", "official", "docs"]
+    },
+    {
+        name: "gRPC GitHub Repository",
+        url: "https://github.com/grpc/grpc",
+        status: "Офіційний репозиторій",
+        purpose: "Вихідний код gRPC",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "api",
+        tags: ["grpc", "github", "repository"]
+    },
+    /* ---------------- API DESIGN & BEST PRACTICES ---------------- */
+    {
+        name: "Microsoft REST API Guidelines",
+        url: "https://github.com/microsoft/api-guidelines",
+        status: "Офіційний стандарт",
+        purpose: "REST‑гайдлайни Microsoft",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "api",
+        tags: ["rest", "microsoft", "guidelines"]
+    },
+    {
+        name: "Google API Design Guide",
+        url: "https://cloud.google.com/apis/design",
+        status: "Офіційна документація",
+        purpose: "API‑гайдлайни Google",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "api",
+        tags: ["api", "google", "design"]
+    },
+    {
+        name: "OpenAPI Specification",
+        url: "https://www.openapis.org/",
+        status: "Офіційний стандарт",
+        purpose: "Стандарт опису REST API",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "api",
+        tags: ["rest", "openapi", "specification"]
+    },
+    /* ---------------- НАВЧАЛЬНІ РЕСУРСИ ---------------- */
+    {
+        name: "W3Schools — REST API Tutorial",
+        url: "https://www.w3schools.com/js/js_api_fetch.asp",
+        status: "Навчальний ресурс",
+        purpose: "Основи REST API через Fetch API",
+        rating: "⭐⭐⭐⭐",
+        category: "api",
+        tags: ["rest", "w3schools", "tutorial"]
+    },
+    /* ---------------- УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ ---------------- */
+    {
+        name: "Вікіпедія (укр) — REST",
+        url: "https://uk.wikipedia.org/wiki/REST",
+        status: "Україномовний ресурс",
+        purpose: "Огляд REST українською",
+        rating: "⭐⭐⭐⭐",
+        category: "api",
+        tags: ["rest", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — GraphQL",
+        url: "https://uk.wikipedia.org/wiki/GraphQL",
+        status: "Україномовний ресурс",
+        purpose: "Огляд GraphQL українською",
+        rating: "⭐⭐⭐⭐",
+        category: "api",
+        tags: ["graphql", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — gRPC",
+        url: "https://uk.wikipedia.org/wiki/GRPC",
+        status: "Україномовний ресурс",
+        purpose: "Огляд gRPC українською",
+        rating: "⭐⭐⭐⭐",
+        category: "api",
+        tags: ["grpc", "ukrainian", "encyclopedia"]
+    },
     /* ---------------- Tools ---------------- */
     {
         name: "Can I Use",
