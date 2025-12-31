@@ -3571,7 +3571,7 @@ const sourcesData = [
         status: "Офіційний репозиторій",
         purpose: "Специфікація GraphQL, RFC, issues",
         rating: "⭐⭐⭐⭐⭐",
-        category: "webapi",
+        category: "api",
         tags: ["graphql", "github", "repository"]
     },
     /* ---------------- gRPC ---------------- */
