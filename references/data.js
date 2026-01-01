@@ -4379,6 +4379,303 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐⭐",
         category: "security",
         tags: ["security", "ukraine", "cert", "official", "cybersecurity", "українською", "безпека"]
+    },
+    /* ---------------- LINUX — ОФІЦІЙНІ ДЖЕРЕЛА ---------------- */
+    {
+        name: "Linux Kernel — Official Website",
+        url: "https://www.kernel.org/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Linux Kernel: релізи, документація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["linux", "kernel", "official"]
+    },
+    {
+        name: "Linux Documentation Project",
+        url: "https://tldp.org/",
+        status: "Авторитетна документація",
+        purpose: "Документація Linux: HOWTO, керівництва, FAQ",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["linux", "docs", "tldp"]
+    },
+    {
+        name: "Ubuntu Documentation",
+        url: "https://help.ubuntu.com/",
+        status: "Офіційна документація",
+        purpose: "Документація Ubuntu: адміністрування, налаштування, сервери",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["linux", "ubuntu", "docs"]
+    },
+    {
+        name: "Red Hat Enterprise Linux Documentation",
+        url: "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/",
+        status: "Офіційна документація",
+        purpose: "Документація RHEL: безпека, адміністрування, сервери",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["linux", "redhat", "enterprise"]
+    },
+    {
+        name: "Arch Linux Wiki",
+        url: "https://wiki.archlinux.org/",
+        status: "Авторитетний ресурс",
+        purpose: "Найдетальніша документація Linux у світі",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["linux", "arch", "wiki"]
+    },
+    /* ---------------- WINDOWS — ОФІЦІЙНІ ДЖЕРЕЛА ---------------- */
+    {
+        name: "Microsoft Windows Documentation",
+        url: "https://learn.microsoft.com/en-us/windows/",
+        status: "Офіційна документація",
+        purpose: "Документація Windows: адміністрування, безпека, системні інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["windows", "microsoft", "docs"]
+    },
+    {
+        name: "Windows Command Line Documentation",
+        url: "https://learn.microsoft.com/en-us/windows/terminal/command-line",
+        status: "Офіційна документація",
+        purpose: "Командний рядок Windows, PowerShell, Terminal",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["windows", "cli", "powershell"]
+    },
+    {
+        name: "PowerShell Documentation",
+        url: "https://learn.microsoft.com/en-us/powershell/",
+        status: "Офіційна документація",
+        purpose: "Документація PowerShell: команди, модулі, автоматизація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["powershell", "windows", "automation"]
+    },
+    /* ---------------- UNIX — ОФІЦІЙНІ ДЖЕРЕЛА ---------------- */
+    {
+        name: "The Open Group — UNIX Certification",
+        url: "https://www.opengroup.org/certifications/unix",
+        status: "Офіційний стандарт",
+        purpose: "Офіційний стандарт UNIX та сертифікація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["unix", "standard", "official"]
+    },
+    {
+        name: "FreeBSD Documentation",
+        url: "https://docs.freebsd.org/",
+        status: "Офіційна документація",
+        purpose: "Документація FreeBSD: ядро, мережі, системні інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["unix", "freebsd", "docs"]
+    },
+    {
+        name: "OpenBSD Documentation",
+        url: "https://www.openbsd.org/faq/index.html",
+        status: "Офіційна документація",
+        purpose: "Документація OpenBSD: безпека, мережі, системні утиліти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["unix", "openbsd", "security"]
+    },
+    {
+        name: "NetBSD Documentation",
+        url: "https://www.netbsd.org/docs/",
+        status: "Офіційна документація",
+        purpose: "Документація NetBSD: системи, драйвери, мережі",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["unix", "netbsd", "docs"]
+    },
+    /* ---------------- ДОДАТКОВІ АВТОРИТЕТНІ РЕСУРСИ ---------------- */
+    {
+        name: "MDN Web Docs — Operating System Concepts",
+        url: "https://developer.mozilla.org/en-US/docs/Glossary/Operating_system",
+        status: "Авторитетна документація",
+        purpose: "Огляд операційних систем",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["os", "mdn", "docs"]
+    },
+    {
+        name: "GeeksForGeeks — Operating Systems",
+        url: "https://www.geeksforgeeks.org/operating-systems/",
+        status: "Навчальний ресурс",
+        purpose: "Розширені уроки з ОС: процеси, пам’ять, файлові системи",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["os", "learning", "tutorial"]
+    },
+    /* ---------------- iOS — ОФІЦІЙНІ ДЖЕРЕЛА ---------------- */
+    {
+        name: "Apple Developer — iOS",
+        url: "https://developer.apple.com/ios/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал iOS: SDK, документація, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["ios", "apple", "official", "docs"]
+    },
+    {
+        name: "iOS Developer Documentation",
+        url: "https://developer.apple.com/documentation/",
+        status: "Офіційна документація",
+        purpose: "Повний довідник API для iOS, iPadOS, macOS",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["ios", "documentation", "api", "official"]
+    },
+    {
+        name: "Human Interface Guidelines (iOS)",
+        url: "https://developer.apple.com/design/human-interface-guidelines/",
+        status: "Офіційний гайд",
+        purpose: "Офіційні правила дизайну для iOS",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["ios", "design", "guidelines"]
+    },
+    /* ---------------- macOS — ОФІЦІЙНІ ДЖЕРЕЛА ---------------- */
+    {
+        name: "Apple Developer — macOS",
+        url: "https://developer.apple.com/macos/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал macOS: SDK, документація, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["macos", "apple", "official", "docs"]
+    },
+    {
+        name: "macOS Developer Documentation",
+        url: "https://developer.apple.com/documentation/macos-release-notes",
+        status: "Офіційна документація",
+        purpose: "Документація macOS, API, release notes",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["macos", "documentation", "official"]
+    },
+    {
+        name: "Apple Security — Platform Security",
+        url: "https://support.apple.com/guide/security/welcome/web",
+        status: "Офіційний ресурс",
+        purpose: "Офіційна документація з безпеки iOS/macOS",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["apple", "security", "official"]
+    },
+    /* ---------------- ANDROID — ОФІЦІЙНІ ДЖЕРЕЛА ---------------- */
+    {
+        name: "Android Developers — Official Website",
+        url: "https://developer.android.com/",
+        status: "Офіційний сайт",
+        purpose: "Головний портал Android: SDK, документація, інструменти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["android", "google", "official", "docs"]
+    },
+    {
+        name: "Android API Reference",
+        url: "https://developer.android.com/reference",
+        status: "Офіційна документація",
+        purpose: "Повний довідник Android API",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["android", "api", "reference"]
+    },
+    {
+        name: "Android Open Source Project (AOSP)",
+        url: "https://source.android.com/",
+        status: "Офіційний ресурс",
+        purpose: "Вихідний код Android, архітектура, компоненти",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["android", "aosp", "opensource"]
+    },
+    {
+        name: "Android Security Documentation",
+        url: "https://source.android.com/security",
+        status: "Офіційна документація",
+        purpose: "Офіційні матеріали з безпеки Android",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["android", "security", "official"]
+    },
+    /* ---------------- ДОДАТКОВІ АВТОРИТЕТНІ РЕСУРСИ ---------------- */
+    {
+        name: "MDN Web Docs — Mobile Web",
+        url: "https://developer.mozilla.org/en-US/docs/Web/Guide/Mobile",
+        status: "Авторитетна документація",
+        purpose: "Розробка для мобільних платформ",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["mobile", "mdn", "docs"]
+    },
+    {
+        name: "GeeksForGeeks — Mobile Operating Systems",
+        url: "https://www.geeksforgeeks.org/mobile-operating-systems/",
+        status: "Навчальний ресурс",
+        purpose: "Огляд мобільних ОС: Android, iOS",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "os",
+        tags: ["mobile", "os", "learning"]
+    },
+    /* ---------------- УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ ---------------- */
+    {
+        name: "Вікіпедія (укр) — Linux",
+        url: "https://uk.wikipedia.org/wiki/Linux",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Linux українською",
+        rating: "⭐⭐⭐⭐",
+        category: "os",
+        tags: ["linux", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — Windows",
+        url: "https://uk.wikipedia.org/wiki/Microsoft_Windows",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Windows українською",
+        rating: "⭐⭐⭐⭐",
+        category: "os",
+        tags: ["windows", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — Unix",
+        url: "https://uk.wikipedia.org/wiki/Unix",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Unix українською",
+        rating: "⭐⭐⭐⭐",
+        category: "os",
+        tags: ["unix", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — iOS",
+        url: "https://uk.wikipedia.org/wiki/IOS",
+        status: "Україномовний ресурс",
+        purpose: "Огляд iOS українською",
+        rating: "⭐⭐⭐⭐",
+        category: "os",
+        tags: ["ios", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — macOS",
+        url: "https://uk.wikipedia.org/wiki/MacOS",
+        status: "Україномовний ресурс",
+        purpose: "Огляд macOS українською",
+        rating: "⭐⭐⭐⭐",
+        category: "os",
+        tags: ["macos", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — Android",
+        url: "https://uk.wikipedia.org/wiki/Android",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Android українською",
+        rating: "⭐⭐⭐⭐",
+        category: "os",
+        tags: ["android", "ukrainian", "encyclopedia"]
     }
 ];
 // Фільтрація по категорії
