@@ -4186,6 +4186,33 @@ const sourcesData = [
         category: "security",
         tags: ["security", "owasp", "web", "application security"]
     },
+    {
+        name: "OWASP Top 10",
+        url: "https://owasp.org/www-project-top-ten/",
+        status: "Офіційний стандарт",
+        purpose: "Топ‑10 критичних вразливостей веб‑додатків",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["owasp", "top10", "vulnerabilities"]
+    },
+    {
+        name: "OWASP ASVS",
+        url: "https://owasp.org/www-project-application-security-verification-standard/",
+        status: "Офіційний стандарт",
+        purpose: "Стандарт перевірки безпеки застосунків",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["owasp", "asvs", "standard"]
+    },
+    {
+        name: "OWASP SAMM",
+        url: "https://owasp.org/www-project-samm/",
+        status: "Офіційний стандарт",
+        purpose: "Модель зрілості безпеки розробки",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["owasp", "samm", "security"]
+    },
     /* ОФІЦІЙНІ ДЕРЖАВНІ РЕСУРСИ */
     {
         name: "CISA — Cybersecurity & Infrastructure Security Agency",
@@ -4225,6 +4252,15 @@ const sourcesData = [
         tags: ["security", "metasploit", "pentest", "exploitation", "офіційний", "безпека", "фреймворк"]
     },
     {
+        name: "Burp Suite Documentation",
+        url: "https://portswigger.net/burp/documentation",
+        status: "Офіційна документація",
+        purpose: "Тестування безпеки веб‑додатків",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["burp suite", "web security", "pentest"]
+    },
+    {
         name: "Wireshark Documentation",
         url: "https://www.wireshark.org/docs/",
         status: "Офіційна документація",
@@ -4241,6 +4277,34 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐⭐",
         category: "security",
         tags: ["security", "shodan", "iot", "scanning", "офіційний", "безпека", "документація"]
+    },
+    /* ---------------- CLOUD SECURITY ---------------- */
+    {
+        name: "AWS Security Documentation",
+        url: "https://aws.amazon.com/security/",
+        status: "Офіційна документація",
+        purpose: "Безпека AWS: IAM, KMS, Shield, WAF",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["aws", "cloud security"]
+    },
+    {
+        name: "Azure Security Documentation",
+        url: "https://learn.microsoft.com/en-us/azure/security/",
+        status: "Офіційна документація",
+        purpose: "Безпека Azure: Identity, Defender, Governance",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["azure", "cloud security"]
+    },
+    {
+        name: "Google Cloud Security",
+        url: "https://cloud.google.com/security",
+        status: "Офіційна документація",
+        purpose: "Безпека GCP: IAM, DLP, Chronicle",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "security",
+        tags: ["gcp", "cloud security"]
     },
     /* НАВЧАЛЬНІ РЕСУРСИ */
     {
