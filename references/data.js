@@ -4986,6 +4986,108 @@ const sourcesData = [
         category: "architecture",
         tags: ["architecture", "ukrainian", "encyclopedia"]
     },
+    /* ---------------- Algorithms & Data Structures ---------------- */
+    {
+        name: "The Algorithms — Open Source Algorithms Library",
+        url: "https://the-algorithms.com/",
+        status: "Авторитетний ресурс",
+        purpose: "Найбільша у світі open‑source колекція алгоритмів у 30+ мовах",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["algorithms", "data structures", "open source"]
+    },
+    {
+        name: "Open Data Structures — Official Textbook",
+        url: "https://opendatastructures.org/",
+        status: "Офіційний підручник",
+        purpose: "Безкоштовний підручник зі структурами даних (Java, C++, Python)",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["data structures", "textbook", "official"]
+    },
+    {
+        name: "NIST DADS — Dictionary of Algorithms and Data Structures",
+        url: "https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8318.pdf",
+        status: "Офіційний ресурс",
+        purpose: "Офіційний словник алгоритмів і структур даних від NIST",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["nist", "dictionary", "algorithms"]
+    },
+    {
+        name: "Algorithms, 4th Edition — Sedgewick & Wayne",
+        url: "https://algs4.cs.princeton.edu/home/",
+        status: "Офіційний сайт",
+        purpose: "Офіційні матеріали до найпопулярнішого підручника з алгоритмів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["algorithms", "textbook", "princeton"]
+    },
+    {
+        name: "OpenDSA — Interactive Data Structures & Algorithms",
+        url: "https://opendsa.cs.vt.edu/ODSA/Books/eu_book/html/index.html",
+        status: "Офіційний ресурс",
+        purpose: "Інтерактивний підручник з алгоритмів та структур даних",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["interactive", "algorithms", "data structures"]
+    },
+    /* ---------------- ДОДАТКОВІ АВТОРИТЕТНІ РЕСУРСИ ---------------- */
+    {
+        name: "GeeksForGeeks — Algorithms",
+        url: "https://www.geeksforgeeks.org/fundamentals-of-algorithms/",
+        status: "Навчальний ресурс",
+        purpose: "Алгоритми, структури даних, задачі, пояснення",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["algorithms", "learning", "tutorial"]
+    },
+    {
+        name: "GeeksForGeeks — Data Structures",
+        url: "https://www.geeksforgeeks.org/data-structures/",
+        status: "Навчальний ресурс",
+        purpose: "Повний довідник структур даних",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["data structures", "learning", "tutorial"]
+    },
+    {
+        name: "MIT OpenCourseWare — Introduction to Algorithms",
+        url: "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/",
+        status: "Авторитетний курс",
+        purpose: "Офіційний курс MIT з алгоритмів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["mit", "algorithms", "course"]
+    },
+    {
+        name: "Stanford — Algorithms Specialization",
+        url: "https://www.coursera.org/specializations/algorithms",
+        status: "Авторитетний курс",
+        purpose: "Один з найкращих курсів з алгоритмів у світі",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["stanford", "algorithms", "course"]
+    },
+    /* ---------------- УКРАЇНОМОВНІ РЕСУРСИ ---------------- */
+    {
+        name: "Вікіпедія (укр) — Алгоритм",
+        url: "https://uk.wikipedia.org/wiki/Алгоритм",
+        status: "Україномовний ресурс",
+        purpose: "Огляд алгоритмів українською",
+        rating: "⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["algorithm", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — Структура даних",
+        url: "https://uk.wikipedia.org/wiki/Структура_даних",
+        status: "Україномовний ресурс",
+        purpose: "Огляд структур даних українською",
+        rating: "⭐⭐⭐⭐",
+        category: "algorithms",
+        tags: ["data structures", "ukrainian", "encyclopedia"]
+    }
 ];
 // Фільтрація по категорії
 function getSourcesByCategory(category) {
