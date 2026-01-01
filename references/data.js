@@ -4676,6 +4676,175 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐",
         category: "os",
         tags: ["android", "ukrainian", "encyclopedia"]
+    },
+    /* ---------------- ОФІЦІЙНІ СТАНДАРТИ ІНТЕРНЕТ---------------- */
+    {
+        name: "IETF — Internet Engineering Task Force",
+        url: "https://www.ietf.org/",
+        status: "Офіційна організація",
+        purpose: "Головний орган стандартизації Інтернету",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["ietf", "internet standards", "official"]
+    },
+    {
+        name: "IETF RFC Index",
+        url: "https://www.rfc-editor.org/rfc-index/",
+        status: "Офіційний стандарт",
+        purpose: "Усі RFC: TCP/IP, HTTP, DNS, SMTP, TLS, IPv6",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["rfc", "protocols", "official"]
+    },
+    {
+        name: "IEEE Standards Association",
+        url: "https://standards.ieee.org/",
+        status: "Офіційний стандарт",
+        purpose: "Стандарти Ethernet, Wi‑Fi (802.11), Bluetooth",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["ieee", "ethernet", "wifi", "standards"]
+    },
+    /* ---------------- ОСНОВНІ ПРОТОКОЛИ ---------------- */
+    {
+        name: "TCP/IP Guide (Official Online Edition)",
+        url: "http://www.tcpipguide.com/",
+        status: "Авторитетний ресурс",
+        purpose: "Повний довідник TCP/IP, протоколів та архітектури мереж",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["tcp", "ip", "protocols"]
+    },
+    {
+        name: "DNS — IETF RFC 1034/1035",
+        url: "https://www.rfc-editor.org/rfc/rfc1035",
+        status: "Офіційний стандарт",
+        purpose: "Офіційна специфікація DNS",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["dns", "rfc", "protocol"]
+    },
+    {
+        name: "HTTP — MDN Web Docs",
+        url: "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+        status: "Авторитетна документація",
+        purpose: "Документація HTTP/1.1, HTTP/2, HTTP/3",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["http", "mdn", "protocol"]
+    },
+    {
+        name: "TLS — IETF RFC 5246 / 8446",
+        url: "https://www.rfc-editor.org/rfc/rfc8446",
+        status: "Офіційний стандарт",
+        purpose: "Офіційна специфікація TLS 1.3",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["tls", "security", "rfc"]
+    },
+    {
+        name: "BGP — IETF RFC 4271",
+        url: "https://www.rfc-editor.org/rfc/rfc4271",
+        status: "Офіційний стандарт",
+        purpose: "Офіційна специфікація Border Gateway Protocol",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["bgp", "routing", "rfc"]
+    },
+    {
+        name: "IPv6 — IETF RFC 8200",
+        url: "https://www.rfc-editor.org/rfc/rfc8200",
+        status: "Офіційний стандарт",
+        purpose: "Офіційна специфікація IPv6",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["ipv6", "rfc", "protocol"]
+    },
+    /* ---------------- DNS / INTERNET INFRASTRUCTURE ---------------- */
+    {
+        name: "ICANN — Internet Corporation for Assigned Names and Numbers",
+        url: "https://www.icann.org/",
+        status: "Офіційна організація",
+        purpose: "Управління доменами, DNS‑коренем, IP‑адресами",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["icann", "dns", "internet"]
+    },
+    {
+        name: "Cloudflare Learning Center — Networking",
+        url: "https://www.cloudflare.com/learning/",
+        status: "Авторитетний ресурс",
+        purpose: "Протоколи, мережі, CDN, безпека",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["networking", "cloudflare", "learning"]
+    },
+    /* ---------------- ВИРОБНИКИ МЕРЕЖЕВОГО ОБЛАДНАННЯ ---------------- */
+    {
+        name: "Cisco Networking Academy",
+        url: "https://www.netacad.com/",
+        status: "Офіційна платформа",
+        purpose: "Найпопулярніші курси з мереж та протоколів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["cisco", "networking", "academy"]
+    },
+    {
+        name: "Cisco Documentation",
+        url: "https://www.cisco.com/c/en/us/support/index.html",
+        status: "Офіційна документація",
+        purpose: "Документація Cisco IOS, маршрутизація, протоколи",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["cisco", "docs", "routing"]
+    },
+    {
+        name: "Juniper Networks Documentation",
+        url: "https://www.juniper.net/documentation/",
+        status: "Офіційна документація",
+        purpose: "Документація JunOS, маршрутизація, протоколи",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["juniper", "docs", "routing"]
+    },
+    /* ---------------- ДОДАТКОВІ АВТОРИТЕТНІ РЕСУРСИ ---------------- */
+
+    {
+        name: "MDN Web Docs — Network Concepts",
+        url: "https://developer.mozilla.org/en-US/docs/Glossary/Network",
+        status: "Авторитетна документація",
+        purpose: "Огляд мережевих концепцій",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["networking", "mdn", "docs"]
+    },
+    {
+        name: "GeeksForGeeks — Computer Networks",
+        url: "https://www.geeksforgeeks.org/computer-network-tutorials/",
+        status: "Навчальний ресурс",
+        purpose: "Протоколи, моделі OSI/TCP-IP, маршрутизація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["networking", "tutorial", "learning"]
+    },
+    /* ---------------- УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ ---------------- */
+    {
+        name: "Вікіпедія (укр) — Комп’ютерна мережа",
+        url: "https://uk.wikipedia.org/wiki/Комп%27ютерна_мережа",
+        status: "Україномовний ресурс",
+        purpose: "Огляд мережевих технологій українською",
+        rating: "⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["networking", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — Протокол зв’язку",
+        url: "https://uk.wikipedia.org/wiki/Протокол_зв%27язку",
+        status: "Україномовний ресурс",
+        purpose: "Огляд мережевих протоколів українською",
+        rating: "⭐⭐⭐⭐",
+        category: "networking",
+        tags: ["protocols", "ukrainian", "encyclopedia"]
     }
 ];
 // Фільтрація по категорії
