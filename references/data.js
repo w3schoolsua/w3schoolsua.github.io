@@ -3852,6 +3852,192 @@ const sourcesData = [
         category: "bigdata",
         tags: ["data engineering", "ukrainian", "encyclopedia"]
     },
+    /* ---------------- DATA SCIENCE — ОФІЦІЙНІ ПЛАТФОРМИ ---------------- */
+    {
+        name: "Microsoft Fabric — Data Science",
+        url: "https://learn.microsoft.com/en-us/fabric/data-science/",
+        status: "Офіційна документація",
+        purpose: "Офіційні матеріали Microsoft з Data Science, ML, аналітики",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["data science", "microsoft", "official", "docs"]
+    },
+    {
+        name: "Google — Data Science & Machine Learning",
+        url: "https://developers.google.com/machine-learning",
+        status: "Офіційна документація",
+        purpose: "Офіційні ресурси Google з ML, Data Science, аналітики",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["google", "data science", "ml", "official"]
+    },
+    {
+        name: "IBM Data Science",
+        url: "https://www.ibm.com/analytics/data-science",
+        status: "Офіційний ресурс",
+        purpose: "Матеріали IBM з Data Science, AI, аналітики",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["ibm", "data science", "analytics", "official"]
+    },
+    /* ---------------- DATA SCIENCE — ІНСТРУМЕНТИ ТА БІБЛІОТЕКИ ---------------- */
+    {
+        name: "NumPy — Official Documentation",
+        url: "https://numpy.org/doc/",
+        status: "Офіційна документація",
+        purpose: "Бібліотека для наукових обчислень у Python",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["numpy", "python", "official", "docs"]
+    },
+    {
+        name: "Pandas — Official Documentation",
+        url: "https://pandas.pydata.org/docs/",
+        status: "Офіційна документація",
+        purpose: "Бібліотека для аналізу даних у Python",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["pandas", "python", "data analysis", "official"]
+    },
+    {
+        name: "SciPy — Official Documentation",
+        url: "https://docs.scipy.org/doc/scipy/",
+        status: "Офіційна документація",
+        purpose: "Наукові обчислення, статистика, оптимізація",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["scipy", "python", "official", "docs"]
+    },
+    {
+        name: "Matplotlib — Official Documentation",
+        url: "https://matplotlib.org/stable/contents.html",
+        status: "Офіційна документація",
+        purpose: "Візуалізація даних у Python",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["matplotlib", "python", "visualization", "official"]
+    },
+    {
+        name: "Seaborn — Official Documentation",
+        url: "https://seaborn.pydata.org/",
+        status: "Офіційна документація",
+        purpose: "Статистична візуалізація даних",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["seaborn", "python", "visualization", "official"]
+    },
+    {
+        name: "Jupyter — Official Documentation",
+        url: "https://jupyter.org/",
+        status: "Офіційна документація",
+        purpose: "Jupyter Notebooks — основний інструмент Data Scientist",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["jupyter", "notebooks", "python", "official"]
+    },
+    /* ---------------- DATA SCIENCE — ПЛАТФОРМИ ТА ПРАКТИКА ---------------- */
+    {
+        name: "Kaggle — Learn Data Science",
+        url: "https://www.kaggle.com/learn",
+        status: "Авторитетний ресурс",
+        purpose: "Курси, змагання, датасети",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["kaggle", "learning", "datasets", "competitions"]
+    },
+    {
+        name: "Datacamp — Data Science Courses",
+        url: "https://www.datacamp.com/",
+        status: "Навчальна платформа",
+        purpose: "Курси з Python, R, SQL, Data Science",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["datacamp", "courses", "data science"]
+    },
+    {
+        name: "Analytics Vidhya",
+        url: "https://www.analyticsvidhya.com/",
+        status: "Авторитетний ресурс",
+        purpose: "Статті, гайди, туторіали з Data Science",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["analytics", "data science", "learning"]
+    },
+    /* ---------------- DATA ANALYTICS ---------------- */
+    {
+        name: "Google Analytics Academy",
+        url: "https://analytics.google.com/analytics/academy/",
+        status: "Офіційний ресурс",
+        purpose: "Курси з веб‑аналітики від Google",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["analytics", "google", "official"]
+    },
+    {
+        name: "Microsoft Power BI Documentation",
+        url: "https://learn.microsoft.com/en-us/power-bi/",
+        status: "Офіційна документація",
+        purpose: "Аналітика, BI, візуалізація даних",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["power bi", "analytics", "microsoft", "official"]
+    },
+    {
+        name: "Tableau — Official Documentation",
+        url: "https://help.tableau.com/current/guides/e-learning/en-us/tableau_overview.htm",
+        status: "Офіційна документація",
+        purpose: "Візуалізація та аналітика даних",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["tableau", "analytics", "official"]
+    },
+    /* ---------------- НАВЧАЛЬНІ РЕСУРСИ ---------------- */
+    {
+        name: "W3Schools.com — Data Science Tutorial",
+        url: "https://www.w3schools.com/datascience/",
+        status: "Навчальний ресурс",
+        purpose: "Основи Data Science, Python, статистика",
+        rating: "⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["data science", "tutorial", "w3schools"]
+    },
+    {
+        name: "W3Schools.com — Python for Data",
+        url: "https://www.w3schools.com/python/python_ml_getting_started.asp",
+        status: "Навчальний ресурс",
+        purpose: "ML та аналіз даних на Python",
+        rating: "⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["python", "ml", "tutorial"]
+    },
+    {
+        name: "W3SchoolsUA — Data Science Підручник",
+        url: "https://w3schoolsua.github.io/datascience/index.html",
+        status: "Україномовний ресурс",
+        purpose: "Українські уроки Python, SQL, Data Science",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["data science", "ukrainian", "tutorial", "українською", "наука про дані", "уроки"]
+    },
+    /* ---------------- УКРАЇНОМОВНІ ПЕРЕВІРЕНІ РЕСУРСИ ---------------- */
+    {
+        name: "Вікіпедія (укр) — Data Science",
+        url: "https://uk.wikipedia.org/wiki/Data_science",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Data Science українською",
+        rating: "⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["data science", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — Аналітика даних",
+        url: "https://uk.wikipedia.org/wiki/Аналіз_даних",
+        status: "Україномовний ресурс",
+        purpose: "Огляд Data Analytics українською",
+        rating: "⭐⭐⭐⭐",
+        category: "datascience",
+        tags: ["analytics", "ukrainian", "encyclopedia"]
+    },
     /* ---------------- Tools ---------------- */
     {
         name: "Can I Use",
