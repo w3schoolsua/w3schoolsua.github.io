@@ -5087,6 +5087,264 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐",
         category: "algorithms",
         tags: ["data structures", "ukrainian", "encyclopedia"]
+    },
+    /* -------------- РЕДАКТОРИ КОДУ - IDE -------------- */
+    {
+        name: "Visual Studio Code",
+        url: "https://code.visualstudio.com/",
+        status: "Офіційний сайт",
+        purpose: "Найпопулярніший безплатний редактор коду від Microsoft",
+        price: "Безплатний",
+        ukrainian_ui: "Так (є українська локалізація)",
+        type: "Редактор коду",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["vscode", "editor", "free", "microsoft"]
+    },
+    {
+        name: "Visual Studio (Community / Pro / Enterprise)",
+        url: "https://visualstudio.microsoft.com/",
+        status: "Офіційний сайт",
+        purpose: "Потужна IDE для .NET, C#, C++, Python",
+        price: "Community — безплатна, Pro/Enterprise — платні",
+        ukrainian_ui: "Так (є українська локалізація)",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["visual studio", "ide", "microsoft"]
+    },
+    /* ---------------- JETBRAINS IDEs ---------------- */
+    {
+        name: "IntelliJ IDEA",
+        url: "https://www.jetbrains.com/idea/",
+        status: "Офіційний сайт",
+        purpose: "Найкраща IDE для Java та Kotlin",
+        price: "Платна (є безплатна Community Edition)",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["intellij", "java", "kotlin", "ide"]
+    },
+    {
+        name: "PyCharm",
+        url: "https://www.jetbrains.com/pycharm/",
+        status: "Офіційний сайт",
+        purpose: "IDE для Python",
+        price: "Платна (є безплатна Community Edition)",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["pycharm", "python", "ide"]
+    },
+    {
+        name: "WebStorm",
+        url: "https://www.jetbrains.com/webstorm/",
+        status: "Офіційний сайт",
+        purpose: "IDE для JavaScript, TypeScript, React, Vue, Angular",
+        price: "Платна",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["webstorm", "javascript", "ide"]
+    },
+    {
+        name: "PhpStorm",
+        url: "https://www.jetbrains.com/phpstorm/",
+        status: "Офіційний сайт",
+        purpose: "IDE для PHP",
+        price: "Платна",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["phpstorm", "php", "ide"]
+    },
+    {
+        name: "CLion",
+        url: "https://www.jetbrains.com/clion/",
+        status: "Офіційний сайт",
+        purpose: "IDE для C/C++",
+        price: "Платна",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["clion", "cpp", "ide"]
+    },
+    {
+        name: "Rider",
+        url: "https://www.jetbrains.com/rider/",
+        status: "Офіційний сайт",
+        purpose: "IDE для .NET",
+        price: "Платна",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["rider", "dotnet", "ide"]
+    },
+    /* ---------------- ANDROID / APP DEVELOPMENT ---------------- */
+    {
+        name: "Android Studio",
+        url: "https://developer.android.com/studio",
+        status: "Офіційний сайт",
+        purpose: "Офіційна IDE для Android",
+        price: "Безплатна",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["android studio", "android", "ide"]
+    },
+    {
+        name: "Xcode",
+        url: "https://developer.apple.com/xcode/",
+        status: "Офіційний сайт",
+        purpose: "Офіційна IDE для iOS/macOS",
+        price: "Безплатна",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["xcode", "ios", "macos", "ide"]
+    },
+    /* ---------------- ЛЕГКІ РЕДАКТОРИ ---------------- */
+    {
+        name: "Sublime Text",
+        url: "https://www.sublimetext.com/",
+        status: "Офіційний сайт",
+        purpose: "Швидкий редактор коду",
+        price: "Умовно безплатний (платна ліцензія)",
+        ukrainian_ui: "Ні",
+        type: "Редактор коду",
+        rating: "⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["sublime", "editor"]
+    },
+    {
+        name: "Notepad++",
+        url: "https://notepad-plus-plus.org/",
+        status: "Офіційний сайт",
+        purpose: "Легкий редактор коду для Windows",
+        price: "Безплатний",
+        ukrainian_ui: "Так (є українська локалізація)",
+        type: "Редактор коду",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["notepad++", "editor", "free"]
+    },
+    {
+        name: "Atom (архівований)",
+        url: "https://github.com/atom/atom",
+        status: "Офіційний репозиторій",
+        purpose: "Колишній редактор коду від GitHub",
+        price: "Безплатний",
+        ukrainian_ui: "Ні",
+        type: "Редактор коду",
+        rating: "⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["atom", "editor"]
+    },
+    {
+        name: "Brackets",
+        url: "https://brackets.io/",
+        status: "Офіційний сайт",
+        purpose: "Редактор коду для веб‑розробки",
+        price: "Безплатний",
+        ukrainian_ui: "Ні",
+        type: "Редактор коду",
+        rating: "⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["brackets", "editor"]
+    },
+    /* ---------------- ПРОФЕСІЙНІ IDE ---------------- */
+    {
+        name: "Eclipse IDE",
+        url: "https://www.eclipse.org/",
+        status: "Офіційний сайт",
+        purpose: "IDE для Java, C/C++, PHP",
+        price: "Безплатна",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["eclipse", "java", "ide"]
+    },
+    {
+        name: "NetBeans",
+        url: "https://netbeans.apache.org/",
+        status: "Офіційний сайт",
+        purpose: "IDE для Java, PHP, C++",
+        price: "Безплатна",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["netbeans", "java", "ide"]
+    },
+    {
+        name: "Code::Blocks",
+        url: "https://www.codeblocks.org/",
+        status: "Офіційний сайт",
+        purpose: "IDE для C/C++",
+        price: "Безплатна",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["codeblocks", "cpp", "ide"]
+    },
+    {
+        name: "Qt Creator",
+        url: "https://www.qt.io/product/development-tools",
+        status: "Офіційний сайт",
+        purpose: "IDE для C++ та Qt‑додатків",
+        price: "Безплатна / Платна (залежить від ліцензії)",
+        ukrainian_ui: "Ні",
+        type: "IDE",
+        rating: "⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["qt", "cpp", "ide"]
+    },
+    /* ---------------- ВЕБ‑РЕДАКТОРИ ---------------- */
+    {
+        name: "CodePen",
+        url: "https://codepen.io/",
+        status: "Офіційний сайт",
+        purpose: "Онлайн‑редактор HTML/CSS/JS",
+        price: "Безплатний / Платний PRO",
+        ukrainian_ui: "Ні",
+        type: "Онлайн‑редактор",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["codepen", "web", "editor"]
+    },
+    {
+        name: "JSFiddle",
+        url: "https://jsfiddle.net/",
+        status: "Офіційний сайт",
+        purpose: "Онлайн‑редактор JavaScript",
+        price: "Безплатний",
+        ukrainian_ui: "Ні",
+        type: "Онлайн‑редактор",
+        rating: "⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["jsfiddle", "javascript", "editor"]
+    },
+    {
+        name: "Replit",
+        url: "https://replit.com/",
+        status: "Офіційний сайт",
+        purpose: "Онлайн IDE для 50+ мов",
+        price: "Безплатний / Платний",
+        ukrainian_ui: "Ні",
+        type: "Онлайн‑IDE",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "editors",
+        tags: ["replit", "ide", "online"]
     }
 ];
 // Фільтрація по категорії
