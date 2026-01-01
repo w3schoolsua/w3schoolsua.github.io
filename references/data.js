@@ -4845,7 +4845,147 @@ const sourcesData = [
         rating: "⭐⭐⭐⭐",
         category: "networking",
         tags: ["protocols", "ukrainian", "encyclopedia"]
-    }
+    },
+    /* ---------- Software Architecture / Design Patterns --------- */
+    {
+        name: "Awesome Software and Architectural Design Patterns",
+        url: "https://github.com/DovAmir/awesome-design-patterns",
+        status: "Авторитетний каталог",
+        purpose: "Найповніше зібрання патернів проєктування та архітектури",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["design patterns", "architecture", "github", "catalog"]
+    },
+    {
+        name: "List of Software Architecture Styles and Patterns — Wikipedia",
+        url: "https://en.wikipedia.org/wiki/List_of_software_architecture_styles_and_patterns",
+        status: "Енциклопедичний ресурс",
+        purpose: "Офіційний список архітектурних стилів і патернів",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["architecture", "patterns", "wikipedia"]
+    },
+    {
+        name: "Software Architectural Patterns in System Design — GeeksForGeeks",
+        url: "https://www.geeksforgeeks.org/system-design/design-patterns-architecture/",
+        status: "Навчальний ресурс",
+        purpose: "Огляд архітектурних патернів: Layered, Microservices, CQRS, EDA",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["architecture", "patterns", "system design"]
+    },
+    {
+        name: "Design Patterns in Software Development — Nature Research Intelligence",
+        url: "https://www.nature.com/research-intelligence/nri-topic-summaries/design-patterns-in-software-development-micro-79746",
+        status: "Науковий ресурс",
+        purpose: "Науковий огляд ролі патернів у розробці ПЗ",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["design patterns", "research", "nature"]
+    },
+    /* ---------------- КЛАСИЧНІ ПАТЕРНИ ---------------- */
+    {
+        name: "Gang of Four — Design Patterns (GoF)",
+        url: "https://en.wikipedia.org/wiki/Design_Patterns",
+        status: "Класичний ресурс",
+        purpose: "Огляд патернів GoF: Creational, Structural, Behavioral",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["gof", "design patterns", "classic"]
+    },
+    {
+        name: "Martin Fowler — Patterns of Enterprise Application Architecture",
+        url: "https://martinfowler.com/eaaCatalog/",
+        status: "Офіційний ресурс",
+        purpose: "Патерни корпоративної архітектури від Мартіна Фаулера",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["architecture", "enterprise", "fowler"]
+    },
+    {
+        name: "Martin Fowler — Microservices",
+        url: "https://martinfowler.com/microservices/",
+        status: "Офіційний ресурс",
+        purpose: "Опис архітектурного стилю Microservices",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["microservices", "architecture", "fowler"]
+    },
+    /* ---------------- АРХІТЕКТУРНІ ПАТЕРНИ ---------------- */
+    {
+        name: "Microsoft Cloud Design Patterns",
+        url: "https://learn.microsoft.com/en-us/azure/architecture/patterns/",
+        status: "Офіційна документація",
+        purpose: "Патерни для масштабованих хмарних систем",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["cloud", "architecture", "patterns", "microsoft"]
+    },
+    {
+        name: "AWS Architecture Patterns",
+        url: "https://aws.amazon.com/architecture/",
+        status: "Офіційний ресурс",
+        purpose: "Архітектурні патерни AWS: event-driven, microservices, serverless",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["aws", "architecture", "patterns"]
+    },
+    {
+        name: "Google Cloud Architecture Framework",
+        url: "https://cloud.google.com/architecture/framework",
+        status: "Офіційний ресурс",
+        purpose: "Архітектурні принципи та патерни Google Cloud",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["gcp", "architecture", "patterns"]
+    },
+    /* ---------------- ДОДАТКОВІ АВТОРИТЕТНІ РЕСУРСИ ---------------- */
+    {
+        name: "Refactoring Guru — Design Patterns",
+        url: "https://refactoring.guru/design-patterns",
+        status: "Навчальний ресурс",
+        purpose: "Візуальні пояснення патернів GoF",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["design patterns", "refactoring", "learning"]
+    },
+    {
+        name: "Clean Architecture — Robert C. Martin (Uncle Bob)",
+        url: "https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html",
+        status: "Офіційний ресурс",
+        purpose: "Опис Clean Architecture",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["clean architecture", "uncle bob"]
+    },
+    {
+        name: "The Twelve-Factor App",
+        url: "https://12factor.net/",
+        status: "Офіційний ресурс",
+        purpose: "12 принципів побудови масштабованих застосунків",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["architecture", "cloud", "best practices"]
+    },
+    /* ---------------- УКРАЇНОМОВНІ РЕСУРСИ ---------------- */
+    {
+        name: "Вікіпедія (укр) — Патерн проєктування",
+        url: "https://uk.wikipedia.org/wiki/Патерн_проєктування",
+        status: "Україномовний ресурс",
+        purpose: "Огляд патернів проєктування українською",
+        rating: "⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["design patterns", "ukrainian", "encyclopedia"]
+    },
+    {
+        name: "Вікіпедія (укр) — Архітектура програмного забезпечення",
+        url: "https://uk.wikipedia.org/wiki/Архітектура_програмного_забезпечення",
+        status: "Україномовний ресурс",
+        purpose: "Огляд архітектури ПЗ українською",
+        rating: "⭐⭐⭐⭐",
+        category: "architecture",
+        tags: ["architecture", "ukrainian", "encyclopedia"]
+    },
 ];
 // Фільтрація по категорії
 function getSourcesByCategory(category) {
