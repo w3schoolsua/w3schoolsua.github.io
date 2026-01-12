@@ -4103,6 +4103,15 @@ const sourcesData = [
         tags: ["tools", "schema", "validator", "інструменти", "онлайн", "валідатор", "перевірка", "валідність"]
     },
     {
+        name: "JSONFormatter",
+        url: "https://jsonformatter.curiousconcept.com/",
+        status: "Інструменти для роботи з JSON",
+        purpose: "Робота з JSON-файлами",
+        rating: "⭐⭐⭐⭐⭐",
+        category: "tools",
+        tags: ["tools", "json", "робота", "інструменти", "онлайн", "валідатор", "перевірка", "валідність"]
+    },
+    {
         name: "Search.Google - Розширені результаті",
         url: "https://search.google.com/test/rich-results",
         status: "Перевірка підтримки розширених результатів",
