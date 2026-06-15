@@ -513,20 +513,20 @@
     <a class='w3-right w3-btn' href='html5_webworkers_ru.html'>Next &#10095;</a>
   </div>
   <hr>
-  <p class='intro'><strong>HTML веб-сховище</strong>; краще ніж cookies.</p>
+  <p class='intro'><strong>HTML веб-хранилище</strong>; лучше чем cookies.</p>
   <hr>
-  <h2>Що таке HTML веб-сховище?</h2>
-  <p>За допомогою вебсховища вебпрограми можуть зберігати дані локально в браузері користувача.</p>
-  <p>До появлення специфікації HTML5, дані додатків повинні були зберігатися в куках (cookies), включених в кожному запиті сервера. Вебсховище є більш безпечним, і великі об&#8217;єми даних можуть зберігатися локально, не впливаючи на роботу вебсайту.</p>
-  <p>На відміну від файлів cookie, ліміт сховища набагато більший (принаймні 5 МБ), і інформація ніколи не передається на сервер.</p>
-  <p>Вебсховище - для кожного джерела (для домену і протоколу). Всі сторінки з одного джерела (однакового походження) можуть зберігати та отримувати доступ до цих самих даних.</p>
+  <h2>Что такое HTML веб‑хранилище?</h2>
+  <p>С помощью веб‑хранилища веб‑приложения могут сохранять данные локально в браузере пользователя.</p>
+  <p>До появления спецификации HTML5 данные приложений приходилось хранить в cookies, которые отправлялись на сервер при каждом запросе. Веб‑хранилище гораздо безопаснее, и позволяет сохранять большие объёмы данных локально, не влияя на работу сайта.</p>
+  <p>В отличие от cookies, лимит хранилища значительно больше (как минимум 5 МБ), и данные никогда не отправляются на сервер автоматически.</p>
+  <p>Веб‑хранилище работает по принципу «одного источника» (origin): домен + протокол. Все страницы одного источника могут сохранять и получать доступ к одним и тем же данным.</p>
   <hr>
   <div class="adver_adinarticle">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>  <h2>Підтримка браузерами</h2>
-  <p>Цифри в таблиці визначають першу версію браузера, яка повністю підтримує вебсховище.</p>
+</div>  <h2>Поддержка браузерами</h2>
+  <p>Цифры в таблице определяют первую версию браузера, которая полностью поддерживает веб-хранилище.</p>
   <table class='browserref notranslate'>
     <tr>
       <th style='width:20%;font-size:16px;text-align:left;'>API</th>
@@ -537,7 +537,7 @@
       <th style='width:16%;' class='bsOpera' title='Opera'></th>
     </tr>
     <tr>
-      <td style='text-align:left;'>Веб-сховище</td>
+      <td style='text-align:left;'>Веб-хранилище</td>
       <td>4.0</td>
       <td>8.0</td>
       <td>3.5</td>
@@ -546,79 +546,83 @@
     </tr>
   </table>
   <hr>
-  <h2>HTML Об&#8217;єкти вебсховища</h2>
-  <p>Вебсховище HTML забезпечує два об&#8217;єкта для збереження даних на стороні клієнта:</p>
+  <h2>HTML объекты веб‑хранилища</h2>
+  <p>HTML Web Storage предоставляет два объекта для хранения данных на стороне клиента:</p>
   <ul>
-    <li><code class='w3-codespan'>window.localStorage</code> - зберігає дані без дати закінчення строка дії;</li>
-    <li><code class='w3-codespan'>window.sessionStorage</code> - зберігає дані для одного сеанса (дані втрачаються при закритті вкладки веббраузера).</li>
+    <li><code class="w3-codespan">window.localStorage</code> — сохраняет данные **без срока действия** (постоянно, пока пользователь сам не очистит хранилище);</li>
+    <li><code class="w3-codespan">window.sessionStorage</code> — сохраняет данные **только для одного сеанса** (данные исчезают после закрытия вкладки браузера).</li>
   </ul>
-  <p>Перед використанням вебсховища перевірте підтримку браузером localStorage та sessionStorage:</p>
-  <div class='w3-code w3-border notranslate jsHigh'><div>
-      if (typeof(Storage) !== &quot;undefined&quot;) {<br>
-      &nbsp; // <i>Код для localStorage/sessionStorage.</i><br>
-      }
-      else {<br>
-      &nbsp; // На жаль, підтримка вебсховища відсутня.<br>
-      }</div>
-  </div>
-  <hr>
-  <div class="adver_adinfeed">
+  <p>Перед использованием веб‑хранилища следует проверить, поддерживает ли браузер объекты <code class="w3-codespan">localStorage</code> и <code class="w3-codespan">sessionStorage</code>:</p>
+    <div class='w3-code w3-border notranslate jsHigh'><div>
+        if (typeof(Storage) !== &quot;undefined&quot;) {<br>
+        &nbsp; // <i>Код для localStorage/sessionStorage.</i><br>
+        }
+        else {<br>
+        &nbsp; // К сожалению, поддержка веб-хранилища отсутствует.<br>
+        }</div>
+    </div>
+    <hr>
+    <div class="adver_adinfeed">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>  <h2>Об&#8217;єкт localStorage</h2>
-  <p>Об&#8217;єкт <strong>localStorage</strong> зберігає дані без дати закінчення строку дії. Дані не будуть видалені під час закриття браузера і будуть доступні наступного дня, тижня або року.</p>
-  <div class='w3-example'>
-    <h3>Приклад</h3>
-    <div class='w3-code notranslate jsHigh'>
-      // Зберігаємо<br>localStorage.setItem(&quot;lastname&quot;, &quot;Smith&quot;);<br><br>// Повертаємо<br>
-      document.getElementById(&quot;result&quot;).innerHTML = localStorage.getItem(&quot;lastname&quot;);
+</div>    <h2>Объект localStorage</h2>
+  <p>Объект <strong>localStorage</strong> хранит данные без срока действия. Они не удаляются при закрытии браузера и будут доступны на следующий день, через неделю или даже через год.</p>
+  <div class="w3-example">
+    <h3>Пример</h3>
+    <div class="w3-code notranslate jsHigh">
+      // Сохраняем<br>
+      localStorage.setItem("lastname", "Smith");<br><br>
+      // Получаем<br>
+      document.getElementById("result").innerHTML = localStorage.getItem("lastname");
     </div>
-    <a target='_blank' href='../htmltryit/tryhtml5_webstorage_local.html' class='w3-btn w3-margin-bottom'>Спробуйте самі &raquo;</a>
+    <a target="_blank" href="../htmltryit/tryhtml5_webstorage_local.html" class="w3-btn w3-margin-bottom">Попробуйте сами &raquo;</a>
   </div>
-  <p>Пояснення прикладу:</p>
+  <p><strong>Пояснение примера:</strong></p>
   <ul>
-    <li>Створюємо пару localStorage name/value (ім&#8217;я/значення) з name='lastname' и value='Smith';</li>
-    <li>Отримуємо значення 'lastname' і вставляємо його в елемент з id='result' (результат).</li>
+    <li>Создаётся пара name/value в localStorage: name = 'lastname', value = 'Smith'.</li>
+    <li>Значение 'lastname' извлекается и вставляется в элемент с id='result'.</li>
   </ul>
-  <p>Наведений вище приклад також може бути написаний таким чином:</p>
-  <div class='w3-code w3-border notranslate jsHigh'>
-      <div>
-      // Зберігаємо<br>localStorage.lastname = &quot;Smith&quot;;<br>// Вилучаємо<br>document.getElementById(&quot;result&quot;).innerHTML = localStorage.lastname;
-      </div>
+  <p>Тот же пример можно записать и так:</p>
+  <div class="w3-code w3-border notranslate jsHigh">
+    // Сохраняем<br>
+    localStorage.lastname = "Smith";<br>
+    // Извлекаем<br>
+    document.getElementById("result").innerHTML = localStorage.lastname;
   </div>
-  <p>Синтаксис для видалення елемента 'lastname' localStorage є наступним:</p>
-  <div class='w3-code w3-border notranslate jsHigh'>
-      <div>localStorage.removeItem(&quot;lastname&quot;);</div>
+  <p>Синтаксис для удаления элемента 'lastname' из localStorage:</p>
+  <div class="w3-code w3-border notranslate jsHigh">
+    localStorage.removeItem("lastname");
   </div>
-  <p><b>Примітка:</b> Пари name/value завжди зберігаються як рядки. Не забувайте конвертувати їх в інший формат, коли це необхідно!</p>
-  <p>Наступний приклад підрахує кількість кліків кнопки користувачем. В цьому коді рядок значень перетворюється в число, щоб мати можливість збільшити лічильник:</p>
+  <p><b>Примечание:</b> Пары name/value всегда сохраняются как строки. Не забывайте преобразовывать их в нужный тип, если это необходимо.</p>
+  <p>Следующий пример считает количество кликов по кнопке. В нём строковое значение преобразуется в число, чтобы можно было увеличивать счётчик:</p>
   <div class='w3-example'>
-    <h3>Приклад</h3>
+    <h3>Пример</h3>
     <div class='w3-code notranslate jsHigh'>
       if (localStorage.clickcount) {<br>&nbsp; localStorage.clickcount = Number(localStorage.clickcount) + 1;<br>
       } else {<br>&nbsp; localStorage.clickcount = 1;<br>}<br>
-      document.getElementById(&quot;result&quot;).innerHTML = &quot;Ви натиснули кнопку &quot; +<br>
+      document.getElementById(&quot;result&quot;).innerHTML = &quot;Вы нажали кнопку &quot; +<br>
       localStorage.clickcount + &quot; time(s).&quot;;</div>
-    <a class='w3-btn w3-margin-bottom' href='../htmltryit/tryhtml5_webstorage_local_clickcount.html' target='_blank'>Спробуйте самі &raquo;</a>
+    <a class='w3-btn w3-margin-bottom' href='../htmltryit/tryhtml5_webstorage_local_clickcount.html' target='_blank'>Попробуйте сами &raquo;</a>
   </div>
   <hr>
   <div class="adver_admultiplex1">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>  <h2>Об&#8217;єкт sessionStorage</h2>
-  <p>Об&#8217;єкт <code class='w3-codespan'>sessionStorage</code> відповідає об&#8217;єкту localStorage, <b>крім того</b>, що він зберігає дані лише для одного сеансу. Дані видаляються, коли користувач закриває відповідну вкладку веббраузера.</p>
-  <p>В наступному прикладі підраховується кількість разів, коли користувач натиснув кнопку в поточній сесії:</p>
+</div>  <h2>Объект sessionStorage</h2>
+  <p>Объект <code class="w3-codespan">sessionStorage</code> работает так же, как и <code>localStorage</code>, <b>за исключением</b> того, что он хранит данные только в пределах одного сеанса.  
+  Данные удаляются сразу после закрытия вкладки браузера.</p>
+  <p>В следующем примере подсчитывается количество раз, когда пользователь нажал кнопку в текущей сессии:</p>
   <div class='w3-example'>
-    <h3>Приклад</h3>
+    <h3>Пример</h3>
     <div class='w3-code notranslate jsHigh'>
       if (sessionStorage.clickcount) {<br>&nbsp; sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;<br>}
       else {<br>&nbsp; sessionStorage.clickcount = 1;<br>}<br>
-      document.getElementById(&quot;result&quot;).innerHTML = &quot;Ви натиснули кнопку &quot; +<br>
-      sessionStorage.clickcount + &quot; раз(ів) в поточній сесії.&quot;;
+      document.getElementById(&quot;result&quot;).innerHTML = &quot;Вы нажали кнопку &quot; +<br>
+      sessionStorage.clickcount + &quot; раз в текущей сессии.&quot;;
     </div>
-    <a class='w3-btn w3-margin-bottom' href='../htmltryit/tryhtml5_webstorage_session.html' target='_blank'>Спробуйте самі &raquo;</a>
+    <a class='w3-btn w3-margin-bottom' href='../htmltryit/tryhtml5_webstorage_session.html' target='_blank'>Попробуйте сами &raquo;</a>
   </div>
   <hr>
   <div class='w3-clear nextprev'>
