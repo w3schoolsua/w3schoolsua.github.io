@@ -510,7 +510,137 @@
   <a href='html5_serversentevents_de.html' title='Перейти на немецкий язык'>De</a>
   <a href='html5_serversentevents_fr.html' title='Перейти на французский язык'>Fr</a>
 </p>
-
+<article>
+    <h1>HTML5 <span class='color_h1'>События, отправленные сервером</span></h1>
+    <div class='w3-clear nextprev'>
+      <a class='w3-left w3-btn' href='html5_webworkers_ru.html'>&#10094; Prev</a>
+      <a class='w3-right w3-btn' href='html_examples_ru.html'>Next &#10095;</a>
+    </div>
+    <hr>
+    <h2>Для чего нужны события, отправленные сервером? (Server‑Sent Events — SSE)</h2>
+    <p class="intro"><strong>События, отправленные сервером (Server‑Sent Events — SSE)</strong>, позволяют веб‑странице получать обновления от сервера.</p>
+    <hr>
+    <h2>События, отправленные сервером — это однонаправленные сообщения</h2>
+    <p><strong>События, отправленные сервером</strong> — это механизм, при котором веб‑страница автоматически получает обновления от сервера.</p>
+    <p>Раньше это тоже было возможно, но веб‑странице приходилось самостоятельно отправлять запросы, чтобы узнать, появились ли обновления. С SSE обновления отправляются автоматически.</p>
+    <p>Примеры: обновления Facebook/Twitter, изменения цен на акции, новостные ленты, спортивные результаты и многое другое.</p>
+    <hr>
+    <h2>Поддержка браузерами</h2>
+    <p>Цифры в таблице указывают первую версию браузера, которая полностью поддерживает события, отправленные сервером.</p>
+    <table class='browserref notranslate'>
+      <tr>
+        <th style='width:14%;font-size:16px;text-align:left;'>API</th>
+        <th style='width:16%;' class='bsChrome' title='Chrome'></th>
+        <th style='width:16%;' class='bsEdge' title='Internet Explorer / Edge'></th>
+        <th style='width:16%;' class='bsFirefox' title='Firefox'></th>
+        <th style='width:16%;' class='bsSafari' title='Safari'></th>
+        <th style='width:16%;' class='bsOpera' title='Opera'></th>
+      </tr>
+      <tr>
+        <td style='text-align:left;'>SSE</td>
+        <td>6.0</td>
+        <td><span class='marked'>Не поддерживается</span></td>
+        <td>6.0</td>
+        <td>5.0</td>
+        <td>11.5</td>
+      </tr>
+    </table>
+    <hr>
+    <div class="adver_adinarticle">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Получать уведомления о событиях, отправленных сервером</h2>
+    <p>Объект EventSource используется для получения сообщений о событиях, которые отправляются сервером:</p>
+    <div class='w3-example'>
+      <h3>Пример</h3>
+      <div class='w3-code notranslate jsHigh'>
+        var source = new EventSource(&quot;demo_sse.html&quot;);<br>source.onmessage = function(event) {<br>&nbsp;&nbsp;document.getElementById(&quot;result&quot;).innerHTML += event.data + &quot;&lt;br&gt;&quot;;<br>};
+      </div>
+      <a class='w3-btn w3-margin-bottom' href='../htmltryit/tryhtml5_sse.html' target='_blank'>Попробуйте сами &raquo;</a>
+    </div>
+    <p>Пояснение примера:</p>
+    <ul>
+      <li>Создайте новый объект EventSource и укажите URL‑адрес страницы, которая отправляет обновления (в этом примере — "demo_sse.html")</li>
+      <li>Каждый раз при получении обновления происходит событие onmessage</li>
+      <li>Когда происходит событие onmessage, поместите полученные данные в элемент с id="result"</li>
+    </ul>
+    <hr>
+    <h2>Проверьте поддержку событий, отправленных сервером</h2>
+    <p>В приведённом выше примере «Попробуйте сами» было несколько дополнительных строк кода для проверки поддержки браузером событий, отправленных сервером:</p>
+    <div class='w3-code w3-border notranslate jsHigh'>
+        <div>
+        if(typeof(EventSource) !== &quot;undefined&quot;) {<br>&nbsp; // Так! Отправка событий на сервер поддерживается!<br>
+        &nbsp; // <i>Какой-то код.....</i><br>
+        } else {<br>&nbsp; // К сожалению, отправка событий на сервер не поддерживается.<br>
+        }
+      </div>
+    </div>
+    <hr>
+    <div class="adver_adinfeed">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Пример кода на стороне сервера</h2>
+    <p>Для приведённого выше примера нужен сервер, который может отправлять обновления данных (например, PHP или ASP).</p>
+    <p>Синтаксис серверного потока событий очень простой. Установите заголовок "Content-Type" в значение "text/event-stream". Теперь вы можете начинать отправлять поток событий.</p>
+    <p>Код на PHP (demo_sse.html):</p>
+    <div class='w3-code w3-border notranslate htmlHigh'>
+      &lt;?php<br>
+      header('Content-Type: text/event-stream');<br>
+      header('Cache-Control: no-cache');<br><br>
+      $time = date('r');<br>
+      echo "data: Время сервера: {$time}\n\n";<br>
+      flush();<br>
+      ?&gt;
+    </div>
+    <p>Код на ASP (VB) (demo_sse.asp):</p>
+    <div class="w3-code w3-border notranslate spes_asp">
+      &lt;%<br>
+      Response.ContentType = "text/event-stream"<br>
+      Response.Expires = -1<br>
+      Response.Write("data: Время сервера: " &amp; now())<br>
+      Response.Flush()<br>
+      %&gt;
+    </div>
+    <p>Пояснение кода:</p>
+    <ul>
+      <li>Установите заголовок "Content-Type" в "text/event-stream"</li>
+      <li>Укажите, что страница не должна кэшироваться (not cache)</li>
+      <li>Выведите данные, которые нужно отправить (<b>всегда</b> начинайте с "data: ")</li>
+      <li>Сбросьте выходные данные обратно на веб‑страницу</li>
+    </ul>
+    <hr>
+    <div class="adver_admultiplex1">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6358227327561384" data-ad-slot="4782209617"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>    <h2>Объект EventSource</h2>
+    <p>В приведённых выше примерах мы использовали событие <em>onmessage</em> для получения сообщений. Но доступны и другие события:</p>
+    <table class="ws-table-all notranslate">
+      <tr>
+        <th style="width:20%">Событие</th>
+        <th>Описание</th>
+      </tr>
+      <tr>
+        <td>onopen</td>
+        <td>Когда установлено соединение с сервером</td>
+      </tr>
+      <tr>
+        <td>onmessage</td>
+        <td>Когда получено сообщение</td>
+      </tr>
+      <tr>
+        <td>onerror</td>
+        <td>Когда произошла ошибка</td>
+      </tr>
+    </table>
+    <hr>
+    <div class='w3-clear nextprev'>
+      <a class='w3-left w3-btn' href='html5_webworkers_ru.html'>&#10094; Prev</a>
+      <a class='w3-right w3-btn' href='html_examples_ru.html'>Next &#10095;</a>
+    </div>
+</article>
 <div class="adver_addown">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
     <!-- addown_gorizontal -->
