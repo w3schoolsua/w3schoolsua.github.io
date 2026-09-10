@@ -546,29 +546,30 @@
     <div class="jumbotron ws-grey" style="padding:50px;margin-top:17px;border-radius:5px;">
         <p>Установить размер пикселя по умолчанию:</p>
         <input class="conv" type="text" aria-label='text' id="pix1" size="8" value="16"> <span style="font-size:23px">px</span><br><br>
-        <p class="pxem">Перетворення PX в EM:<br>
+        <p class="pxem">Преобразование PX в EM:<br>
             <input onfocus="wrong()" onblur="works()" class="conv" type="text" aria-label='Текст' size="8" id="myInput" value=""> <span style="font-size:23px">px</span>
         </p>
-        <p class="empx">Перетворення EM в PX:<br>
+        <p class="empx">Преобразование EM в PX:<br>
             <input onfocus="wrong2()" onblur="works2()" class="conv" type="text" aria-label='text' size="8" id="myInput2" value=""> <span style="font-size:23px">em</span>
         </p><br><br><br><br>
         <p class="clearfix"></p>
-        <button class="btn btn-lg ws-green w3-round ws-hover-green" onclick="myFunction()"><span class="glyphicon glyphicon-transfer"> </span> Конвертувати</button>
+        <button class="btn btn-lg ws-green w3-round ws-hover-green" onclick="myFunction()"><span class="glyphicon glyphicon-transfer"> </span> Конвертировать</button>
         <hr>
         <p>Результат: <span style="font-size:24px" id="result1"></span></p>
         <br>
     </div>
     <hr>
-  <h2>Розмір шрифту body</h2>
-  <p>В наведеній нижче таблиці оберіть розмір основного шрифту в пікселях (px), щоб відобразити повну таблицю перетворення px в em та в процент.</p>
-  <div class="w3-note w3-panel">
-    <p><b>Підказка:</b> Розмір шрифту за замовчуванням зазвичай складає 16 пікселів.</p>
-  </div>
-  <div id="demo"></div>
-  <div class="w3-panel w3-note">
-    <p><strong>В чому різниця між PX, EM та процентами? </strong></p>
-    <p>Піксель - це статичний вимір, а процент та EM - відносні виміри. Розмір EM або процентів залежить від батьківського елемента. Якщо розмір тексту тіла складає 16 пікселів, то 150% або 1.5EM будуть 24 пікселі (1.5*16). Дивіться докладніше в розділі <a href="../cssref/css_units.html">CSS Одиниці</a> для ознайомлення з більшою кількістю одиниць виміру.</p>
-  </div>
+  <h2>Размер шрифта body</h2>
+ <p>В приведённой ниже таблице выберите размер основного шрифта в пикселях (px), чтобы отобразить полную таблицу преобразования px в em и в процент.</p>
+
+<div class="w3-note w3-panel">
+  <p><b>Подсказка:</b> Размер шрифта по умолчанию обычно составляет 16 пикселей.</p>
+</div>
+<div id="demo"></div>
+<div class="w3-panel w3-note">
+  <p><strong>В чём разница между PX, EM и процентами? </strong></p>
+  <p>Пиксель — это статическая единица измерения, а процент и EM — относительные единицы. Размер EM или процентов зависит от родительского элемента. Если размер текста тела составляет 16 пикселей, то 150% или 1.5EM будут 24 пикселя (1.5*16). Смотрите подробнее в разделе <a href="../cssref/css_units_ru.html">CSS Одиницы</a> для ознакомления с большим количеством единиц измерения.</p>
+</div>
     <script>
     function fillTable(x) {
         var t = "";
@@ -619,7 +620,7 @@
             res.innerHTML = z*y + "px";
         }
         if (isNaN (x) || isNaN (z) || isNaN (y)) {
-            res.innerHTML = "Неправильне введення! Використовуйте цифри";
+            res.innerHTML = "Неправильное введение! Используйте цифры";
             res.style.color = "red";
         } else {
             res.style.color = "";
